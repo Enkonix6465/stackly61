@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Stackly AI Tools</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+  <div class="container">
+    <div class="nav-wrapper">
+      <!-- Logo -->
+      <div class="logo">
+        <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 40px; width: 80px;">
+      </div>
+
+      <!-- Navigation -->
+      <nav class="navigation">
+    <ul class="nav-menu" id="navMenu">
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link">Home <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="index.html">Home 1</a></li>
+          <li><a href="home2.html">Home 2</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="services.html">All Services</a></li>
+          <li><a href="service1.html">AI Development</a></li>
+          <li><a href="service2.html">Machine Learning</a></li>
+          <li><a href="service3.html">Data Analytics</a></li>
+          <li><a href="service4.html">Automation</a></li>
+          <li><a href="service5.html">AI Consulting</a></li>
+          <li><a href="service6.html">AI Integration</a></li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link">Blog <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="blog.html">All Posts</a></li>
+          <li><a href="blog1.html">AI Trends 2024</a></li>
+          <li><a href="blog2.html">Future of ML</a></li>
+          <li><a href="blog3.html">AI in Business</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      <!-- Login/Logout Link -->
+      <li class="nav-item"><a href="index.html" class="nav-link" id="authLink">Login</a></li>
+    </ul>
+
+    <!-- Hamburger -->
+    <div class="hamburger" id="hamburger" aria-label="Open menu" tabindex="0">
+  <ul class="hamburger-menu" id="hamburgerMenu" style="display:none;">
+    <li><a href="index.html">Home 1</a></li>
+    <li><a href="home2.html">Home 2</a></li>
+    <li><a href="about.html">About</a></li>
+    <li>
+      <span>Services</span>
+      <ul>
+        <li><a href="services.html">All Services</a></li>
+        <li><a href="service1.html">AI Development</a></li>
+        <li><a href="service2.html">Machine Learning</a></li>
+        <li><a href="service3.html">Data Analytics</a></li>
+        <li><a href="service4.html">Automation</a></li>
+        <li><a href="service5.html">AI Consulting</a></li>
+        <li><a href="service6.html">AI Integration</a></li>
+      </ul>
+    </li>
+    <li>
+      <span>Blog</span>
+      <ul>
+        <li><a href="blog.html">All Posts</a></li>
+        <li><a href="blog1.html">AI Trends 2024</a></li>
+        <li><a href="blog2.html">Future of ML</a></li>
+        <li><a href="blog3.html">AI in Business</a></li>
+      </ul>
+    </li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="index.html" id="authLink">Login</a></li>
+  </ul>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+  </nav>
+
+  <!-- Toggle Button -->
+  <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- Avatar Circle -->
+  <div class="avatar-circle" title="Profile">
+
+  </div>
+</div>
+  </div>
+</header>
+
+<!-- ✅ Script -->
+<script>
+  // Hamburger toggle
+ const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("navMenu");
+const hamburgerMenu = document.getElementById("hamburgerMenu");
+
+// Show/hide menu on hamburger click
+hamburger.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+  hamburgerMenu.style.display = hamburgerMenu.style.display === "block" ? "none" : "block";
+});
+
+  // Auth link toggle
+  const authLink = document.getElementById("authLink");
+  if(localStorage.getItem("isLoggedIn") === "true"){
+    authLink.innerText = "Logout";
+    authLink.href = "#";
+    authLink.onclick = () => {
+      localStorage.removeItem("isLoggedIn");
+      localStorage.removeItem("currentUser");
+      window.location.href = "index.html";
+    };
+  } else {
+    authLink.innerText = "Login";
+    authLink.href = "index.html";
+  }
+
+  // Theme toggle
+  const toggleBtn = document.getElementById('toggleBtn');
+  let darkMode = localStorage.getItem('darkMode') === 'true';
+
+  // Apply initial theme
+  function applyTheme() {
+    if (darkMode) {
+      document.body.classList.add('dark-mode');
+      toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
+    } else {
+      document.body.classList.remove('dark-mode');
+      toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
+    }
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    darkMode = !darkMode;
+    localStorage.setItem('darkMode', darkMode);
+    applyTheme();
+  });
+
+  // Call once to apply the theme on initial load
+  applyTheme();
+
+  // Avatar initials
+const avatarCircle = document.querySelector('.avatar-circle');
+const currentUserEmail = localStorage.getItem("currentUser");
+const users = JSON.parse(localStorage.getItem("users")) || {};
+if (currentUserEmail && users[currentUserEmail]) {
+  const firstName = users[currentUserEmail].firstName || "";
+  const lastName = users[currentUserEmail].lastName || "";
+  const initials = (firstName[0] || "").toUpperCase() + (lastName[0] || "").toUpperCase();
+  avatarCircle.innerHTML = `<span style="
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #23272f;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  ">${initials}</span>`;
+} else {
+  avatarCircle.innerHTML = `<span style="
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #23272f;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  ">?</span>`;
+}
+
+// Hamburger toggle for mobile
+
+</script>
+
+<!-- ✅ CSS for hamburger -->
+<style>
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  .hamburger span {
+    height: 3px;
+    width: 25px;
+    background: #333;
+    margin: 4px 0;
+    border-radius: 5px;
+  }
+  @media (max-width: 768px) {
+    .nav-menu {
+      display: none;
+      flex-direction: column;
+      background: #fff;
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      width: 200px;
+      padding: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .nav-menu.active {
+      display: flex;
+    }
+    .hamburger {
+      display: flex;
+    }
+    .nav-item {
+      margin: 10px 0;
+    }
+  }
+
+  .toggle-btn {
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.toggle-btn:hover {
+  background: #f0f0f0;
+}
+.avatar-circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee;
+}
+.avatar-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .toggle-btn, .avatar-circle {
+    margin-left: 8px;
+    width: 32px;
+    height: 32px;
+  }
+}
+</style>
+
+<!-- 🔷 Protest home page  -->
+
+  <script>
+    // Protect this page
+    if(localStorage.getItem("isLoggedIn") !== "true"){
+      window.location.href = "index.html"; // ✅ go back to login
+    } else {
+      document.getElementById("userMail").innerText = localStorage.getItem("currentUser");
+    }
+
+    // Logout
+    function logout(){
+      localStorage.removeItem("isLoggedIn");
+      localStorage.removeItem("currentUser");
+      window.location.href = "index.html"; // ✅ back to login
+    }
+  </script>
+
+
+ <!-- 🔷 HERO SECTION START video_code  -->
+
+<!-- 🔷 HERO SECTION START -->
+<section class="ai-hero-section">
+  <video autoplay muted loop playsinline class="ai-hero-bg-video">
+    <source src="https://videos.pexels.com/video-files/5452791/5452791-uhd_2560_1440_25fps.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="ai-hero-overlay">
+    <div class="ai-hero-content">
+      <h1 class="ai-hero-title ai-glow animate-ai-slide-in">Contact Us</h1>
+      
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Hero Section */
+  .ai-hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin-: 0 !important;
+  }
+
+  .ai-hero-bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .ai-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for text visibility */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .ai-hero-content {
+    max-width: 950px;
+    color: #fff;
+  }
+
+  /* Neon Glow Heading */
+  .ai-glow {
+    text-shadow:
+      0 0 1px #00f7ff,
+      0 0 1px #00f7ff,
+      0 0 1px #00f7ff,
+      0 0 1px #00f7ff;
+    color: #ffffff;
+  }
+
+  .ai-hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    opacity: 0;
+  }
+
+  .ai-hero-paragraph {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    opacity: 0;
+  }
+
+  .ai-hero-button {
+    display: inline-block;
+    padding: 14px 36px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(90deg, #00f7ff, #007bff);
+    border-radius: 12px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+  }
+
+  .ai-hero-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00f7ff, 0 0 25px #007bff;
+  }
+
+  /* Animations */
+  @keyframes aiSlideIn {
+    0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes aiFadeUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-ai-slide-in {
+    animation: aiSlideIn 1s ease-out forwards;
+    animation-delay: 0.3s;
+  }
+
+  .animate-ai-fade-up {
+    animation: aiFadeUp 1s ease-out forwards;
+    animation-delay: 0.8s;
+  }
+
+  .animate-ai-fade-up-delayed {
+    animation: aiFadeUp 1s ease-out forwards;
+    animation-delay: 1.3s;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .ai-hero-title { font-size: 2.2rem; }
+    .ai-hero-paragraph { font-size: 1rem; }
+    .ai-hero-button { padding: 12px 28px; font-size: 1rem; }
+  }
+
+  @media (max-width: 480px) {
+    .ai-hero-title { font-size: 1.1rem; }
+    .ai-hero-paragraph { font-size: 0.9rem; }
+  }
+</style>
+<!-- 🔷 HERO SECTION END -->
+
+
+
+<section class="fancy-contact-section">
+  <style>
+    .fancy-contact-section {
+      width: 100%;
+      background-color: #f9f9f9;
+      padding: 40px 15px;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .fancy-contact-wrapper {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 30px;
+      justify-content: space-between;
+    }
+
+    .fancy-contact-form {
+      flex: 1 1 500px;
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .fancy-contact-form h2 {
+      text-align: center;
+      color: #0E0E0E;
+      margin-bottom: 20px;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .fancy-contact-form label {
+      display: block;
+      margin-bottom: 6px;
+      color: #333;
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+    .fancy-contact-form input,
+    .fancy-contact-form textarea {
+      width: 100%;
+      padding: 12px 14px;
+      margin-bottom: 16px;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+      background-color: #f7f7f7;
+      font-size: 15px;
+      transition: all 0.3s ease;
+      box-sizing: border-box;
+    }
+
+    .fancy-contact-form input:focus,
+    .fancy-contact-form textarea:focus {
+      border-color: #48BCA2;
+      background-color: #fff;
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(72, 188, 162, 0.15);
+    }
+
+    .fancy-contact-form button {
+      width: 100%;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 10px;
+    }
+
+    .fancy-contact-form button:hover {
+      background-color: #007bff;
+      transform: translateY(-2px);
+    }
+
+    .fancy-contact-image {
+      flex: 1 1 500px;
+      min-height: 300px;
+    }
+
+    .fancy-contact-image img {
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Mobile Optimizations */
+    @media (max-width: 768px) {
+      .fancy-contact-section {
+        padding: 30px 10px;
+      }
+      
+      .fancy-contact-wrapper {
+        gap: 20px;
+      }
+      
+      .fancy-contact-form {
+        padding: 20px;
+      }
+      
+      .fancy-contact-form h2 {
+        font-size: 22px;
+        margin-bottom: 15px;
+      }
+      
+      .fancy-contact-form input,
+      .fancy-contact-form textarea {
+        padding: 10px 12px;
+        font-size: 14px;
+      }
+      
+      .fancy-contact-form button {
+        padding: 12px;
+        font-size: 15px;
+      }
+      
+      .fancy-contact-image {
+        min-height: 200px;
+        order: -1; /* Moves image above form on mobile */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .fancy-contact-form {
+        padding: 15px;
+      }
+      
+      .fancy-contact-form h2 {
+        font-size: 20px;
+      }
+    }
+  </style>
+
+  <div class="fancy-contact-wrapper">
+    <div class="fancy-contact-form">
+      
+      <form action="https://formspree.io/f/xovlekvg" method="POST">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="_replyto" placeholder="Enter your email" required>
+
+        <label for="phone">Phone Number (Optional)</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Write your message..." required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <div class="fancy-contact-image">
+      <img src="https://images.pexels.com/photos/879143/pexels-photo-879143.jpeg" alt="Contact Us">
+      <div>
+          <h2>Let’s Talk</h2>
+      <p class="contact-intro">Have questions ? Our team is ready to help. Fill out the form below and we'll respond within 24 hours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Section 3: Contact Information -->
+   <section class="features-section section-padding">
+  <div class="container">
+    <div class="section-header animate-fade-up">
+      <h2>Multiple Ways to Reach Us</h2>
+      <p class="text-justify">
+        We offer various communication channels to ensure you can connect with our
+        team in the most convenient way possible, whether you prefer direct
+        contact or scheduling a consultation.
+      </p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card animate-fade-up delay-1">
+        <div class="feature-icon">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <h3>Email Support</h3>
+        <p class="text-justify">
+          Send us detailed inquiries about your AI project requirements,
+          technical questions, or partnership opportunities. Our support team
+          responds within 24 hours to all email communications, providing
+          comprehensive answers and guidance.
+        </p>
+        <strong>contact@stackly.ai</strong>
+      </div>
+      <div class="feature-card animate-fade-up delay-2">
+        <div class="feature-icon">
+          <i class="fas fa-phone"></i>
+        </div>
+        <h3>Phone Consultation</h3>
+        <p class="text-justify">
+          Speak directly with our AI consultants for immediate assistance and
+          personalized recommendations. Our phone support is available during
+          business hours to discuss project specifications, provide technical
+          guidance, and schedule comprehensive consultations.
+        </p>
+        <strong>+1 (555) 123-4567</strong>
+      </div>
+      <div class="feature-card animate-fade-up delay-3">
+        <div class="feature-icon">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <h3>Office Location</h3>
+        <p class="text-justify">
+          Visit our state-of-the-art facility to meet our team, tour our AI
+          development labs, and experience our technologies firsthand. Schedule
+          an appointment to discuss your projects in person with our expert
+          consultants and technical specialists.
+        </p>
+        <strong>123 AI Innovation Drive<br />Tech City, TC 12345</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* 🌟 General Section */
+.features-section {
+  background: #edf0ee; /* light white-variant */
+  padding: 50px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.features-section .section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.features-section h2 {
+  font-size: 2.4rem;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.features-section p {
+  color: #444;
+  max-width: 850px;
+  margin: auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* 🌟 Grid Layout */
+.features-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* 🌟 Cards */
+.feature-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  flex: 1 1 350px;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card h3 {
+  font-size: 1.6rem;
+  margin: 15px 0;
+  color: #007bff;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.feature-card strong {
+  display: block;
+  font-size: 1rem;
+  color: #000;
+  margin-top: 10px;
+}
+
+/* 🌟 Icons */
+.feature-icon {
+  font-size: 40px;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 992px) {
+  .features-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-card {
+    max-width: 100%;
+  }
+
+  .features-section h2 {
+    font-size: 2rem;
+  }
+
+  .features-section p {
+    font-size: 1rem;
+  }
+}
+</style>
+
+   
+    
+
+    <!-- Section 4: Business Hours -->
+   <section class="stats-section section-padding">
+  <div class="container">
+    <div class="section-header">
+      <h2>Business Hours & Support</h2>
+      <p class="text-justify">
+        Our team is available during the following hours to provide immediate assistance 
+        and support for your AI projects and technical inquiries.
+      </p>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-number">Mon-Fri</div>
+        <div class="stat-label">9:00 AM - 6:00 PM</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">Saturday</div>
+        <div class="stat-label">10:00 AM - 4:00 PM</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">24/7</div>
+        <div class="stat-label">Emergency Support</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">&lt; 2 Hours</div>
+        <div class="stat-label">Response Time</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Section background */
+.stats-section {
+  background: #007bff;
+  padding: 50px;
+  width: 100%;
+  box-sizing: border-box;
+  color: white;
+  text-align: center;
+}
+
+/* Section header */
+.stats-section .section-header {
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stats-section .section-header h2 {
+  font-size: 2.4rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.stats-section .section-header p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #edf0ee;
+}
+
+/* Grid layout */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+/* Stat item */
+.stat-item {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 30px 20px;
+  transition: transform 0.3s ease, background 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.stat-item:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.stat-number {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: white;
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: #edf0ee;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-item {
+    padding: 20px;
+  }
+
+  .stats-section .section-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .stats-section .section-header p {
+    font-size: 1rem;
+  }
+}
+</style>
+
+
+    <!-- Section 5: FAQ -->
+    <section class="testimonials-section section-padding faq-section">
+  <div class="container">
+    <div class="content-layout reverse">
+      <!-- Left Content -->
+      <div class="content-text">
+        <h2 class="animate-fade-up">Frequently Asked Questions</h2>
+        <p class="text-justify animate-fade-up delay-1">
+          Get quick answers to common questions about our AI services, implementation processes, and support offerings. Our comprehensive FAQ section covers the most important aspects of working with our team.
+        </p>
+        
+        <!-- FAQ Item 1 -->
+        <div class="faq-item animate-fade-up delay-2">
+          <blockquote class="text-justify">
+            <strong>Q: How long does it typically take to implement an AI solution?</strong><br>
+            A: Implementation timeframes vary depending on project complexity, but most solutions are deployed within 4-12 weeks. We provide detailed project timelines during initial consultations.
+          </blockquote>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="faq-item animate-fade-up delay-3">
+          <blockquote class="text-justify">
+            <strong>Q: Do you provide ongoing support after implementation?</strong><br>
+            A: Yes, we offer comprehensive support packages including monitoring, optimization, updates, and technical assistance to ensure your AI solutions continue performing at peak efficiency.
+          </blockquote>
+        </div>
+      </div>
+
+      <!-- Right Image -->
+      
+    </div>
+  </div>
+</section>
+
+<style>
+/* Section Background */
+.faq-section {
+  background: #f8f9fb;
+  padding: 60px 20px;
+}
+
+/* Layout */
+.content-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.content-layout.reverse {
+  flex-direction: row-reverse;
+}
+
+.content-text {
+  flex: 1;
+}
+
+.content-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.content-image img {
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* Heading & Paragraph */
+.faq-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #333;
+}
+
+.faq-section p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* FAQ Cards */
+.faq-item {
+  background: white;
+  padding: 20px 25px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.faq-item blockquote {
+  margin: 0;
+  font-size: 1rem;
+  color: #444;
+}
+
+.faq-item strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.05rem;
+  color: #007bff;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .content-layout {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .content-image {
+    margin-top: 20px;
+  }
+}
+</style>
+
+
+    <!-- Section 7: Contact Banner -->
+   <!-- Map Section -->
+<section class="map-section section-padding">
+  <div class="container">
+    <div class="section-header">
+      <h2>Find Us on the Map</h2>
+      <p>Visit our office or connect with us in person. Our location is easily accessible for consultations, meetings, and collaborations.</p>
+    </div>
+
+    <div class="map-container">
+      <!-- Google Map Embed -->
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.4788316161727!2d80.20997931533478!3d16.306652288716827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35ef2e4f7e0f4b%3A0x9b764a5d1af3ef1a!2sAditya%20Engineering%20College!5e0!3m2!1sen!2sin!4v1702300000000!5m2!1sen!2sin" 
+        width="100%" 
+        height="400" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<style>
+.map-section {
+  background: #f4f6fa;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.map-section .section-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.map-section .section-header p {
+  font-size: 1.05rem;
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.map-container {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+</style>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <!-- Logo & About -->
+      <div class="footer-section">
+        <div class="logo">
+          <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 40px; width: 80px;">
+        </div>
+        <p class="text-justify">
+          Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.
+        </p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section" style="margin-left: 100px;">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="home2.html">Home 2</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-section" style="margin-left: 30px;">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="service1.html">AI Development</a></li>
+          <li><a href="service2.html">Machine Learning</a></li>
+          <li><a href="service3.html">Data Analytics</a></li>
+          <li><a href="service4.html">Automation</a></li>
+          <li><a href="service5.html">AI Consulting</a></li>
+          <li><a href="service6.html">AI Integration</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-section">
+        <h4>Contact Info</h4>
+        <ul>
+          <li><i class="fas fa-envelope"></i> contact@stackly.ai</li>
+          <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+          <li><i class="fas fa-map-marker-alt"></i> 123 AI Innovation Drive</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 Stackly. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+.footer {
+  background: #0a0a0a;
+  color: #fff;
+  padding: 50px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer .footer-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.footer .footer-section h4 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #f4f4f4;
+}
+
+.footer .footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer .footer-section ul li {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+.footer .footer-section ul li a {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer .footer-section ul li a:hover {
+  color: #00c3ff;
+}
+
+.footer .social-links a {
+  margin-right: 12px;
+  font-size: 1.2rem;
+  color: #ddd;
+  transition: color 0.3s;
+}
+
+.footer .social-links a:hover {
+  color: #00c3ff;
+}
+
+.footer .footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 15px;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+@media (max-width: 900px) {
+  .footer .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .footer .social-links {
+    margin-top: 15px;
+  }
+}
+</style>
+
+<!-- --- DARK MODE OVERRIDES --- -->
+<style>
+body.dark-mode {
+  background: #181a20 !important;
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .header,
+body.dark-mode .nav-menu,
+body.dark-mode .dropdown-menu,
+body.dark-mode .navigation {
+  background: #23272f !important;
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .logo h2,
+body.dark-mode .nav-link,
+body.dark-mode .nav-item a {
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .toggle-btn {
+  background: #23272f !important;
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .avatar-circle {
+  background: #00f7ff !important;
+  color: #181a20 !important;
+}
+
+
+
+body.dark-mode .ai-glow,
+body.dark-mode .ai-hero-title,
+body.dark-mode .ai-hero-paragraph {
+  color: #e0e0e0 !important;
+  text-shadow: none !important;
+}
+
+body.dark-mode .fancy-contact-section,
+body.dark-mode .fancy-contact-form,
+body.dark-mode .fancy-contact-image,
+body.dark-mode .fancy-contact-image img {
+  background: #23272f !important;
+  color: #e0e0e0 !important;
+  box-shadow: none !important;
+}
+
+body.dark-mode .fancy-contact-form h2,
+body.dark-mode .fancy-contact-image h2 {
+  color: #00f7ff !important;
+}
+
+body.dark-mode .fancy-contact-form input,
+body.dark-mode .fancy-contact-form textarea {
+  background: #181a20 !important;
+  color: #e0e0e0 !important;
+  border-color: #00f7ff !important;
+}
+
+body.dark-mode .fancy-contact-form button {
+  background: #00f7ff !important;
+  color: #181a20 !important;
+}
+
+body.dark-mode .fancy-contact-form button:hover {
+  background: #181a20 !important;
+  color: #00f7ff !important;
+}
+
+body.dark-mode .features-section,
+body.dark-mode .features-grid,
+body.dark-mode .feature-card {
+  background: #23272f !important;
+  color: #e0e0e0 !important;
+  box-shadow: none !important;
+}
+
+body.dark-mode .feature-card h3,
+body.dark-mode .features-section h2 {
+  color: #00f7ff !important;
+}
+
+body.dark-mode .feature-icon {
+  color: #00f7ff !important;
+}
+
+body.dark-mode .feature-card strong {
+  color: #00f7ff !important;
+}
+
+body.dark-mode .stats-section,
+body.dark-mode .stats-grid,
+body.dark-mode .stat-item {
+  background: #181a20 !important;
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .stat-number {
+  color: #00f7ff !important;
+}
+
+body.dark-mode .stat-label {
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .faq-section,
+body.dark-mode .faq-item {
+  background: #23272f !important;
+  color: #e0e0e0 !important;
+  box-shadow: none !important;
+}
+
+body.dark-mode .faq-item strong,
+body.dark-mode .faq-section h2 {
+  color: #00f7ff !important;
+}
+
+body.dark-mode .faq-item blockquote {
+  color: #b0b0b0 !important;
+}
+
+body.dark-mode .map-section,
+body.dark-mode .map-container {
+  background: #23272f !important;
+  color: #e0e0e0 !important;
+  box-shadow: none !important;
+}
+
+body.dark-mode .map-section .section-header h2 {
+  color: #00f7ff !important;
+}
+
+body.dark-mode .map-section .section-header p {
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .footer,
+body.dark-mode .footer-content,
+body.dark-mode .footer-section,
+body.dark-mode .footer-bottom {
+  background: #23272f !important;
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .footer-section h3,
+body.dark-mode .footer-section h4,
+body.dark-mode .footer-bottom p {
+  color: #00f7ff !important;
+}
+
+body.dark-mode .footer-section ul li,
+body.dark-mode .footer-section ul li a {
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .social-links a {
+  color: #e0e0e0 !important;
+}
+</style>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

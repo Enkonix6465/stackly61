@@ -1,0 +1,2040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly - AI Tools & Solutions</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+
+
+
+    <!-- Sticky Header -->
+   <header class="header">
+  <div class="container">
+    <div class="nav-wrapper">
+      <!-- Logo -->
+      <div class="logo">
+        <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 40px; width: 80px;">
+      </div>
+
+      <!-- Navigation -->
+      <nav class="navigation">
+    <ul class="nav-menu" id="navMenu">
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link">Home <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="index.html">Home 1</a></li>
+          <li><a href="home2.html">Home 2</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="services.html">All Services</a></li>
+          <li><a href="service1.html">AI Development</a></li>
+          <li><a href="service2.html">Machine Learning</a></li>
+          <li><a href="service3.html">Data Analytics</a></li>
+          <li><a href="service4.html">Automation</a></li>
+          <li><a href="service5.html">AI Consulting</a></li>
+          <li><a href="service6.html">AI Integration</a></li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link">Blog <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="blog.html">All Posts</a></li>
+          <li><a href="blog1.html">AI Trends 2024</a></li>
+          <li><a href="blog2.html">Future of ML</a></li>
+          <li><a href="blog3.html">AI in Business</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      <!-- Login/Logout Link -->
+      <li class="nav-item"><a href="index.html" class="nav-link" id="authLink">Login</a></li>
+    </ul>
+
+    <!-- Hamburger -->
+    <div class="hamburger" id="hamburger" aria-label="Open menu" tabindex="0">
+  <ul class="hamburger-menu" id="hamburgerMenu" style="display:none;">
+    <li><a href="index.html">Home 1</a></li>
+    <li><a href="home2.html">Home 2</a></li>
+    <li><a href="about.html">About</a></li>
+    <li>
+      <span>Services</span>
+      <ul>
+        <li><a href="services.html">All Services</a></li>
+        <li><a href="service1.html">AI Development</a></li>
+        <li><a href="service2.html">Machine Learning</a></li>
+        <li><a href="service3.html">Data Analytics</a></li>
+        <li><a href="service4.html">Automation</a></li>
+        <li><a href="service5.html">AI Consulting</a></li>
+        <li><a href="service6.html">AI Integration</a></li>
+      </ul>
+    </li>
+    <li>
+      <span>Blog</span>
+      <ul>
+        <li><a href="blog.html">All Posts</a></li>
+        <li><a href="blog1.html">AI Trends 2024</a></li>
+        <li><a href="blog2.html">Future of ML</a></li>
+        <li><a href="blog3.html">AI in Business</a></li>
+      </ul>
+    </li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="index.html" id="authLink">Login</a></li>
+  </ul>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+  </nav>
+
+  <!-- Toggle Button -->
+  <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- Avatar Circle -->
+  <div class="avatar-circle" title="Profile">
+
+  </div>
+</div>
+  </div>
+</header>
+
+<!-- ✅ Script -->
+<script>
+  // Hamburger toggle
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("navMenu");
+const hamburgerMenu = document.getElementById("hamburgerMenu");
+
+// Show/hide menu on hamburger click
+hamburger.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+  hamburgerMenu.style.display = hamburgerMenu.style.display === "block" ? "none" : "block";
+});
+
+  // Auth link toggle
+  const authLink = document.getElementById("authLink");
+  if(localStorage.getItem("isLoggedIn") === "true"){
+    authLink.innerText = "Logout";
+    authLink.href = "#";
+    authLink.onclick = () => {
+      localStorage.removeItem("isLoggedIn");
+      localStorage.removeItem("currentUser");
+      window.location.href = "index.html";
+    };
+  } else {
+    authLink.innerText = "Login";
+    authLink.href = "index.html";
+  }
+
+  // Theme toggle
+  const toggleBtn = document.getElementById('toggleBtn');
+  let darkMode = localStorage.getItem('darkMode') === 'true';
+
+  // Apply initial theme
+  function applyTheme() {
+    if (darkMode) {
+      document.body.classList.add('dark-mode');
+      toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
+    } else {
+      document.body.classList.remove('dark-mode');
+      toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
+    }
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    darkMode = !darkMode;
+    localStorage.setItem('darkMode', darkMode);
+    applyTheme();
+  });
+
+  // Call once to apply the theme on initial load
+  applyTheme();
+
+  // Avatar initials
+const avatarCircle = document.querySelector('.avatar-circle');
+const currentUserEmail = localStorage.getItem("currentUser");
+const users = JSON.parse(localStorage.getItem("users")) || {};
+if (currentUserEmail && users[currentUserEmail]) {
+  const firstName = users[currentUserEmail].firstName || "";
+  const lastName = users[currentUserEmail].lastName || "";
+  const initials = (firstName[0] || "").toUpperCase() + (lastName[0] || "").toUpperCase();
+  avatarCircle.innerHTML = `<span style="
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #23272f;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  ">${initials}</span>`;
+} else {
+  avatarCircle.innerHTML = `<span style="
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #23272f;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  ">?</span>`;
+}
+
+
+</script>
+
+<!-- ✅ CSS for hamburger -->
+<style>
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  .hamburger span {
+    height: 3px;
+    width: 25px;
+    background: #333;
+    margin: 4px 0;
+    border-radius: 5px;
+  }
+  @media (max-width: 768px) {
+    .nav-menu {
+      display: none;
+      flex-direction: column;
+      background: #fff;
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      width: 200px;
+      padding: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .nav-menu.active {
+      display: flex;
+    }
+    .hamburger {
+      display: flex;
+    }
+    .nav-item {
+      margin: 10px 0;
+    }
+  }
+
+  .toggle-btn {
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.toggle-btn:hover {
+  background: #f0f0f0;
+}
+.avatar-circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee;
+}
+.avatar-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .toggle-btn, .avatar-circle {
+    margin-left: 8px;
+    width: 32px;
+    height: 32px;
+  }
+}
+</style>
+
+<!-- 🔷 Protest home page  -->
+
+  <script>
+    // Protect this page
+    if(localStorage.getItem("isLoggedIn") !== "true"){
+      window.location.href = "index.html"; // ✅ go back to login
+    } else {
+      document.getElementById("userMail").innerText = localStorage.getItem("currentUser");
+    }
+
+    // Logout
+    function logout(){
+      localStorage.removeItem("isLoggedIn");
+      localStorage.removeItem("currentUser");
+      window.location.href = "index.html"; // ✅ back to login
+    }
+  </script>
+ <!-- 🔷 HERO SECTION START video_code  -->
+
+<!-- 🔷 HERO SECTION START -->
+<section class="ai-hero-section">
+  <video autoplay muted loop playsinline class="ai-hero-bg-video">
+    <source src="https://videos.pexels.com/video-files/3255275/3255275-uhd_2560_1440_25fps.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="ai-hero-overlay">
+    <div class="ai-hero-content">
+      <h1 class="ai-hero-title ai-glow animate-ai-slide-in">Innovators in Artificial Intelligence</h1>
+      <p class="ai-hero-paragraph animate-ai-fade-up">
+        Our mission is to simplify the future with intelligent AI-driven solutions.
+      </p>
+      <a href="services.html" class="btn btn-primary">Explore Tools</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Hero Section */
+  .ai-hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin-: 0 !important;
+  }
+
+  .ai-hero-bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .ai-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for text visibility */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .ai-hero-content {
+    max-width: 950px;
+    color: #fff;
+  }
+
+  /* Neon Glow Heading */
+  .ai-glow {
+    text-shadow:
+      0 0 1px #00f7ff,
+      0 0 1px #00f7ff,
+      0 0 1px #00f7ff,
+      0 0 1px #00f7ff;
+    color: #ffffff;
+  }
+
+  .ai-hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    opacity: 0;
+  }
+
+  .ai-hero-paragraph {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    opacity: 0;
+  }
+
+  .ai-hero-button {
+    display: inline-block;
+    padding: 14px 36px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(90deg, #00f7ff, #007bff);
+    border-radius: 12px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+  }
+
+  .ai-hero-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00f7ff, 0 0 25px #007bff;
+  }
+
+  /* Animations */
+  @keyframes aiSlideIn {
+    0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes aiFadeUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-ai-slide-in {
+    animation: aiSlideIn 1s ease-out forwards;
+    animation-delay: 0.3s;
+  }
+
+  .animate-ai-fade-up {
+    animation: aiFadeUp 1s ease-out forwards;
+    animation-delay: 0.8s;
+  }
+
+  .animate-ai-fade-up-delayed {
+    animation: aiFadeUp 1s ease-out forwards;
+    animation-delay: 1.3s;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .ai-hero-title { font-size: 2.2rem; }
+    .ai-hero-paragraph { font-size: 1rem; }
+    .ai-hero-button { padding: 12px 28px; font-size: 1rem; }
+  }
+
+  @media (max-width: 480px) {
+    .ai-hero-title { font-size: 1.1rem; }
+    .ai-hero-paragraph { font-size: 0.9rem; }
+  }
+</style>
+<!-- 🔷 HERO SECTION END -->
+
+<!-- Section 1: Mission & Values -->
+<section class="mission-values-section">
+  <div class="mv-container">
+    <!-- Section Heading -->
+    <div class="mv-header fade-in">
+      <h2 class="heading-title">Our Mission & Core Values</h2>
+      <p class="mv-subtext">
+        We are driven by the belief that AI should enhance human creativity and decision-making while building a responsible and sustainable future.
+      </p>
+    </div>
+
+    <!-- Values Grid -->
+    <div class="mv-grid">
+      <!-- Card 1 -->
+      <div class="mv-card slide-up delay-1">
+        <div class="mv-icon">
+          <i class="fas fa-rocket"></i>
+        </div>
+        <h3 class="mv-card-title">Innovation at the Core</h3>
+        <p class="mv-card-text">
+          We constantly push boundaries, creating next-generation AI solutions that redefine industries with precision, efficiency, and trust.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="mv-card slide-up delay-2">
+        <div class="mv-icon">
+          <i class="fas fa-handshake"></i>
+        </div>
+        <h3 class="mv-card-title">Client Partnerships</h3>
+        <p class="mv-card-text">
+          We work hand-in-hand with our clients, tailoring AI tools that empower them to achieve measurable growth and lasting success.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="mv-card slide-up delay-3">
+        <div class="mv-icon">
+          <i class="fas fa-balance-scale"></i>
+        </div>
+        <h3 class="mv-card-title">Responsible AI</h3>
+        <p class="mv-card-text">
+          Every solution we build is rooted in ethics, ensuring fairness, transparency, and positive impact on society at large.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Styles -->
+<style>
+.mission-values-section {
+  background: #ffffff;
+  color: #000000;
+  width: 100%;
+  padding: 50px 20px;
+}
+
+ .heading-title {
+    text-align: center;
+    padding-bottom: 15px;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.mv-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mv-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.mv-title {
+  font-size: 2.5rem;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.mv-subtext {
+  font-size: 1.1rem;
+  color: #333333;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.mv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.mv-card {
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.mv-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.2);
+}
+
+.mv-icon {
+  font-size: 2.5rem;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.mv-card-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.mv-card-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333333;
+  text-align: justify;
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUp 1s ease forwards;
+}
+
+.delay-1 { animation-delay: 0.3s; }
+.delay-2 { animation-delay: 0.6s; }
+.delay-3 { animation-delay: 0.9s; }
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+/* Responsive - Tablet */
+@media (max-width: 768px) {
+  .heading-title { font-size: 2rem; }
+  .mv-subtext { font-size: 1rem; }
+  .mv-card { padding: 20px; }
+  .mv-card-title { font-size: 1.2rem; }
+  .mv-card-text { font-size: 0.95rem; }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 480px) {
+  .mission-values-section {
+    padding: 30px 15px; /* reduce top/bottom + side padding */
+  }
+
+  .heading-title {
+    font-size: 1.6rem; /* smaller heading */
+    padding-bottom: 10px;
+  }
+
+  .mv-subtext {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    padding: 0 10px; /* slight breathing room */
+  }
+
+  .mv-grid {
+    gap: 20px; /* smaller gap between cards */
+  }
+
+  .mv-card {
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .mv-icon {
+    font-size: 2rem; /* smaller icons */
+    margin-bottom: 10px;
+  }
+
+  .mv-card-title {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+
+  .mv-card-text {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    text-align: center;
+  }
+}
+
+</style>
+
+<!-- Section 1: End -->
+
+<!-- Section 2: Company Story -->
+ <section class="company-journey-section">
+  <div class="company-container">
+
+    <!-- Top Heading & Intro -->
+    <div class="company-header">
+      <h2>Our Evolution in AI</h2>
+      <p>
+        Since 2019, we’ve transformed from a passionate research group into a global leader in AI-driven innovation.
+        Our mission is to make artificial intelligence practical, scalable, and impactful across industries.
+      </p>
+    </div>
+
+    <!-- Layout -->
+    <div class="company-layout">
+        
+      <!-- Image -->
+      <div class="company-image fade-in-right">
+        <img src="https://images.pexels.com/photos/13696664/pexels-photo-13696664.jpeg" alt="Company Story">
+      </div>
+
+      <!-- Timeline -->
+      <div class="timeline fade-in-left">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2019</span>
+            <p>Founded with a mission to simplify AI for businesses</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2020</span>
+            <p>Delivered our first enterprise-grade AI deployment</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2021</span>
+            <p>Expanded globally, serving 50+ clients worldwide</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2022</span>
+            <p>Launched proprietary AI platform to scale solutions</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2023</span>
+            <p>Achieved 99% client satisfaction & retention rate</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2024</span>
+            <p>Awarded for pioneering AI innovations worldwide</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Styles -->
+<style>
+.company-journey-section {
+  background-color: #007bff;
+  color: white;
+  width: 100%;
+  padding: 50px 20px;
+}
+
+.company-container {
+  max-width: 1300px;
+  margin: auto;
+}
+
+.company-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.company-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.company-header p {
+  font-size: 1.1rem;
+  color: #f1f1f1;
+  max-width: 800px;
+  margin: auto;
+}
+
+.company-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* Image */
+.company-image {
+  flex: 1;
+  min-width: 350px;
+  padding-left: 110px;
+  display: flex;
+  justify-content: center;
+}
+.company-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+/* Timeline */
+.timeline {
+  flex: 1;
+  min-width: 350px;
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline-item {
+  margin-bottom: 35px;
+  position: relative;
+  display: flex;
+  align-items: center; /* Aligns year to dot */
+}
+
+.timeline-dot {
+  width: 16px;
+  height: 16px;
+  background: white;
+  border: 2px solid black;
+  border-radius: 50%;
+  margin-right: 15px; /* space between dot and text */
+  flex-shrink: 0;
+}
+
+.timeline-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-year {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.timeline p {
+  margin: 0;
+  color: #f8f8f8;
+  font-size: 1rem;
+}
+
+/* Animations */
+.fade-in-left {
+  animation: fadeInLeft 1.2s ease forwards;
+  opacity: 0;
+}
+.fade-in-right {
+  animation: fadeInRight 1.2s ease forwards;
+  opacity: 0;
+}
+@keyframes fadeInLeft {
+  from {opacity: 0; transform: translateX(-50px);}
+  to {opacity: 1; transform: translateX(0);}
+}
+@keyframes fadeInRight {
+  from {opacity: 0; transform: translateX(50px);}
+  to {opacity: 1; transform: translateX(0);}
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .company-layout {
+    flex-direction: column;
+    text-align: center;
+  }
+  .timeline {
+    padding-left: 0;
+  }
+  .timeline-item {
+    justify-content: center;
+
+  }
+
+    .company-image {
+    padding-left: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .company-image {
+    padding-left: 0; /* remove left padding */
+    justify-content: center; /* center image */
+  }
+}
+/* Mobile View */
+@media (max-width: 480px) {
+  .company-journey-section {
+    padding-top: 25px; /* less top/bottom padding */
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 13px;
+  }
+
+  .company-header h2 {
+    font-size: 1.6rem; /* smaller heading */
+    margin-bottom: 10px;
+  }
+
+  .company-header p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    padding: 0 5px;
+  }
+
+  .company-layout {
+    gap: 20px; /* reduce gap between image & timeline */
+  }
+
+  .company-image {
+    padding-left: 0;
+  }
+
+  .company-image img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  }
+
+  .timeline {
+    padding-left: 0;
+    margin: 0 auto;
+    max-width: 90%;
+  }
+
+  .timeline-item {
+    justify-content: flex-start; /* Align dot + text to left */
+    text-align: left; /* Keep text aligned properly */
+    margin-bottom: 25px;
+  }
+
+  .timeline-dot {
+    margin-right: 10px; /* Small gap between dot and text */
+  }
+
+  .timeline-content {
+    flex: 1;
+  }
+
+  .company-image {
+    padding-left: 0; /* remove left padding */
+    justify-content: center; /* keep image centered */
+  }
+
+  .timeline-year {
+    font-size: 1rem;
+    margin-bottom: 4px;
+  }
+
+  .timeline p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+}
+
+
+</style>
+
+<!-- Section 2: End -->
+
+<!--Section 3:  Advanced About Section -->
+<section class="about-advanced">
+  <div class="about-container">
+    
+    <!-- Image -->
+    <div class="about-image slide-left">
+      <img src="https://images.pexels.com/photos/27662879/pexels-photo-27662879.jpeg" alt="AI Future">
+    </div>
+
+    <!-- Text Content -->
+    <div class="about-text fade-up">
+      <h1 class="heading-title1">AI for Business Success</h1>
+      <p>
+        Artificial Intelligence is no longer a concept of the future — it is the present force
+        shaping industries, enhancing productivity, and creating new opportunities. At Stackly,
+        we bring together expertise, innovation, and a deep commitment to democratizing AI. 
+        Our solutions are designed to empower businesses, improve decision-making, and enable 
+        growth in today’s competitive digital ecosystem.
+      </p>
+      <p>
+        From automating routine operations to delivering predictive insights, our AI-driven 
+        technologies help organizations unlock hidden potential and stay ahead of the curve.
+      </p>
+      <div class="about-buttons">
+        <a href="services.html" class="btn-primary">Discover More</a>
+        <a href="contact.html" class="btn-outline">Get Started</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Styles -->
+<style>
+.about-advanced {
+  width: 100%;
+  background: white;
+  padding-top: 50px; /* equal padding all sides */
+  padding-bottom: 50px;
+  padding-right: 50px;
+  padding-left: 10px;
+}
+
+ .heading-title1 {
+    text-align: left;
+    padding-bottom: 15px;
+    font-size: 2.5rem;
+    font-weight: bold;
+ }
+
+.about-container {
+  width: 100%;
+  max-width: 1400px; /* fixed max container width */
+  margin: auto;
+  display: flex;
+  align-items: flex-start; /* image and text start at same point */
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 320px;
+}
+
+.about-text h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 20px;
+  white-space: nowrap; /* keep heading single line */
+}
+
+.about-text p {
+  font-size: 1.05rem;
+  color: #333;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+.about-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: #007bff;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: black;
+}
+
+.btn-outline {
+  border: 2px solid #007bff;
+  color: #007bff;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: #007bff;
+  color: white;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 320px;
+  text-align: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  transition: transform 0.5s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Animations */
+.fade-up {
+  opacity: 0;
+  animation: fadeUp 1.2s ease forwards;
+}
+.slide-left {
+  opacity: 0;
+  animation: slideLeft 1.2s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {opacity: 0; transform: translateY(40px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+@keyframes slideLeft {
+  from {opacity: 0; transform: translateX(-60px);}
+  to {opacity: 1; transform: translateX(0);}
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .about-text h1 {
+    white-space: normal; /* allow wrap on small screens */
+  }
+  .about-buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-advanced {
+    padding: 30px 20px; /* balanced padding */
+  }
+
+  .about-container {
+    flex-direction: column-reverse; /* text above, image below */
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+  }
+
+  .about-text {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .about-text h1 {
+    font-size: 1.8rem; /* smaller heading for mobile */
+    line-height: 1.3;
+    white-space: normal; /* allow wrapping */
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    text-align: justify; /* center for mobile */
+  }
+
+  .about-buttons {
+    flex-direction: column; /* stack buttons vertically */
+    gap: 15px;
+    width: 100%;
+  }
+
+  .about-buttons a {
+    width: 100%; /* buttons full-width */
+    text-align: center;
+  }
+
+  .about-image {
+    width: 100%;
+  }
+
+  .about-image img {
+    width: 100%;
+    max-width: 100%; /* image full width */
+    border-radius: 15px;
+  }
+}
+
+</style>
+
+    
+<!-- Section 3: End -->    
+
+    <!-- Section 4: Team Expertise -->
+<section class="team-stats-section">
+  <div class="team-stats-container">
+    
+    <!-- Section Heading -->
+    <div class="team-stats-header">
+      <h2 class="team-heading">Meet Our Expert Team</h2>
+      <p class="team-subtext">
+        Powered by innovation and guided by expertise, our team blends AI research,
+        machine learning, and real-world business strategy to build impactful solutions 
+        that shape the digital future.
+      </p>
+    </div>
+
+    <!-- Stats Grid -->
+    <div class="team-stats-grid">
+      <div class="team-stat-item fade-up">
+        <div class="team-stat-number">25+</div>
+        <div class="team-stat-label">AI Specialists</div>
+      </div>
+      <div class="team-stat-item fade-up delay-1">
+        <div class="team-stat-number">15+</div>
+        <div class="team-stat-label">PhD Researchers</div>
+      </div>
+      <div class="team-stat-item fade-up delay-2">
+        <div class="team-stat-number">6+</div>
+        <div class="team-stat-label">Years of Combined Expertise</div>
+      </div>
+      <div class="team-stat-item fade-up delay-3">
+        <div class="team-stat-number">12+</div>
+        <div class="team-stat-label">Countries Represented</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Styles -->
+<style>
+.team-stats-section {
+  background-color: #007bff;
+  color: white;
+  width: 100%;
+  padding: 50px 20px;
+}
+
+.team-stats-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.team-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.team-subtext {
+  font-size: 1.1rem;
+  max-width: 900px;
+  margin: 0 auto 40px;
+  color: #f8f9fa;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.team-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.team-stat-item {
+  background: white;
+  color: #000;
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-stat-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.team-stat-number {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.team-stat-label {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* Smooth fade-up animation */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s forwards;
+}
+
+.fade-up.delay-1 { animation-delay: 0.2s; }
+.fade-up.delay-2 { animation-delay: 0.4s; }
+.fade-up.delay-3 { animation-delay: 0.6s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .team-heading {
+    font-size: 2rem;
+  }
+  .team-stat-number {
+    font-size: 2.2rem;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 600px) {
+  .team-stats-section {
+    padding: 25px 15px;
+  }
+
+  .team-heading {
+    font-size: 1.6rem;
+    line-height: 1.3;
+    margin-bottom: 10px;
+  }
+
+  .team-subtext {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    text-align: center; /* center text on mobile */
+  }
+
+  .team-stats-grid {
+    grid-template-columns: 1fr; /* single column for mobile */
+    gap: 20px;
+  }
+
+  .team-stat-item {
+    padding: 20px 15px;
+    border-radius: 12px;
+  }
+
+  .team-stat-number {
+    color: #00f7ff !important;
+  }
+}  
+
+</style>
+
+<!-- Section 4: End --> 
+
+<!-- Section 5: Technology Leadership -->
+<!-- Advanced AI Leadership Section -->
+<section class="ai-leadership">
+  <div class="ai-leadership-container">
+    
+    <!-- Top Heading -->
+    <div class="ai-leadership-heading">
+      <h2 >Shaping the Future with AI</h2>
+    </div>
+
+    <!-- Left Image -->
+    <div class="ai-leadership-image zoom-in">
+      <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=900&h=600&fit=crop&auto=format" alt="AI Innovation">
+    </div>
+
+    <!-- Right Content -->
+    <div class="ai-leadership-text fade-in">
+      <p>
+        At Stackly, we don’t just adapt to AI innovation—we engineer it.  
+        Ensuring businesses unlock the transformative power of artificial intelligence.
+      </p>
+
+      <!-- Testimonial 1 -->
+      <div class="ai-testimonial slide-up delay-1">
+        <blockquote>
+          “Our machine learning solutions are engineered to outperform industry 
+          averages by a significant margin, creating measurable business success.”
+        </blockquote>
+        <div class="ai-person">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Dr. Sarah Chen">
+          <div>
+            <strong>Dr. Sarah Chen</strong><br>
+            <span>Chief Technology Officer</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="ai-testimonial slide-up delay-2">
+        <blockquote>
+          “We design AI that works with people, not against them—empowering 
+          organizations through collaboration between human intelligence and technology.”
+        </blockquote>
+        <div class="ai-person">
+          <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Michael Rodriguez">
+          <div>
+            <strong>Michael Rodriguez</strong><br>
+            <span>CEO & Founder</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CSS -->
+<style>
+.ai-leadership {
+  background: #ffffff;
+  padding: 50px;
+  width: 100%;
+}
+
+.ai-leadership-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 25px;
+  flex-direction: row;
+}
+
+/* Top Heading */
+.ai-leadership-heading {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.ai-leadership-heading h2 {
+  font-size: 2.5rem;
+  color: #007bff;
+  margin: 0;
+}
+
+/* Left Image */
+.ai-leadership-image {
+  flex: 1;
+  min-width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ai-leadership-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+  transition: transform 0.5s ease;
+}
+.ai-leadership-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Right Text */
+.ai-leadership-text {
+  flex: 1;
+  min-width: 350px;
+  color: #000;
+}
+.ai-leadership-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+/* Testimonials */
+.ai-testimonial {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 25px;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.ai-testimonial:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.ai-testimonial blockquote {
+  font-style: italic;
+  margin: 0 0 15px 0;
+  color: #000;
+}
+
+/* Person with Image */
+.ai-person {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.ai-person img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #007bff;
+  object-fit: cover;
+}
+.ai-person strong {
+  color: #000;
+}
+.ai-person span {
+  font-size: 0.9rem;
+  color: #007bff;
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease forwards;
+}
+.zoom-in {
+  opacity: 0;
+  transform: scale(0.9);
+  animation: zoomIn 1s ease forwards;
+}
+.slide-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUp 1s ease forwards;
+}
+.slide-up.delay-1 { animation-delay: 0.4s; }
+.slide-up.delay-2 { animation-delay: 0.8s; }
+
+@keyframes fadeIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes zoomIn {
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes slideUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .ai-leadership-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .ai-leadership-text p {
+    text-align: center;
+  }
+  .ai-person {
+    justify-content: center;
+  }
+}
+/* Mobile View */
+@media (max-width: 600px) {
+  .ai-leadership {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left:10px;   /* equal left & right */
+    padding-right: 15px;
+  }
+
+  .ai-leadership-heading h2 {
+    font-size: 1.6rem;
+    line-height: 1.3;
+  }
+
+  .ai-leadership-image img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .ai-leadership-text {
+    margin-top: 20px;
+  }
+
+  .ai-leadership-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 0 5px;  /* tiny inner padding for balance */
+  }
+
+  .ai-testimonial {
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .ai-person {
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .ai-person img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .ai-person span {
+    font-size: 0.85rem;
+  }
+}
+
+
+</style>
+
+<!-- Section 5: End --> 
+  
+<!-- Section 6: Contact Banner -->
+<section class="contact-banner section-padding">
+    <div class="container">
+        <div class="contact-banner-content">
+            <h2>Ready to Join the AI Revolution?</h2>
+            <p>Discover how our expertise can transform your business operations and drive growth.</p>
+            <a href="contact.html" class="btn btn-primary">Get Started Today</a>
+        </div>
+    </div>
+</section>
+
+<style>
+    .contact-banner {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                    url('https://images.pexels.com/photos/8867275/pexels-photo-8867275.jpeg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        text-align: center;
+        color: #ffffff;
+        padding: 80px 20px;
+    }
+
+    .contact-banner-content h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+
+    .contact-banner-content p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contact-banner .btn-primary {
+        background: #000000;
+        color: #ffffff;
+        padding: 12px 28px;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+        display: inline-block;
+    }
+
+    .contact-banner .btn-primary:hover {
+        background: #ffffff;
+        color: #000000;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    /* 📱 Mobile Styles */
+    @media (max-width: 600px) {
+        .contact-banner {
+            padding: 50px 15px; /* Less padding */
+            background-attachment: scroll; /* smoother mobile rendering */
+        }
+
+        .contact-banner-content h2 {
+            font-size: 1.8rem; /* smaller heading */
+            line-height: 1.3;
+        }
+
+        .contact-banner-content p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-banner .btn-primary {
+            padding: 10px 22px;
+            font-size: 0.95rem;
+            border-radius: 6px;
+        }
+    }
+</style>
+
+
+<!-- Section 6: End -->     
+    
+
+    <!-- Footer -->
+     <footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <!-- Logo & About -->
+      <div class="footer-section">
+        <div class="logo">
+          <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 40px; width: 80px;">
+        </div>
+        <p class="text-justify">
+          Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.
+        </p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section" >
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="home2.html">Home 2</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-section">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="service1.html">AI Development</a></li>
+          <li><a href="service2.html">Machine Learning</a></li>
+          <li><a href="service3.html">Data Analytics</a></li>
+          <li><a href="service4.html">Automation</a></li>
+          <li><a href="service5.html">AI Consulting</a></li>
+          <li><a href="service6.html">AI Integration</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-section">
+        <h4>Contact Info</h4>
+        <ul>
+          <li><i class="fas fa-envelope"></i> contact@stackly.ai</li>
+          <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+          <li><i class="fas fa-map-marker-alt"></i> 123 AI Innovation Drive</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 Stackly. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+.footer {
+  background: #0a0a0a;
+  color: #fff;
+  padding: 50px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer .footer-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.footer .footer-section h4 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #f4f4f4;
+}
+
+.footer .footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer .footer-section ul li {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+.footer .footer-section ul li a {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer .footer-section ul li a:hover {
+  color: #00c3ff;
+}
+
+.footer .social-links a {
+  margin-right: 12px;
+  font-size: 1.2rem;
+  color: #ddd;
+  transition: color 0.3s;
+}
+
+.footer .social-links a:hover {
+  color: #00c3ff;
+}
+
+.footer .footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 15px;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+@media (max-width: 900px) {
+  .footer .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .footer .social-links {
+    margin-top: 15px;
+  }
+}
+</style>
+
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
+
+<style>
+/* --- DARK MODE OVERRIDES --- */
+body.dark-mode {
+  background: #181a20 !important;
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .header,
+body.dark-mode .nav-menu,
+body.dark-mode .dropdown-menu,
+body.dark-mode .navigation {
+  background: #23272f !important;
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .logo h2,
+body.dark-mode .nav-link,
+body.dark-mode .nav-item a {
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .toggle-btn {
+  background: #23272f !important;
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .avatar-circle {
+  background: #23272f !important;
+}
+
+
+
+body.dark-mode .ai-hero-title,
+body.dark-mode .ai-hero-paragraph {
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .btn-primary {
+  background: #00f7ff !important;
+  color: #181a20 !important;
+}
+
+body.dark-mode .btn-outline {
+  background: #181a20 !important;
+  color: #00f7ff !important;
+  border-color: #00f7ff !important;
+}
+
+body.dark-mode .mission-values-section {
+  background: #23272f !important;
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .mv-card {
+  background: #181a20 !important;
+  color: #e0e0e0 !important;
+  box-shadow: none !important;
+}
+
+body.dark-mode .mv-icon {
+  color: #00f7ff !important;
+}
+
+body.dark-mode .mv-card-title {
+  color: #00f7ff !important;
+}
+
+body.dark-mode .mv-card-text {
+  color: #b0b0b0 !important;
+}
+
+body.dark-mode .company-journey-section,
+body.dark-mode .team-stats-section {
+  background: #23272f !important;
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .company-header h2,
+body.dark-mode .team-heading {
+  color: #00f7ff !important;
+}
+
+body.dark-mode .company-header p,
+body.dark-mode .team-subtext {
+  color: #b0b0b0 !important;
+}
+
+body.dark-mode .timeline-dot {
+  background: #00f7ff !important;
+  border-color: #23272f !important;
+}
+
+body.dark-mode .timeline-content .timeline-year {
+  color: #00f7ff !important;
+}
+
+body.dark-mode .timeline-content p {
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .team-stat-item {
+  background: #181a20 !important;
+  color: #e0e0e0 !important;
+  box-shadow: none !important;
+}
+
+body.dark-mode .team-stat-number {
+  color: #00f7ff !important;
+}
+
+body.dark-mode .ai-leadership {
+  background: #23272f !important;
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .ai-leadership-heading h2 {
+  color: #00f7ff !important;
+}
+
+body.dark-mode .ai-leadership-text {
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .ai-testimonial {
+  background: #181a20 !important;
+  color: #e0e0e0 !important;
+  border-color: #23272f !important;
+  box-shadow: none !important;
+}
+
+body.dark-mode .ai-testimonial blockquote {
+  color: #b0b0b0 !important;
+}
+
+body.dark-mode .ai-person strong {
+  color: #00f7ff !important;
+}
+
+body.dark-mode .ai-person span {
+  color: #00f7ff !important;
+}
+
+body.dark-mode .about-advanced {
+  background: #23272f !important;
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .about-text h1,
+body.dark-mode .heading-title1 {
+  color: #00f7ff !important;
+}
+
+body.dark-mode .about-text p {
+  color: #b0b0b0 !important;
+}
+
+body.dark-mode .btn-primary {
+  background: #00f7ff !important;
+  color: #181a20 !important;
+}
+
+body.dark-mode .btn-primary:hover {
+  background: #181a20 !important;
+  color: #00f7ff !important;
+}
+
+body.dark-mode .btn-outline {
+  background: #181a20 !important;
+  color: #00f7ff !important;
+  border-color: #00f7ff !important;
+}
+
+body.dark-mode .btn-outline:hover {
+  background: #00f7ff !important;
+  color: #181a20 !important;
+}
+
+body.dark-mode .about-image img,
+body.dark-mode .company-image img,
+body.dark-mode .ai-leadership-image img {
+  box-shadow: none !important;
+  border: 2px solid #00f7ff !important;
+}
+
+body.dark-mode .contact-banner {
+  background: #181a20 !important;
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .contact-banner .btn-primary {
+  background: #00f7ff !important;
+  color: #181a20 !important;
+}
+
+body.dark-mode .contact-banner .btn-primary:hover {
+  background: #181a20 !important;
+  color: #00f7ff !important;
+}
+
+body.dark-mode .footer {
+  background: #23272f !important;
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .footer-section h3,
+body.dark-mode .footer-section h4,
+body.dark-mode .footer-bottom p {
+  color: #00f7ff !important;
+}
+
+body.dark-mode .social-links a {
+  color: #00f7ff !important;
+}
+
+body.dark-mode p {
+  color: #ffffff !important;
+}
+
+
+body.dark-mode .avatar-circle {
+  background: #00f7ff !important; /* Bright background for contrast */
+  color: #181a20 !important;       /* Dark text for initials */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+</style>
