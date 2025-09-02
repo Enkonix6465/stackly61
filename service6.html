@@ -3,140 +3,705 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Development Services - Stackly</title>
+    <title>Stackly - Realestate</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+
+<div id="loader">
+    <div class="spinner"></div>
+</div>
+
+<div id="content" style="display:none;"></div>
     <!-- Sticky Header -->
-     <!-- Sticky Header -->
-     <header class="header">
+    <header class="header">
   <div class="container">
     <div class="nav-wrapper">
-      <!-- Logo -->
       <div class="logo">
         <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 40px; width: 80px;">
       </div>
 
-      <!-- Navigation -->
       <nav class="navigation">
-    <ul class="nav-menu" id="navMenu">
-      <li class="nav-item dropdown">
-        <a href="#" class="nav-link">Home <i class="fas fa-chevron-down"></i></a>
-        <ul class="dropdown-menu">
-          <li><a href="index.html">Home 1</a></li>
-          <li><a href="home2.html">Home 2</a></li>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link" ><span data-i18n="home">Home</span> <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html"><span data-i18n="home1">Home 1</span></a></li>
+              <li><a href="home2.html"><span data-i18n="home2">Home 2</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="about.html" class="nav-link"><span data-i18n="about">About</span></a></li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link"><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Property Buying Assistance</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Property Selling</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Rental Services </span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Property Management</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Real Estate Investment</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service_6">Legal & Documentation Support</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link"><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
+              <li><a href="blog1.html"><span data-i18n="blog_1">Smart Property Investments</span></a></li>
+              <li><a href="blog2.html"><span data-i18n="blog_2">Effective Property Management</span></a></li>
+              <li><a href="blog3.html"><span data-i18n="blog_3">Real Estate Market Trends</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="contact.html" class="nav-link"><span data-i18n="contact">Contact</span></a></li>
+          
         </ul>
-      </li>
-      <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-      <li class="nav-item dropdown">
-        <a href="#" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
-        <ul class="dropdown-menu">
-          <li><a href="services.html">All Services</a></li>
-          <li><a href="service1.html">AI Development</a></li>
-          <li><a href="service2.html">Machine Learning</a></li>
-          <li><a href="service3.html">Data Analytics</a></li>
-          <li><a href="service4.html">Automation</a></li>
-          <li><a href="service5.html">AI Consulting</a></li>
-          <li><a href="service6.html">AI Integration</a></li>
+        <div class="hamburger" id="hamburger" aria-label="Open menu" tabindex="0">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+
+      <div class="mobile-menu-wrapper">
+        <ul class="hamburger-menu" id="hamburgerMenu">
+          <li class="mobile-dropdown-parent">
+            <span><span data-i18n="home">Home</span> <i class="fas fa-chevron-down"></i></span>
+            <ul class="mobile-dropdown">
+              <li><a href="index.html"><span data-i18n="home1">Home 1</span></a></li>
+              <li><a href="home2.html"><span data-i18n="home2">Home 2</span></a></li>
+            </ul>
+          </li>
+          <li><a href="about.html"><span data-i18n="about">About</span></a></li>
+          <li class="mobile-dropdown-parent">
+            <span><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></span>
+            <ul class="mobile-dropdown">
+             <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Property Buying Assistance</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Property Selling</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Rental Services </span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Property Management</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Real Estate Investment</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service6">Legal & Documentation Support</span></a></li>
+            </ul>
+          </li>
+          <li class="mobile-dropdown-parent">
+            <span><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></span>
+            <ul class="mobile-dropdown">
+               <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
+                <li><a href="blog1.html"><span data-i18n="blog_1">Smart Property Investments</span></a></li>
+                <li><a href="blog2.html"><span data-i18n="blog_2">Effective Property Management</span></a></li>
+                <li><a href="blog3.html"><span data-i18n="blog_3">Real Estate Market Trends</span></a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html"><span data-i18n="contact">Contact</span></a></li>
+       
         </ul>
-      </li>
-      <li class="nav-item dropdown">
-        <a href="#" class="nav-link">Blog <i class="fas fa-chevron-down"></i></a>
-        <ul class="dropdown-menu">
-          <li><a href="blog.html">All Posts</a></li>
-          <li><a href="blog1.html">AI Trends 2024</a></li>
-          <li><a href="blog2.html">Future of ML</a></li>
-          <li><a href="blog3.html">AI in Business</a></li>
+      </div>
+
+      <div class="lang-switcher">
+        <label for="langSelect">Language:</label>
+        <select id="langSelect" onchange="changeLanguage(this.value)">
+          <option value="en">English</option>
+          <option value="ar">Arabic</option>
+          <option value="he">Hebrew</option>
+        </select>
+      </div>
+
+      <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
+        <i class="fas fa-moon"></i>
+      </button>
+
+      <div class="avatar-circle" title="Profile" id="avatarCircle">
+        <span id="avatarInitials"></span>
+      </div>
+      <div class="avatar-dropdown" id="avatarDropdown">
+        <ul>
+          <li><a href="index.html" id="logoutBtn"><span data-i18n="logout">Logout</span></a></li>
         </ul>
-      </li>
-      <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-      <!-- Login/Logout Link -->
-      <li class="nav-item"><a href="index.html" class="nav-link" id="authLink">Login</a></li>
-    </ul>
-
-    <!-- Hamburger -->
-    <div class="hamburger" id="hamburger" aria-label="Open menu" tabindex="0">
-  <ul class="hamburger-menu" id="hamburgerMenu" style="display:none;">
-    <li><a href="index.html">Home 1</a></li>
-    <li><a href="home2.html">Home 2</a></li>
-    <li><a href="about.html">About</a></li>
-    <li>
-      <span>Services</span>
-      <ul>
-        <li><a href="services.html">All Services</a></li>
-        <li><a href="service1.html">AI Development</a></li>
-        <li><a href="service2.html">Machine Learning</a></li>
-        <li><a href="service3.html">Data Analytics</a></li>
-        <li><a href="service4.html">Automation</a></li>
-        <li><a href="service5.html">AI Consulting</a></li>
-        <li><a href="service6.html">AI Integration</a></li>
-      </ul>
-    </li>
-    <li>
-      <span>Blog</span>
-      <ul>
-        <li><a href="blog.html">All Posts</a></li>
-        <li><a href="blog1.html">AI Trends 2024</a></li>
-        <li><a href="blog2.html">Future of ML</a></li>
-        <li><a href="blog3.html">AI in Business</a></li>
-      </ul>
-    </li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="index.html" id="authLink">Login</a></li>
-  </ul>
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
-  </nav>
-
-  <!-- Toggle Button -->
-  <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
-    <i class="fas fa-moon"></i>
-  </button>
-
-  <!-- Avatar Circle -->
-  <div class="avatar-circle" title="Profile">
-
-  </div>
-</div>
+      </div>
+    </div>
   </div>
 </header>
 
-<!-- ✅ Script -->
+<!-- Section : 1 -->
+<section class="ai-hero-section">
+  <video autoplay muted loop playsinline class="ai-hero-bg-video">
+    <source src="https://videos.pexels.com/video-files/4307513/4307513-hd_1920_1080_30fps.mp4" type="video/mp4">
+    Your browser does not support the video tag.  
+  </video>
+
+  <div class="ai-hero-overlay">
+    <div class="ai-hero-content">
+      <h1 class="ai-hero-title ai-glow animate-ai-slide-in" data-i18n="service6_title">Legal & Documentation Support</h1>      
+    </div>
+  </div>
+</section>
+
+<!-- Section : 2 -->
+<section class="ai-section">
+    <h1 class="ai-heading" data-i18n="service6_heading">Legal & Documentation Support</h1>
+    <div class="ai-content">
+        <div class="ai-text">
+            <p data-i18n="service6_intro">
+                Ensure your business and property transactions are legally secure with our comprehensive legal 
+                and documentation support services. We help you prepare, review, and manage agreements, contracts, 
+                and compliance documents efficiently and accurately.
+            </p>
+
+            <!-- Feature Points -->
+            <ul class="hero-features fade-in-up delay-2">
+                <li><span>✔</span> <span data-i18n="service6_point1">Contract drafting and review</span></li>
+                <li><span>✔</span> <span data-i18n="service6_point2">Property and business documentation</span></li>
+                <li><span>✔</span> <span data-i18n="service6_point3">Legal compliance checks</span></li>
+                <li><span>✔</span> <span data-i18n="service6_point4">Regulatory filing support</span></li>
+                <li><span>✔</span> <span data-i18n="service6_point5">Tailored legal solutions for your needs</span></li>
+            </ul>
+
+            <div class="ai-buttons">
+                <a href="services.html" class="btn btn-primary" data-i18n="service6_btn1">Explore Services</a>
+                <a href="contact.html" class="btn btn-primary" data-i18n="service6_btn2">Get Support</a>
+            </div>
+        </div>
+
+        <div class="ai-image">
+            <img src="https://images.pexels.com/photos/5071130/pexels-photo-5071130.jpeg" 
+                 alt="Legal and Documentation Support">
+        </div>
+    </div>
+</section>
+
+<!-- Section : 3 -->
+<section class="advanced-features">
+  <div class="advanced-features-container">
+    <div class="features-header fade-in-up">
+      <h2 data-i18n="service6_section3_title">Legal & Documentation Support</h2>
+      <p data-i18n="service6_section3_desc">
+        Simplify your legal processes and ensure accuracy with our professional documentation support. 
+        From drafting contracts to verifying compliance documents, we provide reliable solutions to 
+        safeguard your business and property transactions.
+      </p>
+    </div>
+
+    <div class="features-cards">
+      <div class="feature-box fade-in-up delay-1">
+        <div class="feature-icon"><i class="fas fa-file-contract"></i></div>
+        <h3 data-i18n="service6_card1_title">Contract Drafting & Review</h3>
+        <p data-i18n="service6_card1_desc">Prepare and review agreements, leases, and contracts with expert guidance to protect your interests.</p>
+      </div>
+
+      <div class="feature-box fade-in-up delay-2">
+        <div class="feature-icon"><i class="fas fa-balance-scale"></i></div>
+        <h3 data-i18n="service6_card2_title">Compliance Documentation</h3>
+        <p data-i18n="service6_card2_desc">Ensure all your property and business documents meet regulatory standards with accurate and timely filing.</p>
+      </div>
+
+      <div class="feature-box fade-in-up delay-3">
+        <div class="feature-icon"><i class="fas fa-folder-open"></i></div>
+        <h3 data-i18n="service6_card3_title">Property & Legal Records</h3>
+        <p data-i18n="service6_card3_desc">Organize and manage essential records such as deeds, agreements, and compliance reports for smooth transactions and audits.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section : 4 -->
+<section class="development-process">
+  <div class="development-process-container">
+    <div class="process-header fade-in-up">
+      <h2 data-i18n="service6_section4_title">Reliable Legal & Documentation Support</h2>
+      <p data-i18n="service6_section4_desc">
+        We simplify your legal processes and ensure documentation accuracy for smooth business 
+        and property transactions. From drafting contracts to managing compliance records, 
+        our services provide clarity, protection, and peace of mind.
+      </p>
+    </div>
+
+    <div class="process-row">
+      <div class="process-image slide-in-right">
+        <img src="https://images.pexels.com/photos/4682081/pexels-photo-4682081.jpeg" alt="Legal and Documentation Support">
+      </div>
+
+      <div class="process-content fade-in-up delay-1">
+        <p class="process-intro" data-i18n="service6_section4_intro">
+          Our legal and documentation support services ensure all your agreements, compliance 
+          filings, and property records are managed efficiently. With expert assistance, you can 
+          avoid legal risks, stay compliant, and streamline documentation for both individuals 
+          and businesses.
+        </p>
+
+        <div class="process-steps">
+          <div class="step"><span class="step-number">01</span><p data-i18n="service6_step1">Understanding Legal Requirements</p></div>
+          <div class="step"><span class="step-number">02</span><p data-i18n="service6_step2">Drafting & Reviewing Contracts</p></div>
+          <div class="step"><span class="step-number">03</span><p data-i18n="service6_step3">Verification of Property Documents</p></div>
+          <div class="step"><span class="step-number">04</span><p data-i18n="service6_step4">Compliance Documentation & Filing</p></div>
+          <div class="step"><span class="step-number">05</span><p data-i18n="service6_step5">Organizing Legal & Financial Records</p></div>
+          <div class="step"><span class="step-number">06</span><p data-i18n="service6_step6">Advisory & Ongoing Documentation Support</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section : 5 -->
+<section class="service-showcase">
+  <div class="service-container">
+    <div class="service-header animate-fade-up">
+      <h2 data-i18n="service6_section5_title">Legal & Documentation Support</h2>
+      <p data-i18n="service6_section5_desc">
+        Simplify your legal processes with our professional documentation support services. 
+        From drafting and reviewing contracts to verifying property papers and compliance records, 
+        we ensure accuracy, transparency, and peace of mind in every transaction.
+      </p>
+    </div>
+
+    <div class="service-grid">
+      <div class="service-card animate-slide-up delay-1">
+        <h3 data-i18n="service6_service1_title">Contract Drafting & Review</h3>
+        <p data-i18n="service6_service1_desc">Prepare and review business and property agreements with legal precision to protect your interests.</p>
+      </div>
+      <div class="service-card animate-slide-up delay-2">
+        <h3 data-i18n="service6_service2_title">Property Documentation</h3>
+        <p data-i18n="service6_service2_desc">Verification and validation of property-related documents to ensure clear titles and secure transactions.</p>
+      </div>
+      <div class="service-card animate-slide-up delay-3">
+        <h3 data-i18n="service6_service3_title">Compliance & Record Management</h3>
+        <p data-i18n="service6_service3_desc">Maintain accurate compliance documents, licenses, and records for hassle-free audits and approvals.</p>
+      </div>
+      <div class="service-card animate-slide-up delay-4">
+        <h3 data-i18n="service6_service4_title">Legal Advisory Support</h3>
+        <p data-i18n="service6_service4_desc">Expert guidance on documentation, regulatory filings, and legal paperwork for businesses and individuals.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section : 6 -->
+<section class="bookkeeping-services">
+  <div class="services-container">
+    <div class="services-image animate-slide-in">
+      <img src="https://images.pexels.com/photos/17246020/pexels-photo-17246020.jpeg" alt="Legal & Documentation Support">
+    </div>
+    <div class="services-content">
+      <h2 class="animate-fade-up" data-i18n="service6_section6_title">Professional Legal & Documentation Support</h2>
+      <p class="animate-fade-up delay-1" style="text-align: justify;" data-i18n="service6_section6_desc">
+        Our legal and documentation support services simplify complex paperwork and ensure accuracy in every transaction. 
+        From drafting and verifying contracts to handling compliance records, we provide reliable documentation solutions 
+        that protect your interests and give you peace of mind.
+      </p>
+      <div class="service-card animate-fade-up delay-2">
+        <h3 data-i18n="service6_section6_card1_title">Contract Drafting & Review</h3>
+        <p data-i18n="service6_section6_card1_desc">We prepare and review agreements with precision to safeguard your business and property interests.</p>
+      </div>
+      <div class="service-card animate-fade-up delay-3">
+        <h3 data-i18n="service6_section6_card2_title">Property & Compliance Documentation</h3>
+        <p data-i18n="service6_section6_card2_desc">Thorough verification of property papers and maintenance of compliance documents for secure and transparent dealings.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section : 7 -->
+<section class="contact-banner section-padding">
+  <div class="container">
+    <div class="contact-banner-content">
+      <h2 data-i18n="service6_section7_title">Reliable Legal & Documentation Support</h2>
+      <p data-i18n="service6_section7_desc">Let’s simplify your contracts, agreements, and compliance documents with expert legal and documentation assistance.</p>
+      <a href="contact.html" class="btn btn-primary" data-i18n="service6_section7_btn">Get Legal Support</a>
+    </div>
+  </div>
+</section>
+
+
+
 <script>
-  // Hamburger toggle
- const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("navMenu");
-const hamburgerMenu = document.getElementById("hamburgerMenu");
+// Translation dictionary
+const translations = {
+  en: {
+   "home": "Home",
+    "home1": "Home 1",
+    "home2": "Home 2",
+    "about": "About",
+    "services": "Services",
+    "allServices": "All Services",
+    "service_1": "Property Buying Assistance",
+    "service_2": "Property Selling",
+    "service_3": "Rental Services",
+    "service_4": "Property Management",
+    "service_5": "Real Estate Investment",
+    "service_6": "Legal & Documentation Support",
+    "blog": "Blog",
+    "allPosts": "All Posts",
+    "blog_1": "Smart Property Investments",
+    "blog_2": "Effective Property Management",
+    "blog_3": "Real Estate Market Trends",
+    "contact": "Contact",
+    "logout": "Logout",
 
-// Show/hide menu on hamburger click
-hamburger.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
-  hamburgerMenu.style.display = hamburgerMenu.style.display === "block" ? "none" : "block";
-});
+    "footer_about": "Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.",
+    "footer_quickLinks": "Quick Links",
+    "footer_home": "Home",
+    "footer_home2": "Home 2",
+    "footer_aboutUs": "About Us",
+    "footer_services": "Services",
+    "footer_blog": "Blog",
+    "footer_contact": "Contact",
+    "footer_servicesTitle": "Services",
+    "footer_service1": "Property Buying Assistance",
+    "footer_service2": "Property Selling",
+    "footer_service3": "Rental Services",
+    "footer_service4": "Property Management",
+    "footer_service5": "Real Estate Investment",
+    "footer_service6": "Legal & Documentation Support",
+    "footer_contactInfo": "Contact Info",
+    "footer_email": "contact@stackly.ai",
+    "footer_phone": "+1 (555) 123-4567",
+    "footer_address": "123 AI Innovation Drive",
+    "footer_bottom": "© 2025 Stackly. All rights reserved.",
 
-  // Auth link toggle
-  const authLink = document.getElementById("authLink");
-  if(localStorage.getItem("isLoggedIn") === "true"){
-    authLink.innerText = "Logout";
-    authLink.href = "#";
-    authLink.onclick = () => {
-      localStorage.removeItem("isLoggedIn");
-      localStorage.removeItem("currentUser");
-      window.location.href = "index.html";
-    };
-  } else {
-    authLink.innerText = "Login";
-    authLink.href = "index.html";
+    "service6_title": "Legal & Documentation Support",
+    "service6_heading": "Legal & Documentation Support",
+    "service6_intro": "Ensure your business and property transactions are legally secure with our comprehensive legal and documentation support services. We help you prepare, review, and manage agreements, contracts, and compliance documents efficiently and accurately.",
+    "service6_point1": "Contract drafting and review",
+    "service6_point2": "Property and business documentation",
+    "service6_point3": "Legal compliance checks",
+    "service6_point4": "Regulatory filing support",
+    "service6_point5": "Tailored legal solutions for your needs",
+    "service6_btn1": "Explore Services",
+    "service6_btn2": "Get Support",
+    "service6_section3_title": "Legal & Documentation Support",
+    "service6_section3_desc": "Simplify your legal processes and ensure accuracy with our professional documentation support. From drafting contracts to verifying compliance documents, we provide reliable solutions to safeguard your business and property transactions.",
+    "service6_card1_title": "Contract Drafting & Review",
+    "service6_card1_desc": "Prepare and review agreements, leases, and contracts with expert guidance to protect your interests.",
+    "service6_card2_title": "Compliance Documentation",
+    "service6_card2_desc": "Ensure all your property and business documents meet regulatory standards with accurate and timely filing.",
+    "service6_card3_title": "Property & Legal Records",
+    "service6_card3_desc": "Organize and manage essential records such as deeds, agreements, and compliance reports for smooth transactions and audits.",
+    "service6_section4_title": "Reliable Legal & Documentation Support",
+    "service6_section4_desc": "We simplify your legal processes and ensure documentation accuracy for smooth business and property transactions. From drafting contracts to managing compliance records, our services provide clarity, protection, and peace of mind.",
+    "service6_section4_intro": "Our legal and documentation support services ensure all your agreements, compliance filings, and property records are managed efficiently. With expert assistance, you can avoid legal risks, stay compliant, and streamline documentation for both individuals and businesses.",
+    "service6_step1": "Understanding Legal Requirements",
+    "service6_step2": "Drafting & Reviewing Contracts",
+    "service6_step3": "Verification of Property Documents",
+    "service6_step4": "Compliance Documentation & Filing",
+    "service6_step5": "Organizing Legal & Financial Records",
+    "service6_step6": "Advisory & Ongoing Documentation Support",
+    "service6_section5_title": "Legal & Documentation Support",
+    "service6_section5_desc": "Simplify your legal processes with our professional documentation support services. From drafting and reviewing contracts to verifying property papers and compliance records, we ensure accuracy, transparency, and peace of mind in every transaction.",
+    "service6_service1_title": "Contract Drafting & Review",
+    "service6_service1_desc": "Prepare and review business and property agreements with legal precision to protect your interests.",
+    "service6_service2_title": "Property Documentation",
+    "service6_service2_desc": "Verification and validation of property-related documents to ensure clear titles and secure transactions.",
+    "service6_service3_title": "Compliance & Record Management",
+    "service6_service3_desc": "Maintain accurate compliance documents, licenses, and records for hassle-free audits and approvals.",
+    "service6_service4_title": "Legal Advisory Support",
+    "service6_service4_desc": "Expert guidance on documentation, regulatory filings, and legal paperwork for businesses and individuals.",
+    "service6_section6_title": "Professional Legal & Documentation Support",
+    "service6_section6_desc": "Our legal and documentation support services simplify complex paperwork and ensure accuracy in every transaction. From drafting and verifying contracts to handling compliance records, we provide reliable documentation solutions that protect your interests and give you peace of mind.",
+    "service6_section6_card1_title": "Contract Drafting & Review",
+    "service6_section6_card1_desc": "We prepare and review agreements with precision to safeguard your business and property interests.",
+    "service6_section6_card2_title": "Property & Compliance Documentation",
+    "service6_section6_card2_desc": "Thorough verification of property papers and maintenance of compliance documents for secure and transparent dealings.",
+    "service6_section7_title": "Reliable Legal & Documentation Support",
+    "service6_section7_desc": "Let’s simplify your contracts, agreements, and compliance documents with expert legal and documentation assistance.",
+    "service6_section7_btn": "Get Legal Support"
+       
+  },
+  ar: {
+   "home": "الرئيسية",
+    "home1": "الصفحة الرئيسية 1",
+    "home2": "الصفحة الرئيسية 2",
+    "about": "من نحن",
+    "services": "الخدمات",
+    "allServices": "جميع الخدمات",
+    "service_1": "مساعدة في شراء العقارات",
+    "service_2": "بيع العقارات",
+    "service_3": "خدمات الإيجار",
+    "service_4": "إدارة العقارات",
+    "service_5": "الاستثمار العقاري",
+    "service_6": "الدعم القانوني والتوثيق",
+    "blog": "المدونة",
+    "allPosts": "جميع المقالات",
+    "blog_1": "الاستثمارات العقارية الذكية",
+    "blog_2": "إدارة العقارات الفعالة",
+    "blog_3": "اتجاهات سوق العقارات",
+    "contact": "اتصل بنا",
+    "logout": "تسجيل خروج",
+
+    "footer_about": "مزود رائد لحلول الذكاء الاصطناعي، يساعد الشركات على التحول من خلال التكنولوجيا الذكية وأنظمة الأتمتة المبتكرة.",
+    "footer_quickLinks": "روابط سريعة",
+    "footer_home": "الرئيسية",
+    "footer_home2": "الصفحة الرئيسية 2",
+    "footer_aboutUs": "من نحن",
+    "footer_services": "الخدمات",
+    "footer_blog": "المدونة",
+    "footer_contact": "اتصل بنا",
+    "footer_servicesTitle": "الخدمات",
+    "footer_service1": "مساعدة في شراء العقارات",
+    "footer_service2": "بيع العقارات",
+    "footer_service3": "خدمات الإيجار",
+    "footer_service4": "إدارة الممتلكات",
+    "footer_service5": "الاستثمار العقاري",
+    "footer_service6": "الدعم القانوني والتوثيق",
+    "footer_contactInfo": "معلومات الاتصال",
+    "footer_email": "contact@stackly.ai",
+    "footer_phone": "+1 (555) 123-4567",
+    "footer_address": "123 طريق ابتكار الذكاء الاصطناعي",
+    "footer_bottom": "© 2025 Stackly. جميع الحقوق محفوظة.",
+
+     "service6_title": "الدعم القانوني والتوثيقي",
+    "service6_heading": "الدعم القانوني والتوثيقي",
+    "service6_intro": "ضمن أن معاملات عملك وعقاراتك آمنة قانونياً من خلال خدماتنا الشاملة للدعم القانوني والتوثيقي. نحن نساعدك في إعداد ومراجعة وإدارة الاتفاقيات والعقود والمستندات التنظيمية بكفاءة ودقة.",
+    "service6_point1": "صياغة العقود ومراجعتها",
+    "service6_point2": "توثيق العقارات والأعمال",
+    "service6_point3": "فحوصات الامتثال القانوني",
+    "service6_point4": "دعم تقديم الملفات التنظيمية",
+    "service6_point5": "حلول قانونية مخصصة لاحتياجاتك",
+    "service6_btn1": "استكشاف الخدمات",
+    "service6_btn2": "احصل على الدعم",
+    "service6_section3_title": "الدعم القانوني والتوثيقي",
+    "service6_section3_desc": "بسط عملياتك القانونية وتأكد من الدقة من خلال دعمنا المهني للتوثيق. من صياغة العقود إلى التحقق من المستندات التنظيمية، نقدم حلولاً موثوقة لحماية معاملاتك التجارية والعقارية.",
+    "service6_card1_title": "صياغة العقود ومراجعتها",
+    "service6_card1_desc": "إعداد ومراجعة الاتفاقيات والإيجارات والعقود بإرشاد الخبراء لحماية مصالحك.",
+    "service6_card2_title": "توثيق الامتثال",
+    "service6_card2_desc": "تأكد من أن جميع مستنداتك العقارية والتجارية تلبي المعايير التنظيمية من خلال تقديم دقيق وفي الوقت المناسب.",
+    "service6_card3_title": "السجلات العقارية والقانونية",
+    "service6_card3_desc": "تنظيم وإدارة السجلات الأساسية مثل الصكوك والاتفاقيات وتقارير الامتثال لعمليات تدقيق ومعاملات سلسة.",
+    "service6_section4_title": "دعم قانوني وتوثيقي موثوق",
+    "service6_section4_desc": "نُبسط عملياتك القانونية ونضمن دقة التوثيق لعمليات تجارية وعقارية سلسة. من صياغة العقود إلى إدارة سجلات الامتثال، توفر خدماتنا وضوحاً وحماية وراحة بال.",
+    "service6_section4_intro": "تضمن خدماتنا القانونية والتوثيقية إدارة جميع اتفاقياتك وملفات الامتثال وسجلات الملكية بكفاءة. من خلال المساعدة الخبيرة، يمكنك تجنب المخاطر القانونية، والبقاء متوافقاً، وتبسيط التوثيق للأفراد والشركات.",
+    "service6_step1": "فهم المتطلبات القانونية",
+    "service6_step2": "صياغة العقود ومراجعتها",
+    "service6_step3": "التحقق من مستندات الملكية",
+    "service6_step4": "توثيق الامتثال وتقديم الملفات",
+    "service6_step5": "تنظيم السجلات القانونية والمالية",
+    "service6_step6": "الاستشارات والدعم التوثيقي المستمر",
+    "service6_section5_title": "الدعم القانوني والتوثيقي",
+    "service6_section5_desc": "بسط عملياتك القانونية مع خدماتنا المهنية للتوثيق. من صياغة ومراجعة العقود إلى التحقق من أوراق الملكية وسجلات الامتثال، نضمن الدقة والشفافية وراحة البال في كل معاملة.",
+    "service6_service1_title": "صياغة العقود ومراجعتها",
+    "service6_service1_desc": "إعداد ومراجعة اتفاقيات الأعمال والعقارات بدقة قانونية لحماية مصالحك.",
+    "service6_service2_title": "توثيق الملكية",
+    "service6_service2_desc": "التحقق من مستندات الملكية لضمان العناوين الواضحة والمعاملات الآمنة.",
+    "service6_service3_title": "إدارة الامتثال والسجلات",
+    "service6_service3_desc": "الحفاظ على دقة المستندات التنظيمية والتراخيص والسجلات لضمان عمليات تدقيق وموافقات خالية من المتاعب.",
+    "service6_service4_title": "الدعم القانوني الاستشاري",
+    "service6_service4_desc": "توجيهات خبراء بشأن التوثيق وتقديم الملفات التنظيمية والأوراق القانونية للأعمال والأفراد.",
+    "service6_section6_title": "دعم قانوني وتوثيقي احترافي",
+    "service6_section6_desc": "تُبسط خدماتنا القانونية والتوثيقية الأوراق المعقدة وتضمن الدقة في كل معاملة. من صياغة العقود والتحقق منها إلى التعامل مع سجلات الامتثال، نقدم حلولاً موثوقة للتوثيق تحمي مصالحك وتمنحك راحة البال.",
+    "service6_section6_card1_title": "صياغة العقود ومراجعتها",
+    "service6_section6_card1_desc": "نُعد ونراجع الاتفاقيات بدقة لحماية مصالح عملك وعقارك.",
+    "service6_section6_card2_title": "توثيق الملكية والامتثال",
+    "service6_section6_card2_desc": "التحقق الدقيق من أوراق الملكية والحفاظ على مستندات الامتثال لضمان معاملات آمنة وشفافة.",
+    "service6_section7_title": "دعم قانوني وتوثيقي موثوق",
+    "service6_section7_desc": "لنُبسط عقودك واتفاقياتك ومستندات الامتثال بمساعدة خبراء في الشؤون القانونية والتوثيقية.",
+    "service6_section7_btn": "احصل على الدعم القانوني",
+
+     },
+  he: {
+ "home": "בית",
+    "home1": "דף הבית 1",
+    "home2": "דף הבית 2",
+    "about": "אודות",
+    "services": "שירותים",
+    "allServices": "כל השירותים",
+    "service_1": "סיוע ברכישת נכסים",
+    "service_2": "מכירת נכסים",
+    "service_3": "שירותי השכרה",
+    "service_4": "ניהול נכסים",
+    "service_5": "השקעות נדל״ן",
+    "service_6": "תמיכה משפטית ותיעוד",
+    "blog": "בלוג",
+    "allPosts": "כל הפוסטים",
+    "blog_1": "השקעות נדל״ן חכמות",
+    "blog_2": "ניהול נכסים יעיל",
+    "blog_3": "מגמות שוק הנדל״ן",
+    "contact": "צור קשר",
+    "logout": "התנתק",
+
+    "footer_about": "ספק מוביל של פתרונות בינה מלאכותית, מסייע לעסקים להשתנות באמצעות טכנולוגיה חכמה ומערכות אוטומציה חדשניות.",
+    "footer_quickLinks": "קישורים מהירים",
+    "footer_home": "בית",
+    "footer_home2": "בית 2",
+    "footer_aboutUs": "אודותינו",
+    "footer_services": "שירותים",
+    "footer_blog": "בלוג",
+    "footer_contact": "צור קשר",
+    "footer_servicesTitle": "שירותים",
+    "footer_service1": "סיוע ברכישת נכסים",
+    "footer_service2": "מכירת נכסים",
+    "footer_service3": "שירותי השכרה",
+    "footer_service4": "ניהול נכסים",
+    "footer_service5": "השקעות נדל\"ן",
+    "footer_service6": "תמיכה משפטית ותיעוד",
+    "footer_contactInfo": "פרטי קשר",
+    "footer_email": "contact@stackly.ai",
+    "footer_phone": "+1 (555) 123-4567",
+    "footer_address": "123 רחוב חדשנות בינה מלאכותית",
+    "footer_bottom": "© 2025 Stackly. כל הזכויות שמורות.",
+ 
+     "service6_title": "תמיכה משפטית ותיעוד",
+    "service6_heading": "תמיכה משפטית ותיעוד",
+    "service6_intro": "ודא שהעסק והעסקאות שלך בטוחים מבחינה משפטית בעזרת שירותי התמיכה המשפטית והתיעוד המקיפים שלנו. אנו עוזרים לך להכין, לבדוק ולנהל הסכמים, חוזים ומסמכי תאימות ביעילות ובדיוק.",
+    "service6_point1": "ניסוח ובדיקת חוזים",
+    "service6_point2": "תיעוד נדל\"ן ועסקים",
+    "service6_point3": "בדיקות תאימות משפטיות",
+    "service6_point4": "תמיכה בהגשת מסמכים רגולטוריים",
+    "service6_point5": "פתרונות משפטיים מותאמים אישית",
+    "service6_btn1": "גלה שירותים",
+    "service6_btn2": "קבל תמיכה",
+    "service6_section3_title": "תמיכה משפטית ותיעוד",
+    "service6_section3_desc": "פשט את התהליכים המשפטיים שלך והבטח דיוק בעזרת שירותי התיעוד המקצועיים שלנו. מניסוח חוזים ועד אימות מסמכי תאימות, אנו מספקים פתרונות אמינים לשמירה על העסקאות העסקיות והנדל\"ניות שלך.",
+    "service6_card1_title": "ניסוח ובדיקת חוזים",
+    "service6_card1_desc": "הכנה ובדיקה של הסכמים, שכירות וחוזים בליווי מומחים כדי להגן על האינטרסים שלך.",
+    "service6_card2_title": "תיעוד תאימות",
+    "service6_card2_desc": "ודא שכל המסמכים העסקיים והנדל\"ניים שלך עומדים בסטנדרטים הרגולטוריים עם הגשה מדויקת ובזמן.",
+    "service6_card3_title": "רשומות משפטיות ונדל\"ן",
+    "service6_card3_desc": "ארגון וניהול רשומות חיוניות כגון שטרות, הסכמים ודוחות תאימות לצורך עסקאות וביקורות חלקות.",
+    "service6_section4_title": "תמיכה משפטית ותיעוד אמינה",
+    "service6_section4_desc": "אנחנו מפשטים את התהליכים המשפטיים שלך ומבטיחים דיוק תיעוד לעסקאות עסקיות ונדל\"ניות חלקות. מניסוח חוזים ועד ניהול רשומות תאימות, השירותים שלנו מספקים בהירות, הגנה ושקט נפשי.",
+    "service6_section4_intro": "שירותי התמיכה המשפטית והתיעוד שלנו מבטיחים שכל ההסכמים שלך, הגשות התאימות ורשומות הנדל\"ן ינוהלו ביעילות. בעזרת סיוע מומחה, תוכל להימנע מסיכונים משפטיים, להישאר תואם ולייעל את התיעוד הן עבור יחידים והן עבור עסקים.",
+    "service6_step1": "הבנת הדרישות המשפטיות",
+    "service6_step2": "ניסוח ובדיקת חוזים",
+    "service6_step3": "אימות מסמכי נדל\"ן",
+    "service6_step4": "תיעוד תאימות והגשה",
+    "service6_step5": "ארגון רשומות משפטיות וכלכליות",
+    "service6_step6": "ייעוץ ותמיכה מתמשכת בתיעוד",
+    "service6_section5_title": "תמיכה משפטית ותיעוד",
+    "service6_section5_desc": "פשט את התהליכים המשפטיים שלך בעזרת שירותי התיעוד המקצועיים שלנו. מניסוח ובדיקת חוזים ועד אימות מסמכי נכסים ורישומי תאימות, אנו מבטיחים דיוק, שקיפות ושקט נפשי בכל עסקה.",
+    "service6_service1_title": "ניסוח ובדיקת חוזים",
+    "service6_service1_desc": "הכנה ובדיקה של הסכמים עסקיים ונדל\"ניים בדיוק משפטי כדי להגן על האינטרסים שלך.",
+    "service6_service2_title": "תיעוד נכסים",
+    "service6_service2_desc": "אימות ואישור של מסמכי נכסים כדי להבטיח בעלות ברורה ועסקאות בטוחות.",
+    "service6_service3_title": "ניהול תאימות ורשומות",
+    "service6_service3_desc": "שמירה על מסמכי תאימות, רישיונות ורישומים מדויקים כדי להבטיח ביקורות ואישורים חלקים.",
+    "service6_service4_title": "תמיכה משפטית וייעוץ",
+    "service6_service4_desc": "הנחיות מומחים לגבי תיעוד, הגשות רגולטוריות וניירת משפטית עבור עסקים ויחידים.",
+    "service6_section6_title": "תמיכה משפטית ותיעוד מקצועית",
+    "service6_section6_desc": "שירותי התמיכה המשפטית והתיעוד שלנו מפשטים ניירת מורכבת ומבטיחים דיוק בכל עסקה. מניסוח ואימות חוזים ועד טיפול ברישומי תאימות, אנו מספקים פתרונות תיעוד אמינים שמגנים על האינטרסים שלך ומעניקים לך שקט נפשי.",
+    "service6_section6_card1_title": "ניסוח ובדיקת חוזים",
+    "service6_section6_card1_desc": "אנחנו מכינים ובודקים הסכמים בדיוק כדי להגן על האינטרסים העסקיים והנדל\"ניים שלך.",
+    "service6_section6_card2_title": "תיעוד נכסים ותאימות",
+    "service6_section6_card2_desc": "אימות יסודי של מסמכי נדל\"ן ושמירה על מסמכי תאימות לעסקאות בטוחות ושקופות.",
+    "service6_section7_title": "תמיכה משפטית ותיעוד אמינה",
+    "service6_section7_desc": "בואו נפשט את החוזים, ההסכמים ומסמכי התאימות שלך בעזרת מומחים משפטיים ותיעודיים.",
+    "service6_section7_btn": "קבל תמיכה משפטית"
+   
   }
+};
+
+// Function to change language
+function changeLanguage(lang) {
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if(translations[lang] && translations[lang][key]) {
+      el.innerText = translations[lang][key];
+    }
+  });
+
+  // Handle RTL for Arabic & Hebrew
+  if(lang === "ar" || lang === "he") {
+    document.documentElement.dir = "rtl";
+  } else {
+    document.documentElement.dir = "ltr";
+  }
+}
+
+// Optional: automatically switch to selected language on page load
+document.addEventListener("DOMContentLoaded", () => {
+  const langSelect = document.getElementById("langSelect");
+  changeLanguage(langSelect.value);
+});
+</script>
+
+
+
+
+<script>
+  // Mobile menu setup
+  const hamburger = document.getElementById("hamburger");
+  const hamburgerMenu = document.getElementById("hamburgerMenu");
+
+  // Show/hide mobile menu on hamburger click
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    hamburgerMenu.classList.toggle("active");
+  });
+
+  // Toggle dropdowns for mobile menu
+  document.querySelectorAll('.mobile-dropdown-parent > span').forEach(link => {
+    link.addEventListener('click', function() {
+      const parentLi = this.parentElement;
+      const dropdown = parentLi.querySelector('.mobile-dropdown');
+      dropdown.classList.toggle('active');
+    });
+  });
+
+  // Desktop dropdown toggle logic
+  document.querySelectorAll('.nav-item.dropdown > .nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelectorAll('.dropdown-menu').forEach(menu => {
+        if (menu !== this.nextElementSibling) {
+          menu.classList.remove('active');
+        }
+      });
+      const dropdownMenu = this.nextElementSibling;
+      if (dropdownMenu) {
+        dropdownMenu.classList.toggle('active');
+      }
+    });
+  });
+
+  // Redirect on desktop dropdown menu item click
+  document.querySelectorAll('.dropdown-menu a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href && href !== "#") {
+        window.location.href = href;
+        document.querySelectorAll('.dropdown-menu').forEach(menu => menu.classList.remove('active'));
+      }
+    });
+  });
+
+  // Redirect on normal nav link click
+  document.querySelectorAll('.nav-menu > .nav-item:not(.dropdown) .nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href && href !== "#") {
+        window.location.href = href;
+      }
+    });
+  });
+
+  // Auth link toggle for desktop and mobile
+  function setupAuthLinks() {
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    const authLinks = [document.getElementById("authLink"), document.getElementById("mobileAuthLink")];
+
+    authLinks.forEach(link => {
+      if (!link) return;
+      if (isLoggedIn) {
+        link.innerText = "Logout";
+        link.href = "#";
+        link.onclick = (e) => {
+          e.preventDefault();
+          localStorage.removeItem("isLoggedIn");
+          localStorage.removeItem("currentUser");
+          window.location.href = "index.html";
+        };
+      } else {
+        link.innerText = "Login";
+        link.href = "index.html";
+        link.onclick = null;
+      }
+    });
+  }
+  setupAuthLinks();
 
   // Theme toggle
   const toggleBtn = document.getElementById('toggleBtn');
   let darkMode = localStorage.getItem('darkMode') === 'true';
 
-  // Apply initial theme
   function applyTheme() {
     if (darkMode) {
       document.body.classList.add('dark-mode');
@@ -152,126 +717,249 @@ hamburger.addEventListener("click", () => {
     localStorage.setItem('darkMode', darkMode);
     applyTheme();
   });
-
-  // Call once to apply the theme on initial load
   applyTheme();
 
-  // Avatar initials
-const avatarCircle = document.querySelector('.avatar-circle');
-const currentUserEmail = localStorage.getItem("currentUser");
-const users = JSON.parse(localStorage.getItem("users")) || {};
-if (currentUserEmail && users[currentUserEmail]) {
-  const firstName = users[currentUserEmail].firstName || "";
-  const lastName = users[currentUserEmail].lastName || "";
-  const initials = (firstName[0] || "").toUpperCase() + (lastName[0] || "").toUpperCase();
-  avatarCircle.innerHTML = `<span style="
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #23272f;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-  ">${initials}</span>`;
-} else {
-  avatarCircle.innerHTML = `<span style="
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #23272f;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-  ">?</span>`;
-}
-// Hamburger toggle for mobile
+  // Avatar initials logic
+  const avatarCircle = document.getElementById('avatarCircle');
+  const avatarInitials = document.getElementById('avatarInitials');
+  const avatarDropdown = document.getElementById('avatarDropdown');
+  const logoutBtn = document.getElementById('logoutBtn');
+  const currentUserEmail = localStorage.getItem("currentUser");
+  const users = JSON.parse(localStorage.getItem("users")) || {};
 
+  if (currentUserEmail && users[currentUserEmail]) {
+    const firstName = users[currentUserEmail].firstName || "";
+    const lastName = users[currentUserEmail].lastName || "";
+    const initials = (firstName[0] || "").toUpperCase() + (lastName[0] || "").toUpperCase();
+    avatarInitials.textContent = initials;
+  } else {
+    avatarInitials.textContent = "?";
+  }
+
+  // Show/hide avatar dropdown on click
+  avatarCircle.addEventListener('click', function(e) {
+    e.stopPropagation();
+    avatarDropdown.style.display = avatarDropdown.style.display === "block" ? "none" : "block";
+  });
+
+  document.addEventListener('click', function(e) {
+    if (!avatarCircle.contains(e.target) && !avatarDropdown.contains(e.target)) {
+      avatarDropdown.style.display = "none";
+    }
+  });
+
+  // Logout action
+  logoutBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("currentUser");
+    window.location.href = "index.html";
+  });
 </script>
 
-<!-- ✅ CSS for hamburger -->
 <style>
+  /* Base styles for hamburger icon */
   .hamburger {
     display: none;
     flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
     cursor: pointer;
+    z-index: 1000;
   }
+
   .hamburger span {
-    height: 3px;
-    width: 25px;
-    background: #333;
-    margin: 4px 0;
-    border-radius: 5px;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
   }
+
+  .dark-mode .hamburger span {
+    background-color: #fff;
+  }
+
+  /* Hamburger menu animation */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* Hide navigation on mobile */
   @media (max-width: 768px) {
     .nav-menu {
       display: none;
-      flex-direction: column;
-      background: #fff;
-      position: absolute;
-      top: 70px;
-      right: 20px;
-      width: 200px;
-      padding: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    }
-    .nav-menu.active {
-      display: flex;
     }
     .hamburger {
       display: flex;
     }
-    .nav-item {
-      margin: 10px 0;
-    }
+  }
+
+  /* Styles for the mobile hamburger menu */
+  .mobile-menu-wrapper {
+    position: relative;
+  }
+
+  .hamburger-menu {
+    display: none;
+    flex-direction: column;
+    background: #23272f;
+    color: #fff;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 220px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+    padding: 20px 0;
+    z-index: 9999;
+    list-style: none;
+  }
+
+  .hamburger-menu.active {
+    display: flex;
+  }
+
+  .hamburger-menu li {
+    padding: 10px 24px;
+    border-bottom: 1px solid #333;
+  }
+
+  .hamburger-menu li:last-child {
+    border-bottom: none;
+  }
+
+  .hamburger-menu a,
+  .hamburger-menu span {
+    color: #00f7ff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: block;
+    cursor: pointer;
+    font-weight: 500;
+  }
+
+  .hamburger-menu ul {
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 5px;
+  }
+
+  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown {
+    display: none;
+  }
+
+  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown.active {
+    display: block;
   }
 
   .toggle-btn {
-  background: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 38px;
-  height: 38px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  cursor: pointer;
-  transition: background 0.2s;
-}
-.toggle-btn:hover {
-  background: #f0f0f0;
-}
-.avatar-circle {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-left: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #eee;
-}
-.avatar-circle img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-@media (max-width: 768px) {
-  .toggle-btn, .avatar-circle {
-    margin-left: 8px;
-    width: 32px;
-    height: 32px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: background 0.2s;
   }
-}
-</style>
 
+  .toggle-btn:hover {
+    background: #f0f0f0;
+  }
+
+  .avatar-circle {
+    position: relative;
+    cursor: pointer;
+    z-index: 1001;
+    overflow: visible;
+  }
+
+  .avatar-circle {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eee;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .avatar-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .avatar-dropdown {
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 140px;
+    background: #fff;
+    min-width: 100px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+    border-radius: 8px;
+    z-index: 1002;
+    padding: 4px 0;
+  }
+
+  .avatar-dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .avatar-dropdown li {
+    padding: 6px 12px;
+  }
+
+  .avatar-dropdown a {
+    color: #23272f;
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: block;
+    border-radius: 4px;
+    transition: background 0.2s;
+  }
+
+  .avatar-dropdown a:hover {
+    background: #f0f0f0;
+  }
+
+  @media (max-width: 768px) {
+    .toggle-btn,
+    .avatar-circle {
+      margin-left: 8px;
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .hamburger-menu {
+      display: none !important;
+    }
+  }
+</style>
 <!-- 🔷 Protest home page  -->
 
   <script>
@@ -290,25 +978,15 @@ if (currentUserEmail && users[currentUserEmail]) {
     }
   </script>
 
-<!-- 🔷 HERO SECTION START -->
 
-<section class="ai-hero-section">
-  <video autoplay muted loop playsinline class="ai-hero-bg-video">
-    <source src="https://videos.pexels.com/video-files/6615063/6615063-uhd_2560_1440_25fps.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
 
-  <div class="ai-hero-overlay">
-    <div class="ai-hero-content">
-      <h1 class="ai-hero-title ai-glow animate-ai-slide-in">AI Integration</h1>
-      
-    </div>
-  </div>
-</section>
 
+  
+<!-- Section : 1 -->
+
+ 
 <style>
-
-  /* Hero Section */
+  
   .ai-hero-section {
     position: relative;
     width: 100%;
@@ -426,43 +1104,17 @@ if (currentUserEmail && users[currentUserEmail]) {
     .ai-hero-paragraph { font-size: 0.9rem; }
   }
 </style>
-<!-- 🔷 HERO SECTION END -->
 
-<section class="ai-section">
-    <h1 class="ai-heading">AI Integration Services</h1>
-    <div class="ai-content">
-        <div class="ai-text">
-            <p>
-                Unlock the full potential of your business by seamlessly integrating AI into your existing systems. Our experts ensure smooth adoption, optimized workflows, and accelerated growth through intelligent automation.
-            </p>
 
-            <!-- Feature Points -->
-            <ul class="hero-features fade-in-up delay-2">
-                <li><span>✔</span> Custom AI models designed for your business processes</li>
-                <li><span>✔</span> Effortless integration with current tools & platforms</li>
-                <li><span>✔</span> Scalable solutions adaptable to any business size</li>
-                <li><span>✔</span> Real-time data insights & smart automation</li>
-                <li><span>✔</span> Continuous support, monitoring, and optimization</li>
-            </ul>
 
-            <div class="ai-buttons">
-                <a href="services.html" class="btn btn-primary">Explore Services</a>
-                <a href="contact.html" class="btn btn-primary">Get started</a>
-            </div>
-        </div>
-
-        <div class="ai-image">
-            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1000&h=700&fit=crop&auto=format" alt="AI Solutions">
-        </div>
-    </div>
-</section>
+<!-- Section : 2-->
 
 <style>
 :root {
     --black: #000;
     --dark-gray: #444;
     --white: #fff;
-    --blue: #007bff;
+    --blue: #0b1945;
     --shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -518,7 +1170,7 @@ if (currentUserEmail && users[currentUserEmail]) {
 }
 
 .ai-buttons .btn:hover {
-    background-color: #0056b3;
+    background-color: #0b1945;
 }
 
 /* Features List */
@@ -638,55 +1290,10 @@ if (currentUserEmail && users[currentUserEmail]) {
 
   
 
-    <!-- Section 2: Development Capabilities -->
-    <!-- Advanced Features Section -->
-<section class="advanced-features">
-  <div class="advanced-features-container">
-    <!-- Section Header -->
-    <div class="features-header fade-in-up">
-      <h2>Our AI Integration Capabilities</h2>
-      <p>
-        We specialize in embedding AI seamlessly into your business ecosystem. From enhancing existing systems to enabling intelligent automation, we ensure smooth adoption, scalability, and long-term value creation.
-      </p>
-    </div>
+   
+   
 
-    <!-- Features Grid -->
-    <div class="features-cards">
-      <!-- Card 1 -->
-      <div class="feature-box fade-in-up delay-1">
-        <div class="feature-icon">
-          <i class="fas fa-brain"></i>
-        </div>
-        <h3>System Compatibility & Integration</h3>
-        <p>
-         Seamlessly connect AI solutions with your current platforms, ensuring minimal disruption and maximum efficiency.
-        </p>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="feature-box fade-in-up delay-2">
-        <div class="feature-icon">
-          <i class="fas fa-project-diagram"></i>
-        </div>
-        <h3>Workflow Automation</h3>
-        <p>
-          Transform repetitive tasks with intelligent automation to increase productivity and reduce operational costs.
-        </p>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="feature-box fade-in-up delay-3">
-        <div class="feature-icon">
-          <i class="fas fa-cogs"></i>
-        </div>
-        <h3>Data Unification & Insights</h3>
-        <p>
-          Integrate diverse data sources into a unified AI-powered system for real-time insights, predictive analytics, and smarter decision-making.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- Section : 3-->
 
 <style>
 /* Section Styling */
@@ -746,7 +1353,7 @@ if (currentUserEmail && users[currentUserEmail]) {
 
 .feature-icon {
   font-size: 2.2rem;
-  color: #007bff;
+  color: #0b1945; /* golden theme */
   margin-bottom: 15px;
 }
 
@@ -819,53 +1426,15 @@ if (currentUserEmail && users[currentUserEmail]) {
 
 
 
-    <!-- Section 3: Development Process -->
-   <!-- Advanced Development Process Section -->
-<section class="development-process">
-  <div class="development-process-container">
 
-    <!-- Top Heading -->
-    <div class="process-header fade-in-up">
-      <h2>Our AI Integration Process</h2>
-      <p>
-        We adopt an agile and transparent methodology for AI integration.
-      </p>
-    </div>
-
-    <!-- Content Row -->
-    <div class="process-row">
-      <!-- Left Image -->
-      <div class="process-image slide-in-right">
-        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&h=600&fit=crop&auto=format" alt="AI Development Process">
-      </div>
-
-      <!-- Right Content -->
-      <div class="process-content fade-in-up delay-1">
-        <!-- Paragraph intro -->
-        <p class="process-intro">
-          We follow a structured, agile, and collaborative methodology to ensure seamless integration of AI into your business operations. Every step is designed to minimize disruption, maximize efficiency, and deliver long-term value.
-        </p>
-
-        <!-- Steps -->
-        <div class="process-steps">
-          <div class="step"><span class="step-number">01</span><p>Requirements Analysis & Strategic Planning</p></div>
-          <div class="step"><span class="step-number">02</span><p>Data Collection, Cleaning & Preprocessing</p></div>
-          <div class="step"><span class="step-number">03</span><p>Algorithm Design & Smart Implementation</p></div>
-          <div class="step"><span class="step-number">04</span><p>Model Training, Testing & Fine-Tuning</p></div>
-          <div class="step"><span class="step-number">05</span><p>End-to-End Validation & Quality Assurance</p></div>
-          <div class="step"><span class="step-number">06</span><p>Deployment, Monitoring & Continuous Improvement</p></div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
+   
+  <!-- Section : 4 -->
 
 <style>
 /* Section Base */
 .development-process {
   width: 100%;
-  background: #ffffff;
+  background: #ffffff; /* updated background */
   padding: 30px 20px 50px;
   box-sizing: border-box;
 }
@@ -934,7 +1503,7 @@ if (currentUserEmail && users[currentUserEmail]) {
   margin-bottom: 16px;
 }
 .step-number {
-  background: #007bff;
+  background: #0b1945; /* updated golden accent */
   color: #fff;
   font-weight: 700;
   font-size: 1rem;
@@ -978,26 +1547,23 @@ if (currentUserEmail && users[currentUserEmail]) {
   }
 }
 
-/* 📱 Mobile Responsive */
-
-
-  /* Responsive */
+/* Responsive */
 @media (max-width: 992px) {
   .process-row {
     flex-direction: column;
     text-align: center;
-    gap: 30px; /* reduce gap */
+    gap: 30px;
   }
 
   .process-image,
   .process-content {
-    flex: 1 1 auto;   /* reset the 600px flex-basis */
-    width: 100%;      /* force full width */
-    max-width: 100%;  /* prevent overflow */
+    flex: 1 1 auto;
+    width: 100%;
+    max-width: 100%;
   }
 
   .process-image img {
-    width: 100%;  /* responsive image */
+    width: 100%;
     height: auto;
     border-radius: 15px;
   }
@@ -1008,8 +1574,6 @@ if (currentUserEmail && users[currentUserEmail]) {
     padding: 0 15px;
   }
 }
-
-
 
 @media (max-width: 600px) {
   .development-process {
@@ -1040,40 +1604,12 @@ if (currentUserEmail && users[currentUserEmail]) {
 </style>
 
 
-    <!-- Section 4: Technologies & Tools -->
-   <section class="tech-showcase">
-  <div class="tech-container">
-    <!-- Heading -->
-    <div class="tech-header animate-fade-up">
-      <h2>Technologies We Use</h2>
-      <p>Our AI development leverages state-of-the-art programming languages, frameworks, and platforms to deliver intelligent, scalable, and future-ready solutions.</p>
-    </div>
-
-    <!-- Grid -->
-    <div class="tech-grid">
-      <div class="tech-card animate-slide-up delay-1">
-        <h3>Python</h3>
-        <p>The backbone of our AI development, enabling rapid prototyping, scalability, and integration with leading frameworks.</p>
-      </div>
-      <div class="tech-card animate-slide-up delay-2">
-        <h3>TensorFlow</h3>
-        <p>A powerful open-source library for building and deploying machine learning models with high efficiency.</p>
-      </div>
-      <div class="tech-card animate-slide-up delay-3">
-        <h3>PyTorch</h3>
-        <p>Our preferred framework for deep learning research and production, offering dynamic computation and flexibility.</p>
-      </div>
-      <div class="tech-card animate-slide-up delay-4">
-        <h3>AWS / Azure</h3>
-        <p>Robust cloud infrastructure that powers our AI solutions with reliability, scalability, and enterprise-grade security.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    
+<!-- Section : 5 -->
 
 <style>
 /* Section Styling */
-.tech-showcase {
+.service-showcase {
   width: 100%;
   padding: 50px;
   background: #edf0ee;
@@ -1081,20 +1617,20 @@ if (currentUserEmail && users[currentUserEmail]) {
   justify-content: center;
 }
 
-.tech-container {
+.service-container {
   max-width: 1450px;
   width: 100%;
   text-align: center;
 }
 
 /* Header */
-.tech-header h2 {
+.service-header h2 {
   font-size: 2.5rem;
   color: #000;
   margin-bottom: 15px;
 }
 
-.tech-header p {
+.service-header p {
   font-size: 1.1rem;
   color: #333;
   max-width: 800px;
@@ -1103,14 +1639,14 @@ if (currentUserEmail && users[currentUserEmail]) {
 }
 
 /* Grid */
-.tech-grid {
+.service-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 }
 
 /* Card */
-.tech-card {
+.service-card {
   background: #fff;
   padding: 30px;
   border-radius: 15px;
@@ -1119,19 +1655,19 @@ if (currentUserEmail && users[currentUserEmail]) {
   text-align: left;
 }
 
-.tech-card h3 {
+.service-card h3 {
   font-size: 1.5rem;
-  color: #007bff;
+  color: #0b1945; /* gold accent */
   margin-bottom: 10px;
 }
 
-.tech-card p {
+.service-card p {
   font-size: 1rem;
   color: #000;
   line-height: 1.6;
 }
 
-.tech-card:hover {
+.service-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.12);
 }
@@ -1170,94 +1706,59 @@ if (currentUserEmail && users[currentUserEmail]) {
 
 /* ✅ Mobile View */
 @media (max-width: 768px) {
-  .tech-showcase {
-    padding: 30px 20px; /* reduce padding */
+  .service-showcase {
+    padding: 30px 20px;
   }
 
-  .tech-header h2 {
+  .service-header h2 {
     font-size: 1.8rem;
   }
 
-  .tech-header p {
+  .service-header p {
     font-size: 1rem;
     margin-bottom: 25px;
     padding: 0 10px;
   }
 
-  .tech-grid {
-    grid-template-columns: 1fr; /* 1 card per row */
+  .service-grid {
+    grid-template-columns: 1fr;
     gap: 20px;
   }
 
-  .tech-card {
+  .service-card {
     padding: 20px;
-    text-align: center; /* center content */
+    text-align: center;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   }
 
-  .tech-card h3 {
+  .service-card h3 {
     font-size: 1.3rem;
   }
 
-  .tech-card p {
+  .service-card p {
     font-size: 0.95rem;
     line-height: 1.5;
   }
 }
 </style>
 
-<!-- Section 4: End -->
 
-<!-- Section 5: Projects -->  
 
-    <section class="projects-success">
-  <div class="projects-container">
-    <!-- Left Side (Image) -->
-    <div class="projects-image animate-slide-in">
-      <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&auto=format" alt="AI Project Success">
-    </div>
 
-    <!-- Right Side (Content) -->
-    <div class="projects-content">
-      <h2 class="animate-fade-up">Recent Project Success</h2>
-      <p class="animate-fade-up delay-1" style="text-align: justify;">
-        Our AI-driven projects empower industries with innovative solutions that optimize performance, reduce costs, and improve customer engagement. Each project demonstrates our commitment to delivering real business results.
-      </p>
 
-      <!-- Testimonial Card 1 -->
-      <div class="project-card animate-fade-up delay-2">
-  <blockquote>
-    “Stackly’s AI integration streamlined our operations, cutting processing time by 
-    <span class="highlight">50%</span> and reducing manual errors by 
-    <span class="highlight">70%</span>. The transition was smooth and efficient.”
-  </blockquote>
-  <cite>— David Johnson, Operations Head</cite>
-</div>
-
-<!-- Testimonial Card 2 -->
-<div class="project-card animate-fade-up delay-3">
-  <blockquote>
-    “With Stackly’s predictive analytics, we gained real-time insights that increased forecasting accuracy by 
-    <span class="highlight">65%</span> and optimized resource allocation by 
-    <span class="highlight">40%</span>. A true game-changer for our business.”
-  </blockquote>
-  <cite>— Priya Mehta, Strategy Lead</cite>
-</div>
-    </div>
-  </div>
-</section>
+<!-- Section : 6 -->
 
 <style>
 /* Section Styling */
-.projects-success {
+.bookkeeping-services {
   width: 100%;
   padding: 40px 50px;
-  background: #fff;
+  background: #ffffff;
   display: flex;
   justify-content: center;
 }
 
-.projects-container {
+.services-container {
   max-width: 1450px;
   width: 100%;
   display: grid;
@@ -1267,7 +1768,7 @@ if (currentUserEmail && users[currentUserEmail]) {
 }
 
 /* Image */
-.projects-image img {
+.services-image img {
   width: 100%;
   height: auto;
   border-radius: 20px;
@@ -1275,71 +1776,52 @@ if (currentUserEmail && users[currentUserEmail]) {
   transition: transform 0.4s ease;
   display: block;
 }
-.projects-image img:hover {
+.services-image img:hover {
   transform: scale(1.03);
 }
 
 /* Content */
-.projects-content h2 {
+.services-content h2 {
   font-size: 2.5rem;
   color: #000;
   margin-bottom: 10px;
 }
 
-.projects-content p {
+.services-content p {
   font-size: 1.1rem;
   color: #333;
   margin-bottom: 20px;
   line-height: 1.7;
 }
 
-/* Testimonial Cards */
-.project-card {
-  background: #edf0ee;
+/* Service Cards */
+.service-card {
+  background: #fff;
   padding: 25px;
   border-radius: 16px;
   margin-bottom: 15px;
   position: relative;
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
+  border: 5px solid #0b1945;
 }
 
-/* Gradient border effect */
-.project-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  padding: 3px; /* border thickness */
-  border-radius: 16px;
-  background: linear-gradient(135deg, #007bff, #00c6ff);
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-          mask-composite: exclude;
-  pointer-events: none;
-}
 
-.project-card:hover {
+
+.service-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 8px 25px rgba(0,0,0,0.12);
 }
 
-.project-card blockquote {
-  font-size: 1.05rem;
+.service-card h3 {
+  font-size: 1.2rem;
+  color: #0b1945;
+  margin-bottom: 8px;
+}
+.service-card p {
+  font-size: 1rem;
   color: #000;
   line-height: 1.6;
-  margin-bottom: 10px;
-}
-.project-card cite {
-  font-size: 0.95rem;
-  font-weight: bold;
-  color: #007bff;
-}
-.highlight {
-  color: #007bff;
-  font-weight: bold;
 }
 
 /* Animations */
@@ -1367,60 +1849,52 @@ if (currentUserEmail && users[currentUserEmail]) {
 
 /* Responsive Fixes */
 @media (max-width: 1024px) {
-  .projects-container {
+  .services-container {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-  .projects-content h2 {
+  .services-content h2 {
     font-size: 2rem;
   }
 }
 
 @media (max-width: 768px) {
-  .projects-success {
+  .bookkeeping-services {
     padding: 20px;
   }
-  .projects-image img {
+  .services-image img {
     width: 100%;
-    height: auto;   /* prevent fixed height issues */
+    height: auto;
     object-fit: cover;
   }
-  .projects-content h2 {
+  .services-content h2 {
     font-size: 1.8rem;
   }
-  .projects-content p {
+  .services-content p {
     font-size: 1rem;
   }
-  .project-card {
+  .service-card {
     padding: 18px;
   }
 }
 
 @media (max-width: 480px) {
-  .projects-content h2 {
+  .services-content h2 {
     font-size: 1.5rem;
   }
-  .projects-content p {
+  .services-content p {
     font-size: 0.95rem;
   }
-  .project-card blockquote {
-    font-size: 0.95rem;
+  .service-card h3 {
+    font-size: 1.05rem;
   }
 }
 </style>
 
 
 
-    <!-- Section 6: Contact Banner -->
-<section class="contact-banner section-padding">
-    <div class="container">
-        <div class="contact-banner-content">
-            <h2>Ready to Build Your Custom AI Solution?</h2>
-            <p>Let's discuss your requirements and create a tailored AI development plan.</p>
-            <a href="contact.html" class="btn btn-primary">Start Development</a>
-        </div>
-    </div>
-</section>
+
+<!-- Section : 7 -->
 
 <style>
     .contact-banner {
@@ -1493,17 +1967,18 @@ if (currentUserEmail && users[currentUserEmail]) {
 
 
 
-    <!-- Footer -->
-     <footer class="footer">
+<!-- Footer -->
+<!-- Footer -->
+<footer class="footer">
   <div class="container">
     <div class="footer-content">
       <!-- Logo & About -->
-      <div class="footer-section">
+      <div class="footer-section footer-section1">
         <div class="logo">
-          <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 40px; width: 80px;">
+          <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 50px; width: 80px;">
         </div>
         <p class="text-justify">
-          Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.
+          <span data-i18n="footer_about">Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.</span>
         </p>
         <div class="social-links">
           <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
@@ -1514,48 +1989,49 @@ if (currentUserEmail && users[currentUserEmail]) {
       </div>
 
       <!-- Quick Links -->
-      <div class="footer-section">
-        <h4>Quick Links</h4>
+      <div class="footer-section footer-section2">
+        <h4 data-i18n="footer_quickLinks">Quick Links</h4>
         <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="home2.html">Home 2</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="home.html"><span data-i18n="footer_home">Home</span></a></li>
+          <li><a href="home2.html"><span data-i18n="footer_home2">Home 2</span></a></li>
+          <li><a href="about.html"><span data-i18n="footer_aboutUs">About Us</span></a></li>
+          <li><a href="services.html"><span data-i18n="footer_services">Services</span></a></li>
+          <li><a href="blog.html"><span data-i18n="footer_blog">Blog</span></a></li>
+          <li><a href="contact.html"><span data-i18n="footer_contact">Contact</span></a></li>
         </ul>
       </div>
 
       <!-- Services -->
-      <div class="footer-section">
-        <h4>Services</h4>
+      <div class="footer-section footer-section3">
+        <h4 data-i18n="footer_servicesTitle">Services</h4>
         <ul>
-          <li><a href="service1.html">AI Development</a></li>
-          <li><a href="service2.html">Machine Learning</a></li>
-          <li><a href="service3.html">Data Analytics</a></li>
-          <li><a href="service4.html">Automation</a></li>
-          <li><a href="service5.html">AI Consulting</a></li>
-          <li><a href="service6.html">AI Integration</a></li>
+          <li><a href="service1.html"><span data-i18n="footer_service1">Property Buying Assistance</span></a></li>
+          <li><a href="service2.html"><span data-i18n="footer_service2">Property Selling</span></a></li>
+          <li><a href="service3.html"><span data-i18n="footer_service3">Rental Services</span></a></li>
+          <li><a href="service4.html"><span data-i18n="footer_service4">Property Management</span></a></li>
+          <li><a href="service5.html"><span data-i18n="footer_service5">Real Estate Investment</span></a></li>
+          <li><a href="service6.html"><span data-i18n="footer_service6">Legal & Documentation Support</span></a></li>
         </ul>
       </div>
 
       <!-- Contact Info -->
-      <div class="footer-section">
-        <h4>Contact Info</h4>
+      <div class="footer-section footer-section4">
+        <h4 data-i18n="footer_contactInfo">Contact Info</h4>
         <ul>
-          <li><i class="fas fa-envelope"></i> contact@stackly.ai</li>
-          <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-          <li><i class="fas fa-map-marker-alt"></i> 123 AI Innovation Drive</li>
+          <li><i class="fas fa-envelope"></i> <span data-i18n="footer_email">contact@stackly.ai</span></li>
+          <li><i class="fas fa-phone"></i> <span data-i18n="footer_phone">+1 (555) 123-4567</span></li>
+          <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer_address">123 AI Innovation Drive</span></li>
         </ul>
       </div>
     </div>
 
     <!-- Bottom Bar -->
     <div class="footer-bottom">
-      <p>&copy; 2025 Stackly. All rights reserved.</p>
+      <p><span data-i18n="footer_bottom">&copy; 2025 Stackly. All rights reserved.</span></p>
     </div>
   </div>
 </footer>
+
 
 <style>
 .footer {
@@ -1563,6 +2039,14 @@ if (currentUserEmail && users[currentUserEmail]) {
   color: #fff;
   padding: 50px 20px 20px;
   font-family: Arial, sans-serif;
+}
+
+.footer-section1{
+  margin-right: 150px;
+}
+
+.footer-section4{
+  margin-left: 50px;
 }
 
 .footer .footer-content {
@@ -1597,7 +2081,7 @@ if (currentUserEmail && users[currentUserEmail]) {
 }
 
 .footer .footer-section ul li a:hover {
-  color: #00c3ff;
+  color: #a68e4c;
 }
 
 .footer .social-links a {
@@ -1608,7 +2092,7 @@ if (currentUserEmail && users[currentUserEmail]) {
 }
 
 .footer .social-links a:hover {
-  color: #00c3ff;
+  color: #000000;
 }
 
 .footer .footer-bottom {
@@ -1624,23 +2108,36 @@ if (currentUserEmail && users[currentUserEmail]) {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
+  .footer-section1{
+  margin-right: 5px;
+}
 }
 
 @media (max-width: 600px) {
   .footer .footer-content {
     grid-template-columns: 1fr;
-    text-align: center;
+    text-align: left;
   }
   .footer .social-links {
     margin-top: 15px;
   }
+  .footer-section1{
+  margin-right: 10px;
+}
+  .footer-section2{
+  margin-right: 10px;
+}
+.footer-section4{
+  margin-left: 1px;
+}
 }
 </style>
 
-    <script src="assets/js/script.js"></script>
+</div>
+
+   <script src="assets/js/script.js"></script>
 </body>
 </html>
-
 
 <style>
 /* --- DARK MODE OVERRIDES --- */
@@ -1683,6 +2180,10 @@ body.dark-mode .ai-hero-paragraph {
 }
 
 body.dark-mode .ai-section,
+
+body.dark-mode .service-showcase,
+body.dark-mode .bookkeeping-services,
+body.dark-mode .service-card,
 body.dark-mode .ai-heading,
 body.dark-mode .ai-content,
 body.dark-mode .ai-text,
@@ -1816,4 +2317,3 @@ body.dark-mode .ai-heading {
   color: #00f7ff !important;
 }
 </style>
-

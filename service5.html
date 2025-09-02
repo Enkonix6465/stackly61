@@ -3,140 +3,692 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Development Services - Stackly</title>
+    <title>Stackly - Realestate</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+
+  <div id="loader">
+    <div class="spinner"></div>
+</div>
+
+<div id="content" style="display:none;"></div>
     <!-- Sticky Header -->
-     <!-- Sticky Header -->
-     <header class="header">
+    <header class="header">
   <div class="container">
     <div class="nav-wrapper">
-      <!-- Logo -->
       <div class="logo">
         <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 40px; width: 80px;">
       </div>
 
-      <!-- Navigation -->
       <nav class="navigation">
-    <ul class="nav-menu" id="navMenu">
-      <li class="nav-item dropdown">
-        <a href="#" class="nav-link">Home <i class="fas fa-chevron-down"></i></a>
-        <ul class="dropdown-menu">
-          <li><a href="index.html">Home 1</a></li>
-          <li><a href="home2.html">Home 2</a></li>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link" ><span data-i18n="home">Home</span> <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html"><span data-i18n="home1">Home 1</span></a></li>
+              <li><a href="home2.html"><span data-i18n="home2">Home 2</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="about.html" class="nav-link"><span data-i18n="about">About</span></a></li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link"><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Property Buying Assistance</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Property Selling</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Rental Services </span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Property Management</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Real Estate Investment</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service_6">Legal & Documentation Support</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link"><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
+              <li><a href="blog1.html"><span data-i18n="blog_1">Smart Property Investments</span></a></li>
+              <li><a href="blog2.html"><span data-i18n="blog_2">Effective Property Management</span></a></li>
+              <li><a href="blog3.html"><span data-i18n="blog_3">Real Estate Market Trends</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="contact.html" class="nav-link"><span data-i18n="contact">Contact</span></a></li>
+          
         </ul>
-      </li>
-      <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-      <li class="nav-item dropdown">
-        <a href="#" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
-        <ul class="dropdown-menu">
-          <li><a href="services.html">All Services</a></li>
-          <li><a href="service1.html">AI Development</a></li>
-          <li><a href="service2.html">Machine Learning</a></li>
-          <li><a href="service3.html">Data Analytics</a></li>
-          <li><a href="service4.html">Automation</a></li>
-          <li><a href="service5.html">AI Consulting</a></li>
-          <li><a href="service6.html">AI Integration</a></li>
+        <div class="hamburger" id="hamburger" aria-label="Open menu" tabindex="0">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+
+      <div class="mobile-menu-wrapper">
+        <ul class="hamburger-menu" id="hamburgerMenu">
+          <li class="mobile-dropdown-parent">
+            <span><span data-i18n="home">Home</span> <i class="fas fa-chevron-down"></i></span>
+            <ul class="mobile-dropdown">
+              <li><a href="index.html"><span data-i18n="home1">Home 1</span></a></li>
+              <li><a href="home2.html"><span data-i18n="home2">Home 2</span></a></li>
+            </ul>
+          </li>
+          <li><a href="about.html"><span data-i18n="about">About</span></a></li>
+          <li class="mobile-dropdown-parent">
+            <span><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></span>
+            <ul class="mobile-dropdown">
+             <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Property Buying Assistance</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Property Selling</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Rental Services </span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Property Management</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Real Estate Investment</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service6">Legal & Documentation Support</span></a></li>
+            </ul>
+          </li>
+          <li class="mobile-dropdown-parent">
+            <span><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></span>
+            <ul class="mobile-dropdown">
+               <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
+                <li><a href="blog1.html"><span data-i18n="blog_1">Smart Property Investments</span></a></li>
+                <li><a href="blog2.html"><span data-i18n="blog_2">Effective Property Management</span></a></li>
+                <li><a href="blog3.html"><span data-i18n="blog_3">Real Estate Market Trends</span></a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html"><span data-i18n="contact">Contact</span></a></li>
+       
         </ul>
-      </li>
-      <li class="nav-item dropdown">
-        <a href="#" class="nav-link">Blog <i class="fas fa-chevron-down"></i></a>
-        <ul class="dropdown-menu">
-          <li><a href="blog.html">All Posts</a></li>
-          <li><a href="blog1.html">AI Trends 2024</a></li>
-          <li><a href="blog2.html">Future of ML</a></li>
-          <li><a href="blog3.html">AI in Business</a></li>
+      </div>
+
+      <div class="lang-switcher">
+        <label for="langSelect">Language:</label>
+        <select id="langSelect" onchange="changeLanguage(this.value)">
+          <option value="en">English</option>
+          <option value="ar">Arabic</option>
+          <option value="he">Hebrew</option>
+        </select>
+      </div>
+
+      <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
+        <i class="fas fa-moon"></i>
+      </button>
+
+      <div class="avatar-circle" title="Profile" id="avatarCircle">
+        <span id="avatarInitials"></span>
+      </div>
+      <div class="avatar-dropdown" id="avatarDropdown">
+        <ul>
+          <li><a href="index.html" id="logoutBtn"><span data-i18n="logout">Logout</span></a></li>
         </ul>
-      </li>
-      <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-      <!-- Login/Logout Link -->
-      <li class="nav-item"><a href="index.html" class="nav-link" id="authLink">Login</a></li>
-    </ul>
-
-    <!-- Hamburger -->
-    <div class="hamburger" id="hamburger" aria-label="Open menu" tabindex="0">
-  <ul class="hamburger-menu" id="hamburgerMenu" style="display:none;">
-    <li><a href="index.html">Home 1</a></li>
-    <li><a href="home2.html">Home 2</a></li>
-    <li><a href="about.html">About</a></li>
-    <li>
-      <span>Services</span>
-      <ul>
-        <li><a href="services.html">All Services</a></li>
-        <li><a href="service1.html">AI Development</a></li>
-        <li><a href="service2.html">Machine Learning</a></li>
-        <li><a href="service3.html">Data Analytics</a></li>
-        <li><a href="service4.html">Automation</a></li>
-        <li><a href="service5.html">AI Consulting</a></li>
-        <li><a href="service6.html">AI Integration</a></li>
-      </ul>
-    </li>
-    <li>
-      <span>Blog</span>
-      <ul>
-        <li><a href="blog.html">All Posts</a></li>
-        <li><a href="blog1.html">AI Trends 2024</a></li>
-        <li><a href="blog2.html">Future of ML</a></li>
-        <li><a href="blog3.html">AI in Business</a></li>
-      </ul>
-    </li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="index.html" id="authLink">Login</a></li>
-  </ul>
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
-  </nav>
-
-  <!-- Toggle Button -->
-  <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
-    <i class="fas fa-moon"></i>
-  </button>
-
-  <!-- Avatar Circle -->
-  <div class="avatar-circle" title="Profile">
-
-  </div>
-</div>
+      </div>
+    </div>
   </div>
 </header>
 
-<!-- ✅ Script -->
+<!-- section: 1 -->
+<section class="ai-hero-section">
+  <video autoplay muted loop playsinline class="ai-hero-bg-video">
+    <source src="https://videos.pexels.com/video-files/6356429/6356429-hd_1920_1080_30fps.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="ai-hero-overlay">
+    <div class="ai-hero-content">
+      <h1 class="ai-hero-title ai-glow animate-ai-slide-in" data-i18n="hero_title">Real Estate Investment</h1>
+    </div>
+  </div>
+</section>
+
+<!-- Section : 2 -->
+<section class="ai-section">
+  <h1 class="ai-heading" data-i18n="sec2_heading">Real Estate Investment Planning</h1>
+  <div class="ai-content">
+    <div class="ai-text">
+      <p data-i18n="sec2_para">
+        Make informed investment decisions with our real estate investment planning services. 
+        We help investors analyze market trends, forecast returns, and optimize property portfolios 
+        to maximize growth and minimize risks.
+      </p>
+
+      <ul class="hero-features fade-in-up delay-2">
+        <li><span>✔</span> <span data-i18n="sec2_point1">Market trend analysis & property evaluation</span></li>
+        <li><span>✔</span> <span data-i18n="sec2_point2">Investment portfolio optimization</span></li>
+        <li><span>✔</span> <span data-i18n="sec2_point3">Rental yield & ROI forecasting</span></li>
+        <li><span>✔</span> <span data-i18n="sec2_point4">Risk assessment & scenario planning</span></li>
+        <li><span>✔</span> <span data-i18n="sec2_point5">Customized investment strategies</span></li>
+      </ul>
+
+      <div class="ai-buttons">
+        <a href="services.html" class="btn btn-primary" data-i18n="sec2_btn1">Explore Services</a>
+        <a href="contact.html" class="btn btn-primary" data-i18n="sec2_btn2">Get Started</a>
+      </div>
+    </div>
+    <div class="ai-image">
+      <img src="https://images.pexels.com/photos/4290722/pexels-photo-4290722.jpeg" alt="Real Estate Investment">
+    </div>
+  </div>
+</section>
+
+<!-- Section : 3 -->
+<section class="advanced-features">
+  <div class="advanced-features-container">
+    <div class="features-header fade-in-up">
+      <h2 data-i18n="sec3_heading">Real Estate Investment Planning</h2>
+      <p data-i18n="sec3_para">
+        Make informed investment decisions with our real estate investment solutions. 
+        We help investors analyze properties, forecast returns, and optimize portfolios 
+        to maximize growth and minimize risks.
+      </p>
+    </div>
+    <div class="features-cards">
+      <div class="feature-box fade-in-up delay-1">
+        <div class="feature-icon"><i class="fas fa-building"></i></div>
+        <h3 data-i18n="sec3_card1_title">Property Portfolio Planning</h3>
+        <p data-i18n="sec3_card1_para">Develop a strategic property investment portfolio. Identify high-potential assets and optimize your holdings for long-term growth.</p>
+      </div>
+      <div class="feature-box fade-in-up delay-2">
+        <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+        <h3 data-i18n="sec3_card2_title">Investment Return Forecasting</h3>
+        <p data-i18n="sec3_card2_para">Forecast rental yields and ROI using market data and trends. Plan acquisitions and sales to maximize financial returns.</p>
+      </div>
+      <div class="feature-box fade-in-up delay-3">
+        <div class="feature-icon"><i class="fas fa-search-dollar"></i></div>
+        <h3 data-i18n="sec3_card3_title">Market Scenario Analysis</h3>
+        <p data-i18n="sec3_card3_para">Analyze different market conditions and property scenarios to make informed, risk-adjusted investment decisions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section : 4 -->
+<section class="development-process">
+  <div class="development-process-container">
+    <div class="process-header fade-in-up">
+      <h2 data-i18n="sec4_heading">Real Estate Investment Planning</h2>
+      <p data-i18n="sec4_para">
+        Make informed property investment decisions with our expert real estate planning services. 
+        We help investors evaluate opportunities, forecast returns, and optimize portfolios 
+        to maximize growth and minimize risks.
+      </p>
+    </div>
+    <div class="process-row">
+      <div class="process-image slide-in-right">
+        <img src="https://images.pexels.com/photos/3958958/pexels-photo-3958958.jpeg" alt="Real Estate Investment">
+      </div>
+      <div class="process-content fade-in-up delay-1">
+        <p class="process-intro" data-i18n="sec4_intro">
+          Our real estate investment planning solutions help investors analyze properties, forecast rental yields, 
+          and assess market trends. From portfolio optimization to risk analysis, we provide actionable insights 
+          that ensure profitable and sustainable investments.
+        </p>
+        <div class="process-steps">
+          <div class="step"><span class="step-number">01</span><p data-i18n="sec4_step1">Identify High-Potential Properties</p></div>
+          <div class="step"><span class="step-number">02</span><p data-i18n="sec4_step2">Analyze Market Trends & Investment Risks</p></div>
+          <div class="step"><span class="step-number">03</span><p data-i18n="sec4_step3">Forecast Rental Yields & ROI</p></div>
+          <div class="step"><span class="step-number">04</span><p data-i18n="sec4_step4">Develop Investment Portfolio Strategy</p></div>
+          <div class="step"><span class="step-number">05</span><p data-i18n="sec4_step5">Plan Acquisition & Exit Strategies</p></div>
+          <div class="step"><span class="step-number">06</span><p data-i18n="sec4_step6">Monitor Performance & Adjust Investments</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section : 5 -->
+<section class="service-showcase">
+  <div class="service-container">
+    <div class="service-header animate-fade-up">
+      <h2 data-i18n="sec5_heading">Real Estate Investment Services</h2>
+      <p data-i18n="sec5_para">
+        Make smart property investment decisions with our professional real estate investment solutions. 
+        We help investors analyze markets, forecast returns, and optimize property portfolios for maximum growth and minimal risk.
+      </p>
+    </div>
+    <div class="service-grid">
+      <div class="service-card animate-slide-up delay-1">
+        <h3 data-i18n="sec5_card1_title">Property Portfolio Planning</h3>
+        <p data-i18n="sec5_card1_para">Develop a strategic portfolio of properties to maximize returns while managing risk effectively.</p>
+      </div>
+      <div class="service-card animate-slide-up delay-2">
+        <h3 data-i18n="sec5_card2_title">Rental Yield & ROI Forecasting</h3>
+        <p data-i18n="sec5_card2_para">Predict rental income and return on investment to make informed acquisition and sale decisions.</p>
+      </div>
+      <div class="service-card animate-slide-up delay-3">
+        <h3 data-i18n="sec5_card3_title">Market Trend Analysis</h3>
+        <p data-i18n="sec5_card3_para">Analyze real estate market trends to identify high-potential investments and opportunities.</p>
+      </div>
+      <div class="service-card animate-slide-up delay-4">
+        <h3 data-i18n="sec5_card4_title">Scenario Planning & Risk Assessment</h3>
+        <p data-i18n="sec5_card4_para">Evaluate different investment scenarios to anticipate risks and ensure sustainable growth of your property portfolio.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section : 6 -->
+<section class="bookkeeping-services">
+  <div class="services-container">
+    <div class="services-image animate-slide-in">
+      <img src="https://images.pexels.com/photos/10827225/pexels-photo-10827225.jpeg" alt="Real Estate Investment">
+    </div>
+    <div class="services-content">
+      <h2 class="animate-fade-up" data-i18n="sec6_heading">Expert Real Estate Investment Planning</h2>
+      <p class="animate-fade-up delay-1" style="text-align: justify;" data-i18n="sec6_para">
+        Our real estate investment services help investors make informed property decisions, optimize portfolios, 
+        and forecast returns. From analyzing potential acquisitions to evaluating market trends, we provide insights 
+        that maximize profitability and minimize risk.
+      </p>
+      <div class="service-card animate-fade-up delay-2">
+        <h3 data-i18n="sec6_card1_title">Property Portfolio Strategy</h3>
+        <p data-i18n="sec6_card1_para">We design strategic property portfolios tailored to your investment goals, balancing risk and growth potential.</p>
+      </div>
+      <div class="service-card animate-fade-up delay-3">
+        <h3 data-i18n="sec6_card2_title">ROI & Market Forecasting</h3>
+        <p data-i18n="sec6_card2_para">Gain actionable insights into rental yields, market trends, and return on investment to guide smart acquisitions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section : 7 -->
+<section class="contact-banner section-padding">
+  <div class="container">
+    <div class="contact-banner-content">
+      <h2 data-i18n="sec7_heading">Ready to Grow Your Property Portfolio?</h2>
+      <p data-i18n="sec7_para">Let’s create a tailored real estate investment plan that maximizes returns, minimizes risks, and builds long-term wealth.</p>
+      <a href="contact.html" class="btn btn-primary" data-i18n="sec7_btn">Start Investing</a>
+    </div>
+  </div>
+</section>
+
+
 <script>
-  // Hamburger toggle
- const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("navMenu");
-const hamburgerMenu = document.getElementById("hamburgerMenu");
+// Translation dictionary
+const translations = {
+  en: {
+   "home": "Home",
+    "home1": "Home 1",
+    "home2": "Home 2",
+    "about": "About",
+    "services": "Services",
+    "allServices": "All Services",
+    "service_1": "Property Buying Assistance",
+    "service_2": "Property Selling",
+    "service_3": "Rental Services",
+    "service_4": "Property Management",
+    "service_5": "Real Estate Investment",
+    "service_6": "Legal & Documentation Support",
+    "blog": "Blog",
+    "allPosts": "All Posts",
+    "blog_1": "Smart Property Investments",
+    "blog_2": "Effective Property Management",
+    "blog_3": "Real Estate Market Trends",
+    "contact": "Contact",
+    "logout": "Logout",
 
-// Show/hide menu on hamburger click
-hamburger.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
-  hamburgerMenu.style.display = hamburgerMenu.style.display === "block" ? "none" : "block";
-});
+    "footer_about": "Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.",
+    "footer_quickLinks": "Quick Links",
+    "footer_home": "Home",
+    "footer_home2": "Home 2",
+    "footer_aboutUs": "About Us",
+    "footer_services": "Services",
+    "footer_blog": "Blog",
+    "footer_contact": "Contact",
+    "footer_servicesTitle": "Services",
+    "footer_service1": "Property Buying Assistance",
+    "footer_service2": "Property Selling",
+    "footer_service3": "Rental Services",
+    "footer_service4": "Property Management",
+    "footer_service5": "Real Estate Investment",
+    "footer_service6": "Legal & Documentation Support",
+    "footer_contactInfo": "Contact Info",
+    "footer_email": "contact@stackly.ai",
+    "footer_phone": "+1 (555) 123-4567",
+    "footer_address": "123 AI Innovation Drive",
+    "footer_bottom": "© 2025 Stackly. All rights reserved.",
 
-  // Auth link toggle
-  const authLink = document.getElementById("authLink");
-  if(localStorage.getItem("isLoggedIn") === "true"){
-    authLink.innerText = "Logout";
-    authLink.href = "#";
-    authLink.onclick = () => {
-      localStorage.removeItem("isLoggedIn");
-      localStorage.removeItem("currentUser");
-      window.location.href = "index.html";
-    };
-  } else {
-    authLink.innerText = "Login";
-    authLink.href = "index.html";
+    "hero_title": "Real Estate Investment",
+    "sec2_heading": "Real Estate Investment Planning",
+    "sec2_para": "Make informed investment decisions with our real estate investment planning services. We help investors analyze market trends, forecast returns, and optimize property portfolios to maximize growth and minimize risks.",
+    "sec2_point1": "Market trend analysis & property evaluation",
+    "sec2_point2": "Investment portfolio optimization",
+    "sec2_point3": "Rental yield & ROI forecasting",
+    "sec2_point4": "Risk assessment & scenario planning",
+    "sec2_point5": "Customized investment strategies",
+    "sec2_btn1": "Explore Services",
+    "sec2_btn2": "Get Started",
+    "sec3_heading": "Real Estate Investment Planning",
+    "sec3_para": "Make informed investment decisions with our real estate investment solutions. We help investors analyze properties, forecast returns, and optimize portfolios to maximize growth and minimize risks.",
+    "sec3_card1_title": "Property Portfolio Planning",
+    "sec3_card1_para": "Develop a strategic property investment portfolio. Identify high-potential assets and optimize your holdings for long-term growth.",
+    "sec3_card2_title": "Investment Return Forecasting",
+    "sec3_card2_para": "Forecast rental yields and ROI using market data and trends. Plan acquisitions and sales to maximize financial returns.",
+    "sec3_card3_title": "Market Scenario Analysis",
+    "sec3_card3_para": "Analyze different market conditions and property scenarios to make informed, risk-adjusted investment decisions.",
+    "sec4_heading": "Real Estate Investment Planning",
+    "sec4_para": "Make informed property investment decisions with our expert real estate planning services. We help investors evaluate opportunities, forecast returns, and optimize portfolios to maximize growth and minimize risks.",
+    "sec4_intro": "Our real estate investment planning solutions help investors analyze properties, forecast rental yields, and assess market trends. From portfolio optimization to risk analysis, we provide actionable insights that ensure profitable and sustainable investments.",
+    "sec4_step1": "Identify High-Potential Properties",
+    "sec4_step2": "Analyze Market Trends & Investment Risks",
+    "sec4_step3": "Forecast Rental Yields & ROI",
+    "sec4_step4": "Develop Investment Portfolio Strategy",
+    "sec4_step5": "Plan Acquisition & Exit Strategies",
+    "sec4_step6": "Monitor Performance & Adjust Investments",
+    "sec5_heading": "Real Estate Investment Services",
+    "sec5_para": "Make smart property investment decisions with our professional real estate investment solutions. We help investors analyze markets, forecast returns, and optimize property portfolios for maximum growth and minimal risk.",
+    "sec5_card1_title": "Property Portfolio Planning",
+    "sec5_card1_para": "Develop a strategic portfolio of properties to maximize returns while managing risk effectively.",
+    "sec5_card2_title": "Rental Yield & ROI Forecasting",
+    "sec5_card2_para": "Predict rental income and return on investment to make informed acquisition and sale decisions.",
+    "sec5_card3_title": "Market Trend Analysis",
+    "sec5_card3_para": "Analyze real estate market trends to identify high-potential investments and opportunities.",
+    "sec5_card4_title": "Scenario Planning & Risk Assessment",
+    "sec5_card4_para": "Evaluate different investment scenarios to anticipate risks and ensure sustainable growth of your property portfolio.",
+    "sec6_heading": "Expert Real Estate Investment Planning",
+    "sec6_para": "Our real estate investment services help investors make informed property decisions, optimize portfolios, and forecast returns. From analyzing potential acquisitions to evaluating market trends, we provide insights that maximize profitability and minimize risk.",
+    "sec6_card1_title": "Property Portfolio Strategy",
+    "sec6_card1_para": "We design strategic property portfolios tailored to your investment goals, balancing risk and growth potential.",
+    "sec6_card2_title": "ROI & Market Forecasting",
+    "sec6_card2_para": "Gain actionable insights into rental yields, market trends, and return on investment to guide smart acquisitions.",
+    "sec7_heading": "Ready to Grow Your Property Portfolio?",
+    "sec7_para": "Let’s create a tailored real estate investment plan that maximizes returns, minimizes risks, and builds long-term wealth.",
+    "sec7_btn": "Start Investing",
+       
+  },
+  ar: {
+   "home": "الرئيسية",
+    "home1": "الصفحة الرئيسية 1",
+    "home2": "الصفحة الرئيسية 2",
+    "about": "من نحن",
+    "services": "الخدمات",
+    "allServices": "جميع الخدمات",
+    "service_1": "مساعدة في شراء العقارات",
+    "service_2": "بيع العقارات",
+    "service_3": "خدمات الإيجار",
+    "service_4": "إدارة العقارات",
+    "service_5": "الاستثمار العقاري",
+    "service_6": "الدعم القانوني والتوثيق",
+    "blog": "المدونة",
+    "allPosts": "جميع المقالات",
+    "blog_1": "الاستثمارات العقارية الذكية",
+    "blog_2": "إدارة العقارات الفعالة",
+    "blog_3": "اتجاهات سوق العقارات",
+    "contact": "اتصل بنا",
+    "logout": "تسجيل خروج",
+
+    "footer_about": "مزود رائد لحلول الذكاء الاصطناعي، يساعد الشركات على التحول من خلال التكنولوجيا الذكية وأنظمة الأتمتة المبتكرة.",
+    "footer_quickLinks": "روابط سريعة",
+    "footer_home": "الرئيسية",
+    "footer_home2": "الصفحة الرئيسية 2",
+    "footer_aboutUs": "من نحن",
+    "footer_services": "الخدمات",
+    "footer_blog": "المدونة",
+    "footer_contact": "اتصل بنا",
+    "footer_servicesTitle": "الخدمات",
+    "footer_service1": "مساعدة في شراء العقارات",
+    "footer_service2": "بيع العقارات",
+    "footer_service3": "خدمات الإيجار",
+    "footer_service4": "إدارة الممتلكات",
+    "footer_service5": "الاستثمار العقاري",
+    "footer_service6": "الدعم القانوني والتوثيق",
+    "footer_contactInfo": "معلومات الاتصال",
+    "footer_email": "contact@stackly.ai",
+    "footer_phone": "+1 (555) 123-4567",
+    "footer_address": "123 طريق ابتكار الذكاء الاصطناعي",
+    "footer_bottom": "© 2025 Stackly. جميع الحقوق محفوظة.",
+
+     "hero_title": "الاستثمار العقاري",
+    "sec2_heading": "تخطيط الاستثمار العقاري",
+    "sec2_para": "اتخذ قرارات استثمارية مستنيرة من خلال خدمات تخطيط الاستثمار العقاري لدينا. نحن نساعد المستثمرين على تحليل اتجاهات السوق، وتوقع العوائد، وتحسين المحافظ العقارية لتعظيم النمو وتقليل المخاطر.",
+    "sec2_point1": "تحليل اتجاهات السوق وتقييم العقارات",
+    "sec2_point2": "تحسين المحافظ الاستثمارية",
+    "sec2_point3": "توقع العوائد وإيرادات الإيجار",
+    "sec2_point4": "تقييم المخاطر والتخطيط للسيناريوهات",
+    "sec2_point5": "استراتيجيات استثمار مخصصة",
+    "sec2_btn1": "اكتشف الخدمات",
+    "sec2_btn2": "ابدأ الآن",
+    "sec3_heading": "تخطيط الاستثمار العقاري",
+    "sec3_para": "اتخذ قرارات استثمارية مستنيرة مع حلول الاستثمار العقاري لدينا. نحن نساعد المستثمرين على تحليل العقارات، وتوقع العوائد، وتحسين المحافظ لتعظيم النمو وتقليل المخاطر.",
+    "sec3_card1_title": "تخطيط المحافظ العقارية",
+    "sec3_card1_para": "قم بتطوير محفظة استثمارية عقارية استراتيجية. حدد الأصول عالية الإمكانات وحسن ممتلكاتك للنمو طويل الأجل.",
+    "sec3_card2_title": "توقع عوائد الاستثمار",
+    "sec3_card2_para": "توقع عوائد الإيجار والعائد على الاستثمار باستخدام بيانات السوق والاتجاهات. خطط لعمليات الشراء والبيع لتعظيم العوائد المالية.",
+    "sec3_card3_title": "تحليل سيناريوهات السوق",
+    "sec3_card3_para": "قم بتحليل ظروف السوق المختلفة والسيناريوهات العقارية لاتخاذ قرارات استثمارية مدروسة تراعي المخاطر.",
+    "sec4_heading": "تخطيط الاستثمار العقاري",
+    "sec4_para": "اتخذ قرارات استثمارية مدروسة في العقارات مع خدمات التخطيط العقاري الاحترافية لدينا. نحن نساعد المستثمرين على تقييم الفرص، وتوقع العوائد، وتحسين المحافظ لتعظيم النمو وتقليل المخاطر.",
+    "sec4_intro": "تساعد حلول تخطيط الاستثمار العقاري لدينا المستثمرين على تحليل العقارات، وتوقع عوائد الإيجار، وتقييم اتجاهات السوق. بدءًا من تحسين المحافظ إلى تحليل المخاطر، نقدم رؤى عملية تضمن استثمارات مربحة ومستدامة.",
+    "sec4_step1": "تحديد العقارات عالية الإمكانات",
+    "sec4_step2": "تحليل اتجاهات السوق ومخاطر الاستثمار",
+    "sec4_step3": "توقع عوائد الإيجار والعائد على الاستثمار",
+    "sec4_step4": "تطوير استراتيجية محفظة استثمارية",
+    "sec4_step5": "تخطيط استراتيجيات الشراء والخروج",
+    "sec4_step6": "مراقبة الأداء وتعديل الاستثمارات",
+    "sec5_heading": "خدمات الاستثمار العقاري",
+    "sec5_para": "اتخذ قرارات استثمارية ذكية في العقارات من خلال حلولنا المهنية. نحن نساعد المستثمرين على تحليل الأسواق، وتوقع العوائد، وتحسين المحافظ لتحقيق أقصى نمو وأدنى مخاطرة.",
+    "sec5_card1_title": "تخطيط المحافظ العقارية",
+    "sec5_card1_para": "طور محفظة عقارية استراتيجية لتعظيم العوائد وإدارة المخاطر بفعالية.",
+    "sec5_card2_title": "توقع عوائد الإيجار والعائد على الاستثمار",
+    "sec5_card2_para": "توقع دخل الإيجار والعائد على الاستثمار لاتخاذ قرارات شراء وبيع مستنيرة.",
+    "sec5_card3_title": "تحليل اتجاهات السوق",
+    "sec5_card3_para": "قم بتحليل اتجاهات سوق العقارات لتحديد الاستثمارات والفرص عالية الإمكانات.",
+    "sec5_card4_title": "التخطيط للسيناريوهات وتقييم المخاطر",
+    "sec5_card4_para": "قم بتقييم سيناريوهات الاستثمار المختلفة للتنبؤ بالمخاطر وضمان نمو مستدام لمحفظتك العقارية.",
+    "sec6_heading": "تخطيط استثمار عقاري احترافي",
+    "sec6_para": "تساعد خدماتنا في الاستثمار العقاري المستثمرين على اتخاذ قرارات عقارية مدروسة، وتحسين المحافظ، وتوقع العوائد. بدءًا من تحليل عمليات الاستحواذ المحتملة إلى تقييم اتجاهات السوق، نقدم رؤى تعظم الأرباح وتقلل المخاطر.",
+    "sec6_card1_title": "استراتيجية المحافظ العقارية",
+    "sec6_card1_para": "نصمم محافظ عقارية استراتيجية مصممة خصيصًا لأهدافك الاستثمارية، مع تحقيق التوازن بين المخاطر وإمكانات النمو.",
+    "sec6_card2_title": "توقعات السوق والعائد على الاستثمار",
+    "sec6_card2_para": "احصل على رؤى عملية حول عوائد الإيجار، واتجاهات السوق، والعائد على الاستثمار لتوجيه عمليات الاستحواذ الذكية.",
+    "sec7_heading": "هل أنت مستعد لتنمية محفظتك العقارية؟",
+    "sec7_para": "دعنا ننشئ خطة استثمار عقاري مخصصة تعظم العوائد، وتقلل المخاطر، وتبني ثروة طويلة الأجل.",
+    "sec7_btn": "ابدأ الاستثمار",
+
+     },
+  he: {
+ "home": "בית",
+    "home1": "דף הבית 1",
+    "home2": "דף הבית 2",
+    "about": "אודות",
+    "services": "שירותים",
+    "allServices": "כל השירותים",
+    "service_1": "סיוע ברכישת נכסים",
+    "service_2": "מכירת נכסים",
+    "service_3": "שירותי השכרה",
+    "service_4": "ניהול נכסים",
+    "service_5": "השקעות נדל״ן",
+    "service_6": "תמיכה משפטית ותיעוד",
+    "blog": "בלוג",
+    "allPosts": "כל הפוסטים",
+    "blog_1": "השקעות נדל״ן חכמות",
+    "blog_2": "ניהול נכסים יעיל",
+    "blog_3": "מגמות שוק הנדל״ן",
+    "contact": "צור קשר",
+    "logout": "התנתק",
+
+    "footer_about": "ספק מוביל של פתרונות בינה מלאכותית, מסייע לעסקים להשתנות באמצעות טכנולוגיה חכמה ומערכות אוטומציה חדשניות.",
+    "footer_quickLinks": "קישורים מהירים",
+    "footer_home": "בית",
+    "footer_home2": "בית 2",
+    "footer_aboutUs": "אודותינו",
+    "footer_services": "שירותים",
+    "footer_blog": "בלוג",
+    "footer_contact": "צור קשר",
+    "footer_servicesTitle": "שירותים",
+    "footer_service1": "סיוע ברכישת נכסים",
+    "footer_service2": "מכירת נכסים",
+    "footer_service3": "שירותי השכרה",
+    "footer_service4": "ניהול נכסים",
+    "footer_service5": "השקעות נדל\"ן",
+    "footer_service6": "תמיכה משפטית ותיעוד",
+    "footer_contactInfo": "פרטי קשר",
+    "footer_email": "contact@stackly.ai",
+    "footer_phone": "+1 (555) 123-4567",
+    "footer_address": "123 רחוב חדשנות בינה מלאכותית",
+    "footer_bottom": "© 2025 Stackly. כל הזכויות שמורות.",
+
+    "hero_title": "השקעות נדל\"ן",
+    "sec2_heading": "תכנון השקעות נדל\"ן",
+    "sec2_para": "קבל החלטות השקעה מושכלות עם שירותי תכנון השקעות נדל\"ן שלנו. אנו עוזרים למשקיעים לנתח מגמות שוק, לחזות תשואות ולייעל תיקי נכסים כדי למקסם את הצמיחה ולהפחית סיכונים.",
+    "sec2_point1": "ניתוח מגמות שוק והערכת נכסים",
+    "sec2_point2": "ייעול תיקי השקעות",
+    "sec2_point3": "תחזיות תשואות שכירות ותשואה על ההשקעה",
+    "sec2_point4": "הערכת סיכונים ותכנון תרחישים",
+    "sec2_point5": "אסטרטגיות השקעה מותאמות אישית",
+    "sec2_btn1": "גלה שירותים",
+    "sec2_btn2": "התחל עכשיו",
+    "sec3_heading": "תכנון השקעות נדל\"ן",
+    "sec3_para": "קבל החלטות השקעה חכמות עם פתרונות ההשקעה שלנו בנדל\"ן. אנו עוזרים למשקיעים לנתח נכסים, לחזות תשואות ולייעל תיקי השקעות כדי למקסם צמיחה ולהפחית סיכונים.",
+    "sec3_card1_title": "תכנון תיקי השקעות נדל\"ן",
+    "sec3_card1_para": "פיתוח תיק השקעות נדל\"ן אסטרטגי. זיהוי נכסים בעלי פוטנציאל גבוה ואופטימיזציה של אחזקותיך לצמיחה ארוכת טווח.",
+    "sec3_card2_title": "תחזית תשואות השקעה",
+    "sec3_card2_para": "חיזוי תשואות שכירות ותשואה על ההשקעה באמצעות נתוני שוק ומגמות. תכנון רכישות ומכירות למקסום התשואות.",
+    "sec3_card3_title": "ניתוח תרחישי שוק",
+    "sec3_card3_para": "ניתוח מצבי שוק שונים ותרחישי נכסים לקבלת החלטות השקעה מבוססות ומותאמות סיכון.",
+    "sec4_heading": "תכנון השקעות נדל\"ן",
+    "sec4_para": "קבל החלטות השקעה חכמות עם שירותי תכנון נדל\"ן מקצועיים. אנו מסייעים למשקיעים להעריך הזדמנויות, לחזות תשואות ולייעל תיקי השקעות כדי למקסם צמיחה ולהפחית סיכונים.",
+    "sec4_intro": "פתרונות תכנון ההשקעה שלנו בנדל\"ן מסייעים למשקיעים לנתח נכסים, לחזות תשואות שכירות ולהעריך מגמות שוק. מתכנון תיקי השקעות ועד ניתוח סיכונים, אנו מספקים תובנות שמבטיחות השקעות רווחיות ובנות קיימא.",
+    "sec4_step1": "זיהוי נכסים בעלי פוטנציאל גבוה",
+    "sec4_step2": "ניתוח מגמות שוק וסיכוני השקעה",
+    "sec4_step3": "תחזית תשואות שכירות ותשואה על ההשקעה",
+    "sec4_step4": "פיתוח אסטרטגיית תיק השקעות",
+    "sec4_step5": "תכנון אסטרטגיות רכישה ויציאה",
+    "sec4_step6": "מעקב אחרי ביצועים והתאמת השקעות",
+    "sec5_heading": "שירותי השקעות נדל\"ן",
+    "sec5_para": "קבל החלטות השקעה חכמות עם שירותי השקעות הנדל\"ן המקצועיים שלנו. אנו מסייעים למשקיעים לנתח שווקים, לחזות תשואות ולייעל תיקי השקעות למקסימום צמיחה ומינימום סיכון.",
+    "sec5_card1_title": "תכנון תיקי השקעות נדל\"ן",
+    "sec5_card1_para": "פיתוח תיק השקעות אסטרטגי למקסום תשואות תוך ניהול סיכונים ביעילות.",
+    "sec5_card2_title": "תחזית תשואות שכירות ותשואה על ההשקעה",
+    "sec5_card2_para": "חיזוי הכנסות משכירות ותשואה על ההשקעה לקבלת החלטות מושכלות ברכישה ובמכירה.",
+    "sec5_card3_title": "ניתוח מגמות שוק",
+    "sec5_card3_para": "ניתוח מגמות שוק הנדל\"ן לזיהוי השקעות והזדמנויות בעלות פוטנציאל גבוה.",
+    "sec5_card4_title": "תכנון תרחישים והערכת סיכונים",
+    "sec5_card4_para": "הערכת תרחישי השקעה שונים לחיזוי סיכונים ולהבטחת צמיחה בת קיימא של תיק הנדל\"ן שלך.",
+    "sec6_heading": "תכנון השקעות נדל\"ן מקצועי",
+    "sec6_para": "שירותי ההשקעה שלנו בנדל\"ן מסייעים למשקיעים בקבלת החלטות מושכלות, ייעול תיקי השקעות וחיזוי תשואות. מהערכת רכישות פוטנציאליות ועד לניתוח מגמות שוק, אנו מספקים תובנות שממקסמות רווחיות ומפחיתות סיכון.",
+    "sec6_card1_title": "אסטרטגיית תיק השקעות נדל\"ן",
+    "sec6_card1_para": "אנו מתכננים תיקי השקעות נדל\"ן מותאמים אישית בהתאם למטרותיך, תוך איזון בין סיכון לפוטנציאל צמיחה.",
+    "sec6_card2_title": "תחזיות שוק ותשואה על ההשקעה",
+    "sec6_card2_para": "קבל תובנות מעשיות לגבי תשואות שכירות, מגמות שוק ותשואה על ההשקעה כדי להנחות רכישות חכמות.",
+    "sec7_heading": "מוכן להרחיב את תיק הנדל\"ן שלך?",
+    "sec7_para": "בוא ניצור תוכנית השקעה מותאמת בנדל\"ן שממקסמת תשואות, ממזערת סיכונים ובונה עושר לטווח ארוך.",
+    "sec7_btn": "התחל להשקיע",
+ 
+        
   }
+};
+
+// Function to change language
+function changeLanguage(lang) {
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if(translations[lang] && translations[lang][key]) {
+      el.innerText = translations[lang][key];
+    }
+  });
+
+  // Handle RTL for Arabic & Hebrew
+  if(lang === "ar" || lang === "he") {
+    document.documentElement.dir = "rtl";
+  } else {
+    document.documentElement.dir = "ltr";
+  }
+}
+
+// Optional: automatically switch to selected language on page load
+document.addEventListener("DOMContentLoaded", () => {
+  const langSelect = document.getElementById("langSelect");
+  changeLanguage(langSelect.value);
+});
+</script>
+
+
+
+
+<script>
+  // Mobile menu setup
+  const hamburger = document.getElementById("hamburger");
+  const hamburgerMenu = document.getElementById("hamburgerMenu");
+
+  // Show/hide mobile menu on hamburger click
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    hamburgerMenu.classList.toggle("active");
+  });
+
+  // Toggle dropdowns for mobile menu
+  document.querySelectorAll('.mobile-dropdown-parent > span').forEach(link => {
+    link.addEventListener('click', function() {
+      const parentLi = this.parentElement;
+      const dropdown = parentLi.querySelector('.mobile-dropdown');
+      dropdown.classList.toggle('active');
+    });
+  });
+
+  // Desktop dropdown toggle logic
+  document.querySelectorAll('.nav-item.dropdown > .nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelectorAll('.dropdown-menu').forEach(menu => {
+        if (menu !== this.nextElementSibling) {
+          menu.classList.remove('active');
+        }
+      });
+      const dropdownMenu = this.nextElementSibling;
+      if (dropdownMenu) {
+        dropdownMenu.classList.toggle('active');
+      }
+    });
+  });
+
+  // Redirect on desktop dropdown menu item click
+  document.querySelectorAll('.dropdown-menu a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href && href !== "#") {
+        window.location.href = href;
+        document.querySelectorAll('.dropdown-menu').forEach(menu => menu.classList.remove('active'));
+      }
+    });
+  });
+
+  // Redirect on normal nav link click
+  document.querySelectorAll('.nav-menu > .nav-item:not(.dropdown) .nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href && href !== "#") {
+        window.location.href = href;
+      }
+    });
+  });
+
+  // Auth link toggle for desktop and mobile
+  function setupAuthLinks() {
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    const authLinks = [document.getElementById("authLink"), document.getElementById("mobileAuthLink")];
+
+    authLinks.forEach(link => {
+      if (!link) return;
+      if (isLoggedIn) {
+        link.innerText = "Logout";
+        link.href = "#";
+        link.onclick = (e) => {
+          e.preventDefault();
+          localStorage.removeItem("isLoggedIn");
+          localStorage.removeItem("currentUser");
+          window.location.href = "index.html";
+        };
+      } else {
+        link.innerText = "Login";
+        link.href = "index.html";
+        link.onclick = null;
+      }
+    });
+  }
+  setupAuthLinks();
 
   // Theme toggle
   const toggleBtn = document.getElementById('toggleBtn');
   let darkMode = localStorage.getItem('darkMode') === 'true';
 
-  // Apply initial theme
   function applyTheme() {
     if (darkMode) {
       document.body.classList.add('dark-mode');
@@ -152,125 +704,249 @@ hamburger.addEventListener("click", () => {
     localStorage.setItem('darkMode', darkMode);
     applyTheme();
   });
-
-  // Call once to apply the theme on initial load
   applyTheme();
 
-  // Avatar initials
-const avatarCircle = document.querySelector('.avatar-circle');
-const currentUserEmail = localStorage.getItem("currentUser");
-const users = JSON.parse(localStorage.getItem("users")) || {};
-if (currentUserEmail && users[currentUserEmail]) {
-  const firstName = users[currentUserEmail].firstName || "";
-  const lastName = users[currentUserEmail].lastName || "";
-  const initials = (firstName[0] || "").toUpperCase() + (lastName[0] || "").toUpperCase();
-  avatarCircle.innerHTML = `<span style="
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #23272f;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-  ">${initials}</span>`;
-} else {
-  avatarCircle.innerHTML = `<span style="
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #23272f;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-  ">?</span>`;
-}
+  // Avatar initials logic
+  const avatarCircle = document.getElementById('avatarCircle');
+  const avatarInitials = document.getElementById('avatarInitials');
+  const avatarDropdown = document.getElementById('avatarDropdown');
+  const logoutBtn = document.getElementById('logoutBtn');
+  const currentUserEmail = localStorage.getItem("currentUser");
+  const users = JSON.parse(localStorage.getItem("users")) || {};
 
+  if (currentUserEmail && users[currentUserEmail]) {
+    const firstName = users[currentUserEmail].firstName || "";
+    const lastName = users[currentUserEmail].lastName || "";
+    const initials = (firstName[0] || "").toUpperCase() + (lastName[0] || "").toUpperCase();
+    avatarInitials.textContent = initials;
+  } else {
+    avatarInitials.textContent = "?";
+  }
+
+  // Show/hide avatar dropdown on click
+  avatarCircle.addEventListener('click', function(e) {
+    e.stopPropagation();
+    avatarDropdown.style.display = avatarDropdown.style.display === "block" ? "none" : "block";
+  });
+
+  document.addEventListener('click', function(e) {
+    if (!avatarCircle.contains(e.target) && !avatarDropdown.contains(e.target)) {
+      avatarDropdown.style.display = "none";
+    }
+  });
+
+  // Logout action
+  logoutBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("currentUser");
+    window.location.href = "index.html";
+  });
 </script>
 
-<!-- ✅ CSS for hamburger -->
 <style>
+  /* Base styles for hamburger icon */
   .hamburger {
     display: none;
     flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
     cursor: pointer;
+    z-index: 1000;
   }
+
   .hamburger span {
-    height: 3px;
-    width: 25px;
-    background: #333;
-    margin: 4px 0;
-    border-radius: 5px;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
   }
+
+  .dark-mode .hamburger span {
+    background-color: #fff;
+  }
+
+  /* Hamburger menu animation */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* Hide navigation on mobile */
   @media (max-width: 768px) {
     .nav-menu {
       display: none;
-      flex-direction: column;
-      background: #fff;
-      position: absolute;
-      top: 70px;
-      right: 20px;
-      width: 200px;
-      padding: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    }
-    .nav-menu.active {
-      display: flex;
     }
     .hamburger {
       display: flex;
     }
-    .nav-item {
-      margin: 10px 0;
-    }
+  }
+
+  /* Styles for the mobile hamburger menu */
+  .mobile-menu-wrapper {
+    position: relative;
+  }
+
+  .hamburger-menu {
+    display: none;
+    flex-direction: column;
+    background: #23272f;
+    color: #fff;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 220px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+    padding: 20px 0;
+    z-index: 9999;
+    list-style: none;
+  }
+
+  .hamburger-menu.active {
+    display: flex;
+  }
+
+  .hamburger-menu li {
+    padding: 10px 24px;
+    border-bottom: 1px solid #333;
+  }
+
+  .hamburger-menu li:last-child {
+    border-bottom: none;
+  }
+
+  .hamburger-menu a,
+  .hamburger-menu span {
+    color: #00f7ff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: block;
+    cursor: pointer;
+    font-weight: 500;
+  }
+
+  .hamburger-menu ul {
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 5px;
+  }
+
+  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown {
+    display: none;
+  }
+
+  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown.active {
+    display: block;
   }
 
   .toggle-btn {
-  background: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 38px;
-  height: 38px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  cursor: pointer;
-  transition: background 0.2s;
-}
-.toggle-btn:hover {
-  background: #f0f0f0;
-}
-.avatar-circle {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-left: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #eee;
-}
-.avatar-circle img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-@media (max-width: 768px) {
-  .toggle-btn, .avatar-circle {
-    margin-left: 8px;
-    width: 32px;
-    height: 32px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: background 0.2s;
   }
-}
-</style>
 
+  .toggle-btn:hover {
+    background: #f0f0f0;
+  }
+
+  .avatar-circle {
+    position: relative;
+    cursor: pointer;
+    z-index: 1001;
+    overflow: visible;
+  }
+
+  .avatar-circle {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eee;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .avatar-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .avatar-dropdown {
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 140px;
+    background: #fff;
+    min-width: 100px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+    border-radius: 8px;
+    z-index: 1002;
+    padding: 4px 0;
+  }
+
+  .avatar-dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .avatar-dropdown li {
+    padding: 6px 12px;
+  }
+
+  .avatar-dropdown a {
+    color: #23272f;
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: block;
+    border-radius: 4px;
+    transition: background 0.2s;
+  }
+
+  .avatar-dropdown a:hover {
+    background: #f0f0f0;
+  }
+
+  @media (max-width: 768px) {
+    .toggle-btn,
+    .avatar-circle {
+      margin-left: 8px;
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .hamburger-menu {
+      display: none !important;
+    }
+  }
+</style>
 <!-- 🔷 Protest home page  -->
 
   <script>
@@ -289,21 +965,10 @@ if (currentUserEmail && users[currentUserEmail]) {
     }
   </script>
 
-<!-- 🔷 HERO SECTION START -->
 
-<section class="ai-hero-section">
-  <video autoplay muted loop playsinline class="ai-hero-bg-video">
-    <source src="https://videos.pexels.com/video-files/6153453/6153453-uhd_2732_1440_25fps.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
 
-  <div class="ai-hero-overlay">
-    <div class="ai-hero-content">
-      <h1 class="ai-hero-title ai-glow animate-ai-slide-in">AI Consulting</h1>
-      
-    </div>
-  </div>
-</section>
+
+<!-- section: 1 -->
 
 <style>
 
@@ -425,45 +1090,17 @@ if (currentUserEmail && users[currentUserEmail]) {
     .ai-hero-paragraph { font-size: 0.9rem; }
   }
 </style>
-<!-- 🔷 HERO SECTION END -->
 
-<section class="ai-section">
-    <h1 class="ai-heading">AI Development Services</h1>
-    <div class="ai-content">
-        <div class="ai-text">
-            <p>
-                Empower your business with AI-driven transformation. We design and deliver 
-                intelligent systems that seamlessly integrate into your operations, optimize 
-                workflows, and accelerate growth with measurable results.
-            </p>
 
-            <!-- Feature Points -->
-            <ul class="hero-features fade-in-up delay-2">
-                <li><span>✔</span> Custom AI models tailored to your needs</li>
-                <li><span>✔</span> Scalable solutions for all business sizes</li>
-                <li><span>✔</span> Seamless integration with existing systems</li>
-                <li><span>✔</span> Data-driven insights & automation</li>
-                <li><span>✔</span> Ongoing support & optimization</li>
-            </ul>
 
-            <div class="ai-buttons">
-                <a href="services.html" class="btn btn-primary">Explore Services</a>
-                <a href="contact.html" class="btn btn-primary">Get started</a>
-            </div>
-        </div>
-
-        <div class="ai-image">
-            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1000&h=700&fit=crop&auto=format" alt="AI Solutions">
-        </div>
-    </div>
-</section>
+<!-- section: 2 -->
 
 <style>
 :root {
     --black: #000;
     --dark-gray: #444;
     --white: #fff;
-    --blue: #007bff;
+    --blue: #0b1945;
     --shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -519,7 +1156,7 @@ if (currentUserEmail && users[currentUserEmail]) {
 }
 
 .ai-buttons .btn:hover {
-    background-color: #0056b3;
+    background-color: #0b1945;
 }
 
 /* Features List */
@@ -633,67 +1270,10 @@ if (currentUserEmail && users[currentUserEmail]) {
 }
 </style>
 
+    
+   
 
-
-
-
-  
-
-    <!-- Section 2: Development Capabilities -->
-    <!-- Advanced Features Section -->
-<section class="advanced-features">
-  <div class="advanced-features-container">
-    <!-- Section Header -->
-    <div class="features-header fade-in-up">
-      <h2>Our AI Development Capabilities</h2>
-      <p>
-        We leverage cutting-edge technologies and proven methodologies to build 
-        sophisticated AI solutions. Our systems are designed to address complex 
-        challenges while ensuring scalability, adaptability, and reliability for your business.
-      </p>
-    </div>
-
-    <!-- Features Grid -->
-    <div class="features-cards">
-      <!-- Card 1 -->
-      <div class="feature-box fade-in-up delay-1">
-        <div class="feature-icon">
-          <i class="fas fa-brain"></i>
-        </div>
-        <h3>Custom Algorithm Development</h3>
-        <p>
-          Create proprietary AI algorithms tailored to your unique business needs. 
-          Our solutions deliver efficiency and accuracy through advanced computational 
-          models and intelligent automation.
-        </p>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="feature-box fade-in-up delay-2">
-        <div class="feature-icon">
-          <i class="fas fa-project-diagram"></i>
-        </div>
-        <h3>Neural Network Architecture</h3>
-        <p>
-          Design deep learning systems, convolutional and recurrent models for 
-          complex decision-making, pattern recognition, and predictive analytics.
-        </p>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="feature-box fade-in-up delay-3">
-        <div class="feature-icon">
-          <i class="fas fa-cogs"></i>
-        </div>
-        <h3>AI System Integration</h3>
-        <p>
-          Integrate AI seamlessly into your existing infrastructure. Ensure smooth 
-          compatibility, minimal disruption, and maximum operational efficiency.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+  <!-- Section :  3-->
 
 <style>
 /* Section Styling */
@@ -753,7 +1333,7 @@ if (currentUserEmail && users[currentUserEmail]) {
 
 .feature-icon {
   font-size: 2.2rem;
-  color: #007bff;
+  color: #0b1945; /* golden theme */
   margin-bottom: 15px;
 }
 
@@ -826,56 +1406,17 @@ if (currentUserEmail && users[currentUserEmail]) {
 
 
 
-    <!-- Section 3: Development Process -->
-   <!-- Advanced Development Process Section -->
-<section class="development-process">
-  <div class="development-process-container">
 
-    <!-- Top Heading -->
-    <div class="process-header fade-in-up">
-      <h2>Our Development Process</h2>
-      <p>
-        We adopt an agile and transparent methodology for AI development. 
-      </p>
-    </div>
+   
 
-    <!-- Content Row -->
-    <div class="process-row">
-      <!-- Left Image -->
-      <div class="process-image slide-in-right">
-        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&h=600&fit=crop&auto=format" alt="AI Development Process">
-      </div>
+<!-- Section : 4 -->
 
-      <!-- Right Content -->
-      <div class="process-content fade-in-up delay-1">
-        <!-- Paragraph intro -->
-        <p class="process-intro">
-          Our approach is designed to balance innovation with practicality. From initial planning to 
-          deployment, every stage ensures your AI solution is business-ready and built for long-term success. 
-          We emphasize collaboration at every step, ensuring that your team stays aligned with the progress. 
-          With continuous feedback loops, we deliver solutions that not only meet expectations but exceed them.
-        </p>
-
-        <!-- Steps -->
-        <div class="process-steps">
-          <div class="step"><span class="step-number">01</span><p>Requirements Analysis & Strategic Planning</p></div>
-          <div class="step"><span class="step-number">02</span><p>Data Collection, Cleaning & Preprocessing</p></div>
-          <div class="step"><span class="step-number">03</span><p>Algorithm Design & Smart Implementation</p></div>
-          <div class="step"><span class="step-number">04</span><p>Model Training, Testing & Fine-Tuning</p></div>
-          <div class="step"><span class="step-number">05</span><p>End-to-End Validation & Quality Assurance</p></div>
-          <div class="step"><span class="step-number">06</span><p>Deployment, Monitoring & Continuous Improvement</p></div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
 
 <style>
 /* Section Base */
 .development-process {
   width: 100%;
-  background: #ffffff;
+  background: #ffffff; /* updated background */
   padding: 30px 20px 50px;
   box-sizing: border-box;
 }
@@ -944,7 +1485,7 @@ if (currentUserEmail && users[currentUserEmail]) {
   margin-bottom: 16px;
 }
 .step-number {
-  background: #007bff;
+  background: #0b1945; /* updated golden accent */
   color: #fff;
   font-weight: 700;
   font-size: 1rem;
@@ -988,26 +1529,23 @@ if (currentUserEmail && users[currentUserEmail]) {
   }
 }
 
-/* 📱 Mobile Responsive */
-
-
-  /* Responsive */
+/* Responsive */
 @media (max-width: 992px) {
   .process-row {
     flex-direction: column;
     text-align: center;
-    gap: 30px; /* reduce gap */
+    gap: 30px;
   }
 
   .process-image,
   .process-content {
-    flex: 1 1 auto;   /* reset the 600px flex-basis */
-    width: 100%;      /* force full width */
-    max-width: 100%;  /* prevent overflow */
+    flex: 1 1 auto;
+    width: 100%;
+    max-width: 100%;
   }
 
   .process-image img {
-    width: 100%;  /* responsive image */
+    width: 100%;
     height: auto;
     border-radius: 15px;
   }
@@ -1018,8 +1556,6 @@ if (currentUserEmail && users[currentUserEmail]) {
     padding: 0 15px;
   }
 }
-
-
 
 @media (max-width: 600px) {
   .development-process {
@@ -1050,40 +1586,13 @@ if (currentUserEmail && users[currentUserEmail]) {
 </style>
 
 
-    <!-- Section 4: Technologies & Tools -->
-   <section class="tech-showcase">
-  <div class="tech-container">
-    <!-- Heading -->
-    <div class="tech-header animate-fade-up">
-      <h2>Technologies We Use</h2>
-      <p>Our AI development leverages state-of-the-art programming languages, frameworks, and platforms to deliver intelligent, scalable, and future-ready solutions.</p>
-    </div>
+  
 
-    <!-- Grid -->
-    <div class="tech-grid">
-      <div class="tech-card animate-slide-up delay-1">
-        <h3>Python</h3>
-        <p>The backbone of our AI development, enabling rapid prototyping, scalability, and integration with leading frameworks.</p>
-      </div>
-      <div class="tech-card animate-slide-up delay-2">
-        <h3>TensorFlow</h3>
-        <p>A powerful open-source library for building and deploying machine learning models with high efficiency.</p>
-      </div>
-      <div class="tech-card animate-slide-up delay-3">
-        <h3>PyTorch</h3>
-        <p>Our preferred framework for deep learning research and production, offering dynamic computation and flexibility.</p>
-      </div>
-      <div class="tech-card animate-slide-up delay-4">
-        <h3>AWS / Azure</h3>
-        <p>Robust cloud infrastructure that powers our AI solutions with reliability, scalability, and enterprise-grade security.</p>
-      </div>
-    </div>
-  </div>
-</section>
+ <!-- Section : 5 -->
 
 <style>
 /* Section Styling */
-.tech-showcase {
+.service-showcase {
   width: 100%;
   padding: 50px;
   background: #edf0ee;
@@ -1091,20 +1600,20 @@ if (currentUserEmail && users[currentUserEmail]) {
   justify-content: center;
 }
 
-.tech-container {
+.service-container {
   max-width: 1450px;
   width: 100%;
   text-align: center;
 }
 
 /* Header */
-.tech-header h2 {
+.service-header h2 {
   font-size: 2.5rem;
   color: #000;
   margin-bottom: 15px;
 }
 
-.tech-header p {
+.service-header p {
   font-size: 1.1rem;
   color: #333;
   max-width: 800px;
@@ -1113,14 +1622,14 @@ if (currentUserEmail && users[currentUserEmail]) {
 }
 
 /* Grid */
-.tech-grid {
+.service-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 }
 
 /* Card */
-.tech-card {
+.service-card {
   background: #fff;
   padding: 30px;
   border-radius: 15px;
@@ -1129,19 +1638,19 @@ if (currentUserEmail && users[currentUserEmail]) {
   text-align: left;
 }
 
-.tech-card h3 {
+.service-card h3 {
   font-size: 1.5rem;
-  color: #007bff;
+  color: #0b1945; /* gold accent */
   margin-bottom: 10px;
 }
 
-.tech-card p {
+.service-card p {
   font-size: 1rem;
   color: #000;
   line-height: 1.6;
 }
 
-.tech-card:hover {
+.service-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.12);
 }
@@ -1180,94 +1689,61 @@ if (currentUserEmail && users[currentUserEmail]) {
 
 /* ✅ Mobile View */
 @media (max-width: 768px) {
-  .tech-showcase {
-    padding: 30px 20px; /* reduce padding */
+  .service-showcase {
+    padding: 30px 20px;
   }
 
-  .tech-header h2 {
+  .service-header h2 {
     font-size: 1.8rem;
   }
 
-  .tech-header p {
+  .service-header p {
     font-size: 1rem;
     margin-bottom: 25px;
     padding: 0 10px;
   }
 
-  .tech-grid {
-    grid-template-columns: 1fr; /* 1 card per row */
+  .service-grid {
+    grid-template-columns: 1fr;
     gap: 20px;
   }
 
-  .tech-card {
+  .service-card {
     padding: 20px;
-    text-align: center; /* center content */
+    text-align: center;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   }
 
-  .tech-card h3 {
+  .service-card h3 {
     font-size: 1.3rem;
   }
 
-  .tech-card p {
+  .service-card p {
     font-size: 0.95rem;
     line-height: 1.5;
   }
 }
 </style>
 
-<!-- Section 4: End -->
 
-<!-- Section 5: Projects -->  
 
-    <section class="projects-success">
-  <div class="projects-container">
-    <!-- Left Side (Image) -->
-    <div class="projects-image animate-slide-in">
-      <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&auto=format" alt="AI Project Success">
-    </div>
 
-    <!-- Right Side (Content) -->
-    <div class="projects-content">
-      <h2 class="animate-fade-up">Recent Project Success</h2>
-      <p class="animate-fade-up delay-1" style="text-align: justify;">
-        Our AI-driven projects empower industries with innovative solutions that optimize performance, reduce costs, and improve customer engagement. Each project demonstrates our commitment to delivering real business results.
-      </p>
 
-      <!-- Testimonial Card 1 -->
-      <div class="project-card animate-fade-up delay-2">
-        <blockquote>
-          “The custom AI solution developed by Stackly increased our production efficiency by 
-          <span class="highlight">45%</span> and reduced quality control errors by 
-          <span class="highlight">80%</span>. The system learns and adapts continuously.”
-        </blockquote>
-        <cite>— Robert Kim, Manufacturing Director</cite>
-      </div>
 
-      <!-- Testimonial Card 2 -->
-      <div class="project-card animate-fade-up delay-3">
-        <blockquote>
-          “Stackly’s recommendation engine boosted our customer engagement by 
-          <span class="highlight">60%</span> and improved conversions by 
-          <span class="highlight">35%</span>. The implementation was seamless and impactful.”
-        </blockquote>
-        <cite>— Lisa Chen, E-commerce Manager</cite>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- Section : 6 -->
+
 
 <style>
 /* Section Styling */
-.projects-success {
+.bookkeeping-services {
   width: 100%;
   padding: 40px 50px;
-  background: #fff;
+  background: #ffffff;
   display: flex;
   justify-content: center;
 }
 
-.projects-container {
+.services-container {
   max-width: 1450px;
   width: 100%;
   display: grid;
@@ -1277,7 +1753,7 @@ if (currentUserEmail && users[currentUserEmail]) {
 }
 
 /* Image */
-.projects-image img {
+.services-image img {
   width: 100%;
   height: auto;
   border-radius: 20px;
@@ -1285,71 +1761,52 @@ if (currentUserEmail && users[currentUserEmail]) {
   transition: transform 0.4s ease;
   display: block;
 }
-.projects-image img:hover {
+.services-image img:hover {
   transform: scale(1.03);
 }
 
 /* Content */
-.projects-content h2 {
+.services-content h2 {
   font-size: 2.5rem;
   color: #000;
   margin-bottom: 10px;
 }
 
-.projects-content p {
+.services-content p {
   font-size: 1.1rem;
   color: #333;
   margin-bottom: 20px;
   line-height: 1.7;
 }
 
-/* Testimonial Cards */
-.project-card {
-  background: #edf0ee;
+/* Service Cards */
+.service-card {
+  background: #fff;
   padding: 25px;
   border-radius: 16px;
   margin-bottom: 15px;
   position: relative;
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
+  border: 5px solid #0b1945;
 }
 
-/* Gradient border effect */
-.project-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  padding: 3px; /* border thickness */
-  border-radius: 16px;
-  background: linear-gradient(135deg, #007bff, #00c6ff);
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-          mask-composite: exclude;
-  pointer-events: none;
-}
 
-.project-card:hover {
+
+.service-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 8px 25px rgba(0,0,0,0.12);
 }
 
-.project-card blockquote {
-  font-size: 1.05rem;
+.service-card h3 {
+  font-size: 1.2rem;
+  color: #0b1945;
+  margin-bottom: 8px;
+}
+.service-card p {
+  font-size: 1rem;
   color: #000;
   line-height: 1.6;
-  margin-bottom: 10px;
-}
-.project-card cite {
-  font-size: 0.95rem;
-  font-weight: bold;
-  color: #007bff;
-}
-.highlight {
-  color: #007bff;
-  font-weight: bold;
 }
 
 /* Animations */
@@ -1377,60 +1834,51 @@ if (currentUserEmail && users[currentUserEmail]) {
 
 /* Responsive Fixes */
 @media (max-width: 1024px) {
-  .projects-container {
+  .services-container {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-  .projects-content h2 {
+  .services-content h2 {
     font-size: 2rem;
   }
 }
 
 @media (max-width: 768px) {
-  .projects-success {
+  .bookkeeping-services {
     padding: 20px;
   }
-  .projects-image img {
+  .services-image img {
     width: 100%;
-    height: auto;   /* prevent fixed height issues */
+    height: auto;
     object-fit: cover;
   }
-  .projects-content h2 {
+  .services-content h2 {
     font-size: 1.8rem;
   }
-  .projects-content p {
+  .services-content p {
     font-size: 1rem;
   }
-  .project-card {
+  .service-card {
     padding: 18px;
   }
 }
 
 @media (max-width: 480px) {
-  .projects-content h2 {
+  .services-content h2 {
     font-size: 1.5rem;
   }
-  .projects-content p {
+  .services-content p {
     font-size: 0.95rem;
   }
-  .project-card blockquote {
-    font-size: 0.95rem;
+  .service-card h3 {
+    font-size: 1.05rem;
   }
 }
 </style>
 
 
 
-    <!-- Section 6: Contact Banner -->
-<section class="contact-banner section-padding">
-    <div class="container">
-        <div class="contact-banner-content">
-            <h2>Ready to Build Your Custom AI Solution?</h2>
-            <p>Let's discuss your requirements and create a tailored AI development plan.</p>
-            <a href="contact.html" class="btn btn-primary">Start Development</a>
-        </div>
-    </div>
-</section>
+ <!-- Section : 7 -->
 
 <style>
     .contact-banner {
@@ -1503,17 +1951,18 @@ if (currentUserEmail && users[currentUserEmail]) {
 
 
 
+     <!-- Footer -->
     <!-- Footer -->
-     <footer class="footer">
+<footer class="footer">
   <div class="container">
     <div class="footer-content">
       <!-- Logo & About -->
-      <div class="footer-section">
+      <div class="footer-section footer-section1">
         <div class="logo">
-          <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 40px; width: 80px;">
+          <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 50px; width: 80px;">
         </div>
         <p class="text-justify">
-          Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.
+          <span data-i18n="footer_about">Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.</span>
         </p>
         <div class="social-links">
           <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
@@ -1524,48 +1973,49 @@ if (currentUserEmail && users[currentUserEmail]) {
       </div>
 
       <!-- Quick Links -->
-      <div class="footer-section">
-        <h4>Quick Links</h4>
+      <div class="footer-section footer-section2">
+        <h4 data-i18n="footer_quickLinks">Quick Links</h4>
         <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="home2.html">Home 2</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="home.html"><span data-i18n="footer_home">Home</span></a></li>
+          <li><a href="home2.html"><span data-i18n="footer_home2">Home 2</span></a></li>
+          <li><a href="about.html"><span data-i18n="footer_aboutUs">About Us</span></a></li>
+          <li><a href="services.html"><span data-i18n="footer_services">Services</span></a></li>
+          <li><a href="blog.html"><span data-i18n="footer_blog">Blog</span></a></li>
+          <li><a href="contact.html"><span data-i18n="footer_contact">Contact</span></a></li>
         </ul>
       </div>
 
       <!-- Services -->
-      <div class="footer-section">
-        <h4>Services</h4>
+      <div class="footer-section footer-section3">
+        <h4 data-i18n="footer_servicesTitle">Services</h4>
         <ul>
-          <li><a href="service1.html">AI Development</a></li>
-          <li><a href="service2.html">Machine Learning</a></li>
-          <li><a href="service3.html">Data Analytics</a></li>
-          <li><a href="service4.html">Automation</a></li>
-          <li><a href="service5.html">AI Consulting</a></li>
-          <li><a href="service6.html">AI Integration</a></li>
+          <li><a href="service1.html"><span data-i18n="footer_service1">Property Buying Assistance</span></a></li>
+          <li><a href="service2.html"><span data-i18n="footer_service2">Property Selling</span></a></li>
+          <li><a href="service3.html"><span data-i18n="footer_service3">Rental Services</span></a></li>
+          <li><a href="service4.html"><span data-i18n="footer_service4">Property Management</span></a></li>
+          <li><a href="service5.html"><span data-i18n="footer_service5">Real Estate Investment</span></a></li>
+          <li><a href="service6.html"><span data-i18n="footer_service6">Legal & Documentation Support</span></a></li>
         </ul>
       </div>
 
       <!-- Contact Info -->
-      <div class="footer-section">
-        <h4>Contact Info</h4>
+      <div class="footer-section footer-section4">
+        <h4 data-i18n="footer_contactInfo">Contact Info</h4>
         <ul>
-          <li><i class="fas fa-envelope"></i> contact@stackly.ai</li>
-          <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-          <li><i class="fas fa-map-marker-alt"></i> 123 AI Innovation Drive</li>
+          <li><i class="fas fa-envelope"></i> <span data-i18n="footer_email">contact@stackly.ai</span></li>
+          <li><i class="fas fa-phone"></i> <span data-i18n="footer_phone">+1 (555) 123-4567</span></li>
+          <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer_address">123 AI Innovation Drive</span></li>
         </ul>
       </div>
     </div>
 
     <!-- Bottom Bar -->
     <div class="footer-bottom">
-      <p>&copy; 2025 Stackly. All rights reserved.</p>
+      <p><span data-i18n="footer_bottom">&copy; 2025 Stackly. All rights reserved.</span></p>
     </div>
   </div>
 </footer>
+
 
 <style>
 .footer {
@@ -1573,6 +2023,14 @@ if (currentUserEmail && users[currentUserEmail]) {
   color: #fff;
   padding: 50px 20px 20px;
   font-family: Arial, sans-serif;
+}
+
+.footer-section1{
+  margin-right: 150px;
+}
+
+.footer-section4{
+  margin-left: 50px;
 }
 
 .footer .footer-content {
@@ -1607,7 +2065,7 @@ if (currentUserEmail && users[currentUserEmail]) {
 }
 
 .footer .footer-section ul li a:hover {
-  color: #00c3ff;
+  color: #a68e4c;
 }
 
 .footer .social-links a {
@@ -1618,7 +2076,7 @@ if (currentUserEmail && users[currentUserEmail]) {
 }
 
 .footer .social-links a:hover {
-  color: #00c3ff;
+  color: #000000;
 }
 
 .footer .footer-bottom {
@@ -1634,26 +2092,35 @@ if (currentUserEmail && users[currentUserEmail]) {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
+  .footer-section1{
+  margin-right: 5px;
+}
 }
 
 @media (max-width: 600px) {
   .footer .footer-content {
     grid-template-columns: 1fr;
-    text-align: center;
+    text-align: left;
   }
   .footer .social-links {
     margin-top: 15px;
   }
+  .footer-section1{
+  margin-right: 10px;
 }
-
-
+  .footer-section2{
+  margin-right: 10px;
+}
+.footer-section4{
+  margin-left: 1px;
+}
+}
 </style>
-
+</div>
 
     <script src="assets/js/script.js"></script>
 </body>
 </html>
-
 
 <style>
 /* --- DARK MODE OVERRIDES --- */
@@ -1696,6 +2163,10 @@ body.dark-mode .ai-hero-paragraph {
 }
 
 body.dark-mode .ai-section,
+
+body.dark-mode .service-showcase,
+body.dark-mode .bookkeeping-services,
+body.dark-mode .service-card,
 body.dark-mode .ai-heading,
 body.dark-mode .ai-content,
 body.dark-mode .ai-text,
@@ -1829,4 +2300,3 @@ body.dark-mode .ai-heading {
   color: #00f7ff !important;
 }
 </style>
-

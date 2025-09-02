@@ -7,8 +7,8 @@
 }
 
 :root {
-    --primary-color: #2563eb;
-    --secondary-color: #1e40af;
+    --primary-color: #0b1945;
+    --secondary-color: #0b1945;
     --text-color: #1f2937;
     --light-gray: #f8fafc;
     --dark-gray: #374151;
@@ -52,7 +52,7 @@ body {
 }
 
 .sticky-header {
-    position: fixed;
+    position: sticky !important;
     top: 0;
     left: 0;
     right: 0;
@@ -590,4 +590,40 @@ textarea.form-control {
     .login-form {
         padding: 2rem;
     }
+}
+
+
+
+
+
+
+/* loader.css */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #ddd;
+  border-top: 6px solid #a68e4c;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+body.loaded #loader {
+  display: none;
 }

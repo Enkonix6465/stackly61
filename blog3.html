@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stackly - AI Tools & Solutions</title>
+    <title>Stackly - Realestate</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+<div id="loader">
+    <div class="spinner"></div>
+</div>
 
+<div id="content" style="display:none;"></div>
 
 
 
@@ -16,130 +20,568 @@
    <header class="header">
   <div class="container">
     <div class="nav-wrapper">
-      <!-- Logo -->
       <div class="logo">
         <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 40px; width: 80px;">
       </div>
 
-      <!-- Navigation -->
       <nav class="navigation">
-    <ul class="nav-menu" id="navMenu">
-      <li class="nav-item dropdown">
-        <a href="#" class="nav-link">Home <i class="fas fa-chevron-down"></i></a>
-        <ul class="dropdown-menu">
-          <li><a href="index.html">Home 1</a></li>
-          <li><a href="home2.html">Home 2</a></li>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link" ><span data-i18n="home">Home</span> <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html"><span data-i18n="home1">Home 1</span></a></li>
+              <li><a href="home2.html"><span data-i18n="home2">Home 2</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="about.html" class="nav-link"><span data-i18n="about">About</span></a></li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link"><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Property Buying Assistance</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Property Selling</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Rental Services </span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Property Management</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Real Estate Investment</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service_6">Legal & Documentation Support</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link"><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
+              <li><a href="blog1.html"><span data-i18n="blog_1">Smart Property Investments</span></a></li>
+              <li><a href="blog2.html"><span data-i18n="blog_2">Effective Property Management</span></a></li>
+              <li><a href="blog3.html"><span data-i18n="blog_3">Real Estate Market Trends</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="contact.html" class="nav-link"><span data-i18n="contact">Contact</span></a></li>
+          
         </ul>
-      </li>
-      <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-      <li class="nav-item dropdown">
-        <a href="#" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
-        <ul class="dropdown-menu">
-          <li><a href="services.html">All Services</a></li>
-          <li><a href="service1.html">AI Development</a></li>
-          <li><a href="service2.html">Machine Learning</a></li>
-          <li><a href="service3.html">Data Analytics</a></li>
-          <li><a href="service4.html">Automation</a></li>
-          <li><a href="service5.html">AI Consulting</a></li>
-          <li><a href="service6.html">AI Integration</a></li>
+        <div class="hamburger" id="hamburger" aria-label="Open menu" tabindex="0">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+
+      <div class="mobile-menu-wrapper">
+        <ul class="hamburger-menu" id="hamburgerMenu">
+          <li class="mobile-dropdown-parent">
+            <span><span data-i18n="home">Home</span> <i class="fas fa-chevron-down"></i></span>
+            <ul class="mobile-dropdown">
+              <li><a href="index.html"><span data-i18n="home1">Home 1</span></a></li>
+              <li><a href="home2.html"><span data-i18n="home2">Home 2</span></a></li>
+            </ul>
+          </li>
+          <li><a href="about.html"><span data-i18n="about">About</span></a></li>
+          <li class="mobile-dropdown-parent">
+            <span><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></span>
+            <ul class="mobile-dropdown">
+             <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Property Buying Assistance</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Property Selling</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Rental Services </span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Property Management</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Real Estate Investment</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service6">Legal & Documentation Support</span></a></li>
+            </ul>
+          </li>
+          <li class="mobile-dropdown-parent">
+            <span><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></span>
+            <ul class="mobile-dropdown">
+               <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
+                <li><a href="blog1.html"><span data-i18n="blog_1">Smart Property Investments</span></a></li>
+                <li><a href="blog2.html"><span data-i18n="blog_2">Effective Property Management</span></a></li>
+                <li><a href="blog3.html"><span data-i18n="blog_3">Real Estate Market Trends</span></a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html"><span data-i18n="contact">Contact</span></a></li>
+       
         </ul>
-      </li>
-      <li class="nav-item dropdown">
-        <a href="#" class="nav-link">Blog <i class="fas fa-chevron-down"></i></a>
-        <ul class="dropdown-menu">
-          <li><a href="blog.html">All Posts</a></li>
-          <li><a href="blog1.html">AI Trends 2024</a></li>
-          <li><a href="blog2.html">Future of ML</a></li>
-          <li><a href="blog3.html">AI in Business</a></li>
+      </div>
+
+      <div class="lang-switcher">
+        <label for="langSelect">Language:</label>
+        <select id="langSelect" onchange="changeLanguage(this.value)">
+          <option value="en">English</option>
+          <option value="ar">Arabic</option>
+          <option value="he">Hebrew</option>
+        </select>
+      </div>
+
+      <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
+        <i class="fas fa-moon"></i>
+      </button>
+
+      <div class="avatar-circle" title="Profile" id="avatarCircle">
+        <span id="avatarInitials"></span>
+      </div>
+      <div class="avatar-dropdown" id="avatarDropdown">
+        <ul>
+          <li><a href="index.html" id="logoutBtn"><span data-i18n="logout">Logout</span></a></li>
         </ul>
-      </li>
-      <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-      <!-- Login/Logout Link -->
-      <li class="nav-item"><a href="index.html" class="nav-link" id="authLink">Login</a></li>
-    </ul>
-
-    <!-- Hamburger -->
-    <div class="hamburger" id="hamburger" aria-label="Open menu" tabindex="0">
-  <ul class="hamburger-menu" id="hamburgerMenu" style="display:none;">
-    <li><a href="index.html">Home 1</a></li>
-    <li><a href="home2.html">Home 2</a></li>
-    <li><a href="about.html">About</a></li>
-    <li>
-      <span>Services</span>
-      <ul>
-        <li><a href="services.html">All Services</a></li>
-        <li><a href="service1.html">AI Development</a></li>
-        <li><a href="service2.html">Machine Learning</a></li>
-        <li><a href="service3.html">Data Analytics</a></li>
-        <li><a href="service4.html">Automation</a></li>
-        <li><a href="service5.html">AI Consulting</a></li>
-        <li><a href="service6.html">AI Integration</a></li>
-      </ul>
-    </li>
-    <li>
-      <span>Blog</span>
-      <ul>
-        <li><a href="blog.html">All Posts</a></li>
-        <li><a href="blog1.html">AI Trends 2024</a></li>
-        <li><a href="blog2.html">Future of ML</a></li>
-        <li><a href="blog3.html">AI in Business</a></li>
-      </ul>
-    </li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="index.html" id="authLink">Login</a></li>
-  </ul>
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
-  </nav>
-
-  <!-- Toggle Button -->
-  <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
-    <i class="fas fa-moon"></i>
-  </button>
-
-  <!-- Avatar Circle -->
-  <div class="avatar-circle" title="Profile">
-
-  </div>
-</div>
+      </div>
+    </div>
   </div>
 </header>
 
-<!-- ✅ Script -->
+
+<!-- section: 1 -->
+<section class="ai-hero-section">
+  <video autoplay muted loop playsinline class="ai-hero-bg-video">
+    <source src="https://videos.pexels.com/video-files/3773484/3773484-hd_1920_1080_30fps.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="ai-hero-overlay">
+    <div class="ai-hero-content">
+      <h1 class="ai-hero-title ai-glow animate-ai-slide-in" data-i18n="heroTitle">Real Estate Market Trends</h1>
+    </div>
+  </div>
+</section>
+
+<!-- Section : 2 -->
+<section class="ai-hero">
+  <div class="container">
+    <h1 data-i18n="heroHeading">Real Estate Market Trends</h1>
+    <p data-i18n="heroSub">Shaping the future of property investments with innovation, demand shifts, and sustainable growth.</p>
+    <p data-i18n="heroPara">
+      The real estate sector is evolving rapidly, driven by technology, changing lifestyles, and global economic trends. 
+      By embracing digital platforms, eco-friendly practices, and smart urban planning, investors and developers can 
+      unlock new opportunities and ensure long-term value creation.
+    </p>
+  </div>
+</section>
+
+<!-- Section : 3-->
+<section class="ai-intro">
+  <div class="container">
+    <h2 data-i18n="introTitle">Introduction</h2>
+    <p data-i18n="introPara1">
+      The real estate market is evolving rapidly with changing buyer preferences, urbanization, 
+      and advancements in digital property platforms. Investors and developers are adapting to 
+      smart technologies and sustainable construction to meet modern demands. 
+    </p>
+    <p data-i18n="introPara2">
+      Trends such as co-living spaces, green buildings, and AI-driven property management are 
+      redefining how people buy, sell, and invest in real estate. These innovations are 
+      transforming the sector into a smarter, more transparent, and future-ready marketplace. 
+    </p>
+  </div>
+</section>
+
+<!-- Section : 4 -->
+<section class="ai-usecases">
+  <div class="container">
+    <h2 data-i18n="trendsTitle">Key Real Estate Market Trends</h2>
+    <div class="use-grid">
+      <div class="use-card">
+        <h3 data-i18n="trend1Title">🏙️ Urbanization & Smart Cities</h3>
+        <p data-i18n="trend1Text">Rapid urban growth and the rise of smart cities are driving demand for modern, connected living spaces.</p>
+      </div>
+      <div class="use-card">
+        <h3 data-i18n="trend2Title">🌱 Sustainable Housing</h3>
+        <p data-i18n="trend2Text">Green buildings and eco-friendly designs are becoming essential as buyers prioritize sustainability.</p>
+      </div>
+      <div class="use-card">
+        <h3 data-i18n="trend3Title">💻 PropTech Innovations</h3>
+        <p data-i18n="trend3Text">AI, VR, and digital platforms are transforming property search, transactions, and management processes.</p>
+      </div>
+      <div class="use-card">
+        <h3 data-i18n="trend4Title">📈 Investment Opportunities</h3>
+        <p data-i18n="trend4Text">Growing demand for rental spaces, co-living, and commercial hubs is creating new avenues for investors.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section : 5 -->
+<section class="ai-challenges">
+  <div class="container">
+    <div class="challenge-content">
+      <h2 data-i18n="challengesTitle">Challenges in Real Estate Market Trends</h2>
+      <p data-i18n="challengePara1">
+        The real estate sector is evolving rapidly, but it also faces significant challenges. 
+        Market fluctuations, rising construction costs, and unpredictable interest rates create 
+        uncertainty for both buyers and investors.
+      </p>
+      <p data-i18n="challengePara2">
+        Additionally, regulatory changes, demand for sustainable housing, and adapting to PropTech 
+        innovations can be complex for developers and agencies. Balancing affordability with quality 
+        and meeting shifting consumer expectations remain critical challenges in today’s real estate market.
+      </p>
+    </div>
+    <div class="challenge-image">
+      <img src="https://images.pexels.com/photos/7710011/pexels-photo-7710011.jpeg" 
+           alt="Real Estate Market Challenges">
+    </div>
+  </div>
+</section>
+
+<!-- Section: 6 -->
+<section class="ai-future">
+  <div class="container">
+    <h2 data-i18n="futureTitle">The Future of Real Estate Market Trends</h2>
+    <p data-i18n="futurePara1">
+      The future of real estate is being shaped by technology, urbanization, and changing buyer preferences. 
+      Smart homes, eco-friendly buildings, and digital property platforms are redefining how people buy, sell, 
+      and invest in real estate. 
+    </p>
+    <p data-i18n="futurePara2">
+      With the rise of PropTech, virtual property tours, and AI-driven market analysis, investors and buyers 
+      are gaining access to more accurate insights and faster decision-making. These innovations will 
+      transform real estate into a more transparent, efficient, and accessible industry. 
+    </p>
+    <p data-i18n="futurePara3">
+      As cities expand and demand for sustainable living grows, the future of real estate lies in balancing 
+      technology with human needs—offering affordable, smart, and environmentally responsible housing 
+      solutions. Developers and investors who embrace these trends will lead the way in shaping tomorrow’s 
+      real estate market. 
+    </p>
+  </div>
+</section>
+
+<!-- Section : 7 -->
+<section class="contact-banner section-padding">
+  <div class="container">
+    <div class="contact-banner-content">
+      <h2 data-i18n="contactTitle">Get In Touch With Our Real Estate Experts</h2>
+      <p data-i18n="contactText">Looking to buy, sell, or invest in property? Connect with our experts today for personalized guidance and smart real estate solutions.</p>
+      <a href="contact.html" class="btn btn-primary" data-i18n="contactBtn">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+
 <script>
-  // Hamburger toggle
- const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("navMenu");
-const hamburgerMenu = document.getElementById("hamburgerMenu");
+// Translation dictionary
+const translations = {
+  en: {
+   "home": "Home",
+    "home1": "Home 1",
+    "home2": "Home 2",
+    "about": "About",
+    "services": "Services",
+    "allServices": "All Services",
+    "service_1": "Property Buying Assistance",
+    "service_2": "Property Selling",
+    "service_3": "Rental Services",
+    "service_4": "Property Management",
+    "service_5": "Real Estate Investment",
+    "service_6": "Legal & Documentation Support",
+    "blog": "Blog",
+    "allPosts": "All Posts",
+    "blog_1": "Smart Property Investments",
+    "blog_2": "Effective Property Management",
+    "blog_3": "Real Estate Market Trends",
+    "contact": "Contact",
+    "logout": "Logout",
 
-// Show/hide menu on hamburger click
-hamburger.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
-  hamburgerMenu.style.display = hamburgerMenu.style.display === "block" ? "none" : "block";
-});
+    "footer_about": "Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.",
+    "footer_quickLinks": "Quick Links",
+    "footer_home": "Home",
+    "footer_home2": "Home 2",
+    "footer_aboutUs": "About Us",
+    "footer_services": "Services",
+    "footer_blog": "Blog",
+    "footer_contact": "Contact",
+    "footer_servicesTitle": "Services",
+    "footer_service1": "Property Buying Assistance",
+    "footer_service2": "Property Selling",
+    "footer_service3": "Rental Services",
+    "footer_service4": "Property Management",
+    "footer_service5": "Real Estate Investment",
+    "footer_service6": "Legal & Documentation Support",
+    "footer_contactInfo": "Contact Info",
+    "footer_email": "contact@stackly.ai",
+    "footer_phone": "+1 (555) 123-4567",
+    "footer_address": "123 AI Innovation Drive",
+    "footer_bottom": "© 2025 Stackly. All rights reserved.",
+     heroTitle: "Real Estate Market Trends",
+    heroHeading: "Real Estate Market Trends",
+    heroSub: "Shaping the future of property investments with innovation, demand shifts, and sustainable growth.",
+    heroPara: "The real estate sector is evolving rapidly, driven by technology, changing lifestyles, and global economic trends. By embracing digital platforms, eco-friendly practices, and smart urban planning, investors and developers can unlock new opportunities and ensure long-term value creation.",
+    introTitle: "Introduction",
+    introPara1: "The real estate market is evolving rapidly with changing buyer preferences, urbanization, and advancements in digital property platforms. Investors and developers are adapting to smart technologies and sustainable construction to meet modern demands.",
+    introPara2: "Trends such as co-living spaces, green buildings, and AI-driven property management are redefining how people buy, sell, and invest in real estate. These innovations are transforming the sector into a smarter, more transparent, and future-ready marketplace.",
+    trendsTitle: "Key Real Estate Market Trends",
+    trend1Title: "🏙️ Urbanization & Smart Cities",
+    trend1Text: "Rapid urban growth and the rise of smart cities are driving demand for modern, connected living spaces.",
+    trend2Title: "🌱 Sustainable Housing",
+    trend2Text: "Green buildings and eco-friendly designs are becoming essential as buyers prioritize sustainability.",
+    trend3Title: "💻 PropTech Innovations",
+    trend3Text: "AI, VR, and digital platforms are transforming property search, transactions, and management processes.",
+    trend4Title: "📈 Investment Opportunities",
+    trend4Text: "Growing demand for rental spaces, co-living, and commercial hubs is creating new avenues for investors.",
+    challengesTitle: "Challenges in Real Estate Market Trends",
+    challengePara1: "The real estate sector is evolving rapidly, but it also faces significant challenges. Market fluctuations, rising construction costs, and unpredictable interest rates create uncertainty for both buyers and investors.",
+    challengePara2: "Additionally, regulatory changes, demand for sustainable housing, and adapting to PropTech innovations can be complex for developers and agencies. Balancing affordability with quality and meeting shifting consumer expectations remain critical challenges in today’s real estate market.",
+    futureTitle: "The Future of Real Estate Market Trends",
+    futurePara1: "The future of real estate is being shaped by technology, urbanization, and changing buyer preferences. Smart homes, eco-friendly buildings, and digital property platforms are redefining how people buy, sell, and invest in real estate.",
+    futurePara2: "With the rise of PropTech, virtual property tours, and AI-driven market analysis, investors and buyers are gaining access to more accurate insights and faster decision-making. These innovations will transform real estate into a more transparent, efficient, and accessible industry.",
+    futurePara3: "As cities expand and demand for sustainable living grows, the future of real estate lies in balancing technology with human needs—offering affordable, smart, and environmentally responsible housing solutions. Developers and investors who embrace these trends will lead the way in shaping tomorrow’s real estate market.",
+    contactTitle: "Get In Touch With Our Real Estate Experts",
+    contactText: "Looking to buy, sell, or invest in property? Connect with our experts today for personalized guidance and smart real estate solutions.",
+    contactBtn: "Contact Us"
+       
+  },
+  ar: {
+   "home": "الرئيسية",
+    "home1": "الصفحة الرئيسية 1",
+    "home2": "الصفحة الرئيسية 2",
+    "about": "من نحن",
+    "services": "الخدمات",
+    "allServices": "جميع الخدمات",
+    "service_1": "مساعدة في شراء العقارات",
+    "service_2": "بيع العقارات",
+    "service_3": "خدمات الإيجار",
+    "service_4": "إدارة العقارات",
+    "service_5": "الاستثمار العقاري",
+    "service_6": "الدعم القانوني والتوثيق",
+    "blog": "المدونة",
+    "allPosts": "جميع المقالات",
+    "blog_1": "الاستثمارات العقارية الذكية",
+    "blog_2": "إدارة العقارات الفعالة",
+    "blog_3": "اتجاهات سوق العقارات",
+    "contact": "اتصل بنا",
+    "logout": "تسجيل خروج",
 
-  // Auth link toggle
-  const authLink = document.getElementById("authLink");
-  if(localStorage.getItem("isLoggedIn") === "true"){
-    authLink.innerText = "Logout";
-    authLink.href = "#";
-    authLink.onclick = () => {
-      localStorage.removeItem("isLoggedIn");
-      localStorage.removeItem("currentUser");
-      window.location.href = "index.html";
-    };
-  } else {
-    authLink.innerText = "Login";
-    authLink.href = "index.html";
+    "footer_about": "مزود رائد لحلول الذكاء الاصطناعي، يساعد الشركات على التحول من خلال التكنولوجيا الذكية وأنظمة الأتمتة المبتكرة.",
+    "footer_quickLinks": "روابط سريعة",
+    "footer_home": "الرئيسية",
+    "footer_home2": "الصفحة الرئيسية 2",
+    "footer_aboutUs": "من نحن",
+    "footer_services": "الخدمات",
+    "footer_blog": "المدونة",
+    "footer_contact": "اتصل بنا",
+    "footer_servicesTitle": "الخدمات",
+    "footer_service1": "مساعدة في شراء العقارات",
+    "footer_service2": "بيع العقارات",
+    "footer_service3": "خدمات الإيجار",
+    "footer_service4": "إدارة الممتلكات",
+    "footer_service5": "الاستثمار العقاري",
+    "footer_service6": "الدعم القانوني والتوثيق",
+    "footer_contactInfo": "معلومات الاتصال",
+    "footer_email": "contact@stackly.ai",
+    "footer_phone": "+1 (555) 123-4567",
+    "footer_address": "123 طريق ابتكار الذكاء الاصطناعي",
+    "footer_bottom": "© 2025 Stackly. جميع الحقوق محفوظة.",
+
+     heroTitle: "اتجاهات سوق العقارات",
+    heroHeading: "اتجاهات سوق العقارات",
+    heroSub: "تشكيل مستقبل الاستثمارات العقارية من خلال الابتكار والتحولات في الطلب والنمو المستدام.",
+    heroPara: "يتطور قطاع العقارات بسرعة، مدفوعًا بالتكنولوجيا وتغير أنماط الحياة والاتجاهات الاقتصادية العالمية. من خلال تبني المنصات الرقمية والممارسات الصديقة للبيئة والتخطيط الحضري الذكي، يمكن للمستثمرين والمطورين فتح فرص جديدة وضمان خلق قيمة طويلة الأجل.",
+    introTitle: "مقدمة",
+    introPara1: "يتطور سوق العقارات بسرعة مع تغير تفضيلات المشترين والتحضر والتطورات في المنصات الرقمية. يتبنى المستثمرون والمطورون التقنيات الذكية والبناء المستدام لتلبية متطلبات العصر الحديث.",
+    introPara2: "تعمل الاتجاهات مثل مساحات المعيشة المشتركة والمباني الخضراء وإدارة العقارات المدعومة بالذكاء الاصطناعي على إعادة تعريف كيفية شراء وبيع واستثمار العقارات. هذه الابتكارات تحول القطاع إلى سوق أكثر ذكاءً وشفافية واستعدادًا للمستقبل.",
+    trendsTitle: "الاتجاهات الرئيسية في سوق العقارات",
+    trend1Title: "🏙️ التحضر والمدن الذكية",
+    trend1Text: "يدفع النمو الحضري السريع وظهور المدن الذكية الطلب على أماكن معيشة حديثة ومتصلة.",
+    trend2Title: "🌱 الإسكان المستدام",
+    trend2Text: "أصبحت المباني الخضراء والتصاميم الصديقة للبيئة ضرورية حيث يعطي المشترون الأولوية للاستدامة.",
+    trend3Title: "💻 الابتكارات العقارية التكنولوجية",
+    trend3Text: "تعمل الذكاء الاصطناعي والواقع الافتراضي والمنصات الرقمية على تحويل البحث عن العقارات والعمليات والمعاملات.",
+    trend4Title: "📈 فرص الاستثمار",
+    trend4Text: "يخلق الطلب المتزايد على الإيجارات ومساحات المعيشة المشتركة والمراكز التجارية فرصًا جديدة للمستثمرين.",
+    challengesTitle: "التحديات في سوق العقارات",
+    challengePara1: "يتطور قطاع العقارات بسرعة، ولكنه يواجه أيضًا تحديات كبيرة. تقلبات السوق، وارتفاع تكاليف البناء، وأسعار الفائدة غير المتوقعة تخلق حالة من عدم اليقين للمشترين والمستثمرين.",
+    challengePara2: "بالإضافة إلى ذلك، يمكن أن تكون التغييرات التنظيمية، والطلب على الإسكان المستدام، والتكيف مع الابتكارات التكنولوجية العقارية معقدة بالنسبة للمطورين والوكالات. يبقى تحقيق التوازن بين القدرة على تحمل التكاليف والجودة وتلبية توقعات المستهلكين المتغيرة تحديًا أساسيًا في سوق العقارات اليوم.",
+    futureTitle: "مستقبل سوق العقارات",
+    futurePara1: "يتم تشكيل مستقبل العقارات من خلال التكنولوجيا والتحضر وتغير تفضيلات المشترين. تعيد المنازل الذكية والمباني الصديقة للبيئة والمنصات الرقمية تعريف كيفية شراء وبيع واستثمار العقارات.",
+    futurePara2: "مع صعود التكنولوجيا العقارية، والجولات الافتراضية، والتحليلات السوقية المدعومة بالذكاء الاصطناعي، يحصل المستثمرون والمشترون على رؤى أكثر دقة وقرارات أسرع. ستعمل هذه الابتكارات على تحويل العقارات إلى صناعة أكثر شفافية وكفاءة وسهولة الوصول.",
+    futurePara3: "مع توسع المدن وزيادة الطلب على المعيشة المستدامة، يكمن مستقبل العقارات في تحقيق التوازن بين التكنولوجيا واحتياجات البشر — من خلال توفير مساكن ميسورة التكلفة وذكية وصديقة للبيئة. المطورون والمستثمرون الذين يتبنون هذه الاتجاهات سيقودون الطريق في تشكيل سوق العقارات في المستقبل.",
+    contactTitle: "تواصل مع خبراء العقارات لدينا",
+    contactText: "هل تبحث عن شراء أو بيع أو استثمار في عقار؟ تواصل مع خبرائنا اليوم للحصول على إرشادات مخصصة وحلول عقارية ذكية.",
+    contactBtn: "اتصل بنا",
+
+     },
+  he: {
+ "home": "בית",
+    "home1": "דף הבית 1",
+    "home2": "דף הבית 2",
+    "about": "אודות",
+    "services": "שירותים",
+    "allServices": "כל השירותים",
+    "service_1": "סיוע ברכישת נכסים",
+    "service_2": "מכירת נכסים",
+    "service_3": "שירותי השכרה",
+    "service_4": "ניהול נכסים",
+    "service_5": "השקעות נדל״ן",
+    "service_6": "תמיכה משפטית ותיעוד",
+    "blog": "בלוג",
+    "allPosts": "כל הפוסטים",
+    "blog_1": "השקעות נדל״ן חכמות",
+    "blog_2": "ניהול נכסים יעיל",
+    "blog_3": "מגמות שוק הנדל״ן",
+    "contact": "צור קשר",
+    "logout": "התנתק",
+
+    "footer_about": "ספק מוביל של פתרונות בינה מלאכותית, מסייע לעסקים להשתנות באמצעות טכנולוגיה חכמה ומערכות אוטומציה חדשניות.",
+    "footer_quickLinks": "קישורים מהירים",
+    "footer_home": "בית",
+    "footer_home2": "בית 2",
+    "footer_aboutUs": "אודותינו",
+    "footer_services": "שירותים",
+    "footer_blog": "בלוג",
+    "footer_contact": "צור קשר",
+    "footer_servicesTitle": "שירותים",
+    "footer_service1": "סיוע ברכישת נכסים",
+    "footer_service2": "מכירת נכסים",
+    "footer_service3": "שירותי השכרה",
+    "footer_service4": "ניהול נכסים",
+    "footer_service5": "השקעות נדל\"ן",
+    "footer_service6": "תמיכה משפטית ותיעוד",
+    "footer_contactInfo": "פרטי קשר",
+    "footer_email": "contact@stackly.ai",
+    "footer_phone": "+1 (555) 123-4567",
+    "footer_address": "123 רחוב חדשנות בינה מלאכותית",
+    "footer_bottom": "© 2025 Stackly. כל הזכויות שמורות.",
+
+    heroTitle: "מגמות שוק הנדל\"ן",
+    heroHeading: "מגמות שוק הנדל\"ן",
+    heroSub: "עיצוב עתיד ההשקעות בנדל\"ן באמצעות חדשנות, שינויי ביקוש וצמיחה בת קיימא.",
+    heroPara: "שוק הנדל\"ן מתפתח במהירות, מונע על ידי טכנולוגיה, שינויי סגנון חיים ומגמות כלכליות גלובליות. על ידי אימוץ פלטפורמות דיגיטליות, פרקטיקות ירוקות ותכנון עירוני חכם, משקיעים ומפתחים יכולים לפתוח הזדמנויות חדשות ולהבטיח יצירת ערך לטווח ארוך.",
+    introTitle: "הקדמה",
+    introPara1: "שוק הנדל\"ן מתפתח במהירות עם שינויי העדפות הקונים, עיור והתקדמות בפלטפורמות דיגיטליות. משקיעים ומפתחים מתאימים את עצמם לטכנולוגיות חכמות ולבנייה בת קיימא כדי לעמוד בדרישות המודרניות.",
+    introPara2: "מגמות כמו מגורים משותפים, בניינים ירוקים וניהול נכסים מבוסס AI מגדירים מחדש כיצד אנשים קונים, מוכרים ומשקיעים בנדל\"ן. חידושים אלה הופכים את השוק לחכם יותר, שקוף ומוכן לעתיד.",
+    trendsTitle: "מגמות מרכזיות בשוק הנדל\"ן",
+    trend1Title: "🏙️ עיור וערים חכמות",
+    trend1Text: "הצמיחה המהירה בערים ועליית הערים החכמות מניעים את הביקוש למקומות מגורים מודרניים ומקושרים.",
+    trend2Title: "🌱 דיור בר קיימא",
+    trend2Text: "בניינים ירוקים ועיצובים ידידותיים לסביבה הופכים חיוניים כאשר קונים נותנים עדיפות לקיימות.",
+    trend3Title: "💻 חידושי PropTech",
+    trend3Text: "בינה מלאכותית, מציאות מדומה ופלטפורמות דיגיטליות משנים את חיפוש הנכסים, העסקאות ותהליכי הניהול.",
+    trend4Title: "📈 הזדמנויות השקעה",
+    trend4Text: "הביקוש הגובר לשטחי שכירות, מגורים משותפים ומרכזים מסחריים יוצר הזדמנויות חדשות למשקיעים.",
+    challengesTitle: "אתגרים במגמות שוק הנדל\"ן",
+    challengePara1: "שוק הנדל\"ן מתפתח במהירות, אך הוא גם מתמודד עם אתגרים משמעותיים. תנודות שוק, עלויות בנייה עולות וריביות בלתי צפויות יוצרות אי ודאות לקונים ולמשקיעים.",
+    challengePara2: "בנוסף, שינויים רגולטוריים, הביקוש לדיור בר קיימא והתאמה לחידושי PropTech יכולים להיות מורכבים עבור מפתחים וסוכנויות. איזון בין נגישות, איכות ומילוי ציפיות משתנות של צרכנים נותר אתגר מרכזי בשוק הנדל\"ן כיום.",
+    futureTitle: "עתיד מגמות שוק הנדל\"ן",
+    futurePara1: "עתיד הנדל\"ן מעוצב על ידי טכנולוגיה, עיור ושינויי העדפות הקונים. בתים חכמים, בניינים ידידותיים לסביבה ופלטפורמות דיגיטליות מגדירים מחדש את אופן הקנייה, המכירה וההשקעה בנדל\"ן.",
+    futurePara2: "עם עליית PropTech, סיורים וירטואליים וניתוח שוק מבוסס AI, משקיעים וקונים מקבלים גישה לתובנות מדויקות יותר ולקבלת החלטות מהירה יותר. חידושים אלה יהפכו את הנדל\"ן לתעשייה שקופה, יעילה ונגישה יותר.",
+    futurePara3: "כשהערים מתרחבות והביקוש למגורים בני קיימא גובר, עתיד הנדל\"ן טמון באיזון בין טכנולוגיה לצרכים אנושיים — הצעת דיור בר השגה, חכם ואקולוגי. מפתחים ומשקיעים שיאמצו מגמות אלה יובילו את הדרך בעיצוב שוק הנדל\"ן של המחר.",
+    contactTitle: "צור קשר עם מומחי הנדל\"ן שלנו",
+    contactText: "מעוניין לקנות, למכור או להשקיע בנדל\"ן? צור קשר עם המומחים שלנו עוד היום לקבלת ייעוץ מותאם אישית ופתרונות נדל\"ן חכמים.",
+    contactBtn: "צור קשר",
+ 
+        
   }
+};
+
+// Function to change language
+function changeLanguage(lang) {
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if(translations[lang] && translations[lang][key]) {
+      el.innerText = translations[lang][key];
+    }
+  });
+
+  // Handle RTL for Arabic & Hebrew
+  if(lang === "ar" || lang === "he") {
+    document.documentElement.dir = "rtl";
+  } else {
+    document.documentElement.dir = "ltr";
+  }
+}
+
+// Optional: automatically switch to selected language on page load
+document.addEventListener("DOMContentLoaded", () => {
+  const langSelect = document.getElementById("langSelect");
+  changeLanguage(langSelect.value);
+});
+</script>
+
+
+
+
+<script>
+  // Mobile menu setup
+  const hamburger = document.getElementById("hamburger");
+  const hamburgerMenu = document.getElementById("hamburgerMenu");
+
+  // Show/hide mobile menu on hamburger click
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    hamburgerMenu.classList.toggle("active");
+  });
+
+  // Toggle dropdowns for mobile menu
+  document.querySelectorAll('.mobile-dropdown-parent > span').forEach(link => {
+    link.addEventListener('click', function() {
+      const parentLi = this.parentElement;
+      const dropdown = parentLi.querySelector('.mobile-dropdown');
+      dropdown.classList.toggle('active');
+    });
+  });
+
+  // Desktop dropdown toggle logic
+  document.querySelectorAll('.nav-item.dropdown > .nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelectorAll('.dropdown-menu').forEach(menu => {
+        if (menu !== this.nextElementSibling) {
+          menu.classList.remove('active');
+        }
+      });
+      const dropdownMenu = this.nextElementSibling;
+      if (dropdownMenu) {
+        dropdownMenu.classList.toggle('active');
+      }
+    });
+  });
+
+  // Redirect on desktop dropdown menu item click
+  document.querySelectorAll('.dropdown-menu a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href && href !== "#") {
+        window.location.href = href;
+        document.querySelectorAll('.dropdown-menu').forEach(menu => menu.classList.remove('active'));
+      }
+    });
+  });
+
+  // Redirect on normal nav link click
+  document.querySelectorAll('.nav-menu > .nav-item:not(.dropdown) .nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href && href !== "#") {
+        window.location.href = href;
+      }
+    });
+  });
+
+  // Auth link toggle for desktop and mobile
+  function setupAuthLinks() {
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    const authLinks = [document.getElementById("authLink"), document.getElementById("mobileAuthLink")];
+
+    authLinks.forEach(link => {
+      if (!link) return;
+      if (isLoggedIn) {
+        link.innerText = "Logout";
+        link.href = "#";
+        link.onclick = (e) => {
+          e.preventDefault();
+          localStorage.removeItem("isLoggedIn");
+          localStorage.removeItem("currentUser");
+          window.location.href = "index.html";
+        };
+      } else {
+        link.innerText = "Login";
+        link.href = "index.html";
+        link.onclick = null;
+      }
+    });
+  }
+  setupAuthLinks();
 
   // Theme toggle
   const toggleBtn = document.getElementById('toggleBtn');
   let darkMode = localStorage.getItem('darkMode') === 'true';
 
-  // Apply initial theme
   function applyTheme() {
     if (darkMode) {
       document.body.classList.add('dark-mode');
@@ -155,126 +597,255 @@ hamburger.addEventListener("click", () => {
     localStorage.setItem('darkMode', darkMode);
     applyTheme();
   });
-
-  // Call once to apply the theme on initial load
   applyTheme();
 
-  // Avatar initials
-const avatarCircle = document.querySelector('.avatar-circle');
-const currentUserEmail = localStorage.getItem("currentUser");
-const users = JSON.parse(localStorage.getItem("users")) || {};
-if (currentUserEmail && users[currentUserEmail]) {
-  const firstName = users[currentUserEmail].firstName || "";
-  const lastName = users[currentUserEmail].lastName || "";
-  const initials = (firstName[0] || "").toUpperCase() + (lastName[0] || "").toUpperCase();
-  avatarCircle.innerHTML = `<span style="
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #23272f;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-  ">${initials}</span>`;
-} else {
-  avatarCircle.innerHTML = `<span style="
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #23272f;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-  ">?</span>`;
-}
+  // Avatar initials logic
+  const avatarCircle = document.getElementById('avatarCircle');
+  const avatarInitials = document.getElementById('avatarInitials');
+  const avatarDropdown = document.getElementById('avatarDropdown');
+  const logoutBtn = document.getElementById('logoutBtn');
+  const currentUserEmail = localStorage.getItem("currentUser");
+  const users = JSON.parse(localStorage.getItem("users")) || {};
 
+  if (currentUserEmail && users[currentUserEmail]) {
+    const firstName = users[currentUserEmail].firstName || "";
+    const lastName = users[currentUserEmail].lastName || "";
+    const initials = (firstName[0] || "").toUpperCase() + (lastName[0] || "").toUpperCase();
+    avatarInitials.textContent = initials;
+  } else {
+    avatarInitials.textContent = "?";
+  }
 
+  // Show/hide avatar dropdown on click
+  avatarCircle.addEventListener('click', function(e) {
+    e.stopPropagation();
+    avatarDropdown.style.display = avatarDropdown.style.display === "block" ? "none" : "block";
+  });
+
+  document.addEventListener('click', function(e) {
+    if (!avatarCircle.contains(e.target) && !avatarDropdown.contains(e.target)) {
+      avatarDropdown.style.display = "none";
+    }
+  });
+
+  // Logout action
+  logoutBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("currentUser");
+    window.location.href = "index.html";
+  });
 </script>
 
-<!-- ✅ CSS for hamburger -->
 <style>
+  /* Base styles for hamburger icon */
+    .header {
+   
+        padding-left: 130px !important;
+        padding-right: 130px !important;
+    }
+
   .hamburger {
     display: none;
     flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
     cursor: pointer;
+    z-index: 1000;
   }
+
   .hamburger span {
-    height: 3px;
-    width: 25px;
-    background: #333;
-    margin: 4px 0;
-    border-radius: 5px;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
   }
+
+  .dark-mode .hamburger span {
+    background-color: #fff;
+  }
+
+  /* Hamburger menu animation */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* Hide navigation on mobile */
   @media (max-width: 768px) {
     .nav-menu {
       display: none;
-      flex-direction: column;
-      background: #fff;
-      position: absolute;
-      top: 70px;
-      right: 20px;
-      width: 200px;
-      padding: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    }
-    .nav-menu.active {
-      display: flex;
     }
     .hamburger {
       display: flex;
     }
-    .nav-item {
-      margin: 10px 0;
-    }
+  }
+
+  /* Styles for the mobile hamburger menu */
+  .mobile-menu-wrapper {
+    position: relative;
+  }
+
+  .hamburger-menu {
+    display: none;
+    flex-direction: column;
+    background: #23272f;
+    color: #fff;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 220px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+    padding: 20px 0;
+    z-index: 9999;
+    list-style: none;
+  }
+
+  .hamburger-menu.active {
+    display: flex;
+  }
+
+  .hamburger-menu li {
+    padding: 10px 24px;
+    border-bottom: 1px solid #333;
+  }
+
+  .hamburger-menu li:last-child {
+    border-bottom: none;
+  }
+
+  .hamburger-menu a,
+  .hamburger-menu span {
+    color: #00f7ff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: block;
+    cursor: pointer;
+    font-weight: 500;
+  }
+
+  .hamburger-menu ul {
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 5px;
+  }
+
+  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown {
+    display: none;
+  }
+
+  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown.active {
+    display: block;
   }
 
   .toggle-btn {
-  background: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 38px;
-  height: 38px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  cursor: pointer;
-  transition: background 0.2s;
-}
-.toggle-btn:hover {
-  background: #f0f0f0;
-}
-.avatar-circle {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-left: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #eee;
-}
-.avatar-circle img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-@media (max-width: 768px) {
-  .toggle-btn, .avatar-circle {
-    margin-left: 8px;
-    width: 32px;
-    height: 32px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: background 0.2s;
   }
-}
-</style>
 
+  .toggle-btn:hover {
+    background: #f0f0f0;
+  }
+
+  .avatar-circle {
+    position: relative;
+    cursor: pointer;
+    z-index: 1001;
+    overflow: visible;
+  }
+
+  .avatar-circle {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eee;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .avatar-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .avatar-dropdown {
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 20px;
+    background: #fff;
+    min-width: 100px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+    border-radius: 8px;
+    z-index: 1002;
+    padding: 4px 0;
+  }
+
+  .avatar-dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .avatar-dropdown li {
+    padding: 6px 12px;
+  }
+
+  .avatar-dropdown a {
+    color: #23272f;
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: block;
+    border-radius: 4px;
+    transition: background 0.2s;
+  }
+
+  .avatar-dropdown a:hover {
+    background: #f0f0f0;
+  }
+
+  @media (max-width: 768px) {
+    .toggle-btn,
+    .avatar-circle {
+      margin-left: 8px;
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .hamburger-menu {
+      display: none !important;
+    }
+  }
+</style>
 <!-- 🔷 Protest home page  -->
 
   <script>
@@ -295,22 +866,9 @@ if (currentUserEmail && users[currentUserEmail]) {
 
 
 
-    <!-- 🔷 HERO SECTION START video_code  -->
+    
 
-<!-- 🔷 HERO SECTION START -->
-<section class="ai-hero-section">
-  <video autoplay muted loop playsinline class="ai-hero-bg-video">
-    <source src="https://videos.pexels.com/video-files/7681381/7681381-hd_1920_1080_25fps.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
 
-  <div class="ai-hero-overlay">
-    <div class="ai-hero-content">
-      <h1 class="ai-hero-title ai-glow animate-ai-slide-in"> AI in Business</h1>
-      
-    </div>
-  </div>
-</section>
 
 <style>
   /* Hero Section */
@@ -375,23 +933,7 @@ if (currentUserEmail && users[currentUserEmail]) {
     opacity: 0;
   }
 
-  .ai-hero-button {
-    display: inline-block;
-    padding: 14px 36px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #fff;
-    background: linear-gradient(90deg, #00f7ff, #007bff);
-    border-radius: 12px;
-    text-decoration: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    opacity: 0;
-  }
 
-  .ai-hero-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px #00f7ff, 0 0 25px #007bff;
-  }
 
   /* Animations */
   @keyframes aiSlideIn {
@@ -434,88 +976,6 @@ if (currentUserEmail && users[currentUserEmail]) {
 <!-- 🔷 HERO SECTION END -->
 
 
-<!-- 🌟 Blog 3: AI in Business -->
-<section class="ai-hero">
-  <div class="container">
-    <h1>AI in Business</h1>
-    <p>Transforming industries with automation, intelligence, and data-driven strategies.</p>
-  </div>
-</section>
-
-<!-- 🌟 Section 1: Introduction -->
-<section class="ai-intro">
-  <div class="container">
-    <h2>Introduction</h2>
-    <p>
-      Artificial Intelligence (AI) has become a core driver of digital transformation. 
-      Businesses worldwide are using AI to unlock new opportunities, improve customer 
-      experiences, and optimize operations.
-    </p>
-    <p>
-      From predictive analytics to chatbots, AI is enabling smarter decisions 
-      and driving innovation across all industries.
-    </p>
-  </div>
-</section>
-
-<!-- 🌟 Section 2: Business Use Cases -->
-<section class="ai-usecases">
-  <div class="container">
-    <h2>Key AI Applications in Business</h2>
-    <div class="use-grid">
-      <div class="use-card">
-        <h3>📈 Marketing & Sales</h3>
-        <p>AI enables personalized campaigns, customer insights, and lead scoring for higher conversions.</p>
-      </div>
-      <div class="use-card">
-        <h3>🤖 Customer Support</h3>
-        <p>Chatbots and virtual assistants deliver 24/7 service, reducing costs and improving satisfaction.</p>
-      </div>
-      <div class="use-card">
-        <h3>🏭 Supply Chain</h3>
-        <p>AI predicts demand, optimizes logistics, and reduces inefficiencies in global operations.</p>
-      </div>
-      <div class="use-card">
-        <h3>💼 HR & Recruitment</h3>
-        <p>Smart tools help businesses identify talent, reduce bias, and improve employee engagement.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 🌟 Section 3: Challenges -->
-<section class="ai-challenges">
-  <div class="container">
-    <div class="challenge-content">
-      <h2>Challenges & Ethical Considerations</h2>
-      <p>
-        While AI creates opportunities, it also raises challenges. Data privacy, workforce displacement, 
-        and ethical concerns are major areas businesses must address.
-      </p>
-      <p>
-        Building trust requires transparency in AI models, responsible data handling, and fairness in decision-making.
-      </p>
-    </div>
-    <div class="challenge-image">
-      <img src="https://images.unsplash.com/photo-1508780709619-79562169bc64?w=1200&auto=format&fit=crop" alt="AI Challenges in Business">
-    </div>
-  </div>
-</section>
-
-<!-- 🌟 Section 4: Future Outlook -->
-<section class="ai-future">
-  <div class="container">
-    <h2>The Future of AI in Business</h2>
-    <p>
-      The future of business lies in AI-driven strategies. Companies adopting AI today 
-      are gaining a competitive edge by improving efficiency and unlocking innovation.
-    </p>
-    <p>
-      As AI continues to evolve, businesses that embrace responsible, human-centered AI 
-      will thrive in a more connected and data-driven world.
-    </p>
-  </div>
-</section>
 
 <style>
 /* General */
@@ -524,7 +984,7 @@ section { width: 100%; padding: 50px 20px; box-sizing: border-box; }
 
 /* Hero */
 .ai-hero {
-  background: #007bff;
+  background: #0b1945;
   color: white;
   text-align: center;
   padding: 80px 20px;
@@ -550,7 +1010,7 @@ section { width: 100%; padding: 50px 20px; box-sizing: border-box; }
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
-.use-card h3 { color: #007bff; margin-bottom: 10px; }
+.use-card h3 { color: #0b1945; margin-bottom: 10px; }
 
 /* Challenges */
 .ai-challenges .container {
@@ -584,16 +1044,8 @@ section { width: 100%; padding: 50px 20px; box-sizing: border-box; }
 
 
    
-<!-- Section 7: Contact Banner -->
-<section class="contact-banner section-padding">
-    <div class="container">
-        <div class="contact-banner-content">
-            <h2>Get In Touch With Our AI Experts</h2>
-            <p>Ready to discuss your AI project? Contact us today for a free consultation.</p>
-            <a href="contact.html" class="btn btn-primary">Contact Us</a>
-        </div>
-    </div>
-</section>
+
+
 
 <style>
     .contact-banner {
@@ -693,16 +1145,17 @@ section { width: 100%; padding: 50px 20px; box-sizing: border-box; }
 
 
     <!-- Footer -->
-     <footer class="footer">
+    <!-- Footer -->
+<footer class="footer">
   <div class="container">
     <div class="footer-content">
       <!-- Logo & About -->
-      <div class="footer-section">
+      <div class="footer-section footer-section1">
         <div class="logo">
-          <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 40px; width: 80px;">
+          <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 50px; width: 80px;">
         </div>
         <p class="text-justify">
-          Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.
+          <span data-i18n="footer_about">Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.</span>
         </p>
         <div class="social-links">
           <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
@@ -713,45 +1166,45 @@ section { width: 100%; padding: 50px 20px; box-sizing: border-box; }
       </div>
 
       <!-- Quick Links -->
-      <div class="footer-section">
-        <h4>Quick Links</h4>
+      <div class="footer-section footer-section2">
+        <h4 data-i18n="footer_quickLinks">Quick Links</h4>
         <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="home2.html">Home 2</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="home.html"><span data-i18n="footer_home">Home</span></a></li>
+          <li><a href="home2.html"><span data-i18n="footer_home2">Home 2</span></a></li>
+          <li><a href="about.html"><span data-i18n="footer_aboutUs">About Us</span></a></li>
+          <li><a href="services.html"><span data-i18n="footer_services">Services</span></a></li>
+          <li><a href="blog.html"><span data-i18n="footer_blog">Blog</span></a></li>
+          <li><a href="contact.html"><span data-i18n="footer_contact">Contact</span></a></li>
         </ul>
       </div>
 
       <!-- Services -->
-      <div class="footer-section">
-        <h4>Services</h4>
+      <div class="footer-section footer-section3">
+        <h4 data-i18n="footer_servicesTitle">Services</h4>
         <ul>
-          <li><a href="service1.html">AI Development</a></li>
-          <li><a href="service2.html">Machine Learning</a></li>
-          <li><a href="service3.html">Data Analytics</a></li>
-          <li><a href="service4.html">Automation</a></li>
-          <li><a href="service5.html">AI Consulting</a></li>
-          <li><a href="service6.html">AI Integration</a></li>
+          <li><a href="service1.html"><span data-i18n="footer_service1">Property Buying Assistance</span></a></li>
+          <li><a href="service2.html"><span data-i18n="footer_service2">Property Selling</span></a></li>
+          <li><a href="service3.html"><span data-i18n="footer_service3">Rental Services</span></a></li>
+          <li><a href="service4.html"><span data-i18n="footer_service4">Property Management</span></a></li>
+          <li><a href="service5.html"><span data-i18n="footer_service5">Real Estate Investment</span></a></li>
+          <li><a href="service6.html"><span data-i18n="footer_service6">Legal & Documentation Support</span></a></li>
         </ul>
       </div>
 
       <!-- Contact Info -->
-      <div class="footer-section">
-        <h4>Contact Info</h4>
+      <div class="footer-section footer-section4">
+        <h4 data-i18n="footer_contactInfo">Contact Info</h4>
         <ul>
-          <li><i class="fas fa-envelope"></i> contact@stackly.ai</li>
-          <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-          <li><i class="fas fa-map-marker-alt"></i> 123 AI Innovation Drive</li>
+          <li><i class="fas fa-envelope"></i> <span data-i18n="footer_email">contact@stackly.ai</span></li>
+          <li><i class="fas fa-phone"></i> <span data-i18n="footer_phone">+1 (555) 123-4567</span></li>
+          <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer_address">123 AI Innovation Drive</span></li>
         </ul>
       </div>
     </div>
 
     <!-- Bottom Bar -->
     <div class="footer-bottom">
-      <p>&copy; 2025 Stackly. All rights reserved.</p>
+      <p><span data-i18n="footer_bottom">&copy; 2025 Stackly. All rights reserved.</span></p>
     </div>
   </div>
 </footer>
@@ -760,8 +1213,17 @@ section { width: 100%; padding: 50px 20px; box-sizing: border-box; }
 .footer {
   background: #0a0a0a;
   color: #fff;
-  padding: 50px 20px 20px;
+  padding-left: 140px !important;
+  padding-right: 140px !important;
   font-family: Arial, sans-serif;
+}
+
+.footer-section1{
+  margin-right: 150px;
+}
+
+.footer-section4{
+  margin-left: 50px;
 }
 
 .footer .footer-content {
@@ -796,7 +1258,7 @@ section { width: 100%; padding: 50px 20px; box-sizing: border-box; }
 }
 
 .footer .footer-section ul li a:hover {
-  color: #00c3ff;
+  color: #a68e4c;
 }
 
 .footer .social-links a {
@@ -807,7 +1269,7 @@ section { width: 100%; padding: 50px 20px; box-sizing: border-box; }
 }
 
 .footer .social-links a:hover {
-  color: #00c3ff;
+  color: #000000;
 }
 
 .footer .footer-bottom {
@@ -823,19 +1285,32 @@ section { width: 100%; padding: 50px 20px; box-sizing: border-box; }
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
+  .footer-section1{
+  margin-right: 5px;
+}
 }
 
 @media (max-width: 600px) {
   .footer .footer-content {
     grid-template-columns: 1fr;
-    text-align: center;
+    text-align: left;
   }
   .footer .social-links {
     margin-top: 15px;
   }
+  .footer-section1{
+  margin-right: 10px;
+}
+  .footer-section2{
+  margin-right: 10px;
+}
+.footer-section4{
+  margin-left: 1px;
+}
 }
 </style>
 
+</div>
 
     <script src="assets/js/script.js"></script>
 </body>

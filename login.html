@@ -1,47 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Stackly AI Tools</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auth System</title>
+  <style>
+    /* Background */
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* dark teal gradient */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    /* Glass Card */
+    .container {
+      width: 350px;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+      padding-left: 15px;
+      padding-right: 40px;
+      border-radius: 18px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+      display: none;
+      color: #e0f7fa; /* soft teal text */
+      animation: fadeIn 0.4s ease;
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(10px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    /* Headings */
+    h1 {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: #80deea; /* light cyan */
+    }
+
+    /* Inputs */
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-top: 12px;
+      border: none;
+      border-radius: 8px;
+      outline: none;
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    input::placeholder { color: #b2ebf2; }
+    input:focus { background: rgba(255,255,255,0.25); }
+
+    /* Buttons */
+    button {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      background: linear-gradient(135deg, #26c6da, #00acc1); /* teal gradient */
+      color: #fff;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+      margin-left: 10px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: linear-gradient(135deg, #00acc1, #26c6da);
+      transform: scale(1.03);
+    }
+
+    /* Links */
+    p { text-align: center; margin-top: 12px; }
+    a { color: #4dd0e1; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Error */
+    .error {
+      color: #ff5252;
+      text-align: center;
+      margin-top: 12px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-    <div class="login-container">
-        <form class="login-form" id="loginForm">
-            <div class="logo" style="text-align: center; margin-bottom: 2rem;">
-                <h2 style="color: var(--primary-color);">Stackly</h2>
-                <p style="color: var(--dark-gray);">AI Tools & Solutions</p>
-            </div>
-            
-            <h2>Admin Login</h2>
-            
-            <div class="form-group">
-                <label for="username">Username / Email</label>
-                <input type="email" id="username" name="username" class="form-control" required placeholder="admin@enkonix.in">
-            </div>
-            
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" class="form-control" required placeholder="Enter your password">
-            </div>
-            
-            <button type="submit" class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;">Login</button>
-            
-            <div class="login-links">
-                <a href="forgot-password.html">Forgot Password?</a> | 
-                <a href="index.html">Back to Home</a>
-            </div>
-            
-            <div style="margin-top: 2rem; padding: 1rem; background: var(--light-gray); border-radius: 8px; text-align: center; font-size: 0.9rem; color: var(--dark-gray);">
-                <strong>Demo Credentials:</strong><br>
-                Username: admin@enkonix.in<br>
-                Password: admin123
-            </div>
-        </form>
-    </div>
-    
-    <script src="assets/js/script.js"></script>
+
+  <!-- Login -->
+  <div class="container" id="loginPage">
+    <h1>🔐 Login</h1>
+    <form id="loginForm">
+      <input type="email" id="loginEmail" placeholder="Enter email" required >
+
+      <input type="password" id="loginPass" placeholder="Enter password" required>
+      <button type="submit">Sign In</button>
+    </form>
+    <p><a href="#" onclick="showPage('signupPage')">New user? Sign Up</a></p>
+    <p><a href="#" onclick="showPage('forgotPage')">Forgot Password?</a></p>
+    <p class="error" id="loginError"></p>
+  </div>
+
+  <!-- Signup -->
+  <div class="container" id="signupPage">
+    <h1>📝 Sign Up</h1>
+    <form id="signupForm">
+      <input type="text" id="signupFirstName" placeholder="First name" required>
+      <input type="text" id="signupLastName" placeholder="Last name" required>
+      <input type="email" id="signupEmail" placeholder="Enter email" required>
+      <input type="password" id="signupPass" placeholder="Enter password" required>
+      <button type="submit">Sign Up</button>
+    </form>
+    <p><a href="#" onclick="showPage('loginPage')">Already have an account? Login</a></p>
+  </div>
+
+  <!-- Forgot Password -->
+  <div class="container" id="forgotPage">
+    <h1>❓ Forgot Password</h1>
+    <form id="forgotForm">
+      <input type="email" id="forgotEmail" placeholder="Enter registered email" required>
+      <button type="submit">Submit</button>
+    </form>
+    <p><a href="#" onclick="showPage('loginPage')">Back to Login</a></p>
+  </div>
+
+  <!-- Reset Password -->
+  <div class="container" id="resetPage">
+    <h1>🔑 Reset Password</h1>
+    <form id="resetForm">
+      <input type="password" id="newPass" placeholder="New password" required>
+      <input type="password" id="confirmPass" placeholder="Confirm password" required>
+      <button type="submit">Reset</button>
+    </form>
+  </div>
+
+  <!-- 404 -->
+  <div class="container" id="errorPage">
+    <h1>404 ❌</h1>
+    <p>Page not found or action failed.</p>
+    <button onclick="showPage('loginPage')">Back to Login</button>
+  </div>
+
+  <script>
+    // Show only one section
+    function showPage(pageId) {
+      document.querySelectorAll('.container').forEach(div => div.style.display = "none");
+      document.getElementById(pageId).style.display = "block";
+    }
+
+    // Initialize
+    window.onload = function() {
+      if(localStorage.getItem("isLoggedIn") === "true"){
+        window.location.href = "home.html";
+      } else {
+        showPage("loginPage");
+      }
+    }
+
+    // Login
+    document.getElementById("loginForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      const email = document.getElementById("loginEmail").value;
+      const pass = document.getElementById("loginPass").value;
+      const users = JSON.parse(localStorage.getItem("users")) || {};
+
+      // Admin login check
+      if(email === "admin@enkonix.in" && pass === "admin123"){
+        localStorage.setItem("isLoggedIn", "true");
+        localStorage.setItem("currentUser", email);
+        window.location.href = "admin-dashboard.html";
+        return;
+      }
+
+      // Regular user login
+      if(users[email] && users[email].password === pass){
+        localStorage.setItem("isLoggedIn", "true");
+        localStorage.setItem("currentUser", email);
+        window.location.href = "home.html";
+      } else {
+        document.getElementById("loginError").innerText = "❌ Wrong email or password!";
+      }
+    });
+
+    // Signup
+    document.getElementById("signupForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      const firstName = document.getElementById("signupFirstName").value;
+      const lastName = document.getElementById("signupLastName").value;
+      const email = document.getElementById("signupEmail").value;
+      const pass = document.getElementById("signupPass").value;
+      let users = JSON.parse(localStorage.getItem("users")) || {};
+
+      if(users[email]){
+        alert("⚠️ User already exists. Please login.");
+        showPage("loginPage");
+      } else {
+        users[email] = {
+          password: pass,
+          firstName: firstName,
+          lastName: lastName
+        };
+        localStorage.setItem("users", JSON.stringify(users));
+        alert("✅ Signup successful! Please login.");
+        showPage("loginPage");
+      }
+    });
+
+    // Forgot Password
+    document.getElementById("forgotForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      const email = document.getElementById("forgotEmail").value;
+      const users = JSON.parse(localStorage.getItem("users")) || {};
+
+      if(users[email]){
+        localStorage.setItem("resetUser", email);
+        showPage("resetPage");
+      } else {
+        showPage("errorPage");
+      }
+    });
+
+    // Reset Password
+    document.getElementById("resetForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      const newPass = document.getElementById("newPass").value;
+      const confirmPass = document.getElementById("confirmPass").value;
+      const email = localStorage.getItem("resetUser");
+      let users = JSON.parse(localStorage.getItem("users")) || {};
+
+      if(newPass === confirmPass){
+        if(users[email]) {
+          users[email].password = newPass;  // ✅ fixed
+          localStorage.setItem("users", JSON.stringify(users));
+          localStorage.removeItem("resetUser");
+          alert("✅ Password reset successful!");
+          showPage("loginPage");
+        } else {
+          showPage("errorPage");
+        }
+      } else {
+        alert("⚠️ Passwords do not match!");
+      }
+    });
+  </script>
 </body>
 </html>

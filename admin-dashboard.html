@@ -20,7 +20,7 @@
     }
     h1 {
       text-align: center;
-      color: #007bff;
+      color: #a68e4c;
       margin-bottom: 32px;
     }
     table {
@@ -37,7 +37,7 @@
       text-align: left;
     }
     th {
-      background: #007bff;
+      background: #a68e4c;
       color: #fff;
     }
     tr:nth-child(even) {
@@ -48,7 +48,7 @@
       display: block;
       width: 100%;
       padding: 10px;
-      background: #007bff;
+      background: #a68e4c;
       color: #fff;
       border: none;
       border-radius: 4px;
@@ -57,7 +57,7 @@
       transition: background 0.2s;
     }
     #logoutBtn:hover {
-      background: #0056b3;
+      background: #a68e4c;
     }
   </style>
 </head>
@@ -101,4 +101,119 @@
       window.location.href = "index.html";
     };
   </script>
+
+  <!-- Dashboard Charts -->
+
+  <section class="dashboard-charts">
+  <div class="charts-container">
+    <!-- Pie Chart -->
+    <div class="chart-box">
+      <canvas id="pieChart"></canvas>
+    </div>
+
+    <!-- Graph (Line Chart) -->
+    <div class="chart-box">
+      <canvas id="lineChart"></canvas>
+    </div>
+  </div>
+</section>
+
+<style>
+.dashboard-charts {
+  
+  padding: 20px;
+  background-color: #000; /* black background */
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.charts-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.chart-box {
+  flex: 1;
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+canvas {
+  max-width: 100%;
+  max-height: 300px;  /* fixed height to prevent stretching */
+}
+
+</style>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  // Pie Chart
+  const pieCtx = document.getElementById('pieChart').getContext('2d');
+  const pieChart = new Chart(pieCtx, {
+    type: 'pie',
+    data: {
+      labels: ['Completed', 'Pending', 'Cancelled'],
+      datasets: [{
+        data: [55, 30, 15],
+        backgroundColor: ['#a68e4c', 'white', '#000'],
+        borderColor: ['#000', '#000', '#000'],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          labels: {
+            color: 'white'
+          }
+        }
+      }
+    }
+  });
+
+  // Line Chart
+  const lineCtx = document.getElementById('lineChart').getContext('2d');
+  const lineChart = new Chart(lineCtx, {
+    type: 'line',
+    data: {
+      labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+      datasets: [{
+        label: 'Revenue',
+        data: [1200, 1900, 3000, 2500, 3200, 4000],
+        borderColor: '#a68e4c',
+        backgroundColor: 'rgba(166, 142, 76, 0.2)',
+        fill: true,
+        tension: 0.4,
+        pointBackgroundColor: '#a68e4c',
+        pointBorderColor: '#000'
+      }]
+    },
+    options: {
+      responsive: true,
+      scales: {
+        x: {
+          ticks: { color: 'white' },
+          grid: { color: '#333' }
+        },
+        y: {
+          ticks: { color: 'white' },
+          grid: { color: '#333' }
+        }
+      },
+      plugins: {
+        legend: {
+          labels: { color: 'white' }
+        }
+      }
+    }
+  });
+</script>
+
+
+
 </body>

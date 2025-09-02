@@ -3,140 +3,716 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Development Services - Stackly</title>
+    <title> Stackly - Realestate</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-  
-     <!-- Sticky Header -->
-     <header class="header">
+<div id="loader">
+    <div class="spinner"></div>
+</div>
+
+<div id="content" style="display:none;"></div>
+
+    <!-- Sticky Header -->
+    <header class="header">
   <div class="container">
     <div class="nav-wrapper">
-      <!-- Logo -->
       <div class="logo">
         <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 40px; width: 80px;">
       </div>
 
-      <!-- Navigation -->
       <nav class="navigation">
-    <ul class="nav-menu" id="navMenu">
-      <li class="nav-item dropdown">
-        <a href="#" class="nav-link">Home <i class="fas fa-chevron-down"></i></a>
-        <ul class="dropdown-menu">
-          <li><a href="index.html">Home 1</a></li>
-          <li><a href="home2.html">Home 2</a></li>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link" ><span data-i18n="home">Home</span> <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html"><span data-i18n="home1">Home 1</span></a></li>
+              <li><a href="home2.html"><span data-i18n="home2">Home 2</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="about.html" class="nav-link"><span data-i18n="about">About</span></a></li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link"><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Property Buying Assistance</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Property Selling</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Rental Services </span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Property Management</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Real Estate Investment</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service_6">Legal & Documentation Support</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link"><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
+              <li><a href="blog1.html"><span data-i18n="blog_1">Smart Property Investments</span></a></li>
+              <li><a href="blog2.html"><span data-i18n="blog_2">Effective Property Management</span></a></li>
+              <li><a href="blog3.html"><span data-i18n="blog_3">Real Estate Market Trends</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="contact.html" class="nav-link"><span data-i18n="contact">Contact</span></a></li>
+          
         </ul>
-      </li>
-      <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-      <li class="nav-item dropdown">
-        <a href="#" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
-        <ul class="dropdown-menu">
-          <li><a href="services.html">All Services</a></li>
-          <li><a href="service1.html">AI Development</a></li>
-          <li><a href="service2.html">Machine Learning</a></li>
-          <li><a href="service3.html">Data Analytics</a></li>
-          <li><a href="service4.html">Automation</a></li>
-          <li><a href="service5.html">AI Consulting</a></li>
-          <li><a href="service6.html">AI Integration</a></li>
+        <div class="hamburger" id="hamburger" aria-label="Open menu" tabindex="0">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+
+      <div class="mobile-menu-wrapper">
+        <ul class="hamburger-menu" id="hamburgerMenu">
+          <li class="mobile-dropdown-parent">
+            <span><span data-i18n="home">Home</span> <i class="fas fa-chevron-down"></i></span>
+            <ul class="mobile-dropdown">
+              <li><a href="index.html"><span data-i18n="home1">Home 1</span></a></li>
+              <li><a href="home2.html"><span data-i18n="home2">Home 2</span></a></li>
+            </ul>
+          </li>
+          <li><a href="about.html"><span data-i18n="about">About</span></a></li>
+          <li class="mobile-dropdown-parent">
+            <span><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></span>
+            <ul class="mobile-dropdown">
+             <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Property Buying Assistance</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Property Selling</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Rental Services </span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Property Management</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Real Estate Investment</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service6">Legal & Documentation Support</span></a></li>
+            </ul>
+          </li>
+          <li class="mobile-dropdown-parent">
+            <span><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></span>
+            <ul class="mobile-dropdown">
+               <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
+                <li><a href="blog1.html"><span data-i18n="blog_1">Smart Property Investments</span></a></li>
+                <li><a href="blog2.html"><span data-i18n="blog_2">Effective Property Management</span></a></li>
+                <li><a href="blog3.html"><span data-i18n="blog_3">Real Estate Market Trends</span></a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html"><span data-i18n="contact">Contact</span></a></li>
+       
         </ul>
-      </li>
-      <li class="nav-item dropdown">
-        <a href="#" class="nav-link">Blog <i class="fas fa-chevron-down"></i></a>
-        <ul class="dropdown-menu">
-          <li><a href="blog.html">All Posts</a></li>
-          <li><a href="blog1.html">AI Trends 2024</a></li>
-          <li><a href="blog2.html">Future of ML</a></li>
-          <li><a href="blog3.html">AI in Business</a></li>
+      </div>
+
+      <div class="lang-switcher">
+        <label for="langSelect">Language:</label>
+        <select id="langSelect" onchange="changeLanguage(this.value)">
+          <option value="en">English</option>
+          <option value="ar">Arabic</option>
+          <option value="he">Hebrew</option>
+        </select>
+      </div>
+
+      <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
+        <i class="fas fa-moon"></i>
+      </button>
+
+      <div class="avatar-circle" title="Profile" id="avatarCircle">
+        <span id="avatarInitials"></span>
+      </div>
+      <div class="avatar-dropdown" id="avatarDropdown">
+        <ul>
+          <li><a href="index.html" id="logoutBtn"><span data-i18n="logout">Logout</span></a></li>
         </ul>
-      </li>
-      <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-      <!-- Login/Logout Link -->
-      <li class="nav-item"><a href="index.html" class="nav-link" id="authLink">Login</a></li>
-    </ul>
-
-    <!-- Hamburger -->
-    <div class="hamburger" id="hamburger" aria-label="Open menu" tabindex="0">
-  <ul class="hamburger-menu" id="hamburgerMenu" style="display:none;">
-    <li><a href="index.html">Home 1</a></li>
-    <li><a href="home2.html">Home 2</a></li>
-    <li><a href="about.html">About</a></li>
-    <li>
-      <span>Services</span>
-      <ul>
-        <li><a href="services.html">All Services</a></li>
-        <li><a href="service1.html">AI Development</a></li>
-        <li><a href="service2.html">Machine Learning</a></li>
-        <li><a href="service3.html">Data Analytics</a></li>
-        <li><a href="service4.html">Automation</a></li>
-        <li><a href="service5.html">AI Consulting</a></li>
-        <li><a href="service6.html">AI Integration</a></li>
-      </ul>
-    </li>
-    <li>
-      <span>Blog</span>
-      <ul>
-        <li><a href="blog.html">All Posts</a></li>
-        <li><a href="blog1.html">AI Trends 2024</a></li>
-        <li><a href="blog2.html">Future of ML</a></li>
-        <li><a href="blog3.html">AI in Business</a></li>
-      </ul>
-    </li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="index.html" id="authLink">Login</a></li>
-  </ul>
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
-  </nav>
-
-  <!-- Toggle Button -->
-  <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
-    <i class="fas fa-moon"></i>
-  </button>
-
-  <!-- Avatar Circle -->
-  <div class="avatar-circle" title="Profile">
-
-  </div>
-</div>
+      </div>
+    </div>
   </div>
 </header>
 
-<!-- ✅ Script -->
+
+<!-- Section : 1 -->
+<section class="ai-hero-section">
+  <video autoplay muted loop playsinline class="ai-hero-bg-video">
+    <source src="https://videos.pexels.com/video-files/11593544/11593544-uhd_2560_1440_60fps.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="ai-hero-overlay">
+    <div class="ai-hero-content">
+      <h1 class="ai-hero-title ai-glow animate-ai-slide-in" data-i18n="rental_title">Rental Services</h1>
+    </div>
+  </div>
+</section>
+
+<!-- Section : 2 -->
+<section class="ai-section">
+  <h1 class="ai-heading" data-i18n="rental_heading1">Professional Rental Services</h1>
+  <div class="ai-content">
+    <div class="ai-text">
+      <p data-i18n="rental_intro">
+        Find the perfect rental property or tenant with our expert rental services. 
+        We provide reliable listings, property management support, and personalized guidance 
+        to ensure smooth and profitable rental experiences for both landlords and tenants.
+      </p>
+
+      <!-- Feature Points -->
+      <ul class="hero-features fade-in-up delay-2">
+        <li><span>✔</span> <span data-i18n="rental_feature1">Comprehensive rental property listings</span></li>
+        <li><span>✔</span> <span data-i18n="rental_feature2">Tenant screening and selection</span></li>
+        <li><span>✔</span> <span data-i18n="rental_feature3">Lease management and documentation</span></li>
+        <li><span>✔</span> <span data-i18n="rental_feature4">Maintenance and property support</span></li>
+        <li><span>✔</span> <span data-i18n="rental_feature5">Personalized rental solutions</span></li>
+      </ul>
+
+      <div class="ai-buttons">
+        <a href="services.html" class="btn btn-primary" data-i18n="rental_explore">Explore Services</a>
+        <a href="contact.html" class="btn btn-primary" data-i18n="rental_request">Request Assistance</a>
+      </div>
+    </div>
+
+    <div class="ai-image">
+      <img src="https://i.pinimg.com/1200x/22/b1/20/22b120221e32283ed1dffa1f4ca6909a.jpg" alt="Rental Services">
+    </div>
+  </div>
+</section>
+
+<!-- Section : 3 -->
+<section class="advanced-features">
+  <div class="advanced-features-container">
+    <div class="features-header fade-in-up">
+      <h2 data-i18n="rental_heading2">Comprehensive Rental Services</h2>
+      <p data-i18n="rental_para2">
+        Make renting simple and efficient with our professional rental services. 
+        We help landlords and tenants find the right match, manage properties effectively, 
+        and ensure a smooth rental experience from start to finish.
+      </p>
+    </div>
+
+    <div class="features-cards">
+      <div class="feature-box fade-in-up delay-1">
+        <div class="feature-icon"><i class="fas fa-home"></i></div>
+        <h3 data-i18n="rental_card1_title">Property Listings & Promotion</h3>
+        <p data-i18n="rental_card1_text">Showcase your rental property on multiple platforms, reach the right tenants, and increase visibility to secure rentals quickly.</p>
+      </div>
+
+      <div class="feature-box fade-in-up delay-2">
+        <div class="feature-icon"><i class="fas fa-user-check"></i></div>
+        <h3 data-i18n="rental_card2_title">Tenant Screening & Management</h3>
+        <p data-i18n="rental_card2_text">Screen potential tenants thoroughly and manage rental agreements, payments, and property maintenance with ease.</p>
+      </div>
+
+      <div class="feature-box fade-in-up delay-3">
+        <div class="feature-icon"><i class="fas fa-file-signature"></i></div>
+        <h3 data-i18n="rental_card3_title">Lease & Documentation Support</h3>
+        <p data-i18n="rental_card3_text">We handle all lease documentation, contracts, and legal requirements to ensure smooth, compliant, and hassle-free rental transactions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section : 4 -->
+<section class="development-process">
+  <div class="development-process-container">
+    <div class="process-header fade-in-up">
+      <h2 data-i18n="rental_heading3">Comprehensive Rental Management Solutions</h2>
+      <p data-i18n="rental_para3">
+        Streamline your rental property management with our expert services. 
+        We provide end-to-end support for landlords and tenants, ensuring smooth leasing, efficient operations, and maximum returns.
+      </p>
+    </div>
+
+    <div class="process-row">
+      <div class="process-image slide-in-right">
+        <img src="https://i.pinimg.com/1200x/66/14/bb/6614bb85e8c914604c7d6dcd4fa23f1d.jpg" alt="Rental Services">
+      </div>
+
+      <div class="process-content fade-in-up delay-1">
+        <p class="process-intro" data-i18n="rental_intro2">
+          Our rental management solutions help landlords and property managers optimize occupancy, streamline operations, 
+          and provide tenants with a seamless rental experience. From listing properties to handling leases and maintenance, 
+          we cover every aspect of property rentals with professionalism and care.
+        </p>
+
+        <div class="process-steps">
+          <div class="step"><span class="step-number">01</span><p data-i18n="rental_step1">Property Listing & Promotion</p></div>
+          <div class="step"><span class="step-number">02</span><p data-i18n="rental_step2">Tenant Screening & Selection</p></div>
+          <div class="step"><span class="step-number">03</span><p data-i18n="rental_step3">Lease Agreement Preparation</p></div>
+          <div class="step"><span class="step-number">04</span><p data-i18n="rental_step4">Rent Collection & Payment Management</p></div>
+          <div class="step"><span class="step-number">05</span><p data-i18n="rental_step5">Maintenance & Property Support</p></div>
+          <div class="step"><span class="step-number">06</span><p data-i18n="rental_step6">Tenant Feedback & Renewal Management</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section : 5 -->
+<section class="service-showcase">
+  <div class="service-container">
+    <div class="service-header animate-fade-up">
+      <h2 data-i18n="rental_heading4">Comprehensive Rental Services</h2>
+      <p data-i18n="rental_para4">Manage your rental properties efficiently with our professional services, from property listing and tenant screening to lease management and maintenance support.</p>
+    </div>
+
+    <div class="service-grid">
+      <div class="service-card animate-slide-up delay-1">
+        <h3 data-i18n="rental_service1_title">Property Listing & Promotion</h3>
+        <p data-i18n="rental_service1_text">List your rental properties across multiple platforms and reach potential tenants quickly and effectively.</p>
+      </div>
+      <div class="service-card animate-slide-up delay-2">
+        <h3 data-i18n="rental_service2_title">Tenant Screening & Selection</h3>
+        <p data-i18n="rental_service2_text">Thoroughly screen potential tenants for reliability and compatibility, ensuring safe and secure rentals.</p>
+      </div>
+      <div class="service-card animate-slide-up delay-3">
+        <h3 data-i18n="rental_service3_title">Lease Management</h3>
+        <p data-i18n="rental_service3_text">Prepare, organize, and manage lease agreements efficiently to ensure legal compliance and smooth operations.</p>
+      </div>
+      <div class="service-card animate-slide-up delay-4">
+        <h3 data-i18n="rental_service4_title">Maintenance & Support</h3>
+        <p data-i18n="rental_service4_text">Provide ongoing property maintenance and tenant support to ensure a hassle-free rental experience for landlords and tenants alike.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section : 6 -->
+<section class="bookkeeping-services">
+  <div class="services-container">
+    <div class="services-image animate-slide-in">
+      <img src="https://i.pinimg.com/1200x/29/86/cd/2986cdc460c2df3fbea38372c1a41495.jpg" alt="Rental Services">
+    </div>
+    <div class="services-content">
+      <h2 class="animate-fade-up" data-i18n="rental_heading5">Professional Rental Management Services</h2>
+      <p class="animate-fade-up delay-1" style="text-align: justify;" data-i18n="rental_para5">
+        Streamline your rental property operations with our expert rental management solutions. 
+        We help landlords and property managers handle everything from tenant acquisition to lease management 
+        and maintenance, ensuring a smooth and profitable rental experience.
+      </p>
+
+      <div class="service-card animate-fade-up delay-2">
+        <h3 data-i18n="rental_card4_title">Tenant Screening & Leasing</h3>
+        <p data-i18n="rental_card4_text">Thoroughly screen potential tenants and manage lease agreements efficiently for secure and hassle-free rentals.</p>
+      </div>
+
+      <div class="service-card animate-fade-up delay-3">
+        <h3 data-i18n="rental_card5_title">Property Maintenance & Support</h3>
+        <p data-i18n="rental_card5_text">Ensure your property stays in top condition with ongoing maintenance, tenant support, and timely issue resolution.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section : 7 -->
+<section class="contact-banner section-padding">
+  <div class="container">
+    <div class="contact-banner-content">
+      <h2 data-i18n="rental_cta_title">Ready to Rent or Manage Your Property?</h2>  
+      <p data-i18n="rental_cta_text">Let’s discuss your rental property and create a customized plan to maximize returns and ensure smooth management.</p>
+      <a href="contact.html" class="btn btn-primary" data-i18n="rental_cta_btn">Get Started</a>
+    </div>
+  </div>
+</section>
+
+
+
 <script>
-  // Hamburger toggle
-  const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("navMenu");
-const hamburgerMenu = document.getElementById("hamburgerMenu");
+// Translation dictionary
+const translations = {
+  en: {
+   "home": "Home",
+    "home1": "Home 1",
+    "home2": "Home 2",
+    "about": "About",
+    "services": "Services",
+    "allServices": "All Services",
+    "service_1": "Property Buying Assistance",
+    "service_2": "Property Selling",
+    "service_3": "Rental Services",
+    "service_4": "Property Management",
+    "service_5": "Real Estate Investment",
+    "service_6": "Legal & Documentation Support",
+    "blog": "Blog",
+    "allPosts": "All Posts",
+    "blog_1": "Smart Property Investments",
+    "blog_2": "Effective Property Management",
+    "blog_3": "Real Estate Market Trends",
+    "contact": "Contact",
+    "logout": "Logout",
 
-// Show/hide menu on hamburger click
-hamburger.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
-  hamburgerMenu.style.display = hamburgerMenu.style.display === "block" ? "none" : "block";
-});
+    "footer_about": "Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.",
+    "footer_quickLinks": "Quick Links",
+    "footer_home": "Home",
+    "footer_home2": "Home 2",
+    "footer_aboutUs": "About Us",
+    "footer_services": "Services",
+    "footer_blog": "Blog",
+    "footer_contact": "Contact",
+    "footer_servicesTitle": "Services",
+    "footer_service1": "Property Buying Assistance",
+    "footer_service2": "Property Selling",
+    "footer_service3": "Rental Services",
+    "footer_service4": "Property Management",
+    "footer_service5": "Real Estate Investment",
+    "footer_service6": "Legal & Documentation Support",
+    "footer_contactInfo": "Contact Info",
+    "footer_email": "contact@stackly.ai",
+    "footer_phone": "+1 (555) 123-4567",
+    "footer_address": "123 AI Innovation Drive",
+    "footer_bottom": "© 2025 Stackly. All rights reserved.",
 
-  // Auth link toggle
-  const authLink = document.getElementById("authLink");
-  if(localStorage.getItem("isLoggedIn") === "true"){
-    authLink.innerText = "Logout";
-    authLink.href = "#";
-    authLink.onclick = () => {
-      localStorage.removeItem("isLoggedIn");
-      localStorage.removeItem("currentUser");
-      window.location.href = "index.html";
-    };
-  } else {
-    authLink.innerText = "Login";
-    authLink.href = "index.html";
+     "rental_title": "Rental Services",
+    "rental_heading1": "Professional Rental Services",
+    "rental_intro": "Find the perfect rental property or tenant with our expert rental services. We provide reliable listings, property management support, and personalized guidance to ensure smooth and profitable rental experiences for both landlords and tenants.",
+    "rental_feature1": "Comprehensive rental property listings",
+    "rental_feature2": "Tenant screening and selection",
+    "rental_feature3": "Lease management and documentation",
+    "rental_feature4": "Maintenance and property support",
+    "rental_feature5": "Personalized rental solutions",
+    "rental_explore": "Explore Services",
+    "rental_request": "Request Assistance",
+
+    "rental_heading2": "Comprehensive Rental Services",
+    "rental_para2": "Make renting simple and efficient with our professional rental services. We help landlords and tenants find the right match, manage properties effectively, and ensure a smooth rental experience from start to finish.",
+    "rental_card1_title": "Property Listings & Promotion",
+    "rental_card1_text": "Showcase your rental property on multiple platforms, reach the right tenants, and increase visibility to secure rentals quickly.",
+    "rental_card2_title": "Tenant Screening & Management",
+    "rental_card2_text": "Screen potential tenants thoroughly and manage rental agreements, payments, and property maintenance with ease.",
+    "rental_card3_title": "Lease & Documentation Support",
+    "rental_card3_text": "We handle all lease documentation, contracts, and legal requirements to ensure smooth, compliant, and hassle-free rental transactions.",
+
+    "rental_heading3": "Comprehensive Rental Management Solutions",
+    "rental_para3": "Streamline your rental property management with our expert services. We provide end-to-end support for landlords and tenants, ensuring smooth leasing, efficient operations, and maximum returns.",
+    "rental_intro2": "Our rental management solutions help landlords and property managers optimize occupancy, streamline operations, and provide tenants with a seamless rental experience. From listing properties to handling leases and maintenance, we cover every aspect of property rentals with professionalism and care.",
+    "rental_step1": "Property Listing & Promotion",
+    "rental_step2": "Tenant Screening & Selection",
+    "rental_step3": "Lease Agreement Preparation",
+    "rental_step4": "Rent Collection & Payment Management",
+    "rental_step5": "Maintenance & Property Support",
+    "rental_step6": "Tenant Feedback & Renewal Management",
+
+    "rental_heading4": "Comprehensive Rental Services",
+    "rental_para4": "Manage your rental properties efficiently with our professional services, from property listing and tenant screening to lease management and maintenance support.",
+    "rental_service1_title": "Property Listing & Promotion",
+    "rental_service1_text": "List your rental properties across multiple platforms and reach potential tenants quickly and effectively.",
+    "rental_service2_title": "Tenant Screening & Selection",
+    "rental_service2_text": "Thoroughly screen potential tenants for reliability and compatibility, ensuring safe and secure rentals.",
+    "rental_service3_title": "Lease Management",
+    "rental_service3_text": "Prepare, organize, and manage lease agreements efficiently to ensure legal compliance and smooth operations.",
+    "rental_service4_title": "Maintenance & Support",
+    "rental_service4_text": "Provide ongoing property maintenance and tenant support to ensure a hassle-free rental experience for landlords and tenants alike.",
+
+    "rental_heading5": "Professional Rental Management Services",
+    "rental_para5": "Streamline your rental property operations with our expert rental management solutions. We help landlords and property managers handle everything from tenant acquisition to lease management and maintenance, ensuring a smooth and profitable rental experience.",
+    "rental_card4_title": "Tenant Screening & Leasing",
+    "rental_card4_text": "Thoroughly screen potential tenants and manage lease agreements efficiently for secure and hassle-free rentals.",
+    "rental_card5_title": "Property Maintenance & Support",
+    "rental_card5_text": "Ensure your property stays in top condition with ongoing maintenance, tenant support, and timely issue resolution.",
+
+    "rental_cta_title": "Ready to Rent or Manage Your Property?",
+    "rental_cta_text": "Let’s discuss your rental property and create a customized plan to maximize returns and ensure smooth management.",
+    "rental_cta_btn": "Get Started",
+       
+  },
+  ar: {
+   "home": "الرئيسية",
+    "home1": "الصفحة الرئيسية 1",
+    "home2": "الصفحة الرئيسية 2",
+    "about": "من نحن",
+    "services": "الخدمات",
+    "allServices": "جميع الخدمات",
+    "service_1": "مساعدة في شراء العقارات",
+    "service_2": "بيع العقارات",
+    "service_3": "خدمات الإيجار",
+    "service_4": "إدارة العقارات",
+    "service_5": "الاستثمار العقاري",
+    "service_6": "الدعم القانوني والتوثيق",
+    "blog": "المدونة",
+    "allPosts": "جميع المقالات",
+    "blog_1": "الاستثمارات العقارية الذكية",
+    "blog_2": "إدارة العقارات الفعالة",
+    "blog_3": "اتجاهات سوق العقارات",
+    "contact": "اتصل بنا",
+    "logout": "تسجيل خروج",
+
+    "footer_about": "مزود رائد لحلول الذكاء الاصطناعي، يساعد الشركات على التحول من خلال التكنولوجيا الذكية وأنظمة الأتمتة المبتكرة.",
+    "footer_quickLinks": "روابط سريعة",
+    "footer_home": "الرئيسية",
+    "footer_home2": "الصفحة الرئيسية 2",
+    "footer_aboutUs": "من نحن",
+    "footer_services": "الخدمات",
+    "footer_blog": "المدونة",
+    "footer_contact": "اتصل بنا",
+    "footer_servicesTitle": "الخدمات",
+    "footer_service1": "مساعدة في شراء العقارات",
+    "footer_service2": "بيع العقارات",
+    "footer_service3": "خدمات الإيجار",
+    "footer_service4": "إدارة الممتلكات",
+    "footer_service5": "الاستثمار العقاري",
+    "footer_service6": "الدعم القانوني والتوثيق",
+    "footer_contactInfo": "معلومات الاتصال",
+    "footer_email": "contact@stackly.ai",
+    "footer_phone": "+1 (555) 123-4567",
+    "footer_address": "123 طريق ابتكار الذكاء الاصطناعي",
+    "footer_bottom": "© 2025 Stackly. جميع الحقوق محفوظة.",
+
+    "rental_title": "خدمات الإيجار",
+    "rental_heading1": "خدمات إيجار احترافية",
+    "rental_intro": "اعثر على العقار أو المستأجر المثالي مع خدمات الإيجار الاحترافية الخاصة بنا. نحن نوفر قوائم موثوقة، ودعمًا لإدارة العقارات، وإرشادات شخصية لضمان تجارب إيجار سلسة ومربحة لكل من الملاك والمستأجرين.",
+    "rental_feature1": "قوائم شاملة للعقارات المؤجرة",
+    "rental_feature2": "فحص واختيار المستأجرين",
+    "rental_feature3": "إدارة عقود الإيجار والوثائق",
+    "rental_feature4": "الصيانة ودعم العقار",
+    "rental_feature5": "حلول إيجار مخصصة",
+    "rental_explore": "استكشاف الخدمات",
+    "rental_request": "طلب المساعدة",
+
+    "rental_heading2": "خدمات إيجار شاملة",
+    "rental_para2": "اجعل عملية الإيجار بسيطة وفعالة مع خدمات الإيجار الاحترافية لدينا. نحن نساعد الملاك والمستأجرين على إيجاد الشريك المناسب، وإدارة العقارات بفعالية، وضمان تجربة إيجار سلسة من البداية حتى النهاية.",
+    "rental_card1_title": "إدراج العقارات والترويج",
+    "rental_card1_text": "اعرض عقارك المؤجر على منصات متعددة، للوصول إلى المستأجرين المناسبين وزيادة الظهور وتأمين الإيجار بسرعة.",
+    "rental_card2_title": "فحص وإدارة المستأجرين",
+    "rental_card2_text": "قم بفحص المستأجرين المحتملين بدقة وإدارة عقود الإيجار والمدفوعات وصيانة العقارات بسهولة.",
+    "rental_card3_title": "دعم العقود والوثائق",
+    "rental_card3_text": "نحن نتولى جميع عقود الإيجار والوثائق والمتطلبات القانونية لضمان معاملات إيجار سلسة وملتزمة وخالية من المتاعب.",
+
+    "rental_heading3": "حلول شاملة لإدارة الإيجار",
+    "rental_para3": "قم بتبسيط إدارة عقاراتك المؤجرة مع خدماتنا الاحترافية. نحن نوفر دعمًا متكاملاً للملاك والمستأجرين لضمان تأجير سلس وعمليات فعالة وعوائد قصوى.",
+    "rental_intro2": "تساعد حلولنا لإدارة الإيجار الملاك ومديري العقارات على تحسين الإشغال وتبسيط العمليات وتوفير تجربة إيجار سلسة للمستأجرين. من إدراج العقارات إلى التعامل مع العقود والصيانة، نحن نغطي جميع جوانب الإيجار باحترافية وعناية.",
+    "rental_step1": "إدراج العقارات والترويج",
+    "rental_step2": "فحص واختيار المستأجرين",
+    "rental_step3": "إعداد عقد الإيجار",
+    "rental_step4": "تحصيل الإيجار وإدارة المدفوعات",
+    "rental_step5": "الصيانة ودعم العقار",
+    "rental_step6": "ملاحظات المستأجرين وإدارة التجديد",
+
+    "rental_heading4": "خدمات إيجار شاملة",
+    "rental_para4": "أدر عقاراتك المؤجرة بكفاءة مع خدماتنا الاحترافية، بدءًا من إدراج العقارات وفحص المستأجرين وصولاً إلى إدارة العقود والصيانة.",
+    "rental_service1_title": "إدراج العقارات والترويج",
+    "rental_service1_text": "قم بإدراج عقاراتك المؤجرة عبر منصات متعددة للوصول إلى المستأجرين بسرعة وفعالية.",
+    "rental_service2_title": "فحص واختيار المستأجرين",
+    "rental_service2_text": "افحص المستأجرين المحتملين بدقة للتأكد من موثوقيتهم وتوافقهم، وضمان إيجارات آمنة.",
+    "rental_service3_title": "إدارة العقود",
+    "rental_service3_text": "إعداد وتنظيم وإدارة عقود الإيجار بكفاءة لضمان الامتثال القانوني وسلاسة العمليات.",
+    "rental_service4_title": "الصيانة والدعم",
+    "rental_service4_text": "توفير صيانة مستمرة للعقار ودعم المستأجرين لضمان تجربة إيجار خالية من المتاعب لكل من الملاك والمستأجرين.",
+
+    "rental_heading5": "خدمات إدارة إيجار احترافية",
+    "rental_para5": "قم بتبسيط عمليات إدارة عقاراتك المؤجرة مع حلولنا الاحترافية. نحن نساعد الملاك ومديري العقارات في كل شيء بدءًا من استقطاب المستأجرين وحتى إدارة العقود والصيانة، لضمان تجربة إيجار سلسة ومربحة.",
+    "rental_card4_title": "فحص المستأجرين والتأجير",
+    "rental_card4_text": "قم بفحص المستأجرين المحتملين بدقة وإدارة عقود الإيجار بكفاءة لتأجير آمن وخالي من المتاعب.",
+    "rental_card5_title": "صيانة العقار والدعم",
+    "rental_card5_text": "تأكد من بقاء عقارك في أفضل حالاته مع الصيانة المستمرة ودعم المستأجرين وحل المشكلات في الوقت المناسب.",
+
+    "rental_cta_title": "هل أنت مستعد لتأجير أو إدارة عقارك؟",
+    "rental_cta_text": "دعنا نناقش عقارك المؤجر وننشئ خطة مخصصة لزيادة العوائد وضمان إدارة سلسة.",
+    "rental_cta_btn": "ابدأ الآن",
+
+     },
+  he: {
+   "home": "בית",
+    "home1": "דף הבית 1",
+    "home2": "דף הבית 2",
+    "about": "אודות",
+    "services": "שירותים",
+    "allServices": "כל השירותים",
+    "service_1": "סיוע ברכישת נכסים",
+    "service_2": "מכירת נכסים",
+    "service_3": "שירותי השכרה",
+    "service_4": "ניהול נכסים",
+    "service_5": "השקעות נדל״ן",
+    "service_6": "תמיכה משפטית ותיעוד",
+    "blog": "בלוג",
+    "allPosts": "כל הפוסטים",
+    "blog_1": "השקעות נדל״ן חכמות",
+    "blog_2": "ניהול נכסים יעיל",
+    "blog_3": "מגמות שוק הנדל״ן",
+    "contact": "צור קשר",
+    "logout": "התנתק",
+
+    "footer_about": "ספק מוביל של פתרונות בינה מלאכותית, מסייע לעסקים להשתנות באמצעות טכנולוגיה חכמה ומערכות אוטומציה חדשניות.",
+    "footer_quickLinks": "קישורים מהירים",
+    "footer_home": "בית",
+    "footer_home2": "בית 2",
+    "footer_aboutUs": "אודותינו",
+    "footer_services": "שירותים",
+    "footer_blog": "בלוג",
+    "footer_contact": "צור קשר",
+    "footer_servicesTitle": "שירותים",
+    "footer_service1": "סיוע ברכישת נכסים",
+    "footer_service2": "מכירת נכסים",
+    "footer_service3": "שירותי השכרה",
+    "footer_service4": "ניהול נכסים",
+    "footer_service5": "השקעות נדל\"ן",
+    "footer_service6": "תמיכה משפטית ותיעוד",
+    "footer_contactInfo": "פרטי קשר",
+    "footer_email": "contact@stackly.ai",
+    "footer_phone": "+1 (555) 123-4567",
+    "footer_address": "123 רחוב חדשנות בינה מלאכותית",
+    "footer_bottom": "© 2025 Stackly. כל הזכויות שמורות.",
+    "rental_title": "שירותי השכרה",
+    "rental_heading1": "שירותי השכרה מקצועיים",
+    "rental_intro": "מצא את הנכס או הדייר המושלם עם שירותי ההשכרה המקצועיים שלנו. אנו מספקים רשימות אמינות, תמיכה בניהול נכסים והכוונה אישית כדי להבטיח חוויות השכרה חלקות ורווחיות עבור בעלי נכסים ודיירים כאחד.",
+    "rental_feature1": "רשימות נכסים להשכרה מקיפות",
+    "rental_feature2": "בדיקת ובחירת דיירים",
+    "rental_feature3": "ניהול חוזי שכירות ותיעוד",
+    "rental_feature4": "תחזוקה ותמיכת נכסים",
+    "rental_feature5": "פתרונות השכרה מותאמים אישית",
+    "rental_explore": "גלה שירותים",
+    "rental_request": "בקש סיוע",
+
+    "rental_heading2": "שירותי השכרה מקיפים",
+    "rental_para2": "הפוך את ההשכרה לפשוטה ויעילה עם שירותי ההשכרה המקצועיים שלנו. אנו עוזרים לבעלי נכסים ודיירים למצוא את ההתאמה הנכונה, לנהל נכסים ביעילות ולהבטיח חווית השכרה חלקה מהתחלה ועד הסוף.",
+    "rental_card1_title": "רשימות נכסים וקידום",
+    "rental_card1_text": "הצג את נכס ההשכרה שלך במספר פלטפורמות, פנה לדיירים המתאימים והגדל את החשיפה כדי לאבטח השכרות במהירות.",
+    "rental_card2_title": "בדיקת וניהול דיירים",
+    "rental_card2_text": "בדוק דיירים פוטנציאליים בקפידה ונהל חוזי שכירות, תשלומים ותחזוקת נכסים בקלות.",
+    "rental_card3_title": "תמיכה בחוזים ותיעוד",
+    "rental_card3_text": "אנו מטפלים בכל חוזי השכירות, החוזים והדרישות החוקיות כדי להבטיח עסקאות השכרה חלקות, תואמות וללא בעיות.",
+
+    "rental_heading3": "פתרונות מקיפים לניהול השכרה",
+    "rental_para3": "ייעל את ניהול נכסי ההשכרה שלך עם השירותים המקצועיים שלנו. אנו מספקים תמיכה מקיפה לבעלי נכסים ודיירים כדי להבטיח השכרה חלקה, תפעול יעיל ותשואות מקסימליות.",
+    "rental_intro2": "הפתרונות שלנו לניהול השכרה מסייעים לבעלי נכסים ומנהלי נכסים לייעל תפוסה, לשפר תהליכים ולספק לדיירים חווית השכרה חלקה. מהצגת נכסים ועד לטיפול בחוזים ותחזוקה, אנו מכסים כל היבט של השכרה במקצועיות ובזהירות.",
+    "rental_step1": "רשימת נכסים וקידום",
+    "rental_step2": "בדיקת ובחירת דיירים",
+    "rental_step3": "הכנת חוזה שכירות",
+    "rental_step4": "גביית שכר דירה וניהול תשלומים",
+    "rental_step5": "תחזוקה ותמיכת נכסים",
+    "rental_step6": "משוב דיירים וניהול חידושים",
+
+    "rental_heading4": "שירותי השכרה מקיפים",
+    "rental_para4": "נהל את נכסי ההשכרה שלך ביעילות עם השירותים המקצועיים שלנו, החל מהצגת נכסים ובדיקת דיירים ועד לניהול חוזים ותחזוקה.",
+    "rental_service1_title": "רשימת נכסים וקידום",
+    "rental_service1_text": "רשום את נכסי ההשכרה שלך במספר פלטפורמות והגיע לדיירים פוטנציאליים במהירות וביעילות.",
+    "rental_service2_title": "בדיקת ובחירת דיירים",
+    "rental_service2_text": "בדוק בקפידה דיירים פוטנציאליים כדי להבטיח אמינות והתאמה, ולהבטיח השכרות בטוחות.",
+    "rental_service3_title": "ניהול חוזים",
+    "rental_service3_text": "הכן, ארגן ונהל חוזי שכירות ביעילות כדי להבטיח תאימות חוקית ותהליכים חלקים.",
+    "rental_service4_title": "תחזוקה ותמיכה",
+    "rental_service4_text": "ספק תחזוקה שוטפת לנכס ותמיכה לדיירים כדי להבטיח חווית השכרה חלקה לבעלי נכסים ודיירים כאחד.",
+
+    "rental_heading5": "שירותי ניהול השכרה מקצועיים",
+    "rental_para5": "ייעל את תפעול נכסי ההשכרה שלך עם פתרונות הניהול המקצועיים שלנו. אנו עוזרים לבעלי נכסים ומנהלי נכסים לטפל בכל דבר, החל מגיוס דיירים ועד לניהול חוזים ותחזוקה, כדי להבטיח חווית השכרה חלקה ורווחית.",
+    "rental_card4_title": "בדיקת דיירים והשכרה",
+    "rental_card4_text": "בדוק בקפידה דיירים פוטנציאליים ונהל חוזי שכירות ביעילות להשכרות בטוחות וללא בעיות.",
+    "rental_card5_title": "תחזוקת נכסים ותמיכה",
+    "rental_card5_text": "ודא שהנכס שלך נשאר במצב מצוין עם תחזוקה שוטפת, תמיכת דיירים ופתרון בעיות בזמן.",
+
+    "rental_cta_title": "מוכן להשכיר או לנהל את הנכס שלך?",
+    "rental_cta_text": "בוא נדון בנכס ההשכרה שלך וניצור תוכנית מותאמת אישית כדי למקסם תשואות ולהבטיח ניהול חלק.",
+    "rental_cta_btn": "התחל עכשיו",
+        
   }
+};
+
+// Function to change language
+function changeLanguage(lang) {
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if(translations[lang] && translations[lang][key]) {
+      el.innerText = translations[lang][key];
+    }
+  });
+
+  // Handle RTL for Arabic & Hebrew
+  if(lang === "ar" || lang === "he") {
+    document.documentElement.dir = "rtl";
+  } else {
+    document.documentElement.dir = "ltr";
+  }
+}
+
+// Optional: automatically switch to selected language on page load
+document.addEventListener("DOMContentLoaded", () => {
+  const langSelect = document.getElementById("langSelect");
+  changeLanguage(langSelect.value);
+});
+</script>
+
+
+
+
+
+<script>
+  // Mobile menu setup
+  const hamburger = document.getElementById("hamburger");
+  const hamburgerMenu = document.getElementById("hamburgerMenu");
+
+  // Show/hide mobile menu on hamburger click
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    hamburgerMenu.classList.toggle("active");
+  });
+
+  // Toggle dropdowns for mobile menu
+  document.querySelectorAll('.mobile-dropdown-parent > span').forEach(link => {
+    link.addEventListener('click', function() {
+      const parentLi = this.parentElement;
+      const dropdown = parentLi.querySelector('.mobile-dropdown');
+      dropdown.classList.toggle('active');
+    });
+  });
+
+  // Desktop dropdown toggle logic
+  document.querySelectorAll('.nav-item.dropdown > .nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelectorAll('.dropdown-menu').forEach(menu => {
+        if (menu !== this.nextElementSibling) {
+          menu.classList.remove('active');
+        }
+      });
+      const dropdownMenu = this.nextElementSibling;
+      if (dropdownMenu) {
+        dropdownMenu.classList.toggle('active');
+      }
+    });
+  });
+
+  // Redirect on desktop dropdown menu item click
+  document.querySelectorAll('.dropdown-menu a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href && href !== "#") {
+        window.location.href = href;
+        document.querySelectorAll('.dropdown-menu').forEach(menu => menu.classList.remove('active'));
+      }
+    });
+  });
+
+  // Redirect on normal nav link click
+  document.querySelectorAll('.nav-menu > .nav-item:not(.dropdown) .nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href && href !== "#") {
+        window.location.href = href;
+      }
+    });
+  });
+
+  // Auth link toggle for desktop and mobile
+  function setupAuthLinks() {
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    const authLinks = [document.getElementById("authLink"), document.getElementById("mobileAuthLink")];
+
+    authLinks.forEach(link => {
+      if (!link) return;
+      if (isLoggedIn) {
+        link.innerText = "Logout";
+        link.href = "#";
+        link.onclick = (e) => {
+          e.preventDefault();
+          localStorage.removeItem("isLoggedIn");
+          localStorage.removeItem("currentUser");
+          window.location.href = "index.html";
+        };
+      } else {
+        link.innerText = "Login";
+        link.href = "index.html";
+        link.onclick = null;
+      }
+    });
+  }
+  setupAuthLinks();
 
   // Theme toggle
   const toggleBtn = document.getElementById('toggleBtn');
   let darkMode = localStorage.getItem('darkMode') === 'true';
 
-  // Apply initial theme
   function applyTheme() {
     if (darkMode) {
       document.body.classList.add('dark-mode');
@@ -152,125 +728,248 @@ hamburger.addEventListener("click", () => {
     localStorage.setItem('darkMode', darkMode);
     applyTheme();
   });
-
-  // Call once to apply the theme on initial load
   applyTheme();
 
-  // Avatar initials
-const avatarCircle = document.querySelector('.avatar-circle');
-const currentUserEmail = localStorage.getItem("currentUser");
-const users = JSON.parse(localStorage.getItem("users")) || {};
-if (currentUserEmail && users[currentUserEmail]) {
-  const firstName = users[currentUserEmail].firstName || "";
-  const lastName = users[currentUserEmail].lastName || "";
-  const initials = (firstName[0] || "").toUpperCase() + (lastName[0] || "").toUpperCase();
-  avatarCircle.innerHTML = `<span style="
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #23272f;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-  ">${initials}</span>`;
-} else {
-  avatarCircle.innerHTML = `<span style="
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #23272f;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-  ">?</span>`;
-}
+  // Avatar initials logic
+  const avatarCircle = document.getElementById('avatarCircle');
+  const avatarInitials = document.getElementById('avatarInitials');
+  const avatarDropdown = document.getElementById('avatarDropdown');
+  const logoutBtn = document.getElementById('logoutBtn');
+  const currentUserEmail = localStorage.getItem("currentUser");
+  const users = JSON.parse(localStorage.getItem("users")) || {};
 
-// Hamburger toggle for mobile
+  if (currentUserEmail && users[currentUserEmail]) {
+    const firstName = users[currentUserEmail].firstName || "";
+    const lastName = users[currentUserEmail].lastName || "";
+    const initials = (firstName[0] || "").toUpperCase() + (lastName[0] || "").toUpperCase();
+    avatarInitials.textContent = initials;
+  } else {
+    avatarInitials.textContent = "?";
+  }
 
+  // Show/hide avatar dropdown on click
+  avatarCircle.addEventListener('click', function(e) {
+    e.stopPropagation();
+    avatarDropdown.style.display = avatarDropdown.style.display === "block" ? "none" : "block";
+  });
+
+  document.addEventListener('click', function(e) {
+    if (!avatarCircle.contains(e.target) && !avatarDropdown.contains(e.target)) {
+      avatarDropdown.style.display = "none";
+    }
+  });
+
+  // Logout action
+  logoutBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("currentUser");
+    window.location.href = "index.html";
+  });
 </script>
 
-<!-- ✅ CSS for hamburger -->
 <style>
+  /* Base styles for hamburger icon */
   .hamburger {
     display: none;
     flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
     cursor: pointer;
+    z-index: 1000;
   }
+
   .hamburger span {
-    height: 3px;
-    width: 25px;
-    background: #333;
-    margin: 4px 0;
-    border-radius: 5px;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
   }
+
+  .dark-mode .hamburger span {
+    background-color: #fff;
+  }
+
+  /* Hamburger menu animation */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* Hide navigation on mobile */
   @media (max-width: 768px) {
     .nav-menu {
       display: none;
-      flex-direction: column;
-      background: #fff;
-      position: absolute;
-      top: 70px;
-      right: 20px;
-      width: 200px;
-      padding: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    }
-    .nav-menu.active {
-      display: flex;
     }
     .hamburger {
       display: flex;
     }
-    .nav-item {
-      margin: 10px 0;
-    }
+  }
+
+  /* Styles for the mobile hamburger menu */
+  .mobile-menu-wrapper {
+    position: relative;
+  }
+
+  .hamburger-menu {
+    display: none;
+    flex-direction: column;
+    background: #23272f;
+    color: #fff;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 220px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+    padding: 20px 0;
+    z-index: 9999;
+    list-style: none;
+  }
+
+  .hamburger-menu.active {
+    display: flex;
+  }
+
+  .hamburger-menu li {
+    padding: 10px 24px;
+    border-bottom: 1px solid #333;
+  }
+
+  .hamburger-menu li:last-child {
+    border-bottom: none;
+  }
+
+  .hamburger-menu a,
+  .hamburger-menu span {
+    color: #00f7ff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: block;
+    cursor: pointer;
+    font-weight: 500;
+  }
+
+  .hamburger-menu ul {
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 5px;
+  }
+
+  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown {
+    display: none;
+  }
+
+  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown.active {
+    display: block;
   }
 
   .toggle-btn {
-  background: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 38px;
-  height: 38px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  cursor: pointer;
-  transition: background 0.2s;
-}
-.toggle-btn:hover {
-  background: #f0f0f0;
-}
-.avatar-circle {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-left: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #eee;
-}
-.avatar-circle img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-@media (max-width: 768px) {
-  .toggle-btn, .avatar-circle {
-    margin-left: 8px;
-    width: 32px;
-    height: 32px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: background 0.2s;
   }
-}
+
+  .toggle-btn:hover {
+    background: #f0f0f0;
+  }
+
+  .avatar-circle {
+    position: relative;
+    cursor: pointer;
+    z-index: 1001;
+    overflow: visible;
+  }
+
+  .avatar-circle {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eee;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .avatar-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .avatar-dropdown {
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 140px;
+    background: #fff;
+    min-width: 100px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+    border-radius: 8px;
+    z-index: 1002;
+    padding: 4px 0;
+  }
+
+  .avatar-dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .avatar-dropdown li {
+    padding: 6px 12px;
+  }
+
+  .avatar-dropdown a {
+    color: #23272f;
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: block;
+    border-radius: 4px;
+    transition: background 0.2s;
+  }
+
+  .avatar-dropdown a:hover {
+    background: #f0f0f0;
+  }
+
+  @media (max-width: 768px) {
+    .toggle-btn,
+    .avatar-circle {
+      margin-left: 8px;
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .hamburger-menu {
+      display: none !important;
+    }
+  }
 </style>
 
 <!-- 🔷 Protest home page  -->
@@ -291,21 +990,9 @@ if (currentUserEmail && users[currentUserEmail]) {
     }
   </script>
 
-<!-- 🔷 HERO SECTION START -->
 
-<section class="ai-hero-section">
-  <video autoplay muted loop playsinline class="ai-hero-bg-video">
-    <source src="https://videos.pexels.com/video-files/5725960/5725960-uhd_2560_1440_30fps.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
 
-  <div class="ai-hero-overlay">
-    <div class="ai-hero-content">
-      <h1 class="ai-hero-title ai-glow animate-ai-slide-in">Data Analytics</h1>
-      
-    </div>
-  </div>
-</section>
+<!-- Section : 1 -->
 
 <style>
 
@@ -427,46 +1114,17 @@ if (currentUserEmail && users[currentUserEmail]) {
     .ai-hero-paragraph { font-size: 0.9rem; }
   }
 </style>
-<!-- 🔷 HERO SECTION END -->
 
-<section class="ai-section">
-    <h1 class="ai-heading">Advanced Data Analytics Solutions</h1>
-    <div class="ai-content">
-        <div class="ai-text">
-            <p>
-                Transform your raw data into actionable business intelligence with our 
-                comprehensive data analytics services. We help organizations unlock the hidden 
-                value in their data through sophisticated analysis techniques,
-                 predictive modeling, and intuitive visualization tools.
-            </p>
 
-            <!-- Feature Points -->
-            <ul class="hero-features fade-in-up delay-2">
-                <li><span>✔</span> Real-Time Data Processing</li>
-                <li><span>✔</span> Predictive & Prescriptive Insights</li>
-                <li><span>✔</span> Interactive Dashboards & Visualization</li>
-                <li><span>✔</span> Big Data Integration & Scalability</li>
-                <li><span>✔</span> Data-Driven Decision Making</li>
-            </ul>
 
-            <div class="ai-buttons">
-                <a href="services.html" class="btn btn-primary">Explore Services</a>
-                <a href="contact.html" class="btn btn-primary">Get started</a>
-            </div>
-        </div>
-
-        <div class="ai-image">
-            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1000&h=700&fit=crop&auto=format" alt="AI Solutions">
-        </div>
-    </div>
-</section>
+<!-- Section : 2 -->
 
 <style>
 :root {
     --black: #000;
     --dark-gray: #444;
     --white: #fff;
-    --blue: #007bff;
+    --blue: #0b1945;
     --shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -522,7 +1180,7 @@ if (currentUserEmail && users[currentUserEmail]) {
 }
 
 .ai-buttons .btn:hover {
-    background-color: #0056b3;
+    background-color: #0b1945;
 }
 
 /* Features List */
@@ -639,62 +1297,7 @@ if (currentUserEmail && users[currentUserEmail]) {
 
 
 
-
-  
-
-    <!-- Section 2: Development Capabilities -->
-    <!-- Advanced Features Section -->
-<section class="advanced-features">
-  <div class="advanced-features-container">
-    <!-- Section Header -->
-    <div class="features-header fade-in-up">
-      <h2>Data Analytics Capabilities</h2>
-      <p>
-        Our comprehensive analytics services help organizations make data-driven 
-        decisions through advanced statistical analysis, visualization, and predictive modeling techniques.
-      </p>
-    </div>
-
-    <!-- Features Grid -->
-    <div class="features-cards">
-      <!-- Card 1 -->
-      <div class="feature-box fade-in-up delay-1">
-        <div class="feature-icon">
-          <i class="fas fa-chart-bar"></i>
-        </div>
-        <h3>Business Intelligence</h3>
-        <p>
-          Transform complex data into clear, actionable insights through interactive dashboards,
-           reports, and visualization tools that enable informed decision-making across all organizational levels.
-        </p>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="feature-box fade-in-up delay-2">
-        <div class="feature-icon">
-          <i class="fas fa-search"></i>
-        </div>
-        <h3>Predictive Analytics</h3>
-        <p>
-          Utilize advanced statistical models and machine learning algorithms to 
-          forecast future trends, customer behavior, and market conditions with high accuracy and reliability.
-        </p>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="feature-box fade-in-up delay-3">
-        <div class="feature-icon">
-          <i class="fas fa-database"></i>
-        </div>
-        <h3>Data Engineering</h3>
-        <p>
-          Build robust data pipelines and infrastructure that ensure clean, accessible, 
-          and scalable data management for comprehensive analytics and reporting capabilities.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- Section : 3 -->
 
 <style>
 /* Section Styling */
@@ -754,7 +1357,7 @@ if (currentUserEmail && users[currentUserEmail]) {
 
 .feature-icon {
   font-size: 2.2rem;
-  color: #007bff;
+  color: #0b1945; /* golden theme */
   margin-bottom: 15px;
 }
 
@@ -827,55 +1430,16 @@ if (currentUserEmail && users[currentUserEmail]) {
 
 
 
-    <!-- Section 3: Development Process -->
-   <!-- Advanced Development Process Section -->
-<section class="development-process">
-  <div class="development-process-container">
 
-    <!-- Top Heading -->
-    <div class="process-header fade-in-up">
-      <h2>Our Analytics Process</h2>
-      <p>
-        We adopt an agile and transparent methodology for Data Analytics. 
-      </p>
-    </div>
+    
 
-    <!-- Content Row -->
-    <div class="process-row">
-      <!-- Left Image -->
-      <div class="process-image slide-in-right">
-        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&h=600&fit=crop&auto=format" alt="AI Development Process">
-      </div>
-
-      <!-- Right Content -->
-      <div class="process-content fade-in-up delay-1">
-        <!-- Paragraph intro -->
-        <p class="process-intro">
-          We follow a systematic approach to data analytics that ensures comprehensive
-           analysis, accurate insights, and actionable recommendations tailored to your 
-           business objectives and industry requirements.
-        </p>
-
-        <!-- Steps -->
-        <div class="process-steps">
-          <div class="step"><span class="step-number">01</span><p>Data Collection & Integration</p></div>
-          <div class="step"><span class="step-number">02</span><p>Data Cleaning & Preparation</p></div>
-          <div class="step"><span class="step-number">03</span><p>Statistical Analysis & Modeling</p></div>
-          <div class="step"><span class="step-number">04</span><p>Visualization & Dashboard Creation</p></div>
-          <div class="step"><span class="step-number">05</span><p>Insights Generation & Reporting</p></div>
-          <div class="step"><span class="step-number">06</span><p>Continuous Monitoring & Optimization</p></div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
+<!-- Section : 4 -->
 
 <style>
 /* Section Base */
 .development-process {
   width: 100%;
-  background: #ffffff;
+  background: #ffffff; /* updated background */
   padding: 30px 20px 50px;
   box-sizing: border-box;
 }
@@ -944,7 +1508,7 @@ if (currentUserEmail && users[currentUserEmail]) {
   margin-bottom: 16px;
 }
 .step-number {
-  background: #007bff;
+  background: #0b1945; /* updated golden accent */
   color: #fff;
   font-weight: 700;
   font-size: 1rem;
@@ -988,26 +1552,23 @@ if (currentUserEmail && users[currentUserEmail]) {
   }
 }
 
-/* 📱 Mobile Responsive */
-
-
-  /* Responsive */
+/* Responsive */
 @media (max-width: 992px) {
   .process-row {
     flex-direction: column;
     text-align: center;
-    gap: 30px; /* reduce gap */
+    gap: 30px;
   }
 
   .process-image,
   .process-content {
-    flex: 1 1 auto;   /* reset the 600px flex-basis */
-    width: 100%;      /* force full width */
-    max-width: 100%;  /* prevent overflow */
+    flex: 1 1 auto;
+    width: 100%;
+    max-width: 100%;
   }
 
   .process-image img {
-    width: 100%;  /* responsive image */
+    width: 100%;
     height: auto;
     border-radius: 15px;
   }
@@ -1018,8 +1579,6 @@ if (currentUserEmail && users[currentUserEmail]) {
     padding: 0 15px;
   }
 }
-
-
 
 @media (max-width: 600px) {
   .development-process {
@@ -1050,41 +1609,14 @@ if (currentUserEmail && users[currentUserEmail]) {
 </style>
 
 
-    <!-- Section 4: Technologies & Tools -->
-   <section class="tech-showcase">
-  <div class="tech-container">
-    <!-- Heading -->
-    <div class="tech-header animate-fade-up">
-      <h2>Advanced Data Analytics Solutions</h2>
-      <p>We empower businesses with data-driven strategies by leveraging advanced analytics 
-       to uncover insights, optimize operations, and drive smarter decisions.</p>
-    </div>
+    
 
-    <!-- Grid -->
-    <div class="tech-grid">
-      <div class="tech-card animate-slide-up delay-1">
-        <h3>Real-Time Processing</h3>
-        <p>Analyze data instantly for faster decision-making and operational efficiency.</p>
-      </div>
-      <div class="tech-card animate-slide-up delay-2">
-        <h3>Predictive Insights</h3>
-        <p>Use statistical models and machine learning to forecast trends and outcomes.</p>
-      </div>
-      <div class="tech-card animate-slide-up delay-3">
-        <h3>Interactive Dashboards</h3>
-        <p>Deliver powerful visualizations for tracking performance and KPIs with ease.</p>
-      </div>
-      <div class="tech-card animate-slide-up delay-4">
-        <h3>Big Data Integration</h3>
-        <p>Seamlessly manage and analyze structured and unstructured large-scale data.</p>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- Section : 5 -->
+
 
 <style>
 /* Section Styling */
-.tech-showcase {
+.service-showcase {
   width: 100%;
   padding: 50px;
   background: #edf0ee;
@@ -1092,20 +1624,20 @@ if (currentUserEmail && users[currentUserEmail]) {
   justify-content: center;
 }
 
-.tech-container {
+.service-container {
   max-width: 1450px;
   width: 100%;
   text-align: center;
 }
 
 /* Header */
-.tech-header h2 {
+.service-header h2 {
   font-size: 2.5rem;
   color: #000;
   margin-bottom: 15px;
 }
 
-.tech-header p {
+.service-header p {
   font-size: 1.1rem;
   color: #333;
   max-width: 800px;
@@ -1114,14 +1646,14 @@ if (currentUserEmail && users[currentUserEmail]) {
 }
 
 /* Grid */
-.tech-grid {
+.service-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 }
 
 /* Card */
-.tech-card {
+.service-card {
   background: #fff;
   padding: 30px;
   border-radius: 15px;
@@ -1130,19 +1662,19 @@ if (currentUserEmail && users[currentUserEmail]) {
   text-align: left;
 }
 
-.tech-card h3 {
+.service-card h3 {
   font-size: 1.5rem;
-  color: #007bff;
+  color: #0b1945; /* gold accent */
   margin-bottom: 10px;
 }
 
-.tech-card p {
+.service-card p {
   font-size: 1rem;
   color: #000;
   line-height: 1.6;
 }
 
-.tech-card:hover {
+.service-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.12);
 }
@@ -1181,95 +1713,60 @@ if (currentUserEmail && users[currentUserEmail]) {
 
 /* ✅ Mobile View */
 @media (max-width: 768px) {
-  .tech-showcase {
-    padding: 30px 20px; /* reduce padding */
+  .service-showcase {
+    padding: 30px 20px;
   }
 
-  .tech-header h2 {
+  .service-header h2 {
     font-size: 1.8rem;
   }
 
-  .tech-header p {
+  .service-header p {
     font-size: 1rem;
     margin-bottom: 25px;
     padding: 0 10px;
   }
 
-  .tech-grid {
-    grid-template-columns: 1fr; /* 1 card per row */
+  .service-grid {
+    grid-template-columns: 1fr;
     gap: 20px;
   }
 
-  .tech-card {
+  .service-card {
     padding: 20px;
-    text-align: center; /* center content */
+    text-align: center;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   }
 
-  .tech-card h3 {
+  .service-card h3 {
     font-size: 1.3rem;
   }
 
-  .tech-card p {
+  .service-card p {
     font-size: 0.95rem;
     line-height: 1.5;
   }
 }
 </style>
 
-<!-- Section 4: End -->
 
-<!-- Section 5: Projects -->  
 
-    <section class="projects-success">
-  <div class="projects-container">
-    <!-- Left Side (Image) -->
-    <div class="projects-image animate-slide-in">
-      <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&auto=format" alt="AI Project Success">
-    </div>
 
-    <!-- Right Side (Content) -->
-    <div class="projects-content">
-      <h2 class="animate-fade-up">Recent Project Success</h2>
-      <p class="animate-fade-up delay-1" style="text-align: justify;">
-        Our data analytics solutions have helped organizations across various
-         industries gain valuable insights and make informed decisions that drive
-          growth and operational excellence.
-      </p>
 
-      <!-- Testimonial Card 1 -->
-      <div class="project-card animate-fade-up delay-2">
-        <blockquote>
-          “Stackly's analytics dashboard provided us with real-time insights that increased our sales by
-          <span class="highlight">25%</span> and reduced operational costs by 
-          <span class="highlight">15%</span>. The data visualization is exceptional.”
-        </blockquote>
-        <cite>- Patricia Williams, Business Intelligence Director</cite>
-      </div>
+<!-- Section : 6 --> 
 
-      <!-- Testimonial Card 2 -->
-      <div class="project-card animate-fade-up delay-3">
-        <blockquote>
-          “The predictive analytics model helped us optimize our marketing campaigns, resulting in  
-          <span class="highlight">40%</span> better ROI and improved customer targeting accuracy.”
-        </blockquote>
-        <cite>- Carlos Rodriguez, Marketing Manager</cite>
-      </div>
-    </div>
-  </div>
-</section>
 
 <style>
 /* Section Styling */
-.projects-success {
+.bookkeeping-services {
   width: 100%;
   padding: 40px 50px;
-  background: #fff;
+  background: #ffffff;
   display: flex;
   justify-content: center;
 }
 
-.projects-container {
+.services-container {
   max-width: 1450px;
   width: 100%;
   display: grid;
@@ -1279,7 +1776,7 @@ if (currentUserEmail && users[currentUserEmail]) {
 }
 
 /* Image */
-.projects-image img {
+.services-image img {
   width: 100%;
   height: auto;
   border-radius: 20px;
@@ -1287,71 +1784,52 @@ if (currentUserEmail && users[currentUserEmail]) {
   transition: transform 0.4s ease;
   display: block;
 }
-.projects-image img:hover {
+.services-image img:hover {
   transform: scale(1.03);
 }
 
 /* Content */
-.projects-content h2 {
+.services-content h2 {
   font-size: 2.5rem;
   color: #000;
   margin-bottom: 10px;
 }
 
-.projects-content p {
+.services-content p {
   font-size: 1.1rem;
   color: #333;
   margin-bottom: 20px;
   line-height: 1.7;
 }
 
-/* Testimonial Cards */
-.project-card {
-  background: #edf0ee;
+/* Service Cards */
+.service-card {
+  background: #fff;
   padding: 25px;
   border-radius: 16px;
   margin-bottom: 15px;
   position: relative;
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
+  border: 5px solid #0b1945;
 }
 
-/* Gradient border effect */
-.project-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  padding: 3px; /* border thickness */
-  border-radius: 16px;
-  background: linear-gradient(135deg, #007bff, #00c6ff);
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-          mask-composite: exclude;
-  pointer-events: none;
-}
 
-.project-card:hover {
+
+.service-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 8px 25px rgba(0,0,0,0.12);
 }
 
-.project-card blockquote {
-  font-size: 1.05rem;
+.service-card h3 {
+  font-size: 1.2rem;
+  color: #0b1945;
+  margin-bottom: 8px;
+}
+.service-card p {
+  font-size: 1rem;
   color: #000;
   line-height: 1.6;
-  margin-bottom: 10px;
-}
-.project-card cite {
-  font-size: 0.95rem;
-  font-weight: bold;
-  color: #007bff;
-}
-.highlight {
-  color: #007bff;
-  font-weight: bold;
 }
 
 /* Animations */
@@ -1379,65 +1857,57 @@ if (currentUserEmail && users[currentUserEmail]) {
 
 /* Responsive Fixes */
 @media (max-width: 1024px) {
-  .projects-container {
+  .services-container {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-  .projects-content h2 {
+  .services-content h2 {
     font-size: 2rem;
   }
 }
 
 @media (max-width: 768px) {
-  .projects-success {
+  .bookkeeping-services {
     padding: 20px;
   }
-  .projects-image img {
+  .services-image img {
     width: 100%;
-    height: auto;   /* prevent fixed height issues */
+    height: auto;
     object-fit: cover;
   }
-  .projects-content h2 {
+  .services-content h2 {
     font-size: 1.8rem;
   }
-  .projects-content p {
+  .services-content p {
     font-size: 1rem;
   }
-  .project-card {
+  .service-card {
     padding: 18px;
   }
 }
 
 @media (max-width: 480px) {
-  .projects-content h2 {
+  .services-content h2 {
     font-size: 1.5rem;
   }
-  .projects-content p {
+  .services-content p {
     font-size: 0.95rem;
   }
-  .project-card blockquote {
-    font-size: 0.95rem;
+  .service-card h3 {
+    font-size: 1.05rem;
   }
 }
 </style>
 
 
 
-    <!-- Section 6: Contact Banner -->
-<section class="contact-banner section-padding">
-    <div class="container">
-        <div class="contact-banner-content">
-            <h2>Ready to Build Your Custom AI Solution?</h2>
-            <p>Let's discuss your requirements and create a tailored AI development plan.</p>
-            <a href="contact.html" class="btn btn-primary">Start Development</a>
-        </div>
-    </div>
-</section>
+
+ <!-- Section : 7 -->
 
 <style>
     .contact-banner {
         background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                    url('https://images.pexels.com/photos/8867275/pexels-photo-8867275.jpeg');
+                    url('https://i.pinimg.com/1200x/17/f2/30/17f2300d155ca92f7c5279d7859ac03e.jpg');
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
@@ -1506,16 +1976,17 @@ if (currentUserEmail && users[currentUserEmail]) {
 
 
     <!-- Footer -->
-     <footer class="footer">
+  <!-- Footer -->
+<footer class="footer">
   <div class="container">
     <div class="footer-content">
       <!-- Logo & About -->
-      <div class="footer-section">
+      <div class="footer-section footer-section1">
         <div class="logo">
-          <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 40px; width: 80px;">
+          <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 50px; width: 80px;">
         </div>
         <p class="text-justify">
-          Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.
+          <span data-i18n="footer_about">Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.</span>
         </p>
         <div class="social-links">
           <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
@@ -1526,48 +1997,49 @@ if (currentUserEmail && users[currentUserEmail]) {
       </div>
 
       <!-- Quick Links -->
-      <div class="footer-section">
-        <h4>Quick Links</h4>
+      <div class="footer-section footer-section2">
+        <h4 data-i18n="footer_quickLinks">Quick Links</h4>
         <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="home2.html">Home 2</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="home.html"><span data-i18n="footer_home">Home</span></a></li>
+          <li><a href="home2.html"><span data-i18n="footer_home2">Home 2</span></a></li>
+          <li><a href="about.html"><span data-i18n="footer_aboutUs">About Us</span></a></li>
+          <li><a href="services.html"><span data-i18n="footer_services">Services</span></a></li>
+          <li><a href="blog.html"><span data-i18n="footer_blog">Blog</span></a></li>
+          <li><a href="contact.html"><span data-i18n="footer_contact">Contact</span></a></li>
         </ul>
       </div>
 
       <!-- Services -->
-      <div class="footer-section">
-        <h4>Services</h4>
+      <div class="footer-section footer-section3">
+        <h4 data-i18n="footer_servicesTitle">Services</h4>
         <ul>
-          <li><a href="service1.html">AI Development</a></li>
-          <li><a href="service2.html">Machine Learning</a></li>
-          <li><a href="service3.html">Data Analytics</a></li>
-          <li><a href="service4.html">Automation</a></li>
-          <li><a href="service5.html">AI Consulting</a></li>
-          <li><a href="service6.html">AI Integration</a></li>
+          <li><a href="service1.html"><span data-i18n="footer_service1">Property Buying Assistance</span></a></li>
+          <li><a href="service2.html"><span data-i18n="footer_service2">Property Selling</span></a></li>
+          <li><a href="service3.html"><span data-i18n="footer_service3">Rental Services</span></a></li>
+          <li><a href="service4.html"><span data-i18n="footer_service4">Property Management</span></a></li>
+          <li><a href="service5.html"><span data-i18n="footer_service5">Real Estate Investment</span></a></li>
+          <li><a href="service6.html"><span data-i18n="footer_service6">Legal & Documentation Support</span></a></li>
         </ul>
       </div>
 
       <!-- Contact Info -->
-      <div class="footer-section">
-        <h4>Contact Info</h4>
+      <div class="footer-section footer-section4">
+        <h4 data-i18n="footer_contactInfo">Contact Info</h4>
         <ul>
-          <li><i class="fas fa-envelope"></i> contact@stackly.ai</li>
-          <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-          <li><i class="fas fa-map-marker-alt"></i> 123 AI Innovation Drive</li>
+          <li><i class="fas fa-envelope"></i> <span data-i18n="footer_email">contact@stackly.ai</span></li>
+          <li><i class="fas fa-phone"></i> <span data-i18n="footer_phone">+1 (555) 123-4567</span></li>
+          <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer_address">123 AI Innovation Drive</span></li>
         </ul>
       </div>
     </div>
 
     <!-- Bottom Bar -->
     <div class="footer-bottom">
-      <p>&copy; 2025 Stackly. All rights reserved.</p>
+      <p><span data-i18n="footer_bottom">&copy; 2025 Stackly. All rights reserved.</span></p>
     </div>
   </div>
-</footer>
+</footer> 
+
 
 <style>
 .footer {
@@ -1575,6 +2047,14 @@ if (currentUserEmail && users[currentUserEmail]) {
   color: #fff;
   padding: 50px 20px 20px;
   font-family: Arial, sans-serif;
+}
+
+.footer-section1{
+  margin-right: 150px;
+}
+
+.footer-section4{
+  margin-left: 50px;
 }
 
 .footer .footer-content {
@@ -1609,7 +2089,7 @@ if (currentUserEmail && users[currentUserEmail]) {
 }
 
 .footer .footer-section ul li a:hover {
-  color: #00c3ff;
+  color: #a68e4c;
 }
 
 .footer .social-links a {
@@ -1620,7 +2100,7 @@ if (currentUserEmail && users[currentUserEmail]) {
 }
 
 .footer .social-links a:hover {
-  color: #00c3ff;
+  color: #000000;
 }
 
 .footer .footer-bottom {
@@ -1636,24 +2116,35 @@ if (currentUserEmail && users[currentUserEmail]) {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
+  .footer-section1{
+  margin-right: 5px;
+}
 }
 
 @media (max-width: 600px) {
   .footer .footer-content {
     grid-template-columns: 1fr;
-    text-align: center;
+    text-align: left;
   }
   .footer .social-links {
     margin-top: 15px;
   }
+  .footer-section1{
+  margin-right: 10px;
+}
+  .footer-section2{
+  margin-right: 10px;
+}
+.footer-section4{
+  margin-left: 1px;
+}
 }
 </style>
-
+</div>
 
     <script src="assets/js/script.js"></script>
 </body>
 </html>
-
 
 <style>
 /* --- DARK MODE OVERRIDES --- */
@@ -1696,6 +2187,10 @@ body.dark-mode .ai-hero-paragraph {
 }
 
 body.dark-mode .ai-section,
+
+body.dark-mode .service-showcase,
+body.dark-mode .bookkeeping-services,
+body.dark-mode .service-card,
 body.dark-mode .ai-heading,
 body.dark-mode .ai-content,
 body.dark-mode .ai-text,
