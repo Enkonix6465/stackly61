@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stackly- Realestate</title>
+    <title>Stackly- Charity</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -14,8 +14,10 @@
 </div>
 
 <div id="content" style="display:none;"></div>
-    <!-- Sticky Header -->
-   <header class="header">
+
+  <!-- Sticky Header -->
+
+  <header class="header">
   <div class="container">
     <div class="nav-wrapper">
       <div class="logo">
@@ -36,21 +38,21 @@
             <a href="#" class="nav-link"><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
               <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
-              <li><a href="service1.html"><span data-i18n="service_1">Property Buying Assistance</span></a></li>
-              <li><a href="service2.html"><span data-i18n="service_2">Property Selling</span></a></li>
-              <li><a href="service3.html"><span data-i18n="service_3">Rental Services </span></a></li>
-              <li><a href="service4.html"><span data-i18n="service_4">Property Management</span></a></li>
-              <li><a href="service5.html"><span data-i18n="service_5">Real Estate Investment</span></a></li>
-              <li><a href="service6.html"><span data-i18n="service_6">Legal & Documentation Support</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Service_1</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Service_2</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Service_3</span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Service_4</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Service_5</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service_6">Service_6</span></a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
             <a href="#" class="nav-link"><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
               <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
-              <li><a href="blog1.html"><span data-i18n="blog_1">Smart Property Investments</span></a></li>
-              <li><a href="blog2.html"><span data-i18n="blog_2">Effective Property Management</span></a></li>
-              <li><a href="blog3.html"><span data-i18n="blog_3">Real Estate Market Trends</span></a></li>
+              <li><a href="blog1.html"><span data-i18n="blog_1">blog_1</span></a></li>
+              <li><a href="blog2.html"><span data-i18n="blog_2">blog_2</span></a></li>
+              <li><a href="blog3.html"><span data-i18n="blog_3">blog_3</span></a></li>
             </ul>
           </li>
           <li class="nav-item"><a href="contact.html" class="nav-link"><span data-i18n="contact">Contact</span></a></li>
@@ -62,6 +64,15 @@
           <span></span>
         </div>
       </nav>
+
+       <div class="lang-switcher">
+        <label for="langSelect"></label>
+        <select id="langSelect" onchange="changeLanguage(this.value)">
+          <option value="en">English</option>
+          <option value="ar">Arabic</option>
+          <option value="he">Hebrew</option>
+        </select>
+      </div>
 
       <div class="mobile-menu-wrapper">
         <ul class="hamburger-menu" id="hamburgerMenu">
@@ -77,21 +88,21 @@
             <span><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></span>
             <ul class="mobile-dropdown">
              <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
-              <li><a href="service1.html"><span data-i18n="service_1">Property Buying Assistance</span></a></li>
-              <li><a href="service2.html"><span data-i18n="service_2">Property Selling</span></a></li>
-              <li><a href="service3.html"><span data-i18n="service_3">Rental Services </span></a></li>
-              <li><a href="service4.html"><span data-i18n="service_4">Property Management</span></a></li>
-              <li><a href="service5.html"><span data-i18n="service_5">Real Estate Investment</span></a></li>
-              <li><a href="service6.html"><span data-i18n="service6">Legal & Documentation Support</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Service_1</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Service_2</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Service_3</span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Service_4</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Service_5</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service_6">Service_6</span></a></li>
             </ul>
           </li>
           <li class="mobile-dropdown-parent">
             <span><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></span>
             <ul class="mobile-dropdown">
                <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
-                <li><a href="blog1.html"><span data-i18n="blog_1">Smart Property Investments</span></a></li>
-                <li><a href="blog2.html"><span data-i18n="blog_2">Effective Property Management</span></a></li>
-                <li><a href="blog3.html"><span data-i18n="blog_3">Real Estate Market Trends</span></a></li>
+                <li><a href="blog1.html"><span data-i18n="blog_1">blog_1</span></a></li>
+                <li><a href="blog2.html"><span data-i18n="blog_2">blog_2</span></a></li>
+                <li><a href="blog3.html"><span data-i18n="blog_3">blog_3</span></a></li>
             </ul>
           </li>
           <li><a href="contact.html"><span data-i18n="contact">Contact</span></a></li>
@@ -99,72 +110,75 @@
         </ul>
       </div>
 
-      <div class="lang-switcher">
-        <label for="langSelect">Language:</label>
-        <select id="langSelect" onchange="changeLanguage(this.value)">
-          <option value="en">English</option>
-          <option value="ar">Arabic</option>
-          <option value="he">Hebrew</option>
-        </select>
-      </div>
+     
 
       <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
         <i class="fas fa-moon"></i>
       </button>
 
-      <div class="avatar-circle" title="Profile" id="avatarCircle">
-        <span id="avatarInitials"></span>
+     <div class="avatar-wrapper">
+        <div class="avatar-circle" title="Profile" id="avatarCircle">
+          <span id="avatarInitials">BA</span>
+        </div>
+        <div class="avatar-dropdown" id="avatarDropdown">
+          <ul>
+            <li>
+              <a href="index.html" id="logoutBtn">
+                <span data-i18n="logout">Logout</span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="avatar-dropdown" id="avatarDropdown">
-        <ul>
-          <li><a href="index.html" id="logoutBtn"><span data-i18n="logout">Logout</span></a></li>
-        </ul>
-      </div>
+      
     </div>
   </div>
 </header>
 
+
+
+
 <!-- Section : 1 -->
 <section class="ai-hero-section">
   <video autoplay muted loop playsinline class="ai-hero-bg-video">
-    <source src="https://videos.pexels.com/video-files/17246202/17246202-uhd_2560_1440_30fps.mp4" type="video/mp4">
+    <source src="video/site44-S4.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
   <div class="ai-hero-overlay">
     <div class="ai-hero-content">
-      <h1 class="ai-hero-title ai-glow animate-ai-slide-in" data-i18n="s4_title">Property Management</h1>
+      <h1 class="ai-hero-title ai-glow animate-ai-slide-in" data-i18n="s4_title">Women Empowerment</h1>
     </div>
   </div>
 </section>
 
 <!-- Section : 2 -->
 <section class="ai-section">
-    <h1 class="ai-heading" data-i18n="s4_heading1">Property Management Services</h1>
+    <h1 class="ai-heading" data-i18n="s4_heading1">Empowering Women, Transforming Communities</h1>
     <div class="ai-content">
         <div class="ai-text">
             <p data-i18n="s4_intro">
-                Simplify your property management with our expert services. 
-                From tenant acquisition to maintenance and rent collection, we ensure smooth operations, 
-                timely updates, and maximum returns on your investment.
+                Our Women Empowerment initiatives focus on education, skill development, 
+                financial independence, and leadership opportunities for women. 
+                We aim to create a society where women are confident, self-reliant, and respected.
             </p>
 
             <ul class="hero-features fade-in-up delay-2">
-                <li><span>✔</span> <span data-i18n="s4_feat1">Tenant screening & onboarding</span></li>
-                <li><span>✔</span> <span data-i18n="s4_feat2">Rent collection & financial tracking</span></li>
-                <li><span>✔</span> <span data-i18n="s4_feat3">Property maintenance & repairs</span></li>
-                <li><span>✔</span> <span data-i18n="s4_feat4">Lease management & documentation</span></li>
-                <li><span>✔</span> <span data-i18n="s4_feat5">Custom property reports & analytics</span></li>
+                <li><span>✔</span> <span data-i18n="s4_feat1">Vocational training & skill development</span></li>
+                <li><span>✔</span> <span data-i18n="s4_feat2">Entrepreneurship & financial literacy</span></li>
+                <li><span>✔</span> <span data-i18n="s4_feat3">Education & digital literacy programs</span></li>
+                <li><span>✔</span> <span data-i18n="s4_feat4">Health & wellness awareness</span></li>
+                <li><span>✔</span> <span data-i18n="s4_feat5">Leadership & self-help group formation</span></li>
             </ul>
 
             <div class="ai-buttons">
-                <a href="services.html" class="btn btn-primary" data-i18n="s4_explore">Explore Services</a>
-                <a href="contact.html" class="btn btn-primary" data-i18n="s4_getStarted">Get Started</a>
+                <a href="services.html" class="btn btn-primary" data-i18n="s4_explore">Explore Programs</a>
+                <a href="contact.html" class="btn btn-primary" data-i18n="s4_getStarted">Join Us</a>
             </div>
         </div>
 
         <div class="ai-image">
-            <img src="https://i.pinimg.com/1200x/43/08/53/4308530471aa3204afab882f9ccab7da.jpg" alt="Property Management">
+            <img src="https://images.pexels.com/photos/3810756/pexels-photo-3810756.jpeg" alt="Women Empowerment">
         </div>
     </div>
 </section>
@@ -173,31 +187,31 @@
 <section class="advanced-features">
   <div class="advanced-features-container">
     <div class="features-header fade-in-up">
-      <h2 data-i18n="s4_heading2">Property Management Solutions</h2>
+      <h2 data-i18n="s4_heading2">Key Areas of Women Empowerment</h2>
       <p data-i18n="s4_desc2">
-        Simplify property operations with our comprehensive management services. 
-        From tenant onboarding to rent collection and maintenance, we ensure smooth operations, satisfied tenants, 
-        and maximized returns on your property investments.
+        Our programs address the most important aspects of women’s empowerment — 
+        education, skills, financial independence, and health — helping women 
+        unlock their potential and transform their communities.
       </p>
     </div>
 
     <div class="features-cards">
       <div class="feature-box fade-in-up delay-1">
-        <div class="feature-icon"><i class="fas fa-home"></i></div>
-        <h3 data-i18n="s4_card1_title">Tenant Onboarding & Leasing</h3>
-        <p data-i18n="s4_card1_desc">Efficiently manage tenant applications, screening, and lease agreements to secure reliable occupants quickly.</p>
+        <div class="feature-icon"><i class="fas fa-graduation-cap"></i></div>
+        <h3 data-i18n="s4_card1_title">Education & Training</h3>
+        <p data-i18n="s4_card1_desc">Providing access to education, vocational training, and digital literacy to help women build brighter futures.</p>
       </div>
 
       <div class="feature-box fade-in-up delay-2">
-        <div class="feature-icon"><i class="fas fa-file-invoice"></i></div>
-        <h3 data-i18n="s4_card2_title">Rent Collection & Accounting</h3>
-        <p data-i18n="s4_card2_desc">Track rent payments, manage financial records, and generate detailed reports for smooth financial management.</p>
+        <div class="feature-icon"><i class="fas fa-briefcase"></i></div>
+        <h3 data-i18n="s4_card2_title">Economic Independence</h3>
+        <p data-i18n="s4_card2_desc">Supporting women with entrepreneurship, microfinance, and skill-based income opportunities.</p>
       </div>
 
       <div class="feature-box fade-in-up delay-3">
-        <div class="feature-icon"><i class="fas fa-tools"></i></div>
-        <h3 data-i18n="s4_card3_title">Property Maintenance & Support</h3>
-        <p data-i18n="s4_card3_desc">Handle repairs, maintenance requests, and tenant support efficiently to keep your property in top condition.</p>
+        <div class="feature-icon"><i class="fas fa-heartbeat"></i></div>
+        <h3 data-i18n="s4_card3_title">Health & Well-being</h3>
+        <p data-i18n="s4_card3_desc">Raising awareness on women’s health, hygiene, and wellness through camps and workshops.</p>
       </div>
     </div>
   </div>
@@ -207,33 +221,31 @@
 <section class="development-process">
   <div class="development-process-container">
     <div class="process-header fade-in-up">
-      <h2 data-i18n="s4_heading3">Comprehensive Property Management Services</h2>
+      <h2 data-i18n="s4_heading3">Our Empowerment Process</h2>
       <p data-i18n="s4_desc3">
-        Simplify property operations with our professional management solutions. 
-        We handle everything from tenant onboarding to maintenance and rent collection, 
-        ensuring smooth operations and maximizing returns on your properties.
+        We follow a holistic approach that includes education, skills, health awareness, 
+        and leadership development to empower women at every stage of life.
       </p>
     </div>
 
     <div class="process-row">
       <div class="process-image slide-in-right">
-        <img src="https://i.pinimg.com/1200x/14/ea/2a/14ea2aad42dcbe12780d954201ee954e.jpg" alt="Property Management">
+        <img src="https://images.pexels.com/photos/7640811/pexels-photo-7640811.jpeg" alt="Women Empowerment Process">
       </div>
 
       <div class="process-content fade-in-up delay-1">
         <p class="process-intro" data-i18n="s4_process_intro">
-          Our property management services cover every aspect of rental operations. 
-          From listing properties and screening tenants to handling leases, rent collection, 
-          and maintenance, we ensure a hassle-free experience for property owners and tenants alike.
+          Through education, skill-building, and awareness programs, 
+          we help women break barriers and achieve social and financial independence.
         </p>
 
         <div class="process-steps">
-          <div class="step"><span class="step-number">01</span><p data-i18n="s4_step1">Property Listing & Promotion</p></div>
-          <div class="step"><span class="step-number">02</span><p data-i18n="s4_step2">Tenant Screening & Selection</p></div>
-          <div class="step"><span class="step-number">03</span><p data-i18n="s4_step3">Lease Agreement Preparation</p></div>
-          <div class="step"><span class="step-number">04</span><p data-i18n="s4_step4">Rent Collection & Accounting</p></div>
-          <div class="step"><span class="step-number">05</span><p data-i18n="s4_step5">Maintenance & Repair Management</p></div>
-          <div class="step"><span class="step-number">06</span><p data-i18n="s4_step6">Tenant Communication & Support</p></div>
+          <div class="step"><span class="step-number">01</span><p data-i18n="s4_step1">Identify Community Needs</p></div>
+          <div class="step"><span class="step-number">02</span><p data-i18n="s4_step2">Provide Education & Training</p></div>
+          <div class="step"><span class="step-number">03</span><p data-i18n="s4_step3">Support Entrepreneurship</p></div>
+          <div class="step"><span class="step-number">04</span><p data-i18n="s4_step4">Promote Health & Awareness</p></div>
+          <div class="step"><span class="step-number">05</span><p data-i18n="s4_step5">Build Leadership & Self-Help Groups</p></div>
+          <div class="step"><span class="step-number">06</span><p data-i18n="s4_step6">Ensure Long-Term Impact</p></div>
         </div>
       </div>
     </div>
@@ -244,30 +256,29 @@
 <section class="service-showcase">
   <div class="service-container">
     <div class="service-header animate-fade-up">
-      <h2 data-i18n="s4_heading4">Property Management Services</h2>
+      <h2 data-i18n="s4_heading4">Focus Areas of Empowerment</h2>
       <p data-i18n="s4_desc4">
-        We provide comprehensive property management solutions to help landlords and property owners 
-        handle rentals efficiently. From tenant management to maintenance and rent collection, 
-        we ensure smooth operations and maximum returns on your investment.
+        Our initiatives are designed to create lasting change in the lives of women 
+        by focusing on education, skills, financial independence, and community leadership.
       </p>
     </div>
 
     <div class="service-grid">
       <div class="service-card animate-slide-up delay-1">
-        <h3 data-i18n="s4_scard1_title">Tenant Onboarding & Screening</h3>
-        <p data-i18n="s4_scard1_desc">Thoroughly screen potential tenants and handle lease agreements to secure reliable occupants quickly.</p>
+        <h3 data-i18n="s4_scard1_title">Skill Development</h3>
+        <p data-i18n="s4_scard1_desc">Training programs that equip women with practical skills for sustainable employment.</p>
       </div>
       <div class="service-card animate-slide-up delay-2">
-        <h3 data-i18n="s4_scard2_title">Rent Collection & Accounting</h3>
-        <p data-i18n="s4_scard2_desc">Track rental payments, manage accounts, and generate detailed reports for smooth financial management.</p>
+        <h3 data-i18n="s4_scard2_title">Entrepreneurship</h3>
+        <p data-i18n="s4_scard2_desc">Encouraging women-led businesses and providing support for financial stability.</p>
       </div>
       <div class="service-card animate-slide-up delay-3">
-        <h3 data-i18n="s4_scard3_title">Maintenance & Repairs</h3>
-        <p data-i18n="s4_scard3_desc">Coordinate property maintenance and repairs to ensure tenants are satisfied and properties remain in top condition.</p>
+        <h3 data-i18n="s4_scard3_title">Education & Literacy</h3>
+        <p data-i18n="s4_scard3_desc">Promoting formal and informal education, along with digital literacy for empowerment.</p>
       </div>
       <div class="service-card animate-slide-up delay-4">
-        <h3 data-i18n="s4_scard4_title">Tenant Communication & Support</h3>
-        <p data-i18n="s4_scard4_desc">Provide ongoing support and effective communication with tenants to ensure long-term occupancy and satisfaction.</p>
+        <h3 data-i18n="s4_scard4_title">Health & Awareness</h3>
+        <p data-i18n="s4_scard4_desc">Workshops and camps on healthcare, nutrition, and hygiene for women’s wellbeing.</p>
       </div>
     </div>
   </div>
@@ -277,24 +288,24 @@
 <section class="bookkeeping-services">
   <div class="services-container">
     <div class="services-image animate-slide-in">
-      <img src="https://images.pexels.com/photos/7710011/pexels-photo-7710011.jpeg" alt="Property Management">
+      <img src="https://images.pexels.com/photos/7640824/pexels-photo-7640824.jpeg" alt="Women Empowerment">
     </div>
     <div class="services-content">
-      <h2 class="animate-fade-up" data-i18n="s4_heading5">Professional Property Management</h2>
+      <h2 class="animate-fade-up" data-i18n="s4_heading5">Sustainable Empowerment</h2>
       <p class="animate-fade-up delay-1" style="text-align: justify;" data-i18n="s4_desc5">
-        Our property management services simplify rental operations for landlords and property owners. 
-        From tenant onboarding and lease management to rent collection and maintenance, we ensure smooth, efficient, 
-        and profitable property operations so you can focus on growing your real estate investments.
+        We believe in creating long-term impact by empowering women to become leaders, 
+        entrepreneurs, and role models in their communities. 
+        Our initiatives focus on sustainable change through skills, health, and financial independence.
       </p>
 
       <div class="service-card animate-fade-up delay-2">
-        <h3 data-i18n="s4_bcard1_title">Tenant Onboarding & Leasing</h3>
-        <p data-i18n="s4_bcard1_desc">Efficient screening, selection, and lease management to secure reliable tenants quickly and smoothly.</p>
+        <h3 data-i18n="s4_bcard1_title">Leadership & Self-Help Groups</h3>
+        <p data-i18n="s4_bcard1_desc">Encouraging women to take leadership roles and form groups for mutual support and growth.</p>
       </div>
 
       <div class="service-card animate-fade-up delay-3">
-        <h3 data-i18n="s4_bcard2_title">Rent Collection & Maintenance</h3>
-        <p data-i18n="s4_bcard2_desc">Handle timely rent collection, property upkeep, and maintenance requests for seamless property operations.</p>
+        <h3 data-i18n="s4_bcard2_title">Financial Literacy & Independence</h3>
+        <p data-i18n="s4_bcard2_desc">Helping women understand savings, credit, and entrepreneurship to achieve financial independence.</p>
       </div>
     </div>
   </div>
@@ -304,301 +315,286 @@
 <section class="contact-banner section-padding">
     <div class="container">
         <div class="contact-banner-content">
-          <h2 data-i18n="s4_cta_title">Ready to Manage Your Property Efficiently?</h2>
-          <p data-i18n="s4_cta_desc">Let’s simplify tenant management, rent collection, and property maintenance with our professional property management solutions.</p>
-          <a href="contact.html" class="btn btn-primary" data-i18n="s4_cta_btn">Get Started</a>
+          <h2 data-i18n="s4_cta_title">Join Us in Empowering Women</h2>
+          <p data-i18n="s4_cta_desc">Together, we can create a future where women are educated, empowered, and self-reliant. Be part of the change today.</p>
+          <a href="contact.html" class="btn btn-primary" data-i18n="s4_cta_btn">Get Involved</a>
         </div>
     </div>
 </section>
-
 
 
 <script>
 // Translation dictionary
 const translations = {
   en: {
-   "home": "Home",
+    "home": "Home",
     "home1": "Home 1",
     "home2": "Home 2",
     "about": "About",
     "services": "Services",
     "allServices": "All Services",
-    "service_1": "Property Buying Assistance",
-    "service_2": "Property Selling",
-    "service_3": "Rental Services",
-    "service_4": "Property Management",
-    "service_5": "Real Estate Investment",
-    "service_6": "Legal & Documentation Support",
+    "service_1": "Service_1",
+    "service_2": "Service_2",
+    "service_3": "Service_3",
+    "service_4": "Service_4",
+    "service_5": "Service_5",
+    "service_6": "Service_6",
     "blog": "Blog",
     "allPosts": "All Posts",
-    "blog_1": "Smart Property Investments",
-    "blog_2": "Effective Property Management",
-    "blog_3": "Real Estate Market Trends",
+    "blog_1": "Blog_1",
+    "blog_2": "Blog_2",
+    "blog_3": "Blog_3",
     "contact": "Contact",
     "logout": "Logout",
 
-    "footer_about": "Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.",
-    "footer_quickLinks": "Quick Links",
+     "footer_about": "Dedicated charity organization, empowering communities through education, healthcare, food support, and sustainable initiatives to create lasting impact and hope.",
+    "footer_quicklinks": "Quick Links",
     "footer_home": "Home",
     "footer_home2": "Home 2",
-    "footer_aboutUs": "About Us",
+    "footer_aboutus": "About Us",
     "footer_services": "Services",
     "footer_blog": "Blog",
     "footer_contact": "Contact",
-    "footer_servicesTitle": "Services",
-    "footer_service1": "Property Buying Assistance",
-    "footer_service2": "Property Selling",
-    "footer_service3": "Rental Services",
-    "footer_service4": "Property Management",
-    "footer_service5": "Real Estate Investment",
-    "footer_service6": "Legal & Documentation Support",
-    "footer_contactInfo": "Contact Info",
-    "footer_email": "contact@stackly.ai",
+    "footer_services_title": "Services",
+    "footer_service1": "Food Distribution",
+    "footer_service2": "Education Support",
+    "footer_service3": "Healthcare Camps",
+    "footer_service4": "Women Empowerment",
+    "footer_service5": "Child Welfare",
+    "footer_service6": "Disaster Relief",
+    "footer_contactinfo": "Contact Info",
+    "footer_email": "contact@stackly.in",
     "footer_phone": "+1 (555) 123-4567",
-    "footer_address": "123 AI Innovation Drive",
-    "footer_bottom": "© 2025 Stackly. All rights reserved.",
-    "s4_title": "Property Management",
-    "s4_heading1": "Property Management Services",
-    "s4_intro": "Simplify your property management with our expert services. From tenant acquisition to maintenance and rent collection, we ensure smooth operations, timely updates, and maximum returns on your investment.",
-    "s4_feat1": "Tenant screening & onboarding",
-    "s4_feat2": "Rent collection & financial tracking",
-    "s4_feat3": "Property maintenance & repairs",
-    "s4_feat4": "Lease management & documentation",
-    "s4_feat5": "Custom property reports & analytics",
-    "s4_explore": "Explore Services",
-    "s4_getStarted": "Get Started",
-
-    "s4_heading2": "Property Management Solutions",
-    "s4_desc2": "Simplify property operations with our comprehensive management services. From tenant onboarding to rent collection and maintenance, we ensure smooth operations, satisfied tenants, and maximized returns on your property investments.",
-    "s4_card1_title": "Tenant Onboarding & Leasing",
-    "s4_card1_desc": "Efficiently manage tenant applications, screening, and lease agreements to secure reliable occupants quickly.",
-    "s4_card2_title": "Rent Collection & Accounting",
-    "s4_card2_desc": "Track rent payments, manage financial records, and generate detailed reports for smooth financial management.",
-    "s4_card3_title": "Property Maintenance & Support",
-    "s4_card3_desc": "Handle repairs, maintenance requests, and tenant support efficiently to keep your property in top condition.",
-
-    "s4_heading3": "Comprehensive Property Management Services",
-    "s4_desc3": "Simplify property operations with our professional management solutions. We handle everything from tenant onboarding to maintenance and rent collection, ensuring smooth operations and maximizing returns on your properties.",
-    "s4_process_intro": "Our property management services cover every aspect of rental operations. From listing properties and screening tenants to handling leases, rent collection, and maintenance, we ensure a hassle-free experience for property owners and tenants alike.",
-    "s4_step1": "Property Listing & Promotion",
-    "s4_step2": "Tenant Screening & Selection",
-    "s4_step3": "Lease Agreement Preparation",
-    "s4_step4": "Rent Collection & Accounting",
-    "s4_step5": "Maintenance & Repair Management",
-    "s4_step6": "Tenant Communication & Support",
-
-    "s4_heading4": "Property Management Services",
-    "s4_desc4": "We provide comprehensive property management solutions to help landlords and property owners handle rentals efficiently. From tenant management to maintenance and rent collection, we ensure smooth operations and maximum returns on your investment.",
-    "s4_scard1_title": "Tenant Onboarding & Screening",
-    "s4_scard1_desc": "Thoroughly screen potential tenants and handle lease agreements to secure reliable occupants quickly.",
-    "s4_scard2_title": "Rent Collection & Accounting",
-    "s4_scard2_desc": "Track rental payments, manage accounts, and generate detailed reports for smooth financial management.",
-    "s4_scard3_title": "Maintenance & Repairs",
-    "s4_scard3_desc": "Coordinate property maintenance and repairs to ensure tenants are satisfied and properties remain in top condition.",
-    "s4_scard4_title": "Tenant Communication & Support",
-    "s4_scard4_desc": "Provide ongoing support and effective communication with tenants to ensure long-term occupancy and satisfaction.",
-
-    "s4_heading5": "Professional Property Management",
-    "s4_desc5": "Our property management services simplify rental operations for landlords and property owners. From tenant onboarding and lease management to rent collection and maintenance, we ensure smooth, efficient, and profitable property operations so you can focus on growing your real estate investments.",
-    "s4_bcard1_title": "Tenant Onboarding & Leasing",
-    "s4_bcard1_desc": "Efficient screening, selection, and lease management to secure reliable tenants quickly and smoothly.",
-    "s4_bcard2_title": "Rent Collection & Maintenance",
-    "s4_bcard2_desc": "Handle timely rent collection, property upkeep, and maintenance requests for seamless property operations.",
-
-    "s4_cta_title": "Ready to Manage Your Property Efficiently?",
-    "s4_cta_desc": "Let’s simplify tenant management, rent collection, and property maintenance with our professional property management solutions.",
-    "s4_cta_btn": "Get Started",
+    "footer_location": "123 Hyderabad, India",
+    "footer_rights": "© 2025 Stackly. All rights reserved.",
+     
+    "s4_title": "Women Empowerment",
+    "s4_heading1": "Empowering Women, Transforming Communities",
+    "s4_intro": "Our Women Empowerment initiatives focus on education, skill development, financial independence, and leadership opportunities for women. We aim to create a society where women are confident, self-reliant, and respected.",
+    "s4_feat1": "Vocational training & skill development",
+    "s4_feat2": "Entrepreneurship & financial literacy",
+    "s4_feat3": "Education & digital literacy programs",
+    "s4_feat4": "Health & wellness awareness",
+    "s4_feat5": "Leadership & self-help group formation",
+    "s4_explore": "Explore Programs",
+    "s4_getStarted": "Join Us",
+    "s4_heading2": "Key Areas of Women Empowerment",
+    "s4_desc2": "Our programs address the most important aspects of women’s empowerment — education, skills, financial independence, and health — helping women unlock their potential and transform their communities.",
+    "s4_card1_title": "Education & Training",
+    "s4_card1_desc": "Providing access to education, vocational training, and digital literacy to help women build brighter futures.",
+    "s4_card2_title": "Economic Independence",
+    "s4_card2_desc": "Supporting women with entrepreneurship, microfinance, and skill-based income opportunities.",
+    "s4_card3_title": "Health & Well-being",
+    "s4_card3_desc": "Raising awareness on women’s health, hygiene, and wellness through camps and workshops.",
+    "s4_heading3": "Our Empowerment Process",
+    "s4_desc3": "We follow a holistic approach that includes education, skills, health awareness, and leadership development to empower women at every stage of life.",
+    "s4_process_intro": "Through education, skill-building, and awareness programs, we help women break barriers and achieve social and financial independence.",
+    "s4_step1": "Identify Community Needs",
+    "s4_step2": "Provide Education & Training",
+    "s4_step3": "Support Entrepreneurship",
+    "s4_step4": "Promote Health & Awareness",
+    "s4_step5": "Build Leadership & Self-Help Groups",
+    "s4_step6": "Ensure Long-Term Impact",
+    "s4_heading4": "Focus Areas of Empowerment",
+    "s4_desc4": "Our initiatives are designed to create lasting change in the lives of women by focusing on education, skills, financial independence, and community leadership.",
+    "s4_scard1_title": "Skill Development",
+    "s4_scard1_desc": "Training programs that equip women with practical skills for sustainable employment.",
+    "s4_scard2_title": "Entrepreneurship",
+    "s4_scard2_desc": "Encouraging women-led businesses and providing support for financial stability.",
+    "s4_scard3_title": "Education & Literacy",
+    "s4_scard3_desc": "Promoting formal and informal education, along with digital literacy for empowerment.",
+    "s4_scard4_title": "Health & Awareness",
+    "s4_scard4_desc": "Workshops and camps on healthcare, nutrition, and hygiene for women’s wellbeing.",
+    "s4_heading5": "Sustainable Empowerment",
+    "s4_desc5": "We believe in creating long-term impact by empowering women to become leaders, entrepreneurs, and role models in their communities. Our initiatives focus on sustainable change through skills, health, and financial independence.",
+    "s4_bcard1_title": "Leadership & Self-Help Groups",
+    "s4_bcard1_desc": "Encouraging women to take leadership roles and form groups for mutual support and growth.",
+    "s4_bcard2_title": "Financial Literacy & Independence",
+    "s4_bcard2_desc": "Helping women understand savings, credit, and entrepreneurship to achieve financial independence.",
+    "s4_cta_title": "Join Us in Empowering Women",
+    "s4_cta_desc": "Together, we can create a future where women are educated, empowered, and self-reliant. Be part of the change today.",
+    "s4_cta_btn": "Get Involved",
+       
   },
   ar: {
-   "home": "الرئيسية",
-    "home1": "الصفحة الرئيسية 1",
-    "home2": "الصفحة الرئيسية 2",
-    "about": "من نحن",
+     "home": "الرئيسية",
+    "home1": "الصفحة 1",
+    "home2": "الصفحة 2",
+    "about": "معلومات عنا",
     "services": "الخدمات",
     "allServices": "جميع الخدمات",
-    "service_1": "مساعدة في شراء العقارات",
-    "service_2": "بيع العقارات",
-    "service_3": "خدمات الإيجار",
-    "service_4": "إدارة العقارات",
-    "service_5": "الاستثمار العقاري",
-    "service_6": "الدعم القانوني والتوثيق",
+    "service_1": "الخدمة_1",
+    "service_2": "الخدمة_2",
+    "service_3": "الخدمة_3",
+    "service_4": "الخدمة_4",
+    "service_5": "الخدمة_5",
+    "service_6": "الخدمة_6",
     "blog": "المدونة",
     "allPosts": "جميع المقالات",
-    "blog_1": "الاستثمارات العقارية الذكية",
-    "blog_2": "إدارة العقارات الفعالة",
-    "blog_3": "اتجاهات سوق العقارات",
+    "blog_1": "مدونة_1",
+    "blog_2": "مدونة_2",
+    "blog_3": "مدونة_3",
     "contact": "اتصل بنا",
-    "logout": "تسجيل خروج",
+    "logout": "تسجيل الخروج",
 
-    "footer_about": "مزود رائد لحلول الذكاء الاصطناعي، يساعد الشركات على التحول من خلال التكنولوجيا الذكية وأنظمة الأتمتة المبتكرة.",
-    "footer_quickLinks": "روابط سريعة",
+    "footer_about": "منظمة خيرية مكرسة، تمكّن المجتمعات من خلال التعليم والرعاية الصحية ودعم الغذاء والمبادرات المستدامة لخلق تأثير دائم وأمل.",
+    "footer_quicklinks": "روابط سريعة",
     "footer_home": "الرئيسية",
     "footer_home2": "الصفحة الرئيسية 2",
-    "footer_aboutUs": "من نحن",
+    "footer_aboutus": "معلومات عنا",
     "footer_services": "الخدمات",
-    "footer_blog": "المدونة",
+    "footer_blog": "مدونة",
     "footer_contact": "اتصل بنا",
-    "footer_servicesTitle": "الخدمات",
-    "footer_service1": "مساعدة في شراء العقارات",
-    "footer_service2": "بيع العقارات",
-    "footer_service3": "خدمات الإيجار",
-    "footer_service4": "إدارة الممتلكات",
-    "footer_service5": "الاستثمار العقاري",
-    "footer_service6": "الدعم القانوني والتوثيق",
-    "footer_contactInfo": "معلومات الاتصال",
-    "footer_email": "contact@stackly.ai",
+    "footer_services_title": "الخدمات",
+    "footer_service1": "توزيع الغذاء",
+    "footer_service2": "دعم التعليم",
+    "footer_service3": "المخيمات الطبية",
+    "footer_service4": "تمكين المرأة",
+    "footer_service5": "رعاية الأطفال",
+    "footer_service6": "الإغاثة في الكوارث",
+    "footer_contactinfo": "معلومات الاتصال",
+    "footer_email": "contact@stackly.in",
     "footer_phone": "+1 (555) 123-4567",
-    "footer_address": "123 طريق ابتكار الذكاء الاصطناعي",
-    "footer_bottom": "© 2025 Stackly. جميع الحقوق محفوظة.",
+    "footer_location": "123 حيدر أباد، الهند",
+    "footer_rights": "© 2025 Stackly. جميع الحقوق محفوظة.",
 
-     "s4_title": "إدارة الممتلكات",
-    "s4_heading1": "خدمات إدارة الممتلكات",
-    "s4_intro": "قم بتبسيط إدارة ممتلكاتك مع خدماتنا الاحترافية. من اكتساب المستأجرين إلى الصيانة وجمع الإيجار، نضمن عمليات سلسة وتحديثات في الوقت المناسب وعائدات قصوى على استثمارك.",
-    "s4_feat1": "فحص المستأجرين والتسجيل",
-    "s4_feat2": "جمع الإيجار وتتبع مالي",
-    "s4_feat3": "صيانة وإصلاح الممتلكات",
-    "s4_feat4": "إدارة العقود والوثائق",
-    "s4_feat5": "تقارير وتحليلات مخصصة للعقار",
-    "s4_explore": "استكشف الخدمات",
-    "s4_getStarted": "ابدأ الآن",
-
-    "s4_heading2": "حلول إدارة الممتلكات",
-    "s4_desc2": "بسط عمليات الممتلكات من خلال خدمات الإدارة الشاملة. من تسجيل المستأجرين إلى جمع الإيجار والصيانة، نضمن عمليات سلسة ومستأجرين راضين وعوائد قصوى على استثماراتك.",
-    "s4_card1_title": "تسجيل المستأجرين والعقود",
-    "s4_card1_desc": "إدارة طلبات المستأجرين والفحص والعقود بكفاءة لتأمين المستأجرين الموثوقين بسرعة.",
-    "s4_card2_title": "جمع الإيجار والمحاسبة",
-    "s4_card2_desc": "تتبع مدفوعات الإيجار، وإدارة السجلات المالية، وإنشاء تقارير مفصلة لإدارة مالية سلسة.",
-    "s4_card3_title": "صيانة الممتلكات والدعم",
-    "s4_card3_desc": "التعامل مع الإصلاحات وطلبات الصيانة ودعم المستأجرين بكفاءة للحفاظ على الممتلكات في أفضل حالة.",
-
-    "s4_heading3": "خدمات إدارة الممتلكات الشاملة",
-    "s4_desc3": "بسط عمليات الممتلكات باستخدام حلول الإدارة الاحترافية. نحن نتعامل مع كل شيء من تسجيل المستأجرين إلى الصيانة وجمع الإيجار لضمان عمليات سلسة وزيادة العوائد على ممتلكاتك.",
-    "s4_process_intro": "تشمل خدمات إدارة الممتلكات لدينا جميع جوانب الإيجار. من إدراج الممتلكات وفحص المستأجرين إلى إدارة العقود وجمع الإيجار والصيانة، نضمن تجربة خالية من المتاعب للمالكين والمستأجرين على حد سواء.",
-    "s4_step1": "إدراج الممتلكات والترويج",
-    "s4_step2": "فحص المستأجرين والاختيار",
-    "s4_step3": "إعداد عقد الإيجار",
-    "s4_step4": "جمع الإيجار والمحاسبة",
-    "s4_step5": "إدارة الصيانة والإصلاحات",
-    "s4_step6": "التواصل والدعم للمستأجرين",
-
-    "s4_heading4": "خدمات إدارة الممتلكات",
-    "s4_desc4": "نوفر حلول إدارة ممتلكات شاملة لمساعدة الملاك على إدارة الإيجارات بكفاءة. من إدارة المستأجرين إلى الصيانة وجمع الإيجار، نضمن عمليات سلسة وعوائد قصوى على استثمارك.",
-    "s4_scard1_title": "تسجيل وفحص المستأجرين",
-    "s4_scard1_desc": "فحص المستأجرين المحتملين بدقة وإدارة عقود الإيجار بسرعة.",
-    "s4_scard2_title": "جمع الإيجار والمحاسبة",
-    "s4_scard2_desc": "تتبع مدفوعات الإيجار وإدارة الحسابات وإنشاء تقارير مفصلة للإدارة المالية.",
-    "s4_scard3_title": "الصيانة والإصلاحات",
-    "s4_scard3_desc": "تنسيق صيانة الممتلكات والإصلاحات لضمان رضا المستأجرين والحفاظ على الممتلكات.",
-    "s4_scard4_title": "التواصل والدعم للمستأجرين",
-    "s4_scard4_desc": "توفير الدعم المستمر والتواصل الفعّال مع المستأجرين لضمان إقامة طويلة الأمد.",
-
-    "s4_heading5": "إدارة الممتلكات الاحترافية",
-    "s4_desc5": "تبسط خدماتنا لإدارة الممتلكات عمليات الإيجار للملاك. من تسجيل المستأجرين وإدارة العقود إلى جمع الإيجار والصيانة، نضمن عمليات سلسة ومربحة حتى تركز على تنمية استثماراتك العقارية.",
-    "s4_bcard1_title": "تسجيل المستأجرين والعقود",
-    "s4_bcard1_desc": "اختيار وفحص وإدارة عقود بكفاءة لتأمين مستأجرين موثوقين بسرعة.",
-    "s4_bcard2_title": "جمع الإيجار والصيانة",
-    "s4_bcard2_desc": "التعامل مع جمع الإيجار في الوقت المحدد وصيانة الممتلكات لعمليات سلسة.",
-
-    "s4_cta_title": "هل أنت مستعد لإدارة ممتلكاتك بكفاءة؟",
-    "s4_cta_desc": "لنُبسط إدارة المستأجرين وجمع الإيجار وصيانة الممتلكات باستخدام حلولنا الاحترافية لإدارة الممتلكات.",
-    "s4_cta_btn": "ابدأ الآن",
+    "s4_title": "تمكين المرأة",
+    "s4_heading1": "تمكين النساء، تحويل المجتمعات",
+    "s4_intro": "تركز مبادرات تمكين المرأة لدينا على التعليم، وتطوير المهارات، والاستقلال المالي، وفرص القيادة للنساء. نهدف إلى إنشاء مجتمع تكون فيه النساء واثقات، معتمدات على أنفسهن، ومحترمات.",
+    "s4_feat1": "التدريب المهني وتطوير المهارات",
+    "s4_feat2": "ريادة الأعمال والثقافة المالية",
+    "s4_feat3": "برامج التعليم والمعرفة الرقمية",
+    "s4_feat4": "التوعية بالصحة والعافية",
+    "s4_feat5": "القيادة وتشكيل مجموعات الدعم الذاتي",
+    "s4_explore": "استكشاف البرامج",
+    "s4_getStarted": "انضم إلينا",
+    "s4_heading2": "المجالات الرئيسية لتمكين المرأة",
+    "s4_desc2": "تعالج برامجنا أهم جوانب تمكين المرأة — التعليم، والمهارات، والاستقلال المالي، والصحة — مما يساعد النساء على إطلاق إمكاناتهن وتحويل مجتمعاتهن.",
+    "s4_card1_title": "التعليم والتدريب",
+    "s4_card1_desc": "توفير الوصول إلى التعليم، والتدريب المهني، والمعرفة الرقمية لمساعدة النساء على بناء مستقبل أكثر إشراقًا.",
+    "s4_card2_title": "الاستقلال الاقتصادي",
+    "s4_card2_desc": "دعم النساء في ريادة الأعمال، والتمويل الصغير، وفرص الدخل المعتمدة على المهارات.",
+    "s4_card3_title": "الصحة والرفاهية",
+    "s4_card3_desc": "رفع الوعي بصحة النساء، والنظافة، والعافية من خلال المخيمات وورش العمل.",
+    "s4_heading3": "عملية التمكين لدينا",
+    "s4_desc3": "نتبع نهجًا شاملاً يتضمن التعليم، والمهارات، والتوعية الصحية، وتطوير القيادة لتمكين النساء في كل مرحلة من مراحل حياتهن.",
+    "s4_process_intro": "من خلال التعليم، وبناء المهارات، وبرامج التوعية، نساعد النساء على كسر الحواجز وتحقيق الاستقلال الاجتماعي والمالي.",
+    "s4_step1": "تحديد احتياجات المجتمع",
+    "s4_step2": "تقديم التعليم والتدريب",
+    "s4_step3": "دعم ريادة الأعمال",
+    "s4_step4": "تعزيز الصحة والوعي",
+    "s4_step5": "بناء القيادة ومجموعات الدعم الذاتي",
+    "s4_step6": "ضمان التأثير طويل الأمد",
+    "s4_heading4": "مجالات التركيز في التمكين",
+    "s4_desc4": "تم تصميم مبادراتنا لإحداث تغيير دائم في حياة النساء من خلال التركيز على التعليم، والمهارات، والاستقلال المالي، والقيادة المجتمعية.",
+    "s4_scard1_title": "تطوير المهارات",
+    "s4_scard1_desc": "برامج تدريبية تزود النساء بالمهارات العملية للتوظيف المستدام.",
+    "s4_scard2_title": "ريادة الأعمال",
+    "s4_scard2_desc": "تشجيع الأعمال التي تقودها النساء وتقديم الدعم للاستقرار المالي.",
+    "s4_scard3_title": "التعليم والمعرفة",
+    "s4_scard3_desc": "تعزيز التعليم الرسمي وغير الرسمي، إلى جانب المعرفة الرقمية للتمكين.",
+    "s4_scard4_title": "الصحة والوعي",
+    "s4_scard4_desc": "ورش عمل ومخيمات عن الرعاية الصحية، والتغذية، والنظافة لرفاهية النساء.",
+    "s4_heading5": "التمكين المستدام",
+    "s4_desc5": "نؤمن بإحداث تأثير طويل الأمد من خلال تمكين النساء ليصبحن قائدات، ورائدات أعمال، ونماذج يُحتذى بها في مجتمعاتهن. تركز مبادراتنا على التغيير المستدام من خلال المهارات، والصحة، والاستقلال المالي.",
+    "s4_bcard1_title": "القيادة ومجموعات الدعم الذاتي",
+    "s4_bcard1_desc": "تشجيع النساء على تولي أدوار قيادية وتشكيل مجموعات للدعم والنمو المتبادل.",
+    "s4_bcard2_title": "الثقافة المالية والاستقلال",
+    "s4_bcard2_desc": "مساعدة النساء على فهم الادخار، والائتمان، وريادة الأعمال لتحقيق الاستقلال المالي.",
+    "s4_cta_title": "انضم إلينا في تمكين المرأة",
+    "s4_cta_desc": "معًا، يمكننا إنشاء مستقبل تكون فيه النساء متعلمات، ومتمكنات، ومعتمدات على أنفسهن. كن جزءًا من التغيير اليوم.",
+    "s4_cta_btn": "شارك الآن",
 
      },
   he: {
- "home": "בית",
-    "home1": "דף הבית 1",
-    "home2": "דף הבית 2",
+    "home": "בית",
+    "home1": "דף 1",
+    "home2": "דף 2",
     "about": "אודות",
     "services": "שירותים",
     "allServices": "כל השירותים",
-    "service_1": "סיוע ברכישת נכסים",
-    "service_2": "מכירת נכסים",
-    "service_3": "שירותי השכרה",
-    "service_4": "ניהול נכסים",
-    "service_5": "השקעות נדל״ן",
-    "service_6": "תמיכה משפטית ותיעוד",
+    "service_1": "שירות_1",
+    "service_2": "שירות_2",
+    "service_3": "שירות_3",
+    "service_4": "שירות_4",
+    "service_5": "שירות_5",
+    "service_6": "שירות_6",
     "blog": "בלוג",
     "allPosts": "כל הפוסטים",
-    "blog_1": "השקעות נדל״ן חכמות",
-    "blog_2": "ניהול נכסים יעיל",
-    "blog_3": "מגמות שוק הנדל״ן",
+    "blog_1": "בלוג_1",
+    "blog_2": "בלוג_2",
+    "blog_3": "בלוג_3",
     "contact": "צור קשר",
     "logout": "התנתק",
 
-    "footer_about": "ספק מוביל של פתרונות בינה מלאכותית, מסייע לעסקים להשתנות באמצעות טכנולוגיה חכמה ומערכות אוטומציה חדשניות.",
-    "footer_quickLinks": "קישורים מהירים",
+    "footer_about": "ארגון צדקה מסור, המעצים קהילות באמצעות חינוך, בריאות, תמיכת מזון ויוזמות ברות קיימא ליצירת השפעה מתמשכת ותקווה.",
+    "footer_quicklinks": "קישורים מהירים",
     "footer_home": "בית",
     "footer_home2": "בית 2",
-    "footer_aboutUs": "אודותינו",
+    "footer_aboutus": "אודותינו",
     "footer_services": "שירותים",
     "footer_blog": "בלוג",
     "footer_contact": "צור קשר",
-    "footer_servicesTitle": "שירותים",
-    "footer_service1": "סיוע ברכישת נכסים",
-    "footer_service2": "מכירת נכסים",
-    "footer_service3": "שירותי השכרה",
-    "footer_service4": "ניהול נכסים",
-    "footer_service5": "השקעות נדל\"ן",
-    "footer_service6": "תמיכה משפטית ותיעוד",
-    "footer_contactInfo": "פרטי קשר",
-    "footer_email": "contact@stackly.ai",
+    "footer_services_title": "שירותים",
+    "footer_service1": "חלוקת מזון",
+    "footer_service2": "תמיכה בחינוך",
+    "footer_service3": "מחנות בריאות",
+    "footer_service4": "העצמת נשים",
+    "footer_service5": "רווחת ילדים",
+    "footer_service6": "סיוע באסונות",
+    "footer_contactinfo": "פרטי קשר",
+    "footer_email": "contact@stackly.in",
     "footer_phone": "+1 (555) 123-4567",
-    "footer_address": "123 רחוב חדשנות בינה מלאכותית",
-    "footer_bottom": "© 2025 Stackly. כל הזכויות שמורות.",
+    "footer_location": "123 היידראבאד, הודו",
+    "footer_rights": "© 2025 Stackly. כל הזכויות שמורות.",
 
-    "s4_title": "ניהול נכסים",
-    "s4_heading1": "שירותי ניהול נכסים",
-    "s4_intro": "פשט את ניהול הנכסים שלך עם השירותים המקצועיים שלנו. מהשכרת דיירים ועד תחזוקה וגביית שכר דירה, אנו מבטיחים תפעול חלק, עדכונים בזמן ותשואה מקסימלית על ההשקעה שלך.",
-    "s4_feat1": "בדיקת דיירים וקליטה",
-    "s4_feat2": "גביית שכר דירה ומעקב פיננסי",
-    "s4_feat3": "תחזוקה ותיקוני נכסים",
-    "s4_feat4": "ניהול חוזים ותיעוד",
-    "s4_feat5": "דוחות מותאמים וניתוחים לנכסים",
-    "s4_explore": "גלה שירותים",
-    "s4_getStarted": "התחל עכשיו",
-
-    "s4_heading2": "פתרונות ניהול נכסים",
-    "s4_desc2": "פשט את תפעול הנכסים באמצעות שירותי הניהול המקיפים שלנו. מקליטת דיירים ועד גביית שכר דירה ותחזוקה, אנו מבטיחים תפעול חלק, דיירים מרוצים ותשואה מקסימלית על ההשקעה.",
-    "s4_card1_title": "קליטת דיירים והשכרות",
-    "s4_card1_desc": "ניהול בקשות דיירים, בדיקות וחוזי שכירות ביעילות כדי להבטיח דיירים אמינים במהירות.",
-    "s4_card2_title": "גביית שכר דירה וחשבונאות",
-    "s4_card2_desc": "מעקב אחר תשלומי שכר דירה, ניהול רשומות פיננסיות והפקת דוחות מפורטים לניהול פיננסי חלק.",
-    "s4_card3_title": "תחזוקת נכסים ותמיכה",
-    "s4_card3_desc": "טיפול בתיקונים, בקשות תחזוקה ותמיכת דיירים ביעילות כדי לשמור על הנכס במצב מיטבי.",
-
-    "s4_heading3": "שירותי ניהול נכסים מקיפים",
-    "s4_desc3": "פשט את תפעול הנכסים באמצעות פתרונות הניהול המקצועיים שלנו. אנו מטפלים בכל דבר, מקליטת דיירים ועד תחזוקה וגביית שכר דירה, כדי להבטיח תפעול חלק ותשואה גבוהה.",
-    "s4_process_intro": "שירותי ניהול הנכסים שלנו מכסים את כל היבטי השכירות. מהצגת נכסים ובדיקת דיירים ועד חוזי שכירות, גביית שכר דירה ותחזוקה, אנו מבטיחים חוויה נטולת דאגות לבעלי נכסים ודיירים כאחד.",
-    "s4_step1": "פרסום נכסים וקידום",
-    "s4_step2": "בדיקת דיירים ובחירה",
-    "s4_step3": "הכנת חוזה שכירות",
-    "s4_step4": "גביית שכר דירה וחשבונאות",
-    "s4_step5": "ניהול תחזוקה ותיקונים",
-    "s4_step6": "תקשורת ותמיכה לדיירים",
-
-    "s4_heading4": "שירותי ניהול נכסים",
-    "s4_desc4": "אנו מספקים פתרונות ניהול נכסים מקיפים כדי לעזור לבעלי נכסים לנהל השכרות ביעילות. מהשכרת דיירים ועד תחזוקה וגביית שכר דירה, אנו מבטיחים תפעול חלק ותשואה גבוהה על ההשקעה.",
-    "s4_scard1_title": "קליטת ובדיקת דיירים",
-    "s4_scard1_desc": "בדיקת דיירים פוטנציאליים באופן יסודי וניהול חוזי שכירות במהירות.",
-    "s4_scard2_title": "גביית שכר דירה וחשבונאות",
-    "s4_scard2_desc": "מעקב אחר תשלומים, ניהול חשבונות והפקת דוחות מפורטים לניהול פיננסי.",
-    "s4_scard3_title": "תחזוקה ותיקונים",
-    "s4_scard3_desc": "תיאום תחזוקת נכסים ותיקונים כדי להבטיח שביעות רצון דיירים ושימור הנכסים.",
-    "s4_scard4_title": "תקשורת ותמיכת דיירים",
-    "s4_scard4_desc": "מתן תמיכה מתמשכת ותקשורת יעילה עם דיירים כדי להבטיח מגורים ארוכי טווח.",
-
-    "s4_heading5": "ניהול נכסים מקצועי",
-    "s4_desc5": "שירותי ניהול הנכסים שלנו מפשטים את תפעול ההשכרות עבור בעלי נכסים. מקליטת דיירים וניהול חוזים ועד גביית שכר דירה ותחזוקה, אנו מבטיחים תפעול חלק ורווחי כך שתוכל להתמקד בצמיחת ההשקעות שלך.",
-    "s4_bcard1_title": "קליטת דיירים והשכרות",
-    "s4_bcard1_desc": "בדיקה, בחירה וניהול חוזים ביעילות כדי להבטיח דיירים אמינים במהירות.",
-    "s4_bcard2_title": "גביית שכר דירה ותחזוקה",
-    "s4_bcard2_desc": "טיפול בגביית שכר דירה בזמן ותחזוקת נכסים לתפעול חלק.",
-
-    "s4_cta_title": "מוכן לנהל את הנכס שלך ביעילות?",
-    "s4_cta_desc": "בוא נפשט את ניהול הדיירים, גביית שכר הדירה ותחזוקת הנכסים באמצעות פתרונות הניהול המקצועיים שלנו.",
-    "s4_cta_btn": "התחל עכשיו"
- 
-        
+    "s4_title": "העצמת נשים",
+    "s4_heading1": "מעצימים נשים, משנים קהילות",
+    "s4_intro": "יוזמות העצמת נשים שלנו מתמקדות בחינוך, פיתוח מיומנויות, עצמאות כלכלית, והזדמנויות מנהיגות לנשים. אנו שואפים ליצור חברה שבה נשים בטוחות בעצמן, עצמאיות ומכובדות.",
+    "s4_feat1": "הכשרה מקצועית ופיתוח מיומנויות",
+    "s4_feat2": "יזמות ואוריינות פיננסית",
+    "s4_feat3": "תוכניות חינוך ואוריינות דיגיטלית",
+    "s4_feat4": "מודעות לבריאות ורווחה",
+    "s4_feat5": "מנהיגות והקמת קבוצות תמיכה עצמית",
+    "s4_explore": "גלה תוכניות",
+    "s4_getStarted": "הצטרף אלינו",
+    "s4_heading2": "תחומי מפתח בהעצמת נשים",
+    "s4_desc2": "התוכניות שלנו עוסקות בהיבטים החשובים ביותר של העצמת נשים — חינוך, מיומנויות, עצמאות כלכלית ובריאות — ועוזרות לנשים לממש את הפוטנציאל שלהן ולשנות את הקהילות שלהן.",
+    "s4_card1_title": "חינוך והכשרה",
+    "s4_card1_desc": "מתן גישה לחינוך, הכשרה מקצועית ואוריינות דיגיטלית כדי לעזור לנשים לבנות עתיד טוב יותר.",
+    "s4_card2_title": "עצמאות כלכלית",
+    "s4_card2_desc": "תמיכה בנשים עם יזמות, מיקרו-פיננסים והזדמנויות הכנסה מבוססות מיומנויות.",
+    "s4_card3_title": "בריאות ורווחה",
+    "s4_card3_desc": "הגברת המודעות לבריאות נשים, היגיינה ורווחה באמצעות מחנות וסדנאות.",
+    "s4_heading3": "תהליך ההעצמה שלנו",
+    "s4_desc3": "אנו נוקטים בגישה הוליסטית הכוללת חינוך, מיומנויות, מודעות לבריאות ופיתוח מנהיגות כדי להעצים נשים בכל שלב בחיים.",
+    "s4_process_intro": "באמצעות חינוך, בניית מיומנויות ותוכניות מודעות, אנו עוזרים לנשים לפרוץ מחסומים ולהשיג עצמאות חברתית וכלכלית.",
+    "s4_step1": "זיהוי צרכי הקהילה",
+    "s4_step2": "מתן חינוך והכשרה",
+    "s4_step3": "תמיכה ביזמות",
+    "s4_step4": "קידום בריאות ומודעות",
+    "s4_step5": "בניית מנהיגות וקבוצות תמיכה עצמית",
+    "s4_step6": "הבטחת השפעה ארוכת טווח",
+    "s4_heading4": "תחומי מיקוד בהעצמה",
+    "s4_desc4": "היוזמות שלנו נועדו ליצור שינוי מתמשך בחיי הנשים על ידי התמקדות בחינוך, מיומנויות, עצמאות כלכלית ומנהיגות קהילתית.",
+    "s4_scard1_title": "פיתוח מיומנויות",
+    "s4_scard1_desc": "תוכניות הכשרה המציידות נשים במיומנויות מעשיות לתעסוקה בת קיימא.",
+    "s4_scard2_title": "יזמות",
+    "s4_scard2_desc": "עידוד עסקים בהובלת נשים ומתן תמיכה ליציבות פיננסית.",
+    "s4_scard3_title": "חינוך ואוריינות",
+    "s4_scard3_desc": "קידום חינוך פורמלי ולא פורמלי יחד עם אוריינות דיגיטלית להעצמה.",
+    "s4_scard4_title": "בריאות ומודעות",
+    "s4_scard4_desc": "סדנאות ומחנות בנושא בריאות, תזונה והיגיינה לרווחת נשים.",
+    "s4_heading5": "העצמה בת קיימא",
+    "s4_desc5": "אנו מאמינים ביצירת השפעה ארוכת טווח על ידי העצמת נשים להפוך למנהיגות, יזמיות ומודל לחיקוי בקהילותיהן. היוזמות שלנו מתמקדות בשינוי בר קיימא באמצעות מיומנויות, בריאות ועצמאות כלכלית.",
+    "s4_bcard1_title": "מנהיגות וקבוצות תמיכה עצמית",
+    "s4_bcard1_desc": "עידוד נשים ליטול תפקידי מנהיגות ולהקים קבוצות לתמיכה וצמיחה הדדית.",
+    "s4_bcard2_title": "אוריינות פיננסית ועצמאות",
+    "s4_bcard2_desc": "סיוע לנשים להבין חיסכון, אשראי ויזמות כדי להשיג עצמאות כלכלית.",
+    "s4_cta_title": "הצטרפו אלינו בהעצמת נשים",
+    "s4_cta_desc": "ביחד, נוכל ליצור עתיד שבו נשים משכילות, מועצמות ועצמאיות. היו חלק מהשינוי היום.",
+    "s4_cta_btn": "הצטרף",
+  
   }
 };
 
@@ -627,355 +623,11 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 
-
-
-
 <!--  Header -->
 
-<script>
-  // Mobile menu setup
-  const hamburger = document.getElementById("hamburger");
-  const hamburgerMenu = document.getElementById("hamburgerMenu");
 
-  // Show/hide mobile menu on hamburger click
-  hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    hamburgerMenu.classList.toggle("active");
-  });
 
-  // Toggle dropdowns for mobile menu
-  document.querySelectorAll('.mobile-dropdown-parent > span').forEach(link => {
-    link.addEventListener('click', function() {
-      const parentLi = this.parentElement;
-      const dropdown = parentLi.querySelector('.mobile-dropdown');
-      dropdown.classList.toggle('active');
-    });
-  });
 
-  // Desktop dropdown toggle logic
-  document.querySelectorAll('.nav-item.dropdown > .nav-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      document.querySelectorAll('.dropdown-menu').forEach(menu => {
-        if (menu !== this.nextElementSibling) {
-          menu.classList.remove('active');
-        }
-      });
-      const dropdownMenu = this.nextElementSibling;
-      if (dropdownMenu) {
-        dropdownMenu.classList.toggle('active');
-      }
-    });
-  });
-
-  // Redirect on desktop dropdown menu item click
-  document.querySelectorAll('.dropdown-menu a').forEach(link => {
-    link.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (href && href !== "#") {
-        window.location.href = href;
-        document.querySelectorAll('.dropdown-menu').forEach(menu => menu.classList.remove('active'));
-      }
-    });
-  });
-
-  // Redirect on normal nav link click
-  document.querySelectorAll('.nav-menu > .nav-item:not(.dropdown) .nav-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (href && href !== "#") {
-        window.location.href = href;
-      }
-    });
-  });
-
-  // Auth link toggle for desktop and mobile
-  function setupAuthLinks() {
-    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
-    const authLinks = [document.getElementById("authLink"), document.getElementById("mobileAuthLink")];
-
-    authLinks.forEach(link => {
-      if (!link) return;
-      if (isLoggedIn) {
-        link.innerText = "Logout";
-        link.href = "#";
-        link.onclick = (e) => {
-          e.preventDefault();
-          localStorage.removeItem("isLoggedIn");
-          localStorage.removeItem("currentUser");
-          window.location.href = "index.html";
-        };
-      } else {
-        link.innerText = "Login";
-        link.href = "index.html";
-        link.onclick = null;
-      }
-    });
-  }
-  setupAuthLinks();
-
-  // Theme toggle
-  const toggleBtn = document.getElementById('toggleBtn');
-  let darkMode = localStorage.getItem('darkMode') === 'true';
-
-  function applyTheme() {
-    if (darkMode) {
-      document.body.classList.add('dark-mode');
-      toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
-    } else {
-      document.body.classList.remove('dark-mode');
-      toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
-    }
-  }
-
-  toggleBtn.addEventListener('click', () => {
-    darkMode = !darkMode;
-    localStorage.setItem('darkMode', darkMode);
-    applyTheme();
-  });
-  applyTheme();
-
-  // Avatar initials logic
-  const avatarCircle = document.getElementById('avatarCircle');
-  const avatarInitials = document.getElementById('avatarInitials');
-  const avatarDropdown = document.getElementById('avatarDropdown');
-  const logoutBtn = document.getElementById('logoutBtn');
-  const currentUserEmail = localStorage.getItem("currentUser");
-  const users = JSON.parse(localStorage.getItem("users")) || {};
-
-  if (currentUserEmail && users[currentUserEmail]) {
-    const firstName = users[currentUserEmail].firstName || "";
-    const lastName = users[currentUserEmail].lastName || "";
-    const initials = (firstName[0] || "").toUpperCase() + (lastName[0] || "").toUpperCase();
-    avatarInitials.textContent = initials;
-  } else {
-    avatarInitials.textContent = "?";
-  }
-
-  // Show/hide avatar dropdown on click
-  avatarCircle.addEventListener('click', function(e) {
-    e.stopPropagation();
-    avatarDropdown.style.display = avatarDropdown.style.display === "block" ? "none" : "block";
-  });
-
-  document.addEventListener('click', function(e) {
-    if (!avatarCircle.contains(e.target) && !avatarDropdown.contains(e.target)) {
-      avatarDropdown.style.display = "none";
-    }
-  });
-
-  // Logout action
-  logoutBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    localStorage.removeItem("isLoggedIn");
-    localStorage.removeItem("currentUser");
-    window.location.href = "index.html";
-  });
-</script>
-
-<style>
-  /* Base styles for hamburger icon */
-  .hamburger {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 24px;
-    height: 18px;
-    cursor: pointer;
-    z-index: 1000;
-  }
-
-  .hamburger span {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #333;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .dark-mode .hamburger span {
-    background-color: #fff;
-  }
-
-  /* Hamburger menu animation */
-  .hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-
-  .hamburger.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
-
-  /* Hide navigation on mobile */
-  @media (max-width: 768px) {
-    .nav-menu {
-      display: none;
-    }
-    .hamburger {
-      display: flex;
-    }
-  }
-
-  /* Styles for the mobile hamburger menu */
-  .mobile-menu-wrapper {
-    position: relative;
-  }
-
-  .hamburger-menu {
-    display: none;
-    flex-direction: column;
-    background: #23272f;
-    color: #fff;
-    position: absolute;
-    top: 50px;
-    right: 0;
-    width: 220px;
-    border-radius: 8px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
-    padding: 20px 0;
-    z-index: 9999;
-    list-style: none;
-  }
-
-  .hamburger-menu.active {
-    display: flex;
-  }
-
-  .hamburger-menu li {
-    padding: 10px 24px;
-    border-bottom: 1px solid #333;
-  }
-
-  .hamburger-menu li:last-child {
-    border-bottom: none;
-  }
-
-  .hamburger-menu a,
-  .hamburger-menu span {
-    color: #00f7ff;
-    text-decoration: none;
-    font-size: 1.1rem;
-    display: block;
-    cursor: pointer;
-    font-weight: 500;
-  }
-
-  .hamburger-menu ul {
-    list-style: none;
-    padding-left: 20px;
-    margin-top: 5px;
-  }
-
-  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown {
-    display: none;
-  }
-
-  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown.active {
-    display: block;
-  }
-
-  .toggle-btn {
-    background: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 38px;
-    height: 38px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 16px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-
-  .toggle-btn:hover {
-    background: #f0f0f0;
-  }
-
-  .avatar-circle {
-    position: relative;
-    cursor: pointer;
-    z-index: 1001;
-    overflow: visible;
-  }
-
-  .avatar-circle {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-left: 16px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #eee;
-    position: relative;
-    cursor: pointer;
-  }
-
-  .avatar-circle img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .avatar-dropdown {
-    display: none;
-    position: absolute;
-    top: 65px;
-    right: 140px;
-    background: #fff;
-    min-width: 100px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
-    border-radius: 8px;
-    z-index: 1002;
-    padding: 4px 0;
-  }
-
-  .avatar-dropdown ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .avatar-dropdown li {
-    padding: 6px 12px;
-  }
-
-  .avatar-dropdown a {
-    color: #23272f;
-    text-decoration: none;
-    font-size: 0.95rem;
-    display: block;
-    border-radius: 4px;
-    transition: background 0.2s;
-  }
-
-  .avatar-dropdown a:hover {
-    background: #f0f0f0;
-  }
-
-  @media (max-width: 768px) {
-    .toggle-btn,
-    .avatar-circle {
-      margin-left: 8px;
-      width: 32px;
-      height: 32px;
-    }
-  }
-
-  @media (min-width: 769px) {
-    .hamburger-menu {
-      display: none !important;
-    }
-  }
-</style>
 <!-- 🔷 Protest home page  -->
 
   <script>
@@ -1985,18 +1637,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
      <!-- Footer -->
-     <!-- Footer -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-content">
-      <!-- Logo & About -->
-      <div class="footer-section footer-section1">
-        <div class="logo">
+    <footer class="site-footer">
+  <div class="footer-wrapper">
+    <div class="footer-grid">
+
+      <!-- Brand & About -->
+      <div class="footer-block footer-brand footer-block1">
+        <div class="footer-logo">
           <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 50px; width: 80px;">
         </div>
-        <p class="text-justify">
-          <span data-i18n="footer_about">Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.</span>
+
+        <p style="text-align: justify;" data-i18n="footer_about">
+          Dedicated charity organization, empowering communities through education, healthcare, food support, and sustainable initiatives to create lasting impact and hope.
         </p>
+
         <div class="social-links">
           <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
           <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
@@ -2006,12 +1660,12 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
 
       <!-- Quick Links -->
-      <div class="footer-section footer-section2">
-        <h4 data-i18n="footer_quickLinks">Quick Links</h4>
+      <div class="footer-block footer-block2">
+        <h4 data-i18n="footer_quicklinks">Quick Links</h4>
         <ul>
           <li><a href="home.html"><span data-i18n="footer_home">Home</span></a></li>
           <li><a href="home2.html"><span data-i18n="footer_home2">Home 2</span></a></li>
-          <li><a href="about.html"><span data-i18n="footer_aboutUs">About Us</span></a></li>
+          <li><a href="about.html"><span data-i18n="footer_aboutus">About Us</span></a></li>
           <li><a href="services.html"><span data-i18n="footer_services">Services</span></a></li>
           <li><a href="blog.html"><span data-i18n="footer_blog">Blog</span></a></li>
           <li><a href="contact.html"><span data-i18n="footer_contact">Contact</span></a></li>
@@ -2019,137 +1673,136 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
 
       <!-- Services -->
-      <div class="footer-section footer-section3">
-        <h4 data-i18n="footer_servicesTitle">Services</h4>
+      <div class="footer-block footer-block3">
+        <h4 data-i18n="footer_services_title">Services</h4>
         <ul>
-          <li><a href="service1.html"><span data-i18n="footer_service1">Property Buying Assistance</span></a></li>
-          <li><a href="service2.html"><span data-i18n="footer_service2">Property Selling</span></a></li>
-          <li><a href="service3.html"><span data-i18n="footer_service3">Rental Services</span></a></li>
-          <li><a href="service4.html"><span data-i18n="footer_service4">Property Management</span></a></li>
-          <li><a href="service5.html"><span data-i18n="footer_service5">Real Estate Investment</span></a></li>
-          <li><a href="service6.html"><span data-i18n="footer_service6">Legal & Documentation Support</span></a></li>
+          <li><a href="service1.html"><span data-i18n="footer_service1">Food Distribution</span></a></li>
+          <li><a href="service2.html"><span data-i18n="footer_service2">Education Support</span></a></li>
+          <li><a href="service3.html"><span data-i18n="footer_service3">Healthcare Camps</span></a></li>
+          <li><a href="service4.html"><span data-i18n="footer_service4">Women Empowerment</span></a></li>
+          <li><a href="service5.html"><span data-i18n="footer_service5">Child Welfare</span></a></li>
+          <li><a href="service6.html"><span data-i18n="footer_service6">Disaster Relief</span></a></li>
         </ul>
       </div>
 
       <!-- Contact Info -->
-      <div class="footer-section footer-section4">
-        <h4 data-i18n="footer_contactInfo">Contact Info</h4>
+      <div class="footer-block footer-block4">
+        <h4 data-i18n="footer_contactinfo">Contact Info</h4>
         <ul>
-          <li><i class="fas fa-envelope"></i> <span data-i18n="footer_email">contact@stackly.ai</span></li>
+          <li><i class="fas fa-envelope"></i> <span data-i18n="footer_email">contact@stackly.in</span></li>
           <li><i class="fas fa-phone"></i> <span data-i18n="footer_phone">+1 (555) 123-4567</span></li>
-          <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer_address">123 AI Innovation Drive</span></li>
+          <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer_location">123 Hyderabad, India</span></li>
         </ul>
       </div>
     </div>
 
-    <!-- Bottom Bar -->
-    <div class="footer-bottom">
-      <p><span data-i18n="footer_bottom">&copy; 2025 Stackly. All rights reserved.</span></p>
+    <!-- Bottom -->
+    <div class="footer-bottom-bar">
+      <p data-i18n="footer_rights">&copy; 2025 Stackly. All rights reserved.</p>
     </div>
   </div>
 </footer>
 
 
-
+<!-- Styles -->
 <style>
-.footer {
+.site-footer {
   background: #0a0a0a;
   color: #fff;
   padding: 50px 20px 20px;
   font-family: Arial, sans-serif;
 }
 
-.footer-section1{
-  margin-right: 150px;
+.footer-wrapper {
+  max-width: 1200px; /* keeps equal left-right padding */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.footer-block2 {
+  padding-inline-start: 100px; /* works for both ltr & rtl */
 }
 
-.footer-section4{
-  margin-left: 50px;
+.footer-block3 {
+  padding-inline-start: 80px; /* works for both ltr & rtl */
 }
 
-.footer .footer-content {
+.footer-block4 {
+  padding-inline-start: 60px; /* works for both ltr & rtl */
+}
+
+
+.footer-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   margin-bottom: 30px;
 }
 
-.footer .footer-section h4 {
+
+.footer-block h4 {
   font-size: 1.2rem;
   margin-bottom: 15px;
   color: #f4f4f4;
 }
 
-.footer .footer-section ul {
+.footer-block ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
-.footer .footer-section ul li {
+.footer-block ul li {
   margin-bottom: 10px;
-  font-size: 0.95rem;
   color: #ddd;
 }
 
-.footer .footer-section ul li a {
+.footer-block ul li a {
   color: #ddd;
   text-decoration: none;
   transition: color 0.3s;
 }
 
-.footer .footer-section ul li a:hover {
+.footer-block ul li a:hover {
   color: #a68e4c;
 }
 
-.footer .social-links a {
-  margin-right: 12px;
-  font-size: 1.2rem;
-  color: #ddd;
-  transition: color 0.3s;
-}
 
-.footer .social-links a:hover {
-  color: #000000;
-}
 
-.footer .footer-bottom {
+
+
+.footer-bottom-bar {
   text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255,255,255,0.1);
   padding-top: 15px;
   font-size: 0.9rem;
   color: #bbb;
 }
 
+/* Responsive */
 @media (max-width: 900px) {
-  .footer .footer-content {
+  .footer-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
-  .footer-section1{
-  margin-right: 5px;
-}
 }
 
 @media (max-width: 600px) {
-  .footer .footer-content {
+  .footer-grid {
     grid-template-columns: 1fr;
     text-align: left;
   }
-  .footer .social-links {
-    margin-top: 15px;
+  .footer-block2{
+      padding-left: 0px;
   }
-  .footer-section1{
-  margin-right: 10px;
-}
-  .footer-section2{
-  margin-right: 10px;
-}
-.footer-section4{
-  margin-left: 1px;
-}
+  .footer-block3{
+      padding-left: 0px;
+  }
+    .footer-block4{
+      padding-left: 0px;
+    }
 }
 </style>
+
+
 </div>
     <script src="assets/js/script.js"></script>
 </body>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Stackly - Realestate</title>
+    <title> Stackly - Charity</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -15,7 +15,7 @@
 <div id="content" style="display:none;"></div>
 
     <!-- Sticky Header -->
-    <header class="header">
+   <header class="header">
   <div class="container">
     <div class="nav-wrapper">
       <div class="logo">
@@ -36,21 +36,21 @@
             <a href="#" class="nav-link"><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
               <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
-              <li><a href="service1.html"><span data-i18n="service_1">Property Buying Assistance</span></a></li>
-              <li><a href="service2.html"><span data-i18n="service_2">Property Selling</span></a></li>
-              <li><a href="service3.html"><span data-i18n="service_3">Rental Services </span></a></li>
-              <li><a href="service4.html"><span data-i18n="service_4">Property Management</span></a></li>
-              <li><a href="service5.html"><span data-i18n="service_5">Real Estate Investment</span></a></li>
-              <li><a href="service6.html"><span data-i18n="service_6">Legal & Documentation Support</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Service_1</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Service_2</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Service_3</span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Service_4</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Service_5</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service_6">Service_6</span></a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
             <a href="#" class="nav-link"><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
               <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
-              <li><a href="blog1.html"><span data-i18n="blog_1">Smart Property Investments</span></a></li>
-              <li><a href="blog2.html"><span data-i18n="blog_2">Effective Property Management</span></a></li>
-              <li><a href="blog3.html"><span data-i18n="blog_3">Real Estate Market Trends</span></a></li>
+              <li><a href="blog1.html"><span data-i18n="blog_1">blog_1</span></a></li>
+              <li><a href="blog2.html"><span data-i18n="blog_2">blog_2</span></a></li>
+              <li><a href="blog3.html"><span data-i18n="blog_3">blog_3</span></a></li>
             </ul>
           </li>
           <li class="nav-item"><a href="contact.html" class="nav-link"><span data-i18n="contact">Contact</span></a></li>
@@ -62,6 +62,15 @@
           <span></span>
         </div>
       </nav>
+
+       <div class="lang-switcher">
+        <label for="langSelect"></label>
+        <select id="langSelect" onchange="changeLanguage(this.value)">
+          <option value="en">English</option>
+          <option value="ar">Arabic</option>
+          <option value="he">Hebrew</option>
+        </select>
+      </div>
 
       <div class="mobile-menu-wrapper">
         <ul class="hamburger-menu" id="hamburgerMenu">
@@ -77,21 +86,21 @@
             <span><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></span>
             <ul class="mobile-dropdown">
              <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
-              <li><a href="service1.html"><span data-i18n="service_1">Property Buying Assistance</span></a></li>
-              <li><a href="service2.html"><span data-i18n="service_2">Property Selling</span></a></li>
-              <li><a href="service3.html"><span data-i18n="service_3">Rental Services </span></a></li>
-              <li><a href="service4.html"><span data-i18n="service_4">Property Management</span></a></li>
-              <li><a href="service5.html"><span data-i18n="service_5">Real Estate Investment</span></a></li>
-              <li><a href="service6.html"><span data-i18n="service6">Legal & Documentation Support</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Service_1</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Service_2</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Service_3</span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Service_4</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Service_5</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service_6">Service_6</span></a></li>
             </ul>
           </li>
           <li class="mobile-dropdown-parent">
             <span><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></span>
             <ul class="mobile-dropdown">
                <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
-                <li><a href="blog1.html"><span data-i18n="blog_1">Smart Property Investments</span></a></li>
-                <li><a href="blog2.html"><span data-i18n="blog_2">Effective Property Management</span></a></li>
-                <li><a href="blog3.html"><span data-i18n="blog_3">Real Estate Market Trends</span></a></li>
+                <li><a href="blog1.html"><span data-i18n="blog_1">blog_1</span></a></li>
+                <li><a href="blog2.html"><span data-i18n="blog_2">blog_2</span></a></li>
+                <li><a href="blog3.html"><span data-i18n="blog_3">blog_3</span></a></li>
             </ul>
           </li>
           <li><a href="contact.html"><span data-i18n="contact">Contact</span></a></li>
@@ -99,74 +108,75 @@
         </ul>
       </div>
 
-      <div class="lang-switcher">
-        <label for="langSelect">Language:</label>
-        <select id="langSelect" onchange="changeLanguage(this.value)">
-          <option value="en">English</option>
-          <option value="ar">Arabic</option>
-          <option value="he">Hebrew</option>
-        </select>
-      </div>
+     
 
       <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
         <i class="fas fa-moon"></i>
       </button>
 
-      <div class="avatar-circle" title="Profile" id="avatarCircle">
-        <span id="avatarInitials"></span>
+     <div class="avatar-wrapper">
+        <div class="avatar-circle" title="Profile" id="avatarCircle">
+          <span id="avatarInitials">BA</span>
+        </div>
+        <div class="avatar-dropdown" id="avatarDropdown">
+          <ul>
+            <li>
+              <a href="index.html" id="logoutBtn">
+                <span data-i18n="logout">Logout</span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="avatar-dropdown" id="avatarDropdown">
-        <ul>
-          <li><a href="index.html" id="logoutBtn"><span data-i18n="logout">Logout</span></a></li>
-        </ul>
-      </div>
+      
     </div>
   </div>
 </header>
 
 
+
 <!-- Section : 1 -->
 <section class="ai-hero-section">
   <video autoplay muted loop playsinline class="ai-hero-bg-video">
-    <source src="https://videos.pexels.com/video-files/11593544/11593544-uhd_2560_1440_60fps.mp4" type="video/mp4">
+    <source src="video/site44-S3.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
   <div class="ai-hero-overlay">
     <div class="ai-hero-content">
-      <h1 class="ai-hero-title ai-glow animate-ai-slide-in" data-i18n="rental_title">Rental Services</h1>
+      <h1 class="ai-hero-title ai-glow animate-ai-slide-in" data-i18n="health_title">Healthcare Camps</h1>
     </div>
   </div>
 </section>
 
 <!-- Section : 2 -->
 <section class="ai-section">
-  <h1 class="ai-heading" data-i18n="rental_heading1">Professional Rental Services</h1>
+  <h1 class="ai-heading" data-i18n="health_heading1">Accessible Healthcare for All</h1>
   <div class="ai-content">
     <div class="ai-text">
-      <p data-i18n="rental_intro">
-        Find the perfect rental property or tenant with our expert rental services. 
-        We provide reliable listings, property management support, and personalized guidance 
-        to ensure smooth and profitable rental experiences for both landlords and tenants.
+      <p data-i18n="health_intro">
+        Our healthcare camps bring essential medical services to underserved communities. 
+        From general check-ups to specialist consultations, we ensure that people who lack access 
+        to hospitals receive the care and awareness they deserve.
       </p>
 
       <!-- Feature Points -->
       <ul class="hero-features fade-in-up delay-2">
-        <li><span>✔</span> <span data-i18n="rental_feature1">Comprehensive rental property listings</span></li>
-        <li><span>✔</span> <span data-i18n="rental_feature2">Tenant screening and selection</span></li>
-        <li><span>✔</span> <span data-i18n="rental_feature3">Lease management and documentation</span></li>
-        <li><span>✔</span> <span data-i18n="rental_feature4">Maintenance and property support</span></li>
-        <li><span>✔</span> <span data-i18n="rental_feature5">Personalized rental solutions</span></li>
+        <li><span>✔</span> <span data-i18n="health_feature1">Free health check-ups and consultations</span></li>
+        <li><span>✔</span> <span data-i18n="health_feature2">Distribution of medicines and health kits</span></li>
+        <li><span>✔</span> <span data-i18n="health_feature3">Specialized eye and dental camps</span></li>
+        <li><span>✔</span> <span data-i18n="health_feature4">Awareness on hygiene and nutrition</span></li>
+        <li><span>✔</span> <span data-i18n="health_feature5">Support for maternal and child healthcare</span></li>
       </ul>
 
       <div class="ai-buttons">
-        <a href="services.html" class="btn btn-primary" data-i18n="rental_explore">Explore Services</a>
-        <a href="contact.html" class="btn btn-primary" data-i18n="rental_request">Request Assistance</a>
+        <a href="services.html" class="btn btn-primary" data-i18n="health_explore">Explore Programs</a>
+        <a href="contact.html" class="btn btn-primary" data-i18n="health_request">Join Us</a>
       </div>
     </div>
 
     <div class="ai-image">
-      <img src="https://i.pinimg.com/1200x/22/b1/20/22b120221e32283ed1dffa1f4ca6909a.jpg" alt="Rental Services">
+      <img src="https://i.pinimg.com/736x/6a/91/9c/6a919cc93c028cb990b8a66dcd3e04a1.jpg" alt="Healthcare Camps">
     </div>
   </div>
 </section>
@@ -175,31 +185,38 @@
 <section class="advanced-features">
   <div class="advanced-features-container">
     <div class="features-header fade-in-up">
-      <h2 data-i18n="rental_heading2">Comprehensive Rental Services</h2>
-      <p data-i18n="rental_para2">
-        Make renting simple and efficient with our professional rental services. 
-        We help landlords and tenants find the right match, manage properties effectively, 
-        and ensure a smooth rental experience from start to finish.
+      <h2 data-i18n="health_heading2">Our Healthcare Camp Services</h2>
+      <p data-i18n="health_para2">
+        Through healthcare camps, we aim to reach remote areas with quality medical services. 
+        By offering preventive care, treatment, and awareness, we help communities stay healthy 
+        and reduce avoidable illnesses.
       </p>
     </div>
 
     <div class="features-cards">
       <div class="feature-box fade-in-up delay-1">
-        <div class="feature-icon"><i class="fas fa-home"></i></div>
-        <h3 data-i18n="rental_card1_title">Property Listings & Promotion</h3>
-        <p data-i18n="rental_card1_text">Showcase your rental property on multiple platforms, reach the right tenants, and increase visibility to secure rentals quickly.</p>
+        <div class="feature-icon"><i class="fas fa-stethoscope"></i></div>
+        <h3 data-i18n="health_card1_title">General Health Check-ups</h3>
+        <p data-i18n="health_card1_text">
+          Basic medical consultations, screenings, and treatments to identify and address health issues early.
+        </p>
       </div>
 
       <div class="feature-box fade-in-up delay-2">
-        <div class="feature-icon"><i class="fas fa-user-check"></i></div>
-        <h3 data-i18n="rental_card2_title">Tenant Screening & Management</h3>
-        <p data-i18n="rental_card2_text">Screen potential tenants thoroughly and manage rental agreements, payments, and property maintenance with ease.</p>
+        <div class="feature-icon"><i class="fas fa-notes-medical"></i></div>
+        <h3 data-i18n="health_card2_title">Specialized Camps</h3>
+        <p data-i18n="health_card2_text">
+          Eye, dental, maternal, and child health camps with expert doctors to provide focused care.
+        </p>
       </div>
 
       <div class="feature-box fade-in-up delay-3">
-        <div class="feature-icon"><i class="fas fa-file-signature"></i></div>
-        <h3 data-i18n="rental_card3_title">Lease & Documentation Support</h3>
-        <p data-i18n="rental_card3_text">We handle all lease documentation, contracts, and legal requirements to ensure smooth, compliant, and hassle-free rental transactions.</p>
+        <div class="feature-icon"><i class="fas fa-pills"></i></div>
+        <h3 data-i18n="health_card3_title">Medicines & Kits</h3>
+        <p data-i18n="health_card3_text">
+          Free distribution of essential medicines, hygiene kits, and nutritional supplements 
+          for sustained wellbeing.
+        </p>
       </div>
     </div>
   </div>
@@ -209,32 +226,32 @@
 <section class="development-process">
   <div class="development-process-container">
     <div class="process-header fade-in-up">
-      <h2 data-i18n="rental_heading3">Comprehensive Rental Management Solutions</h2>
-      <p data-i18n="rental_para3">
-        Streamline your rental property management with our expert services. 
-        We provide end-to-end support for landlords and tenants, ensuring smooth leasing, efficient operations, and maximum returns.
+      <h2 data-i18n="health_heading3">How Our Healthcare Camps Work</h2>
+      <p data-i18n="health_para3">
+        We follow a structured approach to bring healthcare to communities in need. 
+        From planning and setup to medical consultation and follow-ups, 
+        our camps ensure lasting impact and healthier lives.
       </p>
     </div>
 
     <div class="process-row">
       <div class="process-image slide-in-right">
-        <img src="https://i.pinimg.com/1200x/66/14/bb/6614bb85e8c914604c7d6dcd4fa23f1d.jpg" alt="Rental Services">
+        <img src="https://i.pinimg.com/1200x/c5/81/a6/c581a618883e2ab8ceef553b5fdcc582.jpg" alt="Healthcare Process">
       </div>
 
       <div class="process-content fade-in-up delay-1">
-        <p class="process-intro" data-i18n="rental_intro2">
-          Our rental management solutions help landlords and property managers optimize occupancy, streamline operations, 
-          and provide tenants with a seamless rental experience. From listing properties to handling leases and maintenance, 
-          we cover every aspect of property rentals with professionalism and care.
+        <p class="process-intro" data-i18n="health_intro2">
+          With mobile clinics, volunteer doctors, and essential supplies, 
+          our camps deliver immediate care while promoting long-term health awareness.
         </p>
 
         <div class="process-steps">
-          <div class="step"><span class="step-number">01</span><p data-i18n="rental_step1">Property Listing & Promotion</p></div>
-          <div class="step"><span class="step-number">02</span><p data-i18n="rental_step2">Tenant Screening & Selection</p></div>
-          <div class="step"><span class="step-number">03</span><p data-i18n="rental_step3">Lease Agreement Preparation</p></div>
-          <div class="step"><span class="step-number">04</span><p data-i18n="rental_step4">Rent Collection & Payment Management</p></div>
-          <div class="step"><span class="step-number">05</span><p data-i18n="rental_step5">Maintenance & Property Support</p></div>
-          <div class="step"><span class="step-number">06</span><p data-i18n="rental_step6">Tenant Feedback & Renewal Management</p></div>
+          <div class="step"><span class="step-number">01</span><p data-i18n="health_step1">Identify Community Needs</p></div>
+          <div class="step"><span class="step-number">02</span><p data-i18n="health_step2">Set Up Camp & Facilities</p></div>
+          <div class="step"><span class="step-number">03</span><p data-i18n="health_step3">Conduct Health Screenings</p></div>
+          <div class="step"><span class="step-number">04</span><p data-i18n="health_step4">Provide Medicines & Kits</p></div>
+          <div class="step"><span class="step-number">05</span><p data-i18n="health_step5">Offer Specialist Consultations</p></div>
+          <div class="step"><span class="step-number">06</span><p data-i18n="health_step6">Follow-up & Awareness Programs</p></div>
         </div>
       </div>
     </div>
@@ -245,26 +262,29 @@
 <section class="service-showcase">
   <div class="service-container">
     <div class="service-header animate-fade-up">
-      <h2 data-i18n="rental_heading4">Comprehensive Rental Services</h2>
-      <p data-i18n="rental_para4">Manage your rental properties efficiently with our professional services, from property listing and tenant screening to lease management and maintenance support.</p>
+      <h2 data-i18n="health_heading4">Key Focus Areas of Our Camps</h2>
+      <p data-i18n="health_para4">
+        We provide essential healthcare services that target the most common and urgent needs 
+        in underserved communities.
+      </p>
     </div>
 
     <div class="service-grid">
       <div class="service-card animate-slide-up delay-1">
-        <h3 data-i18n="rental_service1_title">Property Listing & Promotion</h3>
-        <p data-i18n="rental_service1_text">List your rental properties across multiple platforms and reach potential tenants quickly and effectively.</p>
+        <h3 data-i18n="health_service1_title">General Check-ups</h3>
+        <p data-i18n="health_service1_text">Regular medical consultations and basic treatments for common health concerns.</p>
       </div>
       <div class="service-card animate-slide-up delay-2">
-        <h3 data-i18n="rental_service2_title">Tenant Screening & Selection</h3>
-        <p data-i18n="rental_service2_text">Thoroughly screen potential tenants for reliability and compatibility, ensuring safe and secure rentals.</p>
+        <h3 data-i18n="health_service2_title">Eye & Dental Care</h3>
+        <p data-i18n="health_service2_text">Specialist camps focusing on vision, dental hygiene, and corrective treatments.</p>
       </div>
       <div class="service-card animate-slide-up delay-3">
-        <h3 data-i18n="rental_service3_title">Lease Management</h3>
-        <p data-i18n="rental_service3_text">Prepare, organize, and manage lease agreements efficiently to ensure legal compliance and smooth operations.</p>
+        <h3 data-i18n="health_service3_title">Maternal & Child Care</h3>
+        <p data-i18n="health_service3_text">Support for expectant mothers and children with vaccinations, nutrition, and counseling.</p>
       </div>
       <div class="service-card animate-slide-up delay-4">
-        <h3 data-i18n="rental_service4_title">Maintenance & Support</h3>
-        <p data-i18n="rental_service4_text">Provide ongoing property maintenance and tenant support to ensure a hassle-free rental experience for landlords and tenants alike.</p>
+        <h3 data-i18n="health_service4_title">Health Awareness</h3>
+        <p data-i18n="health_service4_text">Workshops on hygiene, nutrition, and preventive healthcare for long-term wellbeing.</p>
       </div>
     </div>
   </div>
@@ -274,24 +294,24 @@
 <section class="bookkeeping-services">
   <div class="services-container">
     <div class="services-image animate-slide-in">
-      <img src="https://i.pinimg.com/1200x/29/86/cd/2986cdc460c2df3fbea38372c1a41495.jpg" alt="Rental Services">
+      <img src="https://i.pinimg.com/1200x/91/59/07/9159076cef15f38790edc57e1081193a.jpg" alt="Healthcare Support">
     </div>
     <div class="services-content">
-      <h2 class="animate-fade-up" data-i18n="rental_heading5">Professional Rental Management Services</h2>
-      <p class="animate-fade-up delay-1" style="text-align: justify;" data-i18n="rental_para5">
-        Streamline your rental property operations with our expert rental management solutions. 
-        We help landlords and property managers handle everything from tenant acquisition to lease management 
-        and maintenance, ensuring a smooth and profitable rental experience.
+      <h2 class="animate-fade-up" data-i18n="health_heading5">Sustainable Healthcare Support</h2>
+      <p class="animate-fade-up delay-1" style="text-align: justify;" data-i18n="health_para5">
+        Beyond immediate care, we aim to build healthier communities through education, 
+        follow-ups, and long-term healthcare planning. Our camps serve as a bridge 
+        to connect communities with lasting medical support.
       </p>
 
       <div class="service-card animate-fade-up delay-2">
-        <h3 data-i18n="rental_card4_title">Tenant Screening & Leasing</h3>
-        <p data-i18n="rental_card4_text">Thoroughly screen potential tenants and manage lease agreements efficiently for secure and hassle-free rentals.</p>
+        <h3 data-i18n="health_card4_title">Medical Aid & Follow-ups</h3>
+        <p data-i18n="health_card4_text">Provide free medicines and ensure patients receive continuous care after camps.</p>
       </div>
 
       <div class="service-card animate-fade-up delay-3">
-        <h3 data-i18n="rental_card5_title">Property Maintenance & Support</h3>
-        <p data-i18n="rental_card5_text">Ensure your property stays in top condition with ongoing maintenance, tenant support, and timely issue resolution.</p>
+        <h3 data-i18n="health_card5_title">Health Awareness & Training</h3>
+        <p data-i18n="health_card5_text">Conduct awareness sessions on hygiene, nutrition, and preventive measures to promote healthier living.</p>
       </div>
     </div>
   </div>
@@ -301,9 +321,12 @@
 <section class="contact-banner section-padding">
   <div class="container">
     <div class="contact-banner-content">
-      <h2 data-i18n="rental_cta_title">Ready to Rent or Manage Your Property?</h2>  
-      <p data-i18n="rental_cta_text">Let’s discuss your rental property and create a customized plan to maximize returns and ensure smooth management.</p>
-      <a href="contact.html" class="btn btn-primary" data-i18n="rental_cta_btn">Get Started</a>
+      <h2 data-i18n="health_cta_title">Join Us in Bringing Healthcare to All</h2>  
+      <p data-i18n="health_cta_text">
+        Together, we can make quality healthcare accessible to underserved communities. 
+        Be part of our mission by supporting or volunteering at our healthcare camps.
+      </p>
+      <a href="contact.html" class="btn btn-primary" data-i18n="health_cta_btn">Get Involved</a>
     </div>
   </div>
 </section>
@@ -314,288 +337,290 @@
 // Translation dictionary
 const translations = {
   en: {
-   "home": "Home",
+    "home": "Home",
     "home1": "Home 1",
     "home2": "Home 2",
     "about": "About",
     "services": "Services",
     "allServices": "All Services",
-    "service_1": "Property Buying Assistance",
-    "service_2": "Property Selling",
-    "service_3": "Rental Services",
-    "service_4": "Property Management",
-    "service_5": "Real Estate Investment",
-    "service_6": "Legal & Documentation Support",
+    "service_1": "Service_1",
+    "service_2": "Service_2",
+    "service_3": "Service_3",
+    "service_4": "Service_4",
+    "service_5": "Service_5",
+    "service_6": "Service_6",
     "blog": "Blog",
     "allPosts": "All Posts",
-    "blog_1": "Smart Property Investments",
-    "blog_2": "Effective Property Management",
-    "blog_3": "Real Estate Market Trends",
+    "blog_1": "Blog_1",
+    "blog_2": "Blog_2",
+    "blog_3": "Blog_3",
     "contact": "Contact",
     "logout": "Logout",
 
-    "footer_about": "Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.",
-    "footer_quickLinks": "Quick Links",
+     "footer_about": "Dedicated charity organization, empowering communities through education, healthcare, food support, and sustainable initiatives to create lasting impact and hope.",
+    "footer_quicklinks": "Quick Links",
     "footer_home": "Home",
     "footer_home2": "Home 2",
-    "footer_aboutUs": "About Us",
+    "footer_aboutus": "About Us",
     "footer_services": "Services",
     "footer_blog": "Blog",
     "footer_contact": "Contact",
-    "footer_servicesTitle": "Services",
-    "footer_service1": "Property Buying Assistance",
-    "footer_service2": "Property Selling",
-    "footer_service3": "Rental Services",
-    "footer_service4": "Property Management",
-    "footer_service5": "Real Estate Investment",
-    "footer_service6": "Legal & Documentation Support",
-    "footer_contactInfo": "Contact Info",
-    "footer_email": "contact@stackly.ai",
+    "footer_services_title": "Services",
+    "footer_service1": "Food Distribution",
+    "footer_service2": "Education Support",
+    "footer_service3": "Healthcare Camps",
+    "footer_service4": "Women Empowerment",
+    "footer_service5": "Child Welfare",
+    "footer_service6": "Disaster Relief",
+    "footer_contactinfo": "Contact Info",
+    "footer_email": "contact@stackly.in",
     "footer_phone": "+1 (555) 123-4567",
-    "footer_address": "123 AI Innovation Drive",
-    "footer_bottom": "© 2025 Stackly. All rights reserved.",
+    "footer_location": "123 Hyderabad, India",
+    "footer_rights": "© 2025 Stackly. All rights reserved.",
+  
+     "health_title": "Healthcare Camps",
+    "health_heading1": "Accessible Healthcare for All",
+    "health_intro": "Our healthcare camps bring essential medical services to underserved communities. From general check-ups to specialist consultations, we ensure that people who lack access to hospitals receive the care and awareness they deserve.",
+    "health_feature1": "Free health check-ups and consultations",
+    "health_feature2": "Distribution of medicines and health kits",
+    "health_feature3": "Specialized eye and dental camps",
+    "health_feature4": "Awareness on hygiene and nutrition",
+    "health_feature5": "Support for maternal and child healthcare",
+    "health_explore": "Explore Programs",
+    "health_request": "Join Us",
 
-     "rental_title": "Rental Services",
-    "rental_heading1": "Professional Rental Services",
-    "rental_intro": "Find the perfect rental property or tenant with our expert rental services. We provide reliable listings, property management support, and personalized guidance to ensure smooth and profitable rental experiences for both landlords and tenants.",
-    "rental_feature1": "Comprehensive rental property listings",
-    "rental_feature2": "Tenant screening and selection",
-    "rental_feature3": "Lease management and documentation",
-    "rental_feature4": "Maintenance and property support",
-    "rental_feature5": "Personalized rental solutions",
-    "rental_explore": "Explore Services",
-    "rental_request": "Request Assistance",
+    "health_heading2": "Our Healthcare Camp Services",
+    "health_para2": "Through healthcare camps, we aim to reach remote areas with quality medical services. By offering preventive care, treatment, and awareness, we help communities stay healthy and reduce avoidable illnesses.",
+    "health_card1_title": "General Health Check-ups",
+    "health_card1_text": "Basic medical consultations, screenings, and treatments to identify and address health issues early.",
+    "health_card2_title": "Specialized Camps",
+    "health_card2_text": "Eye, dental, maternal, and child health camps with expert doctors to provide focused care.",
+    "health_card3_title": "Medicines & Kits",
+    "health_card3_text": "Free distribution of essential medicines, hygiene kits, and nutritional supplements for sustained wellbeing.",
 
-    "rental_heading2": "Comprehensive Rental Services",
-    "rental_para2": "Make renting simple and efficient with our professional rental services. We help landlords and tenants find the right match, manage properties effectively, and ensure a smooth rental experience from start to finish.",
-    "rental_card1_title": "Property Listings & Promotion",
-    "rental_card1_text": "Showcase your rental property on multiple platforms, reach the right tenants, and increase visibility to secure rentals quickly.",
-    "rental_card2_title": "Tenant Screening & Management",
-    "rental_card2_text": "Screen potential tenants thoroughly and manage rental agreements, payments, and property maintenance with ease.",
-    "rental_card3_title": "Lease & Documentation Support",
-    "rental_card3_text": "We handle all lease documentation, contracts, and legal requirements to ensure smooth, compliant, and hassle-free rental transactions.",
+    "health_heading3": "How Our Healthcare Camps Work",
+    "health_para3": "We follow a structured approach to bring healthcare to communities in need. From planning and setup to medical consultation and follow-ups, our camps ensure lasting impact and healthier lives.",
+    "health_intro2": "With mobile clinics, volunteer doctors, and essential supplies, our camps deliver immediate care while promoting long-term health awareness.",
+    "health_step1": "Identify Community Needs",
+    "health_step2": "Set Up Camp & Facilities",
+    "health_step3": "Conduct Health Screenings",
+    "health_step4": "Provide Medicines & Kits",
+    "health_step5": "Offer Specialist Consultations",
+    "health_step6": "Follow-up & Awareness Programs",
 
-    "rental_heading3": "Comprehensive Rental Management Solutions",
-    "rental_para3": "Streamline your rental property management with our expert services. We provide end-to-end support for landlords and tenants, ensuring smooth leasing, efficient operations, and maximum returns.",
-    "rental_intro2": "Our rental management solutions help landlords and property managers optimize occupancy, streamline operations, and provide tenants with a seamless rental experience. From listing properties to handling leases and maintenance, we cover every aspect of property rentals with professionalism and care.",
-    "rental_step1": "Property Listing & Promotion",
-    "rental_step2": "Tenant Screening & Selection",
-    "rental_step3": "Lease Agreement Preparation",
-    "rental_step4": "Rent Collection & Payment Management",
-    "rental_step5": "Maintenance & Property Support",
-    "rental_step6": "Tenant Feedback & Renewal Management",
+    "health_heading4": "Key Focus Areas of Our Camps",
+    "health_para4": "We provide essential healthcare services that target the most common and urgent needs in underserved communities.",
+    "health_service1_title": "General Check-ups",
+    "health_service1_text": "Regular medical consultations and basic treatments for common health concerns.",
+    "health_service2_title": "Eye & Dental Care",
+    "health_service2_text": "Specialist camps focusing on vision, dental hygiene, and corrective treatments.",
+    "health_service3_title": "Maternal & Child Care",
+    "health_service3_text": "Support for expectant mothers and children with vaccinations, nutrition, and counseling.",
+    "health_service4_title": "Health Awareness",
+    "health_service4_text": "Workshops on hygiene, nutrition, and preventive healthcare for long-term wellbeing.",
 
-    "rental_heading4": "Comprehensive Rental Services",
-    "rental_para4": "Manage your rental properties efficiently with our professional services, from property listing and tenant screening to lease management and maintenance support.",
-    "rental_service1_title": "Property Listing & Promotion",
-    "rental_service1_text": "List your rental properties across multiple platforms and reach potential tenants quickly and effectively.",
-    "rental_service2_title": "Tenant Screening & Selection",
-    "rental_service2_text": "Thoroughly screen potential tenants for reliability and compatibility, ensuring safe and secure rentals.",
-    "rental_service3_title": "Lease Management",
-    "rental_service3_text": "Prepare, organize, and manage lease agreements efficiently to ensure legal compliance and smooth operations.",
-    "rental_service4_title": "Maintenance & Support",
-    "rental_service4_text": "Provide ongoing property maintenance and tenant support to ensure a hassle-free rental experience for landlords and tenants alike.",
+    "health_heading5": "Sustainable Healthcare Support",
+    "health_para5": "Beyond immediate care, we aim to build healthier communities through education, follow-ups, and long-term healthcare planning. Our camps serve as a bridge to connect communities with lasting medical support.",
+    "health_card4_title": "Medical Aid & Follow-ups",
+    "health_card4_text": "Provide free medicines and ensure patients receive continuous care after camps.",
+    "health_card5_title": "Health Awareness & Training",
+    "health_card5_text": "Conduct awareness sessions on hygiene, nutrition, and preventive measures to promote healthier living.",
 
-    "rental_heading5": "Professional Rental Management Services",
-    "rental_para5": "Streamline your rental property operations with our expert rental management solutions. We help landlords and property managers handle everything from tenant acquisition to lease management and maintenance, ensuring a smooth and profitable rental experience.",
-    "rental_card4_title": "Tenant Screening & Leasing",
-    "rental_card4_text": "Thoroughly screen potential tenants and manage lease agreements efficiently for secure and hassle-free rentals.",
-    "rental_card5_title": "Property Maintenance & Support",
-    "rental_card5_text": "Ensure your property stays in top condition with ongoing maintenance, tenant support, and timely issue resolution.",
-
-    "rental_cta_title": "Ready to Rent or Manage Your Property?",
-    "rental_cta_text": "Let’s discuss your rental property and create a customized plan to maximize returns and ensure smooth management.",
-    "rental_cta_btn": "Get Started",
-       
+    "health_cta_title": "Join Us in Bringing Healthcare to All",
+    "health_cta_text": "Together, we can make quality healthcare accessible to underserved communities. Be part of our mission by supporting or volunteering at our healthcare camps.",
+    "health_cta_btn": "Get Involved",
+   
   },
   ar: {
-   "home": "الرئيسية",
-    "home1": "الصفحة الرئيسية 1",
-    "home2": "الصفحة الرئيسية 2",
-    "about": "من نحن",
+     "home": "الرئيسية",
+    "home1": "الصفحة 1",
+    "home2": "الصفحة 2",
+    "about": "معلومات عنا",
     "services": "الخدمات",
     "allServices": "جميع الخدمات",
-    "service_1": "مساعدة في شراء العقارات",
-    "service_2": "بيع العقارات",
-    "service_3": "خدمات الإيجار",
-    "service_4": "إدارة العقارات",
-    "service_5": "الاستثمار العقاري",
-    "service_6": "الدعم القانوني والتوثيق",
+    "service_1": "الخدمة_1",
+    "service_2": "الخدمة_2",
+    "service_3": "الخدمة_3",
+    "service_4": "الخدمة_4",
+    "service_5": "الخدمة_5",
+    "service_6": "الخدمة_6",
     "blog": "المدونة",
     "allPosts": "جميع المقالات",
-    "blog_1": "الاستثمارات العقارية الذكية",
-    "blog_2": "إدارة العقارات الفعالة",
-    "blog_3": "اتجاهات سوق العقارات",
+    "blog_1": "مدونة_1",
+    "blog_2": "مدونة_2",
+    "blog_3": "مدونة_3",
     "contact": "اتصل بنا",
-    "logout": "تسجيل خروج",
+    "logout": "تسجيل الخروج",
 
-    "footer_about": "مزود رائد لحلول الذكاء الاصطناعي، يساعد الشركات على التحول من خلال التكنولوجيا الذكية وأنظمة الأتمتة المبتكرة.",
-    "footer_quickLinks": "روابط سريعة",
+    "footer_about": "منظمة خيرية مكرسة، تمكّن المجتمعات من خلال التعليم والرعاية الصحية ودعم الغذاء والمبادرات المستدامة لخلق تأثير دائم وأمل.",
+    "footer_quicklinks": "روابط سريعة",
     "footer_home": "الرئيسية",
     "footer_home2": "الصفحة الرئيسية 2",
-    "footer_aboutUs": "من نحن",
+    "footer_aboutus": "معلومات عنا",
     "footer_services": "الخدمات",
-    "footer_blog": "المدونة",
+    "footer_blog": "مدونة",
     "footer_contact": "اتصل بنا",
-    "footer_servicesTitle": "الخدمات",
-    "footer_service1": "مساعدة في شراء العقارات",
-    "footer_service2": "بيع العقارات",
-    "footer_service3": "خدمات الإيجار",
-    "footer_service4": "إدارة الممتلكات",
-    "footer_service5": "الاستثمار العقاري",
-    "footer_service6": "الدعم القانوني والتوثيق",
-    "footer_contactInfo": "معلومات الاتصال",
-    "footer_email": "contact@stackly.ai",
+    "footer_services_title": "الخدمات",
+    "footer_service1": "توزيع الغذاء",
+    "footer_service2": "دعم التعليم",
+    "footer_service3": "المخيمات الطبية",
+    "footer_service4": "تمكين المرأة",
+    "footer_service5": "رعاية الأطفال",
+    "footer_service6": "الإغاثة في الكوارث",
+    "footer_contactinfo": "معلومات الاتصال",
+    "footer_email": "contact@stackly.in",
     "footer_phone": "+1 (555) 123-4567",
-    "footer_address": "123 طريق ابتكار الذكاء الاصطناعي",
-    "footer_bottom": "© 2025 Stackly. جميع الحقوق محفوظة.",
+    "footer_location": "123 حيدر أباد، الهند",
+    "footer_rights": "© 2025 Stackly. جميع الحقوق محفوظة.",
+  
+    "health_title": "المخيمات الصحية",
+    "health_heading1": "الرعاية الصحية في متناول الجميع",
+    "health_intro": "تجلب مخيماتنا الصحية الخدمات الطبية الأساسية إلى المجتمعات المحرومة. من الفحوصات العامة إلى الاستشارات المتخصصة، نضمن أن الأشخاص الذين يفتقرون إلى الوصول إلى المستشفيات يتلقون الرعاية والوعي الذي يستحقونه.",
+    "health_feature1": "فحوصات واستشارات صحية مجانية",
+    "health_feature2": "توزيع الأدوية ومستلزمات الصحة",
+    "health_feature3": "مخيمات متخصصة للعيون وطب الأسنان",
+    "health_feature4": "التوعية بالنظافة والتغذية",
+    "health_feature5": "دعم رعاية الأمومة والطفولة",
+    "health_explore": "استكشاف البرامج",
+    "health_request": "انضم إلينا",
 
-    "rental_title": "خدمات الإيجار",
-    "rental_heading1": "خدمات إيجار احترافية",
-    "rental_intro": "اعثر على العقار أو المستأجر المثالي مع خدمات الإيجار الاحترافية الخاصة بنا. نحن نوفر قوائم موثوقة، ودعمًا لإدارة العقارات، وإرشادات شخصية لضمان تجارب إيجار سلسة ومربحة لكل من الملاك والمستأجرين.",
-    "rental_feature1": "قوائم شاملة للعقارات المؤجرة",
-    "rental_feature2": "فحص واختيار المستأجرين",
-    "rental_feature3": "إدارة عقود الإيجار والوثائق",
-    "rental_feature4": "الصيانة ودعم العقار",
-    "rental_feature5": "حلول إيجار مخصصة",
-    "rental_explore": "استكشاف الخدمات",
-    "rental_request": "طلب المساعدة",
+    "health_heading2": "خدمات مخيماتنا الصحية",
+    "health_para2": "من خلال المخيمات الصحية، نهدف إلى الوصول إلى المناطق النائية بخدمات طبية عالية الجودة. من خلال توفير الرعاية الوقائية والعلاج والتوعية، نساعد المجتمعات على البقاء بصحة جيدة وتقليل الأمراض التي يمكن تجنبها.",
+    "health_card1_title": "فحوصات صحية عامة",
+    "health_card1_text": "استشارات طبية أساسية وفحوصات وعلاجات لتحديد المشكلات الصحية ومعالجتها مبكرًا.",
+    "health_card2_title": "مخيمات متخصصة",
+    "health_card2_text": "مخيمات للعيون وطب الأسنان وصحة الأم والطفل مع أطباء خبراء لتقديم رعاية متخصصة.",
+    "health_card3_title": "الأدوية ومستلزمات الصحة",
+    "health_card3_text": "توزيع مجاني للأدوية الأساسية ومستلزمات النظافة والمكملات الغذائية من أجل رفاهية مستدامة.",
 
-    "rental_heading2": "خدمات إيجار شاملة",
-    "rental_para2": "اجعل عملية الإيجار بسيطة وفعالة مع خدمات الإيجار الاحترافية لدينا. نحن نساعد الملاك والمستأجرين على إيجاد الشريك المناسب، وإدارة العقارات بفعالية، وضمان تجربة إيجار سلسة من البداية حتى النهاية.",
-    "rental_card1_title": "إدراج العقارات والترويج",
-    "rental_card1_text": "اعرض عقارك المؤجر على منصات متعددة، للوصول إلى المستأجرين المناسبين وزيادة الظهور وتأمين الإيجار بسرعة.",
-    "rental_card2_title": "فحص وإدارة المستأجرين",
-    "rental_card2_text": "قم بفحص المستأجرين المحتملين بدقة وإدارة عقود الإيجار والمدفوعات وصيانة العقارات بسهولة.",
-    "rental_card3_title": "دعم العقود والوثائق",
-    "rental_card3_text": "نحن نتولى جميع عقود الإيجار والوثائق والمتطلبات القانونية لضمان معاملات إيجار سلسة وملتزمة وخالية من المتاعب.",
+    "health_heading3": "كيف تعمل مخيماتنا الصحية",
+    "health_para3": "نتبع نهجًا منظمًا لتقديم الرعاية الصحية للمجتمعات المحتاجة. من التخطيط والإعداد إلى الاستشارات الطبية والمتابعة، تضمن مخيماتنا تأثيرًا دائمًا وحياة أكثر صحة.",
+    "health_intro2": "من خلال العيادات المتنقلة والأطباء المتطوعين والإمدادات الأساسية، تقدم مخيماتنا رعاية فورية مع تعزيز الوعي الصحي على المدى الطويل.",
+    "health_step1": "تحديد احتياجات المجتمع",
+    "health_step2": "إعداد المخيم والمرافق",
+    "health_step3": "إجراء الفحوصات الطبية",
+    "health_step4": "تقديم الأدوية ومستلزمات الصحة",
+    "health_step5": "تقديم استشارات متخصصة",
+    "health_step6": "المتابعة وبرامج التوعية",
 
-    "rental_heading3": "حلول شاملة لإدارة الإيجار",
-    "rental_para3": "قم بتبسيط إدارة عقاراتك المؤجرة مع خدماتنا الاحترافية. نحن نوفر دعمًا متكاملاً للملاك والمستأجرين لضمان تأجير سلس وعمليات فعالة وعوائد قصوى.",
-    "rental_intro2": "تساعد حلولنا لإدارة الإيجار الملاك ومديري العقارات على تحسين الإشغال وتبسيط العمليات وتوفير تجربة إيجار سلسة للمستأجرين. من إدراج العقارات إلى التعامل مع العقود والصيانة، نحن نغطي جميع جوانب الإيجار باحترافية وعناية.",
-    "rental_step1": "إدراج العقارات والترويج",
-    "rental_step2": "فحص واختيار المستأجرين",
-    "rental_step3": "إعداد عقد الإيجار",
-    "rental_step4": "تحصيل الإيجار وإدارة المدفوعات",
-    "rental_step5": "الصيانة ودعم العقار",
-    "rental_step6": "ملاحظات المستأجرين وإدارة التجديد",
+    "health_heading4": "المجالات الرئيسية لمخيماتنا",
+    "health_para4": "نحن نقدم خدمات الرعاية الصحية الأساسية التي تستهدف الاحتياجات الأكثر شيوعًا وإلحاحًا في المجتمعات المحرومة.",
+    "health_service1_title": "فحوصات عامة",
+    "health_service1_text": "استشارات طبية منتظمة وعلاجات أساسية للمشكلات الصحية الشائعة.",
+    "health_service2_title": "رعاية العيون وطب الأسنان",
+    "health_service2_text": "مخيمات متخصصة تركز على الرؤية وصحة الأسنان والعلاجات التصحيحية.",
+    "health_service3_title": "رعاية الأمومة والطفولة",
+    "health_service3_text": "دعم الأمهات الحوامل والأطفال من خلال التطعيمات والتغذية والإرشاد.",
+    "health_service4_title": "التوعية الصحية",
+    "health_service4_text": "ورش عمل عن النظافة والتغذية والرعاية الصحية الوقائية من أجل رفاهية طويلة الأمد.",
 
-    "rental_heading4": "خدمات إيجار شاملة",
-    "rental_para4": "أدر عقاراتك المؤجرة بكفاءة مع خدماتنا الاحترافية، بدءًا من إدراج العقارات وفحص المستأجرين وصولاً إلى إدارة العقود والصيانة.",
-    "rental_service1_title": "إدراج العقارات والترويج",
-    "rental_service1_text": "قم بإدراج عقاراتك المؤجرة عبر منصات متعددة للوصول إلى المستأجرين بسرعة وفعالية.",
-    "rental_service2_title": "فحص واختيار المستأجرين",
-    "rental_service2_text": "افحص المستأجرين المحتملين بدقة للتأكد من موثوقيتهم وتوافقهم، وضمان إيجارات آمنة.",
-    "rental_service3_title": "إدارة العقود",
-    "rental_service3_text": "إعداد وتنظيم وإدارة عقود الإيجار بكفاءة لضمان الامتثال القانوني وسلاسة العمليات.",
-    "rental_service4_title": "الصيانة والدعم",
-    "rental_service4_text": "توفير صيانة مستمرة للعقار ودعم المستأجرين لضمان تجربة إيجار خالية من المتاعب لكل من الملاك والمستأجرين.",
+    "health_heading5": "دعم صحي مستدام",
+    "health_para5": "إلى جانب الرعاية الفورية، نهدف إلى بناء مجتمعات أكثر صحة من خلال التعليم والمتابعة والتخطيط الصحي طويل الأمد. تعمل مخيماتنا كجسر لربط المجتمعات بالدعم الطبي المستمر.",
+    "health_card4_title": "المساعدات الطبية والمتابعات",
+    "health_card4_text": "توفير الأدوية المجانية وضمان حصول المرضى على رعاية مستمرة بعد المخيمات.",
+    "health_card5_title": "التوعية والتدريب الصحي",
+    "health_card5_text": "تنظيم جلسات توعية عن النظافة والتغذية والتدابير الوقائية لتعزيز حياة أكثر صحة.",
 
-    "rental_heading5": "خدمات إدارة إيجار احترافية",
-    "rental_para5": "قم بتبسيط عمليات إدارة عقاراتك المؤجرة مع حلولنا الاحترافية. نحن نساعد الملاك ومديري العقارات في كل شيء بدءًا من استقطاب المستأجرين وحتى إدارة العقود والصيانة، لضمان تجربة إيجار سلسة ومربحة.",
-    "rental_card4_title": "فحص المستأجرين والتأجير",
-    "rental_card4_text": "قم بفحص المستأجرين المحتملين بدقة وإدارة عقود الإيجار بكفاءة لتأجير آمن وخالي من المتاعب.",
-    "rental_card5_title": "صيانة العقار والدعم",
-    "rental_card5_text": "تأكد من بقاء عقارك في أفضل حالاته مع الصيانة المستمرة ودعم المستأجرين وحل المشكلات في الوقت المناسب.",
+    "health_cta_title": "انضم إلينا في توفير الرعاية الصحية للجميع",
+    "health_cta_text": "معًا، يمكننا جعل الرعاية الصحية عالية الجودة في متناول المجتمعات المحرومة. كن جزءًا من مهمتنا من خلال الدعم أو التطوع في مخيماتنا الصحية.",
+    "health_cta_btn": "شارك معنا",
 
-    "rental_cta_title": "هل أنت مستعد لتأجير أو إدارة عقارك؟",
-    "rental_cta_text": "دعنا نناقش عقارك المؤجر وننشئ خطة مخصصة لزيادة العوائد وضمان إدارة سلسة.",
-    "rental_cta_btn": "ابدأ الآن",
 
      },
   he: {
-   "home": "בית",
-    "home1": "דף הבית 1",
-    "home2": "דף הבית 2",
+    "home": "בית",
+    "home1": "דף 1",
+    "home2": "דף 2",
     "about": "אודות",
     "services": "שירותים",
     "allServices": "כל השירותים",
-    "service_1": "סיוע ברכישת נכסים",
-    "service_2": "מכירת נכסים",
-    "service_3": "שירותי השכרה",
-    "service_4": "ניהול נכסים",
-    "service_5": "השקעות נדל״ן",
-    "service_6": "תמיכה משפטית ותיעוד",
+    "service_1": "שירות_1",
+    "service_2": "שירות_2",
+    "service_3": "שירות_3",
+    "service_4": "שירות_4",
+    "service_5": "שירות_5",
+    "service_6": "שירות_6",
     "blog": "בלוג",
     "allPosts": "כל הפוסטים",
-    "blog_1": "השקעות נדל״ן חכמות",
-    "blog_2": "ניהול נכסים יעיל",
-    "blog_3": "מגמות שוק הנדל״ן",
+    "blog_1": "בלוג_1",
+    "blog_2": "בלוג_2",
+    "blog_3": "בלוג_3",
     "contact": "צור קשר",
     "logout": "התנתק",
 
-    "footer_about": "ספק מוביל של פתרונות בינה מלאכותית, מסייע לעסקים להשתנות באמצעות טכנולוגיה חכמה ומערכות אוטומציה חדשניות.",
-    "footer_quickLinks": "קישורים מהירים",
+    "footer_about": "ארגון צדקה מסור, המעצים קהילות באמצעות חינוך, בריאות, תמיכת מזון ויוזמות ברות קיימא ליצירת השפעה מתמשכת ותקווה.",
+    "footer_quicklinks": "קישורים מהירים",
     "footer_home": "בית",
     "footer_home2": "בית 2",
-    "footer_aboutUs": "אודותינו",
+    "footer_aboutus": "אודותינו",
     "footer_services": "שירותים",
     "footer_blog": "בלוג",
     "footer_contact": "צור קשר",
-    "footer_servicesTitle": "שירותים",
-    "footer_service1": "סיוע ברכישת נכסים",
-    "footer_service2": "מכירת נכסים",
-    "footer_service3": "שירותי השכרה",
-    "footer_service4": "ניהול נכסים",
-    "footer_service5": "השקעות נדל\"ן",
-    "footer_service6": "תמיכה משפטית ותיעוד",
-    "footer_contactInfo": "פרטי קשר",
-    "footer_email": "contact@stackly.ai",
+    "footer_services_title": "שירותים",
+    "footer_service1": "חלוקת מזון",
+    "footer_service2": "תמיכה בחינוך",
+    "footer_service3": "מחנות בריאות",
+    "footer_service4": "העצמת נשים",
+    "footer_service5": "רווחת ילדים",
+    "footer_service6": "סיוע באסונות",
+    "footer_contactinfo": "פרטי קשר",
+    "footer_email": "contact@stackly.in",
     "footer_phone": "+1 (555) 123-4567",
-    "footer_address": "123 רחוב חדשנות בינה מלאכותית",
-    "footer_bottom": "© 2025 Stackly. כל הזכויות שמורות.",
-    "rental_title": "שירותי השכרה",
-    "rental_heading1": "שירותי השכרה מקצועיים",
-    "rental_intro": "מצא את הנכס או הדייר המושלם עם שירותי ההשכרה המקצועיים שלנו. אנו מספקים רשימות אמינות, תמיכה בניהול נכסים והכוונה אישית כדי להבטיח חוויות השכרה חלקות ורווחיות עבור בעלי נכסים ודיירים כאחד.",
-    "rental_feature1": "רשימות נכסים להשכרה מקיפות",
-    "rental_feature2": "בדיקת ובחירת דיירים",
-    "rental_feature3": "ניהול חוזי שכירות ותיעוד",
-    "rental_feature4": "תחזוקה ותמיכת נכסים",
-    "rental_feature5": "פתרונות השכרה מותאמים אישית",
-    "rental_explore": "גלה שירותים",
-    "rental_request": "בקש סיוע",
+    "footer_location": "123 היידראבאד, הודו",
+    "footer_rights": "© 2025 Stackly. כל הזכויות שמורות.",
 
-    "rental_heading2": "שירותי השכרה מקיפים",
-    "rental_para2": "הפוך את ההשכרה לפשוטה ויעילה עם שירותי ההשכרה המקצועיים שלנו. אנו עוזרים לבעלי נכסים ודיירים למצוא את ההתאמה הנכונה, לנהל נכסים ביעילות ולהבטיח חווית השכרה חלקה מהתחלה ועד הסוף.",
-    "rental_card1_title": "רשימות נכסים וקידום",
-    "rental_card1_text": "הצג את נכס ההשכרה שלך במספר פלטפורמות, פנה לדיירים המתאימים והגדל את החשיפה כדי לאבטח השכרות במהירות.",
-    "rental_card2_title": "בדיקת וניהול דיירים",
-    "rental_card2_text": "בדוק דיירים פוטנציאליים בקפידה ונהל חוזי שכירות, תשלומים ותחזוקת נכסים בקלות.",
-    "rental_card3_title": "תמיכה בחוזים ותיעוד",
-    "rental_card3_text": "אנו מטפלים בכל חוזי השכירות, החוזים והדרישות החוקיות כדי להבטיח עסקאות השכרה חלקות, תואמות וללא בעיות.",
+     "health_title": "מחנות בריאות",
+    "health_heading1": "גישה לבריאות לכולם",
+    "health_intro": "מחנות הבריאות שלנו מביאים שירותים רפואיים חיוניים לקהילות מוחלשות. מבדיקות כלליות ועד ייעוצים עם מומחים, אנו מבטיחים שאנשים שאין להם גישה לבתי חולים יקבלו את הטיפול והמודעות המגיעים להם.",
+    "health_feature1": "בדיקות וייעוצים רפואיים בחינם",
+    "health_feature2": "חלוקת תרופות וערכות בריאות",
+    "health_feature3": "מחנות ייעודיים לעיניים ולשיניים",
+    "health_feature4": "העלאת מודעות להיגיינה ותזונה",
+    "health_feature5": "תמיכה בבריאות אם וילד",
+    "health_explore": "גלה תוכניות",
+    "health_request": "הצטרף אלינו",
 
-    "rental_heading3": "פתרונות מקיפים לניהול השכרה",
-    "rental_para3": "ייעל את ניהול נכסי ההשכרה שלך עם השירותים המקצועיים שלנו. אנו מספקים תמיכה מקיפה לבעלי נכסים ודיירים כדי להבטיח השכרה חלקה, תפעול יעיל ותשואות מקסימליות.",
-    "rental_intro2": "הפתרונות שלנו לניהול השכרה מסייעים לבעלי נכסים ומנהלי נכסים לייעל תפוסה, לשפר תהליכים ולספק לדיירים חווית השכרה חלקה. מהצגת נכסים ועד לטיפול בחוזים ותחזוקה, אנו מכסים כל היבט של השכרה במקצועיות ובזהירות.",
-    "rental_step1": "רשימת נכסים וקידום",
-    "rental_step2": "בדיקת ובחירת דיירים",
-    "rental_step3": "הכנת חוזה שכירות",
-    "rental_step4": "גביית שכר דירה וניהול תשלומים",
-    "rental_step5": "תחזוקה ותמיכת נכסים",
-    "rental_step6": "משוב דיירים וניהול חידושים",
+    "health_heading2": "שירותי מחנות הבריאות שלנו",
+    "health_para2": "באמצעות מחנות בריאות אנו שואפים להגיע לאזורים מרוחקים עם שירותים רפואיים איכותיים. על ידי מתן טיפול מונע, טיפול והעלאת מודעות, אנו עוזרים לקהילות להישאר בריאות ומפחיתים מחלות שניתן למנוע.",
+    "health_card1_title": "בדיקות בריאות כלליות",
+    "health_card1_text": "ייעוצים רפואיים בסיסיים, בדיקות וטיפולים כדי לזהות בעיות בריאות ולטפל בהן מוקדם.",
+    "health_card2_title": "מחנות ייעודיים",
+    "health_card2_text": "מחנות לעיניים, שיניים, בריאות אם וילד עם רופאים מומחים המספקים טיפול ממוקד.",
+    "health_card3_title": "תרופות וערכות",
+    "health_card3_text": "חלוקה חינמית של תרופות חיוניות, ערכות היגיינה ותוספי תזונה לרווחה מתמשכת.",
 
-    "rental_heading4": "שירותי השכרה מקיפים",
-    "rental_para4": "נהל את נכסי ההשכרה שלך ביעילות עם השירותים המקצועיים שלנו, החל מהצגת נכסים ובדיקת דיירים ועד לניהול חוזים ותחזוקה.",
-    "rental_service1_title": "רשימת נכסים וקידום",
-    "rental_service1_text": "רשום את נכסי ההשכרה שלך במספר פלטפורמות והגיע לדיירים פוטנציאליים במהירות וביעילות.",
-    "rental_service2_title": "בדיקת ובחירת דיירים",
-    "rental_service2_text": "בדוק בקפידה דיירים פוטנציאליים כדי להבטיח אמינות והתאמה, ולהבטיח השכרות בטוחות.",
-    "rental_service3_title": "ניהול חוזים",
-    "rental_service3_text": "הכן, ארגן ונהל חוזי שכירות ביעילות כדי להבטיח תאימות חוקית ותהליכים חלקים.",
-    "rental_service4_title": "תחזוקה ותמיכה",
-    "rental_service4_text": "ספק תחזוקה שוטפת לנכס ותמיכה לדיירים כדי להבטיח חווית השכרה חלקה לבעלי נכסים ודיירים כאחד.",
+    "health_heading3": "איך פועלים מחנות הבריאות שלנו",
+    "health_para3": "אנו נוקטים גישה מובנית כדי להביא בריאות לקהילות נזקקות. מתכנון והקמה ועד ייעוץ רפואי ומעקבים, המחנות שלנו מבטיחים השפעה מתמשכת וחיים בריאים יותר.",
+    "health_intro2": "באמצעות מרפאות ניידות, רופאים מתנדבים ואספקה חיונית, המחנות שלנו מספקים טיפול מיידי תוך קידום מודעות בריאותית לטווח ארוך.",
+    "health_step1": "זיהוי צרכי הקהילה",
+    "health_step2": "הקמת מחנה ומתקנים",
+    "health_step3": "ביצוע בדיקות רפואיות",
+    "health_step4": "מתן תרופות וערכות",
+    "health_step5": "מתן ייעוץ מומחים",
+    "health_step6": "מעקב ותוכניות מודעות",
 
-    "rental_heading5": "שירותי ניהול השכרה מקצועיים",
-    "rental_para5": "ייעל את תפעול נכסי ההשכרה שלך עם פתרונות הניהול המקצועיים שלנו. אנו עוזרים לבעלי נכסים ומנהלי נכסים לטפל בכל דבר, החל מגיוס דיירים ועד לניהול חוזים ותחזוקה, כדי להבטיח חווית השכרה חלקה ורווחית.",
-    "rental_card4_title": "בדיקת דיירים והשכרה",
-    "rental_card4_text": "בדוק בקפידה דיירים פוטנציאליים ונהל חוזי שכירות ביעילות להשכרות בטוחות וללא בעיות.",
-    "rental_card5_title": "תחזוקת נכסים ותמיכה",
-    "rental_card5_text": "ודא שהנכס שלך נשאר במצב מצוין עם תחזוקה שוטפת, תמיכת דיירים ופתרון בעיות בזמן.",
+    "health_heading4": "תחומי המיקוד העיקריים של המחנות שלנו",
+    "health_para4": "אנו מספקים שירותי בריאות חיוניים המתמקדים בצרכים הנפוצים והדחופים ביותר בקהילות מוחלשות.",
+    "health_service1_title": "בדיקות כלליות",
+    "health_service1_text": "ייעוצים רפואיים קבועים וטיפולים בסיסיים לבעיות בריאות נפוצות.",
+    "health_service2_title": "טיפול בעיניים ושיניים",
+    "health_service2_text": "מחנות ייעודיים המתמקדים בראייה, היגיינת שיניים וטיפולים מתקנים.",
+    "health_service3_title": "טיפול באם וילד",
+    "health_service3_text": "תמיכה לנשים הרות וילדים באמצעות חיסונים, תזונה וייעוץ.",
+    "health_service4_title": "העלאת מודעות לבריאות",
+    "health_service4_text": "סדנאות על היגיינה, תזונה ובריאות מונעת לרווחה ארוכת טווח.",
 
-    "rental_cta_title": "מוכן להשכיר או לנהל את הנכס שלך?",
-    "rental_cta_text": "בוא נדון בנכס ההשכרה שלך וניצור תוכנית מותאמת אישית כדי למקסם תשואות ולהבטיח ניהול חלק.",
-    "rental_cta_btn": "התחל עכשיו",
-        
+    "health_heading5": "תמיכה בריאותית בת קיימא",
+    "health_para5": "מעבר לטיפול המיידי, אנו שואפים לבנות קהילות בריאות יותר באמצעות חינוך, מעקבים ותכנון בריאותי לטווח ארוך. המחנות שלנו משמשים גשר המחבר קהילות לתמיכה רפואית מתמשכת.",
+    "health_card4_title": "סיוע רפואי ומעקבים",
+    "health_card4_text": "מתן תרופות חינם והבטחת טיפול מתמשך למטופלים לאחר המחנות.",
+    "health_card5_title": "העלאת מודעות והדרכה לבריאות",
+    "health_card5_text": "קיום מפגשי מודעות על היגיינה, תזונה ואמצעי מניעה לקידום חיים בריאים יותר.",
+
+    "health_cta_title": "הצטרף אלינו להביא בריאות לכולם",
+    "health_cta_text": "ביחד, נוכל להפוך את שירותי הבריאות האיכותיים לנגישים לקהילות מוחלשות. היה חלק מהמשימה שלנו על ידי תמיכה או התנדבות במחנות הבריאות שלנו.",
+    "health_cta_btn": "השתתף",
+  
   }
 };
 
@@ -627,350 +652,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-<script>
-  // Mobile menu setup
-  const hamburger = document.getElementById("hamburger");
-  const hamburgerMenu = document.getElementById("hamburgerMenu");
-
-  // Show/hide mobile menu on hamburger click
-  hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    hamburgerMenu.classList.toggle("active");
-  });
-
-  // Toggle dropdowns for mobile menu
-  document.querySelectorAll('.mobile-dropdown-parent > span').forEach(link => {
-    link.addEventListener('click', function() {
-      const parentLi = this.parentElement;
-      const dropdown = parentLi.querySelector('.mobile-dropdown');
-      dropdown.classList.toggle('active');
-    });
-  });
-
-  // Desktop dropdown toggle logic
-  document.querySelectorAll('.nav-item.dropdown > .nav-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      document.querySelectorAll('.dropdown-menu').forEach(menu => {
-        if (menu !== this.nextElementSibling) {
-          menu.classList.remove('active');
-        }
-      });
-      const dropdownMenu = this.nextElementSibling;
-      if (dropdownMenu) {
-        dropdownMenu.classList.toggle('active');
-      }
-    });
-  });
-
-  // Redirect on desktop dropdown menu item click
-  document.querySelectorAll('.dropdown-menu a').forEach(link => {
-    link.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (href && href !== "#") {
-        window.location.href = href;
-        document.querySelectorAll('.dropdown-menu').forEach(menu => menu.classList.remove('active'));
-      }
-    });
-  });
-
-  // Redirect on normal nav link click
-  document.querySelectorAll('.nav-menu > .nav-item:not(.dropdown) .nav-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (href && href !== "#") {
-        window.location.href = href;
-      }
-    });
-  });
-
-  // Auth link toggle for desktop and mobile
-  function setupAuthLinks() {
-    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
-    const authLinks = [document.getElementById("authLink"), document.getElementById("mobileAuthLink")];
-
-    authLinks.forEach(link => {
-      if (!link) return;
-      if (isLoggedIn) {
-        link.innerText = "Logout";
-        link.href = "#";
-        link.onclick = (e) => {
-          e.preventDefault();
-          localStorage.removeItem("isLoggedIn");
-          localStorage.removeItem("currentUser");
-          window.location.href = "index.html";
-        };
-      } else {
-        link.innerText = "Login";
-        link.href = "index.html";
-        link.onclick = null;
-      }
-    });
-  }
-  setupAuthLinks();
-
-  // Theme toggle
-  const toggleBtn = document.getElementById('toggleBtn');
-  let darkMode = localStorage.getItem('darkMode') === 'true';
-
-  function applyTheme() {
-    if (darkMode) {
-      document.body.classList.add('dark-mode');
-      toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
-    } else {
-      document.body.classList.remove('dark-mode');
-      toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
-    }
-  }
-
-  toggleBtn.addEventListener('click', () => {
-    darkMode = !darkMode;
-    localStorage.setItem('darkMode', darkMode);
-    applyTheme();
-  });
-  applyTheme();
-
-  // Avatar initials logic
-  const avatarCircle = document.getElementById('avatarCircle');
-  const avatarInitials = document.getElementById('avatarInitials');
-  const avatarDropdown = document.getElementById('avatarDropdown');
-  const logoutBtn = document.getElementById('logoutBtn');
-  const currentUserEmail = localStorage.getItem("currentUser");
-  const users = JSON.parse(localStorage.getItem("users")) || {};
-
-  if (currentUserEmail && users[currentUserEmail]) {
-    const firstName = users[currentUserEmail].firstName || "";
-    const lastName = users[currentUserEmail].lastName || "";
-    const initials = (firstName[0] || "").toUpperCase() + (lastName[0] || "").toUpperCase();
-    avatarInitials.textContent = initials;
-  } else {
-    avatarInitials.textContent = "?";
-  }
-
-  // Show/hide avatar dropdown on click
-  avatarCircle.addEventListener('click', function(e) {
-    e.stopPropagation();
-    avatarDropdown.style.display = avatarDropdown.style.display === "block" ? "none" : "block";
-  });
-
-  document.addEventListener('click', function(e) {
-    if (!avatarCircle.contains(e.target) && !avatarDropdown.contains(e.target)) {
-      avatarDropdown.style.display = "none";
-    }
-  });
-
-  // Logout action
-  logoutBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    localStorage.removeItem("isLoggedIn");
-    localStorage.removeItem("currentUser");
-    window.location.href = "index.html";
-  });
-</script>
-
-<style>
-  /* Base styles for hamburger icon */
-  .hamburger {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 24px;
-    height: 18px;
-    cursor: pointer;
-    z-index: 1000;
-  }
-
-  .hamburger span {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #333;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .dark-mode .hamburger span {
-    background-color: #fff;
-  }
-
-  /* Hamburger menu animation */
-  .hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-
-  .hamburger.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
-
-  /* Hide navigation on mobile */
-  @media (max-width: 768px) {
-    .nav-menu {
-      display: none;
-    }
-    .hamburger {
-      display: flex;
-    }
-  }
-
-  /* Styles for the mobile hamburger menu */
-  .mobile-menu-wrapper {
-    position: relative;
-  }
-
-  .hamburger-menu {
-    display: none;
-    flex-direction: column;
-    background: #23272f;
-    color: #fff;
-    position: absolute;
-    top: 50px;
-    right: 0;
-    width: 220px;
-    border-radius: 8px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
-    padding: 20px 0;
-    z-index: 9999;
-    list-style: none;
-  }
-
-  .hamburger-menu.active {
-    display: flex;
-  }
-
-  .hamburger-menu li {
-    padding: 10px 24px;
-    border-bottom: 1px solid #333;
-  }
-
-  .hamburger-menu li:last-child {
-    border-bottom: none;
-  }
-
-  .hamburger-menu a,
-  .hamburger-menu span {
-    color: #00f7ff;
-    text-decoration: none;
-    font-size: 1.1rem;
-    display: block;
-    cursor: pointer;
-    font-weight: 500;
-  }
-
-  .hamburger-menu ul {
-    list-style: none;
-    padding-left: 20px;
-    margin-top: 5px;
-  }
-
-  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown {
-    display: none;
-  }
-
-  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown.active {
-    display: block;
-  }
-
-  .toggle-btn {
-    background: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 38px;
-    height: 38px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 16px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-
-  .toggle-btn:hover {
-    background: #f0f0f0;
-  }
-
-  .avatar-circle {
-    position: relative;
-    cursor: pointer;
-    z-index: 1001;
-    overflow: visible;
-  }
-
-  .avatar-circle {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-left: 16px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #eee;
-    position: relative;
-    cursor: pointer;
-  }
-
-  .avatar-circle img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .avatar-dropdown {
-    display: none;
-    position: absolute;
-    top: 65px;
-    right: 140px;
-    background: #fff;
-    min-width: 100px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
-    border-radius: 8px;
-    z-index: 1002;
-    padding: 4px 0;
-  }
-
-  .avatar-dropdown ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .avatar-dropdown li {
-    padding: 6px 12px;
-  }
-
-  .avatar-dropdown a {
-    color: #23272f;
-    text-decoration: none;
-    font-size: 0.95rem;
-    display: block;
-    border-radius: 4px;
-    transition: background 0.2s;
-  }
-
-  .avatar-dropdown a:hover {
-    background: #f0f0f0;
-  }
-
-  @media (max-width: 768px) {
-    .toggle-btn,
-    .avatar-circle {
-      margin-left: 8px;
-      width: 32px;
-      height: 32px;
-    }
-  }
-
-  @media (min-width: 769px) {
-    .hamburger-menu {
-      display: none !important;
-    }
-  }
-</style>
 
 <!-- 🔷 Protest home page  -->
 
@@ -1976,18 +1657,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     <!-- Footer -->
-  <!-- Footer -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-content">
-      <!-- Logo & About -->
-      <div class="footer-section footer-section1">
-        <div class="logo">
+  <footer class="site-footer">
+  <div class="footer-wrapper">
+    <div class="footer-grid">
+
+      <!-- Brand & About -->
+      <div class="footer-block footer-brand footer-block1">
+        <div class="footer-logo">
           <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 50px; width: 80px;">
         </div>
-        <p class="text-justify">
-          <span data-i18n="footer_about">Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.</span>
+
+        <p style="text-align: justify;" data-i18n="footer_about">
+          Dedicated charity organization, empowering communities through education, healthcare, food support, and sustainable initiatives to create lasting impact and hope.
         </p>
+
         <div class="social-links">
           <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
           <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
@@ -1997,12 +1680,12 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
 
       <!-- Quick Links -->
-      <div class="footer-section footer-section2">
-        <h4 data-i18n="footer_quickLinks">Quick Links</h4>
+      <div class="footer-block footer-block2">
+        <h4 data-i18n="footer_quicklinks">Quick Links</h4>
         <ul>
           <li><a href="home.html"><span data-i18n="footer_home">Home</span></a></li>
           <li><a href="home2.html"><span data-i18n="footer_home2">Home 2</span></a></li>
-          <li><a href="about.html"><span data-i18n="footer_aboutUs">About Us</span></a></li>
+          <li><a href="about.html"><span data-i18n="footer_aboutus">About Us</span></a></li>
           <li><a href="services.html"><span data-i18n="footer_services">Services</span></a></li>
           <li><a href="blog.html"><span data-i18n="footer_blog">Blog</span></a></li>
           <li><a href="contact.html"><span data-i18n="footer_contact">Contact</span></a></li>
@@ -2010,136 +1693,135 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
 
       <!-- Services -->
-      <div class="footer-section footer-section3">
-        <h4 data-i18n="footer_servicesTitle">Services</h4>
+      <div class="footer-block footer-block3">
+        <h4 data-i18n="footer_services_title">Services</h4>
         <ul>
-          <li><a href="service1.html"><span data-i18n="footer_service1">Property Buying Assistance</span></a></li>
-          <li><a href="service2.html"><span data-i18n="footer_service2">Property Selling</span></a></li>
-          <li><a href="service3.html"><span data-i18n="footer_service3">Rental Services</span></a></li>
-          <li><a href="service4.html"><span data-i18n="footer_service4">Property Management</span></a></li>
-          <li><a href="service5.html"><span data-i18n="footer_service5">Real Estate Investment</span></a></li>
-          <li><a href="service6.html"><span data-i18n="footer_service6">Legal & Documentation Support</span></a></li>
+          <li><a href="service1.html"><span data-i18n="footer_service1">Food Distribution</span></a></li>
+          <li><a href="service2.html"><span data-i18n="footer_service2">Education Support</span></a></li>
+          <li><a href="service3.html"><span data-i18n="footer_service3">Healthcare Camps</span></a></li>
+          <li><a href="service4.html"><span data-i18n="footer_service4">Women Empowerment</span></a></li>
+          <li><a href="service5.html"><span data-i18n="footer_service5">Child Welfare</span></a></li>
+          <li><a href="service6.html"><span data-i18n="footer_service6">Disaster Relief</span></a></li>
         </ul>
       </div>
 
       <!-- Contact Info -->
-      <div class="footer-section footer-section4">
-        <h4 data-i18n="footer_contactInfo">Contact Info</h4>
+      <div class="footer-block footer-block4">
+        <h4 data-i18n="footer_contactinfo">Contact Info</h4>
         <ul>
-          <li><i class="fas fa-envelope"></i> <span data-i18n="footer_email">contact@stackly.ai</span></li>
+          <li><i class="fas fa-envelope"></i> <span data-i18n="footer_email">contact@stackly.in</span></li>
           <li><i class="fas fa-phone"></i> <span data-i18n="footer_phone">+1 (555) 123-4567</span></li>
-          <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer_address">123 AI Innovation Drive</span></li>
+          <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer_location">123 Hyderabad, India</span></li>
         </ul>
       </div>
     </div>
 
-    <!-- Bottom Bar -->
-    <div class="footer-bottom">
-      <p><span data-i18n="footer_bottom">&copy; 2025 Stackly. All rights reserved.</span></p>
+    <!-- Bottom -->
+    <div class="footer-bottom-bar">
+      <p data-i18n="footer_rights">&copy; 2025 Stackly. All rights reserved.</p>
     </div>
   </div>
-</footer> 
+</footer>
 
 
+<!-- Styles -->
 <style>
-.footer {
+.site-footer {
   background: #0a0a0a;
   color: #fff;
   padding: 50px 20px 20px;
   font-family: Arial, sans-serif;
 }
 
-.footer-section1{
-  margin-right: 150px;
+.footer-wrapper {
+  max-width: 1200px; /* keeps equal left-right padding */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.footer-block2 {
+  padding-inline-start: 100px; /* works for both ltr & rtl */
 }
 
-.footer-section4{
-  margin-left: 50px;
+.footer-block3 {
+  padding-inline-start: 80px; /* works for both ltr & rtl */
 }
 
-.footer .footer-content {
+.footer-block4 {
+  padding-inline-start: 60px; /* works for both ltr & rtl */
+}
+
+.footer-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   margin-bottom: 30px;
 }
 
-.footer .footer-section h4 {
+
+.footer-block h4 {
   font-size: 1.2rem;
   margin-bottom: 15px;
   color: #f4f4f4;
 }
 
-.footer .footer-section ul {
+.footer-block ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
-.footer .footer-section ul li {
+.footer-block ul li {
   margin-bottom: 10px;
-  font-size: 0.95rem;
   color: #ddd;
 }
 
-.footer .footer-section ul li a {
+.footer-block ul li a {
   color: #ddd;
   text-decoration: none;
   transition: color 0.3s;
 }
 
-.footer .footer-section ul li a:hover {
+.footer-block ul li a:hover {
   color: #a68e4c;
 }
 
-.footer .social-links a {
-  margin-right: 12px;
-  font-size: 1.2rem;
-  color: #ddd;
-  transition: color 0.3s;
-}
 
-.footer .social-links a:hover {
-  color: #000000;
-}
 
-.footer .footer-bottom {
+
+
+.footer-bottom-bar {
   text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255,255,255,0.1);
   padding-top: 15px;
   font-size: 0.9rem;
   color: #bbb;
 }
 
+/* Responsive */
 @media (max-width: 900px) {
-  .footer .footer-content {
+  .footer-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
-  .footer-section1{
-  margin-right: 5px;
-}
 }
 
 @media (max-width: 600px) {
-  .footer .footer-content {
+  .footer-grid {
     grid-template-columns: 1fr;
     text-align: left;
   }
-  .footer .social-links {
-    margin-top: 15px;
+  .footer-block2{
+      padding-left: 0px;
   }
-  .footer-section1{
-  margin-right: 10px;
-}
-  .footer-section2{
-  margin-right: 10px;
-}
-.footer-section4{
-  margin-left: 1px;
-}
+  .footer-block3{
+      padding-left: 0px;
+  }
+    .footer-block4{
+      padding-left: 0px;
+    }
 }
 </style>
+
+
 </div>
 
     <script src="assets/js/script.js"></script>

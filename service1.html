@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Stackly - realestate</title>
+    <title> Stackly - Charity</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
 
-  <div id="loader">
-    <div class="spinner"></div>
+<div id="loader">
+  <div class="spinner"></div>
 </div>
 
 <div id="content" style="display:none;"></div>
 
-    <!-- Sticky Header -->
+<!-- Sticky Header -->
+
 <header class="header">
   <div class="container">
     <div class="nav-wrapper">
@@ -37,21 +38,21 @@
             <a href="#" class="nav-link"><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
               <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
-              <li><a href="service1.html"><span data-i18n="service_1">Property Buying Assistance</span></a></li>
-              <li><a href="service2.html"><span data-i18n="service_2">Property Selling</span></a></li>
-              <li><a href="service3.html"><span data-i18n="service_3">Rental Services </span></a></li>
-              <li><a href="service4.html"><span data-i18n="service_4">Property Management</span></a></li>
-              <li><a href="service5.html"><span data-i18n="service_5">Real Estate Investment</span></a></li>
-              <li><a href="service6.html"><span data-i18n="service_6">Legal & Documentation Support</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Service_1</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Service_2</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Service_3</span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Service_4</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Service_5</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service_6">Service_6</span></a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
             <a href="#" class="nav-link"><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
               <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
-              <li><a href="blog1.html"><span data-i18n="blog_1">Smart Property Investments</span></a></li>
-              <li><a href="blog2.html"><span data-i18n="blog_2">Effective Property Management</span></a></li>
-              <li><a href="blog3.html"><span data-i18n="blog_3">Real Estate Market Trends</span></a></li>
+              <li><a href="blog1.html"><span data-i18n="blog_1">blog_1</span></a></li>
+              <li><a href="blog2.html"><span data-i18n="blog_2">blog_2</span></a></li>
+              <li><a href="blog3.html"><span data-i18n="blog_3">blog_3</span></a></li>
             </ul>
           </li>
           <li class="nav-item"><a href="contact.html" class="nav-link"><span data-i18n="contact">Contact</span></a></li>
@@ -63,6 +64,15 @@
           <span></span>
         </div>
       </nav>
+
+       <div class="lang-switcher">
+        <label for="langSelect"></label>
+        <select id="langSelect" onchange="changeLanguage(this.value)">
+          <option value="en">English</option>
+          <option value="ar">Arabic</option>
+          <option value="he">Hebrew</option>
+        </select>
+      </div>
 
       <div class="mobile-menu-wrapper">
         <ul class="hamburger-menu" id="hamburgerMenu">
@@ -78,21 +88,21 @@
             <span><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></span>
             <ul class="mobile-dropdown">
              <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
-              <li><a href="service1.html"><span data-i18n="service_1">Property Buying Assistance</span></a></li>
-              <li><a href="service2.html"><span data-i18n="service_2">Property Selling</span></a></li>
-              <li><a href="service3.html"><span data-i18n="service_3">Rental Services </span></a></li>
-              <li><a href="service4.html"><span data-i18n="service_4">Property Management</span></a></li>
-              <li><a href="service5.html"><span data-i18n="service_5">Real Estate Investment</span></a></li>
-              <li><a href="service6.html"><span data-i18n="service6">Legal & Documentation Support</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Service_1</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Service_2</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Service_3</span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Service_4</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Service_5</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service_6">Service_6</span></a></li>
             </ul>
           </li>
           <li class="mobile-dropdown-parent">
             <span><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></span>
             <ul class="mobile-dropdown">
                <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
-                <li><a href="blog1.html"><span data-i18n="blog_1">Smart Property Investments</span></a></li>
-                <li><a href="blog2.html"><span data-i18n="blog_2">Effective Property Management</span></a></li>
-                <li><a href="blog3.html"><span data-i18n="blog_3">Real Estate Market Trends</span></a></li>
+                <li><a href="blog1.html"><span data-i18n="blog_1">blog_1</span></a></li>
+                <li><a href="blog2.html"><span data-i18n="blog_2">blog_2</span></a></li>
+                <li><a href="blog3.html"><span data-i18n="blog_3">blog_3</span></a></li>
             </ul>
           </li>
           <li><a href="contact.html"><span data-i18n="contact">Contact</span></a></li>
@@ -100,73 +110,75 @@
         </ul>
       </div>
 
-      <div class="lang-switcher">
-        <label for="langSelect">Language:</label>
-        <select id="langSelect" onchange="changeLanguage(this.value)">
-          <option value="en">English</option>
-          <option value="ar">Arabic</option>
-          <option value="he">Hebrew</option>
-        </select>
-      </div>
+     
 
       <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
         <i class="fas fa-moon"></i>
       </button>
 
-      <div class="avatar-circle" title="Profile" id="avatarCircle">
-        <span id="avatarInitials"></span>
+     <div class="avatar-wrapper">
+        <div class="avatar-circle" title="Profile" id="avatarCircle">
+          <span id="avatarInitials">BA</span>
+        </div>
+        <div class="avatar-dropdown" id="avatarDropdown">
+          <ul>
+            <li>
+              <a href="index.html" id="logoutBtn">
+                <span data-i18n="logout">Logout</span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="avatar-dropdown" id="avatarDropdown">
-        <ul>
-          <li><a href="index.html" id="logoutBtn"><span data-i18n="logout">Logout</span></a></li>
-        </ul>
-      </div>
+      
     </div>
   </div>
 </header>
 
+
+
+
 <!-- Section : 1 -->
 <section class="ai-hero-section">
   <video autoplay muted loop playsinline class="ai-hero-bg-video">
-    <source src="https://videos.pexels.com/video-files/3773486/3773486-hd_1920_1080_30fps.mp4" type="video/mp4">
+    <source src="video/site44-S1.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
   <div class="ai-hero-overlay">
     <div class="ai-hero-content">
-      <h1 class="ai-hero-title ai-glow animate-ai-slide-in" data-i18n="hero_title">Property Buying Assistance</h1>
+      <h1 class="ai-hero-title ai-glow animate-ai-slide-in" data-i18n="hero_title">Food Distribution</h1>
     </div>
   </div>
 </section>
 
 <!-- Section : 2 -->
 <section class="ai-section">
-  <h1 class="ai-heading" data-i18n="trusted_heading">Trusted Property Buying Assistance</h1>
+  <h1 class="ai-heading" data-i18n="trusted_heading">Nourishing Communities with Care</h1>
   <div class="ai-content">
     <div class="ai-text">
       <p data-i18n="trusted_para">
-        Make your dream home a reality with our expert property buying support.  
-        From property search and price negotiations to legal documentation and registration,  
-        we guide you through every step of the buying process with complete transparency 
-        and professional care.
+        Hunger should never be a barrier to living a dignified life.  
+        Our food distribution programs ensure that children, families, and the elderly  
+        receive nutritious meals with compassion, dignity, and hope.  
       </p>
 
       <ul class="hero-features fade-in-up delay-2">
-        <li><span>✔</span> <span data-i18n="feature1">Personalized property search</span></li>
-        <li><span>✔</span> <span data-i18n="feature2">Market analysis & price negotiation</span></li>
-        <li><span>✔</span> <span data-i18n="feature3">Legal verification & documentation</span></li>
-        <li><span>✔</span> <span data-i18n="feature4">Home loan & financial guidance</span></li>
-        <li><span>✔</span> <span data-i18n="feature5">Hassle-free registration process</span></li>
+        <li><span>✔</span> <span data-i18n="feature1">Daily meal distribution drives</span></li>
+        <li><span>✔</span> <span data-i18n="feature2">Nutritious food packages for families</span></li>
+        <li><span>✔</span> <span data-i18n="feature3">Support for children and elderly</span></li>
+        <li><span>✔</span> <span data-i18n="feature4">Emergency relief food supplies</span></li>
+        <li><span>✔</span> <span data-i18n="feature5">Zero Hunger mission initiatives</span></li>
       </ul>
 
       <div class="ai-buttons">
-        <a href="services.html" class="btn btn-primary" data-i18n="btn_explore">Explore Services</a>
-        <a href="contact.html" class="btn btn-primary" data-i18n="btn_buying">Get Buying Assistance</a>
+        <a href="services.html" class="btn btn-primary" data-i18n="btn_explore">Explore Programs</a>
+        <a href="contact.html" class="btn btn-primary" data-i18n="btn_buying">Join as Volunteer</a>
       </div>
     </div>
 
     <div class="ai-image">
-      <img src="https://i.pinimg.com/736x/7f/cf/e7/7fcfe736ebc2cad90bff80d7e247be04.jpg" alt="Property Buying Assistance">
+      <img src="https://i.pinimg.com/1200x/0e/58/41/0e5841297ecd7d7c9dbbfcb230055a0e.jpg" alt="Food Distribution Program">
     </div>
   </div>
 </section>
@@ -175,75 +187,76 @@
 <section class="advanced-features">
   <div class="advanced-features-container">
     <div class="features-header fade-in-up">
-      <h2 data-i18n="comprehensive_title">Comprehensive Property Buying Assistance</h2>
+      <h2 data-i18n="comprehensive_title">Comprehensive Food Assistance</h2>
       <p data-i18n="comprehensive_para">
-        Buying a property is one of the biggest decisions in life. 
-        Our expert guidance covers everything from personalized property searches 
-        to legal documentation and financial support, making the entire buying 
-        process smooth, secure, and stress-free.
+        Food is a basic human right.  
+        We provide nutritious meals to vulnerable communities,  
+        focusing on children, women, and the elderly.  
+        Our programs ensure food security and restore dignity.  
       </p>
     </div>
 
     <div class="features-cards">
       <div class="feature-box fade-in-up delay-1">
-        <div class="feature-icon"><i class="fas fa-search-location"></i></div>
-        <h3 data-i18n="feature_card1_title">Property Search & Shortlisting</h3>
+        <div class="feature-icon"><i class="fas fa-utensils"></i></div>
+        <h3 data-i18n="feature_card1_title">Meal Distribution</h3>
         <p data-i18n="feature_card1_para">
-          We help you find the right property by analyzing location, budget, and market trends, 
-          ensuring the best value for your investment.
+          Freshly prepared meals are served daily in underserved areas,  
+          ensuring no one sleeps hungry.  
         </p>
       </div>
       <div class="feature-box fade-in-up delay-2">
-        <div class="feature-icon"><i class="fas fa-handshake"></i></div>
-        <h3 data-i18n="feature_card2_title">Negotiation & Deal Support</h3>
+        <div class="feature-icon"><i class="fas fa-shopping-basket"></i></div>
+        <h3 data-i18n="feature_card2_title">Food Kits for Families</h3>
         <p data-i18n="feature_card2_para">
-          Our experts assist with price negotiations and ensure a fair deal, 
-          helping you make informed decisions with confidence.
+          Ration kits with essentials like rice, wheat, pulses, and oil  
+          are distributed to families in need.  
         </p>
       </div>
+
       <div class="feature-box fade-in-up delay-3">
-        <div class="feature-icon"><i class="fas fa-file-signature"></i></div>
-        <h3 data-i18n="feature_card3_title">Legal & Documentation Assistance</h3>
+        <div class="feature-icon"><i class="fas fa-child"></i></div>
+        <h3 data-i18n="feature_card3_title">Nutrition for Children</h3>
         <p data-i18n="feature_card3_para">
-          We handle title verification, paperwork, and registration, 
-          ensuring a legally secure and hassle-free property purchase.
+          Special focus on children through milk, fruits, and protein-rich meals  
+          to support their growth and health.  
         </p>
       </div>
     </div>
   </div>
 </section>
 
+
 <!-- Section : 4 -->
 <section class="development-process">
   <div class="development-process-container">
     <div class="process-header fade-in-up">
-      <h2 data-i18n="endtoend_title">End-to-End Property Buying Assistance</h2>
+      <h2 data-i18n="endtoend_title">End-to-End Food Distribution Process</h2>
       <p data-i18n="endtoend_para">
-        Buying a property can be overwhelming, but our expert assistance ensures a smooth and stress-free experience. 
-        From property search to final registration, we guide you through every step with complete transparency, 
-        professional support, and trusted legal guidance.
+        Food distribution is more than just giving meals — it’s about ensuring dignity, nutrition, 
+        and care for every individual. Our well-structured process ensures that food reaches those 
+        who need it most, on time, and with compassion.
       </p>
     </div>
 
     <div class="process-row">
       <div class="process-image slide-in-right">
-        <img src="https://i.pinimg.com/1200x/92/b5/05/92b5059c55a205b79168ac5e5d668abe.jpg" alt="Property Buying Assistance">
+        <img src="https://i.pinimg.com/1200x/dd/3b/35/dd3b350e853c73b1691c10710bc17e8b.jpg" alt="Food Distribution Process">
       </div>
       <div class="process-content fade-in-up delay-1">
         <p class="process-intro" data-i18n="process_intro">
-          Our property buying process is tailored to make your journey simple and rewarding. 
-          Whether you're purchasing your first home or expanding your investments, 
-          we provide expert insights, market knowledge, and end-to-end support 
-          to help you secure the right property at the right price.
+          Our step-by-step approach ensures efficient food distribution that 
+          benefits families, children, and the elderly. With community involvement, 
+          transparent planning, and dedicated volunteers, we deliver meals with care.
         </p>
 
         <div class="process-steps">
-          <div class="step"><span class="step-number">01</span><p data-i18n="step1">Understanding Buyer Needs & Budget</p></div>
-          <div class="step"><span class="step-number">02</span><p data-i18n="step2">Property Search & Shortlisting</p></div>
-          <div class="step"><span class="step-number">03</span><p data-i18n="step3">Market Analysis & Price Negotiation</p></div>
-          <div class="step"><span class="step-number">04</span><p data-i18n="step4">Legal Verification & Documentation</p></div>
-          <div class="step"><span class="step-number">05</span><p data-i18n="step5">Home Loan & Financial Assistance</p></div>
-          <div class="step"><span class="step-number">06</span><p data-i18n="step6">Registration & Handover Support</p></div>
+          <div class="step"><span class="step-number">01</span><p data-i18n="step1">Identifying Communities in Need</p></div>
+          <div class="step"><span class="step-number">02</span><p data-i18n="step2">Sourcing Fresh & Nutritious Food</p></div>
+          <div class="step"><span class="step-number">03</span><p data-i18n="step3">Packing Meals & Food Kits</p></div>
+          <div class="step"><span class="step-number">04</span><p data-i18n="step4">Volunteer Coordination</p></div>
+          <div class="step"><span class="step-number">05</span><p data-i18n="step5">On-Ground Distribution Drives</p></div>
+          <div class="step"><span class="step-number">06</span><p data-i18n="step6">Follow-Up & Community Support</p></div>
         </div>
       </div>
     </div>
@@ -254,40 +267,40 @@
 <section class="service-showcase">
   <div class="service-container">
     <div class="service-header animate-fade-up">
-      <h2 data-i18n="service_title">Property Buying Assistance</h2>
+      <h2 data-i18n="service_title">Our Food Distribution Services</h2>
       <p data-i18n="service_para">
-        We simplify the property buying process by providing expert guidance, 
-        market insights, and end-to-end support. From finding the right property 
-        to handling legal documentation, we ensure a smooth and secure purchase journey.
+        We provide holistic food support through meal programs, ration kits, and 
+        nutrition drives. With the help of donors and volunteers, our mission is to 
+        fight hunger and ensure food security for vulnerable communities.
       </p>
     </div>
     <div class="service-grid">
       <div class="service-card animate-slide-up delay-1">
-        <h3 data-i18n="grid1_title">Property Search & Shortlisting</h3>
+        <h3 data-i18n="grid1_title">Daily Meal Programs</h3>
         <p data-i18n="grid1_para">
-          Personalized property search based on your needs, location preferences, 
-          and budget to help you find the ideal home or investment.
+          Freshly cooked meals distributed in slums, schools, and shelters 
+          to ensure no one goes to bed hungry.
         </p>
       </div>
       <div class="service-card animate-slide-up delay-2">
-        <h3 data-i18n="grid2_title">Market Analysis & Negotiation</h3>
+        <h3 data-i18n="grid2_title">Ration Kits for Families</h3>
         <p data-i18n="grid2_para">
-          Expert insights into market trends and skilled negotiation support 
-          to secure the best deal for your chosen property.
+          Essential food kits containing rice, wheat, pulses, and oil 
+          distributed to families facing food insecurity.
         </p>
       </div>
       <div class="service-card animate-slide-up delay-3">
-        <h3 data-i18n="grid3_title">Legal & Documentation Support</h3>
+        <h3 data-i18n="grid3_title">Child Nutrition Drives</h3>
         <p data-i18n="grid3_para">
-          Comprehensive legal checks, title verification, and paperwork management 
-          to ensure a safe and hassle-free transaction.
+          Special focus on children’s health with milk, fruits, and 
+          protein-rich meals to aid growth and learning.
         </p>
       </div>
       <div class="service-card animate-slide-up delay-4">
-        <h3 data-i18n="grid4_title">Home Loan & Financial Guidance</h3>
+        <h3 data-i18n="grid4_title">Emergency Relief Support</h3>
         <p data-i18n="grid4_para">
-          Assistance with home loan applications, eligibility checks, 
-          and financial planning to make your purchase stress-free.
+          Quick-response food distribution during natural disasters 
+          and crises to support affected families immediately.
         </p>
       </div>
     </div>
@@ -298,21 +311,28 @@
 <section class="bookkeeping-services">
   <div class="services-container">
     <div class="services-image animate-slide-in">
-      <img src="https://images.pexels.com/photos/8293774/pexels-photo-8293774.jpeg?auto=compress&cs=tinysrgb&w=900&h=600&dpr=1" alt="Property Buying Assistance">
+      <img src="https://i.pinimg.com/736x/a6/2d/bf/a62dbf3a3d3e3b29b051ece59d32e21d.jpg" alt="Food Distribution Assistance">
     </div>
     <div class="services-content">
-      <h2 class="animate-fade-up" data-i18n="trusted2_title">Trusted Property Buying Assistance</h2>
+      <h2 class="animate-fade-up" data-i18n="trusted2_title">Trusted Food Distribution Support</h2>
       <p class="animate-fade-up delay-1" style="text-align: justify;" data-i18n="trusted2_para">
-        Buying a property can be complex, but we provide professional guidance to make the process smooth and hassle-free. 
-        From property search and shortlisting to negotiations and legal documentation, we support you every step of the way.
+        Fighting hunger requires compassion, planning, and dedication. 
+        We ensure that nutritious meals and ration kits reach those in need, 
+        with transparency and dignity at every step of the process. 
       </p>
       <div class="service-card animate-fade-up delay-2">
-        <h3 data-i18n="trusted2_card1_title">Personalized Property Search</h3>
-        <p data-i18n="trusted2_card1_para">We help you find properties that fit your budget, preferences, and lifestyle, saving time and effort in your search.</p>
+        <h3 data-i18n="trusted2_card1_title">Nutritious Meals for Communities</h3>
+        <p data-i18n="trusted2_card1_para">
+          We serve freshly prepared meals to children, families, and the elderly, 
+          ensuring no one goes to bed hungry.
+        </p>
       </div>
       <div class="service-card animate-fade-up delay-3">
-        <h3 data-i18n="trusted2_card2_title">Legal & Documentation Support</h3>
-        <p data-i18n="trusted2_card2_para">We manage title verification, paperwork, and registration, ensuring a secure and transparent property purchase.</p>
+        <h3 data-i18n="trusted2_card2_title">Essential Ration Kit Support</h3>
+        <p data-i18n="trusted2_card2_para">
+          We distribute food kits containing rice, pulses, wheat, and oil, 
+          helping families meet their daily nutritional needs with dignity.
+        </p>
       </div>
     </div>
   </div>
@@ -322,9 +342,13 @@
 <section class="contact-banner section-padding">
   <div class="container">
     <div class="contact-banner-content">
-      <h2 data-i18n="contact_title">Ready to Find Your Dream Property?</h2>
-      <p data-i18n="contact_para">Let’s discuss your requirements and guide you through the property buying process with expert support.</p>
-      <a href="contact.html" class="btn btn-primary" data-i18n="btn_contact">Get Assistance</a>
+      <h2 data-i18n="contact_title">Ready to Help Us Fight Hunger?</h2>
+      <p data-i18n="contact_para">
+        Join us in spreading hope and nourishment. 
+        Whether by donating or volunteering, your support brings food and care 
+        to families in need.
+      </p>
+      <a href="contact.html" class="btn btn-primary" data-i18n="btn_contact">Get Involved</a>
     </div>
   </div>
 </section>
@@ -335,273 +359,274 @@
 // Translation dictionary
 const translations = {
   en: {
-   "home": "Home",
+    "home": "Home",
     "home1": "Home 1",
     "home2": "Home 2",
     "about": "About",
     "services": "Services",
     "allServices": "All Services",
-    "service_1": "Property Buying Assistance",
-    "service_2": "Property Selling",
-    "service_3": "Rental Services",
-    "service_4": "Property Management",
-    "service_5": "Real Estate Investment",
-    "service_6": "Legal & Documentation Support",
+    "service_1": "Service_1",
+    "service_2": "Service_2",
+    "service_3": "Service_3",
+    "service_4": "Service_4",
+    "service_5": "Service_5",
+    "service_6": "Service_6",
     "blog": "Blog",
     "allPosts": "All Posts",
-    "blog_1": "Smart Property Investments",
-    "blog_2": "Effective Property Management",
-    "blog_3": "Real Estate Market Trends",
+    "blog_1": "Blog_1",
+    "blog_2": "Blog_2",
+    "blog_3": "Blog_3",
     "contact": "Contact",
     "logout": "Logout",
 
-    "footer_about": "Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.",
-    "footer_quickLinks": "Quick Links",
+     "footer_about": "Dedicated charity organization, empowering communities through education, healthcare, food support, and sustainable initiatives to create lasting impact and hope.",
+    "footer_quicklinks": "Quick Links",
     "footer_home": "Home",
     "footer_home2": "Home 2",
-    "footer_aboutUs": "About Us",
+    "footer_aboutus": "About Us",
     "footer_services": "Services",
     "footer_blog": "Blog",
     "footer_contact": "Contact",
-    "footer_servicesTitle": "Services",
-    "footer_service1": "Property Buying Assistance",
-    "footer_service2": "Property Selling",
-    "footer_service3": "Rental Services",
-    "footer_service4": "Property Management",
-    "footer_service5": "Real Estate Investment",
-    "footer_service6": "Legal & Documentation Support",
-    "footer_contactInfo": "Contact Info",
-    "footer_email": "contact@stackly.ai",
+    "footer_services_title": "Services",
+    "footer_service1": "Food Distribution",
+    "footer_service2": "Education Support",
+    "footer_service3": "Healthcare Camps",
+    "footer_service4": "Women Empowerment",
+    "footer_service5": "Child Welfare",
+    "footer_service6": "Disaster Relief",
+    "footer_contactinfo": "Contact Info",
+    "footer_email": "contact@stackly.in",
     "footer_phone": "+1 (555) 123-4567",
-    "footer_address": "123 AI Innovation Drive",
-    "footer_bottom": "© 2025 Stackly. All rights reserved.",
-
-     "hero_title": "Property Buying Assistance",
-    "trusted_heading": "Trusted Property Buying Assistance",
-    "trusted_para": "Make your dream home a reality with our expert property buying support. From property search and price negotiations to legal documentation and registration, we guide you through every step of the buying process with complete transparency and professional care.",
-    "feature1": "Personalized property search",
-    "feature2": "Market analysis & price negotiation",
-    "feature3": "Legal verification & documentation",
-    "feature4": "Home loan & financial guidance",
-    "feature5": "Hassle-free registration process",
-    "btn_explore": "Explore Services",
-    "btn_buying": "Get Buying Assistance",
-    "comprehensive_title": "Comprehensive Property Buying Assistance",
-    "comprehensive_para": "Buying a property is one of the biggest decisions in life. Our expert guidance covers everything from personalized property searches to legal documentation and financial support, making the entire buying process smooth, secure, and stress-free.",
-    "feature_card1_title": "Property Search & Shortlisting",
-    "feature_card1_para": "We help you find the right property by analyzing location, budget, and market trends, ensuring the best value for your investment.",
-    "feature_card2_title": "Negotiation & Deal Support",
-    "feature_card2_para": "Our experts assist with price negotiations and ensure a fair deal, helping you make informed decisions with confidence.",
-    "feature_card3_title": "Legal & Documentation Assistance",
-    "feature_card3_para": "We handle title verification, paperwork, and registration, ensuring a legally secure and hassle-free property purchase.",
-    "endtoend_title": "End-to-End Property Buying Assistance",
-    "endtoend_para": "Buying a property can be overwhelming, but our expert assistance ensures a smooth and stress-free experience. From property search to final registration, we guide you through every step with complete transparency, professional support, and trusted legal guidance.",
-    "process_intro": "Our property buying process is tailored to make your journey simple and rewarding. Whether you're purchasing your first home or expanding your investments, we provide expert insights, market knowledge, and end-to-end support to help you secure the right property at the right price.",
-    "step1": "Understanding Buyer Needs & Budget",
-    "step2": "Property Search & Shortlisting",
-    "step3": "Market Analysis & Price Negotiation",
-    "step4": "Legal Verification & Documentation",
-    "step5": "Home Loan & Financial Assistance",
-    "step6": "Registration & Handover Support",
-    "service_title": "Property Buying Assistance",
-    "service_para": "We simplify the property buying process by providing expert guidance, market insights, and end-to-end support. From finding the right property to handling legal documentation, we ensure a smooth and secure purchase journey.",
-    "grid1_title": "Property Search & Shortlisting",
-    "grid1_para": "Personalized property search based on your needs, location preferences, and budget to help you find the ideal home or investment.",
-    "grid2_title": "Market Analysis & Negotiation",
-    "grid2_para": "Expert insights into market trends and skilled negotiation support to secure the best deal for your chosen property.",
-    "grid3_title": "Legal & Documentation Support",
-    "grid3_para": "Comprehensive legal checks, title verification, and paperwork management to ensure a safe and hassle-free transaction.",
-    "grid4_title": "Home Loan & Financial Guidance",
-    "grid4_para": "Assistance with home loan applications, eligibility checks, and financial planning to make your purchase stress-free.",
-    "trusted2_title": "Trusted Property Buying Assistance",
-    "trusted2_para": "Buying a property can be complex, but we provide professional guidance to make the process smooth and hassle-free. From property search and shortlisting to negotiations and legal documentation, we support you every step of the way.",
-    "trusted2_card1_title": "Personalized Property Search",
-    "trusted2_card1_para": "We help you find properties that fit your budget, preferences, and lifestyle, saving time and effort in your search.",
-    "trusted2_card2_title": "Legal & Documentation Support",
-    "trusted2_card2_para": "We manage title verification, paperwork, and registration, ensuring a secure and transparent property purchase.",
-    "contact_title": "Ready to Find Your Dream Property?",
-    "contact_para": "Let’s discuss your requirements and guide you through the property buying process with expert support.",
-    "btn_contact": "Get Assistance"
-       
+    "footer_location": "123 Hyderabad, India",
+    "footer_rights": "© 2025 Stackly. All rights reserved.",
+  
+    "hero_title": "Food Distribution",
+    "trusted_heading": "Nourishing Communities with Care",
+    "trusted_para": "Hunger should never be a barrier to living a dignified life.  \nOur food distribution programs ensure that children, families, and the elderly  \nreceive nutritious meals with compassion, dignity, and hope.  ",
+    "feature1": "Daily meal distribution drives",
+    "feature2": "Nutritious food packages for families",
+    "feature3": "Support for children and elderly",
+    "feature4": "Emergency relief food supplies",
+    "feature5": "Zero Hunger mission initiatives",
+    "btn_explore": "Explore Programs",
+    "btn_buying": "Join as Volunteer",
+    "comprehensive_title": "Comprehensive Food Assistance",
+    "comprehensive_para": "Food is a basic human right.  \nWe provide nutritious meals to vulnerable communities,  \nfocusing on children, women, and the elderly.  \nOur programs ensure food security and restore dignity.  ",
+    "feature_card1_title": "Meal Distribution",
+    "feature_card1_para": "Freshly prepared meals are served daily in underserved areas,  \nensuring no one sleeps hungry.  ",
+    "feature_card2_title": "Food Kits for Families",
+    "feature_card2_para": "Ration kits with essentials like rice, wheat, pulses, and oil  \nare distributed to families in need.  ",
+    "feature_card3_title": "Nutrition for Children",
+    "feature_card3_para": "Special focus on children through milk, fruits, and protein-rich meals  \nto support their growth and health.  ",
+    "endtoend_title": "End-to-End Food Distribution Process",
+    "endtoend_para": "Food distribution is more than just giving meals — it’s about ensuring dignity, nutrition, \nand care for every individual. Our well-structured process ensures that food reaches those \nwho need it most, on time, and with compassion.",
+    "process_intro": "Our step-by-step approach ensures efficient food distribution that \nbenefits families, children, and the elderly. With community involvement, \ntransparent planning, and dedicated volunteers, we deliver meals with care.",
+    "step1": "Identifying Communities in Need",
+    "step2": "Sourcing Fresh & Nutritious Food",
+    "step3": "Packing Meals & Food Kits",
+    "step4": "Volunteer Coordination",
+    "step5": "On-Ground Distribution Drives",
+    "step6": "Follow-Up & Community Support",
+    "service_title": "Our Food Distribution Services",
+    "service_para": "We provide holistic food support through meal programs, ration kits, and \nnutrition drives. With the help of donors and volunteers, our mission is to \nfight hunger and ensure food security for vulnerable communities.",
+    "grid1_title": "Daily Meal Programs",
+    "grid1_para": "Freshly cooked meals distributed in slums, schools, and shelters \nto ensure no one goes to bed hungry.",
+    "grid2_title": "Ration Kits for Families",
+    "grid2_para": "Essential food kits containing rice, wheat, pulses, and oil \ndistributed to families facing food insecurity.",
+    "grid3_title": "Child Nutrition Drives",
+    "grid3_para": "Special focus on children’s health with milk, fruits, and \nprotein-rich meals to aid growth and learning.",
+    "grid4_title": "Emergency Relief Support",
+    "grid4_para": "Quick-response food distribution during natural disasters \nand crises to support affected families immediately.",
+    "trusted2_title": "Trusted Food Distribution Support",
+    "trusted2_para": "Fighting hunger requires compassion, planning, and dedication. \nWe ensure that nutritious meals and ration kits reach those in need, \nwith transparency and dignity at every step of the process. ",
+    "trusted2_card1_title": "Nutritious Meals for Communities",
+    "trusted2_card1_para": "We serve freshly prepared meals to children, families, and the elderly, \nensuring no one goes to bed hungry.",
+    "trusted2_card2_title": "Essential Ration Kit Support",
+    "trusted2_card2_para": "We distribute food kits containing rice, pulses, wheat, and oil, \nhelping families meet their daily nutritional needs with dignity.",
+    "contact_title": "Ready to Help Us Fight Hunger?",
+    "contact_para": "Join us in spreading hope and nourishment. \nWhether by donating or volunteering, your support brings food and care \nto families in need.",
+    "btn_contact": "Get Involved",
+ 
   },
   ar: {
-   "home": "الرئيسية",
-    "home1": "الصفحة الرئيسية 1",
-    "home2": "الصفحة الرئيسية 2",
-    "about": "من نحن",
+     "home": "الرئيسية",
+    "home1": "الصفحة 1",
+    "home2": "الصفحة 2",
+    "about": "معلومات عنا",
     "services": "الخدمات",
     "allServices": "جميع الخدمات",
-    "service_1": "مساعدة في شراء العقارات",
-    "service_2": "بيع العقارات",
-    "service_3": "خدمات الإيجار",
-    "service_4": "إدارة العقارات",
-    "service_5": "الاستثمار العقاري",
-    "service_6": "الدعم القانوني والتوثيق",
+    "service_1": "الخدمة_1",
+    "service_2": "الخدمة_2",
+    "service_3": "الخدمة_3",
+    "service_4": "الخدمة_4",
+    "service_5": "الخدمة_5",
+    "service_6": "الخدمة_6",
     "blog": "المدونة",
     "allPosts": "جميع المقالات",
-    "blog_1": "الاستثمارات العقارية الذكية",
-    "blog_2": "إدارة العقارات الفعالة",
-    "blog_3": "اتجاهات سوق العقارات",
+    "blog_1": "مدونة_1",
+    "blog_2": "مدونة_2",
+    "blog_3": "مدونة_3",
     "contact": "اتصل بنا",
-    "logout": "تسجيل خروج",
+    "logout": "تسجيل الخروج",
 
-    "footer_about": "مزود رائد لحلول الذكاء الاصطناعي، يساعد الشركات على التحول من خلال التكنولوجيا الذكية وأنظمة الأتمتة المبتكرة.",
-    "footer_quickLinks": "روابط سريعة",
+    "footer_about": "منظمة خيرية مكرسة، تمكّن المجتمعات من خلال التعليم والرعاية الصحية ودعم الغذاء والمبادرات المستدامة لخلق تأثير دائم وأمل.",
+    "footer_quicklinks": "روابط سريعة",
     "footer_home": "الرئيسية",
     "footer_home2": "الصفحة الرئيسية 2",
-    "footer_aboutUs": "من نحن",
+    "footer_aboutus": "معلومات عنا",
     "footer_services": "الخدمات",
-    "footer_blog": "المدونة",
+    "footer_blog": "مدونة",
     "footer_contact": "اتصل بنا",
-    "footer_servicesTitle": "الخدمات",
-    "footer_service1": "مساعدة في شراء العقارات",
-    "footer_service2": "بيع العقارات",
-    "footer_service3": "خدمات الإيجار",
-    "footer_service4": "إدارة الممتلكات",
-    "footer_service5": "الاستثمار العقاري",
-    "footer_service6": "الدعم القانوني والتوثيق",
-    "footer_contactInfo": "معلومات الاتصال",
-    "footer_email": "contact@stackly.ai",
+    "footer_services_title": "الخدمات",
+    "footer_service1": "توزيع الغذاء",
+    "footer_service2": "دعم التعليم",
+    "footer_service3": "المخيمات الطبية",
+    "footer_service4": "تمكين المرأة",
+    "footer_service5": "رعاية الأطفال",
+    "footer_service6": "الإغاثة في الكوارث",
+    "footer_contactinfo": "معلومات الاتصال",
+    "footer_email": "contact@stackly.in",
     "footer_phone": "+1 (555) 123-4567",
-    "footer_address": "123 طريق ابتكار الذكاء الاصطناعي",
-    "footer_bottom": "© 2025 Stackly. جميع الحقوق محفوظة.",
-
-    "hero_title": "مساعدة شراء العقارات",
-    "trusted_heading": "مساعدة موثوقة في شراء العقارات",
-    "trusted_para": "حقق حلمك في امتلاك منزل بمساعدة خبرائنا في شراء العقارات...",
-    "feature1": "بحث عقاري مخصص",
-    "feature2": "تحليل السوق والتفاوض على الأسعار",
-    "feature3": "التحقق القانوني والتوثيق",
-    "feature4": "إرشادات القروض العقارية والتمويل",
-    "feature5": "عملية تسجيل سلسة",
-    "btn_explore": "استكشاف الخدمات",
-    "btn_buying": "الحصول على مساعدة الشراء",
-    "comprehensive_title": "مساعدة شاملة في شراء العقارات",
-    "comprehensive_para": "شراء عقار من أكبر القرارات في الحياة...",
-    "feature_card1_title": "بحث واختيار العقارات",
-    "feature_card1_para": "نساعدك في العثور على العقار المناسب...",
-    "feature_card2_title": "التفاوض ودعم الصفقات",
-    "feature_card2_para": "نساعدك في التفاوض لضمان صفقة عادلة...",
-    "feature_card3_title": "الدعم القانوني والتوثيق",
-    "feature_card3_para": "نقوم بمراجعة العنوان والتوثيق والتسجيل...",
-    "endtoend_title": "مساعدة شراء العقارات من البداية للنهاية",
-    "endtoend_para": "قد يكون شراء العقار مرهقًا، لكن خبراءنا يضمنون تجربة سهلة...",
-    "process_intro": "تم تصميم عملية شراء العقارات لدينا لتكون بسيطة...",
-    "step1": "فهم احتياجات المشتري والميزانية",
-    "step2": "بحث واختيار العقارات",
-    "step3": "تحليل السوق والتفاوض",
-    "step4": "التحقق القانوني والتوثيق",
-    "step5": "المساعدة في القروض العقارية",
-    "step6": "التسجيل والدعم بعد التسليم",
-    "service_title": "مساعدة شراء العقارات",
-    "service_para": "نحن نبسط عملية شراء العقارات من خلال تقديم التوجيه...",
-    "grid1_title": "بحث واختيار العقارات",
-    "grid1_para": "بحث عقاري مخصص بناءً على احتياجاتك...",
-    "grid2_title": "تحليل السوق والتفاوض",
-    "grid2_para": "رؤى متعمقة حول السوق ودعم التفاوض...",
-    "grid3_title": "الدعم القانوني والتوثيق",
-    "grid3_para": "فحوصات قانونية شاملة وإدارة الوثائق...",
-    "grid4_title": "إرشادات التمويل والقروض العقارية",
-    "grid4_para": "المساعدة في طلبات القروض والتخطيط المالي...",
-    "trusted2_title": "مساعدة موثوقة في شراء العقارات",
-    "trusted2_para": "قد تكون عملية شراء العقارات معقدة...",
-    "trusted2_card1_title": "بحث عقاري مخصص",
-    "trusted2_card1_para": "نساعدك في العثور على عقارات تناسب ميزانيتك...",
-    "trusted2_card2_title": "الدعم القانوني والتوثيق",
-    "trusted2_card2_para": "ندير التحقق من العناوين والأوراق...",
-    "contact_title": "هل أنت مستعد لإيجاد عقارك الحلم؟",
-    "contact_para": "دعنا نناقش متطلباتك ونرشدك خلال عملية الشراء...",
-    "btn_contact": "الحصول على مساعدة"
+    "footer_location": "123 حيدر أباد، الهند",
+    "footer_rights": "© 2025 Stackly. جميع الحقوق محفوظة.",
+  
+    "hero_title": "توزيع الطعام",
+    "trusted_heading": "تغذية المجتمعات بالرعاية",
+    "trusted_para": "لا ينبغي أن يكون الجوع عائقًا أمام عيش حياة كريمة.  \nتضمن برامج توزيع الغذاء لدينا أن يتلقى الأطفال والأسر وكبار السن  \nوجبات غذائية مغذية مع التعاطف والكرامة والأمل.  ",
+    "feature1": "حملات توزيع وجبات يومية",
+    "feature2": "حزم غذائية مغذية للأسر",
+    "feature3": "دعم للأطفال وكبار السن",
+    "feature4": "إمدادات غذائية للإغاثة الطارئة",
+    "feature5": "مبادرات مهمة القضاء على الجوع",
+    "btn_explore": "استكشاف البرامج",
+    "btn_buying": "انضم كمتطوع",
+    "comprehensive_title": "مساعدة غذائية شاملة",
+    "comprehensive_para": "الغذاء حق أساسي من حقوق الإنسان.  \nنحن نقدم وجبات مغذية للمجتمعات الضعيفة،  \nمع التركيز على الأطفال والنساء وكبار السن.  \nتضمن برامجنا الأمن الغذائي واستعادة الكرامة.  ",
+    "feature_card1_title": "توزيع الوجبات",
+    "feature_card1_para": "تُقدم وجبات طازجة يوميًا في المناطق المحرومة،  \nمما يضمن ألا ينام أحد جائعًا.  ",
+    "feature_card2_title": "سلال غذائية للأسر",
+    "feature_card2_para": "توزع سلال تحتوي على الأساسيات مثل الأرز والقمح والبقوليات والزيت  \nعلى الأسر المحتاجة.  ",
+    "feature_card3_title": "التغذية للأطفال",
+    "feature_card3_para": "تركيز خاص على الأطفال من خلال الحليب والفواكه والوجبات الغنية بالبروتين  \nلدعم نموهم وصحتهم.  ",
+    "endtoend_title": "عملية توزيع الغذاء من البداية إلى النهاية",
+    "endtoend_para": "توزيع الغذاء أكثر من مجرد إعطاء وجبات — إنه يتعلق بضمان الكرامة والتغذية \nوالرعاية لكل فرد. تضمن عمليتنا المنظمة جيدًا وصول الغذاء إلى من \nيحتاجون إليه في الوقت المناسب وبكل تعاطف.",
+    "process_intro": "يضمن نهجنا خطوة بخطوة توزيعًا فعالًا للغذاء \nيفيد الأسر والأطفال وكبار السن. مع مشاركة المجتمع، \nوالتخطيط الشفاف، والمتطوعين المخلصين، نقدم الوجبات بعناية.",
+    "step1": "تحديد المجتمعات المحتاجة",
+    "step2": "توفير طعام طازج ومغذي",
+    "step3": "تعبئة الوجبات والسلال الغذائية",
+    "step4": "تنسيق المتطوعين",
+    "step5": "حملات التوزيع الميدانية",
+    "step6": "المتابعة ودعم المجتمع",
+    "service_title": "خدمات توزيع الغذاء لدينا",
+    "service_para": "نحن نقدم دعمًا غذائيًا شاملاً من خلال برامج الوجبات، وسلال التموين، و \nحملات التغذية. بمساعدة المتبرعين والمتطوعين، مهمتنا هي \nمكافحة الجوع وضمان الأمن الغذائي للمجتمعات الضعيفة.",
+    "grid1_title": "برامج الوجبات اليومية",
+    "grid1_para": "وجبات مطهية طازجة توزع في الأحياء الفقيرة والمدارس والملاجئ \nلضمان ألا ينام أحد جائعًا.",
+    "grid2_title": "سلال غذائية للأسر",
+    "grid2_para": "سلال غذائية أساسية تحتوي على الأرز والقمح والبقوليات والزيت \nتوزع على الأسر التي تعاني من انعدام الأمن الغذائي.",
+    "grid3_title": "حملات تغذية الأطفال",
+    "grid3_para": "تركيز خاص على صحة الأطفال مع الحليب والفواكه و \nالوجبات الغنية بالبروتين لدعم النمو والتعلم.",
+    "grid4_title": "دعم الإغاثة الطارئة",
+    "grid4_para": "توزيع غذائي سريع الاستجابة أثناء الكوارث الطبيعية \nوالأزمات لدعم الأسر المتضررة فورًا.",
+    "trusted2_title": "دعم موثوق لتوزيع الغذاء",
+    "trusted2_para": "مكافحة الجوع تتطلب التعاطف والتخطيط والتفاني. \nنحن نضمن أن تصل الوجبات المغذية وسلال التموين إلى المحتاجين، \nبشفافية وكرامة في كل خطوة من العملية. ",
+    "trusted2_card1_title": "وجبات مغذية للمجتمعات",
+    "trusted2_card1_para": "نقدم وجبات طازجة للأطفال والأسر وكبار السن، \nمما يضمن ألا ينام أحد جائعًا.",
+    "trusted2_card2_title": "دعم أساسي بالسلال الغذائية",
+    "trusted2_card2_para": "نوزع سلال غذائية تحتوي على الأرز والبقوليات والقمح والزيت، \nلمساعدة الأسر على تلبية احتياجاتهم الغذائية اليومية بكرامة.",
+    "contact_title": "هل أنت مستعد لمساعدتنا في مكافحة الجوع؟",
+    "contact_para": "انضم إلينا في نشر الأمل والتغذية. \nسواء من خلال التبرع أو التطوع، فإن دعمك يجلب الغذاء والرعاية \nللأسر المحتاجة.",
+    "btn_contact": "شارك الآن",
 
      },
   he: {
- "home": "בית",
-    "home1": "דף הבית 1",
-    "home2": "דף הבית 2",
+    "home": "בית",
+    "home1": "דף 1",
+    "home2": "דף 2",
     "about": "אודות",
     "services": "שירותים",
     "allServices": "כל השירותים",
-    "service_1": "סיוע ברכישת נכסים",
-    "service_2": "מכירת נכסים",
-    "service_3": "שירותי השכרה",
-    "service_4": "ניהול נכסים",
-    "service_5": "השקעות נדל״ן",
-    "service_6": "תמיכה משפטית ותיעוד",
+    "service_1": "שירות_1",
+    "service_2": "שירות_2",
+    "service_3": "שירות_3",
+    "service_4": "שירות_4",
+    "service_5": "שירות_5",
+    "service_6": "שירות_6",
     "blog": "בלוג",
     "allPosts": "כל הפוסטים",
-    "blog_1": "השקעות נדל״ן חכמות",
-    "blog_2": "ניהול נכסים יעיל",
-    "blog_3": "מגמות שוק הנדל״ן",
+    "blog_1": "בלוג_1",
+    "blog_2": "בלוג_2",
+    "blog_3": "בלוג_3",
     "contact": "צור קשר",
     "logout": "התנתק",
 
-    "footer_about": "ספק מוביל של פתרונות בינה מלאכותית, מסייע לעסקים להשתנות באמצעות טכנולוגיה חכמה ומערכות אוטומציה חדשניות.",
-    "footer_quickLinks": "קישורים מהירים",
+    "footer_about": "ארגון צדקה מסור, המעצים קהילות באמצעות חינוך, בריאות, תמיכת מזון ויוזמות ברות קיימא ליצירת השפעה מתמשכת ותקווה.",
+    "footer_quicklinks": "קישורים מהירים",
     "footer_home": "בית",
     "footer_home2": "בית 2",
-    "footer_aboutUs": "אודותינו",
+    "footer_aboutus": "אודותינו",
     "footer_services": "שירותים",
     "footer_blog": "בלוג",
     "footer_contact": "צור קשר",
-    "footer_servicesTitle": "שירותים",
-    "footer_service1": "סיוע ברכישת נכסים",
-    "footer_service2": "מכירת נכסים",
-    "footer_service3": "שירותי השכרה",
-    "footer_service4": "ניהול נכסים",
-    "footer_service5": "השקעות נדל\"ן",
-    "footer_service6": "תמיכה משפטית ותיעוד",
-    "footer_contactInfo": "פרטי קשר",
-    "footer_email": "contact@stackly.ai",
+    "footer_services_title": "שירותים",
+    "footer_service1": "חלוקת מזון",
+    "footer_service2": "תמיכה בחינוך",
+    "footer_service3": "מחנות בריאות",
+    "footer_service4": "העצמת נשים",
+    "footer_service5": "רווחת ילדים",
+    "footer_service6": "סיוע באסונות",
+    "footer_contactinfo": "פרטי קשר",
+    "footer_email": "contact@stackly.in",
     "footer_phone": "+1 (555) 123-4567",
-    "footer_address": "123 רחוב חדשנות בינה מלאכותית",
-    "footer_bottom": "© 2025 Stackly. כל הזכויות שמורות.",
- 
-      "hero_title": "סיוע ברכישת נכסים",
-    "trusted_heading": "סיוע אמין ברכישת נכסים",
-    "trusted_para": "הגשם את חלום הבית שלך בעזרת התמיכה המקצועית שלנו...",
-    "feature1": "חיפוש נכסים מותאם אישית",
-    "feature2": "ניתוח שוק ומשא ומתן על מחירים",
-    "feature3": "אימות משפטי ותיעוד",
-    "feature4": "הנחיות למשכנתאות ומימון",
-    "feature5": "תהליך רישום חלק",
-    "btn_explore": "גלה שירותים",
-    "btn_buying": "קבל סיוע ברכישה",
-    "comprehensive_title": "סיוע מקיף ברכישת נכסים",
-    "comprehensive_para": "רכישת נכס היא אחת ההחלטות החשובות בחיים...",
-    "feature_card1_title": "חיפוש ובחירת נכסים",
-    "feature_card1_para": "אנו עוזרים לך למצוא את הנכס הנכון...",
-    "feature_card2_title": "משא ומתן ותמיכת עסקאות",
-    "feature_card2_para": "המומחים שלנו מסייעים במשא ומתן...",
-    "feature_card3_title": "סיוע משפטי ותיעוד",
-    "feature_card3_para": "אנו מטפלים באימות כותרת ורישום...",
-    "endtoend_title": "סיוע מקצה לקצה ברכישת נכסים",
-    "endtoend_para": "רכישת נכס עלולה להיות מאתגרת...",
-    "process_intro": "תהליך רכישת הנכסים שלנו מותאם להפוך את המסע שלך לפשוט...",
-    "step1": "הבנת צרכי הקונה והתקציב",
-    "step2": "חיפוש ובחירת נכסים",
-    "step3": "ניתוח שוק ומשא ומתן",
-    "step4": "אימות משפטי ותיעוד",
-    "step5": "סיוע במשכנתאות ומימון",
-    "step6": "רישום ותמיכה במסירה",
-    "service_title": "סיוע ברכישת נכסים",
-    "service_para": "אנו מפשטים את תהליך רכישת הנכסים...",
-    "grid1_title": "חיפוש ובחירת נכסים",
-    "grid1_para": "חיפוש מותאם לצרכים שלך...",
-    "grid2_title": "ניתוח שוק ומשא ומתן",
-    "grid2_para": "תובנות שוק ותמיכה במשא ומתן...",
-    "grid3_title": "סיוע משפטי ותיעוד",
-    "grid3_para": "בדיקות משפטיות וניהול מסמכים...",
-    "grid4_title": "הנחיות פיננסיות ומשכנתאות",
-    "grid4_para": "סיוע בבקשות משכנתא ותכנון פיננסי...",
-    "trusted2_title": "סיוע אמין ברכישת נכסים",
-    "trusted2_para": "רכישת נכס עלולה להיות מורכבת...",
-    "trusted2_card1_title": "חיפוש נכסים מותאם אישית",
-    "trusted2_card1_para": "אנו עוזרים לך למצוא נכסים המתאימים לתקציב...",
-    "trusted2_card2_title": "סיוע משפטי ותיעוד",
-    "trusted2_card2_para": "אנו מנהלים אימות כותרת וניירת...",
-    "contact_title": "מוכן למצוא את נכס החלומות שלך?",
-    "contact_para": "בוא נדון בדרישות שלך ונדריך אותך...",
-    "btn_contact": "קבל סיוע",
+    "footer_location": "123 היידראבאד, הודו",
+    "footer_rights": "© 2025 Stackly. כל הזכויות שמורות.",
+
+    "hero_title": "חלוקת מזון",
+    "trusted_heading": "מזינים קהילות עם אכפתיות",
+    "trusted_para": "רעב לא צריך להיות מחסום לחיים בכבוד.  \nתוכניות חלוקת המזון שלנו מבטיחות שילדים, משפחות וקשישים  \nיקבלו ארוחות מזינות עם חמלה, כבוד ותקווה.  ",
+    "feature1": "מבצעי חלוקת ארוחות יומיות",
+    "feature2": "חבילות מזון מזינות למשפחות",
+    "feature3": "תמיכה לילדים ולקשישים",
+    "feature4": "אספקת מזון לשעת חירום",
+    "feature5": "יוזמות משימת אפס רעב",
+    "btn_explore": "גלה תוכניות",
+    "btn_buying": "הצטרף כמתנדב",
+    "comprehensive_title": "סיוע מזון מקיף",
+    "comprehensive_para": "מזון הוא זכות בסיסית של כל אדם.  \nאנו מספקים ארוחות מזינות לקהילות פגיעות,  \nעם דגש על ילדים, נשים וקשישים.  \nהתוכניות שלנו מבטיחות ביטחון תזונתי ומשיבות כבוד.  ",
+    "feature_card1_title": "חלוקת ארוחות",
+    "feature_card1_para": "ארוחות מוכנות טריות מוגשות מדי יום באזורים מוחלשים,  \nכדי להבטיח שאף אחד לא ילך לישון רעב.  ",
+    "feature_card2_title": "חבילות מזון למשפחות",
+    "feature_card2_para": "חבילות מזון עם מצרכים חיוניים כמו אורז, חיטה, קטניות ושמן  \nמחולקות למשפחות נזקקות.  ",
+    "feature_card3_title": "תזונה לילדים",
+    "feature_card3_para": "דגש מיוחד על ילדים באמצעות חלב, פירות וארוחות עשירות בחלבון  \nלתמיכה בצמיחתם ובבריאותם.  ",
+    "endtoend_title": "תהליך חלוקת מזון מקצה לקצה",
+    "endtoend_para": "חלוקת מזון היא יותר מסתם מתן ארוחות — מדובר בהבטחת כבוד, תזונה \nוטיפול לכל אדם. התהליך המאורגן שלנו מבטיח שהמזון יגיע למי \שזקוק לו בזמן ובחמלה.",
+    "process_intro": "הגישה שלנו צעד אחר צעד מבטיחה חלוקת מזון יעילה \nשמטיבה עם משפחות, ילדים וקשישים. עם מעורבות קהילתית, \nתכנון שקוף ומתנדבים מסורים, אנו מספקים ארוחות באכפתיות.",
+    "step1": "זיהוי קהילות נזקקות",
+    "step2": "איתור מזון טרי ומזין",
+    "step3": "אריזת ארוחות וחבילות מזון",
+    "step4": "תיאום מתנדבים",
+    "step5": "מבצעי חלוקה בשטח",
+    "step6": "מעקב ותמיכת קהילה",
+    "service_title": "שירותי חלוקת המזון שלנו",
+    "service_para": "אנו מספקים תמיכה תזונתית הוליסטית באמצעות תוכניות ארוחות, חבילות מזון ו \nמבצעי תזונה. בעזרת תורמים ומתנדבים, המשימה שלנו היא \nלהיאבק ברעב ולהבטיח ביטחון תזונתי לקהילות פגיעות.",
+    "grid1_title": "תוכניות ארוחות יומיות",
+    "grid1_para": "ארוחות מבושלות טריות מחולקות בשכונות עוני, בתי ספר ומקלטים \nכדי להבטיח שאף אחד לא ילך לישון רעב.",
+    "grid2_title": "חבילות מזון למשפחות",
+    "grid2_para": "חבילות מזון חיוניות המכילות אורז, חיטה, קטניות ושמן \nמחולקות למשפחות המתמודדות עם חוסר ביטחון תזונתי.",
+    "grid3_title": "מבצעי תזונה לילדים",
+    "grid3_para": "דגש מיוחד על בריאות הילדים עם חלב, פירות ו \nארוחות עשירות בחלבון לתמיכה בצמיחה ובלמידה.",
+    "grid4_title": "סיוע חירום",
+    "grid4_para": "חלוקת מזון מהירה בזמן אסונות טבע \nומשברים כדי לתמוך מיידית במשפחות שנפגעו.",
+    "trusted2_title": "תמיכה אמינה בחלוקת מזון",
+    "trusted2_para": "המאבק ברעב דורש חמלה, תכנון ומסירות. \nאנו מבטיחים שארוחות מזינות וחבילות מזון יגיעו לנזקקים, \nבשקיפות ובכבוד בכל שלב בתהליך. ",
+    "trusted2_card1_title": "ארוחות מזינות לקהילות",
+    "trusted2_card1_para": "אנו מגישים ארוחות מוכנות טריות לילדים, משפחות וקשישים, \nכדי להבטיח שאף אחד לא ילך לישון רעב.",
+    "trusted2_card2_title": "תמיכה חיונית בחבילות מזון",
+    "trusted2_card2_para": "אנו מחלקים חבילות מזון המכילות אורז, קטניות, חיטה ושמן, \nכדי לעזור למשפחות לענות על צרכיהן התזונתיים היומיומיים בכבוד.",
+    "contact_title": "מוכן לעזור לנו להיאבק ברעב?",
+    "contact_para": "הצטרף אלינו להפצת תקווה ותזונה. \nבין אם בתרומה או בהתנדבות, התמיכה שלך מביאה מזון ואכפתיות \nלמשפחות נזקקות.",
+    "btn_contact": "הצטרף עכשיו",
+
   }
 };
 
@@ -631,351 +656,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
-<script>
-  // Mobile menu setup
-  const hamburger = document.getElementById("hamburger");
-  const hamburgerMenu = document.getElementById("hamburgerMenu");
-
-  // Show/hide mobile menu on hamburger click
-  hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    hamburgerMenu.classList.toggle("active");
-  });
-
-  // Toggle dropdowns for mobile menu
-  document.querySelectorAll('.mobile-dropdown-parent > span').forEach(link => {
-    link.addEventListener('click', function() {
-      const parentLi = this.parentElement;
-      const dropdown = parentLi.querySelector('.mobile-dropdown');
-      dropdown.classList.toggle('active');
-    });
-  });
-
-  // Desktop dropdown toggle logic
-  document.querySelectorAll('.nav-item.dropdown > .nav-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      document.querySelectorAll('.dropdown-menu').forEach(menu => {
-        if (menu !== this.nextElementSibling) {
-          menu.classList.remove('active');
-        }
-      });
-      const dropdownMenu = this.nextElementSibling;
-      if (dropdownMenu) {
-        dropdownMenu.classList.toggle('active');
-      }
-    });
-  });
-
-  // Redirect on desktop dropdown menu item click
-  document.querySelectorAll('.dropdown-menu a').forEach(link => {
-    link.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (href && href !== "#") {
-        window.location.href = href;
-        document.querySelectorAll('.dropdown-menu').forEach(menu => menu.classList.remove('active'));
-      }
-    });
-  });
-
-  // Redirect on normal nav link click
-  document.querySelectorAll('.nav-menu > .nav-item:not(.dropdown) .nav-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (href && href !== "#") {
-        window.location.href = href;
-      }
-    });
-  });
-
-  // Auth link toggle for desktop and mobile
-  function setupAuthLinks() {
-    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
-    const authLinks = [document.getElementById("authLink"), document.getElementById("mobileAuthLink")];
-
-    authLinks.forEach(link => {
-      if (!link) return;
-      if (isLoggedIn) {
-        link.innerText = "Logout";
-        link.href = "#";
-        link.onclick = (e) => {
-          e.preventDefault();
-          localStorage.removeItem("isLoggedIn");
-          localStorage.removeItem("currentUser");
-          window.location.href = "index.html";
-        };
-      } else {
-        link.innerText = "Login";
-        link.href = "index.html";
-        link.onclick = null;
-      }
-    });
-  }
-  setupAuthLinks();
-
-  // Theme toggle
-  const toggleBtn = document.getElementById('toggleBtn');
-  let darkMode = localStorage.getItem('darkMode') === 'true';
-
-  function applyTheme() {
-    if (darkMode) {
-      document.body.classList.add('dark-mode');
-      toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
-    } else {
-      document.body.classList.remove('dark-mode');
-      toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
-    }
-  }
-
-  toggleBtn.addEventListener('click', () => {
-    darkMode = !darkMode;
-    localStorage.setItem('darkMode', darkMode);
-    applyTheme();
-  });
-  applyTheme();
-
-  // Avatar initials logic
-  const avatarCircle = document.getElementById('avatarCircle');
-  const avatarInitials = document.getElementById('avatarInitials');
-  const avatarDropdown = document.getElementById('avatarDropdown');
-  const logoutBtn = document.getElementById('logoutBtn');
-  const currentUserEmail = localStorage.getItem("currentUser");
-  const users = JSON.parse(localStorage.getItem("users")) || {};
-
-  if (currentUserEmail && users[currentUserEmail]) {
-    const firstName = users[currentUserEmail].firstName || "";
-    const lastName = users[currentUserEmail].lastName || "";
-    const initials = (firstName[0] || "").toUpperCase() + (lastName[0] || "").toUpperCase();
-    avatarInitials.textContent = initials;
-  } else {
-    avatarInitials.textContent = "?";
-  }
-
-  // Show/hide avatar dropdown on click
-  avatarCircle.addEventListener('click', function(e) {
-    e.stopPropagation();
-    avatarDropdown.style.display = avatarDropdown.style.display === "block" ? "none" : "block";
-  });
-
-  document.addEventListener('click', function(e) {
-    if (!avatarCircle.contains(e.target) && !avatarDropdown.contains(e.target)) {
-      avatarDropdown.style.display = "none";
-    }
-  });
-
-  // Logout action
-  logoutBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    localStorage.removeItem("isLoggedIn");
-    localStorage.removeItem("currentUser");
-    window.location.href = "index.html";
-  });
-</script>
-
-<style>
-  /* Base styles for hamburger icon */
-  .hamburger {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 24px;
-    height: 18px;
-    cursor: pointer;
-    z-index: 1000;
-  }
-
-  .hamburger span {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #333;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .dark-mode .hamburger span {
-    background-color: #fff;
-  }
-
-  /* Hamburger menu animation */
-  .hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-
-  .hamburger.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
-
-  /* Hide navigation on mobile */
-  @media (max-width: 768px) {
-    .nav-menu {
-      display: none;
-    }
-    .hamburger {
-      display: flex;
-    }
-  }
-
-  /* Styles for the mobile hamburger menu */
-  .mobile-menu-wrapper {
-    position: relative;
-  }
-
-  .hamburger-menu {
-    display: none;
-    flex-direction: column;
-    background: #23272f;
-    color: #fff;
-    position: absolute;
-    top: 50px;
-    right: 0;
-    width: 220px;
-    border-radius: 8px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
-    padding: 20px 0;
-    z-index: 9999;
-    list-style: none;
-  }
-
-  .hamburger-menu.active {
-    display: flex;
-  }
-
-  .hamburger-menu li {
-    padding: 10px 24px;
-    border-bottom: 1px solid #333;
-  }
-
-  .hamburger-menu li:last-child {
-    border-bottom: none;
-  }
-
-  .hamburger-menu a,
-  .hamburger-menu span {
-    color: #00f7ff;
-    text-decoration: none;
-    font-size: 1.1rem;
-    display: block;
-    cursor: pointer;
-    font-weight: 500;
-  }
-
-  .hamburger-menu ul {
-    list-style: none;
-    padding-left: 20px;
-    margin-top: 5px;
-  }
-
-  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown {
-    display: none;
-  }
-
-  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown.active {
-    display: block;
-  }
-
-  .toggle-btn {
-    background: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 38px;
-    height: 38px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 16px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-
-  .toggle-btn:hover {
-    background: #f0f0f0;
-  }
-
-  .avatar-circle {
-    position: relative;
-    cursor: pointer;
-    z-index: 1001;
-    overflow: visible;
-  }
-
-  .avatar-circle {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-left: 16px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #eee;
-    position: relative;
-    cursor: pointer;
-  }
-
-  .avatar-circle img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .avatar-dropdown {
-    display: none;
-    position: absolute;
-    top: 65px;
-    right: 140px;
-    background: #fff;
-    min-width: 100px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
-    border-radius: 8px;
-    z-index: 1002;
-    padding: 4px 0;
-  }
-
-  .avatar-dropdown ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .avatar-dropdown li {
-    padding: 6px 12px;
-  }
-
-  .avatar-dropdown a {
-    color: #23272f;
-    text-decoration: none;
-    font-size: 0.95rem;
-    display: block;
-    border-radius: 4px;
-    transition: background 0.2s;
-  }
-
-  .avatar-dropdown a:hover {
-    background: #f0f0f0;
-  }
-
-  @media (max-width: 768px) {
-    .toggle-btn,
-    .avatar-circle {
-      margin-left: 8px;
-      width: 32px;
-      height: 32px;
-    }
-  }
-
-  @media (min-width: 769px) {
-    .hamburger-menu {
-      display: none !important;
-    }
-  }
-</style>
 <!-- 🔷 Protest home page  -->
 
   <script>
@@ -1985,18 +1665,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
      <!-- Footer -->
-     <!-- Footer -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-content">
-      <!-- Logo & About -->
-      <div class="footer-section footer-section1">
-        <div class="logo">
+  <footer class="site-footer">
+  <div class="footer-wrapper">
+    <div class="footer-grid">
+
+      <!-- Brand & About -->
+      <div class="footer-block footer-brand footer-block1">
+        <div class="footer-logo">
           <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 50px; width: 80px;">
         </div>
-        <p class="text-justify">
-          <span data-i18n="footer_about">Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.</span>
+
+        <p style="text-align: justify;" data-i18n="footer_about">
+          Dedicated charity organization, empowering communities through education, healthcare, food support, and sustainable initiatives to create lasting impact and hope.
         </p>
+
         <div class="social-links">
           <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
           <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
@@ -2006,12 +1688,12 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
 
       <!-- Quick Links -->
-      <div class="footer-section footer-section2">
-        <h4 data-i18n="footer_quickLinks">Quick Links</h4>
+      <div class="footer-block footer-block2">
+        <h4 data-i18n="footer_quicklinks">Quick Links</h4>
         <ul>
           <li><a href="home.html"><span data-i18n="footer_home">Home</span></a></li>
           <li><a href="home2.html"><span data-i18n="footer_home2">Home 2</span></a></li>
-          <li><a href="about.html"><span data-i18n="footer_aboutUs">About Us</span></a></li>
+          <li><a href="about.html"><span data-i18n="footer_aboutus">About Us</span></a></li>
           <li><a href="services.html"><span data-i18n="footer_services">Services</span></a></li>
           <li><a href="blog.html"><span data-i18n="footer_blog">Blog</span></a></li>
           <li><a href="contact.html"><span data-i18n="footer_contact">Contact</span></a></li>
@@ -2019,135 +1701,135 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
 
       <!-- Services -->
-      <div class="footer-section footer-section3">
-        <h4 data-i18n="footer_servicesTitle">Services</h4>
+      <div class="footer-block footer-block3">
+        <h4 data-i18n="footer_services_title">Services</h4>
         <ul>
-          <li><a href="service1.html"><span data-i18n="footer_service1">Property Buying Assistance</span></a></li>
-          <li><a href="service2.html"><span data-i18n="footer_service2">Property Selling</span></a></li>
-          <li><a href="service3.html"><span data-i18n="footer_service3">Rental Services</span></a></li>
-          <li><a href="service4.html"><span data-i18n="footer_service4">Property Management</span></a></li>
-          <li><a href="service5.html"><span data-i18n="footer_service5">Real Estate Investment</span></a></li>
-          <li><a href="service6.html"><span data-i18n="footer_service6">Legal & Documentation Support</span></a></li>
+          <li><a href="service1.html"><span data-i18n="footer_service1">Food Distribution</span></a></li>
+          <li><a href="service2.html"><span data-i18n="footer_service2">Education Support</span></a></li>
+          <li><a href="service3.html"><span data-i18n="footer_service3">Healthcare Camps</span></a></li>
+          <li><a href="service4.html"><span data-i18n="footer_service4">Women Empowerment</span></a></li>
+          <li><a href="service5.html"><span data-i18n="footer_service5">Child Welfare</span></a></li>
+          <li><a href="service6.html"><span data-i18n="footer_service6">Disaster Relief</span></a></li>
         </ul>
       </div>
 
       <!-- Contact Info -->
-      <div class="footer-section footer-section4">
-        <h4 data-i18n="footer_contactInfo">Contact Info</h4>
+      <div class="footer-block footer-block4">
+        <h4 data-i18n="footer_contactinfo">Contact Info</h4>
         <ul>
-          <li><i class="fas fa-envelope"></i> <span data-i18n="footer_email">contact@stackly.ai</span></li>
+          <li><i class="fas fa-envelope"></i> <span data-i18n="footer_email">contact@stackly.in</span></li>
           <li><i class="fas fa-phone"></i> <span data-i18n="footer_phone">+1 (555) 123-4567</span></li>
-          <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer_address">123 AI Innovation Drive</span></li>
+          <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer_location">123 Hyderabad, India</span></li>
         </ul>
       </div>
     </div>
 
-    <!-- Bottom Bar -->
-    <div class="footer-bottom">
-      <p><span data-i18n="footer_bottom">&copy; 2025 Stackly. All rights reserved.</span></p>
+    <!-- Bottom -->
+    <div class="footer-bottom-bar">
+      <p data-i18n="footer_rights">&copy; 2025 Stackly. All rights reserved.</p>
     </div>
   </div>
 </footer>
 
+
+<!-- Styles -->
 <style>
-.footer {
+.site-footer {
   background: #0a0a0a;
   color: #fff;
   padding: 50px 20px 20px;
   font-family: Arial, sans-serif;
 }
 
-.footer-section1{
-  margin-right: 150px;
+.footer-wrapper {
+  max-width: 1200px; /* keeps equal left-right padding */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.footer-block2 {
+  padding-inline-start: 100px; /* works for both ltr & rtl */
 }
 
-.footer-section4{
-  margin-left: 50px;
+.footer-block3 {
+  padding-inline-start: 80px; /* works for both ltr & rtl */
 }
 
-.footer .footer-content {
+.footer-block4 {
+  padding-inline-start: 60px; /* works for both ltr & rtl */
+}
+
+.footer-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   margin-bottom: 30px;
 }
 
-.footer .footer-section h4 {
+
+.footer-block h4 {
   font-size: 1.2rem;
   margin-bottom: 15px;
   color: #f4f4f4;
 }
 
-.footer .footer-section ul {
+.footer-block ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
-.footer .footer-section ul li {
+.footer-block ul li {
   margin-bottom: 10px;
-  font-size: 0.95rem;
   color: #ddd;
 }
 
-.footer .footer-section ul li a {
+.footer-block ul li a {
   color: #ddd;
   text-decoration: none;
   transition: color 0.3s;
 }
 
-.footer .footer-section ul li a:hover {
+.footer-block ul li a:hover {
   color: #a68e4c;
 }
 
-.footer .social-links a {
-  margin-right: 12px;
-  font-size: 1.2rem;
-  color: #ddd;
-  transition: color 0.3s;
-}
 
-.footer .social-links a:hover {
-  color: #000000;
-}
 
-.footer .footer-bottom {
+
+
+.footer-bottom-bar {
   text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255,255,255,0.1);
   padding-top: 15px;
   font-size: 0.9rem;
   color: #bbb;
 }
 
+/* Responsive */
 @media (max-width: 900px) {
-  .footer .footer-content {
+  .footer-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
-  .footer-section1{
-  margin-right: 5px;
-}
 }
 
 @media (max-width: 600px) {
-  .footer .footer-content {
+  .footer-grid {
     grid-template-columns: 1fr;
     text-align: left;
   }
-  .footer .social-links {
-    margin-top: 15px;
+  .footer-block2{
+      padding-left: 0px;
   }
-  .footer-section1{
-  margin-right: 10px;
-}
-  .footer-section2{
-  margin-right: 10px;
-}
-.footer-section4{
-  margin-left: 1px;
-}
+  .footer-block3{
+      padding-left: 0px;
+  }
+    .footer-block4{
+      padding-left: 0px;
+    }
 }
 </style>
+
+
 
 </div>
     <script src="assets/js/script.js"></script>

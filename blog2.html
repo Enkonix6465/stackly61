@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stackly - Realestate</title>
+    <title>Stackly - Charity</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -16,7 +16,9 @@
 <div id="content" style="display:none;"></div>
 
 
-    <!-- Sticky Header -->
+<!-- Sticky Header -->
+
+    
   <header class="header">
   <div class="container">
     <div class="nav-wrapper">
@@ -38,21 +40,21 @@
             <a href="#" class="nav-link"><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
               <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
-              <li><a href="service1.html"><span data-i18n="service_1">Property Buying Assistance</span></a></li>
-              <li><a href="service2.html"><span data-i18n="service_2">Property Selling</span></a></li>
-              <li><a href="service3.html"><span data-i18n="service_3">Rental Services </span></a></li>
-              <li><a href="service4.html"><span data-i18n="service_4">Property Management</span></a></li>
-              <li><a href="service5.html"><span data-i18n="service_5">Real Estate Investment</span></a></li>
-              <li><a href="service6.html"><span data-i18n="service_6">Legal & Documentation Support</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Service_1</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Service_2</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Service_3</span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Service_4</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Service_5</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service_6">Service_6</span></a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
             <a href="#" class="nav-link"><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
               <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
-              <li><a href="blog1.html"><span data-i18n="blog_1">Smart Property Investments</span></a></li>
-              <li><a href="blog2.html"><span data-i18n="blog_2">Effective Property Management</span></a></li>
-              <li><a href="blog3.html"><span data-i18n="blog_3">Real Estate Market Trends</span></a></li>
+              <li><a href="blog1.html"><span data-i18n="blog_1">blog_1</span></a></li>
+              <li><a href="blog2.html"><span data-i18n="blog_2">blog_2</span></a></li>
+              <li><a href="blog3.html"><span data-i18n="blog_3">blog_3</span></a></li>
             </ul>
           </li>
           <li class="nav-item"><a href="contact.html" class="nav-link"><span data-i18n="contact">Contact</span></a></li>
@@ -64,6 +66,15 @@
           <span></span>
         </div>
       </nav>
+
+       <div class="lang-switcher">
+        <label for="langSelect"></label>
+        <select id="langSelect" onchange="changeLanguage(this.value)">
+          <option value="en">English</option>
+          <option value="ar">Arabic</option>
+          <option value="he">Hebrew</option>
+        </select>
+      </div>
 
       <div class="mobile-menu-wrapper">
         <ul class="hamburger-menu" id="hamburgerMenu">
@@ -79,21 +90,21 @@
             <span><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></span>
             <ul class="mobile-dropdown">
              <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
-              <li><a href="service1.html"><span data-i18n="service_1">Property Buying Assistance</span></a></li>
-              <li><a href="service2.html"><span data-i18n="service_2">Property Selling</span></a></li>
-              <li><a href="service3.html"><span data-i18n="service_3">Rental Services </span></a></li>
-              <li><a href="service4.html"><span data-i18n="service_4">Property Management</span></a></li>
-              <li><a href="service5.html"><span data-i18n="service_5">Real Estate Investment</span></a></li>
-              <li><a href="service6.html"><span data-i18n="service6">Legal & Documentation Support</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Service_1</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Service_2</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Service_3</span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Service_4</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Service_5</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service_6">Service_6</span></a></li>
             </ul>
           </li>
           <li class="mobile-dropdown-parent">
             <span><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></span>
             <ul class="mobile-dropdown">
                <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
-                <li><a href="blog1.html"><span data-i18n="blog_1">Smart Property Investments</span></a></li>
-                <li><a href="blog2.html"><span data-i18n="blog_2">Effective Property Management</span></a></li>
-                <li><a href="blog3.html"><span data-i18n="blog_3">Real Estate Market Trends</span></a></li>
+                <li><a href="blog1.html"><span data-i18n="blog_1">blog_1</span></a></li>
+                <li><a href="blog2.html"><span data-i18n="blog_2">blog_2</span></a></li>
+                <li><a href="blog3.html"><span data-i18n="blog_3">blog_3</span></a></li>
             </ul>
           </li>
           <li><a href="contact.html"><span data-i18n="contact">Contact</span></a></li>
@@ -101,41 +112,43 @@
         </ul>
       </div>
 
-      <div class="lang-switcher">
-        <label for="langSelect">Language:</label>
-        <select id="langSelect" onchange="changeLanguage(this.value)">
-          <option value="en">English</option>
-          <option value="ar">Arabic</option>
-          <option value="he">Hebrew</option>
-        </select>
-      </div>
+     
 
       <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
         <i class="fas fa-moon"></i>
       </button>
 
-      <div class="avatar-circle" title="Profile" id="avatarCircle">
-        <span id="avatarInitials"></span>
+     <div class="avatar-wrapper">
+        <div class="avatar-circle" title="Profile" id="avatarCircle">
+          <span id="avatarInitials">BA</span>
+        </div>
+        <div class="avatar-dropdown" id="avatarDropdown">
+          <ul>
+            <li>
+              <a href="index.html" id="logoutBtn">
+                <span data-i18n="logout">Logout</span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="avatar-dropdown" id="avatarDropdown">
-        <ul>
-          <li><a href="index.html" id="logoutBtn"><span data-i18n="logout">Logout</span></a></li>
-        </ul>
-      </div>
+      
     </div>
   </div>
 </header>
 
+
+
 <!-- Section : 1 -->
 <section class="ai-hero-section">
   <video autoplay muted loop playsinline class="ai-hero-bg-video">
-    <source src="https://videos.pexels.com/video-files/4095756/4095756-uhd_2560_1440_30fps.mp4" type="video/mp4">
+    <source src="video/site44-S2.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
   <div class="ai-hero-overlay">
     <div class="ai-hero-content">
-      <h1 class="ai-hero-title ai-glow animate-ai-slide-in" data-i18n="hero_title">Effective Property Management</h1>
+      <h1 class="ai-hero-title ai-glow animate-ai-slide-in" data-i18n="hero_title">Education for Every Child</h1>
     </div>
   </div>
 </section>
@@ -143,14 +156,16 @@
 <!-- Section : 2 -->
 <section class="ml-hero">
   <div class="container">
-    <h1 data-i18n="intro_title">Effective Property Management</h1>
+    <h1 data-i18n="intro_title">Breaking Barriers Through Education</h1>
     <p data-i18n="intro_para">
-      Effective property management is the key to maximizing the value and performance of real estate assets. 
-      From tenant relations and rent collection to maintenance oversight and legal compliance, professional 
-      management ensures properties operate smoothly and profitably. By leveraging technology, data-driven 
-      insights, and strategic planning, property owners can minimize vacancies, reduce risks, and improve 
-      overall ROI. Balancing operational efficiency with tenant satisfaction, effective property management 
-      creates long-term stability, financial growth, and sustainable property success in a competitive market.
+      Education is a fundamental right and a powerful tool for breaking the cycle of poverty. 
+      Yet millions of children are denied access to quality learning due to financial struggles, 
+      lack of resources, or social inequalities. 
+      <br><br>
+      Education for Every Child ensures that young learners receive the knowledge, 
+      skills, and opportunities they deserve. From providing books and digital tools 
+      to building safe classrooms, we empower children to dream bigger, achieve more, 
+      and create brighter futures for themselves and their communities. 
     </p>
   </div>
 </section>
@@ -160,17 +175,16 @@
   <div class="container">
     <h2 data-i18n="intro2_title">Introduction</h2>
     <p style="text-align: justify;" data-i18n="intro2_para1">
-      Effective property management is essential for maximizing the value of real estate assets while ensuring 
-      tenant satisfaction and long-term profitability. From managing rental collections and maintaining properties 
-      to handling legal compliance and tenant relations, property management provides a structured approach that 
-      keeps operations smooth and efficient. In today’s competitive real estate market, professional management 
-      helps reduce vacancies, minimize risks, and enhance overall property performance.
+      Education is more than academics—it is the foundation for equality, empowerment, and progress. 
+      Children who receive quality education are more likely to break free from poverty, 
+      lead healthier lives, and contribute positively to society. However, millions still face 
+      barriers such as lack of schools, resources, and trained teachers. 
     </p>
     <p style="text-align: justify;" data-i18n="intro2_para2">
-      True property management goes beyond daily operations—it focuses on creating sustainable growth by combining 
-      financial oversight, proactive maintenance, and strategic planning. By leveraging modern technologies, data-driven 
-      insights, and industry expertise, property owners can secure consistent returns, protect their investments, 
-      and build lasting value in a dynamic real estate environment.
+      Our mission is to eliminate these barriers by providing school supplies, 
+      scholarships, and access to digital learning. Through community partnerships, 
+      teacher training, and inclusive classrooms, we are creating environments where 
+      every child can thrive and reach their full potential. 
     </p>
   </div>
 </section>
@@ -178,23 +192,23 @@
 <!-- Section : 4 -->
 <section class="ml-applications">
   <div class="container">
-    <h2 data-i18n="strategies_title">Key Strategies for Effective Property Management</h2>
+    <h2 data-i18n="strategies_title">Key Pillars of Our Education Program</h2>
     <div class="app-grid">
       <div class="app-card">
-        <h3 data-i18n="strategy1_title">Tenant Management</h3>
-        <p data-i18n="strategy1_para">Ensuring tenant satisfaction through clear communication, timely support, and strong relationship management.</p>
+        <h3 data-i18n="strategy1_title">Access to Schools</h3>
+        <p data-i18n="strategy1_para">Helping children enroll in schools and ensuring safe, inclusive classrooms for learning.</p>
       </div>
       <div class="app-card">
-        <h3 data-i18n="strategy2_title">Property Maintenance</h3>
-        <p data-i18n="strategy2_para">Regular inspections, repairs, and upkeep to preserve property value and prevent costly damages.</p>
+        <h3 data-i18n="strategy2_title">Learning Materials</h3>
+        <p data-i18n="strategy2_para">Providing books, stationery, and digital tools to support effective education.</p>
       </div>
       <div class="app-card">
-        <h3 data-i18n="strategy3_title">Legal & Documentation</h3>
-        <p data-i18n="strategy3_para">Managing lease agreements, compliance requirements, and property-related documentation with accuracy.</p>
+        <h3 data-i18n="strategy3_title">Scholarship Support</h3>
+        <p data-i18n="strategy3_para">Offering financial aid to underprivileged students so they can continue their studies.</p>
       </div>
       <div class="app-card">
-        <h3 data-i18n="strategy4_title">Financial Oversight</h3>
-        <p data-i18n="strategy4_para">Tracking rental income, expenses, and budgeting to ensure profitability and long-term investment growth.</p>
+        <h3 data-i18n="strategy4_title">Teacher Empowerment</h3>
+        <p data-i18n="strategy4_para">Training educators with modern teaching methods to inspire young learners.</p>
       </div>
     </div>
   </div>
@@ -204,23 +218,22 @@
 <section class="ml-challenges">
   <div class="container">
     <div class="challenge-content">
-      <h2 data-i18n="challenges_title">Challenges in Effective Property Management</h2>
+      <h2 data-i18n="challenges_title">Challenges in Ensuring Education for All</h2>
       <p data-i18n="challenges_para1">
-        Managing properties effectively comes with its own set of challenges. Landlords and property managers 
-        often struggle with tenant disputes, delayed rent payments, and high tenant turnover rates. Without 
-        proper systems in place, these issues can reduce profitability and disrupt long-term property stability.
+        Despite progress, millions of children are still out of school. Poverty, gender inequality, 
+        lack of infrastructure, and conflict prevent them from accessing even basic education. 
+        Many children who attend school struggle due to overcrowded classrooms, insufficient 
+        materials, and untrained teachers. 
       </p>
       <p data-i18n="challenges_para2">
-        Another major challenge lies in maintaining properties consistently. Unexpected repairs, rising 
-        maintenance costs, and compliance with local housing regulations can create financial and operational 
-        stress. Adapting to changing real estate market trends while ensuring proper documentation and 
-        financial oversight is essential. Addressing these challenges proactively helps protect investments 
-        and ensures steady growth in property value.
+        The digital divide is another challenge—without access to technology, rural and underprivileged 
+        children are left behind. Addressing these obstacles requires collective action, sustainable 
+        investment, and innovative approaches to ensure every child’s right to learn is fulfilled. 
       </p>
     </div>
     <div class="challenge-image">
-      <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?w=1200&auto=format&fit=crop" 
-           alt="Property Management Challenges">
+      <img src="https://i.pinimg.com/736x/0a/d1/b4/0ad1b4a6d57840ab5fb25fad144abb7d.jpg" 
+           alt="Education Challenges">
     </div>
   </div>
 </section>
@@ -228,13 +241,13 @@
 <!-- Section : 6 -->
 <section class="ml-trends">
   <div class="container">
-    <h2 data-i18n="list_title">Key Strategies for Effective Property Management</h2>
+    <h2 data-i18n="list_title">Our Approach to Inclusive Education</h2>
     <ul>
-      <li data-i18n="list_item1">Screening tenants carefully to ensure reliability and reduce turnover.</li>
-      <li data-i18n="list_item2">Implementing regular property maintenance to protect long-term value.</li>
-      <li data-i18n="list_item3">Using clear lease agreements and proper documentation to avoid disputes.</li>
-      <li data-i18n="list_item4">Leveraging property management software for rent collection and tracking.</li>
-      <li data-i18n="list_item5">Staying updated with local real estate laws and compliance requirements.</li>
+      <li data-i18n="list_item1">Providing scholarships and sponsorships to underprivileged children.</li>
+      <li data-i18n="list_item2">Equipping schools with libraries, digital labs, and safe learning spaces.</li>
+      <li data-i18n="list_item3">Training teachers to deliver engaging and inclusive lessons.</li>
+      <li data-i18n="list_item4">Supplying books, uniforms, and learning kits to children in need.</li>
+      <li data-i18n="list_item5">Creating awareness campaigns to promote the importance of education for all.</li>
     </ul>
   </div>
 </section>
@@ -242,20 +255,16 @@
 <!-- Section : 7 -->
 <section class="ml-future">
   <div class="container">
-    <h2 data-i18n="future_title">The Road Ahead for Effective Property Management</h2>
+    <h2 data-i18n="future_title">The Road Ahead for Child Education</h2>
     <p style="text-align: justify;" data-i18n="future_para1">
-      The future of property management is centered on technology-driven solutions, 
-      tenant-focused services, and proactive maintenance. Property owners and managers 
-      must embrace smart tools to streamline rent collection, monitor maintenance, and 
-      improve tenant satisfaction. By combining digital platforms with personalized 
-      service, real estate assets can be managed more efficiently while retaining value. 
+      The future of education depends on collective action. By expanding digital learning, 
+      building more schools, and investing in teacher training, we can ensure no child is left behind. 
+      Bridging the gap between privileged and underprivileged communities is crucial for equality. 
     </p>
     <p style="text-align: justify;" data-i18n="future_para2">
-      As the real estate sector evolves, successful property management will rely on 
-      predictive maintenance, automation, and strong compliance practices. Building 
-      long-term tenant relationships, reducing operational costs, and leveraging 
-      data-driven insights will ensure sustainable growth and resilience in the 
-      competitive property market. 
+      With your support, we can create sustainable solutions—empowering children with the skills 
+      and knowledge they need to lead fulfilling lives. Together, we can build a future where 
+      education is not a privilege, but a universal right for every child. 
     </p>
   </div>
 </section>
@@ -264,237 +273,239 @@
 <section class="contact-banner section-padding">
     <div class="container">
         <div class="contact-banner-content">
-          <h2 data-i18n="contact_title">Get In Touch With Our Real Estate Experts</h2>
-          <p data-i18n="contact_para">Looking to invest, manage, or grow your property portfolio? Connect with us today for personalized real estate guidance and solutions.</p>
-          <a href="contact.html" class="btn btn-primary" data-i18n="contact_btn">Contact Us</a>
+          <h2 data-i18n="contact_title">Support a Child’s Education Today</h2>
+          <p data-i18n="contact_para">Your contribution can change lives. Join us in making education accessible for every child, everywhere.</p>
+          <a href="contact.html" class="btn btn-primary" data-i18n="contact_btn">Donate Now</a>
         </div>
     </div>
 </section>
+
 
 <script>
 // Translation dictionary
 const translations = {
   en: {
-   "home": "Home",
+    "home": "Home",
     "home1": "Home 1",
     "home2": "Home 2",
     "about": "About",
     "services": "Services",
     "allServices": "All Services",
-    "service_1": "Property Buying Assistance",
-    "service_2": "Property Selling",
-    "service_3": "Rental Services",
-    "service_4": "Property Management",
-    "service_5": "Real Estate Investment",
-    "service_6": "Legal & Documentation Support",
+    "service_1": "Service_1",
+    "service_2": "Service_2",
+    "service_3": "Service_3",
+    "service_4": "Service_4",
+    "service_5": "Service_5",
+    "service_6": "Service_6",
     "blog": "Blog",
     "allPosts": "All Posts",
-    "blog_1": "Smart Property Investments",
-    "blog_2": "Effective Property Management",
-    "blog_3": "Real Estate Market Trends",
+    "blog_1": "Blog_1",
+    "blog_2": "Blog_2",
+    "blog_3": "Blog_3",
     "contact": "Contact",
     "logout": "Logout",
 
-    "footer_about": "Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.",
-    "footer_quickLinks": "Quick Links",
+     "footer_about": "Dedicated charity organization, empowering communities through education, healthcare, food support, and sustainable initiatives to create lasting impact and hope.",
+    "footer_quicklinks": "Quick Links",
     "footer_home": "Home",
     "footer_home2": "Home 2",
-    "footer_aboutUs": "About Us",
+    "footer_aboutus": "About Us",
     "footer_services": "Services",
     "footer_blog": "Blog",
     "footer_contact": "Contact",
-    "footer_servicesTitle": "Services",
-    "footer_service1": "Property Buying Assistance",
-    "footer_service2": "Property Selling",
-    "footer_service3": "Rental Services",
-    "footer_service4": "Property Management",
-    "footer_service5": "Real Estate Investment",
-    "footer_service6": "Legal & Documentation Support",
-    "footer_contactInfo": "Contact Info",
-    "footer_email": "contact@stackly.ai",
+    "footer_services_title": "Services",
+    "footer_service1": "Food Distribution",
+    "footer_service2": "Education Support",
+    "footer_service3": "Healthcare Camps",
+    "footer_service4": "Women Empowerment",
+    "footer_service5": "Child Welfare",
+    "footer_service6": "Disaster Relief",
+    "footer_contactinfo": "Contact Info",
+    "footer_email": "contact@stackly.in",
     "footer_phone": "+1 (555) 123-4567",
-    "footer_address": "123 AI Innovation Drive",
-    "footer_bottom": "© 2025 Stackly. All rights reserved.",
-
-     "hero_title": "Effective Property Management",
-    "intro_title": "Effective Property Management",
-    "intro_para": "Effective property management is the key to maximizing the value and performance of real estate assets. From tenant relations and rent collection to maintenance oversight and legal compliance, professional management ensures properties operate smoothly and profitably. By leveraging technology, data-driven insights, and strategic planning, property owners can minimize vacancies, reduce risks, and improve overall ROI. Balancing operational efficiency with tenant satisfaction, effective property management creates long-term stability, financial growth, and sustainable property success in a competitive market.",
+    "footer_location": "123 Hyderabad, India",
+    "footer_rights": "© 2025 Stackly. All rights reserved.",
+     "hero_title": "Education for Every Child",
+    "intro_title": "Breaking Barriers Through Education",
+    "intro_para": "Education is a fundamental right and a powerful tool for breaking the cycle of poverty. \n      Yet millions of children are denied access to quality learning due to financial struggles, \n      lack of resources, or social inequalities. \n      <br><br>\n      Education for Every Child ensures that young learners receive the knowledge, \n      skills, and opportunities they deserve. From providing books and digital tools \n      to building safe classrooms, we empower children to dream bigger, achieve more, \n      and create brighter futures for themselves and their communities.",
     "intro2_title": "Introduction",
-    "intro2_para1": "Effective property management is essential for maximizing the value of real estate assets while ensuring tenant satisfaction and long-term profitability. From managing rental collections and maintaining properties to handling legal compliance and tenant relations, property management provides a structured approach that keeps operations smooth and efficient. In today’s competitive real estate market, professional management helps reduce vacancies, minimize risks, and enhance overall property performance.",
-    "intro2_para2": "True property management goes beyond daily operations—it focuses on creating sustainable growth by combining financial oversight, proactive maintenance, and strategic planning. By leveraging modern technologies, data-driven insights, and industry expertise, property owners can secure consistent returns, protect their investments, and build lasting value in a dynamic real estate environment.",
-    "strategies_title": "Key Strategies for Effective Property Management",
-    "strategy1_title": "Tenant Management",
-    "strategy1_para": "Ensuring tenant satisfaction through clear communication, timely support, and strong relationship management.",
-    "strategy2_title": "Property Maintenance",
-    "strategy2_para": "Regular inspections, repairs, and upkeep to preserve property value and prevent costly damages.",
-    "strategy3_title": "Legal & Documentation",
-    "strategy3_para": "Managing lease agreements, compliance requirements, and property-related documentation with accuracy.",
-    "strategy4_title": "Financial Oversight",
-    "strategy4_para": "Tracking rental income, expenses, and budgeting to ensure profitability and long-term investment growth.",
-    "challenges_title": "Challenges in Effective Property Management",
-    "challenges_para1": "Managing properties effectively comes with its own set of challenges. Landlords and property managers often struggle with tenant disputes, delayed rent payments, and high tenant turnover rates. Without proper systems in place, these issues can reduce profitability and disrupt long-term property stability.",
-    "challenges_para2": "Another major challenge lies in maintaining properties consistently. Unexpected repairs, rising maintenance costs, and compliance with local housing regulations can create financial and operational stress. Adapting to changing real estate market trends while ensuring proper documentation and financial oversight is essential. Addressing these challenges proactively helps protect investments and ensures steady growth in property value.",
-    "list_title": "Key Strategies for Effective Property Management",
-    "list_item1": "Screening tenants carefully to ensure reliability and reduce turnover.",
-    "list_item2": "Implementing regular property maintenance to protect long-term value.",
-    "list_item3": "Using clear lease agreements and proper documentation to avoid disputes.",
-    "list_item4": "Leveraging property management software for rent collection and tracking.",
-    "list_item5": "Staying updated with local real estate laws and compliance requirements.",
-    "future_title": "The Road Ahead for Effective Property Management",
-    "future_para1": "The future of property management is centered on technology-driven solutions, tenant-focused services, and proactive maintenance. Property owners and managers must embrace smart tools to streamline rent collection, monitor maintenance, and improve tenant satisfaction. By combining digital platforms with personalized service, real estate assets can be managed more efficiently while retaining value.",
-    "future_para2": "As the real estate sector evolves, successful property management will rely on predictive maintenance, automation, and strong compliance practices. Building long-term tenant relationships, reducing operational costs, and leveraging data-driven insights will ensure sustainable growth and resilience in the competitive property market.",
-    "contact_title": "Get In Touch With Our Real Estate Experts",
-    "contact_para": "Looking to invest, manage, or grow your property portfolio? Connect with us today for personalized real estate guidance and solutions.",
-    "contact_btn": "Contact Us",
+    "intro2_para1": "Education is more than academics—it is the foundation for equality, empowerment, and progress. \n      Children who receive quality education are more likely to break free from poverty, \n      lead healthier lives, and contribute positively to society. However, millions still face \n      barriers such as lack of schools, resources, and trained teachers.",
+    "intro2_para2": "Our mission is to eliminate these barriers by providing school supplies, \n      scholarships, and access to digital learning. Through community partnerships, \n      teacher training, and inclusive classrooms, we are creating environments where \n      every child can thrive and reach their full potential.",
+    "strategies_title": "Key Pillars of Our Education Program",
+    "strategy1_title": "Access to Schools",
+    "strategy1_para": "Helping children enroll in schools and ensuring safe, inclusive classrooms for learning.",
+    "strategy2_title": "Learning Materials",
+    "strategy2_para": "Providing books, stationery, and digital tools to support effective education.",
+    "strategy3_title": "Scholarship Support",
+    "strategy3_para": "Offering financial aid to underprivileged students so they can continue their studies.",
+    "strategy4_title": "Teacher Empowerment",
+    "strategy4_para": "Training educators with modern teaching methods to inspire young learners.",
+    "challenges_title": "Challenges in Ensuring Education for All",
+    "challenges_para1": "Despite progress, millions of children are still out of school. Poverty, gender inequality, \n        lack of infrastructure, and conflict prevent them from accessing even basic education. \n        Many children who attend school struggle due to overcrowded classrooms, insufficient \n        materials, and untrained teachers.",
+    "challenges_para2": "The digital divide is another challenge—without access to technology, rural and underprivileged \n        children are left behind. Addressing these obstacles requires collective action, sustainable \n        investment, and innovative approaches to ensure every child’s right to learn is fulfilled.",
+    "list_title": "Our Approach to Inclusive Education",
+    "list_item1": "Providing scholarships and sponsorships to underprivileged children.",
+    "list_item2": "Equipping schools with libraries, digital labs, and safe learning spaces.",
+    "list_item3": "Training teachers to deliver engaging and inclusive lessons.",
+    "list_item4": "Supplying books, uniforms, and learning kits to children in need.",
+    "list_item5": "Creating awareness campaigns to promote the importance of education for all.",
+    "future_title": "The Road Ahead for Child Education",
+    "future_para1": "The future of education depends on collective action. By expanding digital learning, \n      building more schools, and investing in teacher training, we can ensure no child is left behind. \n      Bridging the gap between privileged and underprivileged communities is crucial for equality.",
+    "future_para2": "With your support, we can create sustainable solutions—empowering children with the skills \n      and knowledge they need to lead fulfilling lives. Together, we can build a future where \n      education is not a privilege, but a universal right for every child.",
+    "contact_title": "Support a Child’s Education Today",
+    "contact_para": "Your contribution can change lives. Join us in making education accessible for every child, everywhere.",
+    "contact_btn": "Donate Now",
+
        
   },
   ar: {
-   "home": "الرئيسية",
-    "home1": "الصفحة الرئيسية 1",
-    "home2": "الصفحة الرئيسية 2",
-    "about": "من نحن",
+     "home": "الرئيسية",
+    "home1": "الصفحة 1",
+    "home2": "الصفحة 2",
+    "about": "معلومات عنا",
     "services": "الخدمات",
     "allServices": "جميع الخدمات",
-    "service_1": "مساعدة في شراء العقارات",
-    "service_2": "بيع العقارات",
-    "service_3": "خدمات الإيجار",
-    "service_4": "إدارة العقارات",
-    "service_5": "الاستثمار العقاري",
-    "service_6": "الدعم القانوني والتوثيق",
+    "service_1": "الخدمة_1",
+    "service_2": "الخدمة_2",
+    "service_3": "الخدمة_3",
+    "service_4": "الخدمة_4",
+    "service_5": "الخدمة_5",
+    "service_6": "الخدمة_6",
     "blog": "المدونة",
     "allPosts": "جميع المقالات",
-    "blog_1": "الاستثمارات العقارية الذكية",
-    "blog_2": "إدارة العقارات الفعالة",
-    "blog_3": "اتجاهات سوق العقارات",
+    "blog_1": "مدونة_1",
+    "blog_2": "مدونة_2",
+    "blog_3": "مدونة_3",
     "contact": "اتصل بنا",
-    "logout": "تسجيل خروج",
+    "logout": "تسجيل الخروج",
 
-    "footer_about": "مزود رائد لحلول الذكاء الاصطناعي، يساعد الشركات على التحول من خلال التكنولوجيا الذكية وأنظمة الأتمتة المبتكرة.",
-    "footer_quickLinks": "روابط سريعة",
+    "footer_about": "منظمة خيرية مكرسة، تمكّن المجتمعات من خلال التعليم والرعاية الصحية ودعم الغذاء والمبادرات المستدامة لخلق تأثير دائم وأمل.",
+    "footer_quicklinks": "روابط سريعة",
     "footer_home": "الرئيسية",
     "footer_home2": "الصفحة الرئيسية 2",
-    "footer_aboutUs": "من نحن",
+    "footer_aboutus": "معلومات عنا",
     "footer_services": "الخدمات",
-    "footer_blog": "المدونة",
+    "footer_blog": "مدونة",
     "footer_contact": "اتصل بنا",
-    "footer_servicesTitle": "الخدمات",
-    "footer_service1": "مساعدة في شراء العقارات",
-    "footer_service2": "بيع العقارات",
-    "footer_service3": "خدمات الإيجار",
-    "footer_service4": "إدارة الممتلكات",
-    "footer_service5": "الاستثمار العقاري",
-    "footer_service6": "الدعم القانوني والتوثيق",
-    "footer_contactInfo": "معلومات الاتصال",
-    "footer_email": "contact@stackly.ai",
+    "footer_services_title": "الخدمات",
+    "footer_service1": "توزيع الغذاء",
+    "footer_service2": "دعم التعليم",
+    "footer_service3": "المخيمات الطبية",
+    "footer_service4": "تمكين المرأة",
+    "footer_service5": "رعاية الأطفال",
+    "footer_service6": "الإغاثة في الكوارث",
+    "footer_contactinfo": "معلومات الاتصال",
+    "footer_email": "contact@stackly.in",
     "footer_phone": "+1 (555) 123-4567",
-    "footer_address": "123 طريق ابتكار الذكاء الاصطناعي",
-    "footer_bottom": "© 2025 Stackly. جميع الحقوق محفوظة.",
-
-    "hero_title": "إدارة الممتلكات الفعالة",
-    "intro_title": "إدارة الممتلكات الفعالة",
-    "intro_para": "إدارة الممتلكات الفعالة هي المفتاح لتعظيم قيمة وأداء أصول العقارات. من علاقات المستأجرين وتحصيل الإيجارات إلى الإشراف على الصيانة والامتثال القانوني، تضمن الإدارة المهنية تشغيل العقارات بسلاسة وربحية. من خلال الاستفادة من التكنولوجيا والرؤى المستندة إلى البيانات والتخطيط الاستراتيجي، يمكن لمالكي العقارات تقليل الشواغر وتقليل المخاطر وتحسين العائد على الاستثمار. من خلال موازنة الكفاءة التشغيلية مع رضا المستأجرين، تخلق إدارة الممتلكات الفعالة استقرارًا طويل الأمد ونموًا ماليًا ونجاحًا عقاريًا مستدامًا في سوق تنافسية.",
-    "intro2_title": "المقدمة",
-    "intro2_para1": "إدارة الممتلكات الفعالة ضرورية لتعظيم قيمة أصول العقارات مع ضمان رضا المستأجرين والربحية طويلة الأجل. من إدارة تحصيل الإيجارات وصيانة العقارات إلى التعامل مع الامتثال القانوني وعلاقات المستأجرين، توفر إدارة الممتلكات نهجًا منظمًا يحافظ على سير العمليات بسلاسة وكفاءة. في سوق العقارات التنافسية اليوم، تساعد الإدارة المهنية على تقليل الشواغر وتقليل المخاطر وتعزيز أداء العقارات.",
-    "intro2_para2": "تتجاوز إدارة الممتلكات الحقيقية العمليات اليومية—فهي تركز على خلق نمو مستدام من خلال الجمع بين الرقابة المالية والصيانة الاستباقية والتخطيط الاستراتيجي. من خلال الاستفادة من التقنيات الحديثة والرؤى المستندة إلى البيانات والخبرة الصناعية، يمكن لمالكي العقارات تحقيق عوائد ثابتة وحماية استثماراتهم وبناء قيمة دائمة في بيئة عقارية ديناميكية.",
-    "strategies_title": "استراتيجيات رئيسية لإدارة الممتلكات الفعالة",
-    "strategy1_title": "إدارة المستأجرين",
-    "strategy1_para": "ضمان رضا المستأجرين من خلال التواصل الواضح والدعم في الوقت المناسب وإدارة العلاقات القوية.",
-    "strategy2_title": "صيانة الممتلكات",
-    "strategy2_para": "عمليات تفتيش منتظمة وإصلاحات وصيانة للحفاظ على قيمة العقار ومنع الأضرار المكلفة.",
-    "strategy3_title": "القانون والوثائق",
-    "strategy3_para": "إدارة عقود الإيجار ومتطلبات الامتثال والوثائق المتعلقة بالعقارات بدقة.",
-    "strategy4_title": "الإشراف المالي",
-    "strategy4_para": "تتبع دخل الإيجار والمصروفات والميزانية لضمان الربحية ونمو الاستثمار على المدى الطويل.",
-    "challenges_title": "التحديات في إدارة الممتلكات الفعالة",
-    "challenges_para1": "تأتي إدارة الممتلكات بشكل فعال مع مجموعة من التحديات. غالبًا ما يواجه الملاك ومديرو العقارات نزاعات المستأجرين، وتأخر دفع الإيجارات، ومعدلات دوران عالية للمستأجرين. بدون أنظمة مناسبة، يمكن أن تقلل هذه المشكلات من الربحية وتعطل استقرار الممتلكات على المدى الطويل.",
-    "challenges_para2": "يكمن تحدٍ آخر رئيسي في الحفاظ على الممتلكات باستمرار. يمكن أن تؤدي الإصلاحات غير المتوقعة وتكاليف الصيانة المتزايدة والامتثال للوائح الإسكان المحلية إلى خلق ضغوط مالية وتشغيلية. من الضروري التكيف مع اتجاهات سوق العقارات المتغيرة مع ضمان التوثيق السليم والرقابة المالية. تساعد معالجة هذه التحديات بشكل استباقي على حماية الاستثمارات وضمان نمو ثابت في قيمة الممتلكات.",
-    "list_title": "استراتيجيات رئيسية لإدارة الممتلكات الفعالة",
-    "list_item1": "اختيار المستأجرين بعناية لضمان الموثوقية وتقليل معدلات الدوران.",
-    "list_item2": "تنفيذ الصيانة المنتظمة للعقارات لحماية القيمة طويلة الأجل.",
-    "list_item3": "استخدام عقود إيجار واضحة ووثائق مناسبة لتجنب النزاعات.",
-    "list_item4": "استخدام برامج إدارة الممتلكات لتحصيل الإيجارات وتتبعها.",
-    "list_item5": "مواكبة قوانين العقارات المحلية ومتطلبات الامتثال.",
-    "future_title": "الطريق إلى الأمام في إدارة الممتلكات الفعالة",
-    "future_para1": "يركز مستقبل إدارة الممتلكات على الحلول المدفوعة بالتكنولوجيا، والخدمات الموجهة نحو المستأجرين، والصيانة الاستباقية. يجب على مالكي ومديري العقارات تبني الأدوات الذكية لتبسيط تحصيل الإيجارات ومراقبة الصيانة وتحسين رضا المستأجرين. من خلال الجمع بين المنصات الرقمية والخدمة الشخصية، يمكن إدارة الأصول العقارية بشكل أكثر كفاءة مع الحفاظ على قيمتها.",
-    "future_para2": "مع تطور قطاع العقارات، ستعتمد إدارة الممتلكات الناجحة على الصيانة التنبؤية والأتمتة والممارسات الصارمة للامتثال. سيضمن بناء علاقات طويلة الأمد مع المستأجرين، وتقليل التكاليف التشغيلية، والاستفادة من الرؤى المستندة إلى البيانات نموًا مستدامًا ومرونة في سوق العقارات التنافسية.",
-    "contact_title": "تواصل مع خبراء العقارات لدينا",
-    "contact_para": "هل ترغب في الاستثمار أو إدارة أو تنمية محفظتك العقارية؟ تواصل معنا اليوم للحصول على إرشادات وحلول عقارية مخصصة.",
-    "contact_btn": "اتصل بنا",
+    "footer_location": "123 حيدر أباد، الهند",
+    "footer_rights": "© 2025 Stackly. جميع الحقوق محفوظة.",
+  
+    "hero_title": "التعليم لكل طفل",
+    "intro_title": "كسر الحواجز من خلال التعليم",
+    "intro_para": "التعليم حق أساسي وأداة قوية لكسر دائرة الفقر. \n      ومع ذلك، يُحرم ملايين الأطفال من الوصول إلى تعليم جيد بسبب الصعوبات المالية، \n      نقص الموارد، أو عدم المساواة الاجتماعية. \n      <br><br>\n      التعليم لكل طفل يضمن أن يتلقى المتعلمون الصغار المعرفة، \n      المهارات، والفرص التي يستحقونها. من توفير الكتب والأدوات الرقمية \n      إلى بناء صفوف آمنة، نحن نمكّن الأطفال من الحلم بشكل أكبر، تحقيق المزيد، \n      وخلق مستقبل أكثر إشراقًا لأنفسهم ولمجتمعاتهم.",
+    "intro2_title": "مقدمة",
+    "intro2_para1": "التعليم أكثر من مجرد دروس أكاديمية—إنه الأساس للمساواة، التمكين، والتقدم. \n      الأطفال الذين يتلقون تعليمًا جيدًا أكثر عرضة لكسر دائرة الفقر، \n      عيش حياة أكثر صحة، والمساهمة بشكل إيجابي في المجتمع. ومع ذلك، ما زال الملايين يواجهون \n      حواجز مثل نقص المدارس، الموارد، والمعلمين المدربين.",
+    "intro2_para2": "مهمتنا هي القضاء على هذه الحواجز من خلال توفير المستلزمات المدرسية، \n      المنح الدراسية، والوصول إلى التعلم الرقمي. من خلال شراكات مجتمعية، \n      تدريب المعلمين، وفصول دراسية شاملة، نحن نخلق بيئات يستطيع فيها \n      كل طفل الازدهار والوصول إلى كامل إمكاناته.",
+    "strategies_title": "ركائز برنامجنا التعليمي",
+    "strategy1_title": "الوصول إلى المدارس",
+    "strategy1_para": "مساعدة الأطفال على الالتحاق بالمدارس وضمان صفوف آمنة وشاملة للتعلم.",
+    "strategy2_title": "مواد تعليمية",
+    "strategy2_para": "توفير الكتب، الأدوات المكتبية، والأدوات الرقمية لدعم التعليم الفعّال.",
+    "strategy3_title": "دعم المنح الدراسية",
+    "strategy3_para": "تقديم مساعدات مالية للطلاب المحرومين حتى يتمكنوا من مواصلة دراستهم.",
+    "strategy4_title": "تمكين المعلمين",
+    "strategy4_para": "تدريب المعلمين بطرق تدريس حديثة لإلهام المتعلمين الصغار.",
+    "challenges_title": "التحديات في ضمان التعليم للجميع",
+    "challenges_para1": "على الرغم من التقدم، ما زال ملايين الأطفال خارج المدرسة. الفقر، عدم المساواة بين الجنسين، \n        نقص البنية التحتية، والنزاعات تمنعهم من الوصول حتى إلى التعليم الأساسي. \n        العديد من الأطفال الذين يذهبون إلى المدرسة يعانون من ازدحام الصفوف، نقص \n        المواد، والمعلمين غير المدربين.",
+    "challenges_para2": "الفجوة الرقمية تمثل تحديًا آخر—فمن دون الوصول إلى التكنولوجيا، يتخلف الأطفال في المناطق الريفية والمحرومين عن الركب. معالجة هذه العقبات تتطلب عملاً جماعيًا، استثمارات مستدامة، \n        وأساليب مبتكرة لضمان تحقيق حق كل طفل في التعلم.",
+    "list_title": "نهجنا نحو التعليم الشامل",
+    "list_item1": "تقديم منح ورعايات للأطفال المحرومين.",
+    "list_item2": "تجهيز المدارس بمكتبات، مختبرات رقمية، ومساحات تعلم آمنة.",
+    "list_item3": "تدريب المعلمين على تقديم دروس مشوقة وشاملة.",
+    "list_item4": "تزويد الأطفال المحتاجين بالكتب، الزي المدرسي، وأدوات التعلم.",
+    "list_item5": "إنشاء حملات توعية للترويج لأهمية التعليم للجميع.",
+    "future_title": "الطريق إلى الأمام لتعليم الأطفال",
+    "future_para1": "مستقبل التعليم يعتمد على العمل الجماعي. من خلال توسيع التعلم الرقمي، \n      بناء المزيد من المدارس، والاستثمار في تدريب المعلمين، يمكننا ضمان عدم ترك أي طفل خلف الركب. \n      سد الفجوة بين المجتمعات الميسورة والمحرومة أمر بالغ الأهمية لتحقيق المساواة.",
+    "future_para2": "بدعمكم، يمكننا خلق حلول مستدامة—تمكين الأطفال بالمهارات \n      والمعرفة التي يحتاجونها لقيادة حياة مُرضية. معًا، يمكننا بناء مستقبل يكون فيه \n      التعليم ليس امتيازًا، بل حقًا عالميًا لكل طفل.",
+    "contact_title": "ادعم تعليم طفل اليوم",
+    "contact_para": "مساهمتك يمكن أن تغير الحياة. انضم إلينا في جعل التعليم متاحًا لكل طفل، في كل مكان.",
+    "contact_btn": "تبرع الآن",
 
      },
   he: {
- "home": "בית",
-    "home1": "דף הבית 1",
-    "home2": "דף הבית 2",
+    "home": "בית",
+    "home1": "דף 1",
+    "home2": "דף 2",
     "about": "אודות",
     "services": "שירותים",
     "allServices": "כל השירותים",
-    "service_1": "סיוע ברכישת נכסים",
-    "service_2": "מכירת נכסים",
-    "service_3": "שירותי השכרה",
-    "service_4": "ניהול נכסים",
-    "service_5": "השקעות נדל״ן",
-    "service_6": "תמיכה משפטית ותיעוד",
+    "service_1": "שירות_1",
+    "service_2": "שירות_2",
+    "service_3": "שירות_3",
+    "service_4": "שירות_4",
+    "service_5": "שירות_5",
+    "service_6": "שירות_6",
     "blog": "בלוג",
     "allPosts": "כל הפוסטים",
-    "blog_1": "השקעות נדל״ן חכמות",
-    "blog_2": "ניהול נכסים יעיל",
-    "blog_3": "מגמות שוק הנדל״ן",
+    "blog_1": "בלוג_1",
+    "blog_2": "בלוג_2",
+    "blog_3": "בלוג_3",
     "contact": "צור קשר",
     "logout": "התנתק",
 
-    "footer_about": "ספק מוביל של פתרונות בינה מלאכותית, מסייע לעסקים להשתנות באמצעות טכנולוגיה חכמה ומערכות אוטומציה חדשניות.",
-    "footer_quickLinks": "קישורים מהירים",
+    "footer_about": "ארגון צדקה מסור, המעצים קהילות באמצעות חינוך, בריאות, תמיכת מזון ויוזמות ברות קיימא ליצירת השפעה מתמשכת ותקווה.",
+    "footer_quicklinks": "קישורים מהירים",
     "footer_home": "בית",
     "footer_home2": "בית 2",
-    "footer_aboutUs": "אודותינו",
+    "footer_aboutus": "אודותינו",
     "footer_services": "שירותים",
     "footer_blog": "בלוג",
     "footer_contact": "צור קשר",
-    "footer_servicesTitle": "שירותים",
-    "footer_service1": "סיוע ברכישת נכסים",
-    "footer_service2": "מכירת נכסים",
-    "footer_service3": "שירותי השכרה",
-    "footer_service4": "ניהול נכסים",
-    "footer_service5": "השקעות נדל\"ן",
-    "footer_service6": "תמיכה משפטית ותיעוד",
-    "footer_contactInfo": "פרטי קשר",
-    "footer_email": "contact@stackly.ai",
+    "footer_services_title": "שירותים",
+    "footer_service1": "חלוקת מזון",
+    "footer_service2": "תמיכה בחינוך",
+    "footer_service3": "מחנות בריאות",
+    "footer_service4": "העצמת נשים",
+    "footer_service5": "רווחת ילדים",
+    "footer_service6": "סיוע באסונות",
+    "footer_contactinfo": "פרטי קשר",
+    "footer_email": "contact@stackly.in",
     "footer_phone": "+1 (555) 123-4567",
-    "footer_address": "123 רחוב חדשנות בינה מלאכותית",
-    "footer_bottom": "© 2025 Stackly. כל הזכויות שמורות.",
-    
-    "hero_title": "ניהול נכסים יעיל",
-    "intro_title": "ניהול נכסים יעיל",
-    "intro_para": "ניהול נכסים יעיל הוא המפתח למקסום הערך וביצועי הנכסים. החל מיחסי דיירים וגביית שכר דירה ועד פיקוח על תחזוקה ועמידה בדרישות החוק, ניהול מקצועי מבטיח שהנכסים יפעלו בצורה חלקה ורווחית. באמצעות טכנולוגיה, תובנות מבוססות נתונים ותכנון אסטרטגי, בעלי נכסים יכולים לצמצם שוכרים פנויים, להפחית סיכונים ולשפר את התשואה הכוללת על ההשקעה. איזון בין יעילות תפעולית לשביעות רצון הדיירים יוצר יציבות לטווח ארוך, צמיחה פיננסית והצלחה בת קיימא בשוק תחרותי.",
-    "intro2_title": "מבוא",
-    "intro2_para1": "ניהול נכסים יעיל חיוני למקסום ערך הנכסים תוך שמירה על שביעות רצון הדיירים ורווחיות ארוכת טווח. ניהול גביית שכר דירה, תחזוקת הנכסים, טיפול בציות לחוק וביחסי דיירים מספקים מסגרת מסודרת השומרת על פעילות חלקה ויעילה. בשוק הנדל\"ן התחרותי של היום, ניהול מקצועי מסייע בהפחתת שוכרים פנויים, הקטנת סיכונים ושיפור ביצועי הנכסים.",
-    "intro2_para2": "ניהול נכסים אמיתי חורג מהפעולות היומיומיות—הוא מתמקד ביצירת צמיחה בת קיימא על ידי שילוב פיקוח פיננסי, תחזוקה יזומה ותכנון אסטרטגי. שימוש בטכנולוגיות מודרניות, תובנות מבוססות נתונים וניסיון תעשייתי מאפשרים לבעלי נכסים להבטיח תשואות עקביות, להגן על השקעותיהם ולבנות ערך מתמשך בסביבה דינמית.",
-    "strategies_title": "אסטרטגיות מרכזיות לניהול נכסים יעיל",
-    "strategy1_title": "ניהול דיירים",
-    "strategy1_para": "הבטחת שביעות רצון הדיירים באמצעות תקשורת ברורה, תמיכה בזמן וניהול יחסים חזק.",
-    "strategy2_title": "תחזוקת נכסים",
-    "strategy2_para": "בדיקות קבועות, תיקונים ותחזוקה לשימור ערך הנכס ומניעת נזקים יקרים.",
-    "strategy3_title": "חוק ותיעוד",
-    "strategy3_para": "ניהול חוזי שכירות, דרישות ציות ותיעוד הקשור לנכסים במדויק.",
-    "strategy4_title": "פיקוח פיננסי",
-    "strategy4_para": "מעקב אחר הכנסות שכר דירה, הוצאות ותקצוב כדי להבטיח רווחיות וצמיחה ארוכת טווח.",
-    "challenges_title": "אתגרים בניהול נכסים יעיל",
-    "challenges_para1": "ניהול נכסים אפקטיבי כולל אתגרים רבים. בעלי נכסים ומנהלים נתקלים לעיתים קרובות בסכסוכי דיירים, תשלומי שכר דירה מאוחרים ושיעורי נטישת דיירים גבוהים. ללא מערכות מתאימות, בעיות אלו יכולות להפחית את הרווחיות ולפגוע ביציבות הנכסים לטווח ארוך.",
-    "challenges_para2": "אתגר מרכזי נוסף טמון בשמירה על תחזוקת נכסים מתמדת. תיקונים בלתי צפויים, עלויות תחזוקה גבוהות ועמידה בתקנות דיור מקומיות יוצרים לחץ פיננסי ותפעולי. הסתגלות למגמות שוק הנדל\"ן המשתנות תוך שמירה על תיעוד מתאים ופיקוח פיננסי היא חיונית. טיפול יזום באתגרים אלו מסייע בהגנה על השקעות ומבטיח צמיחה יציבה בערך הנכס.",
-    "list_title": "אסטרטגיות מרכזיות לניהול נכסים יעיל",
-    "list_item1": "בדיקת דיירים בקפידה כדי להבטיח אמינות ולהפחית נטישה.",
-    "list_item2": "יישום תחזוקה סדירה לנכסים לשמירה על ערך לטווח ארוך.",
-    "list_item3": "שימוש בחוזי שכירות ברורים ותיעוד מתאים כדי למנוע סכסוכים.",
-    "list_item4": "שימוש בתוכנת ניהול נכסים לגביית שכר דירה ומעקב.",
-    "list_item5": "התעדכנות מתמדת בחוקי נדל\"ן מקומיים ודרישות ציות.",
-    "future_title": "הדרך קדימה לניהול נכסים יעיל",
-    "future_para1": "עתיד ניהול הנכסים מתמקד בפתרונות מבוססי טכנולוגיה, שירותים ממוקדי דייר ותחזוקה יזומה. בעלי נכסים ומנהלים חייבים לאמץ כלים חכמים כדי לפשט גביית שכר דירה, לפקח על תחזוקה ולשפר שביעות רצון דיירים. שילוב בין פלטפורמות דיגיטליות לשירות אישי מאפשר ניהול יעיל יותר של הנכסים תוך שמירה על ערכם.",
-    "future_para2": "ככל שמגזר הנדל\"ן מתפתח, ניהול נכסים מוצלח יתבסס על תחזוקה חזויה, אוטומציה ופרקטיקות ציות חזקות. בניית קשרי דיירים ארוכי טווח, הפחתת עלויות תפעול וניצול תובנות מבוססות נתונים יבטיחו צמיחה בת קיימא ועמידות בשוק תחרותי.",
-    "contact_title": "צור קשר עם מומחי הנדל\"ן שלנו",
-    "contact_para": "מעוניין להשקיע, לנהל או לפתח את תיק הנכסים שלך? צור קשר איתנו עוד היום לקבלת ייעוץ ופתרונות נדל\"ן מותאמים אישית.",
-    "contact_btn": "צור קשר",
-        
+    "footer_location": "123 היידראבאד, הודו",
+    "footer_rights": "© 2025 Stackly. כל הזכויות שמורות.",
+
+     "hero_title": "חינוך לכל ילד",
+    "intro_title": "שוברים מחסומים באמצעות חינוך",
+    "intro_para": "חינוך הוא זכות בסיסית וכלי עוצמתי לשבירת מעגל העוני. \n      ובכל זאת מיליוני ילדים מנועים מגישה ללמידה איכותית בשל קשיים כלכליים, \n      חוסר משאבים או אי שוויון חברתי. \n      <br><br>\n      חינוך לכל ילד מבטיח שלומדים צעירים יקבלו את הידע, \n      הכישורים וההזדמנויות המגיעים להם. מאספקת ספרים וכלים דיגיטליים \n      ועד לבניית כיתות בטוחות, אנו מעניקים לילדים את היכולת לחלום בגדול יותר, להשיג יותר, \n      וליצור עתיד מזהיר יותר עבור עצמם ועבור קהילותיהם.",
+    "intro2_title": "הקדמה",
+    "intro2_para1": "חינוך הוא יותר מלימודים אקדמיים—הוא הבסיס לשוויון, העצמה והתקדמות. \n      ילדים שמקבלים חינוך איכותי נוטים יותר להשתחרר מעוני, \n      לחיות חיים בריאים יותר, ולתרום לחברה באופן חיובי. עם זאת, מיליונים עדיין מתמודדים עם \n      מחסומים כמו חוסר בתי ספר, משאבים ומורים מיומנים.",
+    "intro2_para2": "המשימה שלנו היא להסיר מחסומים אלו באמצעות אספקת ציוד לבית הספר, \n      מלגות וגישה ללמידה דיגיטלית. באמצעות שותפויות קהילתיות, \n      הכשרת מורים וכיתות מכלילות, אנו יוצרים סביבות שבהן \n      כל ילד יכול לשגשג ולהגיע למלוא הפוטנציאל שלו.",
+    "strategies_title": "עמודי התווך המרכזיים של תוכנית החינוך שלנו",
+    "strategy1_title": "גישה לבתי ספר",
+    "strategy1_para": "עוזרים לילדים להירשם לבתי ספר ומוודאים כיתות בטוחות ומכלילות ללמידה.",
+    "strategy2_title": "חומרי לימוד",
+    "strategy2_para": "מספקים ספרים, ציוד כתיבה וכלים דיגיטליים כדי לתמוך בחינוך אפקטיבי.",
+    "strategy3_title": "תמיכה במלגות",
+    "strategy3_para": "מציעים סיוע כלכלי לתלמידים חסרי אמצעים כדי שיוכלו להמשיך בלימודיהם.",
+    "strategy4_title": "העצמת מורים",
+    "strategy4_para": "מכשירים מחנכים בשיטות הוראה מודרניות כדי להעניק השראה ללומדים צעירים.",
+    "challenges_title": "אתגרים בהבטחת חינוך לכולם",
+    "challenges_para1": "למרות ההתקדמות, מיליוני ילדים עדיין מחוץ למסגרת הלימודית. עוני, אי שוויון מגדרי, \n        חוסר בתשתיות וסכסוכים מונעים מהם גישה אפילו לחינוך בסיסי. \n        ילדים רבים שכן הולכים לבית ספר נאבקים בשל כיתות צפופות, חוסר \n        בחומרים ומורים לא מיומנים.",
+    "challenges_para2": "הפער הדיגיטלי הוא אתגר נוסף—ללא גישה לטכנולוגיה, ילדים כפריים וחסרי אמצעים נותרים מאחור. טיפול במכשולים אלו דורש פעולה קולקטיבית, השקעות ברות קיימא, \n        וגישות חדשניות כדי להבטיח שמימוש זכותו של כל ילד ללמוד תתממש.",
+    "list_title": "הגישה שלנו לחינוך מכליל",
+    "list_item1": "אספקת מלגות וחסויות לילדים חסרי אמצעים.",
+    "list_item2": "צייד בתי ספר בספריות, מעבדות דיגיטליות ומרחבי למידה בטוחים.",
+    "list_item3": "הכשרת מורים להעניק שיעורים מרתקים ומכלילים.",
+    "list_item4": "אספקת ספרים, מדים וערכות לימוד לילדים נזקקים.",
+    "list_item5": "יצירת קמפיינים להעלאת מודעות לקידום חשיבות החינוך לכולם.",
+    "future_title": "הדרך קדימה לחינוך ילדים",
+    "future_para1": "עתיד החינוך תלוי בפעולה קולקטיבית. באמצעות הרחבת הלמידה הדיגיטלית, \n      בניית בתי ספר נוספים והשקעה בהכשרת מורים, נוכל להבטיח שאף ילד לא יישאר מאחור. \n      צמצום הפער בין קהילות מבוססות לחסרות אמצעים הוא חיוני לשוויון.",
+    "future_para2": "בעזרת התמיכה שלכם, נוכל ליצור פתרונות בני קיימא—העצמת ילדים עם הכישורים \n      והידע שהם צריכים כדי לחיות חיים מספקים. יחד, נוכל לבנות עתיד שבו \n      חינוך אינו פריבילגיה, אלא זכות אוניברסלית לכל ילד.",
+    "contact_title": "תמכו בחינוך ילד היום",
+    "contact_para": "התרומה שלכם יכולה לשנות חיים. הצטרפו אלינו בהנגשת החינוך לכל ילד, בכל מקום.",
+    "contact_btn": "תרום עכשיו",
+
+  
   }
 };
 
@@ -523,357 +534,6 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 
-
-<script>
-  // Mobile menu setup
-  const hamburger = document.getElementById("hamburger");
-  const hamburgerMenu = document.getElementById("hamburgerMenu");
-
-  // Show/hide mobile menu on hamburger click
-  hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    hamburgerMenu.classList.toggle("active");
-  });
-
-  // Toggle dropdowns for mobile menu
-  document.querySelectorAll('.mobile-dropdown-parent > span').forEach(link => {
-    link.addEventListener('click', function() {
-      const parentLi = this.parentElement;
-      const dropdown = parentLi.querySelector('.mobile-dropdown');
-      dropdown.classList.toggle('active');
-    });
-  });
-
-  // Desktop dropdown toggle logic
-  document.querySelectorAll('.nav-item.dropdown > .nav-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      document.querySelectorAll('.dropdown-menu').forEach(menu => {
-        if (menu !== this.nextElementSibling) {
-          menu.classList.remove('active');
-        }
-      });
-      const dropdownMenu = this.nextElementSibling;
-      if (dropdownMenu) {
-        dropdownMenu.classList.toggle('active');
-      }
-    });
-  });
-
-  // Redirect on desktop dropdown menu item click
-  document.querySelectorAll('.dropdown-menu a').forEach(link => {
-    link.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (href && href !== "#") {
-        window.location.href = href;
-        document.querySelectorAll('.dropdown-menu').forEach(menu => menu.classList.remove('active'));
-      }
-    });
-  });
-
-  // Redirect on normal nav link click
-  document.querySelectorAll('.nav-menu > .nav-item:not(.dropdown) .nav-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (href && href !== "#") {
-        window.location.href = href;
-      }
-    });
-  });
-
-  // Auth link toggle for desktop and mobile
-  function setupAuthLinks() {
-    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
-    const authLinks = [document.getElementById("authLink"), document.getElementById("mobileAuthLink")];
-
-    authLinks.forEach(link => {
-      if (!link) return;
-      if (isLoggedIn) {
-        link.innerText = "Logout";
-        link.href = "#";
-        link.onclick = (e) => {
-          e.preventDefault();
-          localStorage.removeItem("isLoggedIn");
-          localStorage.removeItem("currentUser");
-          window.location.href = "index.html";
-        };
-      } else {
-        link.innerText = "Login";
-        link.href = "index.html";
-        link.onclick = null;
-      }
-    });
-  }
-  setupAuthLinks();
-
-  // Theme toggle
-  const toggleBtn = document.getElementById('toggleBtn');
-  let darkMode = localStorage.getItem('darkMode') === 'true';
-
-  function applyTheme() {
-    if (darkMode) {
-      document.body.classList.add('dark-mode');
-      toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
-    } else {
-      document.body.classList.remove('dark-mode');
-      toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
-    }
-  }
-
-  toggleBtn.addEventListener('click', () => {
-    darkMode = !darkMode;
-    localStorage.setItem('darkMode', darkMode);
-    applyTheme();
-  });
-  applyTheme();
-
-  // Avatar initials logic
-  const avatarCircle = document.getElementById('avatarCircle');
-  const avatarInitials = document.getElementById('avatarInitials');
-  const avatarDropdown = document.getElementById('avatarDropdown');
-  const logoutBtn = document.getElementById('logoutBtn');
-  const currentUserEmail = localStorage.getItem("currentUser");
-  const users = JSON.parse(localStorage.getItem("users")) || {};
-
-  if (currentUserEmail && users[currentUserEmail]) {
-    const firstName = users[currentUserEmail].firstName || "";
-    const lastName = users[currentUserEmail].lastName || "";
-    const initials = (firstName[0] || "").toUpperCase() + (lastName[0] || "").toUpperCase();
-    avatarInitials.textContent = initials;
-  } else {
-    avatarInitials.textContent = "?";
-  }
-
-  // Show/hide avatar dropdown on click
-  avatarCircle.addEventListener('click', function(e) {
-    e.stopPropagation();
-    avatarDropdown.style.display = avatarDropdown.style.display === "block" ? "none" : "block";
-  });
-
-  document.addEventListener('click', function(e) {
-    if (!avatarCircle.contains(e.target) && !avatarDropdown.contains(e.target)) {
-      avatarDropdown.style.display = "none";
-    }
-  });
-
-  // Logout action
-  logoutBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    localStorage.removeItem("isLoggedIn");
-    localStorage.removeItem("currentUser");
-    window.location.href = "index.html";
-  });
-</script>
-
-<style>
-  /* Base styles for hamburger icon */
-   .header {
-   
-        padding-left: 130px !important;
-        padding-right: 130px !important;
-    }
-
-  .hamburger {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 24px;
-    height: 18px;
-    cursor: pointer;
-    z-index: 1000;
-  }
-
-  .hamburger span {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #333;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .dark-mode .hamburger span {
-    background-color: #fff;
-  }
-
-  /* Hamburger menu animation */
-  .hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-
-  .hamburger.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
-
-  /* Hide navigation on mobile */
-  @media (max-width: 768px) {
-    .nav-menu {
-      display: none;
-    }
-    .hamburger {
-      display: flex;
-    }
-  }
-
-  /* Styles for the mobile hamburger menu */
-  .mobile-menu-wrapper {
-    position: relative;
-  }
-
-  .hamburger-menu {
-    display: none;
-    flex-direction: column;
-    background: #23272f;
-    color: #fff;
-    position: absolute;
-    top: 50px;
-    right: 0;
-    width: 220px;
-    border-radius: 8px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
-    padding: 20px 0;
-    z-index: 9999;
-    list-style: none;
-  }
-
-  .hamburger-menu.active {
-    display: flex;
-  }
-
-  .hamburger-menu li {
-    padding: 10px 24px;
-    border-bottom: 1px solid #333;
-  }
-
-  .hamburger-menu li:last-child {
-    border-bottom: none;
-  }
-
-  .hamburger-menu a,
-  .hamburger-menu span {
-    color: #00f7ff;
-    text-decoration: none;
-    font-size: 1.1rem;
-    display: block;
-    cursor: pointer;
-    font-weight: 500;
-  }
-
-  .hamburger-menu ul {
-    list-style: none;
-    padding-left: 20px;
-    margin-top: 5px;
-  }
-
-  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown {
-    display: none;
-  }
-
-  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown.active {
-    display: block;
-  }
-
-  .toggle-btn {
-    background: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 38px;
-    height: 38px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 16px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-
-  .toggle-btn:hover {
-    background: #f0f0f0;
-  }
-
-  .avatar-circle {
-    position: relative;
-    cursor: pointer;
-    z-index: 1001;
-    overflow: visible;
-  }
-
-  .avatar-circle {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-left: 16px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #eee;
-    position: relative;
-    cursor: pointer;
-  }
-
-  .avatar-circle img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .avatar-dropdown {
-    display: none;
-    position: absolute;
-    top: 65px;
-    right: 20px;
-    background: #fff;
-    min-width: 100px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
-    border-radius: 8px;
-    z-index: 1002;
-    padding: 4px 0;
-  }
-
-  .avatar-dropdown ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .avatar-dropdown li {
-    padding: 6px 12px;
-  }
-
-  .avatar-dropdown a {
-    color: #23272f;
-    text-decoration: none;
-    font-size: 0.95rem;
-    display: block;
-    border-radius: 4px;
-    transition: background 0.2s;
-  }
-
-  .avatar-dropdown a:hover {
-    background: #f0f0f0;
-  }
-
-  @media (max-width: 768px) {
-    .toggle-btn,
-    .avatar-circle {
-      margin-left: 8px;
-      width: 32px;
-      height: 32px;
-    }
-  }
-
-  @media (min-width: 769px) {
-    .hamburger-menu {
-      display: none !important;
-    }
-  }
-</style>
 <!-- 🔷 Protest home page  -->
 
   <script>
@@ -1182,17 +842,20 @@ section { width: 100%; padding: 50px 20px; box-sizing: border-box; }
 
  <!-- Footer -->
      <!-- Footer -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-content">
-      <!-- Logo & About -->
-      <div class="footer-section footer-section1">
-        <div class="logo">
+<footer class="site-footer">
+  <div class="footer-wrapper">
+    <div class="footer-grid">
+
+      <!-- Brand & About -->
+      <div class="footer-block footer-brand footer-block1">
+        <div class="footer-logo">
           <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 50px; width: 80px;">
         </div>
-        <p class="text-justify">
-          <span data-i18n="footer_about">Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.</span>
+
+        <p style="text-align: justify;" data-i18n="footer_about">
+          Dedicated charity organization, empowering communities through education, healthcare, food support, and sustainable initiatives to create lasting impact and hope.
         </p>
+
         <div class="social-links">
           <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
           <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
@@ -1202,12 +865,12 @@ section { width: 100%; padding: 50px 20px; box-sizing: border-box; }
       </div>
 
       <!-- Quick Links -->
-      <div class="footer-section footer-section2">
-        <h4 data-i18n="footer_quickLinks">Quick Links</h4>
+      <div class="footer-block footer-block2">
+        <h4 data-i18n="footer_quicklinks">Quick Links</h4>
         <ul>
           <li><a href="home.html"><span data-i18n="footer_home">Home</span></a></li>
           <li><a href="home2.html"><span data-i18n="footer_home2">Home 2</span></a></li>
-          <li><a href="about.html"><span data-i18n="footer_aboutUs">About Us</span></a></li>
+          <li><a href="about.html"><span data-i18n="footer_aboutus">About Us</span></a></li>
           <li><a href="services.html"><span data-i18n="footer_services">Services</span></a></li>
           <li><a href="blog.html"><span data-i18n="footer_blog">Blog</span></a></li>
           <li><a href="contact.html"><span data-i18n="footer_contact">Contact</span></a></li>
@@ -1215,136 +878,133 @@ section { width: 100%; padding: 50px 20px; box-sizing: border-box; }
       </div>
 
       <!-- Services -->
-      <div class="footer-section footer-section3">
-        <h4 data-i18n="footer_servicesTitle">Services</h4>
+      <div class="footer-block footer-block3">
+        <h4 data-i18n="footer_services_title">Services</h4>
         <ul>
-          <li><a href="service1.html"><span data-i18n="footer_service1">Property Buying Assistance</span></a></li>
-          <li><a href="service2.html"><span data-i18n="footer_service2">Property Selling</span></a></li>
-          <li><a href="service3.html"><span data-i18n="footer_service3">Rental Services</span></a></li>
-          <li><a href="service4.html"><span data-i18n="footer_service4">Property Management</span></a></li>
-          <li><a href="service5.html"><span data-i18n="footer_service5">Real Estate Investment</span></a></li>
-          <li><a href="service6.html"><span data-i18n="footer_service6">Legal & Documentation Support</span></a></li>
+          <li><a href="service1.html"><span data-i18n="footer_service1">Food Distribution</span></a></li>
+          <li><a href="service2.html"><span data-i18n="footer_service2">Education Support</span></a></li>
+          <li><a href="service3.html"><span data-i18n="footer_service3">Healthcare Camps</span></a></li>
+          <li><a href="service4.html"><span data-i18n="footer_service4">Women Empowerment</span></a></li>
+          <li><a href="service5.html"><span data-i18n="footer_service5">Child Welfare</span></a></li>
+          <li><a href="service6.html"><span data-i18n="footer_service6">Disaster Relief</span></a></li>
         </ul>
       </div>
 
       <!-- Contact Info -->
-      <div class="footer-section footer-section4">
-        <h4 data-i18n="footer_contactInfo">Contact Info</h4>
+      <div class="footer-block footer-block4">
+        <h4 data-i18n="footer_contactinfo">Contact Info</h4>
         <ul>
-          <li><i class="fas fa-envelope"></i> <span data-i18n="footer_email">contact@stackly.ai</span></li>
+          <li><i class="fas fa-envelope"></i> <span data-i18n="footer_email">contact@stackly.in</span></li>
           <li><i class="fas fa-phone"></i> <span data-i18n="footer_phone">+1 (555) 123-4567</span></li>
-          <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer_address">123 AI Innovation Drive</span></li>
+          <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer_location">123 Hyderabad, India</span></li>
         </ul>
       </div>
     </div>
 
-    <!-- Bottom Bar -->
-    <div class="footer-bottom">
-      <p><span data-i18n="footer_bottom">&copy; 2025 Stackly. All rights reserved.</span></p>
+    <!-- Bottom -->
+    <div class="footer-bottom-bar">
+      <p data-i18n="footer_rights">&copy; 2025 Stackly. All rights reserved.</p>
     </div>
   </div>
 </footer>
 
+
+<!-- Styles -->
 <style>
-.footer {
+.site-footer {
   background: #0a0a0a;
   color: #fff;
-    padding-left: 150px !important;
-  padding-right: 140px !important;
+  padding: 50px 20px 20px;
   font-family: Arial, sans-serif;
 }
 
-.footer-section1{
-  margin-right: 150px;
+.footer-wrapper {
+  max-width: 1200px; /* keeps equal left-right padding */
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.footer-section4{
-  margin-left: 50px;
+.footer-block2 {
+  padding-inline-start: 100px; /* works for both ltr & rtl */
 }
 
-.footer .footer-content {
+.footer-block3 {
+  padding-inline-start: 80px; /* works for both ltr & rtl */
+}
+
+.footer-block4 {
+  padding-inline-start: 60px; /* works for both ltr & rtl */
+}
+
+.footer-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   margin-bottom: 30px;
 }
 
-.footer .footer-section h4 {
+
+.footer-block h4 {
   font-size: 1.2rem;
   margin-bottom: 15px;
   color: #f4f4f4;
 }
 
-.footer .footer-section ul {
+.footer-block ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
-.footer .footer-section ul li {
+.footer-block ul li {
   margin-bottom: 10px;
-  font-size: 0.95rem;
   color: #ddd;
 }
 
-.footer .footer-section ul li a {
+.footer-block ul li a {
   color: #ddd;
   text-decoration: none;
   transition: color 0.3s;
 }
 
-.footer .footer-section ul li a:hover {
+.footer-block ul li a:hover {
   color: #a68e4c;
 }
 
-.footer .social-links a {
-  margin-right: 12px;
-  font-size: 1.2rem;
-  color: #ddd;
-  transition: color 0.3s;
-}
-
-.footer .social-links a:hover {
-  color: #000000;
-}
-
-.footer .footer-bottom {
+.footer-bottom-bar {
   text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255,255,255,0.1);
   padding-top: 15px;
   font-size: 0.9rem;
   color: #bbb;
 }
 
+/* Responsive */
 @media (max-width: 900px) {
-  .footer .footer-content {
+  .footer-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
-  .footer-section1{
-  margin-right: 5px;
-}
 }
 
 @media (max-width: 600px) {
-  .footer .footer-content {
+  .footer-grid {
     grid-template-columns: 1fr;
     text-align: left;
   }
-  .footer .social-links {
-    margin-top: 15px;
+  .footer-block2{
+      padding-left: 0px;
   }
-  .footer-section1{
-  margin-right: 10px;
-}
-  .footer-section2{
-  margin-right: 10px;
-}
-.footer-section4{
-  margin-left: 1px;
-}
+  .footer-block3{
+      padding-left: 0px;
+  }
+
+    .footer-block4{
+      padding-left: 0px;
+    }
 }
 </style>
+
+
 
 </div>
 

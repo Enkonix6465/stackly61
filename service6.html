@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stackly - Realestate</title>
+    <title>Stackly - Charity</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -15,7 +15,7 @@
 
 <div id="content" style="display:none;"></div>
     <!-- Sticky Header -->
-    <header class="header">
+   <header class="header">
   <div class="container">
     <div class="nav-wrapper">
       <div class="logo">
@@ -36,21 +36,21 @@
             <a href="#" class="nav-link"><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
               <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
-              <li><a href="service1.html"><span data-i18n="service_1">Property Buying Assistance</span></a></li>
-              <li><a href="service2.html"><span data-i18n="service_2">Property Selling</span></a></li>
-              <li><a href="service3.html"><span data-i18n="service_3">Rental Services </span></a></li>
-              <li><a href="service4.html"><span data-i18n="service_4">Property Management</span></a></li>
-              <li><a href="service5.html"><span data-i18n="service_5">Real Estate Investment</span></a></li>
-              <li><a href="service6.html"><span data-i18n="service_6">Legal & Documentation Support</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Service_1</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Service_2</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Service_3</span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Service_4</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Service_5</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service_6">Service_6</span></a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
             <a href="#" class="nav-link"><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
               <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
-              <li><a href="blog1.html"><span data-i18n="blog_1">Smart Property Investments</span></a></li>
-              <li><a href="blog2.html"><span data-i18n="blog_2">Effective Property Management</span></a></li>
-              <li><a href="blog3.html"><span data-i18n="blog_3">Real Estate Market Trends</span></a></li>
+              <li><a href="blog1.html"><span data-i18n="blog_1">blog_1</span></a></li>
+              <li><a href="blog2.html"><span data-i18n="blog_2">blog_2</span></a></li>
+              <li><a href="blog3.html"><span data-i18n="blog_3">blog_3</span></a></li>
             </ul>
           </li>
           <li class="nav-item"><a href="contact.html" class="nav-link"><span data-i18n="contact">Contact</span></a></li>
@@ -62,6 +62,15 @@
           <span></span>
         </div>
       </nav>
+
+       <div class="lang-switcher">
+        <label for="langSelect"></label>
+        <select id="langSelect" onchange="changeLanguage(this.value)">
+          <option value="en">English</option>
+          <option value="ar">Arabic</option>
+          <option value="he">Hebrew</option>
+        </select>
+      </div>
 
       <div class="mobile-menu-wrapper">
         <ul class="hamburger-menu" id="hamburgerMenu">
@@ -77,21 +86,21 @@
             <span><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></span>
             <ul class="mobile-dropdown">
              <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
-              <li><a href="service1.html"><span data-i18n="service_1">Property Buying Assistance</span></a></li>
-              <li><a href="service2.html"><span data-i18n="service_2">Property Selling</span></a></li>
-              <li><a href="service3.html"><span data-i18n="service_3">Rental Services </span></a></li>
-              <li><a href="service4.html"><span data-i18n="service_4">Property Management</span></a></li>
-              <li><a href="service5.html"><span data-i18n="service_5">Real Estate Investment</span></a></li>
-              <li><a href="service6.html"><span data-i18n="service6">Legal & Documentation Support</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Service_1</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Service_2</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Service_3</span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Service_4</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Service_5</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service_6">Service_6</span></a></li>
             </ul>
           </li>
           <li class="mobile-dropdown-parent">
             <span><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></span>
             <ul class="mobile-dropdown">
                <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
-                <li><a href="blog1.html"><span data-i18n="blog_1">Smart Property Investments</span></a></li>
-                <li><a href="blog2.html"><span data-i18n="blog_2">Effective Property Management</span></a></li>
-                <li><a href="blog3.html"><span data-i18n="blog_3">Real Estate Market Trends</span></a></li>
+                <li><a href="blog1.html"><span data-i18n="blog_1">blog_1</span></a></li>
+                <li><a href="blog2.html"><span data-i18n="blog_2">blog_2</span></a></li>
+                <li><a href="blog3.html"><span data-i18n="blog_3">blog_3</span></a></li>
             </ul>
           </li>
           <li><a href="contact.html"><span data-i18n="contact">Contact</span></a></li>
@@ -99,74 +108,76 @@
         </ul>
       </div>
 
-      <div class="lang-switcher">
-        <label for="langSelect">Language:</label>
-        <select id="langSelect" onchange="changeLanguage(this.value)">
-          <option value="en">English</option>
-          <option value="ar">Arabic</option>
-          <option value="he">Hebrew</option>
-        </select>
-      </div>
+     
 
       <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
         <i class="fas fa-moon"></i>
       </button>
 
-      <div class="avatar-circle" title="Profile" id="avatarCircle">
-        <span id="avatarInitials"></span>
+     <div class="avatar-wrapper">
+        <div class="avatar-circle" title="Profile" id="avatarCircle">
+          <span id="avatarInitials">BA</span>
+        </div>
+        <div class="avatar-dropdown" id="avatarDropdown">
+          <ul>
+            <li>
+              <a href="index.html" id="logoutBtn">
+                <span data-i18n="logout">Logout</span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="avatar-dropdown" id="avatarDropdown">
-        <ul>
-          <li><a href="index.html" id="logoutBtn"><span data-i18n="logout">Logout</span></a></li>
-        </ul>
-      </div>
+      
     </div>
   </div>
 </header>
 
+
+
 <!-- Section : 1 -->
 <section class="ai-hero-section">
   <video autoplay muted loop playsinline class="ai-hero-bg-video">
-    <source src="https://videos.pexels.com/video-files/4307513/4307513-hd_1920_1080_30fps.mp4" type="video/mp4">
+    <source src="video/site44-S6.mp4" type="video/mp4">
     Your browser does not support the video tag.  
   </video>
 
   <div class="ai-hero-overlay">
     <div class="ai-hero-content">
-      <h1 class="ai-hero-title ai-glow animate-ai-slide-in" data-i18n="service6_title">Legal & Documentation Support</h1>      
+      <h1 class="ai-hero-title ai-glow animate-ai-slide-in" data-i18n="service6_title">Disaster Relief</h1>      
     </div>
   </div>
 </section>
 
 <!-- Section : 2 -->
 <section class="ai-section">
-    <h1 class="ai-heading" data-i18n="service6_heading">Legal & Documentation Support</h1>
+    <h1 class="ai-heading" data-i18n="service6_heading">Emergency Relief & Support</h1>
     <div class="ai-content">
         <div class="ai-text">
             <p data-i18n="service6_intro">
-                Ensure your business and property transactions are legally secure with our comprehensive legal 
-                and documentation support services. We help you prepare, review, and manage agreements, contracts, 
-                and compliance documents efficiently and accurately.
+                In times of natural disasters, every second counts. Our Disaster Relief programs provide 
+                rapid response, food, medical aid, shelter, and long-term recovery support to help affected 
+                communities rebuild their lives with dignity and hope.
             </p>
 
             <!-- Feature Points -->
             <ul class="hero-features fade-in-up delay-2">
-                <li><span>✔</span> <span data-i18n="service6_point1">Contract drafting and review</span></li>
-                <li><span>✔</span> <span data-i18n="service6_point2">Property and business documentation</span></li>
-                <li><span>✔</span> <span data-i18n="service6_point3">Legal compliance checks</span></li>
-                <li><span>✔</span> <span data-i18n="service6_point4">Regulatory filing support</span></li>
-                <li><span>✔</span> <span data-i18n="service6_point5">Tailored legal solutions for your needs</span></li>
+                <li><span>✔</span> <span data-i18n="service6_point1">Emergency food & clean water distribution</span></li>
+                <li><span>✔</span> <span data-i18n="service6_point2">Medical aid & first responder support</span></li>
+                <li><span>✔</span> <span data-i18n="service6_point3">Temporary shelter & clothing</span></li>
+                <li><span>✔</span> <span data-i18n="service6_point4">Community recovery & rebuilding</span></li>
+                <li><span>✔</span> <span data-i18n="service6_point5">Preparedness & awareness programs</span></li>
             </ul>
 
             <div class="ai-buttons">
-                <a href="services.html" class="btn btn-primary" data-i18n="service6_btn1">Explore Services</a>
-                <a href="contact.html" class="btn btn-primary" data-i18n="service6_btn2">Get Support</a>
+                <a href="services.html" class="btn btn-primary" data-i18n="service6_btn1">Explore Programs</a>
+                <a href="contact.html" class="btn btn-primary" data-i18n="service6_btn2">Get Involved</a>
             </div>
         </div>
 
         <div class="ai-image">
-            <img src="https://images.pexels.com/photos/5071130/pexels-photo-5071130.jpeg" 
-                 alt="Legal and Documentation Support">
+            <img src="https://i.pinimg.com/736x/bd/bd/24/bdbd24ae7f0a5d065869e9746c609810.jpg" 
+                 alt="Disaster Relief Support">
         </div>
     </div>
 </section>
@@ -175,31 +186,31 @@
 <section class="advanced-features">
   <div class="advanced-features-container">
     <div class="features-header fade-in-up">
-      <h2 data-i18n="service6_section3_title">Legal & Documentation Support</h2>
+      <h2 data-i18n="service6_section3_title">How We Respond to Disasters</h2>
       <p data-i18n="service6_section3_desc">
-        Simplify your legal processes and ensure accuracy with our professional documentation support. 
-        From drafting contracts to verifying compliance documents, we provide reliable solutions to 
-        safeguard your business and property transactions.
+        Our teams act quickly to provide life-saving relief and long-term rehabilitation. 
+        From food distribution to rebuilding homes, we stand with communities every step 
+        of the recovery journey.
       </p>
     </div>
 
     <div class="features-cards">
       <div class="feature-box fade-in-up delay-1">
-        <div class="feature-icon"><i class="fas fa-file-contract"></i></div>
-        <h3 data-i18n="service6_card1_title">Contract Drafting & Review</h3>
-        <p data-i18n="service6_card1_desc">Prepare and review agreements, leases, and contracts with expert guidance to protect your interests.</p>
+        <div class="feature-icon"><i class="fas fa-hand-holding-heart"></i></div>
+        <h3 data-i18n="service6_card1_title">Emergency Aid</h3>
+        <p data-i18n="service6_card1_desc">Delivering food, clean water, clothing, and medicines to affected families during crisis situations.</p>
       </div>
 
       <div class="feature-box fade-in-up delay-2">
-        <div class="feature-icon"><i class="fas fa-balance-scale"></i></div>
-        <h3 data-i18n="service6_card2_title">Compliance Documentation</h3>
-        <p data-i18n="service6_card2_desc">Ensure all your property and business documents meet regulatory standards with accurate and timely filing.</p>
+        <div class="feature-icon"><i class="fas fa-clinic-medical"></i></div>
+        <h3 data-i18n="service6_card2_title">Medical & Health Support</h3>
+        <p data-i18n="service6_card2_desc">Providing first aid, medical camps, and essential healthcare services to disaster survivors.</p>
       </div>
 
       <div class="feature-box fade-in-up delay-3">
-        <div class="feature-icon"><i class="fas fa-folder-open"></i></div>
-        <h3 data-i18n="service6_card3_title">Property & Legal Records</h3>
-        <p data-i18n="service6_card3_desc">Organize and manage essential records such as deeds, agreements, and compliance reports for smooth transactions and audits.</p>
+        <div class="feature-icon"><i class="fas fa-home"></i></div>
+        <h3 data-i18n="service6_card3_title">Shelter & Rehabilitation</h3>
+        <p data-i18n="service6_card3_desc">Building temporary shelters and supporting long-term recovery for displaced families.</p>
       </div>
     </div>
   </div>
@@ -209,34 +220,32 @@
 <section class="development-process">
   <div class="development-process-container">
     <div class="process-header fade-in-up">
-      <h2 data-i18n="service6_section4_title">Reliable Legal & Documentation Support</h2>
+      <h2 data-i18n="service6_section4_title">Our Disaster Relief Process</h2>
       <p data-i18n="service6_section4_desc">
-        We simplify your legal processes and ensure documentation accuracy for smooth business 
-        and property transactions. From drafting contracts to managing compliance records, 
-        our services provide clarity, protection, and peace of mind.
+        From emergency response to rebuilding communities, we follow a structured approach 
+        to ensure timely assistance and lasting recovery for those impacted by disasters.
       </p>
     </div>
 
     <div class="process-row">
       <div class="process-image slide-in-right">
-        <img src="https://images.pexels.com/photos/4682081/pexels-photo-4682081.jpeg" alt="Legal and Documentation Support">
+        <img src="https://i.pinimg.com/736x/a0/a9/f0/a0a9f090440ab699553c7cac52731ad4.jpg" alt="Disaster Response">
       </div>
 
       <div class="process-content fade-in-up delay-1">
         <p class="process-intro" data-i18n="service6_section4_intro">
-          Our legal and documentation support services ensure all your agreements, compliance 
-          filings, and property records are managed efficiently. With expert assistance, you can 
-          avoid legal risks, stay compliant, and streamline documentation for both individuals 
-          and businesses.
+          Our Disaster Relief programs combine speed, compassion, and long-term planning. 
+          We ensure immediate survival support, followed by sustainable rehabilitation for 
+          affected families and communities.
         </p>
 
         <div class="process-steps">
-          <div class="step"><span class="step-number">01</span><p data-i18n="service6_step1">Understanding Legal Requirements</p></div>
-          <div class="step"><span class="step-number">02</span><p data-i18n="service6_step2">Drafting & Reviewing Contracts</p></div>
-          <div class="step"><span class="step-number">03</span><p data-i18n="service6_step3">Verification of Property Documents</p></div>
-          <div class="step"><span class="step-number">04</span><p data-i18n="service6_step4">Compliance Documentation & Filing</p></div>
-          <div class="step"><span class="step-number">05</span><p data-i18n="service6_step5">Organizing Legal & Financial Records</p></div>
-          <div class="step"><span class="step-number">06</span><p data-i18n="service6_step6">Advisory & Ongoing Documentation Support</p></div>
+          <div class="step"><span class="step-number">01</span><p data-i18n="service6_step1">Rapid Emergency Response</p></div>
+          <div class="step"><span class="step-number">02</span><p data-i18n="service6_step2">Food, Water & Medical Relief</p></div>
+          <div class="step"><span class="step-number">03</span><p data-i18n="service6_step3">Temporary Shelter & Safety</p></div>
+          <div class="step"><span class="step-number">04</span><p data-i18n="service6_step4">Psychological & Emotional Support</p></div>
+          <div class="step"><span class="step-number">05</span><p data-i18n="service6_step5">Community Rehabilitation</p></div>
+          <div class="step"><span class="step-number">06</span><p data-i18n="service6_step6">Preparedness for Future Disasters</p></div>
         </div>
       </div>
     </div>
@@ -247,30 +256,29 @@
 <section class="service-showcase">
   <div class="service-container">
     <div class="service-header animate-fade-up">
-      <h2 data-i18n="service6_section5_title">Legal & Documentation Support</h2>
+      <h2 data-i18n="service6_section5_title">Our Relief Services</h2>
       <p data-i18n="service6_section5_desc">
-        Simplify your legal processes with our professional documentation support services. 
-        From drafting and reviewing contracts to verifying property papers and compliance records, 
-        we ensure accuracy, transparency, and peace of mind in every transaction.
+        We provide comprehensive disaster relief services that address both immediate needs 
+        and long-term recovery, ensuring communities can rebuild and thrive again.
       </p>
     </div>
 
     <div class="service-grid">
       <div class="service-card animate-slide-up delay-1">
-        <h3 data-i18n="service6_service1_title">Contract Drafting & Review</h3>
-        <p data-i18n="service6_service1_desc">Prepare and review business and property agreements with legal precision to protect your interests.</p>
+        <h3 data-i18n="service6_service1_title">Emergency Food & Water</h3>
+        <p data-i18n="service6_service1_desc">Quick distribution of meals and safe drinking water to disaster-affected families.</p>
       </div>
       <div class="service-card animate-slide-up delay-2">
-        <h3 data-i18n="service6_service2_title">Property Documentation</h3>
-        <p data-i18n="service6_service2_desc">Verification and validation of property-related documents to ensure clear titles and secure transactions.</p>
+        <h3 data-i18n="service6_service2_title">Medical Relief</h3>
+        <p data-i18n="service6_service2_desc">Mobile medical camps and first aid services for injured and vulnerable individuals.</p>
       </div>
       <div class="service-card animate-slide-up delay-3">
-        <h3 data-i18n="service6_service3_title">Compliance & Record Management</h3>
-        <p data-i18n="service6_service3_desc">Maintain accurate compliance documents, licenses, and records for hassle-free audits and approvals.</p>
+        <h3 data-i18n="service6_service3_title">Shelter & Rehabilitation</h3>
+        <p data-i18n="service6_service3_desc">Temporary shelters, clothing, and assistance to help families rebuild homes.</p>
       </div>
       <div class="service-card animate-slide-up delay-4">
-        <h3 data-i18n="service6_service4_title">Legal Advisory Support</h3>
-        <p data-i18n="service6_service4_desc">Expert guidance on documentation, regulatory filings, and legal paperwork for businesses and individuals.</p>
+        <h3 data-i18n="service6_service4_title">Disaster Preparedness</h3>
+        <p data-i18n="service6_service4_desc">Training communities in resilience, safety drills, and risk management for the future.</p>
       </div>
     </div>
   </div>
@@ -280,22 +288,22 @@
 <section class="bookkeeping-services">
   <div class="services-container">
     <div class="services-image animate-slide-in">
-      <img src="https://images.pexels.com/photos/17246020/pexels-photo-17246020.jpeg" alt="Legal & Documentation Support">
+      <img src="https://i.pinimg.com/1200x/be/fe/d1/befed1c561d4033df3ffb34b55e11050.jpg" alt="Disaster Relief">
     </div>
     <div class="services-content">
-      <h2 class="animate-fade-up" data-i18n="service6_section6_title">Professional Legal & Documentation Support</h2>
+      <h2 class="animate-fade-up" data-i18n="service6_section6_title">Rebuilding Lives After Disasters</h2>
       <p class="animate-fade-up delay-1" style="text-align: justify;" data-i18n="service6_section6_desc">
-        Our legal and documentation support services simplify complex paperwork and ensure accuracy in every transaction. 
-        From drafting and verifying contracts to handling compliance records, we provide reliable documentation solutions 
-        that protect your interests and give you peace of mind.
+        Beyond emergency response, we focus on rehabilitation and rebuilding. From restoring livelihoods 
+        to supporting education and health, our goal is to ensure affected communities recover stronger 
+        and are better prepared for the future.
       </p>
       <div class="service-card animate-fade-up delay-2">
-        <h3 data-i18n="service6_section6_card1_title">Contract Drafting & Review</h3>
-        <p data-i18n="service6_section6_card1_desc">We prepare and review agreements with precision to safeguard your business and property interests.</p>
+        <h3 data-i18n="service6_section6_card1_title">Long-Term Rehabilitation</h3>
+        <p data-i18n="service6_section6_card1_desc">Helping families restore homes, schools, and livelihoods for sustainable recovery.</p>
       </div>
       <div class="service-card animate-fade-up delay-3">
-        <h3 data-i18n="service6_section6_card2_title">Property & Compliance Documentation</h3>
-        <p data-i18n="service6_section6_card2_desc">Thorough verification of property papers and maintenance of compliance documents for secure and transparent dealings.</p>
+        <h3 data-i18n="service6_section6_card2_title">Community Preparedness</h3>
+        <p data-i18n="service6_section6_card2_desc">Training communities in disaster awareness and safety practices for future resilience.</p>
       </div>
     </div>
   </div>
@@ -305,287 +313,286 @@
 <section class="contact-banner section-padding">
   <div class="container">
     <div class="contact-banner-content">
-      <h2 data-i18n="service6_section7_title">Reliable Legal & Documentation Support</h2>
-      <p data-i18n="service6_section7_desc">Let’s simplify your contracts, agreements, and compliance documents with expert legal and documentation assistance.</p>
-      <a href="contact.html" class="btn btn-primary" data-i18n="service6_section7_btn">Get Legal Support</a>
+      <h2 data-i18n="service6_section7_title">Join Us in Disaster Relief</h2>
+      <p data-i18n="service6_section7_desc">Together, we can bring hope, aid, and recovery to families impacted by disasters. Your support can save lives and rebuild communities.</p>
+      <a href="contact.html" class="btn btn-primary" data-i18n="service6_section7_btn">Support Now</a>
     </div>
   </div>
 </section>
-
 
 
 <script>
 // Translation dictionary
 const translations = {
   en: {
-   "home": "Home",
+    "home": "Home",
     "home1": "Home 1",
     "home2": "Home 2",
     "about": "About",
     "services": "Services",
     "allServices": "All Services",
-    "service_1": "Property Buying Assistance",
-    "service_2": "Property Selling",
-    "service_3": "Rental Services",
-    "service_4": "Property Management",
-    "service_5": "Real Estate Investment",
-    "service_6": "Legal & Documentation Support",
+    "service_1": "Service_1",
+    "service_2": "Service_2",
+    "service_3": "Service_3",
+    "service_4": "Service_4",
+    "service_5": "Service_5",
+    "service_6": "Service_6",
     "blog": "Blog",
     "allPosts": "All Posts",
-    "blog_1": "Smart Property Investments",
-    "blog_2": "Effective Property Management",
-    "blog_3": "Real Estate Market Trends",
+    "blog_1": "Blog_1",
+    "blog_2": "Blog_2",
+    "blog_3": "Blog_3",
     "contact": "Contact",
     "logout": "Logout",
 
-    "footer_about": "Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.",
-    "footer_quickLinks": "Quick Links",
+     "footer_about": "Dedicated charity organization, empowering communities through education, healthcare, food support, and sustainable initiatives to create lasting impact and hope.",
+    "footer_quicklinks": "Quick Links",
     "footer_home": "Home",
     "footer_home2": "Home 2",
-    "footer_aboutUs": "About Us",
+    "footer_aboutus": "About Us",
     "footer_services": "Services",
     "footer_blog": "Blog",
     "footer_contact": "Contact",
-    "footer_servicesTitle": "Services",
-    "footer_service1": "Property Buying Assistance",
-    "footer_service2": "Property Selling",
-    "footer_service3": "Rental Services",
-    "footer_service4": "Property Management",
-    "footer_service5": "Real Estate Investment",
-    "footer_service6": "Legal & Documentation Support",
-    "footer_contactInfo": "Contact Info",
-    "footer_email": "contact@stackly.ai",
+    "footer_services_title": "Services",
+    "footer_service1": "Food Distribution",
+    "footer_service2": "Education Support",
+    "footer_service3": "Healthcare Camps",
+    "footer_service4": "Women Empowerment",
+    "footer_service5": "Child Welfare",
+    "footer_service6": "Disaster Relief",
+    "footer_contactinfo": "Contact Info",
+    "footer_email": "contact@stackly.in",
     "footer_phone": "+1 (555) 123-4567",
-    "footer_address": "123 AI Innovation Drive",
-    "footer_bottom": "© 2025 Stackly. All rights reserved.",
-
-    "service6_title": "Legal & Documentation Support",
-    "service6_heading": "Legal & Documentation Support",
-    "service6_intro": "Ensure your business and property transactions are legally secure with our comprehensive legal and documentation support services. We help you prepare, review, and manage agreements, contracts, and compliance documents efficiently and accurately.",
-    "service6_point1": "Contract drafting and review",
-    "service6_point2": "Property and business documentation",
-    "service6_point3": "Legal compliance checks",
-    "service6_point4": "Regulatory filing support",
-    "service6_point5": "Tailored legal solutions for your needs",
-    "service6_btn1": "Explore Services",
-    "service6_btn2": "Get Support",
-    "service6_section3_title": "Legal & Documentation Support",
-    "service6_section3_desc": "Simplify your legal processes and ensure accuracy with our professional documentation support. From drafting contracts to verifying compliance documents, we provide reliable solutions to safeguard your business and property transactions.",
-    "service6_card1_title": "Contract Drafting & Review",
-    "service6_card1_desc": "Prepare and review agreements, leases, and contracts with expert guidance to protect your interests.",
-    "service6_card2_title": "Compliance Documentation",
-    "service6_card2_desc": "Ensure all your property and business documents meet regulatory standards with accurate and timely filing.",
-    "service6_card3_title": "Property & Legal Records",
-    "service6_card3_desc": "Organize and manage essential records such as deeds, agreements, and compliance reports for smooth transactions and audits.",
-    "service6_section4_title": "Reliable Legal & Documentation Support",
-    "service6_section4_desc": "We simplify your legal processes and ensure documentation accuracy for smooth business and property transactions. From drafting contracts to managing compliance records, our services provide clarity, protection, and peace of mind.",
-    "service6_section4_intro": "Our legal and documentation support services ensure all your agreements, compliance filings, and property records are managed efficiently. With expert assistance, you can avoid legal risks, stay compliant, and streamline documentation for both individuals and businesses.",
-    "service6_step1": "Understanding Legal Requirements",
-    "service6_step2": "Drafting & Reviewing Contracts",
-    "service6_step3": "Verification of Property Documents",
-    "service6_step4": "Compliance Documentation & Filing",
-    "service6_step5": "Organizing Legal & Financial Records",
-    "service6_step6": "Advisory & Ongoing Documentation Support",
-    "service6_section5_title": "Legal & Documentation Support",
-    "service6_section5_desc": "Simplify your legal processes with our professional documentation support services. From drafting and reviewing contracts to verifying property papers and compliance records, we ensure accuracy, transparency, and peace of mind in every transaction.",
-    "service6_service1_title": "Contract Drafting & Review",
-    "service6_service1_desc": "Prepare and review business and property agreements with legal precision to protect your interests.",
-    "service6_service2_title": "Property Documentation",
-    "service6_service2_desc": "Verification and validation of property-related documents to ensure clear titles and secure transactions.",
-    "service6_service3_title": "Compliance & Record Management",
-    "service6_service3_desc": "Maintain accurate compliance documents, licenses, and records for hassle-free audits and approvals.",
-    "service6_service4_title": "Legal Advisory Support",
-    "service6_service4_desc": "Expert guidance on documentation, regulatory filings, and legal paperwork for businesses and individuals.",
-    "service6_section6_title": "Professional Legal & Documentation Support",
-    "service6_section6_desc": "Our legal and documentation support services simplify complex paperwork and ensure accuracy in every transaction. From drafting and verifying contracts to handling compliance records, we provide reliable documentation solutions that protect your interests and give you peace of mind.",
-    "service6_section6_card1_title": "Contract Drafting & Review",
-    "service6_section6_card1_desc": "We prepare and review agreements with precision to safeguard your business and property interests.",
-    "service6_section6_card2_title": "Property & Compliance Documentation",
-    "service6_section6_card2_desc": "Thorough verification of property papers and maintenance of compliance documents for secure and transparent dealings.",
-    "service6_section7_title": "Reliable Legal & Documentation Support",
-    "service6_section7_desc": "Let’s simplify your contracts, agreements, and compliance documents with expert legal and documentation assistance.",
-    "service6_section7_btn": "Get Legal Support"
-       
+    "footer_location": "123 Hyderabad, India",
+    "footer_rights": "© 2025 Stackly. All rights reserved.",
+  
+    "service6_title": "Disaster Relief",
+    "service6_heading": "Emergency Relief & Support",
+    "service6_intro": "In times of natural disasters, every second counts. Our Disaster Relief programs provide rapid response, food, medical aid, shelter, and long-term recovery support to help affected communities rebuild their lives with dignity and hope.",
+    "service6_point1": "Emergency food & clean water distribution",
+    "service6_point2": "Medical aid & first responder support",
+    "service6_point3": "Temporary shelter & clothing",
+    "service6_point4": "Community recovery & rebuilding",
+    "service6_point5": "Preparedness & awareness programs",
+    "service6_btn1": "Explore Programs",
+    "service6_btn2": "Get Involved",
+    "service6_section3_title": "How We Respond to Disasters",
+    "service6_section3_desc": "Our teams act quickly to provide life-saving relief and long-term rehabilitation. From food distribution to rebuilding homes, we stand with communities every step of the recovery journey.",
+    "service6_card1_title": "Emergency Aid",
+    "service6_card1_desc": "Delivering food, clean water, clothing, and medicines to affected families during crisis situations.",
+    "service6_card2_title": "Medical & Health Support",
+    "service6_card2_desc": "Providing first aid, medical camps, and essential healthcare services to disaster survivors.",
+    "service6_card3_title": "Shelter & Rehabilitation",
+    "service6_card3_desc": "Building temporary shelters and supporting long-term recovery for displaced families.",
+    "service6_section4_title": "Our Disaster Relief Process",
+    "service6_section4_desc": "From emergency response to rebuilding communities, we follow a structured approach to ensure timely assistance and lasting recovery for those impacted by disasters.",
+    "service6_section4_intro": "Our Disaster Relief programs combine speed, compassion, and long-term planning. We ensure immediate survival support, followed by sustainable rehabilitation for affected families and communities.",
+    "service6_step1": "Rapid Emergency Response",
+    "service6_step2": "Food, Water & Medical Relief",
+    "service6_step3": "Temporary Shelter & Safety",
+    "service6_step4": "Psychological & Emotional Support",
+    "service6_step5": "Community Rehabilitation",
+    "service6_step6": "Preparedness for Future Disasters",
+    "service6_section5_title": "Our Relief Services",
+    "service6_section5_desc": "We provide comprehensive disaster relief services that address both immediate needs and long-term recovery, ensuring communities can rebuild and thrive again.",
+    "service6_service1_title": "Emergency Food & Water",
+    "service6_service1_desc": "Quick distribution of meals and safe drinking water to disaster-affected families.",
+    "service6_service2_title": "Medical Relief",
+    "service6_service2_desc": "Mobile medical camps and first aid services for injured and vulnerable individuals.",
+    "service6_service3_title": "Shelter & Rehabilitation",
+    "service6_service3_desc": "Temporary shelters, clothing, and assistance to help families rebuild homes.",
+    "service6_service4_title": "Disaster Preparedness",
+    "service6_service4_desc": "Training communities in resilience, safety drills, and risk management for the future.",
+    "service6_section6_title": "Rebuilding Lives After Disasters",
+    "service6_section6_desc": "Beyond emergency response, we focus on rehabilitation and rebuilding. From restoring livelihoods to supporting education and health, our goal is to ensure affected communities recover stronger and are better prepared for the future.",
+    "service6_section6_card1_title": "Long-Term Rehabilitation",
+    "service6_section6_card1_desc": "Helping families restore homes, schools, and livelihoods for sustainable recovery.",
+    "service6_section6_card2_title": "Community Preparedness",
+    "service6_section6_card2_desc": "Training communities in disaster awareness and safety practices for future resilience.",
+    "service6_section7_title": "Join Us in Disaster Relief",
+    "service6_section7_desc": "Together, we can bring hope, aid, and recovery to families impacted by disasters. Your support can save lives and rebuild communities.",
+    "service6_section7_btn": "Support Now", 
   },
   ar: {
-   "home": "الرئيسية",
-    "home1": "الصفحة الرئيسية 1",
-    "home2": "الصفحة الرئيسية 2",
-    "about": "من نحن",
+     "home": "الرئيسية",
+    "home1": "الصفحة 1",
+    "home2": "الصفحة 2",
+    "about": "معلومات عنا",
     "services": "الخدمات",
     "allServices": "جميع الخدمات",
-    "service_1": "مساعدة في شراء العقارات",
-    "service_2": "بيع العقارات",
-    "service_3": "خدمات الإيجار",
-    "service_4": "إدارة العقارات",
-    "service_5": "الاستثمار العقاري",
-    "service_6": "الدعم القانوني والتوثيق",
+    "service_1": "الخدمة_1",
+    "service_2": "الخدمة_2",
+    "service_3": "الخدمة_3",
+    "service_4": "الخدمة_4",
+    "service_5": "الخدمة_5",
+    "service_6": "الخدمة_6",
     "blog": "المدونة",
     "allPosts": "جميع المقالات",
-    "blog_1": "الاستثمارات العقارية الذكية",
-    "blog_2": "إدارة العقارات الفعالة",
-    "blog_3": "اتجاهات سوق العقارات",
+    "blog_1": "مدونة_1",
+    "blog_2": "مدونة_2",
+    "blog_3": "مدونة_3",
     "contact": "اتصل بنا",
-    "logout": "تسجيل خروج",
+    "logout": "تسجيل الخروج",
 
-    "footer_about": "مزود رائد لحلول الذكاء الاصطناعي، يساعد الشركات على التحول من خلال التكنولوجيا الذكية وأنظمة الأتمتة المبتكرة.",
-    "footer_quickLinks": "روابط سريعة",
+    "footer_about": "منظمة خيرية مكرسة، تمكّن المجتمعات من خلال التعليم والرعاية الصحية ودعم الغذاء والمبادرات المستدامة لخلق تأثير دائم وأمل.",
+    "footer_quicklinks": "روابط سريعة",
     "footer_home": "الرئيسية",
     "footer_home2": "الصفحة الرئيسية 2",
-    "footer_aboutUs": "من نحن",
+    "footer_aboutus": "معلومات عنا",
     "footer_services": "الخدمات",
-    "footer_blog": "المدونة",
+    "footer_blog": "مدونة",
     "footer_contact": "اتصل بنا",
-    "footer_servicesTitle": "الخدمات",
-    "footer_service1": "مساعدة في شراء العقارات",
-    "footer_service2": "بيع العقارات",
-    "footer_service3": "خدمات الإيجار",
-    "footer_service4": "إدارة الممتلكات",
-    "footer_service5": "الاستثمار العقاري",
-    "footer_service6": "الدعم القانوني والتوثيق",
-    "footer_contactInfo": "معلومات الاتصال",
-    "footer_email": "contact@stackly.ai",
+    "footer_services_title": "الخدمات",
+    "footer_service1": "توزيع الغذاء",
+    "footer_service2": "دعم التعليم",
+    "footer_service3": "المخيمات الطبية",
+    "footer_service4": "تمكين المرأة",
+    "footer_service5": "رعاية الأطفال",
+    "footer_service6": "الإغاثة في الكوارث",
+    "footer_contactinfo": "معلومات الاتصال",
+    "footer_email": "contact@stackly.in",
     "footer_phone": "+1 (555) 123-4567",
-    "footer_address": "123 طريق ابتكار الذكاء الاصطناعي",
-    "footer_bottom": "© 2025 Stackly. جميع الحقوق محفوظة.",
-
-     "service6_title": "الدعم القانوني والتوثيقي",
-    "service6_heading": "الدعم القانوني والتوثيقي",
-    "service6_intro": "ضمن أن معاملات عملك وعقاراتك آمنة قانونياً من خلال خدماتنا الشاملة للدعم القانوني والتوثيقي. نحن نساعدك في إعداد ومراجعة وإدارة الاتفاقيات والعقود والمستندات التنظيمية بكفاءة ودقة.",
-    "service6_point1": "صياغة العقود ومراجعتها",
-    "service6_point2": "توثيق العقارات والأعمال",
-    "service6_point3": "فحوصات الامتثال القانوني",
-    "service6_point4": "دعم تقديم الملفات التنظيمية",
-    "service6_point5": "حلول قانونية مخصصة لاحتياجاتك",
-    "service6_btn1": "استكشاف الخدمات",
-    "service6_btn2": "احصل على الدعم",
-    "service6_section3_title": "الدعم القانوني والتوثيقي",
-    "service6_section3_desc": "بسط عملياتك القانونية وتأكد من الدقة من خلال دعمنا المهني للتوثيق. من صياغة العقود إلى التحقق من المستندات التنظيمية، نقدم حلولاً موثوقة لحماية معاملاتك التجارية والعقارية.",
-    "service6_card1_title": "صياغة العقود ومراجعتها",
-    "service6_card1_desc": "إعداد ومراجعة الاتفاقيات والإيجارات والعقود بإرشاد الخبراء لحماية مصالحك.",
-    "service6_card2_title": "توثيق الامتثال",
-    "service6_card2_desc": "تأكد من أن جميع مستنداتك العقارية والتجارية تلبي المعايير التنظيمية من خلال تقديم دقيق وفي الوقت المناسب.",
-    "service6_card3_title": "السجلات العقارية والقانونية",
-    "service6_card3_desc": "تنظيم وإدارة السجلات الأساسية مثل الصكوك والاتفاقيات وتقارير الامتثال لعمليات تدقيق ومعاملات سلسة.",
-    "service6_section4_title": "دعم قانوني وتوثيقي موثوق",
-    "service6_section4_desc": "نُبسط عملياتك القانونية ونضمن دقة التوثيق لعمليات تجارية وعقارية سلسة. من صياغة العقود إلى إدارة سجلات الامتثال، توفر خدماتنا وضوحاً وحماية وراحة بال.",
-    "service6_section4_intro": "تضمن خدماتنا القانونية والتوثيقية إدارة جميع اتفاقياتك وملفات الامتثال وسجلات الملكية بكفاءة. من خلال المساعدة الخبيرة، يمكنك تجنب المخاطر القانونية، والبقاء متوافقاً، وتبسيط التوثيق للأفراد والشركات.",
-    "service6_step1": "فهم المتطلبات القانونية",
-    "service6_step2": "صياغة العقود ومراجعتها",
-    "service6_step3": "التحقق من مستندات الملكية",
-    "service6_step4": "توثيق الامتثال وتقديم الملفات",
-    "service6_step5": "تنظيم السجلات القانونية والمالية",
-    "service6_step6": "الاستشارات والدعم التوثيقي المستمر",
-    "service6_section5_title": "الدعم القانوني والتوثيقي",
-    "service6_section5_desc": "بسط عملياتك القانونية مع خدماتنا المهنية للتوثيق. من صياغة ومراجعة العقود إلى التحقق من أوراق الملكية وسجلات الامتثال، نضمن الدقة والشفافية وراحة البال في كل معاملة.",
-    "service6_service1_title": "صياغة العقود ومراجعتها",
-    "service6_service1_desc": "إعداد ومراجعة اتفاقيات الأعمال والعقارات بدقة قانونية لحماية مصالحك.",
-    "service6_service2_title": "توثيق الملكية",
-    "service6_service2_desc": "التحقق من مستندات الملكية لضمان العناوين الواضحة والمعاملات الآمنة.",
-    "service6_service3_title": "إدارة الامتثال والسجلات",
-    "service6_service3_desc": "الحفاظ على دقة المستندات التنظيمية والتراخيص والسجلات لضمان عمليات تدقيق وموافقات خالية من المتاعب.",
-    "service6_service4_title": "الدعم القانوني الاستشاري",
-    "service6_service4_desc": "توجيهات خبراء بشأن التوثيق وتقديم الملفات التنظيمية والأوراق القانونية للأعمال والأفراد.",
-    "service6_section6_title": "دعم قانوني وتوثيقي احترافي",
-    "service6_section6_desc": "تُبسط خدماتنا القانونية والتوثيقية الأوراق المعقدة وتضمن الدقة في كل معاملة. من صياغة العقود والتحقق منها إلى التعامل مع سجلات الامتثال، نقدم حلولاً موثوقة للتوثيق تحمي مصالحك وتمنحك راحة البال.",
-    "service6_section6_card1_title": "صياغة العقود ومراجعتها",
-    "service6_section6_card1_desc": "نُعد ونراجع الاتفاقيات بدقة لحماية مصالح عملك وعقارك.",
-    "service6_section6_card2_title": "توثيق الملكية والامتثال",
-    "service6_section6_card2_desc": "التحقق الدقيق من أوراق الملكية والحفاظ على مستندات الامتثال لضمان معاملات آمنة وشفافة.",
-    "service6_section7_title": "دعم قانوني وتوثيقي موثوق",
-    "service6_section7_desc": "لنُبسط عقودك واتفاقياتك ومستندات الامتثال بمساعدة خبراء في الشؤون القانونية والتوثيقية.",
-    "service6_section7_btn": "احصل على الدعم القانوني",
+    "footer_location": "123 حيدر أباد، الهند",
+    "footer_rights": "© 2025 Stackly. جميع الحقوق محفوظة.",
+  
+    "service6_title": "الإغاثة في حالات الكوارث",
+    "service6_heading": "الإغاثة الطارئة والدعم",
+    "service6_intro": "في أوقات الكوارث الطبيعية، كل ثانية لها أهميتها. برامج الإغاثة لدينا توفر استجابة سريعة، طعام، مساعدات طبية، مأوى، ودعم للتعافي طويل الأمد لمساعدة المجتمعات المتضررة على إعادة بناء حياتهم بكرامة وأمل.",
+    "service6_point1": "توزيع الطعام الطارئ والمياه النظيفة",
+    "service6_point2": "المساعدات الطبية ودعم المستجيبين الأوائل",
+    "service6_point3": "مأوى مؤقت وملابس",
+    "service6_point4": "إعادة بناء المجتمعات والتعافي",
+    "service6_point5": "برامج التوعية والاستعداد",
+    "service6_btn1": "استكشف البرامج",
+    "service6_btn2": "شارك معنا",
+    "service6_section3_title": "كيف نستجيب للكوارث",
+    "service6_section3_desc": "فرقنا تتحرك بسرعة لتقديم الإغاثة المنقذة للحياة وإعادة التأهيل على المدى الطويل. من توزيع الطعام إلى إعادة بناء المنازل، نحن نقف مع المجتمعات في كل خطوة من رحلة التعافي.",
+    "service6_card1_title": "المساعدات الطارئة",
+    "service6_card1_desc": "تقديم الطعام، المياه النظيفة، الملابس، والأدوية للأسر المتضررة خلال الأزمات.",
+    "service6_card2_title": "الدعم الطبي والصحي",
+    "service6_card2_desc": "توفير الإسعافات الأولية، المخيمات الطبية، والخدمات الصحية الأساسية للناجين من الكوارث.",
+    "service6_card3_title": "المأوى وإعادة التأهيل",
+    "service6_card3_desc": "بناء ملاجئ مؤقتة ودعم التعافي طويل الأمد للأسر النازحة.",
+    "service6_section4_title": "عملية الإغاثة في حالات الكوارث",
+    "service6_section4_desc": "من الاستجابة الطارئة إلى إعادة بناء المجتمعات، نتبع نهجًا منظمًا لضمان تقديم المساعدة في الوقت المناسب وتحقيق التعافي المستدام للمتضررين من الكوارث.",
+    "service6_section4_intro": "برامج الإغاثة لدينا تجمع بين السرعة، التعاطف، والتخطيط طويل الأمد. نحن نضمن الدعم الفوري للبقاء، متبوعًا بإعادة التأهيل المستدام للأسر والمجتمعات المتضررة.",
+    "service6_step1": "استجابة طارئة سريعة",
+    "service6_step2": "توزيع الطعام والمياه والمساعدات الطبية",
+    "service6_step3": "مأوى مؤقت وأمان",
+    "service6_step4": "الدعم النفسي والعاطفي",
+    "service6_step5": "إعادة تأهيل المجتمع",
+    "service6_step6": "الاستعداد للكوارث المستقبلية",
+    "service6_section5_title": "خدمات الإغاثة لدينا",
+    "service6_section5_desc": "نحن نقدم خدمات إغاثة شاملة في حالات الكوارث تعالج الاحتياجات الفورية والتعافي على المدى الطويل، لضمان قدرة المجتمعات على إعادة البناء والازدهار من جديد.",
+    "service6_service1_title": "الطعام والمياه الطارئة",
+    "service6_service1_desc": "التوزيع السريع للوجبات ومياه الشرب الآمنة للأسر المتضررة من الكوارث.",
+    "service6_service2_title": "الإغاثة الطبية",
+    "service6_service2_desc": "المخيمات الطبية المتنقلة وخدمات الإسعافات الأولية للمصابين والفئات الضعيفة.",
+    "service6_service3_title": "المأوى وإعادة التأهيل",
+    "service6_service3_desc": "ملاجئ مؤقتة، ملابس، ومساعدة لدعم الأسر في إعادة بناء منازلهم.",
+    "service6_service4_title": "الاستعداد للكوارث",
+    "service6_service4_desc": "تدريب المجتمعات على الصمود، التدريبات الأمنية، وإدارة المخاطر للمستقبل.",
+    "service6_section6_title": "إعادة بناء الحياة بعد الكوارث",
+    "service6_section6_desc": "ما بعد الاستجابة الطارئة، نركز على إعادة التأهيل وإعادة البناء. من استعادة سبل العيش إلى دعم التعليم والصحة، هدفنا هو ضمان تعافي المجتمعات المتضررة بشكل أقوى وأن تكون أكثر استعدادًا للمستقبل.",
+    "service6_section6_card1_title": "إعادة التأهيل طويل الأمد",
+    "service6_section6_card1_desc": "مساعدة الأسر في استعادة المنازل والمدارس وسبل العيش من أجل تعافٍ مستدام.",
+    "service6_section6_card2_title": "استعداد المجتمع",
+    "service6_section6_card2_desc": "تدريب المجتمعات على الوعي بالكوارث وممارسات السلامة من أجل مرونة مستقبلية.",
+    "service6_section7_title": "انضم إلينا في الإغاثة من الكوارث",
+    "service6_section7_desc": "معًا، يمكننا جلب الأمل والمساعدة والتعافي للأسر المتضررة من الكوارث. دعمك يمكن أن ينقذ الأرواح ويعيد بناء المجتمعات.",
+    "service6_section7_btn": "ادعم الآن",
 
      },
   he: {
- "home": "בית",
-    "home1": "דף הבית 1",
-    "home2": "דף הבית 2",
+    "home": "בית",
+    "home1": "דף 1",
+    "home2": "דף 2",
     "about": "אודות",
     "services": "שירותים",
     "allServices": "כל השירותים",
-    "service_1": "סיוע ברכישת נכסים",
-    "service_2": "מכירת נכסים",
-    "service_3": "שירותי השכרה",
-    "service_4": "ניהול נכסים",
-    "service_5": "השקעות נדל״ן",
-    "service_6": "תמיכה משפטית ותיעוד",
+    "service_1": "שירות_1",
+    "service_2": "שירות_2",
+    "service_3": "שירות_3",
+    "service_4": "שירות_4",
+    "service_5": "שירות_5",
+    "service_6": "שירות_6",
     "blog": "בלוג",
     "allPosts": "כל הפוסטים",
-    "blog_1": "השקעות נדל״ן חכמות",
-    "blog_2": "ניהול נכסים יעיל",
-    "blog_3": "מגמות שוק הנדל״ן",
+    "blog_1": "בלוג_1",
+    "blog_2": "בלוג_2",
+    "blog_3": "בלוג_3",
     "contact": "צור קשר",
     "logout": "התנתק",
 
-    "footer_about": "ספק מוביל של פתרונות בינה מלאכותית, מסייע לעסקים להשתנות באמצעות טכנולוגיה חכמה ומערכות אוטומציה חדשניות.",
-    "footer_quickLinks": "קישורים מהירים",
+    "footer_about": "ארגון צדקה מסור, המעצים קהילות באמצעות חינוך, בריאות, תמיכת מזון ויוזמות ברות קיימא ליצירת השפעה מתמשכת ותקווה.",
+    "footer_quicklinks": "קישורים מהירים",
     "footer_home": "בית",
     "footer_home2": "בית 2",
-    "footer_aboutUs": "אודותינו",
+    "footer_aboutus": "אודותינו",
     "footer_services": "שירותים",
     "footer_blog": "בלוג",
     "footer_contact": "צור קשר",
-    "footer_servicesTitle": "שירותים",
-    "footer_service1": "סיוע ברכישת נכסים",
-    "footer_service2": "מכירת נכסים",
-    "footer_service3": "שירותי השכרה",
-    "footer_service4": "ניהול נכסים",
-    "footer_service5": "השקעות נדל\"ן",
-    "footer_service6": "תמיכה משפטית ותיעוד",
-    "footer_contactInfo": "פרטי קשר",
-    "footer_email": "contact@stackly.ai",
+    "footer_services_title": "שירותים",
+    "footer_service1": "חלוקת מזון",
+    "footer_service2": "תמיכה בחינוך",
+    "footer_service3": "מחנות בריאות",
+    "footer_service4": "העצמת נשים",
+    "footer_service5": "רווחת ילדים",
+    "footer_service6": "סיוע באסונות",
+    "footer_contactinfo": "פרטי קשר",
+    "footer_email": "contact@stackly.in",
     "footer_phone": "+1 (555) 123-4567",
-    "footer_address": "123 רחוב חדשנות בינה מלאכותית",
-    "footer_bottom": "© 2025 Stackly. כל הזכויות שמורות.",
- 
-     "service6_title": "תמיכה משפטית ותיעוד",
-    "service6_heading": "תמיכה משפטית ותיעוד",
-    "service6_intro": "ודא שהעסק והעסקאות שלך בטוחים מבחינה משפטית בעזרת שירותי התמיכה המשפטית והתיעוד המקיפים שלנו. אנו עוזרים לך להכין, לבדוק ולנהל הסכמים, חוזים ומסמכי תאימות ביעילות ובדיוק.",
-    "service6_point1": "ניסוח ובדיקת חוזים",
-    "service6_point2": "תיעוד נדל\"ן ועסקים",
-    "service6_point3": "בדיקות תאימות משפטיות",
-    "service6_point4": "תמיכה בהגשת מסמכים רגולטוריים",
-    "service6_point5": "פתרונות משפטיים מותאמים אישית",
-    "service6_btn1": "גלה שירותים",
-    "service6_btn2": "קבל תמיכה",
-    "service6_section3_title": "תמיכה משפטית ותיעוד",
-    "service6_section3_desc": "פשט את התהליכים המשפטיים שלך והבטח דיוק בעזרת שירותי התיעוד המקצועיים שלנו. מניסוח חוזים ועד אימות מסמכי תאימות, אנו מספקים פתרונות אמינים לשמירה על העסקאות העסקיות והנדל\"ניות שלך.",
-    "service6_card1_title": "ניסוח ובדיקת חוזים",
-    "service6_card1_desc": "הכנה ובדיקה של הסכמים, שכירות וחוזים בליווי מומחים כדי להגן על האינטרסים שלך.",
-    "service6_card2_title": "תיעוד תאימות",
-    "service6_card2_desc": "ודא שכל המסמכים העסקיים והנדל\"ניים שלך עומדים בסטנדרטים הרגולטוריים עם הגשה מדויקת ובזמן.",
-    "service6_card3_title": "רשומות משפטיות ונדל\"ן",
-    "service6_card3_desc": "ארגון וניהול רשומות חיוניות כגון שטרות, הסכמים ודוחות תאימות לצורך עסקאות וביקורות חלקות.",
-    "service6_section4_title": "תמיכה משפטית ותיעוד אמינה",
-    "service6_section4_desc": "אנחנו מפשטים את התהליכים המשפטיים שלך ומבטיחים דיוק תיעוד לעסקאות עסקיות ונדל\"ניות חלקות. מניסוח חוזים ועד ניהול רשומות תאימות, השירותים שלנו מספקים בהירות, הגנה ושקט נפשי.",
-    "service6_section4_intro": "שירותי התמיכה המשפטית והתיעוד שלנו מבטיחים שכל ההסכמים שלך, הגשות התאימות ורשומות הנדל\"ן ינוהלו ביעילות. בעזרת סיוע מומחה, תוכל להימנע מסיכונים משפטיים, להישאר תואם ולייעל את התיעוד הן עבור יחידים והן עבור עסקים.",
-    "service6_step1": "הבנת הדרישות המשפטיות",
-    "service6_step2": "ניסוח ובדיקת חוזים",
-    "service6_step3": "אימות מסמכי נדל\"ן",
-    "service6_step4": "תיעוד תאימות והגשה",
-    "service6_step5": "ארגון רשומות משפטיות וכלכליות",
-    "service6_step6": "ייעוץ ותמיכה מתמשכת בתיעוד",
-    "service6_section5_title": "תמיכה משפטית ותיעוד",
-    "service6_section5_desc": "פשט את התהליכים המשפטיים שלך בעזרת שירותי התיעוד המקצועיים שלנו. מניסוח ובדיקת חוזים ועד אימות מסמכי נכסים ורישומי תאימות, אנו מבטיחים דיוק, שקיפות ושקט נפשי בכל עסקה.",
-    "service6_service1_title": "ניסוח ובדיקת חוזים",
-    "service6_service1_desc": "הכנה ובדיקה של הסכמים עסקיים ונדל\"ניים בדיוק משפטי כדי להגן על האינטרסים שלך.",
-    "service6_service2_title": "תיעוד נכסים",
-    "service6_service2_desc": "אימות ואישור של מסמכי נכסים כדי להבטיח בעלות ברורה ועסקאות בטוחות.",
-    "service6_service3_title": "ניהול תאימות ורשומות",
-    "service6_service3_desc": "שמירה על מסמכי תאימות, רישיונות ורישומים מדויקים כדי להבטיח ביקורות ואישורים חלקים.",
-    "service6_service4_title": "תמיכה משפטית וייעוץ",
-    "service6_service4_desc": "הנחיות מומחים לגבי תיעוד, הגשות רגולטוריות וניירת משפטית עבור עסקים ויחידים.",
-    "service6_section6_title": "תמיכה משפטית ותיעוד מקצועית",
-    "service6_section6_desc": "שירותי התמיכה המשפטית והתיעוד שלנו מפשטים ניירת מורכבת ומבטיחים דיוק בכל עסקה. מניסוח ואימות חוזים ועד טיפול ברישומי תאימות, אנו מספקים פתרונות תיעוד אמינים שמגנים על האינטרסים שלך ומעניקים לך שקט נפשי.",
-    "service6_section6_card1_title": "ניסוח ובדיקת חוזים",
-    "service6_section6_card1_desc": "אנחנו מכינים ובודקים הסכמים בדיוק כדי להגן על האינטרסים העסקיים והנדל\"ניים שלך.",
-    "service6_section6_card2_title": "תיעוד נכסים ותאימות",
-    "service6_section6_card2_desc": "אימות יסודי של מסמכי נדל\"ן ושמירה על מסמכי תאימות לעסקאות בטוחות ושקופות.",
-    "service6_section7_title": "תמיכה משפטית ותיעוד אמינה",
-    "service6_section7_desc": "בואו נפשט את החוזים, ההסכמים ומסמכי התאימות שלך בעזרת מומחים משפטיים ותיעודיים.",
-    "service6_section7_btn": "קבל תמיכה משפטית"
-   
+    "footer_location": "123 היידראבאד, הודו",
+    "footer_rights": "© 2025 Stackly. כל הזכויות שמורות.",
+
+    "service6_title": "סיוע בעת אסון",
+    "service6_heading": "סיוע חירום ותמיכה",
+    "service6_intro": "בזמני אסונות טבע, כל שנייה חשובה. תוכניות הסיוע שלנו מספקות תגובה מהירה, מזון, סיוע רפואי, מקלט ותמיכה בשיקום ארוך טווח כדי לעזור לקהילות שנפגעו לבנות מחדש את חייהן בכבוד ובתקווה.",
+    "service6_point1": "חלוקת מזון חירום ומים נקיים",
+    "service6_point2": "סיוע רפואי ותמיכת מגיבים ראשונים",
+    "service6_point3": "מקלט זמני וביגוד",
+    "service6_point4": "שיקום ובנייה מחדש של הקהילה",
+    "service6_point5": "תוכניות מודעות והיערכות",
+    "service6_btn1": "גלה תוכניות",
+    "service6_btn2": "הצטרף אלינו",
+    "service6_section3_title": "כיצד אנו מגיבים לאסונות",
+    "service6_section3_desc": "הצוותים שלנו פועלים במהירות לספק סיוע מציל חיים ושיקום ארוך טווח. מחלוקת מזון ועד לבניית בתים, אנו עומדים לצד הקהילות בכל שלב במסע ההתאוששות.",
+    "service6_card1_title": "סיוע חירום",
+    "service6_card1_desc": "אספקת מזון, מים נקיים, בגדים ותרופות למשפחות שנפגעו במהלך מצבי חירום.",
+    "service6_card2_title": "סיוע רפואי ובריאותי",
+    "service6_card2_desc": "מתן עזרה ראשונה, מחנות רפואיים ושירותי בריאות חיוניים לנפגעי אסונות.",
+    "service6_card3_title": "מקלט ושיקום",
+    "service6_card3_desc": "הקמת מקלטים זמניים ותמיכה בשיקום ארוך טווח למשפחות עקורות.",
+    "service6_section4_title": "תהליך הסיוע שלנו בעת אסון",
+    "service6_section4_desc": "מהתגובה החירומית ועד לבניית קהילות מחדש, אנו נוקטים בגישה מובנית כדי להבטיח סיוע בזמן ושיקום מתמשך לנפגעי אסונות.",
+    "service6_section4_intro": "תוכניות הסיוע שלנו משלבות מהירות, חמלה ותכנון ארוך טווח. אנו מבטיחים סיוע מיידי להישרדות, ואחריו שיקום בר קיימא למשפחות ולקהילות שנפגעו.",
+    "service6_step1": "תגובה חירומית מהירה",
+    "service6_step2": "סיוע במזון, מים ורפואה",
+    "service6_step3": "מקלט זמני וביטחון",
+    "service6_step4": "תמיכה פסיכולוגית ורגשית",
+    "service6_step5": "שיקום הקהילה",
+    "service6_step6": "היערכות לאסונות עתידיים",
+    "service6_section5_title": "שירותי הסיוע שלנו",
+    "service6_section5_desc": "אנו מספקים שירותי סיוע מקיפים באסונות הכוללים מענה לצרכים מיידיים ושיקום ארוך טווח, כדי להבטיח שהקהילות יוכלו לבנות מחדש ולשגשג שוב.",
+    "service6_service1_title": "מזון ומים בחירום",
+    "service6_service1_desc": "חלוקה מהירה של ארוחות ומי שתייה בטוחים למשפחות שנפגעו מאסונות.",
+    "service6_service2_title": "סיוע רפואי",
+    "service6_service2_desc": "מחנות רפואיים ניידים ושירותי עזרה ראשונה לפצועים ולאוכלוסיות פגיעות.",
+    "service6_service3_title": "מקלט ושיקום",
+    "service6_service3_desc": "מקלטים זמניים, בגדים וסיוע למשפחות בבניית בתיהן מחדש.",
+    "service6_service4_title": "היערכות לאסונות",
+    "service6_service4_desc": "הכשרת קהילות לעמידות, תרגילי בטיחות וניהול סיכונים לעתיד.",
+    "service6_section6_title": "שיקום חיים לאחר אסונות",
+    "service6_section6_desc": "מעבר לתגובה החירומית, אנו מתמקדים בשיקום ובנייה מחדש. מהחזרת מקורות פרנסה ועד תמיכה בחינוך ובבריאות, מטרתנו היא להבטיח שהקהילות שנפגעו יתאוששו חזקות יותר ויהיו מוכנות טוב יותר לעתיד.",
+    "service6_section6_card1_title": "שיקום ארוך טווח",
+    "service6_section6_card1_desc": "סיוע למשפחות בשיקום בתים, בתי ספר ופרנסה לשיקום בר קיימא.",
+    "service6_section6_card2_title": "היערכות קהילתית",
+    "service6_section6_card2_desc": "הכשרת קהילות במודעות לאסונות ובתרגולי בטיחות לחוסן עתידי.",
+    "service6_section7_title": "הצטרפו אלינו בסיוע אסונות",
+    "service6_section7_desc": "ביחד, נוכל להביא תקווה, סיוע ושיקום למשפחות שנפגעו מאסונות. התמיכה שלך יכולה להציל חיים ולבנות מחדש קהילות.",
+    "service6_section7_btn": "תמכו עכשיו",
+
+  
   }
 };
 
@@ -616,350 +623,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-<script>
-  // Mobile menu setup
-  const hamburger = document.getElementById("hamburger");
-  const hamburgerMenu = document.getElementById("hamburgerMenu");
-
-  // Show/hide mobile menu on hamburger click
-  hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    hamburgerMenu.classList.toggle("active");
-  });
-
-  // Toggle dropdowns for mobile menu
-  document.querySelectorAll('.mobile-dropdown-parent > span').forEach(link => {
-    link.addEventListener('click', function() {
-      const parentLi = this.parentElement;
-      const dropdown = parentLi.querySelector('.mobile-dropdown');
-      dropdown.classList.toggle('active');
-    });
-  });
-
-  // Desktop dropdown toggle logic
-  document.querySelectorAll('.nav-item.dropdown > .nav-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      document.querySelectorAll('.dropdown-menu').forEach(menu => {
-        if (menu !== this.nextElementSibling) {
-          menu.classList.remove('active');
-        }
-      });
-      const dropdownMenu = this.nextElementSibling;
-      if (dropdownMenu) {
-        dropdownMenu.classList.toggle('active');
-      }
-    });
-  });
-
-  // Redirect on desktop dropdown menu item click
-  document.querySelectorAll('.dropdown-menu a').forEach(link => {
-    link.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (href && href !== "#") {
-        window.location.href = href;
-        document.querySelectorAll('.dropdown-menu').forEach(menu => menu.classList.remove('active'));
-      }
-    });
-  });
-
-  // Redirect on normal nav link click
-  document.querySelectorAll('.nav-menu > .nav-item:not(.dropdown) .nav-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (href && href !== "#") {
-        window.location.href = href;
-      }
-    });
-  });
-
-  // Auth link toggle for desktop and mobile
-  function setupAuthLinks() {
-    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
-    const authLinks = [document.getElementById("authLink"), document.getElementById("mobileAuthLink")];
-
-    authLinks.forEach(link => {
-      if (!link) return;
-      if (isLoggedIn) {
-        link.innerText = "Logout";
-        link.href = "#";
-        link.onclick = (e) => {
-          e.preventDefault();
-          localStorage.removeItem("isLoggedIn");
-          localStorage.removeItem("currentUser");
-          window.location.href = "index.html";
-        };
-      } else {
-        link.innerText = "Login";
-        link.href = "index.html";
-        link.onclick = null;
-      }
-    });
-  }
-  setupAuthLinks();
-
-  // Theme toggle
-  const toggleBtn = document.getElementById('toggleBtn');
-  let darkMode = localStorage.getItem('darkMode') === 'true';
-
-  function applyTheme() {
-    if (darkMode) {
-      document.body.classList.add('dark-mode');
-      toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
-    } else {
-      document.body.classList.remove('dark-mode');
-      toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
-    }
-  }
-
-  toggleBtn.addEventListener('click', () => {
-    darkMode = !darkMode;
-    localStorage.setItem('darkMode', darkMode);
-    applyTheme();
-  });
-  applyTheme();
-
-  // Avatar initials logic
-  const avatarCircle = document.getElementById('avatarCircle');
-  const avatarInitials = document.getElementById('avatarInitials');
-  const avatarDropdown = document.getElementById('avatarDropdown');
-  const logoutBtn = document.getElementById('logoutBtn');
-  const currentUserEmail = localStorage.getItem("currentUser");
-  const users = JSON.parse(localStorage.getItem("users")) || {};
-
-  if (currentUserEmail && users[currentUserEmail]) {
-    const firstName = users[currentUserEmail].firstName || "";
-    const lastName = users[currentUserEmail].lastName || "";
-    const initials = (firstName[0] || "").toUpperCase() + (lastName[0] || "").toUpperCase();
-    avatarInitials.textContent = initials;
-  } else {
-    avatarInitials.textContent = "?";
-  }
-
-  // Show/hide avatar dropdown on click
-  avatarCircle.addEventListener('click', function(e) {
-    e.stopPropagation();
-    avatarDropdown.style.display = avatarDropdown.style.display === "block" ? "none" : "block";
-  });
-
-  document.addEventListener('click', function(e) {
-    if (!avatarCircle.contains(e.target) && !avatarDropdown.contains(e.target)) {
-      avatarDropdown.style.display = "none";
-    }
-  });
-
-  // Logout action
-  logoutBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    localStorage.removeItem("isLoggedIn");
-    localStorage.removeItem("currentUser");
-    window.location.href = "index.html";
-  });
-</script>
-
-<style>
-  /* Base styles for hamburger icon */
-  .hamburger {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 24px;
-    height: 18px;
-    cursor: pointer;
-    z-index: 1000;
-  }
-
-  .hamburger span {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #333;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .dark-mode .hamburger span {
-    background-color: #fff;
-  }
-
-  /* Hamburger menu animation */
-  .hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-
-  .hamburger.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
-
-  /* Hide navigation on mobile */
-  @media (max-width: 768px) {
-    .nav-menu {
-      display: none;
-    }
-    .hamburger {
-      display: flex;
-    }
-  }
-
-  /* Styles for the mobile hamburger menu */
-  .mobile-menu-wrapper {
-    position: relative;
-  }
-
-  .hamburger-menu {
-    display: none;
-    flex-direction: column;
-    background: #23272f;
-    color: #fff;
-    position: absolute;
-    top: 50px;
-    right: 0;
-    width: 220px;
-    border-radius: 8px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
-    padding: 20px 0;
-    z-index: 9999;
-    list-style: none;
-  }
-
-  .hamburger-menu.active {
-    display: flex;
-  }
-
-  .hamburger-menu li {
-    padding: 10px 24px;
-    border-bottom: 1px solid #333;
-  }
-
-  .hamburger-menu li:last-child {
-    border-bottom: none;
-  }
-
-  .hamburger-menu a,
-  .hamburger-menu span {
-    color: #00f7ff;
-    text-decoration: none;
-    font-size: 1.1rem;
-    display: block;
-    cursor: pointer;
-    font-weight: 500;
-  }
-
-  .hamburger-menu ul {
-    list-style: none;
-    padding-left: 20px;
-    margin-top: 5px;
-  }
-
-  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown {
-    display: none;
-  }
-
-  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown.active {
-    display: block;
-  }
-
-  .toggle-btn {
-    background: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 38px;
-    height: 38px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 16px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-
-  .toggle-btn:hover {
-    background: #f0f0f0;
-  }
-
-  .avatar-circle {
-    position: relative;
-    cursor: pointer;
-    z-index: 1001;
-    overflow: visible;
-  }
-
-  .avatar-circle {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-left: 16px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #eee;
-    position: relative;
-    cursor: pointer;
-  }
-
-  .avatar-circle img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .avatar-dropdown {
-    display: none;
-    position: absolute;
-    top: 65px;
-    right: 140px;
-    background: #fff;
-    min-width: 100px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
-    border-radius: 8px;
-    z-index: 1002;
-    padding: 4px 0;
-  }
-
-  .avatar-dropdown ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .avatar-dropdown li {
-    padding: 6px 12px;
-  }
-
-  .avatar-dropdown a {
-    color: #23272f;
-    text-decoration: none;
-    font-size: 0.95rem;
-    display: block;
-    border-radius: 4px;
-    transition: background 0.2s;
-  }
-
-  .avatar-dropdown a:hover {
-    background: #f0f0f0;
-  }
-
-  @media (max-width: 768px) {
-    .toggle-btn,
-    .avatar-circle {
-      margin-left: 8px;
-      width: 32px;
-      height: 32px;
-    }
-  }
-
-  @media (min-width: 769px) {
-    .hamburger-menu {
-      display: none !important;
-    }
-  }
-</style>
 <!-- 🔷 Protest home page  -->
 
   <script>
@@ -1968,18 +1631,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 <!-- Footer -->
-<!-- Footer -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-content">
-      <!-- Logo & About -->
-      <div class="footer-section footer-section1">
-        <div class="logo">
+<footer class="site-footer">
+  <div class="footer-wrapper">
+    <div class="footer-grid">
+
+      <!-- Brand & About -->
+      <div class="footer-block footer-brand footer-block1">
+        <div class="footer-logo">
           <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 50px; width: 80px;">
         </div>
-        <p class="text-justify">
-          <span data-i18n="footer_about">Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.</span>
+
+        <p style="text-align: justify;" data-i18n="footer_about">
+          Dedicated charity organization, empowering communities through education, healthcare, food support, and sustainable initiatives to create lasting impact and hope.
         </p>
+
         <div class="social-links">
           <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
           <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
@@ -1989,12 +1654,12 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
 
       <!-- Quick Links -->
-      <div class="footer-section footer-section2">
-        <h4 data-i18n="footer_quickLinks">Quick Links</h4>
+      <div class="footer-block footer-block2">
+        <h4 data-i18n="footer_quicklinks">Quick Links</h4>
         <ul>
           <li><a href="home.html"><span data-i18n="footer_home">Home</span></a></li>
           <li><a href="home2.html"><span data-i18n="footer_home2">Home 2</span></a></li>
-          <li><a href="about.html"><span data-i18n="footer_aboutUs">About Us</span></a></li>
+          <li><a href="about.html"><span data-i18n="footer_aboutus">About Us</span></a></li>
           <li><a href="services.html"><span data-i18n="footer_services">Services</span></a></li>
           <li><a href="blog.html"><span data-i18n="footer_blog">Blog</span></a></li>
           <li><a href="contact.html"><span data-i18n="footer_contact">Contact</span></a></li>
@@ -2002,136 +1667,136 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
 
       <!-- Services -->
-      <div class="footer-section footer-section3">
-        <h4 data-i18n="footer_servicesTitle">Services</h4>
+      <div class="footer-block footer-block3">
+        <h4 data-i18n="footer_services_title">Services</h4>
         <ul>
-          <li><a href="service1.html"><span data-i18n="footer_service1">Property Buying Assistance</span></a></li>
-          <li><a href="service2.html"><span data-i18n="footer_service2">Property Selling</span></a></li>
-          <li><a href="service3.html"><span data-i18n="footer_service3">Rental Services</span></a></li>
-          <li><a href="service4.html"><span data-i18n="footer_service4">Property Management</span></a></li>
-          <li><a href="service5.html"><span data-i18n="footer_service5">Real Estate Investment</span></a></li>
-          <li><a href="service6.html"><span data-i18n="footer_service6">Legal & Documentation Support</span></a></li>
+          <li><a href="service1.html"><span data-i18n="footer_service1">Food Distribution</span></a></li>
+          <li><a href="service2.html"><span data-i18n="footer_service2">Education Support</span></a></li>
+          <li><a href="service3.html"><span data-i18n="footer_service3">Healthcare Camps</span></a></li>
+          <li><a href="service4.html"><span data-i18n="footer_service4">Women Empowerment</span></a></li>
+          <li><a href="service5.html"><span data-i18n="footer_service5">Child Welfare</span></a></li>
+          <li><a href="service6.html"><span data-i18n="footer_service6">Disaster Relief</span></a></li>
         </ul>
       </div>
 
       <!-- Contact Info -->
-      <div class="footer-section footer-section4">
-        <h4 data-i18n="footer_contactInfo">Contact Info</h4>
+      <div class="footer-block footer-block4">
+        <h4 data-i18n="footer_contactinfo">Contact Info</h4>
         <ul>
-          <li><i class="fas fa-envelope"></i> <span data-i18n="footer_email">contact@stackly.ai</span></li>
+          <li><i class="fas fa-envelope"></i> <span data-i18n="footer_email">contact@stackly.in</span></li>
           <li><i class="fas fa-phone"></i> <span data-i18n="footer_phone">+1 (555) 123-4567</span></li>
-          <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer_address">123 AI Innovation Drive</span></li>
+          <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer_location">123 Hyderabad, India</span></li>
         </ul>
       </div>
     </div>
 
-    <!-- Bottom Bar -->
-    <div class="footer-bottom">
-      <p><span data-i18n="footer_bottom">&copy; 2025 Stackly. All rights reserved.</span></p>
+    <!-- Bottom -->
+    <div class="footer-bottom-bar">
+      <p data-i18n="footer_rights">&copy; 2025 Stackly. All rights reserved.</p>
     </div>
   </div>
 </footer>
 
 
+<!-- Styles -->
 <style>
-.footer {
+.site-footer {
   background: #0a0a0a;
   color: #fff;
   padding: 50px 20px 20px;
   font-family: Arial, sans-serif;
 }
 
-.footer-section1{
-  margin-right: 150px;
+.footer-wrapper {
+  max-width: 1200px; /* keeps equal left-right padding */
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.footer-section4{
-  margin-left: 50px;
+.footer-block2 {
+  padding-inline-start: 100px; /* works for both ltr & rtl */
 }
 
-.footer .footer-content {
+.footer-block3 {
+  padding-inline-start: 80px; /* works for both ltr & rtl */
+}
+
+.footer-block4 {
+  padding-inline-start: 60px; /* works for both ltr & rtl */
+}
+
+.footer-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   margin-bottom: 30px;
 }
 
-.footer .footer-section h4 {
+
+.footer-block h4 {
   font-size: 1.2rem;
   margin-bottom: 15px;
   color: #f4f4f4;
 }
 
-.footer .footer-section ul {
+.footer-block ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
-.footer .footer-section ul li {
+.footer-block ul li {
   margin-bottom: 10px;
-  font-size: 0.95rem;
   color: #ddd;
 }
 
-.footer .footer-section ul li a {
+.footer-block ul li a {
   color: #ddd;
   text-decoration: none;
   transition: color 0.3s;
 }
 
-.footer .footer-section ul li a:hover {
+.footer-block ul li a:hover {
   color: #a68e4c;
 }
 
-.footer .social-links a {
-  margin-right: 12px;
-  font-size: 1.2rem;
-  color: #ddd;
-  transition: color 0.3s;
-}
 
-.footer .social-links a:hover {
-  color: #000000;
-}
 
-.footer .footer-bottom {
+
+
+.footer-bottom-bar {
   text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255,255,255,0.1);
   padding-top: 15px;
   font-size: 0.9rem;
   color: #bbb;
 }
 
+/* Responsive */
 @media (max-width: 900px) {
-  .footer .footer-content {
+  .footer-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
-  .footer-section1{
-  margin-right: 5px;
-}
 }
 
 @media (max-width: 600px) {
-  .footer .footer-content {
+  .footer-grid {
     grid-template-columns: 1fr;
     text-align: left;
   }
-  .footer .social-links {
-    margin-top: 15px;
+  .footer-block2{
+      padding-left: 0px;
   }
-  .footer-section1{
-  margin-right: 10px;
-}
-  .footer-section2{
-  margin-right: 10px;
-}
-.footer-section4{
-  margin-left: 1px;
-}
+  .footer-block3{
+      padding-left: 0px;
+  }
+    .footer-block4{
+      padding-left: 0px;
+    }
 }
 </style>
+
+
 
 </div>
 

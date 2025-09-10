@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Realestate</title>
+    <title>Contact Us - Charity</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -15,9 +15,10 @@
 
 <div id="content" style="display:none;"></div>
     
-  <!-- Sticky Header -->
+
    <!-- Sticky Header -->
-     <header class="header">
+
+<header class="header">
   <div class="container">
     <div class="nav-wrapper">
       <div class="logo">
@@ -38,21 +39,21 @@
             <a href="#" class="nav-link"><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
               <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
-              <li><a href="service1.html"><span data-i18n="service_1">Property Buying Assistance</span></a></li>
-              <li><a href="service2.html"><span data-i18n="service_2">Property Selling</span></a></li>
-              <li><a href="service3.html"><span data-i18n="service_3">Rental Services </span></a></li>
-              <li><a href="service4.html"><span data-i18n="service_4">Property Management</span></a></li>
-              <li><a href="service5.html"><span data-i18n="service_5">Real Estate Investment</span></a></li>
-              <li><a href="service6.html"><span data-i18n="service_6">Legal & Documentation Support</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Service_1</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Service_2</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Service_3</span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Service_4</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Service_5</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service_6">Service_6</span></a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
             <a href="#" class="nav-link"><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
               <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
-              <li><a href="blog1.html"><span data-i18n="blog_1">Smart Property Investments</span></a></li>
-              <li><a href="blog2.html"><span data-i18n="blog_2">Effective Property Management</span></a></li>
-              <li><a href="blog3.html"><span data-i18n="blog_3">Real Estate Market Trends</span></a></li>
+              <li><a href="blog1.html"><span data-i18n="blog_1">blog_1</span></a></li>
+              <li><a href="blog2.html"><span data-i18n="blog_2">blog_2</span></a></li>
+              <li><a href="blog3.html"><span data-i18n="blog_3">blog_3</span></a></li>
             </ul>
           </li>
           <li class="nav-item"><a href="contact.html" class="nav-link"><span data-i18n="contact">Contact</span></a></li>
@@ -64,6 +65,15 @@
           <span></span>
         </div>
       </nav>
+
+       <div class="lang-switcher">
+        <label for="langSelect"></label>
+        <select id="langSelect" onchange="changeLanguage(this.value)">
+          <option value="en">English</option>
+          <option value="ar">Arabic</option>
+          <option value="he">Hebrew</option>
+        </select>
+      </div>
 
       <div class="mobile-menu-wrapper">
         <ul class="hamburger-menu" id="hamburgerMenu">
@@ -79,21 +89,21 @@
             <span><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></span>
             <ul class="mobile-dropdown">
              <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
-              <li><a href="service1.html"><span data-i18n="service_1">Property Buying Assistance</span></a></li>
-              <li><a href="service2.html"><span data-i18n="service_2">Property Selling</span></a></li>
-              <li><a href="service3.html"><span data-i18n="service_3">Rental Services </span></a></li>
-              <li><a href="service4.html"><span data-i18n="service_4">Property Management</span></a></li>
-              <li><a href="service5.html"><span data-i18n="service_5">Real Estate Investment</span></a></li>
-              <li><a href="service6.html"><span data-i18n="service6">Legal & Documentation Support</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Service_1</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Service_2</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Service_3</span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Service_4</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Service_5</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service_6">Service_6</span></a></li>
             </ul>
           </li>
           <li class="mobile-dropdown-parent">
             <span><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></span>
             <ul class="mobile-dropdown">
                <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
-                <li><a href="blog1.html"><span data-i18n="blog_1">Smart Property Investments</span></a></li>
-                <li><a href="blog2.html"><span data-i18n="blog_2">Effective Property Management</span></a></li>
-                <li><a href="blog3.html"><span data-i18n="blog_3">Real Estate Market Trends</span></a></li>
+                <li><a href="blog1.html"><span data-i18n="blog_1">blog_1</span></a></li>
+                <li><a href="blog2.html"><span data-i18n="blog_2">blog_2</span></a></li>
+                <li><a href="blog3.html"><span data-i18n="blog_3">blog_3</span></a></li>
             </ul>
           </li>
           <li><a href="contact.html"><span data-i18n="contact">Contact</span></a></li>
@@ -101,30 +111,32 @@
         </ul>
       </div>
 
-      <div class="lang-switcher">
-        <label for="langSelect">Language:</label>
-        <select id="langSelect" onchange="changeLanguage(this.value)">
-          <option value="en">English</option>
-          <option value="ar">Arabic</option>
-          <option value="he">Hebrew</option>
-        </select>
-      </div>
+     
 
       <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
         <i class="fas fa-moon"></i>
       </button>
 
-      <div class="avatar-circle" title="Profile" id="avatarCircle">
-        <span id="avatarInitials"></span>
+     <div class="avatar-wrapper">
+        <div class="avatar-circle" title="Profile" id="avatarCircle">
+          <span id="avatarInitials">BA</span>
+        </div>
+        <div class="avatar-dropdown" id="avatarDropdown">
+          <ul>
+            <li>
+              <a href="index.html" id="logoutBtn">
+                <span data-i18n="logout">Logout</span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="avatar-dropdown" id="avatarDropdown">
-        <ul>
-          <li><a href="index.html" id="logoutBtn"><span data-i18n="logout">Logout</span></a></li>
-        </ul>
-      </div>
+      
     </div>
   </div>
 </header>
+
+
 
 
 
@@ -143,350 +155,7 @@
   </div>
 </section>
 
-<script>
-  // Mobile menu setup
-  const hamburger = document.getElementById("hamburger");
-  const hamburgerMenu = document.getElementById("hamburgerMenu");
 
-  // Show/hide mobile menu on hamburger click
-  hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    hamburgerMenu.classList.toggle("active");
-  });
-
-  // Toggle dropdowns for mobile menu
-  document.querySelectorAll('.mobile-dropdown-parent > span').forEach(link => {
-    link.addEventListener('click', function() {
-      const parentLi = this.parentElement;
-      const dropdown = parentLi.querySelector('.mobile-dropdown');
-      dropdown.classList.toggle('active');
-    });
-  });
-
-  // Desktop dropdown toggle logic
-  document.querySelectorAll('.nav-item.dropdown > .nav-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      document.querySelectorAll('.dropdown-menu').forEach(menu => {
-        if (menu !== this.nextElementSibling) {
-          menu.classList.remove('active');
-        }
-      });
-      const dropdownMenu = this.nextElementSibling;
-      if (dropdownMenu) {
-        dropdownMenu.classList.toggle('active');
-      }
-    });
-  });
-
-  // Redirect on desktop dropdown menu item click
-  document.querySelectorAll('.dropdown-menu a').forEach(link => {
-    link.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (href && href !== "#") {
-        window.location.href = href;
-        document.querySelectorAll('.dropdown-menu').forEach(menu => menu.classList.remove('active'));
-      }
-    });
-  });
-
-  // Redirect on normal nav link click
-  document.querySelectorAll('.nav-menu > .nav-item:not(.dropdown) .nav-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (href && href !== "#") {
-        window.location.href = href;
-      }
-    });
-  });
-
-  // Auth link toggle for desktop and mobile
-  function setupAuthLinks() {
-    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
-    const authLinks = [document.getElementById("authLink"), document.getElementById("mobileAuthLink")];
-
-    authLinks.forEach(link => {
-      if (!link) return;
-      if (isLoggedIn) {
-        link.innerText = "Logout";
-        link.href = "#";
-        link.onclick = (e) => {
-          e.preventDefault();
-          localStorage.removeItem("isLoggedIn");
-          localStorage.removeItem("currentUser");
-          window.location.href = "index.html";
-        };
-      } else {
-        link.innerText = "Login";
-        link.href = "index.html";
-        link.onclick = null;
-      }
-    });
-  }
-  setupAuthLinks();
-
-  // Theme toggle
-  const toggleBtn = document.getElementById('toggleBtn');
-  let darkMode = localStorage.getItem('darkMode') === 'true';
-
-  function applyTheme() {
-    if (darkMode) {
-      document.body.classList.add('dark-mode');
-      toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
-    } else {
-      document.body.classList.remove('dark-mode');
-      toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
-    }
-  }
-
-  toggleBtn.addEventListener('click', () => {
-    darkMode = !darkMode;
-    localStorage.setItem('darkMode', darkMode);
-    applyTheme();
-  });
-  applyTheme();
-
-  // Avatar initials logic
-  const avatarCircle = document.getElementById('avatarCircle');
-  const avatarInitials = document.getElementById('avatarInitials');
-  const avatarDropdown = document.getElementById('avatarDropdown');
-  const logoutBtn = document.getElementById('logoutBtn');
-  const currentUserEmail = localStorage.getItem("currentUser");
-  const users = JSON.parse(localStorage.getItem("users")) || {};
-
-  if (currentUserEmail && users[currentUserEmail]) {
-    const firstName = users[currentUserEmail].firstName || "";
-    const lastName = users[currentUserEmail].lastName || "";
-    const initials = (firstName[0] || "").toUpperCase() + (lastName[0] || "").toUpperCase();
-    avatarInitials.textContent = initials;
-  } else {
-    avatarInitials.textContent = "?";
-  }
-
-  // Show/hide avatar dropdown on click
-  avatarCircle.addEventListener('click', function(e) {
-    e.stopPropagation();
-    avatarDropdown.style.display = avatarDropdown.style.display === "block" ? "none" : "block";
-  });
-
-  document.addEventListener('click', function(e) {
-    if (!avatarCircle.contains(e.target) && !avatarDropdown.contains(e.target)) {
-      avatarDropdown.style.display = "none";
-    }
-  });
-
-  // Logout action
-  logoutBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    localStorage.removeItem("isLoggedIn");
-    localStorage.removeItem("currentUser");
-    window.location.href = "index.html";
-  });
-</script>
-
-<style>
-  /* Base styles for hamburger icon */
-  .hamburger {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 24px;
-    height: 18px;
-    cursor: pointer;
-    z-index: 1000;
-  }
-
-  .hamburger span {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #333;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .dark-mode .hamburger span {
-    background-color: #fff;
-  }
-
-  /* Hamburger menu animation */
-  .hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-
-  .hamburger.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
-
-  /* Hide navigation on mobile */
-  @media (max-width: 768px) {
-    .nav-menu {
-      display: none;
-    }
-    .hamburger {
-      display: flex;
-    }
-  }
-
-  /* Styles for the mobile hamburger menu */
-  .mobile-menu-wrapper {
-    position: relative;
-  }
-
-  .hamburger-menu {
-    display: none;
-    flex-direction: column;
-    background: #23272f;
-    color: #fff;
-    position: absolute;
-    top: 50px;
-    right: 0;
-    width: 220px;
-    border-radius: 8px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
-    padding: 20px 0;
-    z-index: 9999;
-    list-style: none;
-  }
-
-  .hamburger-menu.active {
-    display: flex;
-  }
-
-  .hamburger-menu li {
-    padding: 10px 24px;
-    border-bottom: 1px solid #333;
-  }
-
-  .hamburger-menu li:last-child {
-    border-bottom: none;
-  }
-
-  .hamburger-menu a,
-  .hamburger-menu span {
-    color: #00f7ff;
-    text-decoration: none;
-    font-size: 1.1rem;
-    display: block;
-    cursor: pointer;
-    font-weight: 500;
-  }
-
-  .hamburger-menu ul {
-    list-style: none;
-    padding-left: 20px;
-    margin-top: 5px;
-  }
-
-  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown {
-    display: none;
-  }
-
-  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown.active {
-    display: block;
-  }
-
-  .toggle-btn {
-    background: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 38px;
-    height: 38px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 16px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-
-  .toggle-btn:hover {
-    background: #f0f0f0;
-  }
-
-  .avatar-circle {
-    position: relative;
-    cursor: pointer;
-    z-index: 1001;
-    overflow: visible;
-  }
-
-  .avatar-circle {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-left: 16px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #eee;
-    position: relative;
-    cursor: pointer;
-  }
-
-  .avatar-circle img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .avatar-dropdown {
-    display: none;
-    position: absolute;
-    top: 65px;
-    right: 140px;
-    background: #fff;
-    min-width: 100px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
-    border-radius: 8px;
-    z-index: 1002;
-    padding: 4px 0;
-  }
-
-  .avatar-dropdown ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .avatar-dropdown li {
-    padding: 6px 12px;
-  }
-
-  .avatar-dropdown a {
-    color: #23272f;
-    text-decoration: none;
-    font-size: 0.95rem;
-    display: block;
-    border-radius: 4px;
-    transition: background 0.2s;
-  }
-
-  .avatar-dropdown a:hover {
-    background: #f0f0f0;
-  }
-
-  @media (max-width: 768px) {
-    .toggle-btn,
-    .avatar-circle {
-      margin-left: 8px;
-      width: 32px;
-      height: 32px;
-    }
-  }
-
-  @media (min-width: 769px) {
-    .hamburger-menu {
-      display: none !important;
-    }
-  }
-</style>
 <!-- 🔷 Protest home page  -->
 
   <script>
@@ -895,9 +564,9 @@
 <section class="features-section section-padding">
   <div class="container">
     <div class="section-header animate-fade-up">
-      <h2 data-i18n="multiConnect">Multiple Ways to Connect</h2>
+      <h2 data-i18n="multiConnect">Multiple Ways to Reach Us</h2>
       <p class="text-justify" data-i18n="multiPara">
-        We provide several convenient channels to connect with our real estate experts. Whether you prefer email, phone, or visiting our office, we ensure quick, reliable, and personalized support for your property buying, selling, or investment needs.
+        We provide several easy and reliable ways for you to connect with our charity team. Whether you wish to email us, call directly, or visit our office, we are here to offer quick assistance and heartfelt support for donations, volunteering, or partnership opportunities.
       </p>
     </div>
     <div class="features-grid">
@@ -905,60 +574,64 @@
         <div class="feature-icon"><i class="fas fa-envelope"></i></div>
         <h3 data-i18n="emailSupport">Email Support</h3>
         <p class="text-justify" data-i18n="emailText">
-          Send us inquiries about property buying, selling, rentals, or investment opportunities. Our real estate team responds promptly with expert advice to help you make informed decisions.
+          Write to us for any questions about donations, volunteering, or collaboration. Our charity support team responds promptly with guidance and resources to help you contribute and make a difference.
         </p>
-        <strong>contact@stackly.in</strong>
+        <strong>support@stackly.in</strong>
       </div>
       <div class="feature-card animate-fade-up delay-2">
         <div class="feature-icon"><i class="fas fa-phone"></i></div>
-        <h3 data-i18n="phoneConsult">Phone Consultation</h3>
+        <h3 data-i18n="phoneConsult">Phone Assistance</h3>
         <p class="text-justify" data-i18n="phoneText">
-          Speak directly with our real estate specialists for personalized guidance on property investments, valuations, and market trends. Phone support is available during business hours for one-on-one consultations.
+          Call us directly to learn more about our programs, donation methods, or volunteer opportunities. Our team is available during business hours to provide personalized assistance and guidance.
         </p>
-        <strong>+1 (555) 987-6543</strong>
+        <strong>+1 (555) 123-4567</strong>
       </div>
       <div class="feature-card animate-fade-up delay-3">
         <div class="feature-icon"><i class="fas fa-map-marker-alt"></i></div>
         <h3 data-i18n="officeLocation">Office Location</h3>
         <p class="text-justify" data-i18n="officeText">
-          Visit our real estate office to meet our team, explore property options, and discuss tailored solutions for your buying or investment goals. Schedule an appointment to review opportunities in person.
+          Visit our charity office to meet the team, learn more about our initiatives, and explore ways you can support. We welcome donors, volunteers, and partners to join us in making a positive impact.
         </p>
-        <strong>456 Real Estate Avenue<br />Property City, PC 67890</strong>
+        <strong>123 Hope Street<br />Hyderabad, India</strong>
       </div>
     </div>
   </div>
 </section>
 
+
+
 <!-- Section : 4 -->
 <section class="stats-section section-padding">
   <div class="container">
     <div class="section-header">
-      <h2 data-i18n="businessHours">Business Hours & Support</h2>
+      <h2 data-i18n="businessHours">Office Hours & Support</h2>
       <p class="text-justify" data-i18n="hoursText">
-        Our team is available during the following hours to provide immediate assistance 
-        and support for your property buying, selling, rental, and investment needs.
+        Our charity team is here to guide donors, volunteers, and partners. 
+        You can reach us during the following hours, and we are always ready 
+        to support urgent needs and humanitarian assistance.
       </p>
     </div>
     <div class="stats-grid">
       <div class="stat-item">
         <div class="stat-number" data-i18n="monFri">Mon-Fri</div>
-        <div class="stat-label" data-i18n="monFriHours">9:00 AM - 6:00 PM</div>
+        <div class="stat-label" data-i18n="monFriHours">9:00 AM - 5:00 PM</div>
       </div>
       <div class="stat-item">
         <div class="stat-number" data-i18n="saturday">Saturday</div>
-        <div class="stat-label" data-i18n="satHours">10:00 AM - 4:00 PM</div>
+        <div class="stat-label" data-i18n="satHours">10:00 AM - 2:00 PM</div>
       </div>
       <div class="stat-item">
         <div class="stat-number" data-i18n="emergency">24/7</div>
-        <div class="stat-label" data-i18n="emergencyText">Emergency Support</div>
+        <div class="stat-label" data-i18n="emergencyText">Emergency Humanitarian Support</div>
       </div>
       <div class="stat-item">
-        <div class="stat-number" data-i18n="responseTime">&lt; 2 Hours</div>
-        <div class="stat-label" data-i18n="responseLabel">Response Time</div>
+        <div class="stat-number" data-i18n="responseTime">&lt; 24 Hours</div>
+        <div class="stat-label" data-i18n="responseLabel">Average Response Time</div>
       </div>
     </div>
   </div>
 </section>
+
 
 <style>
 /* Section background */
@@ -1144,7 +817,6 @@
 }
 </style>
 
-
 <!-- Section : 5 -->
 <section class="testimonials-section section-padding faq-section">
   <div class="container">
@@ -1153,33 +825,35 @@
       <div class="content-text">
         <h2 class="animate-fade-up" data-i18n="faqTitle">Frequently Asked Questions</h2>
         <p class="text-justify animate-fade-up delay-1" data-i18n="faqIntro">
-          Find quick answers to common questions about our real estate services, property management, and investment guidance. This FAQ section covers the key details for working with our expert team.
+          Find quick answers to common questions about our charity, donations, volunteering, and support programs. 
+          This FAQ section covers the key details to help you get involved and make a difference.
         </p>
         
         <!-- FAQ Item 1 -->
         <div class="faq-item animate-fade-up delay-2">
           <blockquote class="text-justify">
-            <strong data-i18n="faqQ1">Q: How long does it take to buy or sell a property?</strong><br>
-            <span data-i18n="faqA1">A: The timeline depends on the property type, location, and legal documentation. On average, transactions are completed within 2-6 weeks once all paperwork and approvals are in order.</span>
+            <strong data-i18n="faqQ1">Q: How can I make a donation?</strong><br>
+            <span data-i18n="faqA1">A: You can donate online through our website, by bank transfer, or in person at our office. All donations go directly to supporting our programs and helping those in need.</span>
           </blockquote>
         </div>
 
         <!-- FAQ Item 2 -->
         <div class="faq-item animate-fade-up delay-3">
           <blockquote class="text-justify">
-            <strong data-i18n="faqQ2">Q: Do you provide property management services after the sale?</strong><br>
-            <span data-i18n="faqA2">A: Yes, we offer ongoing property management including tenant services, rent collection, maintenance support, and investment advisory to help you maximize returns on your property.</span>
+            <strong data-i18n="faqQ2">Q: Can I volunteer with your charity?</strong><br>
+            <span data-i18n="faqA2">A: Yes, we welcome volunteers for our food drives, community programs, fundraising events, and awareness campaigns. You can register as a volunteer through our contact page.</span>
           </blockquote>
         </div>
       </div>
 
       <!-- Right Image -->
       <div class="content-image animate-slide-in delay-2">
-        <img src="https://images.pexels.com/photos/5428830/pexels-photo-5428830.jpeg" alt="Real Estate FAQ">
+        <img src="https://images.pexels.com/photos/5428830/pexels-photo-5428830.jpeg" alt="Charity FAQ">
       </div>
     </div>
   </div>
 </section>
+
 
 
     <!-- Section : 6 -->
@@ -1240,17 +914,20 @@
 
      <!-- Footer -->
      <!-- Footer -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-content">
-      <!-- Logo & About -->
-      <div class="footer-section footer-section1">
-        <div class="logo">
+<footer class="site-footer">
+  <div class="footer-wrapper">
+    <div class="footer-grid">
+
+      <!-- Brand & About -->
+      <div class="footer-block footer-brand footer-block1">
+        <div class="footer-logo">
           <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 50px; width: 80px;">
         </div>
-        <p class="text-justify">
-          <span data-i18n="footer_about">Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.</span>
+
+        <p style="text-align: justify;" data-i18n="footer_about">
+          Dedicated charity organization, empowering communities through education, healthcare, food support, and sustainable initiatives to create lasting impact and hope.
         </p>
+
         <div class="social-links">
           <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
           <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
@@ -1260,12 +937,12 @@
       </div>
 
       <!-- Quick Links -->
-      <div class="footer-section footer-section2">
-        <h4 data-i18n="footer_quickLinks">Quick Links</h4>
+      <div class="footer-block footer-block2">
+        <h4 data-i18n="footer_quicklinks">Quick Links</h4>
         <ul>
           <li><a href="home.html"><span data-i18n="footer_home">Home</span></a></li>
           <li><a href="home2.html"><span data-i18n="footer_home2">Home 2</span></a></li>
-          <li><a href="about.html"><span data-i18n="footer_aboutUs">About Us</span></a></li>
+          <li><a href="about.html"><span data-i18n="footer_aboutus">About Us</span></a></li>
           <li><a href="services.html"><span data-i18n="footer_services">Services</span></a></li>
           <li><a href="blog.html"><span data-i18n="footer_blog">Blog</span></a></li>
           <li><a href="contact.html"><span data-i18n="footer_contact">Contact</span></a></li>
@@ -1273,268 +950,383 @@
       </div>
 
       <!-- Services -->
-      <div class="footer-section footer-section3">
-        <h4 data-i18n="footer_servicesTitle">Services</h4>
+      <div class="footer-block footer-block3">
+        <h4 data-i18n="footer_services_title">Services</h4>
         <ul>
-          <li><a href="service1.html"><span data-i18n="footer_service1">Property Buying Assistance</span></a></li>
-          <li><a href="service2.html"><span data-i18n="footer_service2">Property Selling</span></a></li>
-          <li><a href="service3.html"><span data-i18n="footer_service3">Rental Services</span></a></li>
-          <li><a href="service4.html"><span data-i18n="footer_service4">Property Management</span></a></li>
-          <li><a href="service5.html"><span data-i18n="footer_service5">Real Estate Investment</span></a></li>
-          <li><a href="service6.html"><span data-i18n="footer_service6">Legal & Documentation Support</span></a></li>
+          <li><a href="service1.html"><span data-i18n="footer_service1">Food Distribution</span></a></li>
+          <li><a href="service2.html"><span data-i18n="footer_service2">Education Support</span></a></li>
+          <li><a href="service3.html"><span data-i18n="footer_service3">Healthcare Camps</span></a></li>
+          <li><a href="service4.html"><span data-i18n="footer_service4">Women Empowerment</span></a></li>
+          <li><a href="service5.html"><span data-i18n="footer_service5">Child Welfare</span></a></li>
+          <li><a href="service6.html"><span data-i18n="footer_service6">Disaster Relief</span></a></li>
         </ul>
       </div>
 
       <!-- Contact Info -->
-      <div class="footer-section footer-section4">
-        <h4 data-i18n="footer_contactInfo">Contact Info</h4>
+      <div class="footer-block footer-block4">
+        <h4 data-i18n="footer_contactinfo">Contact Info</h4>
         <ul>
-          <li><i class="fas fa-envelope"></i> <span data-i18n="footer_email">contact@stackly.ai</span></li>
+          <li><i class="fas fa-envelope"></i> <span data-i18n="footer_email">contact@stackly.in</span></li>
           <li><i class="fas fa-phone"></i> <span data-i18n="footer_phone">+1 (555) 123-4567</span></li>
-          <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer_address">123 AI Innovation Drive</span></li>
+          <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer_location">123 Hyderabad, India</span></li>
         </ul>
       </div>
     </div>
 
-    <!-- Bottom Bar -->
-    <div class="footer-bottom">
-      <p><span data-i18n="footer_bottom">&copy; 2025 Stackly. All rights reserved.</span></p>
+    <!-- Bottom -->
+    <div class="footer-bottom-bar">
+      <p data-i18n="footer_rights">&copy; 2025 Stackly. All rights reserved.</p>
     </div>
   </div>
 </footer>
+
+
+<!-- Styles -->
+<style>
+.site-footer {
+  background: #0a0a0a;
+  color: #fff;
+  padding: 50px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-wrapper {
+  max-width: 1200px; /* keeps equal left-right padding */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.footer-block2 {
+  padding-inline-start: 100px;  /* works for both ltr & rtl */
+}
+
+.footer-block3 {
+  padding-inline-start: 80px;  /* works for both ltr & rtl */
+}
+
+.footer-block4 {
+  padding-inline-start: 60px;  /* works for both ltr & rtl */
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+
+.footer-block h4 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #f4f4f4;
+}
+
+.footer-block ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-block ul li {
+  margin-bottom: 10px;
+  color: #ddd;
+}
+
+.footer-block ul li a {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-block ul li a:hover {
+  color: #a68e4c;
+}
+
+.footer-bottom-bar {
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 15px;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+  .footer-block2{
+      padding-left: 0px;
+  }
+  .footer-block3{
+      padding-left: 0px;
+  }
+
+    .footer-block4{
+      padding-left: 0px;
+    }
+}
+</style>
+
+
 
 <script>
 // Translation dictionary
 const translations = {
   en: {
-   "home": "Home",
+    "home": "Home",
     "home1": "Home 1",
     "home2": "Home 2",
     "about": "About",
     "services": "Services",
     "allServices": "All Services",
-    "service_1": "Property Buying Assistance",
-    "service_2": "Property Selling",
-    "service_3": "Rental Services",
-    "service_4": "Property Management",
-    "service_5": "Real Estate Investment",
-    "service_6": "Legal & Documentation Support",
+    "service_1": "Service_1",
+    "service_2": "Service_2",
+    "service_3": "Service_3",
+    "service_4": "Service_4",
+    "service_5": "Service_5",
+    "service_6": "Service_6",
     "blog": "Blog",
     "allPosts": "All Posts",
-    "blog_1": "Smart Property Investments",
-    "blog_2": "Effective Property Management",
-    "blog_3": "Real Estate Market Trends",
+    "blog_1": "Blog_1",
+    "blog_2": "Blog_2",
+    "blog_3": "Blog_3",
     "contact": "Contact",
     "logout": "Logout",
 
-    "footer_about": "Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.",
-    "footer_quickLinks": "Quick Links",
+     "footer_about": "Dedicated charity organization, empowering communities through education, healthcare, food support, and sustainable initiatives to create lasting impact and hope.",
+    "footer_quicklinks": "Quick Links",
     "footer_home": "Home",
     "footer_home2": "Home 2",
-    "footer_aboutUs": "About Us",
+    "footer_aboutus": "About Us",
     "footer_services": "Services",
     "footer_blog": "Blog",
     "footer_contact": "Contact",
-    "footer_servicesTitle": "Services",
-    "footer_service1": "Property Buying Assistance",
-    "footer_service2": "Property Selling",
-    "footer_service3": "Rental Services",
-    "footer_service4": "Property Management",
-    "footer_service5": "Real Estate Investment",
-    "footer_service6": "Legal & Documentation Support",
-    "footer_contactInfo": "Contact Info",
-    "footer_email": "contact@stackly.ai",
+    "footer_services_title": "Services",
+    "footer_service1": "Food Distribution",
+    "footer_service2": "Education Support",
+    "footer_service3": "Healthcare Camps",
+    "footer_service4": "Women Empowerment",
+    "footer_service5": "Child Welfare",
+    "footer_service6": "Disaster Relief",
+    "footer_contactinfo": "Contact Info",
+    "footer_email": "contact@stackly.in",
     "footer_phone": "+1 (555) 123-4567",
-    "footer_address": "123 AI Innovation Drive",
-    "footer_bottom": "© 2025 Stackly. All rights reserved.",
-
-     contactTitle: "Contact Us",
-
-     labelName: "Full Name", phName: "Enter your name",
-    labelEmail: "Email Address", phEmail: "Enter your email",
-    labelPhone: "Phone Number (Optional)", phPhone: "Enter your phone number",
-    labelMessage: "Your Message", phMessage: "Write your message...",
-    btnSend: "Send Message",
-    letsTalk: "Let’s Talk",
-    contactIntro: "Have questions ? Our team is ready to help. Fill out the form below and we'll respond within 24 hours.",
-    multiConnect: "Multiple Ways to Connect",
-    multiPara: "We provide several convenient channels to connect with our real estate experts. Whether you prefer email, phone, or visiting our office, we ensure quick, reliable, and personalized support for your property buying, selling, or investment needs.",
-    emailSupport: "Email Support",
-    emailText: "Send us inquiries about property buying, selling, rentals, or investment opportunities. Our real estate team responds promptly with expert advice to help you make informed decisions.",
-    phoneConsult: "Phone Consultation",
-    phoneText: "Speak directly with our real estate specialists for personalized guidance on property investments, valuations, and market trends. Phone support is available during business hours for one-on-one consultations.",
-    officeLocation: "Office Location",
-    officeText: "Visit our real estate office to meet our team, explore property options, and discuss tailored solutions for your buying or investment goals. Schedule an appointment to review opportunities in person.",
-    businessHours: "Business Hours & Support",
-    hoursText: "Our team is available during the following hours to provide immediate assistance and support for your property buying, selling, rental, and investment needs.",
-    monFri: "Mon-Fri", monFriHours: "9:00 AM - 6:00 PM",
-    saturday: "Saturday", satHours: "10:00 AM - 4:00 PM",
-    emergency: "24/7", emergencyText: "Emergency Support",
-    responseTime: "< 2 Hours", responseLabel: "Response Time",
-
-    faqTitle: "Frequently Asked Questions",
-    faqIntro: "Find quick answers to common questions about our real estate services, property management, and investment guidance. This FAQ section covers the key details for working with our expert team.",
-    faqQ1: "Q: How long does it take to buy or sell a property?",
-    faqA1: "A: The timeline depends on the property type, location, and legal documentation. On average, transactions are completed within 2-6 weeks once all paperwork and approvals are in order.",
-    faqQ2: "Q: Do you provide property management services after the sale?",
-    faqA2: "A: Yes, we offer ongoing property management including tenant services, rent collection, maintenance support, and investment advisory to help you maximize returns on your property.",
-    mapTitle: "Find Us on the Map",
-    mapText: "Visit our office or connect with us in person. Our location is easily accessible for consultations, meetings, and collaborations.",
- 
-       
+    "footer_location": "123 Hyderabad, India",
+    "footer_rights": "© 2025 Stackly. All rights reserved.",
+  
+     "contactTitle": "Contact Us",
+    "labelName": "Full Name",
+    "phName": "Enter your full name",
+    "labelEmail": "Email Address",
+    "phEmail": "Enter your email address",
+    "labelPhone": "Phone Number (Optional)",
+    "phPhone": "Enter your phone number",
+    "labelMessage": "Your Message",
+    "phMessage": "Type your message here",
+    "btnSend": "Send Message",
+    "letsTalk": "Let’s Talk",
+    "contactIntro": "Have questions ? Our team is ready to help. Fill out the form below and we'll respond within 24 hours.",
+    "multiConnect": "Multiple Ways to Reach Us",
+    "multiPara": "We provide several easy and reliable ways for you to connect with our charity team. Whether you wish to email us, call directly, or visit our office, we are here to offer quick assistance and heartfelt support for donations, volunteering, or partnership opportunities.",
+    "emailSupport": "Email Support",
+    "emailText": "Write to us for any questions about donations, volunteering, or collaboration. Our charity support team responds promptly with guidance and resources to help you contribute and make a difference.",
+    "phoneConsult": "Phone Assistance",
+    "phoneText": "Call us directly to learn more about our programs, donation methods, or volunteer opportunities. Our team is available during business hours to provide personalized assistance and guidance.",
+    "officeLocation": "Office Location",
+    "officeText": "Visit our charity office to meet the team, learn more about our initiatives, and explore ways you can support. We welcome donors, volunteers, and partners to join us in making a positive impact.",
+    "businessHours": "Office Hours & Support",
+    "hoursText": "Our charity team is here to guide donors, volunteers, and partners. You can reach us during the following hours, and we are always ready to support urgent needs and humanitarian assistance.",
+    "monFri": "Mon-Fri",
+    "monFriHours": "9:00 AM - 5:00 PM",
+    "saturday": "Saturday",
+    "satHours": "10:00 AM - 2:00 PM",
+    "emergency": "24/7",
+    "emergencyText": "Emergency Humanitarian Support",
+    "responseTime": "< 24 Hours",
+    "responseLabel": "Average Response Time",
+    "faqTitle": "Frequently Asked Questions",
+    "faqIntro": "Find quick answers to common questions about our charity, donations, volunteering, and support programs. This FAQ section covers the key details to help you get involved and make a difference.",
+    "faqQ1": "Q: How can I make a donation?",
+    "faqA1": "A: You can donate online through our website, by bank transfer, or in person at our office. All donations go directly to supporting our programs and helping those in need.",
+    "faqQ2": "Q: Can I volunteer with your charity?",
+    "faqA2": "A: Yes, we welcome volunteers for our food drives, community programs, fundraising events, and awareness campaigns. You can register as a volunteer through our contact page.",
+    "mapTitle": "Find Us on the Map",
+    "mapText": "Visit our office or connect with us in person. Our location is easily accessible for consultations, meetings, and collaborations.",
+   
   },
   ar: {
-   "home": "الرئيسية",
-    "home1": "الصفحة الرئيسية 1",
-    "home2": "الصفحة الرئيسية 2",
-    "about": "من نحن",
+     "home": "الرئيسية",
+    "home1": "الصفحة 1",
+    "home2": "الصفحة 2",
+    "about": "معلومات عنا",
     "services": "الخدمات",
     "allServices": "جميع الخدمات",
-    "service_1": "مساعدة في شراء العقارات",
-    "service_2": "بيع العقارات",
-    "service_3": "خدمات الإيجار",
-    "service_4": "إدارة العقارات",
-    "service_5": "الاستثمار العقاري",
-    "service_6": "الدعم القانوني والتوثيق",
+    "service_1": "الخدمة_1",
+    "service_2": "الخدمة_2",
+    "service_3": "الخدمة_3",
+    "service_4": "الخدمة_4",
+    "service_5": "الخدمة_5",
+    "service_6": "الخدمة_6",
     "blog": "المدونة",
     "allPosts": "جميع المقالات",
-    "blog_1": "الاستثمارات العقارية الذكية",
-    "blog_2": "إدارة العقارات الفعالة",
-    "blog_3": "اتجاهات سوق العقارات",
+    "blog_1": "مدونة_1",
+    "blog_2": "مدونة_2",
+    "blog_3": "مدونة_3",
     "contact": "اتصل بنا",
-    "logout": "تسجيل خروج",
+    "logout": "تسجيل الخروج",
 
-    "footer_about": "مزود رائد لحلول الذكاء الاصطناعي، يساعد الشركات على التحول من خلال التكنولوجيا الذكية وأنظمة الأتمتة المبتكرة.",
-    "footer_quickLinks": "روابط سريعة",
+    "footer_about": "منظمة خيرية مكرسة، تمكّن المجتمعات من خلال التعليم والرعاية الصحية ودعم الغذاء والمبادرات المستدامة لخلق تأثير دائم وأمل.",
+    "footer_quicklinks": "روابط سريعة",
     "footer_home": "الرئيسية",
     "footer_home2": "الصفحة الرئيسية 2",
-    "footer_aboutUs": "من نحن",
+    "footer_aboutus": "معلومات عنا",
     "footer_services": "الخدمات",
-    "footer_blog": "المدونة",
+    "footer_blog": "مدونة",
     "footer_contact": "اتصل بنا",
-    "footer_servicesTitle": "الخدمات",
-    "footer_service1": "مساعدة في شراء العقارات",
-    "footer_service2": "بيع العقارات",
-    "footer_service3": "خدمات الإيجار",
-    "footer_service4": "إدارة الممتلكات",
-    "footer_service5": "الاستثمار العقاري",
-    "footer_service6": "الدعم القانوني والتوثيق",
-    "footer_contactInfo": "معلومات الاتصال",
-    "footer_email": "contact@stackly.ai",
+    "footer_services_title": "الخدمات",
+    "footer_service1": "توزيع الغذاء",
+    "footer_service2": "دعم التعليم",
+    "footer_service3": "المخيمات الطبية",
+    "footer_service4": "تمكين المرأة",
+    "footer_service5": "رعاية الأطفال",
+    "footer_service6": "الإغاثة في الكوارث",
+    "footer_contactinfo": "معلومات الاتصال",
+    "footer_email": "contact@stackly.in",
     "footer_phone": "+1 (555) 123-4567",
-    "footer_address": "123 طريق ابتكار الذكاء الاصطناعي",
-    "footer_bottom": "© 2025 Stackly. جميع الحقوق محفوظة.",
+    "footer_location": "123 حيدر أباد، الهند",
+    "footer_rights": "© 2025 Stackly. جميع الحقوق محفوظة.",
+  
+    "contactTitle": "اتصل بنا",
+    "labelName": "الاسم الكامل",
+    "phName": "أدخل اسمك الكامل",
+    "labelEmail": "عنوان البريد الإلكتروني",
+    "phEmail": "أدخل بريدك الإلكتروني",
+    "labelPhone": "رقم الهاتف (اختياري)",
+    "phPhone": "أدخل رقم هاتفك",
+    "labelMessage": "رسالتك",
+    "phMessage": "اكتب رسالتك هنا",
+    "btnSend": "إرسال الرسالة",
+    "letsTalk": "دعونا نتحدث",
+    "contactIntro": "هل لديك أسئلة؟ فريقنا جاهز لمساعدتك. املأ النموذج أدناه وسنرد خلال 24 ساعة.",
+    "multiConnect": "طرق متعددة للوصول إلينا",
+    "multiPara": "نحن نوفر عدة طرق سهلة وموثوقة للتواصل مع فريق مؤسستنا الخيرية. سواء كنت ترغب في مراسلتنا عبر البريد الإلكتروني، الاتصال بنا مباشرة، أو زيارة مكتبنا، فنحن هنا لتقديم المساعدة السريعة والدعم الصادق للتبرعات أو التطوع أو فرص الشراكة.",
+    "emailSupport": "الدعم عبر البريد الإلكتروني",
+    "emailText": "اكتب إلينا لأي استفسارات حول التبرعات أو التطوع أو التعاون. يستجيب فريق الدعم لدينا بسرعة بتوجيهات وموارد لمساعدتك على المساهمة وإحداث فرق.",
+    "phoneConsult": "المساعدة عبر الهاتف",
+    "phoneText": "اتصل بنا مباشرة للتعرف أكثر على برامجنا وطرق التبرع أو فرص التطوع. فريقنا متاح خلال ساعات العمل لتقديم المساعدة والإرشاد الشخصي.",
+    "officeLocation": "موقع المكتب",
+    "officeText": "قم بزيارة مكتبنا الخيري لمقابلة الفريق والتعرف أكثر على مبادراتنا واستكشاف طرق الدعم. نحن نرحب بالمتبرعين والمتطوعين والشركاء للانضمام إلينا في إحداث تأثير إيجابي.",
+    "businessHours": "ساعات العمل والدعم",
+    "hoursText": "فريق مؤسستنا الخيرية هنا لإرشاد المتبرعين والمتطوعين والشركاء. يمكنك التواصل معنا خلال الساعات التالية، ونحن دائماً مستعدون لدعم الاحتياجات العاجلة والمساعدات الإنسانية.",
+    "monFri": "من الاثنين إلى الجمعة",
+    "monFriHours": "9:00 ص - 5:00 م",
+    "saturday": "السبت",
+    "satHours": "10:00 ص - 2:00 م",
+    "emergency": "طوال الأسبوع/24 ساعة",
+    "emergencyText": "دعم إنساني طارئ",
+    "responseTime": "< 24 ساعة",
+    "responseLabel": "متوسط وقت الاستجابة",
+    "faqTitle": "الأسئلة الشائعة",
+    "faqIntro": "اعثر على إجابات سريعة للأسئلة الشائعة حول جمعيتنا الخيرية، التبرعات، التطوع، وبرامج الدعم. يغطي قسم الأسئلة الشائعة التفاصيل الأساسية لمساعدتك على المشاركة وصنع الفرق.",
+    "faqQ1": "س: كيف يمكنني التبرع؟",
+    "faqA1": "ج: يمكنك التبرع عبر الإنترنت من خلال موقعنا الإلكتروني، عن طريق التحويل البنكي، أو شخصيًا في مكتبنا. جميع التبرعات تذهب مباشرة لدعم برامجنا ومساعدة المحتاجين.",
+    "faqQ2": "س: هل يمكنني التطوع مع جمعيتكم؟",
+    "faqA2": "ج: نعم، نحن نرحب بالمتطوعين في حملات توزيع الطعام، برامج المجتمع، فعاليات جمع التبرعات، وحملات التوعية. يمكنك التسجيل كمتطوع من خلال صفحة الاتصال الخاصة بنا.",
+    "mapTitle": "اعثر علينا على الخريطة",
+    "mapText": "قم بزيارة مكتبنا أو تواصل معنا شخصيًا. موقعنا يسهل الوصول إليه للاستشارات والاجتماعات والتعاون.",
 
-    contactTitle: "اتصل بنا",
-
-    labelName: "الاسم الكامل", phName: "أدخل اسمك",
-    labelEmail: "عنوان البريد الإلكتروني", phEmail: "أدخل بريدك الإلكتروني",
-    labelPhone: "رقم الهاتف (اختياري)", phPhone: "أدخل رقم هاتفك",
-    labelMessage: "رسالتك", phMessage: "اكتب رسالتك...",
-    btnSend: "إرسال الرسالة",
-    letsTalk: "دعونا نتحدث",
-    contactIntro: "هل لديك أسئلة؟ فريقنا جاهز للمساعدة. املأ النموذج أدناه وسنرد خلال 24 ساعة.",
-    multiConnect: "طرق متعددة للتواصل",
-    multiPara: "نوفر عدة قنوات مريحة للتواصل مع خبراء العقارات لدينا. سواء كنت تفضل البريد الإلكتروني أو الهاتف أو زيارة مكتبنا، فإننا نضمن دعمًا سريعًا وموثوقًا وشخصيًا لاحتياجاتك في شراء العقارات أو بيعها أو الاستثمار فيها.",
-    emailSupport: "دعم البريد الإلكتروني",
-    emailText: "أرسل إلينا استفسارات حول شراء العقارات أو بيعها أو الإيجارات أو فرص الاستثمار. يرد فريق العقارات لدينا بسرعة مع نصائح الخبراء لمساعدتك على اتخاذ قرارات مستنيرة.",
-    phoneConsult: "استشارة هاتفية",
-    phoneText: "تحدث مباشرة مع خبراء العقارات لدينا للحصول على إرشادات مخصصة حول الاستثمارات العقارية والتقييمات واتجاهات السوق. يتوفر الدعم الهاتفي خلال ساعات العمل للاستشارات الفردية.",
-    officeLocation: "موقع المكتب",
-    officeText: "قم بزيارة مكتبنا العقاري لمقابلة فريقنا واستكشاف خيارات العقارات ومناقشة الحلول المخصصة لأهدافك. حدد موعدًا لمراجعة الفرص شخصيًا.",
-    businessHours: "ساعات العمل والدعم",
-    hoursText: "فريقنا متاح خلال الساعات التالية لتقديم المساعدة الفورية والدعم لشراء العقارات أو بيعها أو تأجيرها أو الاستثمار فيها.",
-    monFri: "الاثنين - الجمعة", monFriHours: "9:00 ص - 6:00 م",
-    saturday: "السبت", satHours: "10:00 ص - 4:00 م",
-    emergency: "24/7", emergencyText: "دعم الطوارئ",
-    responseTime: "< ساعتين", responseLabel: "وقت الاستجابة",
-
-    faqTitle: "الأسئلة الشائعة",
-    faqIntro: "اعثر على إجابات سريعة للأسئلة الشائعة حول خدماتنا العقارية، وإدارة الممتلكات، وإرشادات الاستثمار. يغطي قسم الأسئلة الشائعة التفاصيل الأساسية للعمل مع فريقنا الخبير.",
-    faqQ1: "س: كم من الوقت يستغرق شراء أو بيع عقار؟",
-    faqA1: "ج: يعتمد الجدول الزمني على نوع العقار والموقع والوثائق القانونية. في المتوسط، تُستكمل المعاملات في غضون 2-6 أسابيع بمجرد اكتمال جميع الأوراق والموافقات.",
-    faqQ2: "س: هل تقدمون خدمات إدارة الممتلكات بعد البيع؟",
-    faqA2: "ج: نعم، نحن نقدم إدارة ممتلكات مستمرة تشمل خدمات المستأجرين، تحصيل الإيجارات، دعم الصيانة، والاستشارات الاستثمارية لمساعدتك في تحقيق أقصى عائد على ممتلكاتك.",
-    mapTitle: "اعثر علينا على الخريطة",
-    mapText: "قم بزيارة مكتبنا أو تواصل معنا شخصيًا. موقعنا يسهل الوصول إليه للاستشارات والاجتماعات والتعاون.",
 
      },
   he: {
- "home": "בית",
-    "home1": "דף הבית 1",
-    "home2": "דף הבית 2",
+    "home": "בית",
+    "home1": "דף 1",
+    "home2": "דף 2",
     "about": "אודות",
     "services": "שירותים",
     "allServices": "כל השירותים",
-    "service_1": "סיוע ברכישת נכסים",
-    "service_2": "מכירת נכסים",
-    "service_3": "שירותי השכרה",
-    "service_4": "ניהול נכסים",
-    "service_5": "השקעות נדל״ן",
-    "service_6": "תמיכה משפטית ותיעוד",
+    "service_1": "שירות_1",
+    "service_2": "שירות_2",
+    "service_3": "שירות_3",
+    "service_4": "שירות_4",
+    "service_5": "שירות_5",
+    "service_6": "שירות_6",
     "blog": "בלוג",
     "allPosts": "כל הפוסטים",
-    "blog_1": "השקעות נדל״ן חכמות",
-    "blog_2": "ניהול נכסים יעיל",
-    "blog_3": "מגמות שוק הנדל״ן",
+    "blog_1": "בלוג_1",
+    "blog_2": "בלוג_2",
+    "blog_3": "בלוג_3",
     "contact": "צור קשר",
     "logout": "התנתק",
 
-    "footer_about": "ספק מוביל של פתרונות בינה מלאכותית, מסייע לעסקים להשתנות באמצעות טכנולוגיה חכמה ומערכות אוטומציה חדשניות.",
-    "footer_quickLinks": "קישורים מהירים",
+    "footer_about": "ארגון צדקה מסור, המעצים קהילות באמצעות חינוך, בריאות, תמיכת מזון ויוזמות ברות קיימא ליצירת השפעה מתמשכת ותקווה.",
+    "footer_quicklinks": "קישורים מהירים",
     "footer_home": "בית",
     "footer_home2": "בית 2",
-    "footer_aboutUs": "אודותינו",
+    "footer_aboutus": "אודותינו",
     "footer_services": "שירותים",
     "footer_blog": "בלוג",
     "footer_contact": "צור קשר",
-    "footer_servicesTitle": "שירותים",
-    "footer_service1": "סיוע ברכישת נכסים",
-    "footer_service2": "מכירת נכסים",
-    "footer_service3": "שירותי השכרה",
-    "footer_service4": "ניהול נכסים",
-    "footer_service5": "השקעות נדל\"ן",
-    "footer_service6": "תמיכה משפטית ותיעוד",
-    "footer_contactInfo": "פרטי קשר",
-    "footer_email": "contact@stackly.ai",
+    "footer_services_title": "שירותים",
+    "footer_service1": "חלוקת מזון",
+    "footer_service2": "תמיכה בחינוך",
+    "footer_service3": "מחנות בריאות",
+    "footer_service4": "העצמת נשים",
+    "footer_service5": "רווחת ילדים",
+    "footer_service6": "סיוע באסונות",
+    "footer_contactinfo": "פרטי קשר",
+    "footer_email": "contact@stackly.in",
     "footer_phone": "+1 (555) 123-4567",
-    "footer_address": "123 רחוב חדשנות בינה מלאכותית",
-    "footer_bottom": "© 2025 Stackly. כל הזכויות שמורות.",
-    
-     contactTitle: "צור קשר",
+    "footer_location": "123 היידראבאד, הודו",
+    "footer_rights": "© 2025 Stackly. כל הזכויות שמורות.",
 
-     labelName: "שם מלא", phName: "הכנס את שמך",
-    labelEmail: "כתובת אימייל", phEmail: "הכנס את האימייל שלך",
-    labelPhone: "מספר טלפון (אופציונלי)", phPhone: "הכנס את מספר הטלפון שלך",
-    labelMessage: "ההודעה שלך", phMessage: "כתוב את ההודעה שלך...",
-    btnSend: "שלח הודעה",
-    letsTalk: "בוא נדבר",
-    contactIntro: "יש לך שאלות? הצוות שלנו מוכן לעזור. מלא את הטופס ונחזור אליך תוך 24 שעות.",
-    multiConnect: "דרכים שונות להתחבר",
-    multiPara: "אנו מספקים מספר ערוצים נוחים להתחבר עם מומחי הנדל\"ן שלנו. בין אם אתה מעדיף אימייל, טלפון או ביקור במשרד, אנו מבטיחים תמיכה מהירה, אמינה ואישית לצרכי קנייה, מכירה או השקעה בנדל\"ן.",
-    emailSupport: "תמיכת אימייל",
-    emailText: "שלח לנו פניות לגבי רכישה, מכירה, השכרה או הזדמנויות השקעה. צוות הנדל\"ן שלנו מגיב במהירות עם עצות מומחים שיעזרו לך לקבל החלטות נכונות.",
-    phoneConsult: "ייעוץ טלפוני",
-    phoneText: "דבר ישירות עם מומחי הנדל\"ן שלנו לקבלת הנחיות מותאמות אישית לגבי השקעות, הערכות שווי ומגמות שוק. התמיכה הטלפונית זמינה בשעות העבודה.",
-    officeLocation: "מיקום המשרד",
-    officeText: "בקר במשרד הנדל\"ן שלנו כדי לפגוש את הצוות, לחקור אפשרויות נכסים ולדון בפתרונות מותאמים לצרכי הרכישה או ההשקעה שלך. קבע פגישה לסקירת הזדמנויות באופן אישי.",
-    businessHours: "שעות פעילות ותמיכה",
-    hoursText: "הצוות שלנו זמין בשעות הבאות כדי לספק סיוע מיידי ותמיכה בקנייה, מכירה, השכרה והשקעה בנדל\"ן.",
-    monFri: "ב'-ו'", monFriHours: "9:00 - 18:00",
-    saturday: "שבת", satHours: "10:00 - 16:00",
-    emergency: "24/7", emergencyText: "תמיכת חירום",
-    responseTime: "< שעתיים", responseLabel: "זמן תגובה",
+    "contactTitle": "צור קשר",
+    "labelName": "שם מלא",
+    "phName": "הכנס את שמך המלא",
+    "labelEmail": "כתובת אימייל",
+    "phEmail": "הכנס את כתובת האימייל שלך",
+    "labelPhone": "מספר טלפון (אופציונלי)",
+    "phPhone": "הכנס את מספר הטלפון שלך",
+    "labelMessage": "ההודעה שלך",
+    "phMessage": "הקלד את ההודעה שלך כאן",
+    "btnSend": "שלח הודעה",
+    "letsTalk": "בואו נדבר",
+    "contactIntro": "יש לך שאלות? הצוות שלנו מוכן לעזור. מלא את הטופס למטה ונחזור אליך תוך 24 שעות.",
+    "multiConnect": "מספר דרכים ליצור איתנו קשר",
+    "multiPara": "אנו מספקים מספר דרכים נוחות ואמינות להתחבר עם צוות הצדקה שלנו. בין אם ברצונך לשלוח לנו אימייל, להתקשר ישירות או לבקר במשרדנו, אנו כאן כדי להציע עזרה מהירה ותמיכה מכל הלב לתרומות, התנדבות או הזדמנויות לשותפות.",
+    "emailSupport": "תמיכה בדוא\"ל",
+    "emailText": "כתוב לנו עבור כל שאלה על תרומות, התנדבות או שיתופי פעולה. צוות התמיכה שלנו מגיב במהירות עם הנחיות ומשאבים שיעזרו לך לתרום וליצור שינוי.",
+    "phoneConsult": "סיוע טלפוני",
+    "phoneText": "התקשר אלינו ישירות כדי ללמוד עוד על התוכניות שלנו, שיטות התרומה או אפשרויות ההתנדבות. הצוות שלנו זמין במהלך שעות העבודה כדי לספק סיוע והכוונה אישית.",
+    "officeLocation": "מיקום המשרד",
+    "officeText": "בקר במשרד הצדקה שלנו כדי להכיר את הצוות, ללמוד יותר על היוזמות שלנו ולבחון דרכים בהן תוכל לתמוך. אנו מקבלים בברכה תורמים, מתנדבים ושותפים להצטרף אלינו ליצירת השפעה חיובית.",
+    "businessHours": "שעות פעילות ותמיכה",
+    "hoursText": "צוות הצדקה שלנו כאן כדי להדריך תורמים, מתנדבים ושותפים. ניתן ליצור איתנו קשר במהלך השעות הבאות, ואנו תמיד מוכנים לתמוך בצרכים דחופים ובסיוע הומניטרי.",
+    "monFri": "ב'-ו'",
+    "monFriHours": "9:00 - 17:00",
+    "saturday": "שבת",
+    "satHours": "10:00 - 14:00",
+    "emergency": "24/7",
+    "emergencyText": "תמיכה הומניטרית דחופה",
+    "responseTime": "< 24 שעות",
+    "responseLabel": "זמן תגובה ממוצע",
+    "faqTitle": "שאלות נפוצות",
+    "faqIntro": "מצא תשובות מהירות לשאלות נפוצות על הצדקה שלנו, תרומות, התנדבות ותוכניות תמיכה. חלק זה מכסה את הפרטים המרכזיים שיעזרו לך להשתתף וליצור שינוי.",
+    "faqQ1": "ש: איך אני יכול לתרום?",
+    "faqA1": "ת: ניתן לתרום באופן מקוון דרך האתר שלנו, בהעברה בנקאית או באופן אישי במשרדנו. כל התרומות הולכות ישירות לתמיכה בתוכניות שלנו ולעזרה לנזקקים.",
+    "faqQ2": "ש: האם אני יכול להתנדב אצלכם?",
+    "faqA2": "ת: כן, אנו מקבלים מתנדבים לחלוקות מזון, תוכניות קהילתיות, אירועי גיוס תרומות וקמפיינים להעלאת מודעות. ניתן להירשם כמתנדב דרך עמוד יצירת הקשר שלנו.",
+    "mapTitle": "מצא אותנו במפה",
+    "mapText": "בקר במשרדנו או התחבר איתנו באופן אישי. המיקום שלנו נגיש בקלות לייעוץ, פגישות ושיתופי פעולה.",
 
-    faqTitle: "שאלות נפוצות",
-    faqIntro: "מצא תשובות מהירות לשאלות נפוצות לגבי שירותי הנדל\"ן שלנו, ניהול נכסים והכוונת השקעות. חלק זה מכסה את הפרטים המרכזיים לעבודה עם הצוות המומחה שלנו.",
-    faqQ1: "ש: כמה זמן לוקח לקנות או למכור נכס?",
-    faqA1: "ת: משך הזמן תלוי בסוג הנכס, מיקומו והמסמכים המשפטיים. בממוצע, עסקאות מסתיימות תוך 2–6 שבועות לאחר סיום כל המסמכים והאישורים.",
-    faqQ2: "ש: האם אתם מספקים שירותי ניהול נכסים לאחר המכירה?",
-    faqA2: "ת: כן, אנו מציעים ניהול נכסים מתמשך הכולל שירותי דיירים, גביית שכר דירה, תמיכה בתחזוקה וייעוץ השקעות כדי לעזור לך למקסם את התשואה על הנכס שלך.",
-    mapTitle: "מצא אותנו במפה",
-    mapText: "בקר במשרד שלנו או התחבר איתנו באופן אישי. המיקום שלנו נגיש בקלות לייעוץ, פגישות ושיתופי פעולה.",
-
-        
+  
   }
 };
 
@@ -1563,107 +1355,6 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 
-
-
-<style>
-.footer {
-  background: #0a0a0a;
-  color: #fff;
-  padding: 50px 20px 20px;
-  font-family: Arial, sans-serif;
-}
-
-.footer-section1{
-  margin-right: 150px;
-}
-
-.footer-section4{
-  margin-left: 50px;
-}
-
-.footer .footer-content {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
-  margin-bottom: 30px;
-}
-
-.footer .footer-section h4 {
-  font-size: 1.2rem;
-  margin-bottom: 15px;
-  color: #f4f4f4;
-}
-
-.footer .footer-section ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer .footer-section ul li {
-  margin-bottom: 10px;
-  font-size: 0.95rem;
-  color: #ddd;
-}
-
-.footer .footer-section ul li a {
-  color: #ddd;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.footer .footer-section ul li a:hover {
-  color: #a68e4c;
-}
-
-.footer .social-links a {
-  margin-right: 12px;
-  font-size: 1.2rem;
-  color: #ddd;
-  transition: color 0.3s;
-}
-
-.footer .social-links a:hover {
-  color: #000000;
-}
-
-.footer .footer-bottom {
-  text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 15px;
-  font-size: 0.9rem;
-  color: #bbb;
-}
-
-@media (max-width: 900px) {
-  .footer .footer-content {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
-  .footer-section1{
-  margin-right: 5px;
-}
-}
-
-@media (max-width: 600px) {
-  .footer .footer-content {
-    grid-template-columns: 1fr;
-    text-align: left;
-  }
-  .footer .social-links {
-    margin-top: 15px;
-  }
-  .footer-section1{
-  margin-right: 10px;
-}
-  .footer-section2{
-  margin-right: 10px;
-}
-.footer-section4{
-  margin-left: 1px;
-}
-}
-</style>
 </div>
 
     <script src="assets/js/script.js"></script>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stackly - Realestate</title>
+    <title>Stackly - Charity</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -15,7 +15,7 @@
 
 <div id="content" style="display:none;"></div>
     <!-- Sticky Header -->
-    <header class="header">
+   <header class="header">
   <div class="container">
     <div class="nav-wrapper">
       <div class="logo">
@@ -36,21 +36,21 @@
             <a href="#" class="nav-link"><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
               <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
-              <li><a href="service1.html"><span data-i18n="service_1">Property Buying Assistance</span></a></li>
-              <li><a href="service2.html"><span data-i18n="service_2">Property Selling</span></a></li>
-              <li><a href="service3.html"><span data-i18n="service_3">Rental Services </span></a></li>
-              <li><a href="service4.html"><span data-i18n="service_4">Property Management</span></a></li>
-              <li><a href="service5.html"><span data-i18n="service_5">Real Estate Investment</span></a></li>
-              <li><a href="service6.html"><span data-i18n="service_6">Legal & Documentation Support</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Service_1</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Service_2</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Service_3</span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Service_4</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Service_5</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service_6">Service_6</span></a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
             <a href="#" class="nav-link"><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
               <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
-              <li><a href="blog1.html"><span data-i18n="blog_1">Smart Property Investments</span></a></li>
-              <li><a href="blog2.html"><span data-i18n="blog_2">Effective Property Management</span></a></li>
-              <li><a href="blog3.html"><span data-i18n="blog_3">Real Estate Market Trends</span></a></li>
+              <li><a href="blog1.html"><span data-i18n="blog_1">blog_1</span></a></li>
+              <li><a href="blog2.html"><span data-i18n="blog_2">blog_2</span></a></li>
+              <li><a href="blog3.html"><span data-i18n="blog_3">blog_3</span></a></li>
             </ul>
           </li>
           <li class="nav-item"><a href="contact.html" class="nav-link"><span data-i18n="contact">Contact</span></a></li>
@@ -62,6 +62,15 @@
           <span></span>
         </div>
       </nav>
+
+       <div class="lang-switcher">
+        <label for="langSelect"></label>
+        <select id="langSelect" onchange="changeLanguage(this.value)">
+          <option value="en">English</option>
+          <option value="ar">Arabic</option>
+          <option value="he">Hebrew</option>
+        </select>
+      </div>
 
       <div class="mobile-menu-wrapper">
         <ul class="hamburger-menu" id="hamburgerMenu">
@@ -77,21 +86,21 @@
             <span><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></span>
             <ul class="mobile-dropdown">
              <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
-              <li><a href="service1.html"><span data-i18n="service_1">Property Buying Assistance</span></a></li>
-              <li><a href="service2.html"><span data-i18n="service_2">Property Selling</span></a></li>
-              <li><a href="service3.html"><span data-i18n="service_3">Rental Services </span></a></li>
-              <li><a href="service4.html"><span data-i18n="service_4">Property Management</span></a></li>
-              <li><a href="service5.html"><span data-i18n="service_5">Real Estate Investment</span></a></li>
-              <li><a href="service6.html"><span data-i18n="service6">Legal & Documentation Support</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Service_1</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Service_2</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Service_3</span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Service_4</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Service_5</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service_6">Service_6</span></a></li>
             </ul>
           </li>
           <li class="mobile-dropdown-parent">
             <span><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></span>
             <ul class="mobile-dropdown">
                <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
-                <li><a href="blog1.html"><span data-i18n="blog_1">Smart Property Investments</span></a></li>
-                <li><a href="blog2.html"><span data-i18n="blog_2">Effective Property Management</span></a></li>
-                <li><a href="blog3.html"><span data-i18n="blog_3">Real Estate Market Trends</span></a></li>
+                <li><a href="blog1.html"><span data-i18n="blog_1">blog_1</span></a></li>
+                <li><a href="blog2.html"><span data-i18n="blog_2">blog_2</span></a></li>
+                <li><a href="blog3.html"><span data-i18n="blog_3">blog_3</span></a></li>
             </ul>
           </li>
           <li><a href="contact.html"><span data-i18n="contact">Contact</span></a></li>
@@ -99,70 +108,72 @@
         </ul>
       </div>
 
-      <div class="lang-switcher">
-        <label for="langSelect">Language:</label>
-        <select id="langSelect" onchange="changeLanguage(this.value)">
-          <option value="en">English</option>
-          <option value="ar">Arabic</option>
-          <option value="he">Hebrew</option>
-        </select>
-      </div>
+     
 
       <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
         <i class="fas fa-moon"></i>
       </button>
 
-      <div class="avatar-circle" title="Profile" id="avatarCircle">
-        <span id="avatarInitials"></span>
+     <div class="avatar-wrapper">
+        <div class="avatar-circle" title="Profile" id="avatarCircle">
+          <span id="avatarInitials">BA</span>
+        </div>
+        <div class="avatar-dropdown" id="avatarDropdown">
+          <ul>
+            <li>
+              <a href="index.html" id="logoutBtn">
+                <span data-i18n="logout">Logout</span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="avatar-dropdown" id="avatarDropdown">
-        <ul>
-          <li><a href="index.html" id="logoutBtn"><span data-i18n="logout">Logout</span></a></li>
-        </ul>
-      </div>
+      
     </div>
   </div>
 </header>
 
+
+
 <!-- section: 1 -->
 <section class="ai-hero-section">
   <video autoplay muted loop playsinline class="ai-hero-bg-video">
-    <source src="https://videos.pexels.com/video-files/6356429/6356429-hd_1920_1080_30fps.mp4" type="video/mp4">
+    <source src="video/site44-S5.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
   <div class="ai-hero-overlay">
     <div class="ai-hero-content">
-      <h1 class="ai-hero-title ai-glow animate-ai-slide-in" data-i18n="hero_title">Real Estate Investment</h1>
+      <h1 class="ai-hero-title ai-glow animate-ai-slide-in" data-i18n="hero_title">Child Welfare</h1>
     </div>
   </div>
 </section>
 
 <!-- Section : 2 -->
 <section class="ai-section">
-  <h1 class="ai-heading" data-i18n="sec2_heading">Real Estate Investment Planning</h1>
+  <h1 class="ai-heading" data-i18n="sec2_heading">Nurturing Every Child’s Future</h1>
   <div class="ai-content">
     <div class="ai-text">
       <p data-i18n="sec2_para">
-        Make informed investment decisions with our real estate investment planning services. 
-        We help investors analyze market trends, forecast returns, and optimize property portfolios 
-        to maximize growth and minimize risks.
+        Our Child Welfare initiatives focus on ensuring every child has access to education, healthcare, 
+        nutrition, and a safe environment. We work to protect children’s rights and empower them with the tools 
+        to grow into confident and capable individuals.
       </p>
 
       <ul class="hero-features fade-in-up delay-2">
-        <li><span>✔</span> <span data-i18n="sec2_point1">Market trend analysis & property evaluation</span></li>
-        <li><span>✔</span> <span data-i18n="sec2_point2">Investment portfolio optimization</span></li>
-        <li><span>✔</span> <span data-i18n="sec2_point3">Rental yield & ROI forecasting</span></li>
-        <li><span>✔</span> <span data-i18n="sec2_point4">Risk assessment & scenario planning</span></li>
-        <li><span>✔</span> <span data-i18n="sec2_point5">Customized investment strategies</span></li>
+        <li><span>✔</span> <span data-i18n="sec2_point1">Access to quality education</span></li>
+        <li><span>✔</span> <span data-i18n="sec2_point2">Healthcare & nutrition programs</span></li>
+        <li><span>✔</span> <span data-i18n="sec2_point3">Child protection & safety initiatives</span></li>
+        <li><span>✔</span> <span data-i18n="sec2_point4">Skill development & personality growth</span></li>
+        <li><span>✔</span> <span data-i18n="sec2_point5">Support for underprivileged children</span></li>
       </ul>
 
       <div class="ai-buttons">
-        <a href="services.html" class="btn btn-primary" data-i18n="sec2_btn1">Explore Services</a>
-        <a href="contact.html" class="btn btn-primary" data-i18n="sec2_btn2">Get Started</a>
+        <a href="services.html" class="btn btn-primary" data-i18n="sec2_btn1">Explore Programs</a>
+        <a href="contact.html" class="btn btn-primary" data-i18n="sec2_btn2">Get Involved</a>
       </div>
     </div>
     <div class="ai-image">
-      <img src="https://images.pexels.com/photos/4290722/pexels-photo-4290722.jpeg" alt="Real Estate Investment">
+      <img src="https://i.pinimg.com/736x/4b/44/25/4b4425c706a7627ae243049234614971.jpg" alt="Child Welfare">
     </div>
   </div>
 </section>
@@ -171,28 +182,28 @@
 <section class="advanced-features">
   <div class="advanced-features-container">
     <div class="features-header fade-in-up">
-      <h2 data-i18n="sec3_heading">Real Estate Investment Planning</h2>
+      <h2 data-i18n="sec3_heading">Our Child Welfare Focus</h2>
       <p data-i18n="sec3_para">
-        Make informed investment decisions with our real estate investment solutions. 
-        We help investors analyze properties, forecast returns, and optimize portfolios 
-        to maximize growth and minimize risks.
+        We design programs that safeguard children’s well-being, provide education, 
+        and nurture their growth. Our initiatives aim to ensure that every child lives 
+        a healthy, safe, and hopeful life.
       </p>
     </div>
     <div class="features-cards">
       <div class="feature-box fade-in-up delay-1">
-        <div class="feature-icon"><i class="fas fa-building"></i></div>
-        <h3 data-i18n="sec3_card1_title">Property Portfolio Planning</h3>
-        <p data-i18n="sec3_card1_para">Develop a strategic property investment portfolio. Identify high-potential assets and optimize your holdings for long-term growth.</p>
+        <div class="feature-icon"><i class="fas fa-book-reader"></i></div>
+        <h3 data-i18n="sec3_card1_title">Education for All</h3>
+        <p data-i18n="sec3_card1_para">Providing access to schools, scholarships, and learning resources for underprivileged children.</p>
       </div>
       <div class="feature-box fade-in-up delay-2">
-        <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
-        <h3 data-i18n="sec3_card2_title">Investment Return Forecasting</h3>
-        <p data-i18n="sec3_card2_para">Forecast rental yields and ROI using market data and trends. Plan acquisitions and sales to maximize financial returns.</p>
+        <div class="feature-icon"><i class="fas fa-apple-alt"></i></div>
+        <h3 data-i18n="sec3_card2_title">Health & Nutrition</h3>
+        <p data-i18n="sec3_card2_para">Ensuring proper healthcare, vaccinations, and nutrition for the overall well-being of children.</p>
       </div>
       <div class="feature-box fade-in-up delay-3">
-        <div class="feature-icon"><i class="fas fa-search-dollar"></i></div>
-        <h3 data-i18n="sec3_card3_title">Market Scenario Analysis</h3>
-        <p data-i18n="sec3_card3_para">Analyze different market conditions and property scenarios to make informed, risk-adjusted investment decisions.</p>
+        <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+        <h3 data-i18n="sec3_card3_title">Child Protection</h3>
+        <p data-i18n="sec3_card3_para">Protecting children from exploitation, abuse, and neglect by building safe and secure environments.</p>
       </div>
     </div>
   </div>
@@ -202,30 +213,29 @@
 <section class="development-process">
   <div class="development-process-container">
     <div class="process-header fade-in-up">
-      <h2 data-i18n="sec4_heading">Real Estate Investment Planning</h2>
+      <h2 data-i18n="sec4_heading">How We Empower Children</h2>
       <p data-i18n="sec4_para">
-        Make informed property investment decisions with our expert real estate planning services. 
-        We help investors evaluate opportunities, forecast returns, and optimize portfolios 
-        to maximize growth and minimize risks.
+        Our approach combines education, healthcare, nutrition, and child protection 
+        to ensure children not only survive but thrive and reach their fullest potential.
       </p>
     </div>
     <div class="process-row">
       <div class="process-image slide-in-right">
-        <img src="https://images.pexels.com/photos/3958958/pexels-photo-3958958.jpeg" alt="Real Estate Investment">
+        <img src="https://i.pinimg.com/1200x/51/7b/85/517b8571a183ecad5c972348e1fbae71.jpg" alt="Child Support">
       </div>
       <div class="process-content fade-in-up delay-1">
         <p class="process-intro" data-i18n="sec4_intro">
-          Our real estate investment planning solutions help investors analyze properties, forecast rental yields, 
-          and assess market trends. From portfolio optimization to risk analysis, we provide actionable insights 
-          that ensure profitable and sustainable investments.
+          Through our structured programs, we guide children from early learning 
+          to becoming confident, skilled, and independent individuals 
+          who contribute positively to society.
         </p>
         <div class="process-steps">
-          <div class="step"><span class="step-number">01</span><p data-i18n="sec4_step1">Identify High-Potential Properties</p></div>
-          <div class="step"><span class="step-number">02</span><p data-i18n="sec4_step2">Analyze Market Trends & Investment Risks</p></div>
-          <div class="step"><span class="step-number">03</span><p data-i18n="sec4_step3">Forecast Rental Yields & ROI</p></div>
-          <div class="step"><span class="step-number">04</span><p data-i18n="sec4_step4">Develop Investment Portfolio Strategy</p></div>
-          <div class="step"><span class="step-number">05</span><p data-i18n="sec4_step5">Plan Acquisition & Exit Strategies</p></div>
-          <div class="step"><span class="step-number">06</span><p data-i18n="sec4_step6">Monitor Performance & Adjust Investments</p></div>
+          <div class="step"><span class="step-number">01</span><p data-i18n="sec4_step1">Identify Vulnerable Children</p></div>
+          <div class="step"><span class="step-number">02</span><p data-i18n="sec4_step2">Provide Education & Learning Support</p></div>
+          <div class="step"><span class="step-number">03</span><p data-i18n="sec4_step3">Deliver Healthcare & Nutrition</p></div>
+          <div class="step"><span class="step-number">04</span><p data-i18n="sec4_step4">Ensure Safety & Protection</p></div>
+          <div class="step"><span class="step-number">05</span><p data-i18n="sec4_step5">Promote Skills & Personal Growth</p></div>
+          <div class="step"><span class="step-number">06</span><p data-i18n="sec4_step6">Build Long-Term Support Networks</p></div>
         </div>
       </div>
     </div>
@@ -236,28 +246,29 @@
 <section class="service-showcase">
   <div class="service-container">
     <div class="service-header animate-fade-up">
-      <h2 data-i18n="sec5_heading">Real Estate Investment Services</h2>
+      <h2 data-i18n="sec5_heading">Child Welfare Programs</h2>
       <p data-i18n="sec5_para">
-        Make smart property investment decisions with our professional real estate investment solutions. 
-        We help investors analyze markets, forecast returns, and optimize property portfolios for maximum growth and minimal risk.
+        We focus on holistic child development, ensuring children receive education, 
+        healthcare, nutrition, and protection. Our programs are designed to bring hope 
+        and build brighter futures for every child in need.
       </p>
     </div>
     <div class="service-grid">
       <div class="service-card animate-slide-up delay-1">
-        <h3 data-i18n="sec5_card1_title">Property Portfolio Planning</h3>
-        <p data-i18n="sec5_card1_para">Develop a strategic portfolio of properties to maximize returns while managing risk effectively.</p>
+        <h3 data-i18n="sec5_card1_title">Education Support</h3>
+        <p data-i18n="sec5_card1_para">Scholarships, school supplies, and access to quality education for underprivileged children.</p>
       </div>
       <div class="service-card animate-slide-up delay-2">
-        <h3 data-i18n="sec5_card2_title">Rental Yield & ROI Forecasting</h3>
-        <p data-i18n="sec5_card2_para">Predict rental income and return on investment to make informed acquisition and sale decisions.</p>
+        <h3 data-i18n="sec5_card2_title">Healthcare & Nutrition</h3>
+        <p data-i18n="sec5_card2_para">Health checkups, vaccinations, and nutrition programs to ensure healthy growth.</p>
       </div>
       <div class="service-card animate-slide-up delay-3">
-        <h3 data-i18n="sec5_card3_title">Market Trend Analysis</h3>
-        <p data-i18n="sec5_card3_para">Analyze real estate market trends to identify high-potential investments and opportunities.</p>
+        <h3 data-i18n="sec5_card3_title">Child Safety</h3>
+        <p data-i18n="sec5_card3_para">Awareness campaigns and interventions to protect children from abuse and exploitation.</p>
       </div>
       <div class="service-card animate-slide-up delay-4">
-        <h3 data-i18n="sec5_card4_title">Scenario Planning & Risk Assessment</h3>
-        <p data-i18n="sec5_card4_para">Evaluate different investment scenarios to anticipate risks and ensure sustainable growth of your property portfolio.</p>
+        <h3 data-i18n="sec5_card4_title">Skill & Personality Development</h3>
+        <p data-i18n="sec5_card4_para">Workshops and activities that encourage creativity, confidence, and leadership in children.</p>
       </div>
     </div>
   </div>
@@ -267,22 +278,22 @@
 <section class="bookkeeping-services">
   <div class="services-container">
     <div class="services-image animate-slide-in">
-      <img src="https://images.pexels.com/photos/10827225/pexels-photo-10827225.jpeg" alt="Real Estate Investment">
+      <img src="https://i.pinimg.com/736x/5e/8f/c9/5e8fc94a13771b9423537b5fe952eee8.jpg" alt="Child Welfare">
     </div>
     <div class="services-content">
-      <h2 class="animate-fade-up" data-i18n="sec6_heading">Expert Real Estate Investment Planning</h2>
+      <h2 class="animate-fade-up" data-i18n="sec6_heading">Building a Brighter Tomorrow</h2>
       <p class="animate-fade-up delay-1" style="text-align: justify;" data-i18n="sec6_para">
-        Our real estate investment services help investors make informed property decisions, optimize portfolios, 
-        and forecast returns. From analyzing potential acquisitions to evaluating market trends, we provide insights 
-        that maximize profitability and minimize risk.
+        We aim to create lasting impact in the lives of children by providing them with 
+        education, healthcare, nutrition, and a safe environment. Together, we can 
+        ensure that every child has the chance to dream, learn, and achieve.
       </p>
       <div class="service-card animate-fade-up delay-2">
-        <h3 data-i18n="sec6_card1_title">Property Portfolio Strategy</h3>
-        <p data-i18n="sec6_card1_para">We design strategic property portfolios tailored to your investment goals, balancing risk and growth potential.</p>
+        <h3 data-i18n="sec6_card1_title">Long-Term Child Development</h3>
+        <p data-i18n="sec6_card1_para">Programs that support children’s growth from early years to adulthood with guidance and care.</p>
       </div>
       <div class="service-card animate-fade-up delay-3">
-        <h3 data-i18n="sec6_card2_title">ROI & Market Forecasting</h3>
-        <p data-i18n="sec6_card2_para">Gain actionable insights into rental yields, market trends, and return on investment to guide smart acquisitions.</p>
+        <h3 data-i18n="sec6_card2_title">Community-Based Child Support</h3>
+        <p data-i18n="sec6_card2_para">Creating safe spaces and networks within communities to protect and nurture children.</p>
       </div>
     </div>
   </div>
@@ -292,9 +303,9 @@
 <section class="contact-banner section-padding">
   <div class="container">
     <div class="contact-banner-content">
-      <h2 data-i18n="sec7_heading">Ready to Grow Your Property Portfolio?</h2>
-      <p data-i18n="sec7_para">Let’s create a tailored real estate investment plan that maximizes returns, minimizes risks, and builds long-term wealth.</p>
-      <a href="contact.html" class="btn btn-primary" data-i18n="sec7_btn">Start Investing</a>
+      <h2 data-i18n="sec7_heading">Join Us in Protecting Children’s Futures</h2>
+      <p data-i18n="sec7_para">Together, we can give children the care, education, and opportunities they deserve. Be a part of their journey to a brighter tomorrow.</p>
+      <a href="contact.html" class="btn btn-primary" data-i18n="sec7_btn">Support Now</a>
     </div>
   </div>
 </section>
@@ -304,275 +315,272 @@
 // Translation dictionary
 const translations = {
   en: {
-   "home": "Home",
+    "home": "Home",
     "home1": "Home 1",
     "home2": "Home 2",
     "about": "About",
     "services": "Services",
     "allServices": "All Services",
-    "service_1": "Property Buying Assistance",
-    "service_2": "Property Selling",
-    "service_3": "Rental Services",
-    "service_4": "Property Management",
-    "service_5": "Real Estate Investment",
-    "service_6": "Legal & Documentation Support",
+    "service_1": "Service_1",
+    "service_2": "Service_2",
+    "service_3": "Service_3",
+    "service_4": "Service_4",
+    "service_5": "Service_5",
+    "service_6": "Service_6",
     "blog": "Blog",
     "allPosts": "All Posts",
-    "blog_1": "Smart Property Investments",
-    "blog_2": "Effective Property Management",
-    "blog_3": "Real Estate Market Trends",
+    "blog_1": "Blog_1",
+    "blog_2": "Blog_2",
+    "blog_3": "Blog_3",
     "contact": "Contact",
     "logout": "Logout",
 
-    "footer_about": "Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.",
-    "footer_quickLinks": "Quick Links",
+     "footer_about": "Dedicated charity organization, empowering communities through education, healthcare, food support, and sustainable initiatives to create lasting impact and hope.",
+    "footer_quicklinks": "Quick Links",
     "footer_home": "Home",
     "footer_home2": "Home 2",
-    "footer_aboutUs": "About Us",
+    "footer_aboutus": "About Us",
     "footer_services": "Services",
     "footer_blog": "Blog",
     "footer_contact": "Contact",
-    "footer_servicesTitle": "Services",
-    "footer_service1": "Property Buying Assistance",
-    "footer_service2": "Property Selling",
-    "footer_service3": "Rental Services",
-    "footer_service4": "Property Management",
-    "footer_service5": "Real Estate Investment",
-    "footer_service6": "Legal & Documentation Support",
-    "footer_contactInfo": "Contact Info",
-    "footer_email": "contact@stackly.ai",
+    "footer_services_title": "Services",
+    "footer_service1": "Food Distribution",
+    "footer_service2": "Education Support",
+    "footer_service3": "Healthcare Camps",
+    "footer_service4": "Women Empowerment",
+    "footer_service5": "Child Welfare",
+    "footer_service6": "Disaster Relief",
+    "footer_contactinfo": "Contact Info",
+    "footer_email": "contact@stackly.in",
     "footer_phone": "+1 (555) 123-4567",
-    "footer_address": "123 AI Innovation Drive",
-    "footer_bottom": "© 2025 Stackly. All rights reserved.",
-
-    "hero_title": "Real Estate Investment",
-    "sec2_heading": "Real Estate Investment Planning",
-    "sec2_para": "Make informed investment decisions with our real estate investment planning services. We help investors analyze market trends, forecast returns, and optimize property portfolios to maximize growth and minimize risks.",
-    "sec2_point1": "Market trend analysis & property evaluation",
-    "sec2_point2": "Investment portfolio optimization",
-    "sec2_point3": "Rental yield & ROI forecasting",
-    "sec2_point4": "Risk assessment & scenario planning",
-    "sec2_point5": "Customized investment strategies",
-    "sec2_btn1": "Explore Services",
-    "sec2_btn2": "Get Started",
-    "sec3_heading": "Real Estate Investment Planning",
-    "sec3_para": "Make informed investment decisions with our real estate investment solutions. We help investors analyze properties, forecast returns, and optimize portfolios to maximize growth and minimize risks.",
-    "sec3_card1_title": "Property Portfolio Planning",
-    "sec3_card1_para": "Develop a strategic property investment portfolio. Identify high-potential assets and optimize your holdings for long-term growth.",
-    "sec3_card2_title": "Investment Return Forecasting",
-    "sec3_card2_para": "Forecast rental yields and ROI using market data and trends. Plan acquisitions and sales to maximize financial returns.",
-    "sec3_card3_title": "Market Scenario Analysis",
-    "sec3_card3_para": "Analyze different market conditions and property scenarios to make informed, risk-adjusted investment decisions.",
-    "sec4_heading": "Real Estate Investment Planning",
-    "sec4_para": "Make informed property investment decisions with our expert real estate planning services. We help investors evaluate opportunities, forecast returns, and optimize portfolios to maximize growth and minimize risks.",
-    "sec4_intro": "Our real estate investment planning solutions help investors analyze properties, forecast rental yields, and assess market trends. From portfolio optimization to risk analysis, we provide actionable insights that ensure profitable and sustainable investments.",
-    "sec4_step1": "Identify High-Potential Properties",
-    "sec4_step2": "Analyze Market Trends & Investment Risks",
-    "sec4_step3": "Forecast Rental Yields & ROI",
-    "sec4_step4": "Develop Investment Portfolio Strategy",
-    "sec4_step5": "Plan Acquisition & Exit Strategies",
-    "sec4_step6": "Monitor Performance & Adjust Investments",
-    "sec5_heading": "Real Estate Investment Services",
-    "sec5_para": "Make smart property investment decisions with our professional real estate investment solutions. We help investors analyze markets, forecast returns, and optimize property portfolios for maximum growth and minimal risk.",
-    "sec5_card1_title": "Property Portfolio Planning",
-    "sec5_card1_para": "Develop a strategic portfolio of properties to maximize returns while managing risk effectively.",
-    "sec5_card2_title": "Rental Yield & ROI Forecasting",
-    "sec5_card2_para": "Predict rental income and return on investment to make informed acquisition and sale decisions.",
-    "sec5_card3_title": "Market Trend Analysis",
-    "sec5_card3_para": "Analyze real estate market trends to identify high-potential investments and opportunities.",
-    "sec5_card4_title": "Scenario Planning & Risk Assessment",
-    "sec5_card4_para": "Evaluate different investment scenarios to anticipate risks and ensure sustainable growth of your property portfolio.",
-    "sec6_heading": "Expert Real Estate Investment Planning",
-    "sec6_para": "Our real estate investment services help investors make informed property decisions, optimize portfolios, and forecast returns. From analyzing potential acquisitions to evaluating market trends, we provide insights that maximize profitability and minimize risk.",
-    "sec6_card1_title": "Property Portfolio Strategy",
-    "sec6_card1_para": "We design strategic property portfolios tailored to your investment goals, balancing risk and growth potential.",
-    "sec6_card2_title": "ROI & Market Forecasting",
-    "sec6_card2_para": "Gain actionable insights into rental yields, market trends, and return on investment to guide smart acquisitions.",
-    "sec7_heading": "Ready to Grow Your Property Portfolio?",
-    "sec7_para": "Let’s create a tailored real estate investment plan that maximizes returns, minimizes risks, and builds long-term wealth.",
-    "sec7_btn": "Start Investing",
-       
+    "footer_location": "123 Hyderabad, India",
+    "footer_rights": "© 2025 Stackly. All rights reserved.",
+  
+     "hero_title": "Child Welfare",
+    "sec2_heading": "Nurturing Every Child’s Future",
+    "sec2_para": "Our Child Welfare initiatives focus on ensuring every child has access to education, healthcare, nutrition, and a safe environment. We work to protect children’s rights and empower them with the tools to grow into confident and capable individuals.",
+    "sec2_point1": "Access to quality education",
+    "sec2_point2": "Healthcare & nutrition programs",
+    "sec2_point3": "Child protection & safety initiatives",
+    "sec2_point4": "Skill development & personality growth",
+    "sec2_point5": "Support for underprivileged children",
+    "sec2_btn1": "Explore Programs",
+    "sec2_btn2": "Get Involved",
+    "sec3_heading": "Our Child Welfare Focus",
+    "sec3_para": "We design programs that safeguard children’s well-being, provide education, and nurture their growth. Our initiatives aim to ensure that every child lives a healthy, safe, and hopeful life.",
+    "sec3_card1_title": "Education for All",
+    "sec3_card1_para": "Providing access to schools, scholarships, and learning resources for underprivileged children.",
+    "sec3_card2_title": "Health & Nutrition",
+    "sec3_card2_para": "Ensuring proper healthcare, vaccinations, and nutrition for the overall well-being of children.",
+    "sec3_card3_title": "Child Protection",
+    "sec3_card3_para": "Protecting children from exploitation, abuse, and neglect by building safe and secure environments.",
+    "sec4_heading": "How We Empower Children",
+    "sec4_para": "Our approach combines education, healthcare, nutrition, and child protection to ensure children not only survive but thrive and reach their fullest potential.",
+    "sec4_intro": "Through our structured programs, we guide children from early learning to becoming confident, skilled, and independent individuals who contribute positively to society.",
+    "sec4_step1": "Identify Vulnerable Children",
+    "sec4_step2": "Provide Education & Learning Support",
+    "sec4_step3": "Deliver Healthcare & Nutrition",
+    "sec4_step4": "Ensure Safety & Protection",
+    "sec4_step5": "Promote Skills & Personal Growth",
+    "sec4_step6": "Build Long-Term Support Networks",
+    "sec5_heading": "Child Welfare Programs",
+    "sec5_para": "We focus on holistic child development, ensuring children receive education, healthcare, nutrition, and protection. Our programs are designed to bring hope and build brighter futures for every child in need.",
+    "sec5_card1_title": "Education Support",
+    "sec5_card1_para": "Scholarships, school supplies, and access to quality education for underprivileged children.",
+    "sec5_card2_title": "Healthcare & Nutrition",
+    "sec5_card2_para": "Health checkups, vaccinations, and nutrition programs to ensure healthy growth.",
+    "sec5_card3_title": "Child Safety",
+    "sec5_card3_para": "Awareness campaigns and interventions to protect children from abuse and exploitation.",
+    "sec5_card4_title": "Skill & Personality Development",
+    "sec5_card4_para": "Workshops and activities that encourage creativity, confidence, and leadership in children.",
+    "sec6_heading": "Building a Brighter Tomorrow",
+    "sec6_para": "We aim to create lasting impact in the lives of children by providing them with education, healthcare, nutrition, and a safe environment. Together, we can ensure that every child has the chance to dream, learn, and achieve.",
+    "sec6_card1_title": "Long-Term Child Development",
+    "sec6_card1_para": "Programs that support children’s growth from early years to adulthood with guidance and care.",
+    "sec6_card2_title": "Community-Based Child Support",
+    "sec6_card2_para": "Creating safe spaces and networks within communities to protect and nurture children.",
+    "sec7_heading": "Join Us in Protecting Children’s Futures",
+    "sec7_para": "Together, we can give children the care, education, and opportunities they deserve. Be a part of their journey to a brighter tomorrow.",
+    "sec7_btn": "Support Now",  
   },
   ar: {
-   "home": "الرئيسية",
-    "home1": "الصفحة الرئيسية 1",
-    "home2": "الصفحة الرئيسية 2",
-    "about": "من نحن",
+     "home": "الرئيسية",
+    "home1": "الصفحة 1",
+    "home2": "الصفحة 2",
+    "about": "معلومات عنا",
     "services": "الخدمات",
     "allServices": "جميع الخدمات",
-    "service_1": "مساعدة في شراء العقارات",
-    "service_2": "بيع العقارات",
-    "service_3": "خدمات الإيجار",
-    "service_4": "إدارة العقارات",
-    "service_5": "الاستثمار العقاري",
-    "service_6": "الدعم القانوني والتوثيق",
+    "service_1": "الخدمة_1",
+    "service_2": "الخدمة_2",
+    "service_3": "الخدمة_3",
+    "service_4": "الخدمة_4",
+    "service_5": "الخدمة_5",
+    "service_6": "الخدمة_6",
     "blog": "المدونة",
     "allPosts": "جميع المقالات",
-    "blog_1": "الاستثمارات العقارية الذكية",
-    "blog_2": "إدارة العقارات الفعالة",
-    "blog_3": "اتجاهات سوق العقارات",
+    "blog_1": "مدونة_1",
+    "blog_2": "مدونة_2",
+    "blog_3": "مدونة_3",
     "contact": "اتصل بنا",
-    "logout": "تسجيل خروج",
+    "logout": "تسجيل الخروج",
 
-    "footer_about": "مزود رائد لحلول الذكاء الاصطناعي، يساعد الشركات على التحول من خلال التكنولوجيا الذكية وأنظمة الأتمتة المبتكرة.",
-    "footer_quickLinks": "روابط سريعة",
+    "footer_about": "منظمة خيرية مكرسة، تمكّن المجتمعات من خلال التعليم والرعاية الصحية ودعم الغذاء والمبادرات المستدامة لخلق تأثير دائم وأمل.",
+    "footer_quicklinks": "روابط سريعة",
     "footer_home": "الرئيسية",
     "footer_home2": "الصفحة الرئيسية 2",
-    "footer_aboutUs": "من نحن",
+    "footer_aboutus": "معلومات عنا",
     "footer_services": "الخدمات",
-    "footer_blog": "المدونة",
+    "footer_blog": "مدونة",
     "footer_contact": "اتصل بنا",
-    "footer_servicesTitle": "الخدمات",
-    "footer_service1": "مساعدة في شراء العقارات",
-    "footer_service2": "بيع العقارات",
-    "footer_service3": "خدمات الإيجار",
-    "footer_service4": "إدارة الممتلكات",
-    "footer_service5": "الاستثمار العقاري",
-    "footer_service6": "الدعم القانوني والتوثيق",
-    "footer_contactInfo": "معلومات الاتصال",
-    "footer_email": "contact@stackly.ai",
+    "footer_services_title": "الخدمات",
+    "footer_service1": "توزيع الغذاء",
+    "footer_service2": "دعم التعليم",
+    "footer_service3": "المخيمات الطبية",
+    "footer_service4": "تمكين المرأة",
+    "footer_service5": "رعاية الأطفال",
+    "footer_service6": "الإغاثة في الكوارث",
+    "footer_contactinfo": "معلومات الاتصال",
+    "footer_email": "contact@stackly.in",
     "footer_phone": "+1 (555) 123-4567",
-    "footer_address": "123 طريق ابتكار الذكاء الاصطناعي",
-    "footer_bottom": "© 2025 Stackly. جميع الحقوق محفوظة.",
-
-     "hero_title": "الاستثمار العقاري",
-    "sec2_heading": "تخطيط الاستثمار العقاري",
-    "sec2_para": "اتخذ قرارات استثمارية مستنيرة من خلال خدمات تخطيط الاستثمار العقاري لدينا. نحن نساعد المستثمرين على تحليل اتجاهات السوق، وتوقع العوائد، وتحسين المحافظ العقارية لتعظيم النمو وتقليل المخاطر.",
-    "sec2_point1": "تحليل اتجاهات السوق وتقييم العقارات",
-    "sec2_point2": "تحسين المحافظ الاستثمارية",
-    "sec2_point3": "توقع العوائد وإيرادات الإيجار",
-    "sec2_point4": "تقييم المخاطر والتخطيط للسيناريوهات",
-    "sec2_point5": "استراتيجيات استثمار مخصصة",
-    "sec2_btn1": "اكتشف الخدمات",
-    "sec2_btn2": "ابدأ الآن",
-    "sec3_heading": "تخطيط الاستثمار العقاري",
-    "sec3_para": "اتخذ قرارات استثمارية مستنيرة مع حلول الاستثمار العقاري لدينا. نحن نساعد المستثمرين على تحليل العقارات، وتوقع العوائد، وتحسين المحافظ لتعظيم النمو وتقليل المخاطر.",
-    "sec3_card1_title": "تخطيط المحافظ العقارية",
-    "sec3_card1_para": "قم بتطوير محفظة استثمارية عقارية استراتيجية. حدد الأصول عالية الإمكانات وحسن ممتلكاتك للنمو طويل الأجل.",
-    "sec3_card2_title": "توقع عوائد الاستثمار",
-    "sec3_card2_para": "توقع عوائد الإيجار والعائد على الاستثمار باستخدام بيانات السوق والاتجاهات. خطط لعمليات الشراء والبيع لتعظيم العوائد المالية.",
-    "sec3_card3_title": "تحليل سيناريوهات السوق",
-    "sec3_card3_para": "قم بتحليل ظروف السوق المختلفة والسيناريوهات العقارية لاتخاذ قرارات استثمارية مدروسة تراعي المخاطر.",
-    "sec4_heading": "تخطيط الاستثمار العقاري",
-    "sec4_para": "اتخذ قرارات استثمارية مدروسة في العقارات مع خدمات التخطيط العقاري الاحترافية لدينا. نحن نساعد المستثمرين على تقييم الفرص، وتوقع العوائد، وتحسين المحافظ لتعظيم النمو وتقليل المخاطر.",
-    "sec4_intro": "تساعد حلول تخطيط الاستثمار العقاري لدينا المستثمرين على تحليل العقارات، وتوقع عوائد الإيجار، وتقييم اتجاهات السوق. بدءًا من تحسين المحافظ إلى تحليل المخاطر، نقدم رؤى عملية تضمن استثمارات مربحة ومستدامة.",
-    "sec4_step1": "تحديد العقارات عالية الإمكانات",
-    "sec4_step2": "تحليل اتجاهات السوق ومخاطر الاستثمار",
-    "sec4_step3": "توقع عوائد الإيجار والعائد على الاستثمار",
-    "sec4_step4": "تطوير استراتيجية محفظة استثمارية",
-    "sec4_step5": "تخطيط استراتيجيات الشراء والخروج",
-    "sec4_step6": "مراقبة الأداء وتعديل الاستثمارات",
-    "sec5_heading": "خدمات الاستثمار العقاري",
-    "sec5_para": "اتخذ قرارات استثمارية ذكية في العقارات من خلال حلولنا المهنية. نحن نساعد المستثمرين على تحليل الأسواق، وتوقع العوائد، وتحسين المحافظ لتحقيق أقصى نمو وأدنى مخاطرة.",
-    "sec5_card1_title": "تخطيط المحافظ العقارية",
-    "sec5_card1_para": "طور محفظة عقارية استراتيجية لتعظيم العوائد وإدارة المخاطر بفعالية.",
-    "sec5_card2_title": "توقع عوائد الإيجار والعائد على الاستثمار",
-    "sec5_card2_para": "توقع دخل الإيجار والعائد على الاستثمار لاتخاذ قرارات شراء وبيع مستنيرة.",
-    "sec5_card3_title": "تحليل اتجاهات السوق",
-    "sec5_card3_para": "قم بتحليل اتجاهات سوق العقارات لتحديد الاستثمارات والفرص عالية الإمكانات.",
-    "sec5_card4_title": "التخطيط للسيناريوهات وتقييم المخاطر",
-    "sec5_card4_para": "قم بتقييم سيناريوهات الاستثمار المختلفة للتنبؤ بالمخاطر وضمان نمو مستدام لمحفظتك العقارية.",
-    "sec6_heading": "تخطيط استثمار عقاري احترافي",
-    "sec6_para": "تساعد خدماتنا في الاستثمار العقاري المستثمرين على اتخاذ قرارات عقارية مدروسة، وتحسين المحافظ، وتوقع العوائد. بدءًا من تحليل عمليات الاستحواذ المحتملة إلى تقييم اتجاهات السوق، نقدم رؤى تعظم الأرباح وتقلل المخاطر.",
-    "sec6_card1_title": "استراتيجية المحافظ العقارية",
-    "sec6_card1_para": "نصمم محافظ عقارية استراتيجية مصممة خصيصًا لأهدافك الاستثمارية، مع تحقيق التوازن بين المخاطر وإمكانات النمو.",
-    "sec6_card2_title": "توقعات السوق والعائد على الاستثمار",
-    "sec6_card2_para": "احصل على رؤى عملية حول عوائد الإيجار، واتجاهات السوق، والعائد على الاستثمار لتوجيه عمليات الاستحواذ الذكية.",
-    "sec7_heading": "هل أنت مستعد لتنمية محفظتك العقارية؟",
-    "sec7_para": "دعنا ننشئ خطة استثمار عقاري مخصصة تعظم العوائد، وتقلل المخاطر، وتبني ثروة طويلة الأجل.",
-    "sec7_btn": "ابدأ الاستثمار",
+    "footer_location": "123 حيدر أباد، الهند",
+    "footer_rights": "© 2025 Stackly. جميع الحقوق محفوظة.",
+  
+    "hero_title": "رعاية الطفل",
+    "sec2_heading": "رعاية مستقبل كل طفل",
+    "sec2_para": "تركز مبادرات رعاية الطفل لدينا على ضمان حصول كل طفل على التعليم والرعاية الصحية والتغذية والبيئة الآمنة. نحن نعمل على حماية حقوق الأطفال وتمكينهم بالأدوات التي تساعدهم على النمو ليصبحوا أفرادًا واثقين وقادرين.",
+    "sec2_point1": "الوصول إلى التعليم الجيد",
+    "sec2_point2": "برامج الرعاية الصحية والتغذية",
+    "sec2_point3": "مبادرات حماية الأطفال وسلامتهم",
+    "sec2_point4": "تنمية المهارات والنمو الشخصي",
+    "sec2_point5": "دعم الأطفال المحرومين",
+    "sec2_btn1": "استكشاف البرامج",
+    "sec2_btn2": "شارك الآن",
+    "sec3_heading": "تركيزنا على رعاية الطفل",
+    "sec3_para": "نصمم برامج تحمي رفاهية الأطفال وتوفر التعليم وتغذي نموهم. تهدف مبادراتنا إلى ضمان أن يعيش كل طفل حياة صحية وآمنة ومليئة بالأمل.",
+    "sec3_card1_title": "التعليم للجميع",
+    "sec3_card1_para": "توفير الوصول إلى المدارس والمنح الدراسية وموارد التعلم للأطفال المحرومين.",
+    "sec3_card2_title": "الصحة والتغذية",
+    "sec3_card2_para": "ضمان الرعاية الصحية المناسبة والتطعيمات والتغذية من أجل الرفاهية العامة للأطفال.",
+    "sec3_card3_title": "حماية الطفل",
+    "sec3_card3_para": "حماية الأطفال من الاستغلال والإساءة والإهمال من خلال بناء بيئات آمنة ومأمونة.",
+    "sec4_heading": "كيف نمكّن الأطفال",
+    "sec4_para": "يجمع نهجنا بين التعليم والرعاية الصحية والتغذية وحماية الأطفال لضمان ألا ينجو الأطفال فقط بل يزدهرون ويصلون إلى أقصى إمكاناتهم.",
+    "sec4_intro": "من خلال برامجنا المنظمة، نرشد الأطفال من التعلم المبكر ليصبحوا أفرادًا واثقين وماهرين ومستقلين يساهمون بشكل إيجابي في المجتمع.",
+    "sec4_step1": "تحديد الأطفال الضعفاء",
+    "sec4_step2": "تقديم التعليم ودعم التعلم",
+    "sec4_step3": "تقديم الرعاية الصحية والتغذية",
+    "sec4_step4": "ضمان السلامة والحماية",
+    "sec4_step5": "تعزيز المهارات والنمو الشخصي",
+    "sec4_step6": "بناء شبكات دعم طويلة الأمد",
+    "sec5_heading": "برامج رعاية الطفل",
+    "sec5_para": "نركز على التنمية الشاملة للطفل، وضمان حصول الأطفال على التعليم والرعاية الصحية والتغذية والحماية. تم تصميم برامجنا لجلب الأمل وبناء مستقبل أكثر إشراقًا لكل طفل محتاج.",
+    "sec5_card1_title": "دعم التعليم",
+    "sec5_card1_para": "المنح الدراسية واللوازم المدرسية والوصول إلى التعليم الجيد للأطفال المحرومين.",
+    "sec5_card2_title": "الرعاية الصحية والتغذية",
+    "sec5_card2_para": "الفحوصات الصحية والتطعيمات وبرامج التغذية لضمان النمو الصحي.",
+    "sec5_card3_title": "سلامة الطفل",
+    "sec5_card3_para": "حملات توعية وتدخلات لحماية الأطفال من الإساءة والاستغلال.",
+    "sec5_card4_title": "تنمية المهارات والشخصية",
+    "sec5_card4_para": "ورش عمل وأنشطة تشجع على الإبداع والثقة والقيادة لدى الأطفال.",
+    "sec6_heading": "بناء غد أكثر إشراقًا",
+    "sec6_para": "نهدف إلى خلق تأثير دائم في حياة الأطفال من خلال تزويدهم بالتعليم والرعاية الصحية والتغذية والبيئة الآمنة. معًا، يمكننا ضمان أن يحصل كل طفل على فرصة للحلم والتعلم والإنجاز.",
+    "sec6_card1_title": "التنمية طويلة الأمد للطفل",
+    "sec6_card1_para": "برامج تدعم نمو الأطفال من سنواتهم المبكرة حتى مرحلة البلوغ من خلال التوجيه والرعاية.",
+    "sec6_card2_title": "دعم الطفل المجتمعي",
+    "sec6_card2_para": "إنشاء مساحات آمنة وشبكات داخل المجتمعات لحماية الأطفال ورعايتهم.",
+    "sec7_heading": "انضم إلينا في حماية مستقبل الأطفال",
+    "sec7_para": "معًا، يمكننا أن نقدم للأطفال الرعاية والتعليم والفرص التي يستحقونها. كن جزءًا من رحلتهم نحو غد أكثر إشراقًا.",
+    "sec7_btn": "ادعم الآن",
 
      },
   he: {
- "home": "בית",
-    "home1": "דף הבית 1",
-    "home2": "דף הבית 2",
+    "home": "בית",
+    "home1": "דף 1",
+    "home2": "דף 2",
     "about": "אודות",
     "services": "שירותים",
     "allServices": "כל השירותים",
-    "service_1": "סיוע ברכישת נכסים",
-    "service_2": "מכירת נכסים",
-    "service_3": "שירותי השכרה",
-    "service_4": "ניהול נכסים",
-    "service_5": "השקעות נדל״ן",
-    "service_6": "תמיכה משפטית ותיעוד",
+    "service_1": "שירות_1",
+    "service_2": "שירות_2",
+    "service_3": "שירות_3",
+    "service_4": "שירות_4",
+    "service_5": "שירות_5",
+    "service_6": "שירות_6",
     "blog": "בלוג",
     "allPosts": "כל הפוסטים",
-    "blog_1": "השקעות נדל״ן חכמות",
-    "blog_2": "ניהול נכסים יעיל",
-    "blog_3": "מגמות שוק הנדל״ן",
+    "blog_1": "בלוג_1",
+    "blog_2": "בלוג_2",
+    "blog_3": "בלוג_3",
     "contact": "צור קשר",
     "logout": "התנתק",
 
-    "footer_about": "ספק מוביל של פתרונות בינה מלאכותית, מסייע לעסקים להשתנות באמצעות טכנולוגיה חכמה ומערכות אוטומציה חדשניות.",
-    "footer_quickLinks": "קישורים מהירים",
+    "footer_about": "ארגון צדקה מסור, המעצים קהילות באמצעות חינוך, בריאות, תמיכת מזון ויוזמות ברות קיימא ליצירת השפעה מתמשכת ותקווה.",
+    "footer_quicklinks": "קישורים מהירים",
     "footer_home": "בית",
     "footer_home2": "בית 2",
-    "footer_aboutUs": "אודותינו",
+    "footer_aboutus": "אודותינו",
     "footer_services": "שירותים",
     "footer_blog": "בלוג",
     "footer_contact": "צור קשר",
-    "footer_servicesTitle": "שירותים",
-    "footer_service1": "סיוע ברכישת נכסים",
-    "footer_service2": "מכירת נכסים",
-    "footer_service3": "שירותי השכרה",
-    "footer_service4": "ניהול נכסים",
-    "footer_service5": "השקעות נדל\"ן",
-    "footer_service6": "תמיכה משפטית ותיעוד",
-    "footer_contactInfo": "פרטי קשר",
-    "footer_email": "contact@stackly.ai",
+    "footer_services_title": "שירותים",
+    "footer_service1": "חלוקת מזון",
+    "footer_service2": "תמיכה בחינוך",
+    "footer_service3": "מחנות בריאות",
+    "footer_service4": "העצמת נשים",
+    "footer_service5": "רווחת ילדים",
+    "footer_service6": "סיוע באסונות",
+    "footer_contactinfo": "פרטי קשר",
+    "footer_email": "contact@stackly.in",
     "footer_phone": "+1 (555) 123-4567",
-    "footer_address": "123 רחוב חדשנות בינה מלאכותית",
-    "footer_bottom": "© 2025 Stackly. כל הזכויות שמורות.",
-
-    "hero_title": "השקעות נדל\"ן",
-    "sec2_heading": "תכנון השקעות נדל\"ן",
-    "sec2_para": "קבל החלטות השקעה מושכלות עם שירותי תכנון השקעות נדל\"ן שלנו. אנו עוזרים למשקיעים לנתח מגמות שוק, לחזות תשואות ולייעל תיקי נכסים כדי למקסם את הצמיחה ולהפחית סיכונים.",
-    "sec2_point1": "ניתוח מגמות שוק והערכת נכסים",
-    "sec2_point2": "ייעול תיקי השקעות",
-    "sec2_point3": "תחזיות תשואות שכירות ותשואה על ההשקעה",
-    "sec2_point4": "הערכת סיכונים ותכנון תרחישים",
-    "sec2_point5": "אסטרטגיות השקעה מותאמות אישית",
-    "sec2_btn1": "גלה שירותים",
-    "sec2_btn2": "התחל עכשיו",
-    "sec3_heading": "תכנון השקעות נדל\"ן",
-    "sec3_para": "קבל החלטות השקעה חכמות עם פתרונות ההשקעה שלנו בנדל\"ן. אנו עוזרים למשקיעים לנתח נכסים, לחזות תשואות ולייעל תיקי השקעות כדי למקסם צמיחה ולהפחית סיכונים.",
-    "sec3_card1_title": "תכנון תיקי השקעות נדל\"ן",
-    "sec3_card1_para": "פיתוח תיק השקעות נדל\"ן אסטרטגי. זיהוי נכסים בעלי פוטנציאל גבוה ואופטימיזציה של אחזקותיך לצמיחה ארוכת טווח.",
-    "sec3_card2_title": "תחזית תשואות השקעה",
-    "sec3_card2_para": "חיזוי תשואות שכירות ותשואה על ההשקעה באמצעות נתוני שוק ומגמות. תכנון רכישות ומכירות למקסום התשואות.",
-    "sec3_card3_title": "ניתוח תרחישי שוק",
-    "sec3_card3_para": "ניתוח מצבי שוק שונים ותרחישי נכסים לקבלת החלטות השקעה מבוססות ומותאמות סיכון.",
-    "sec4_heading": "תכנון השקעות נדל\"ן",
-    "sec4_para": "קבל החלטות השקעה חכמות עם שירותי תכנון נדל\"ן מקצועיים. אנו מסייעים למשקיעים להעריך הזדמנויות, לחזות תשואות ולייעל תיקי השקעות כדי למקסם צמיחה ולהפחית סיכונים.",
-    "sec4_intro": "פתרונות תכנון ההשקעה שלנו בנדל\"ן מסייעים למשקיעים לנתח נכסים, לחזות תשואות שכירות ולהעריך מגמות שוק. מתכנון תיקי השקעות ועד ניתוח סיכונים, אנו מספקים תובנות שמבטיחות השקעות רווחיות ובנות קיימא.",
-    "sec4_step1": "זיהוי נכסים בעלי פוטנציאל גבוה",
-    "sec4_step2": "ניתוח מגמות שוק וסיכוני השקעה",
-    "sec4_step3": "תחזית תשואות שכירות ותשואה על ההשקעה",
-    "sec4_step4": "פיתוח אסטרטגיית תיק השקעות",
-    "sec4_step5": "תכנון אסטרטגיות רכישה ויציאה",
-    "sec4_step6": "מעקב אחרי ביצועים והתאמת השקעות",
-    "sec5_heading": "שירותי השקעות נדל\"ן",
-    "sec5_para": "קבל החלטות השקעה חכמות עם שירותי השקעות הנדל\"ן המקצועיים שלנו. אנו מסייעים למשקיעים לנתח שווקים, לחזות תשואות ולייעל תיקי השקעות למקסימום צמיחה ומינימום סיכון.",
-    "sec5_card1_title": "תכנון תיקי השקעות נדל\"ן",
-    "sec5_card1_para": "פיתוח תיק השקעות אסטרטגי למקסום תשואות תוך ניהול סיכונים ביעילות.",
-    "sec5_card2_title": "תחזית תשואות שכירות ותשואה על ההשקעה",
-    "sec5_card2_para": "חיזוי הכנסות משכירות ותשואה על ההשקעה לקבלת החלטות מושכלות ברכישה ובמכירה.",
-    "sec5_card3_title": "ניתוח מגמות שוק",
-    "sec5_card3_para": "ניתוח מגמות שוק הנדל\"ן לזיהוי השקעות והזדמנויות בעלות פוטנציאל גבוה.",
-    "sec5_card4_title": "תכנון תרחישים והערכת סיכונים",
-    "sec5_card4_para": "הערכת תרחישי השקעה שונים לחיזוי סיכונים ולהבטחת צמיחה בת קיימא של תיק הנדל\"ן שלך.",
-    "sec6_heading": "תכנון השקעות נדל\"ן מקצועי",
-    "sec6_para": "שירותי ההשקעה שלנו בנדל\"ן מסייעים למשקיעים בקבלת החלטות מושכלות, ייעול תיקי השקעות וחיזוי תשואות. מהערכת רכישות פוטנציאליות ועד לניתוח מגמות שוק, אנו מספקים תובנות שממקסמות רווחיות ומפחיתות סיכון.",
-    "sec6_card1_title": "אסטרטגיית תיק השקעות נדל\"ן",
-    "sec6_card1_para": "אנו מתכננים תיקי השקעות נדל\"ן מותאמים אישית בהתאם למטרותיך, תוך איזון בין סיכון לפוטנציאל צמיחה.",
-    "sec6_card2_title": "תחזיות שוק ותשואה על ההשקעה",
-    "sec6_card2_para": "קבל תובנות מעשיות לגבי תשואות שכירות, מגמות שוק ותשואה על ההשקעה כדי להנחות רכישות חכמות.",
-    "sec7_heading": "מוכן להרחיב את תיק הנדל\"ן שלך?",
-    "sec7_para": "בוא ניצור תוכנית השקעה מותאמת בנדל\"ן שממקסמת תשואות, ממזערת סיכונים ובונה עושר לטווח ארוך.",
-    "sec7_btn": "התחל להשקיע",
- 
-        
+    "footer_location": "123 היידראבאד, הודו",
+    "footer_rights": "© 2025 Stackly. כל הזכויות שמורות.",
+     
+    "hero_title": "רווחת הילד",
+    "sec2_heading": "מטפחים את עתידו של כל ילד",
+    "sec2_para": "יוזמות רווחת הילד שלנו מתמקדות בהבטחת גישה של כל ילד לחינוך, בריאות, תזונה וסביבה בטוחה. אנו פועלים להגן על זכויות הילדים ולהעצים אותם בכלים לצמוח לאנשים בטוחים ובעלי יכולת.",
+    "sec2_point1": "גישה לחינוך איכותי",
+    "sec2_point2": "תוכניות בריאות ותזונה",
+    "sec2_point3": "יוזמות הגנה ובטיחות לילדים",
+    "sec2_point4": "פיתוח מיומנויות וצמיחה אישית",
+    "sec2_point5": "תמיכה בילדים מוחלשים",
+    "sec2_btn1": "גלה תוכניות",
+    "sec2_btn2": "הצטרף אלינו",
+    "sec3_heading": "ההתמקדות שלנו ברווחת הילד",
+    "sec3_para": "אנו מעצבים תוכניות שמגנות על רווחת הילדים, מספקות חינוך ומטפחות את צמיחתם. יוזמותינו שואפות להבטיח שכל ילד יחיה חיים בריאים, בטוחים ומלאי תקווה.",
+    "sec3_card1_title": "חינוך לכולם",
+    "sec3_card1_para": "מתן גישה לבתי ספר, מלגות ומשאבי למידה לילדים מוחלשים.",
+    "sec3_card2_title": "בריאות ותזונה",
+    "sec3_card2_para": "הבטחת טיפול רפואי נכון, חיסונים ותזונה לרווחתם הכללית של הילדים.",
+    "sec3_card3_title": "הגנת הילד",
+    "sec3_card3_para": "הגנה על ילדים מפני ניצול, התעללות והזנחה באמצעות בניית ס Environments בטוחים ומוגנים.",
+    "sec4_heading": "כיצד אנו מעצימים ילדים",
+    "sec4_para": "הגישה שלנו משלבת חינוך, בריאות, תזונה והגנה על ילדים כדי להבטיח שהילדים לא רק ישרדו אלא גם יפרחו ויממשו את מלוא הפוטנציאל שלהם.",
+    "sec4_intro": "באמצעות תוכניות מובנות אנו מדריכים ילדים מהלמידה המוקדמת ועד להפיכתם לאנשים בטוחים, מיומנים ועצמאיים התורמים באופן חיובי לחברה.",
+    "sec4_step1": "זיהוי ילדים פגיעים",
+    "sec4_step2": "מתן חינוך ותמיכת למידה",
+    "sec4_step3": "אספקת בריאות ותזונה",
+    "sec4_step4": "הבטחת בטיחות והגנה",
+    "sec4_step5": "קידום מיומנויות וצמיחה אישית",
+    "sec4_step6": "בניית רשתות תמיכה ארוכות טווח",
+    "sec5_heading": "תוכניות רווחת הילד",
+    "sec5_para": "אנו מתמקדים בפיתוח הוליסטי של ילדים, מבטיחים שהם יקבלו חינוך, בריאות, תזונה והגנה. התוכניות שלנו נועדו להביא תקווה ולבנות עתיד מזהיר יותר לכל ילד נזקק.",
+    "sec5_card1_title": "תמיכה בחינוך",
+    "sec5_card1_para": "מלגות, ציוד לבית ספר וגישה לחינוך איכותי לילדים מוחלשים.",
+    "sec5_card2_title": "בריאות ותזונה",
+    "sec5_card2_para": "בדיקות בריאות, חיסונים ותוכניות תזונה כדי להבטיח גדילה בריאה.",
+    "sec5_card3_title": "בטיחות הילד",
+    "sec5_card3_para": "קמפיינים והסברה והתערבויות כדי להגן על ילדים מהתעללות וניצול.",
+    "sec5_card4_title": "פיתוח מיומנויות ואישיות",
+    "sec5_card4_para": "סדנאות ופעילויות המעודדות יצירתיות, ביטחון והנהגה בקרב ילדים.",
+    "sec6_heading": "בניית מחר בהיר יותר",
+    "sec6_para": "אנו שואפים ליצור השפעה מתמשכת בחייהם של ילדים על ידי מתן חינוך, בריאות, תזונה וסביבה בטוחה. יחד נוודא שלכל ילד תהיה הזדמנות לחלום, ללמוד ולהגשים.",
+    "sec6_card1_title": "פיתוח ארוך טווח של ילדים",
+    "sec6_card1_para": "תוכניות התומכות בצמיחת הילדים מהשנים הראשונות ועד לבגרות עם הדרכה וטיפול.",
+    "sec6_card2_title": "תמיכת ילדים מבוססת קהילה",
+    "sec6_card2_para": "יצירת מרחבים בטוחים ורשתות בתוך הקהילות כדי להגן ולטפח ילדים.",
+    "sec7_heading": "הצטרפו אלינו בהגנה על עתיד הילדים",
+    "sec7_para": "ביחד, נוכל לתת לילדים את הטיפול, החינוך וההזדמנויות המגיעים להם. היו חלק במסעם לעתיד מזהיר יותר.",
+    "sec7_btn": "תמכו עכשיו",
   }
 };
 
@@ -601,352 +609,6 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 
-
-
-<script>
-  // Mobile menu setup
-  const hamburger = document.getElementById("hamburger");
-  const hamburgerMenu = document.getElementById("hamburgerMenu");
-
-  // Show/hide mobile menu on hamburger click
-  hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    hamburgerMenu.classList.toggle("active");
-  });
-
-  // Toggle dropdowns for mobile menu
-  document.querySelectorAll('.mobile-dropdown-parent > span').forEach(link => {
-    link.addEventListener('click', function() {
-      const parentLi = this.parentElement;
-      const dropdown = parentLi.querySelector('.mobile-dropdown');
-      dropdown.classList.toggle('active');
-    });
-  });
-
-  // Desktop dropdown toggle logic
-  document.querySelectorAll('.nav-item.dropdown > .nav-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      document.querySelectorAll('.dropdown-menu').forEach(menu => {
-        if (menu !== this.nextElementSibling) {
-          menu.classList.remove('active');
-        }
-      });
-      const dropdownMenu = this.nextElementSibling;
-      if (dropdownMenu) {
-        dropdownMenu.classList.toggle('active');
-      }
-    });
-  });
-
-  // Redirect on desktop dropdown menu item click
-  document.querySelectorAll('.dropdown-menu a').forEach(link => {
-    link.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (href && href !== "#") {
-        window.location.href = href;
-        document.querySelectorAll('.dropdown-menu').forEach(menu => menu.classList.remove('active'));
-      }
-    });
-  });
-
-  // Redirect on normal nav link click
-  document.querySelectorAll('.nav-menu > .nav-item:not(.dropdown) .nav-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (href && href !== "#") {
-        window.location.href = href;
-      }
-    });
-  });
-
-  // Auth link toggle for desktop and mobile
-  function setupAuthLinks() {
-    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
-    const authLinks = [document.getElementById("authLink"), document.getElementById("mobileAuthLink")];
-
-    authLinks.forEach(link => {
-      if (!link) return;
-      if (isLoggedIn) {
-        link.innerText = "Logout";
-        link.href = "#";
-        link.onclick = (e) => {
-          e.preventDefault();
-          localStorage.removeItem("isLoggedIn");
-          localStorage.removeItem("currentUser");
-          window.location.href = "index.html";
-        };
-      } else {
-        link.innerText = "Login";
-        link.href = "index.html";
-        link.onclick = null;
-      }
-    });
-  }
-  setupAuthLinks();
-
-  // Theme toggle
-  const toggleBtn = document.getElementById('toggleBtn');
-  let darkMode = localStorage.getItem('darkMode') === 'true';
-
-  function applyTheme() {
-    if (darkMode) {
-      document.body.classList.add('dark-mode');
-      toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
-    } else {
-      document.body.classList.remove('dark-mode');
-      toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
-    }
-  }
-
-  toggleBtn.addEventListener('click', () => {
-    darkMode = !darkMode;
-    localStorage.setItem('darkMode', darkMode);
-    applyTheme();
-  });
-  applyTheme();
-
-  // Avatar initials logic
-  const avatarCircle = document.getElementById('avatarCircle');
-  const avatarInitials = document.getElementById('avatarInitials');
-  const avatarDropdown = document.getElementById('avatarDropdown');
-  const logoutBtn = document.getElementById('logoutBtn');
-  const currentUserEmail = localStorage.getItem("currentUser");
-  const users = JSON.parse(localStorage.getItem("users")) || {};
-
-  if (currentUserEmail && users[currentUserEmail]) {
-    const firstName = users[currentUserEmail].firstName || "";
-    const lastName = users[currentUserEmail].lastName || "";
-    const initials = (firstName[0] || "").toUpperCase() + (lastName[0] || "").toUpperCase();
-    avatarInitials.textContent = initials;
-  } else {
-    avatarInitials.textContent = "?";
-  }
-
-  // Show/hide avatar dropdown on click
-  avatarCircle.addEventListener('click', function(e) {
-    e.stopPropagation();
-    avatarDropdown.style.display = avatarDropdown.style.display === "block" ? "none" : "block";
-  });
-
-  document.addEventListener('click', function(e) {
-    if (!avatarCircle.contains(e.target) && !avatarDropdown.contains(e.target)) {
-      avatarDropdown.style.display = "none";
-    }
-  });
-
-  // Logout action
-  logoutBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    localStorage.removeItem("isLoggedIn");
-    localStorage.removeItem("currentUser");
-    window.location.href = "index.html";
-  });
-</script>
-
-<style>
-  /* Base styles for hamburger icon */
-  .hamburger {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 24px;
-    height: 18px;
-    cursor: pointer;
-    z-index: 1000;
-  }
-
-  .hamburger span {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #333;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .dark-mode .hamburger span {
-    background-color: #fff;
-  }
-
-  /* Hamburger menu animation */
-  .hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-
-  .hamburger.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
-
-  /* Hide navigation on mobile */
-  @media (max-width: 768px) {
-    .nav-menu {
-      display: none;
-    }
-    .hamburger {
-      display: flex;
-    }
-  }
-
-  /* Styles for the mobile hamburger menu */
-  .mobile-menu-wrapper {
-    position: relative;
-  }
-
-  .hamburger-menu {
-    display: none;
-    flex-direction: column;
-    background: #23272f;
-    color: #fff;
-    position: absolute;
-    top: 50px;
-    right: 0;
-    width: 220px;
-    border-radius: 8px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
-    padding: 20px 0;
-    z-index: 9999;
-    list-style: none;
-  }
-
-  .hamburger-menu.active {
-    display: flex;
-  }
-
-  .hamburger-menu li {
-    padding: 10px 24px;
-    border-bottom: 1px solid #333;
-  }
-
-  .hamburger-menu li:last-child {
-    border-bottom: none;
-  }
-
-  .hamburger-menu a,
-  .hamburger-menu span {
-    color: #00f7ff;
-    text-decoration: none;
-    font-size: 1.1rem;
-    display: block;
-    cursor: pointer;
-    font-weight: 500;
-  }
-
-  .hamburger-menu ul {
-    list-style: none;
-    padding-left: 20px;
-    margin-top: 5px;
-  }
-
-  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown {
-    display: none;
-  }
-
-  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown.active {
-    display: block;
-  }
-
-  .toggle-btn {
-    background: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 38px;
-    height: 38px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 16px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-
-  .toggle-btn:hover {
-    background: #f0f0f0;
-  }
-
-  .avatar-circle {
-    position: relative;
-    cursor: pointer;
-    z-index: 1001;
-    overflow: visible;
-  }
-
-  .avatar-circle {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-left: 16px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #eee;
-    position: relative;
-    cursor: pointer;
-  }
-
-  .avatar-circle img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .avatar-dropdown {
-    display: none;
-    position: absolute;
-    top: 65px;
-    right: 140px;
-    background: #fff;
-    min-width: 100px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
-    border-radius: 8px;
-    z-index: 1002;
-    padding: 4px 0;
-  }
-
-  .avatar-dropdown ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .avatar-dropdown li {
-    padding: 6px 12px;
-  }
-
-  .avatar-dropdown a {
-    color: #23272f;
-    text-decoration: none;
-    font-size: 0.95rem;
-    display: block;
-    border-radius: 4px;
-    transition: background 0.2s;
-  }
-
-  .avatar-dropdown a:hover {
-    background: #f0f0f0;
-  }
-
-  @media (max-width: 768px) {
-    .toggle-btn,
-    .avatar-circle {
-      margin-left: 8px;
-      width: 32px;
-      height: 32px;
-    }
-  }
-
-  @media (min-width: 769px) {
-    .hamburger-menu {
-      display: none !important;
-    }
-  }
-</style>
 <!-- 🔷 Protest home page  -->
 
   <script>
@@ -1952,18 +1614,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
      <!-- Footer -->
-    <!-- Footer -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-content">
-      <!-- Logo & About -->
-      <div class="footer-section footer-section1">
-        <div class="logo">
+   <footer class="site-footer">
+  <div class="footer-wrapper">
+    <div class="footer-grid">
+
+      <!-- Brand & About -->
+      <div class="footer-block footer-brand footer-block1">
+        <div class="footer-logo">
           <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 50px; width: 80px;">
         </div>
-        <p class="text-justify">
-          <span data-i18n="footer_about">Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.</span>
+
+        <p style="text-align: justify;" data-i18n="footer_about">
+          Dedicated charity organization, empowering communities through education, healthcare, food support, and sustainable initiatives to create lasting impact and hope.
         </p>
+
         <div class="social-links">
           <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
           <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
@@ -1973,12 +1637,12 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
 
       <!-- Quick Links -->
-      <div class="footer-section footer-section2">
-        <h4 data-i18n="footer_quickLinks">Quick Links</h4>
+      <div class="footer-block footer-block2">
+        <h4 data-i18n="footer_quicklinks">Quick Links</h4>
         <ul>
           <li><a href="home.html"><span data-i18n="footer_home">Home</span></a></li>
           <li><a href="home2.html"><span data-i18n="footer_home2">Home 2</span></a></li>
-          <li><a href="about.html"><span data-i18n="footer_aboutUs">About Us</span></a></li>
+          <li><a href="about.html"><span data-i18n="footer_aboutus">About Us</span></a></li>
           <li><a href="services.html"><span data-i18n="footer_services">Services</span></a></li>
           <li><a href="blog.html"><span data-i18n="footer_blog">Blog</span></a></li>
           <li><a href="contact.html"><span data-i18n="footer_contact">Contact</span></a></li>
@@ -1986,136 +1650,137 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
 
       <!-- Services -->
-      <div class="footer-section footer-section3">
-        <h4 data-i18n="footer_servicesTitle">Services</h4>
+      <div class="footer-block footer-block3">
+        <h4 data-i18n="footer_services_title">Services</h4>
         <ul>
-          <li><a href="service1.html"><span data-i18n="footer_service1">Property Buying Assistance</span></a></li>
-          <li><a href="service2.html"><span data-i18n="footer_service2">Property Selling</span></a></li>
-          <li><a href="service3.html"><span data-i18n="footer_service3">Rental Services</span></a></li>
-          <li><a href="service4.html"><span data-i18n="footer_service4">Property Management</span></a></li>
-          <li><a href="service5.html"><span data-i18n="footer_service5">Real Estate Investment</span></a></li>
-          <li><a href="service6.html"><span data-i18n="footer_service6">Legal & Documentation Support</span></a></li>
+          <li><a href="service1.html"><span data-i18n="footer_service1">Food Distribution</span></a></li>
+          <li><a href="service2.html"><span data-i18n="footer_service2">Education Support</span></a></li>
+          <li><a href="service3.html"><span data-i18n="footer_service3">Healthcare Camps</span></a></li>
+          <li><a href="service4.html"><span data-i18n="footer_service4">Women Empowerment</span></a></li>
+          <li><a href="service5.html"><span data-i18n="footer_service5">Child Welfare</span></a></li>
+          <li><a href="service6.html"><span data-i18n="footer_service6">Disaster Relief</span></a></li>
         </ul>
       </div>
 
       <!-- Contact Info -->
-      <div class="footer-section footer-section4">
-        <h4 data-i18n="footer_contactInfo">Contact Info</h4>
+      <div class="footer-block footer-block4">
+        <h4 data-i18n="footer_contactinfo">Contact Info</h4>
         <ul>
-          <li><i class="fas fa-envelope"></i> <span data-i18n="footer_email">contact@stackly.ai</span></li>
+          <li><i class="fas fa-envelope"></i> <span data-i18n="footer_email">contact@stackly.in</span></li>
           <li><i class="fas fa-phone"></i> <span data-i18n="footer_phone">+1 (555) 123-4567</span></li>
-          <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer_address">123 AI Innovation Drive</span></li>
+          <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer_location">123 Hyderabad, India</span></li>
         </ul>
       </div>
     </div>
 
-    <!-- Bottom Bar -->
-    <div class="footer-bottom">
-      <p><span data-i18n="footer_bottom">&copy; 2025 Stackly. All rights reserved.</span></p>
+    <!-- Bottom -->
+    <div class="footer-bottom-bar">
+      <p data-i18n="footer_rights">&copy; 2025 Stackly. All rights reserved.</p>
     </div>
   </div>
 </footer>
 
 
+<!-- Styles -->
 <style>
-.footer {
+.site-footer {
   background: #0a0a0a;
   color: #fff;
   padding: 50px 20px 20px;
   font-family: Arial, sans-serif;
 }
 
-.footer-section1{
-  margin-right: 150px;
+.footer-wrapper {
+  max-width: 1200px; /* keeps equal left-right padding */
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.footer-section4{
-  margin-left: 50px;
+.footer-block2 {
+  padding-inline-start: 100px; /* works for both ltr & rtl */
 }
 
-.footer .footer-content {
+.footer-block3 {
+  padding-inline-start: 80px; /* works for both ltr & rtl */
+}
+
+.footer-block4 {
+  padding-inline-start: 60px; /* works for both ltr & rtl */
+}
+
+
+.footer-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   margin-bottom: 30px;
 }
 
-.footer .footer-section h4 {
+
+.footer-block h4 {
   font-size: 1.2rem;
   margin-bottom: 15px;
   color: #f4f4f4;
 }
 
-.footer .footer-section ul {
+.footer-block ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
-.footer .footer-section ul li {
+.footer-block ul li {
   margin-bottom: 10px;
-  font-size: 0.95rem;
   color: #ddd;
 }
 
-.footer .footer-section ul li a {
+.footer-block ul li a {
   color: #ddd;
   text-decoration: none;
   transition: color 0.3s;
 }
 
-.footer .footer-section ul li a:hover {
+.footer-block ul li a:hover {
   color: #a68e4c;
 }
 
-.footer .social-links a {
-  margin-right: 12px;
-  font-size: 1.2rem;
-  color: #ddd;
-  transition: color 0.3s;
-}
 
-.footer .social-links a:hover {
-  color: #000000;
-}
 
-.footer .footer-bottom {
+
+
+.footer-bottom-bar {
   text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255,255,255,0.1);
   padding-top: 15px;
   font-size: 0.9rem;
   color: #bbb;
 }
 
+/* Responsive */
 @media (max-width: 900px) {
-  .footer .footer-content {
+  .footer-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
-  .footer-section1{
-  margin-right: 5px;
-}
 }
 
 @media (max-width: 600px) {
-  .footer .footer-content {
+  .footer-grid {
     grid-template-columns: 1fr;
     text-align: left;
   }
-  .footer .social-links {
-    margin-top: 15px;
+  .footer-block2{
+      padding-left: 0px;
   }
-  .footer-section1{
-  margin-right: 10px;
-}
-  .footer-section2{
-  margin-right: 10px;
-}
-.footer-section4{
-  margin-left: 1px;
-}
+  .footer-block3{
+      padding-left: 0px;
+  }
+    .footer-block4{
+      padding-left: 0px;
+    }
 }
 </style>
+
+
 </div>
 
     <script src="assets/js/script.js"></script>

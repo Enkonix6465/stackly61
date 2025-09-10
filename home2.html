@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stackly - realestate</title>
+    <title>Stackly - charity</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -16,8 +16,9 @@
 <div id="content" style="display:none;"></div>
 
 
-    <!-- Sticky Header -->
-   <header class="header">
+<!-- Sticky Header -->
+
+  <header class="header">
   <div class="container">
     <div class="nav-wrapper">
       <div class="logo">
@@ -38,21 +39,21 @@
             <a href="#" class="nav-link"><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
               <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
-              <li><a href="service1.html"><span data-i18n="service_1">Property Buying Assistance</span></a></li>
-              <li><a href="service2.html"><span data-i18n="service_2">Property Selling</span></a></li>
-              <li><a href="service3.html"><span data-i18n="service_3">Rental Services </span></a></li>
-              <li><a href="service4.html"><span data-i18n="service_4">Property Management</span></a></li>
-              <li><a href="service5.html"><span data-i18n="service_5">Real Estate Investment</span></a></li>
-              <li><a href="service6.html"><span data-i18n="service_6">Legal & Documentation Support</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Service_1</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Service_2</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Service_3</span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Service_4</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Service_5</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service_6">Service_6</span></a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
             <a href="#" class="nav-link"><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
               <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
-              <li><a href="blog1.html"><span data-i18n="blog_1">Smart Property Investments</span></a></li>
-              <li><a href="blog2.html"><span data-i18n="blog_2">Effective Property Management</span></a></li>
-              <li><a href="blog3.html"><span data-i18n="blog_3">Real Estate Market Trends</span></a></li>
+              <li><a href="blog1.html"><span data-i18n="blog_1">blog_1</span></a></li>
+              <li><a href="blog2.html"><span data-i18n="blog_2">blog_2</span></a></li>
+              <li><a href="blog3.html"><span data-i18n="blog_3">blog_3</span></a></li>
             </ul>
           </li>
           <li class="nav-item"><a href="contact.html" class="nav-link"><span data-i18n="contact">Contact</span></a></li>
@@ -64,6 +65,15 @@
           <span></span>
         </div>
       </nav>
+
+       <div class="lang-switcher">
+        <label for="langSelect"></label>
+        <select id="langSelect" onchange="changeLanguage(this.value)">
+          <option value="en">English</option>
+          <option value="ar">Arabic</option>
+          <option value="he">Hebrew</option>
+        </select>
+      </div>
 
       <div class="mobile-menu-wrapper">
         <ul class="hamburger-menu" id="hamburgerMenu">
@@ -79,21 +89,21 @@
             <span><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></span>
             <ul class="mobile-dropdown">
              <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
-              <li><a href="service1.html"><span data-i18n="service_1">Property Buying Assistance</span></a></li>
-              <li><a href="service2.html"><span data-i18n="service_2">Property Selling</span></a></li>
-              <li><a href="service3.html"><span data-i18n="service_3">Rental Services </span></a></li>
-              <li><a href="service4.html"><span data-i18n="service_4">Property Management</span></a></li>
-              <li><a href="service5.html"><span data-i18n="service_5">Real Estate Investment</span></a></li>
-              <li><a href="service6.html"><span data-i18n="service6">Legal & Documentation Support</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Service_1</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Service_2</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Service_3</span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Service_4</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Service_5</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service_6">Service_6</span></a></li>
             </ul>
           </li>
           <li class="mobile-dropdown-parent">
             <span><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></span>
             <ul class="mobile-dropdown">
                <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
-                <li><a href="blog1.html"><span data-i18n="blog_1">Smart Property Investments</span></a></li>
-                <li><a href="blog2.html"><span data-i18n="blog_2">Effective Property Management</span></a></li>
-                <li><a href="blog3.html"><span data-i18n="blog_3">Real Estate Market Trends</span></a></li>
+                <li><a href="blog1.html"><span data-i18n="blog_1">blog_1</span></a></li>
+                <li><a href="blog2.html"><span data-i18n="blog_2">blog_2</span></a></li>
+                <li><a href="blog3.html"><span data-i18n="blog_3">blog_3</span></a></li>
             </ul>
           </li>
           <li><a href="contact.html"><span data-i18n="contact">Contact</span></a></li>
@@ -101,301 +111,256 @@
         </ul>
       </div>
 
-      <div class="lang-switcher">
-        <label for="langSelect">Language:</label>
-        <select id="langSelect" onchange="changeLanguage(this.value)">
-          <option value="en">English</option>
-          <option value="ar">Arabic</option>
-          <option value="he">Hebrew</option>
-        </select>
-      </div>
+     
 
       <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
         <i class="fas fa-moon"></i>
       </button>
 
-       <div class="avatar-wrapper">
-  <div class="avatar-circle" title="Profile" id="avatarCircle">
-    <span id="avatarInitials">BA</span>
-  </div>
-  <div class="avatar-dropdown" id="avatarDropdown">
-    <ul>
-      <li>
-        <a href="index.html" id="logoutBtn">
-          <span data-i18n="logout">Logout</span>
-        </a>
-      </li>
-    </ul>
-  </div>
-</div>
-
+     <div class="avatar-wrapper">
+        <div class="avatar-circle" title="Profile" id="avatarCircle">
+          <span id="avatarInitials">BA</span>
+        </div>
+        <div class="avatar-dropdown" id="avatarDropdown">
+          <ul>
+            <li>
+              <a href="index.html" id="logoutBtn">
+                <span data-i18n="logout">Logout</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
     </div>
   </div>
 </header>
 
 
+
 <!-- Section : 1 -->
 <section class="ai-hero-section">
   <video autoplay muted loop playsinline class="ai-hero-bg-video">
-    <source src="https://videos.pexels.com/video-files/3773484/3773484-hd_1920_1080_30fps.mp4" type="video/mp4">
+    <source src="video/site44-v2.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
   <div class="ai-hero-overlay">
     <div class="ai-hero-content">
       <h1 class="ai-hero-title ai-glow animate-ai-slide-in" data-i18n="hero_title">
-        Your Gateway to Perfect Homes
+        Your Gateway to Spreading Kindness
       </h1>
       <p class="ai-hero-paragraph animate-ai-fade-up" data-i18n="hero_para">
-        Discover homes that match your dreams and lifestyle.
+        Together, we can bring hope, education, and care to communities in need.
       </p>
-      <a href="services.html" class="btn custom-btn" data-i18n="hero_btn">Explore Tools</a>
+      <a href="services.html" class="btn custom-btn" data-i18n="hero_btn">Explore Listings</a>
+
     </div>
   </div>
 </section>
+
+<!-- testing -->
+
+
 
 <!-- Section: 2 -->
 <section class="innovation-highlight">
   <div class="innovation-container">
     <div class="innovation-text">
-      <span class="highlight-badge" data-i18n="sec2_badge">Your Gateway to Better Living</span>
-      <h1 data-i18n="sec2_title">Find Homes That Inspire Your Lifestyle</h1>
+      <span class="highlight-badge" data-i18n="sec2_badge">Your Gateway to Spreading Hope</span>
+      <h1 data-i18n="sec2_title">Creating Brighter Futures Together</h1>
       <p data-i18n="sec2_para">
-        Discover a wide range of premium real estate options designed to fit your lifestyle and budget. 
-        From modern apartments in the heart of the city to peaceful villas surrounded by nature, 
-        we help you find a home where comfort meets elegance. 
-        With expert guidance, transparency, and trust, your journey to the perfect property starts here.
+        Through education, healthcare, food, and community support, we are committed to uplifting lives 
+        and building a better tomorrow. Every act of kindness brings us closer to a world filled with 
+        compassion, equality, and opportunity. Join us in making a difference where it matters most.
+          Together with the dedication of our volunteers and the generosity of our donors, we create 
+  sustainable programs that empower individuals and strengthen entire communities.
       </p>
       <div class="innovation-actions">
-        <a href="about.html" class="innovation-btn primary" data-i18n="sec2_btn1">Explore More</a>
-        <a href="contact.html" class="innovation-btn outline" data-i18n="sec2_btn2">Get in Touch</a>
+        <a href="about.html" class="innovation-btn primary" data-i18n="sec2_btn1">Explore Our Work</a>
+        <a href="contact.html" class="innovation-btn outline" data-i18n="sec2_btn2">Get Involved</a>
       </div>
     </div>
     <div class="innovation-media">
-      <img src="https://i.pinimg.com/736x/f6/6e/e7/f66ee791a1a2e961ef1facaeba9abe66.jpg" alt="Beautiful Modern Home">
+      <img src="https://i.pinimg.com/1200x/5d/19/23/5d1923416f926f4584046e23b46780f8.jpg" alt="Charity and Community Support">
     </div>
   </div>
 </section>
 
+
 <!-- Section : 3 -->
+
 <section class="ai-capabilities">
   <div class="ai-container">
     <div class="ai-header">
-      <h2 class="heading-title1" data-i18n="sec3_title">Comprehensive Real Estate Solutions</h2>
+      <h2 class="heading-title1" data-i18n="sec3_title">Comprehensive Community Support</h2>
       <p data-i18n="sec3_para">
-        From buying and selling to investing and renting, our real estate services are designed to make property decisions simple, secure, and stress-free.
+        From education and healthcare to food and shelter, our initiatives are designed to create lasting impact 
+        and uplift those who need it most with compassion and transparency.
       </p>
     </div>
     <div class="ai-grid">
       <div class="ai-card dark">
-        <div class="ai-icon"><i class="fas fa-home"></i></div>
-        <h3 data-i18n="sec3_card1_title">Find Your Dream Home</h3>
+        <div class="ai-icon"><i class="fas fa-school"></i></div>
+        <h3 data-i18n="sec3_card1_title">Education for All</h3>
         <p data-i18n="sec3_card1_para">
-          Explore a wide range of properties — from modern apartments to luxury villas — with expert guidance to match your lifestyle and budget.
+          We provide school supplies, scholarships, and learning programs to ensure every child has the 
+          opportunity to learn, grow, and dream of a brighter future.
         </p>
       </div>
       <div class="ai-card dark">
-        <div class="ai-icon"><i class="fas fa-city"></i></div>
-        <h3 data-i18n="sec3_card2_title">Smart Property Investments</h3>
+        <div class="ai-icon"><i class="fas fa-hand-holding-heart"></i></div>
+        <h3 data-i18n="sec3_card2_title">Healthcare & Wellbeing</h3>
         <p data-i18n="sec3_card2_para">
-          Discover high-potential investment opportunities in prime locations, ensuring long-term growth and maximum returns on your property portfolio.
+          Through medical camps, health awareness drives, and essential aid, we bring care and support 
+          to communities that lack access to basic healthcare facilities.
         </p>
       </div>
       <div class="ai-card dark">
-        <div class="ai-icon"><i class="fas fa-handshake"></i></div>
-        <h3 data-i18n="sec3_card3_title">Seamless Property Selling</h3>
+        <div class="ai-icon"><i class="fas fa-utensils"></i></div>
+        <h3 data-i18n="sec3_card3_title">Food & Shelter Support</h3>
         <p data-i18n="sec3_card3_para">
-          Sell your property with ease using our transparent process, strong buyer network, and proven marketing strategies that secure the best value.
+          We distribute nutritious meals, provide shelter assistance, and ensure families in crisis 
+          receive the support they need to rebuild their lives with dignity.
         </p>
       </div>
     </div>
   </div>
 </section>
 
+
 <!-- Section : 4 -->
+
 <section class="industry-ai-section">
   <div class="industry-container">
-    <h2 class="heading-title" data-i18n="sec4_title">Real Estate That Transforms Lifestyles</h2>
+    <h2 class="heading-title" data-i18n="sec4_title">Fundraising That Fuels Change</h2>
     <div class="industry-content">
       <div class="industry-image">
-        <img src="https://images.pexels.com/photos/32870/pexels-photo.jpg" alt="Modern Real Estate Solutions">
+        <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&h=600&fit=crop&auto=format" alt="Fundraising and Charity Support">
       </div>  
       <div class="industry-text">
         <p data-i18n="sec4_para">
-          From first-time buyers to seasoned investors, our real estate services help people find their dream homes, secure profitable investments, and enjoy a seamless property journey with expert guidance every step of the way.
+          Every donation helps us provide education, healthcare, meals, and shelter for those in need. 
+          Through generous donors, sponsorships, and community campaigns, we raise the resources that 
+          drive meaningful impact and lasting change.
         </p>
         <ul class="industry-list">
-          <li data-i18n="sec4_li1"><i class="fas fa-home"></i> Premium Residential & Commercial Listings</li>
-          <li data-i18n="sec4_li2"><i class="fas fa-map-marker-alt"></i> Strategic Property Location Guidance</li>
-          <li data-i18n="sec4_li3"><i class="fas fa-handshake"></i> Hassle-Free Buying & Selling Support</li>
-          <li data-i18n="sec4_li4"><i class="fas fa-chart-line"></i> Smart Real Estate Investment Insights</li>
-          <li data-i18n="sec4_li5"><i class="fas fa-key"></i> End-to-End Property Management Services</li>
+          <li data-i18n="sec4_li1"><i class="fas fa-donate"></i> Direct Donations for Urgent Causes</li>
+          <li data-i18n="sec4_li2"><i class="fas fa-hand-holding-usd"></i> Monthly Sponsorship Programs</li>
+          <li data-i18n="sec4_li3"><i class="fas fa-bullhorn"></i> Crowdfunding & Awareness Campaigns</li>
+          <li data-i18n="sec4_li4"><i class="fas fa-gift"></i> Corporate Giving & Partnerships</li>
+          <li data-i18n="sec4_li5"><i class="fas fa-people-carry"></i> Community Events & Fund Drives</li>
         </ul>
-        <a href="services.html" class="industry-btn" data-i18n="sec4_btn">Discover More</a>
+        <a href="contact.html" class="industry-btn" data-i18n="sec4_btn">Support Our Campaigns</a>
       </div>
     </div>
   </div>
 </section>
+
 
 <!-- Section : 5 -->
 <section class="performance-section">
   <div class="performance-container">
     <div class="performance-image">
-      <img src="https://images.pexels.com/photos/259962/pexels-photo-259962.jpeg" alt="Real Estate Performance">
+      <img src="https://i.pinimg.com/1200x/ff/5a/8a/ff5a8afa0cda51d912a6ddbbcd3d3b8c.jpg" alt="Charity Performance Impact">
     </div>
     <div class="performance-stats">
-      <h1 style="font-size: 40px;" data-i18n="sec5_title">Real Estate Performance That Delivers</h1>
+      <h1 style="font-size: 40px;" data-i18n="sec5_title">Impact That Transforms Lives</h1>
       <p data-i18n="sec5_para">
-        Our real estate services ensure higher property value, seamless transactions, and long-term satisfaction — helping buyers, sellers, and investors achieve their goals with confidence and trust.
+        With the support of our donors and volunteers, we bring hope through education, healthcare, meals, and community development. 
+        Our performance reflects the trust we build and the lives we touch every day.
       </p>
       <div class="stat-progress">
         <div class="stat-label">
-          <span data-i18n="sec5_stat1_label">% Client Satisfaction in Property Deals</span>
-          <span class="stat-value" data-value="98">0%</span>
+          <span data-i18n="sec5_stat1_label">% Families Supported with Food & Shelter</span>
+          <span class="stat-value" data-value="95">0%</span>
         </div>
         <div class="progress-bar">
-          <div class="progress-fill" data-width="98"></div>
+          <div class="progress-fill" data-width="95"></div>
         </div>
       </div>
       <div class="stat-progress">
         <div class="stat-label">
-          <span data-i18n="sec5_stat2_label">% Successful Property Closures</span>
-          <span class="stat-value" data-value="100">0%</span>
-        </div>
-        <div class="progress-bar">
-          <div class="progress-fill" data-width="100"></div>
-        </div>
-      </div>
-      <div class="stat-progress">
-        <div class="stat-label">
-          <span data-i18n="sec5_stat3_label">% Value Appreciation for Investments</span>
-          <span class="stat-value" data-value="65">0%</span>
-        </div>
-        <div class="progress-bar">
-          <div class="progress-fill" data-width="65"></div>
-        </div>
-      </div>
-      <div class="stat-progress">
-        <div class="stat-label">
-          <span data-i18n="sec5_stat4_label">Average Deal Closure Time</span>
-          <span class="stat-value" data-value="48">0 Days</span>
+          <span data-i18n="sec5_stat2_label">% Children Enrolled in Education Programs</span>
+          <span class="stat-value" data-value="90">0%</span>
         </div>
         <div class="progress-bar">
           <div class="progress-fill" data-width="90"></div>
         </div>
       </div>
+      <div class="stat-progress">
+        <div class="stat-label">
+          <span data-i18n="sec5_stat3_label">% Healthcare & Medical Aid Delivered</span>
+          <span class="stat-value" data-value="80">0%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" data-width="80"></div>
+        </div>
+      </div>
+      <div class="stat-progress">
+        <div class="stat-label">
+          <span data-i18n="sec5_stat4_label">Volunteer Hours Contributed</span>
+          <span class="stat-value" data-value="12000">0 Hours</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" data-width="100"></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
 
 <!-- Section : 6 -->
 <section class="ai-lab-section">
   <div class="ai-lab-container">
     <div class="ai-lab-content">
-      <h2 class="ai-lab-heading" data-i18n="sec6_title">Real Estate Excellence Hub</h2>
+      <h2 class="ai-lab-heading" data-i18n="sec6_title">Compassion & Impact Hub</h2>
       <p class="ai-lab-description" data-i18n="sec6_para">
-        At our Real Estate Innovation Hub, we are transforming the way people find, buy, and invest in properties. 
-        From premium home listings to expert property management and investment guidance, our mission is to 
-        help individuals and businesses make smarter, faster, and more confident real estate decisions.
+        At our Charity Impact Hub, we are dedicated to transforming lives through education, healthcare, food, 
+        and community support. With transparency and trust, our mission is to bring hope, equality, and 
+        opportunities to those who need it most.
       </p>
       <div class="ai-lab-testimonials">
         <div class="ai-lab-quote">
           <p data-i18n="sec6_testimonial1">
             <i class="fas fa-quote-left"></i> 
-            “This team made buying our dream home simple and stress-free. Their expertise and guidance gave us confidence at every step of the journey.” 
+            “Thanks to this organization, my children now have access to education and daily meals. 
+            Their support has given us hope for a brighter future.” 
             <i class="fas fa-quote-right"></i>
           </p>
-          <span data-i18n="sec6_testimonial1_author">— Priya Sharma, Home Buyer</span>
+          <span data-i18n="sec6_testimonial1_author">— Asha Devi, Beneficiary</span>
         </div>
         <div class="ai-lab-quote">
           <p data-i18n="sec6_testimonial2">
             <i class="fas fa-quote-left"></i> 
-            “Thanks to their property insights and investment strategies, I secured a profitable deal in one of the best locations. Truly reliable and professional!” 
+            “Volunteering here has been a life-changing experience. Seeing the smiles on the faces 
+            of children and families we support makes every effort worthwhile.” 
             <i class="fas fa-quote-right"></i>
           </p>
-          <span data-i18n="sec6_testimonial2_author">— Rajesh Verma, Real Estate Investor</span>
+          <span data-i18n="sec6_testimonial2_author">— Rohan Mehta, Volunteer</span>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 
 <!-- Section : 7 -->
-<section class="contact-banner section-padding" style="background: url('https://images.unsplash.com/photo-1523289333742-be1143f6b766?w=1200') no-repeat center center/cover; background-size: cover;">
+
+<section class="contact-banner section-padding" style="background: url('https://i.pinimg.com/736x/59/ee/46/59ee462eab2c61ac3fcee5b4e096ddb0.jpg') no-repeat center center/cover; background-size: cover;">
   <div class="container">
     <div class="contact-banner-content" style="background: rgba(0,0,0,0.6); padding: 30px; border-radius: 10px; color: #fff; text-align: center;">
-      <h2 data-i18n="sec7_title">Find Your Dream Home With Us</h2>
+      <h2 data-i18n="sec7_title">Join Us in Making a Difference</h2>
       <p data-i18n="sec7_para">
-        Looking to buy, sell, or invest in real estate? Get expert guidance and personalized solutions to make the right move in today’s property market.
+        Together we can provide education, healthcare, food, and shelter to those in need. 
+        Your support and compassion help us bring hope and build stronger communities.
       </p>
-      <a href="contact.html" class="btn btn-primary" data-i18n="sec7_btn">Get In Touch</a>
+      <a href="contact.html" class="btn btn-primary" data-i18n="sec7_btn">Get Involved</a>
     </div>
   </div>
 </section>
 
-<!-- Footer -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-content">
-      <!-- Logo & About -->
-      <div class="footer-section footer-section1">
-        <div class="logo">
-          <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 50px; width: 80px;">
-        </div>
-        <p class="text-justify">
-          <span data-i18n="footer_about">Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.</span>
-        </p>
-        <div class="social-links">
-          <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
-          <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
-          <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-
-      <!-- Quick Links -->
-      <div class="footer-section footer-section2">
-        <h4 data-i18n="footer_quickLinks">Quick Links</h4>
-        <ul>
-          <li><a href="home.html"><span data-i18n="footer_home">Home</span></a></li>
-          <li><a href="home2.html"><span data-i18n="footer_home2">Home 2</span></a></li>
-          <li><a href="about.html"><span data-i18n="footer_aboutUs">About Us</span></a></li>
-          <li><a href="services.html"><span data-i18n="footer_services">Services</span></a></li>
-          <li><a href="blog.html"><span data-i18n="footer_blog">Blog</span></a></li>
-          <li><a href="contact.html"><span data-i18n="footer_contact">Contact</span></a></li>
-        </ul>
-      </div>
-
-      <!-- Services -->
-      <div class="footer-section footer-section3">
-        <h4 data-i18n="footer_servicesTitle">Services</h4>
-        <ul>
-          <li><a href="service1.html"><span data-i18n="footer_service1">Property Buying Assistance</span></a></li>
-          <li><a href="service2.html"><span data-i18n="footer_service2">Property Selling</span></a></li>
-          <li><a href="service3.html"><span data-i18n="footer_service3">Rental Services</span></a></li>
-          <li><a href="service4.html"><span data-i18n="footer_service4">Property Management</span></a></li>
-          <li><a href="service5.html"><span data-i18n="footer_service5">Real Estate Investment</span></a></li>
-          <li><a href="service6.html"><span data-i18n="footer_service6">Legal & Documentation Support</span></a></li>
-        </ul>
-      </div>
-
-      <!-- Contact Info -->
-      <div class="footer-section footer-section4">
-        <h4 data-i18n="footer_contactInfo">Contact Info</h4>
-        <ul>
-          <li><i class="fas fa-envelope"></i> <span data-i18n="footer_email">contact@stackly.ai</span></li>
-          <li><i class="fas fa-phone"></i> <span data-i18n="footer_phone">+1 (555) 123-4567</span></li>
-          <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer_address">123 AI Innovation Drive</span></li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Bottom Bar -->
-    <div class="footer-bottom">
-      <p><span data-i18n="footer_bottom">&copy; 2025 Stackly. All rights reserved.</span></p>
-    </div>
-  </div>
-</footer>
 
 
 
@@ -410,265 +375,266 @@ const translations = {
     "about": "About",
     "services": "Services",
     "allServices": "All Services",
-    "service_1": "Property Buying Assistance",
-    "service_2": "Property Selling",
-    "service_3": "Rental Services",
-    "service_4": "Property Management",
-    "service_5": "Real Estate Investment",
-    "service_6": "Legal & Documentation Support",
+    "service_1": "Service_1",
+    "service_2": "Service_2",
+    "service_3": "Service_3",
+    "service_4": "Service_4",
+    "service_5": "Service_5",
+    "service_6": "Service_6",
     "blog": "Blog",
     "allPosts": "All Posts",
-    "blog_1": "Smart Property Investments",
-    "blog_2": "Effective Property Management",
-    "blog_3": "Real Estate Market Trends",
+    "blog_1": "Blog_1",
+    "blog_2": "Blog_2",
+    "blog_3": "Blog_3",
     "contact": "Contact",
     "logout": "Logout",
 
-    "footer_about": "Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.",
-    "footer_quickLinks": "Quick Links",
+     "footer_about": "Dedicated charity organization, empowering communities through education, healthcare, food support, and sustainable initiatives to create lasting impact and hope.",
+    "footer_quicklinks": "Quick Links",
     "footer_home": "Home",
     "footer_home2": "Home 2",
-    "footer_aboutUs": "About Us",
+    "footer_aboutus": "About Us",
     "footer_services": "Services",
     "footer_blog": "Blog",
     "footer_contact": "Contact",
-    "footer_servicesTitle": "Services",
-    "footer_service1": "Property Buying Assistance",
-    "footer_service2": "Property Selling",
-    "footer_service3": "Rental Services",
-    "footer_service4": "Property Management",
-    "footer_service5": "Real Estate Investment",
-    "footer_service6": "Legal & Documentation Support",
-    "footer_contactInfo": "Contact Info",
-    "footer_email": "contact@stackly.ai",
+    "footer_services_title": "Services",
+    "footer_service1": "Food Distribution",
+    "footer_service2": "Education Support",
+    "footer_service3": "Healthcare Camps",
+    "footer_service4": "Women Empowerment",
+    "footer_service5": "Child Welfare",
+    "footer_service6": "Disaster Relief",
+    "footer_contactinfo": "Contact Info",
+    "footer_email": "contact@stackly.in",
     "footer_phone": "+1 (555) 123-4567",
-    "footer_address": "123 AI Innovation Drive",
-    "footer_bottom": "© 2025 Stackly. All rights reserved.",
-
+    "footer_location": "123 Hyderabad, India",
+    "footer_rights": "© 2025 Stackly. All rights reserved.",
   
-  "hero_title": "Your Gateway to Perfect Homes",
-  "hero_para": "Discover homes that match your dreams and lifestyle.",
-  "hero_btn": "Explore Tools",
+    "hero_title": "Your Gateway to Spreading Kindness",
+    "hero_para": "Together, we can bring hope, education, and care to communities in need.",
+    "hero_btn": "Support Our Mission",
 
-  "sec2_badge": "Your Gateway to Better Living",
-  "sec2_title": "Find Homes That Inspire Your Lifestyle",
-  "sec2_para": "Discover a wide range of premium real estate options designed to fit your lifestyle and budget. From modern apartments in the heart of the city to peaceful villas surrounded by nature, we help you find a home where comfort meets elegance. With expert guidance, transparency, and trust, your journey to the perfect property starts here.",
-  "sec2_btn1": "Explore More",
-  "sec2_btn2": "Get in Touch",
+    "sec2_badge": "Your Gateway to Spreading Hope",
+    "sec2_title": "Creating Brighter Futures Together",
+    "sec2_para": "Through education, healthcare, food, and community support, we are committed to uplifting lives and building a better tomorrow. Every act of kindness brings us closer to a world filled with compassion, equality, and opportunity. Join us in making a difference where it matters most.\n          Together with the dedication of our volunteers and the generosity of our donors, we create \n  sustainable programs that empower individuals and strengthen entire communities.",
+    "sec2_btn1": "Explore Our Work",
+    "sec2_btn2": "Get Involved",
 
-  "sec3_title": "Comprehensive Real Estate Solutions",
-  "sec3_para": "From buying and selling to investing and renting, our real estate services are designed to make property decisions simple, secure, and stress-free.",
-  "sec3_card1_title": "Find Your Dream Home",
-  "sec3_card1_para": "Explore a wide range of properties — from modern apartments to luxury villas — with expert guidance to match your lifestyle and budget.",
-  "sec3_card2_title": "Smart Property Investments",
-  "sec3_card2_para": "Discover high-potential investment opportunities in prime locations, ensuring long-term growth and maximum returns on your property portfolio.",
-  "sec3_card3_title": "Seamless Property Selling",
-  "sec3_card3_para": "Sell your property with ease using our transparent process, strong buyer network, and proven marketing strategies that secure the best value.",
+    "sec3_title": "Comprehensive Community Support",
+    "sec3_para": "From education and healthcare to food and shelter, our initiatives are designed to create lasting impact and uplift those who need it most with compassion and transparency.",
+    "sec3_card1_title": "Education for All",
+    "sec3_card1_para": "We provide school supplies, scholarships, and learning programs to ensure every child has the opportunity to learn, grow, and dream of a brighter future.",
+    "sec3_card2_title": "Healthcare & Wellbeing",
+    "sec3_card2_para": "Through medical camps, health awareness drives, and essential aid, we bring care and support to communities that lack access to basic healthcare facilities.",
+    "sec3_card3_title": "Food & Shelter Support",
+    "sec3_card3_para": "We distribute nutritious meals, provide shelter assistance, and ensure families in crisis receive the support they need to rebuild their lives with dignity.",
 
-  "sec4_title": "Real Estate That Transforms Lifestyles",
-  "sec4_para": "From first-time buyers to seasoned investors, our real estate services help people find their dream homes, secure profitable investments, and enjoy a seamless property journey with expert guidance every step of the way.",
-  "sec4_li1": "Premium Residential & Commercial Listings",
-  "sec4_li2": "Strategic Property Location Guidance",
-  "sec4_li3": "Hassle-Free Buying & Selling Support",
-  "sec4_li4": "Smart Real Estate Investment Insights",
-  "sec4_li5": "End-to-End Property Management Services",
-  "sec4_btn": "Discover More",
+    "sec4_title": "Fundraising That Fuels Change",
+    "sec4_para": "Every donation helps us provide education, healthcare, meals, and shelter for those in need. Through generous donors, sponsorships, and community campaigns, we raise the resources that drive meaningful impact and lasting change.",
+    "sec4_li1": "Direct Donations for Urgent Causes",
+    "sec4_li2": "Monthly Sponsorship Programs",
+    "sec4_li3": "Crowdfunding & Awareness Campaigns",
+    "sec4_li4": "Corporate Giving & Partnerships",
+    "sec4_li5": "Community Events & Fund Drives",
+    "sec4_btn": "Support Our Campaigns",
 
-  "sec5_title": "Real Estate Performance That Delivers",
-  "sec5_para": "Our real estate services ensure higher property value, seamless transactions, and long-term satisfaction — helping buyers, sellers, and investors achieve their goals with confidence and trust.",
-  "sec5_stat1_label": "% Client Satisfaction in Property Deals",
-  "sec5_stat2_label": "% Successful Property Closures",
-  "sec5_stat3_label": "% Value Appreciation for Investments",
-  "sec5_stat4_label": "Average Deal Closure Time",
+    "sec5_title": "Impact That Transforms Lives",
+    "sec5_para": "With the support of our donors and volunteers, we bring hope through education, healthcare, meals, and community development. Our performance reflects the trust we build and the lives we touch every day.",
+    "sec5_stat1_label": "% Families Supported with Food & Shelter",
+    "sec5_stat2_label": "% Children Enrolled in Education Programs",
+    "sec5_stat3_label": "% Healthcare & Medical Aid Delivered",
+    "sec5_stat4_label": "Volunteer Hours Contributed",
 
-  "sec6_title": "Real Estate Excellence Hub",
-  "sec6_para": "At our Real Estate Innovation Hub, we are transforming the way people find, buy, and invest in properties. From premium home listings to expert property management and investment guidance, our mission is to help individuals and businesses make smarter, faster, and more confident real estate decisions.",
-  "sec6_testimonial1": "“This team made buying our dream home simple and stress-free. Their expertise and guidance gave us confidence at every step of the journey.”",
-  "sec6_testimonial1_author": "— Priya Sharma, Home Buyer",
-  "sec6_testimonial2": "“Thanks to their property insights and investment strategies, I secured a profitable deal in one of the best locations. Truly reliable and professional!”",
-  "sec6_testimonial2_author": "— Rajesh Verma, Real Estate Investor",
+    "sec6_title": "Compassion & Impact Hub",
+    "sec6_para": "At our Charity Impact Hub, we are dedicated to transforming lives through education, healthcare, food, and community support. With transparency and trust, our mission is to bring hope, equality, and opportunities to those who need it most.",
+    "sec6_testimonial1": "“Thanks to this organization, my children now have access to education and daily meals. Their support has given us hope for a brighter future.”",
+    "sec6_testimonial1_author": "— Asha Devi, Beneficiary",
+    "sec6_testimonial2": "“Volunteering here has been a life-changing experience. Seeing the smiles on the faces of children and families we support makes every effort worthwhile.”",
+    "sec6_testimonial2_author": "— Rohan Mehta, Volunteer",
 
-  "sec7_title": "Find Your Dream Home With Us",
-  "sec7_para": "Looking to buy, sell, or invest in real estate? Get expert guidance and personalized solutions to make the right move in today’s property market.",
-  "sec7_btn": "Get In Touch",
-       
+    "sec7_title": "Join Us in Making a Difference",
+    "sec7_para": "Together we can provide education, healthcare, food, and shelter to those in need. Your support and compassion help us bring hope and build stronger communities.",
+    "sec7_btn": "Get Involved",
+ 
   },
   ar: {
-    "home": "الرئيسية",
-    "home1": "الصفحة الرئيسية 1",
-    "home2": "الصفحة الرئيسية 2",
-    "about": "من نحن",
+     "home": "الرئيسية",
+    "home1": "الصفحة 1",
+    "home2": "الصفحة 2",
+    "about": "معلومات عنا",
     "services": "الخدمات",
     "allServices": "جميع الخدمات",
-    "service_1": "مساعدة في شراء العقارات",
-    "service_2": "بيع العقارات",
-    "service_3": "خدمات الإيجار",
-    "service_4": "إدارة العقارات",
-    "service_5": "الاستثمار العقاري",
-    "service_6": "الدعم القانوني والتوثيق",
+    "service_1": "الخدمة_1",
+    "service_2": "الخدمة_2",
+    "service_3": "الخدمة_3",
+    "service_4": "الخدمة_4",
+    "service_5": "الخدمة_5",
+    "service_6": "الخدمة_6",
     "blog": "المدونة",
     "allPosts": "جميع المقالات",
-    "blog_1": "الاستثمارات العقارية الذكية",
-    "blog_2": "إدارة العقارات الفعالة",
-    "blog_3": "اتجاهات سوق العقارات",
+    "blog_1": "مدونة_1",
+    "blog_2": "مدونة_2",
+    "blog_3": "مدونة_3",
     "contact": "اتصل بنا",
-    "logout": "تسجيل خروج",
+    "logout": "تسجيل الخروج",
 
-    "footer_about": "مزود رائد لحلول الذكاء الاصطناعي، يساعد الشركات على التحول من خلال التكنولوجيا الذكية وأنظمة الأتمتة المبتكرة.",
-    "footer_quickLinks": "روابط سريعة",
+    "footer_about": "منظمة خيرية مكرسة، تمكّن المجتمعات من خلال التعليم والرعاية الصحية ودعم الغذاء والمبادرات المستدامة لخلق تأثير دائم وأمل.",
+    "footer_quicklinks": "روابط سريعة",
     "footer_home": "الرئيسية",
     "footer_home2": "الصفحة الرئيسية 2",
-    "footer_aboutUs": "من نحن",
+    "footer_aboutus": "معلومات عنا",
     "footer_services": "الخدمات",
-    "footer_blog": "المدونة",
+    "footer_blog": "مدونة",
     "footer_contact": "اتصل بنا",
-    "footer_servicesTitle": "الخدمات",
-    "footer_service1": "مساعدة في شراء العقارات",
-    "footer_service2": "بيع العقارات",
-    "footer_service3": "خدمات الإيجار",
-    "footer_service4": "إدارة الممتلكات",
-    "footer_service5": "الاستثمار العقاري",
-    "footer_service6": "الدعم القانوني والتوثيق",
-    "footer_contactInfo": "معلومات الاتصال",
-    "footer_email": "contact@stackly.ai",
+    "footer_services_title": "الخدمات",
+    "footer_service1": "توزيع الغذاء",
+    "footer_service2": "دعم التعليم",
+    "footer_service3": "المخيمات الطبية",
+    "footer_service4": "تمكين المرأة",
+    "footer_service5": "رعاية الأطفال",
+    "footer_service6": "الإغاثة في الكوارث",
+    "footer_contactinfo": "معلومات الاتصال",
+    "footer_email": "contact@stackly.in",
     "footer_phone": "+1 (555) 123-4567",
-    "footer_address": "123 طريق ابتكار الذكاء الاصطناعي",
-    "footer_bottom": "© 2025 Stackly. جميع الحقوق محفوظة.",
-    "hero_title": "بوابتك إلى المنازل المثالية",
-    "hero_para": "اكتشف منازل تناسب أحلامك وأسلوب حياتك.",
-    "hero_btn": "استكشاف الأدوات",
-
-  "sec2_badge": "طريقك لحياة أفضل",
-  "sec2_title": "اعثر على منازل تلهم أسلوب حياتك",
-  "sec2_para": "اكتشف مجموعة واسعة من خيارات العقارات الفاخرة المصممة لتناسب أسلوب حياتك وميزانيتك. من الشقق الحديثة في قلب المدينة إلى الفيلات الهادئة وسط الطبيعة، نساعدك في العثور على منزل يجمع بين الراحة والأناقة. مع التوجيه الخبير والشفافية والثقة، تبدأ رحلتك نحو العقار المثالي هنا.",
-  "sec2_btn1": "اكتشف المزيد",
-  "sec2_btn2": "تواصل معنا",
-
-  "sec3_title": "حلول عقارية شاملة",
-  "sec3_para": "من الشراء والبيع إلى الاستثمار والإيجار، تم تصميم خدماتنا العقارية لتجعل القرارات العقارية بسيطة وآمنة وخالية من التوتر.",
-  "sec3_card1_title": "ابحث عن منزل أحلامك",
-  "sec3_card1_para": "استكشف مجموعة واسعة من العقارات — من الشقق الحديثة إلى الفيلات الفاخرة — مع توجيه الخبراء لتناسب أسلوب حياتك وميزانيتك.",
-  "sec3_card2_title": "استثمارات عقارية ذكية",
-  "sec3_card2_para": "اكتشف فرص استثمارية عالية الإمكانات في مواقع رئيسية، لضمان نمو طويل الأمد وأقصى عائد على محفظتك العقارية.",
-  "sec3_card3_title": "بيع العقار بسهولة",
-  "sec3_card3_para": "بع عقارك بسهولة باستخدام عمليتنا الشفافة، وشبكة المشترين القوية، واستراتيجيات التسويق المثبتة التي تضمن أفضل قيمة.",
-
-  "sec4_title": "عقارات تغير أنماط الحياة",
-  "sec4_para": "من المشترين لأول مرة إلى المستثمرين ذوي الخبرة، تساعد خدماتنا العقارية الناس في العثور على منازل أحلامهم وتأمين استثمارات مربحة والاستمتاع برحلة عقارية سلسة مع إرشاد الخبراء في كل خطوة.",
-  "sec4_li1": "قوائم سكنية وتجارية مميزة",
-  "sec4_li2": "إرشادات حول المواقع الاستراتيجية للعقارات",
-  "sec4_li3": "دعم خالٍ من المتاعب للبيع والشراء",
-  "sec4_li4": "رؤى ذكية للاستثمار العقاري",
-  "sec4_li5": "خدمات إدارة عقارات متكاملة",
-  "sec4_btn": "اكتشف المزيد",
-
-  "sec5_title": "أداء عقاري يحقق النتائج",
-  "sec5_para": "تضمن خدماتنا العقارية قيمة أعلى للعقارات ومعاملات سلسة ورضا طويل الأمد — مما يساعد المشترين والبائعين والمستثمرين على تحقيق أهدافهم بثقة واطمئنان.",
-  "sec5_stat1_label": "% رضا العملاء في الصفقات العقارية",
-  "sec5_stat2_label": "% إتمام الصفقات العقارية بنجاح",
-  "sec5_stat3_label": "% زيادة قيمة الاستثمارات",
-  "sec5_stat4_label": "متوسط وقت إتمام الصفقة",
-
-  "sec6_title": "مركز التميز العقاري",
-  "sec6_para": "في مركز الابتكار العقاري لدينا، نحن نغير الطريقة التي يجد بها الناس ويشترون ويستثمرون في العقارات. من قوائم المنازل المميزة إلى إدارة العقارات وتوجيهات الاستثمار، تتمثل مهمتنا في مساعدة الأفراد والشركات على اتخاذ قرارات عقارية أكثر ذكاءً وأسرع وأكثر ثقة.",
-  "sec6_testimonial1": "“جعل هذا الفريق شراء منزل أحلامنا بسيطًا وخاليًا من التوتر. خبرتهم وإرشاداتهم أعطتنا الثقة في كل خطوة من الرحلة.”",
-  "sec6_testimonial1_author": "— بريا شارما، مشتري منزل",
-  "sec6_testimonial2": "“بفضل رؤاهم العقارية واستراتيجيات الاستثمار، حصلت على صفقة مربحة في أحد أفضل المواقع. موثوقون ومحترفون بالفعل!”",
-  "sec6_testimonial2_author": "— راجش فيرما، مستثمر عقاري",
-
-  "sec7_title": "اعثر على منزل أحلامك معنا",
-  "sec7_para": "هل ترغب في شراء أو بيع أو الاستثمار في العقارات؟ احصل على إرشادات الخبراء وحلول مخصصة لاتخاذ القرار الصحيح في سوق العقارات اليوم.",
-  "sec7_btn": "تواصل معنا",
-
+    "footer_location": "123 حيدر أباد، الهند",
+    "footer_rights": "© 2025 Stackly. جميع الحقوق محفوظة.",
   
+    "hero_title": "بوابتك لنشر اللطف",
+    "hero_para": "معًا يمكننا جلب الأمل والتعليم والرعاية إلى المجتمعات المحتاجة.",
+    "hero_btn": "ادعم رسالتنا",
+
+    "sec2_badge": "بوابتك لنشر الأمل",
+    "sec2_title": "نصنع مستقبلًا أكثر إشراقًا معًا",
+    "sec2_para": "من خلال التعليم والرعاية الصحية والطعام ودعم المجتمع، نلتزم بارتقاء الحياة وبناء غدٍ أفضل. كل فعل من أفعال اللطف يقربنا من عالم مليء بالتعاطف والمساواة والفرص. انضم إلينا في صنع فرق حيث يكون الأثر أكبر.\n          ومع تفاني متطوعينا وكرم متبرعينا، ننشئ \n  برامج مستدامة تمكّن الأفراد وتقوّي مجتمعات كاملة.",
+    "sec2_btn1": "استكشف عملنا",
+    "sec2_btn2": "انضم إلينا",
+
+    "sec3_title": "دعم مجتمعي شامل",
+    "sec3_para": "من التعليم والرعاية الصحية إلى الطعام والمأوى، صُمِّمت مبادراتنا لإحداث أثر دائم ورفع من هم في أمسّ الحاجة بروح من التعاطف والشفافية.",
+    "sec3_card1_title": "التعليم للجميع",
+    "sec3_card1_para": "نوفّر مستلزمات مدرسية ومنحًا وبرامج تعلّم لضمان أن يحظى كل طفل بفرصة التعلّم والنمو وحلم مستقبل أكثر إشراقًا.",
+    "sec3_card2_title": "الصحة والرفاه",
+    "sec3_card2_para": "من خلال المخيّمات الطبية وحملات التوعية الصحية والمساعدات الأساسية، نوفّر الرعاية والدعم للمجتمعات التي تفتقر إلى الخدمات الصحية الأساسية.",
+    "sec3_card3_title": "دعم الغذاء والمأوى",
+    "sec3_card3_para": "نوزّع وجبات مغذية ونقدّم مساعدة في تأمين المأوى ونضمن أن تحصل الأسر في الأزمات على الدعم الذي تحتاجه لإعادة بناء حياتها بكرامة.",
+
+    "sec4_title": "جمع تبرعات يغذي التغيير",
+    "sec4_para": "يساعد كل تبرع في توفير التعليم والرعاية الصحية والوجبات والمأوى للمحتاجين. من خلال المتبرعين السخيين والرعايات وحملات المجتمع، نجمع الموارد التي تقود أثرًا ملموسًا وتغييرًا مستدامًا.",
+    "sec4_li1": "تبرعات مباشرة للقضايا العاجلة",
+    "sec4_li2": "برامج رعاية شهرية",
+    "sec4_li3": "التمويل الجماعي وحملات التوعية",
+    "sec4_li4": "عطاء الشركات والشراكات",
+    "sec4_li5": "فعاليات مجتمعية وحملات جمع تبرعات",
+    "sec4_btn": "ادعم حملاتنا",
+
+    "sec5_title": "أثر يغيّر الحياة",
+    "sec5_para": "بدعم متبرعينا ومتطوعينا، نجلب الأمل عبر التعليم والرعاية الصحية والوجبات وتنمية المجتمع. يعكس أداؤنا الثقة التي نبنيها والحيوات التي نلمسها كل يوم.",
+    "sec5_stat1_label": "% من الأسر المدعومة بالغذاء والمأوى",
+    "sec5_stat2_label": "% من الأطفال الملتحقين ببرامج التعليم",
+    "sec5_stat3_label": "% من الرعاية الصحية والمساعدات الطبية المقدمة",
+    "sec5_stat4_label": "ساعات التطوع المقدمة",
+
+    "sec6_title": "مركز التعاطف والأثر",
+    "sec6_para": "في مركز أثرنا الخيري، نكرّس جهودنا لتحويل الحياة من خلال التعليم والرعاية الصحية والطعام ودعم المجتمع. برسالة من الشفافية والثقة، نسعى لجلب الأمل والمساواة والفرص لمن هم في أمسّ الحاجة.",
+    "sec6_testimonial1": "“بفضل هذه المنظمة أصبح لدى أطفالي إمكانية الوصول إلى التعليم والوجبات اليومية. لقد منحنا دعمهم أملاً بمستقبل أكثر إشراقًا.”",
+    "sec6_testimonial1_author": "— آشا ديفي، مستفيدة",
+    "sec6_testimonial2": "“كان التطوع هنا تجربة غيّرت حياتي. إن رؤية الابتسامات على وجوه الأطفال والأسر التي ندعمها تجعل كل جهد يستحق العناء.”",
+    "sec6_testimonial2_author": "— روهان ميهتا، متطوع",
+
+    "sec7_title": "انضم إلينا لإحداث فرق",
+    "sec7_para": "معًا يمكننا توفير التعليم والرعاية الصحية والغذاء والمأوى للمحتاجين. إن دعمك وتعاطفك يساعداننا على جلب الأمل وبناء مجتمعات أقوى.",
+    "sec7_btn": "انضم إلينا",
 
      },
   he: {
     "home": "בית",
-    "home1": "דף הבית 1",
-    "home2": "דף הבית 2",
+    "home1": "דף 1",
+    "home2": "דף 2",
     "about": "אודות",
     "services": "שירותים",
     "allServices": "כל השירותים",
-    "service_1": "סיוע ברכישת נכסים",
-    "service_2": "מכירת נכסים",
-    "service_3": "שירותי השכרה",
-    "service_4": "ניהול נכסים",
-    "service_5": "השקעות נדל״ן",
-    "service_6": "תמיכה משפטית ותיעוד",
+    "service_1": "שירות_1",
+    "service_2": "שירות_2",
+    "service_3": "שירות_3",
+    "service_4": "שירות_4",
+    "service_5": "שירות_5",
+    "service_6": "שירות_6",
     "blog": "בלוג",
     "allPosts": "כל הפוסטים",
-    "blog_1": "השקעות נדל״ן חכמות",
-    "blog_2": "ניהול נכסים יעיל",
-    "blog_3": "מגמות שוק הנדל״ן",
+    "blog_1": "בלוג_1",
+    "blog_2": "בלוג_2",
+    "blog_3": "בלוג_3",
     "contact": "צור קשר",
     "logout": "התנתק",
 
-    "footer_about": "ספק מוביל של פתרונות בינה מלאכותית, מסייע לעסקים להשתנות באמצעות טכנולוגיה חכמה ומערכות אוטומציה חדשניות.",
-    "footer_quickLinks": "קישורים מהירים",
+    "footer_about": "ארגון צדקה מסור, המעצים קהילות באמצעות חינוך, בריאות, תמיכת מזון ויוזמות ברות קיימא ליצירת השפעה מתמשכת ותקווה.",
+    "footer_quicklinks": "קישורים מהירים",
     "footer_home": "בית",
     "footer_home2": "בית 2",
-    "footer_aboutUs": "אודותינו",
+    "footer_aboutus": "אודותינו",
     "footer_services": "שירותים",
     "footer_blog": "בלוג",
     "footer_contact": "צור קשר",
-    "footer_servicesTitle": "שירותים",
-    "footer_service1": "סיוע ברכישת נכסים",
-    "footer_service2": "מכירת נכסים",
-    "footer_service3": "שירותי השכרה",
-    "footer_service4": "ניהול נכסים",
-    "footer_service5": "השקעות נדל\"ן",
-    "footer_service6": "תמיכה משפטית ותיעוד",
-    "footer_contactInfo": "פרטי קשר",
-    "footer_email": "contact@stackly.ai",
+    "footer_services_title": "שירותים",
+    "footer_service1": "חלוקת מזון",
+    "footer_service2": "תמיכה בחינוך",
+    "footer_service3": "מחנות בריאות",
+    "footer_service4": "העצמת נשים",
+    "footer_service5": "רווחת ילדים",
+    "footer_service6": "סיוע באסונות",
+    "footer_contactinfo": "פרטי קשר",
+    "footer_email": "contact@stackly.in",
     "footer_phone": "+1 (555) 123-4567",
-    "footer_address": "123 רחוב חדשנות בינה מלאכותית",
-    "footer_bottom": "© 2025 Stackly. כל הזכויות שמורות.",
-  "hero_title": "השער שלך לבתים מושלמים",
-  "hero_para": "גלה בתים שמתאימים לחלומות ולאורח החיים שלך.",
-  "hero_btn": "חקור כלים",
+    "footer_location": "123 היידראבאד, הודו",
+    "footer_rights": "© 2025 Stackly. כל הזכויות שמורות.",
 
-  "sec2_badge": "הדרך שלך לחיים טובים יותר",
-  "sec2_title": "מצא בתים שמעוררים השראה באורח החיים שלך",
-  "sec2_para": "גלה מגוון רחב של אפשרויות נדל\"ן יוקרתיות המותאמות לאורח החיים והתקציב שלך. מדירות מודרניות בלב העיר ועד וילות שלוות מוקפות טבע, אנו עוזרים לך למצוא בית שבו נוחות פוגשת אלגנטיות. עם ליווי מומחים, שקיפות ואמון — המסע שלך לנכס המושלם מתחיל כאן.",
-  "sec2_btn1": "למד עוד",
-  "sec2_btn2": "צור קשר",
+    "hero_title": "השער שלך להפצת טוב לב",
+    "hero_para": "ביחד נוכל להביא תקווה, חינוך וטיפול לקהילות הזקוקות לכך.",
+    "hero_btn": "תמכו במשימתנו",
 
-  "sec3_title": "פתרונות נדל\"ן מקיפים",
-  "sec3_para": "מקנייה ומכירה ועד השקעה והשכרה, שירותי הנדל\"ן שלנו נועדו להפוך החלטות נדל\"ן לפשוטות, בטוחות וללא מתח.",
-  "sec3_card1_title": "מצא את בית חלומותיך",
-  "sec3_card1_para": "חקור מגוון רחב של נכסים — מדירות מודרניות ועד וילות יוקרה — עם ליווי מומחים שיתאים לאורח החיים ולתקציב שלך.",
-  "sec3_card2_title": "השקעות נדל\"ן חכמות",
-  "sec3_card2_para": "גלה הזדמנויות השקעה בעלות פוטנציאל גבוה במיקומים מובילים, להבטחת צמיחה לטווח ארוך ותשואה מקסימלית על תיק הנדל\"ן שלך.",
-  "sec3_card3_title": "מכירת נכס ללא מאמץ",
-  "sec3_card3_para": "מכור את הנכס שלך בקלות באמצעות התהליך השקוף שלנו, רשת הקונים החזקה שלנו ואסטרטגיות שיווק מוכחות שמבטיחות את הערך הטוב ביותר.",
+    "sec2_badge": "השער שלך להפצת תקווה",
+    "sec2_title": "יוצרים עתיד בהיר יותר יחד",
+    "sec2_para": "באמצעות חינוך, בריאות, מזון ותמיכת קהילה, אנו מחויבים להרים חיים ולבנות מחר טוב יותר. כל מעשה של טוב לב מקרב אותנו לעולם מלא חמלה, שוויון והזדמנויות. הצטרפו אלינו כדי לחולל שינוי במקום שבו זה חשוב ביותר.\n          יחד עם מסירות המתנדבים שלנו ונדיבות התורמים, אנו יוצרים \n  תוכניות בנות־קיימא המעצימות יחידים ומחזקות קהילות שלמות.",
+    "sec2_btn1": "גלו את פעילותנו",
+    "sec2_btn2": "הצטרפו לעשייה",
 
-  "sec4_title": "נדל\"ן שמשנה אורח חיים",
-  "sec4_para": "מרוכשי דירות ראשונים ועד משקיעים מנוסים, שירותי הנדל\"ן שלנו עוזרים לאנשים למצוא את בית חלומותיהם, להבטיח השקעות רווחיות וליהנות מתהליך חלק עם ליווי מומחים בכל שלב.",
-  "sec4_li1": "רישומי מגורים ומסחר יוקרתיים",
-  "sec4_li2": "הכוונה אסטרטגית למיקום הנכס",
-  "sec4_li3": "תמיכה נוחה בקנייה ומכירה",
-  "sec4_li4": "תובנות חכמות להשקעות נדל\"ן",
-  "sec4_li5": "שירותי ניהול נכסים מקצה לקצה",
-  "sec4_btn": "גלה עוד",
+    "sec3_title": "תמיכה קהילתית מקיפה",
+    "sec3_para": "מחינוך ובריאות ועד מזון ומחסה, היוזמות שלנו נועדו ליצור השפעה מתמשכת ולהרים את מי שהכי זקוקים לכך – מתוך חמלה ושקיפות.",
+    "sec3_card1_title": "חינוך לכולם",
+    "sec3_card1_para": "אנו מספקים ציוד לימודי, מלגות ותוכניות למידה כדי שלכל ילד תהיה הזדמנות ללמוד, לצמוח ולחלום על עתיד בהיר יותר.",
+    "sec3_card2_title": "בריאות ורווחה",
+    "sec3_card2_para": "באמצעות מרפאות ניידות, ימי הסברה וסיוע חיוני, אנו מביאים טיפול ותמיכה לקהילות שחסרות להן תשתיות בריאות בסיסיות.",
+    "sec3_card3_title": "תמיכה במזון ובמחסה",
+    "sec3_card3_para": "אנו מחלקים ארוחות מזינות, מסייעים במציאת מחסה ומוודאים שמשפחות במשבר מקבלות את התמיכה הנדרשת כדי לבנות מחדש את חייהן בכבוד.",
 
-  "sec5_title": "ביצועי נדל\"ן שמספקים תוצאות",
-  "sec5_para": "שירותי הנדל\"ן שלנו מבטיחים ערך נכס גבוה יותר, עסקאות חלקות ושביעות רצון לטווח ארוך — ועוזרים לרוכשים, מוכרים ומשקיעים להשיג את מטרותיהם בביטחון ובאמון.",
-  "sec5_stat1_label": "% שביעות רצון לקוחות בעסקאות נדל\"ן",
-  "sec5_stat2_label": "% עסקאות נדל\"ן מוצלחות",
-  "sec5_stat3_label": "% עליית ערך להשקעות",
-  "sec5_stat4_label": "משך זמן ממוצע לסגירת עסקה",
+    "sec4_title": "גיוס כספים שמניע שינוי",
+    "sec4_para": "כל תרומה מסייעת לנו לספק חינוך, בריאות, ארוחות ומחסה לנזקקים. בזכות תורמים נדיבים, חסויות וקמפיינים קהילתיים, אנו מגייסים את המשאבים שמייצרים השפעה משמעותית ושינוי מתמשך.",
+    "sec4_li1": "תרומות ישירות למטרות דחופות",
+    "sec4_li2": "תוכניות חסות חודשיות",
+    "sec4_li3": "מימון המונים וקמפיינים להגברת מודעות",
+    "sec4_li4": "נתינת תאגידים ושיתופי פעולה",
+    "sec4_li5": "אירועים קהילתיים ומבצעי התרמה",
+    "sec4_btn": "תמכו בקמפיינים שלנו",
 
-  "sec6_title": "מרכז המצוינות בנדל\"ן",
-  "sec6_para": "במרכז החדשנות שלנו בנדל\"ן, אנו משנים את הדרך שבה אנשים מוצאים, קונים ומשקיעים בנכסים. מרישומי בתים יוקרתיים ועד ניהול נכסים והכוונת השקעות, המשימה שלנו היא לעזור לאנשים ועסקים לקבל החלטות נדל\"ן חכמות, מהירות ובטוחות יותר.",
-  "sec6_testimonial1": "“הצוות הזה הפך את רכישת בית חלומותינו לפשוטה וללא מתח. הידע וההכוונה שלהם נתנו לנו ביטחון בכל שלב.”",
-  "sec6_testimonial1_author": "— פריה שארמה, רוכשת דירה",
-  "sec6_testimonial2": "“בזכות התובנות שלהם והאסטרטגיות להשקעה, השגתי עסקה רווחית באחד המיקומים הטובים ביותר. באמת אמינים ומקצועיים!”",
-  "sec6_testimonial2_author": "— רג'ש ורמה, משקיע נדל\"ן",
+    "sec5_title": "השפעה שמעצבת חיים",
+    "sec5_para": "בעזרת התמיכה של התורמים והמתנדבים שלנו, אנו מביאים תקווה דרך חינוך, בריאות, ארוחות ופיתוח קהילתי. הביצועים שלנו משקפים את האמון שאנו בונים ואת החיים שאנו נוגעים בהם מדי יום.",
+    "sec5_stat1_label": "% משפחות שקיבלו תמיכה במזון ובמחסה",
+    "sec5_stat2_label": "% ילדים שנרשמו לתוכניות חינוך",
+    "sec5_stat3_label": "% טיפול רפואי וסיוע שנמסרו",
+    "sec5_stat4_label": "שעות התנדבות שנתרמו",
 
-  "sec7_title": "מצא את בית חלומותיך איתנו",
-  "sec7_para": "מחפש לקנות, למכור או להשקיע בנדל\"ן? קבל ליווי מומחים ופתרונות מותאמים אישית כדי לבצע את הצעד הנכון בשוק של היום.",
-  "sec7_btn": "צור קשר"  
+    "sec6_title": "מרכז חמלה והשפעה",
+    "sec6_para": "במרכז ההשפעה שלנו לצדקה אנו מחויבים לשנות חיים באמצעות חינוך, בריאות, מזון ותמיכת קהילה. מתוך שקיפות ואמון, משימתנו היא להביא תקווה, שוויון והזדמנויות למי שזקוקים לכך ביותר.",
+    "sec6_testimonial1": "“בזכות הארגון הזה לילדיי יש כעת גישה לחינוך ולארוחות יומיות. התמיכה שלהם נתנה לנו תקווה לעתיד בהיר יותר.”",
+    "sec6_testimonial1_author": "— אשה דווי, נתמכת",
+    "sec6_testimonial2": "“ההתנדבות כאן הייתה חוויה משנה חיים. לראות את החיוכים על פניהם של הילדים והמשפחות שאנו תומכים בהם הופך כל מאמץ לכדאי.”",
+    "sec6_testimonial2_author": "— רוהאן מהטה, מתנדב",
+
+    "sec7_title": "הצטרפו אלינו כדי לחולל שינוי",
+    "sec7_para": "ביחד נוכל לספק חינוך, בריאות, מזון ומחסה לנזקקים. התמיכה והחמלה שלכם מסייעות לנו להביא תקווה ולבנות קהילות חזקות יותר.",
+    "sec7_btn": "הצטרפו לעשייה",
+
+  
   }
 };
 
@@ -696,363 +662,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
-
-
-
-<script>
-  // Mobile menu setup
-  const hamburger = document.getElementById("hamburger");
-  const hamburgerMenu = document.getElementById("hamburgerMenu");
-
-  // Show/hide mobile menu on hamburger click
-  hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    hamburgerMenu.classList.toggle("active");
-  });
-
-  // Toggle dropdowns for mobile menu
-  document.querySelectorAll('.mobile-dropdown-parent > span').forEach(link => {
-    link.addEventListener('click', function() {
-      const parentLi = this.parentElement;
-      const dropdown = parentLi.querySelector('.mobile-dropdown');
-      dropdown.classList.toggle('active');
-    });
-  });
-
-  // Desktop dropdown toggle logic
-  document.querySelectorAll('.nav-item.dropdown > .nav-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      document.querySelectorAll('.dropdown-menu').forEach(menu => {
-        if (menu !== this.nextElementSibling) {
-          menu.classList.remove('active');
-        }
-      });
-      const dropdownMenu = this.nextElementSibling;
-      if (dropdownMenu) {
-        dropdownMenu.classList.toggle('active');
-      }
-    });
-  });
-
-  // Redirect on desktop dropdown menu item click
-  document.querySelectorAll('.dropdown-menu a').forEach(link => {
-    link.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (href && href !== "#") {
-        window.location.href = href;
-        document.querySelectorAll('.dropdown-menu').forEach(menu => menu.classList.remove('active'));
-      }
-    });
-  });
-
-  // Redirect on normal nav link click
-  document.querySelectorAll('.nav-menu > .nav-item:not(.dropdown) .nav-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (href && href !== "#") {
-        window.location.href = href;
-      }
-    });
-  });
-
-  // Auth link toggle for desktop and mobile
-  function setupAuthLinks() {
-    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
-    const authLinks = [document.getElementById("authLink"), document.getElementById("mobileAuthLink")];
-
-    authLinks.forEach(link => {
-      if (!link) return;
-      if (isLoggedIn) {
-        link.innerText = "Logout";
-        link.href = "#";
-        link.onclick = (e) => {
-          e.preventDefault();
-          localStorage.removeItem("isLoggedIn");
-          localStorage.removeItem("currentUser");
-          window.location.href = "index.html";
-        };
-      } else {
-        link.innerText = "Login";
-        link.href = "index.html";
-        link.onclick = null;
-      }
-    });
-  }
-  setupAuthLinks();
-
-  // Theme toggle
-  const toggleBtn = document.getElementById('toggleBtn');
-  let darkMode = localStorage.getItem('darkMode') === 'true';
-
-  function applyTheme() {
-    if (darkMode) {
-      document.body.classList.add('dark-mode');
-      toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
-    } else {
-      document.body.classList.remove('dark-mode');
-      toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
-    }
-  }
-
-  toggleBtn.addEventListener('click', () => {
-    darkMode = !darkMode;
-    localStorage.setItem('darkMode', darkMode);
-    applyTheme();
-  });
-  applyTheme();
-
-  // Avatar initials logic
-  const avatarCircle = document.getElementById('avatarCircle');
-  const avatarInitials = document.getElementById('avatarInitials');
-  const avatarDropdown = document.getElementById('avatarDropdown');
-  const logoutBtn = document.getElementById('logoutBtn');
-  const currentUserEmail = localStorage.getItem("currentUser");
-  const users = JSON.parse(localStorage.getItem("users")) || {};
-
-  if (currentUserEmail && users[currentUserEmail]) {
-    const firstName = users[currentUserEmail].firstName || "";
-    const lastName = users[currentUserEmail].lastName || "";
-    const initials = (firstName[0] || "").toUpperCase() + (lastName[0] || "").toUpperCase();
-    avatarInitials.textContent = initials;
-  } else {
-    avatarInitials.textContent = "?";
-  }
-
-  // Show/hide avatar dropdown on click
-  avatarCircle.addEventListener('click', function(e) {
-    e.stopPropagation();
-    avatarDropdown.style.display = avatarDropdown.style.display === "block" ? "none" : "block";
-  });
-
-  document.addEventListener('click', function(e) {
-    if (!avatarCircle.contains(e.target) && !avatarDropdown.contains(e.target)) {
-      avatarDropdown.style.display = "none";
-    }
-  });
-
-  // Logout action
-  logoutBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    localStorage.removeItem("isLoggedIn");
-    localStorage.removeItem("currentUser");
-    window.location.href = "index.html";
-  });
-</script>
-
-<style>
-  /* Base styles for hamburger icon */
-  .hamburger {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 24px;
-    height: 18px;
-    cursor: pointer;
-    z-index: 1000;
-  }
-
-  .hamburger span {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #333;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .dark-mode .hamburger span {
-    background-color: #fff;
-  }
-
-  /* Hamburger menu animation */
-  .hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-
-  .hamburger.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
-
-  /* Hide navigation on mobile */
-  @media (max-width: 768px) {
-    .nav-menu {
-      display: none;
-    }
-    .hamburger {
-      display: flex;
-    }
-  }
-
-  /* Styles for the mobile hamburger menu */
-  .mobile-menu-wrapper {
-    position: relative;
-  }
-
-  .hamburger-menu {
-    display: none;
-    flex-direction: column;
-    background: #23272f;
-    color: #fff;
-    position: absolute;
-    top: 50px;
-    right: 0;
-    width: 220px;
-    border-radius: 8px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
-    padding: 20px 0;
-    z-index: 9999;
-    list-style: none;
-  }
-
-  .hamburger-menu.active {
-    display: flex;
-  }
-
-  .hamburger-menu li {
-    padding: 10px 24px;
-    border-bottom: 1px solid #333;
-  }
-
-  .hamburger-menu li:last-child {
-    border-bottom: none;
-  }
-
-  .hamburger-menu a,
-  .hamburger-menu span {
-    color: #00f7ff;
-    text-decoration: none;
-    font-size: 1.1rem;
-    display: block;
-    cursor: pointer;
-    font-weight: 500;
-  }
-
-  .hamburger-menu ul {
-    list-style: none;
-    padding-left: 20px;
-    margin-top: 5px;
-  }
-
-  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown {
-    display: none;
-  }
-
-  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown.active {
-    display: block;
-  }
-
-  .toggle-btn {
-    background: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 38px;
-    height: 38px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 16px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-
-  .toggle-btn:hover {
-    background: #f0f0f0;
-  }
-
-  
-/* Avatar circle */
-/* wrapper so dropdown follows avatar */
-.avatar-wrapper {
-  position: relative;
-  display: inline-block;
-}
-
-/* avatar circle */
-.avatar-circle {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  margin-left: 16px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #00f5ff;
-  color: #000;
-  font-weight: bold;
-  cursor: pointer;
-  z-index: 1001;
-}
-
-/* dropdown */
-.avatar-dropdown {
-  display: none;
-  position: absolute;
-  top: 110%;   /* directly below avatar */
-  min-width: 120px;
-  background: #fff;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
-  border-radius: 8px;
-  z-index: 1002;
-  padding: 4px 0;
-}
-
-/* align for LTR */
-html[dir="ltr"] .avatar-dropdown {
-  right: 0;
-  left: auto;
-}
-
-/* align for RTL */
-html[dir="rtl"] .avatar-dropdown {
-  left: 0;
-  right: auto;
-}
-
-.avatar-dropdown ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.avatar-dropdown li {
-  padding: 6px 12px;
-}
-
-.avatar-dropdown a {
-  color: #23272f;
-  text-decoration: none;
-  font-size: 0.95rem;
-  display: block;
-  border-radius: 4px;
-  transition: background 0.2s;
-}
-
-.avatar-dropdown a:hover {
-  background: #f0f0f0;
-}
-
-
-  @media (max-width: 768px) {
-    .toggle-btn,
-    .avatar-circle {
-      margin-left: 8px;
-      width: 32px;
-      height: 32px;
-    }
-  }
-
-  @media (min-width: 769px) {
-    .hamburger-menu {
-      display: none !important;
-    }
-  }
-</style>
 
 
 <!-- 🔷 Protest home page  -->
@@ -1765,105 +1374,166 @@ document.addEventListener("DOMContentLoaded",()=>{
 
     
 
-     <!-- Footer -->
-    
+<!-- Footer -->
+
+<footer class="site-footer">
+  <div class="footer-wrapper">
+    <div class="footer-grid">
+
+      <!-- Brand & About -->
+      <div class="footer-block footer-brand footer-block1">
+        <div class="footer-logo">
+          <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 50px; width: 80px;">
+        </div>
+
+        <p style="text-align: justify;" data-i18n="footer_about">
+          Dedicated charity organization, empowering communities through education, healthcare, food support, and sustainable initiatives to create lasting impact and hope.
+        </p>
+
+        <div class="social-links">
+          <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-block footer-block2">
+        <h4 data-i18n="footer_quicklinks">Quick Links</h4>
+        <ul>
+          <li><a href="home.html"><span data-i18n="footer_home">Home</span></a></li>
+          <li><a href="home2.html"><span data-i18n="footer_home2">Home 2</span></a></li>
+          <li><a href="about.html"><span data-i18n="footer_aboutus">About Us</span></a></li>
+          <li><a href="services.html"><span data-i18n="footer_services">Services</span></a></li>
+          <li><a href="blog.html"><span data-i18n="footer_blog">Blog</span></a></li>
+          <li><a href="contact.html"><span data-i18n="footer_contact">Contact</span></a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-block footer-block3">
+        <h4 data-i18n="footer_services_title">Services</h4>
+        <ul>
+          <li><a href="service1.html"><span data-i18n="footer_service1">Food Distribution</span></a></li>
+          <li><a href="service2.html"><span data-i18n="footer_service2">Education Support</span></a></li>
+          <li><a href="service3.html"><span data-i18n="footer_service3">Healthcare Camps</span></a></li>
+          <li><a href="service4.html"><span data-i18n="footer_service4">Women Empowerment</span></a></li>
+          <li><a href="service5.html"><span data-i18n="footer_service5">Child Welfare</span></a></li>
+          <li><a href="service6.html"><span data-i18n="footer_service6">Disaster Relief</span></a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-block footer-block4">
+        <h4 data-i18n="footer_contactinfo">Contact Info</h4>
+        <ul>
+          <li><i class="fas fa-envelope"></i> <span data-i18n="footer_email">contact@stackly.in</span></li>
+          <li><i class="fas fa-phone"></i> <span data-i18n="footer_phone">+1 (555) 123-4567</span></li>
+          <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer_location">123 Hyderabad, India</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom -->
+    <div class="footer-bottom-bar">
+      <p data-i18n="footer_rights">&copy; 2025 Stackly. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+<!-- Styles -->
 <style>
-.footer {
+.site-footer {
   background: #0a0a0a;
   color: #fff;
   padding: 50px 20px 20px;
   font-family: Arial, sans-serif;
 }
 
-.footer-section1{
-  margin-right: 150px;
+.footer-wrapper {
+  max-width: 1200px; /* keeps equal left-right padding */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.footer-block2 {
+  padding-inline-start: 100px; /* works for both ltr & rtl */
 }
 
-.footer-section4{
-  margin-left: 50px;
+.footer-block3 {
+  padding-inline-start: 80px; /* works for both ltr & rtl */
 }
 
-.footer .footer-content {
+.footer-block4 {
+  padding-inline-start: 60px; /* works for both ltr & rtl */
+}
+
+.footer-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   margin-bottom: 30px;
 }
 
-.footer .footer-section h4 {
+
+.footer-block h4 {
   font-size: 1.2rem;
   margin-bottom: 15px;
   color: #f4f4f4;
 }
 
-.footer .footer-section ul {
+.footer-block ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
-.footer .footer-section ul li {
+.footer-block ul li {
   margin-bottom: 10px;
-  font-size: 0.95rem;
   color: #ddd;
 }
 
-.footer .footer-section ul li a {
+.footer-block ul li a {
   color: #ddd;
   text-decoration: none;
   transition: color 0.3s;
 }
 
-.footer .footer-section ul li a:hover {
+.footer-block ul li a:hover {
   color: #a68e4c;
 }
 
-.footer .social-links a {
-  margin-right: 12px;
-  font-size: 1.2rem;
-  color: #ddd;
-  transition: color 0.3s;
-}
 
-.footer .social-links a:hover {
-  color: #000000;
-}
-
-.footer .footer-bottom {
+.footer-bottom-bar {
   text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255,255,255,0.1);
   padding-top: 15px;
   font-size: 0.9rem;
   color: #bbb;
 }
 
+/* Responsive */
 @media (max-width: 900px) {
-  .footer .footer-content {
+  .footer-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
-  .footer-section1{
-  margin-right: 5px;
-}
 }
 
 @media (max-width: 600px) {
-  .footer .footer-content {
+  .footer-grid {
     grid-template-columns: 1fr;
     text-align: left;
   }
-  .footer .social-links {
-    margin-top: 15px;
+  .footer-block2{
+      padding-left: 0px;
   }
-  .footer-section1{
-  margin-right: 10px;
-}
-  .footer-section2{
-  margin-right: 10px;
-}
-.footer-section4{
-  margin-left: 1px;
-}
+  .footer-block3{
+      padding-left: 0px;
+  }
+    .footer-block4{
+      padding-left: 0px;
+    }
 }
 </style>
 

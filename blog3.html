@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stackly - Realestate</title>
+    <title>Stackly - Charity</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -16,9 +16,10 @@
 
 
 
-    <!-- Sticky Header -->
-   <header class="header">
-  <div class="container">
+  <!-- Sticky Header -->
+
+  <header class="header">
+   <div class="container">
     <div class="nav-wrapper">
       <div class="logo">
         <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 40px; width: 80px;">
@@ -38,21 +39,21 @@
             <a href="#" class="nav-link"><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
               <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
-              <li><a href="service1.html"><span data-i18n="service_1">Property Buying Assistance</span></a></li>
-              <li><a href="service2.html"><span data-i18n="service_2">Property Selling</span></a></li>
-              <li><a href="service3.html"><span data-i18n="service_3">Rental Services </span></a></li>
-              <li><a href="service4.html"><span data-i18n="service_4">Property Management</span></a></li>
-              <li><a href="service5.html"><span data-i18n="service_5">Real Estate Investment</span></a></li>
-              <li><a href="service6.html"><span data-i18n="service_6">Legal & Documentation Support</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Service_1</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Service_2</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Service_3</span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Service_4</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Service_5</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service_6">Service_6</span></a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
             <a href="#" class="nav-link"><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
               <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
-              <li><a href="blog1.html"><span data-i18n="blog_1">Smart Property Investments</span></a></li>
-              <li><a href="blog2.html"><span data-i18n="blog_2">Effective Property Management</span></a></li>
-              <li><a href="blog3.html"><span data-i18n="blog_3">Real Estate Market Trends</span></a></li>
+              <li><a href="blog1.html"><span data-i18n="blog_1">blog_1</span></a></li>
+              <li><a href="blog2.html"><span data-i18n="blog_2">blog_2</span></a></li>
+              <li><a href="blog3.html"><span data-i18n="blog_3">blog_3</span></a></li>
             </ul>
           </li>
           <li class="nav-item"><a href="contact.html" class="nav-link"><span data-i18n="contact">Contact</span></a></li>
@@ -64,6 +65,15 @@
           <span></span>
         </div>
       </nav>
+
+       <div class="lang-switcher">
+        <label for="langSelect"></label>
+        <select id="langSelect" onchange="changeLanguage(this.value)">
+          <option value="en">English</option>
+          <option value="ar">Arabic</option>
+          <option value="he">Hebrew</option>
+        </select>
+      </div>
 
       <div class="mobile-menu-wrapper">
         <ul class="hamburger-menu" id="hamburgerMenu">
@@ -79,21 +89,21 @@
             <span><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></span>
             <ul class="mobile-dropdown">
              <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
-              <li><a href="service1.html"><span data-i18n="service_1">Property Buying Assistance</span></a></li>
-              <li><a href="service2.html"><span data-i18n="service_2">Property Selling</span></a></li>
-              <li><a href="service3.html"><span data-i18n="service_3">Rental Services </span></a></li>
-              <li><a href="service4.html"><span data-i18n="service_4">Property Management</span></a></li>
-              <li><a href="service5.html"><span data-i18n="service_5">Real Estate Investment</span></a></li>
-              <li><a href="service6.html"><span data-i18n="service6">Legal & Documentation Support</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Service_1</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Service_2</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Service_3</span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Service_4</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Service_5</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service_6">Service_6</span></a></li>
             </ul>
           </li>
           <li class="mobile-dropdown-parent">
             <span><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></span>
             <ul class="mobile-dropdown">
                <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
-                <li><a href="blog1.html"><span data-i18n="blog_1">Smart Property Investments</span></a></li>
-                <li><a href="blog2.html"><span data-i18n="blog_2">Effective Property Management</span></a></li>
-                <li><a href="blog3.html"><span data-i18n="blog_3">Real Estate Market Trends</span></a></li>
+                <li><a href="blog1.html"><span data-i18n="blog_1">blog_1</span></a></li>
+                <li><a href="blog2.html"><span data-i18n="blog_2">blog_2</span></a></li>
+                <li><a href="blog3.html"><span data-i18n="blog_3">blog_3</span></a></li>
             </ul>
           </li>
           <li><a href="contact.html"><span data-i18n="contact">Contact</span></a></li>
@@ -101,42 +111,41 @@
         </ul>
       </div>
 
-      <div class="lang-switcher">
-        <label for="langSelect">Language:</label>
-        <select id="langSelect" onchange="changeLanguage(this.value)">
-          <option value="en">English</option>
-          <option value="ar">Arabic</option>
-          <option value="he">Hebrew</option>
-        </select>
-      </div>
-
       <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
         <i class="fas fa-moon"></i>
       </button>
 
-      <div class="avatar-circle" title="Profile" id="avatarCircle">
-        <span id="avatarInitials"></span>
+     <div class="avatar-wrapper">
+        <div class="avatar-circle" title="Profile" id="avatarCircle">
+          <span id="avatarInitials">BA</span>
+        </div>
+        <div class="avatar-dropdown" id="avatarDropdown">
+          <ul>
+            <li>
+              <a href="index.html" id="logoutBtn">
+                <span data-i18n="logout">Logout</span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="avatar-dropdown" id="avatarDropdown">
-        <ul>
-          <li><a href="index.html" id="logoutBtn"><span data-i18n="logout">Logout</span></a></li>
-        </ul>
-      </div>
+      
     </div>
   </div>
 </header>
 
 
+
 <!-- section: 1 -->
 <section class="ai-hero-section">
   <video autoplay muted loop playsinline class="ai-hero-bg-video">
-    <source src="https://videos.pexels.com/video-files/3773484/3773484-hd_1920_1080_30fps.mp4" type="video/mp4">
+    <source src="video/site44-S3.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
   <div class="ai-hero-overlay">
     <div class="ai-hero-content">
-      <h1 class="ai-hero-title ai-glow animate-ai-slide-in" data-i18n="heroTitle">Real Estate Market Trends</h1>
+      <h1 class="ai-hero-title ai-glow animate-ai-slide-in" data-i18n="heroTitle">Healthcare Access for All</h1>
     </div>
   </div>
 </section>
@@ -144,12 +153,14 @@
 <!-- Section : 2 -->
 <section class="ai-hero">
   <div class="container">
-    <h1 data-i18n="heroHeading">Real Estate Market Trends</h1>
-    <p data-i18n="heroSub">Shaping the future of property investments with innovation, demand shifts, and sustainable growth.</p>
+    <h1 data-i18n="heroHeading">Building a Healthier Future</h1>
+    <p data-i18n="heroSub">Ensuring quality healthcare for vulnerable communities with compassion, innovation, and equity.</p>
     <p data-i18n="heroPara">
-      The real estate sector is evolving rapidly, driven by technology, changing lifestyles, and global economic trends. 
-      By embracing digital platforms, eco-friendly practices, and smart urban planning, investors and developers can 
-      unlock new opportunities and ensure long-term value creation.
+      Healthcare is a basic human right, yet millions of people across the world struggle 
+      to access essential medical services. Through community health programs, mobile 
+      clinics, awareness drives, and partnerships with medical professionals, we are 
+      bringing life-saving care to those who need it most. Together, we can create 
+      healthier communities and give everyone a fair chance to live a better life. 
     </p>
   </div>
 </section>
@@ -159,14 +170,16 @@
   <div class="container">
     <h2 data-i18n="introTitle">Introduction</h2>
     <p data-i18n="introPara1">
-      The real estate market is evolving rapidly with changing buyer preferences, urbanization, 
-      and advancements in digital property platforms. Investors and developers are adapting to 
-      smart technologies and sustainable construction to meet modern demands. 
+      Access to healthcare is vital for building strong, thriving societies. Unfortunately, 
+      many families face barriers such as poverty, lack of hospitals, or shortage of doctors. 
+      These challenges prevent communities from receiving timely treatment and maintaining 
+      good health. 
     </p>
     <p data-i18n="introPara2">
-      Trends such as co-living spaces, green buildings, and AI-driven property management are 
-      redefining how people buy, sell, and invest in real estate. These innovations are 
-      transforming the sector into a smarter, more transparent, and future-ready marketplace. 
+      Our mission focuses on removing these barriers by providing affordable healthcare 
+      services, preventive care, and awareness about healthy living. By combining medical 
+      support with education, we ensure that people not only get treated but also stay 
+      healthier in the long run. 
     </p>
   </div>
 </section>
@@ -174,23 +187,23 @@
 <!-- Section : 4 -->
 <section class="ai-usecases">
   <div class="container">
-    <h2 data-i18n="trendsTitle">Key Real Estate Market Trends</h2>
+    <h2 data-i18n="trendsTitle">Key Focus Areas in Healthcare</h2>
     <div class="use-grid">
       <div class="use-card">
-        <h3 data-i18n="trend1Title">🏙️ Urbanization & Smart Cities</h3>
-        <p data-i18n="trend1Text">Rapid urban growth and the rise of smart cities are driving demand for modern, connected living spaces.</p>
+        <h3 data-i18n="trend1Title">🏥 Community Clinics</h3>
+        <p data-i18n="trend1Text">Setting up clinics in underserved areas to provide primary healthcare and medicines.</p>
       </div>
       <div class="use-card">
-        <h3 data-i18n="trend2Title">🌱 Sustainable Housing</h3>
-        <p data-i18n="trend2Text">Green buildings and eco-friendly designs are becoming essential as buyers prioritize sustainability.</p>
+        <h3 data-i18n="trend2Title">👩‍⚕️ Preventive Care</h3>
+        <p data-i18n="trend2Text">Raising awareness on nutrition, hygiene, and vaccinations to prevent illness before it starts.</p>
       </div>
       <div class="use-card">
-        <h3 data-i18n="trend3Title">💻 PropTech Innovations</h3>
-        <p data-i18n="trend3Text">AI, VR, and digital platforms are transforming property search, transactions, and management processes.</p>
+        <h3 data-i18n="trend3Title">🚑 Mobile Health Units</h3>
+        <p data-i18n="trend3Text">Reaching remote villages with mobile medical vans and emergency response support.</p>
       </div>
       <div class="use-card">
-        <h3 data-i18n="trend4Title">📈 Investment Opportunities</h3>
-        <p data-i18n="trend4Text">Growing demand for rental spaces, co-living, and commercial hubs is creating new avenues for investors.</p>
+        <h3 data-i18n="trend4Title">💊 Affordable Treatment</h3>
+        <p data-i18n="trend4Text">Providing cost-effective medicines, diagnostic services, and health check-ups for all.</p>
       </div>
     </div>
   </div>
@@ -200,21 +213,21 @@
 <section class="ai-challenges">
   <div class="container">
     <div class="challenge-content">
-      <h2 data-i18n="challengesTitle">Challenges in Real Estate Market Trends</h2>
+      <h2 data-i18n="challengesTitle">Challenges in Healthcare Access</h2>
       <p data-i18n="challengePara1">
-        The real estate sector is evolving rapidly, but it also faces significant challenges. 
-        Market fluctuations, rising construction costs, and unpredictable interest rates create 
-        uncertainty for both buyers and investors.
+        Millions still lack access to proper healthcare due to poverty, distance from hospitals, 
+        and shortage of trained medical professionals. For rural and marginalized communities, 
+        even basic treatment can be out of reach. 
       </p>
       <p data-i18n="challengePara2">
-        Additionally, regulatory changes, demand for sustainable housing, and adapting to PropTech 
-        innovations can be complex for developers and agencies. Balancing affordability with quality 
-        and meeting shifting consumer expectations remain critical challenges in today’s real estate market.
+        Rising healthcare costs, lack of awareness, and inequality in services add to the 
+        struggle. Addressing these challenges requires collective effort—building affordable 
+        healthcare infrastructure, increasing outreach, and ensuring no one is left behind. 
       </p>
     </div>
     <div class="challenge-image">
-      <img src="https://images.pexels.com/photos/7710011/pexels-photo-7710011.jpeg" 
-           alt="Real Estate Market Challenges">
+      <img src="https://i.pinimg.com/736x/00/ac/f0/00acf0c7fbc017e8a5407421d5fcaa29.jpg" 
+           alt="Healthcare Challenges">
     </div>
   </div>
 </section>
@@ -222,22 +235,21 @@
 <!-- Section: 6 -->
 <section class="ai-future">
   <div class="container">
-    <h2 data-i18n="futureTitle">The Future of Real Estate Market Trends</h2>
+    <h2 data-i18n="futureTitle">The Future of Healthcare Access</h2>
     <p data-i18n="futurePara1">
-      The future of real estate is being shaped by technology, urbanization, and changing buyer preferences. 
-      Smart homes, eco-friendly buildings, and digital property platforms are redefining how people buy, sell, 
-      and invest in real estate. 
+      The future of healthcare lies in inclusivity, innovation, and sustainability. 
+      By adopting telemedicine, mobile health apps, and community-driven health programs, 
+      we can reach more people at lower costs. 
     </p>
     <p data-i18n="futurePara2">
-      With the rise of PropTech, virtual property tours, and AI-driven market analysis, investors and buyers 
-      are gaining access to more accurate insights and faster decision-making. These innovations will 
-      transform real estate into a more transparent, efficient, and accessible industry. 
+      Preventive healthcare, early diagnosis, and awareness will play a major role in reducing 
+      life-threatening diseases. Collaboration between governments, NGOs, and local communities 
+      will ensure stronger healthcare systems. 
     </p>
     <p data-i18n="futurePara3">
-      As cities expand and demand for sustainable living grows, the future of real estate lies in balancing 
-      technology with human needs—offering affordable, smart, and environmentally responsible housing 
-      solutions. Developers and investors who embrace these trends will lead the way in shaping tomorrow’s 
-      real estate market. 
+      Our vision is a world where healthcare is not a privilege but a right for everyone— 
+      where every child is vaccinated, every mother receives proper care, and every family 
+      can access treatment without financial hardship. 
     </p>
   </div>
 </section>
@@ -246,226 +258,229 @@
 <section class="contact-banner section-padding">
   <div class="container">
     <div class="contact-banner-content">
-      <h2 data-i18n="contactTitle">Get In Touch With Our Real Estate Experts</h2>
-      <p data-i18n="contactText">Looking to buy, sell, or invest in property? Connect with our experts today for personalized guidance and smart real estate solutions.</p>
-      <a href="contact.html" class="btn btn-primary" data-i18n="contactBtn">Contact Us</a>
+      <h2 data-i18n="contactTitle">Join Us in Saving Lives</h2>
+      <p data-i18n="contactText">Your support can bring healthcare to those who need it most. Together, we can create a healthier and stronger tomorrow.</p>
+      <a href="contact.html" class="btn btn-primary" data-i18n="contactBtn">Donate Now</a>
     </div>
   </div>
 </section>
+
+
 
 
 <script>
 // Translation dictionary
 const translations = {
   en: {
-   "home": "Home",
+    "home": "Home",
     "home1": "Home 1",
     "home2": "Home 2",
     "about": "About",
     "services": "Services",
     "allServices": "All Services",
-    "service_1": "Property Buying Assistance",
-    "service_2": "Property Selling",
-    "service_3": "Rental Services",
-    "service_4": "Property Management",
-    "service_5": "Real Estate Investment",
-    "service_6": "Legal & Documentation Support",
+    "service_1": "Service_1",
+    "service_2": "Service_2",
+    "service_3": "Service_3",
+    "service_4": "Service_4",
+    "service_5": "Service_5",
+    "service_6": "Service_6",
     "blog": "Blog",
     "allPosts": "All Posts",
-    "blog_1": "Smart Property Investments",
-    "blog_2": "Effective Property Management",
-    "blog_3": "Real Estate Market Trends",
+    "blog_1": "Blog_1",
+    "blog_2": "Blog_2",
+    "blog_3": "Blog_3",
     "contact": "Contact",
     "logout": "Logout",
 
-    "footer_about": "Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.",
-    "footer_quickLinks": "Quick Links",
+     "footer_about": "Dedicated charity organization, empowering communities through education, healthcare, food support, and sustainable initiatives to create lasting impact and hope.",
+    "footer_quicklinks": "Quick Links",
     "footer_home": "Home",
     "footer_home2": "Home 2",
-    "footer_aboutUs": "About Us",
+    "footer_aboutus": "About Us",
     "footer_services": "Services",
     "footer_blog": "Blog",
     "footer_contact": "Contact",
-    "footer_servicesTitle": "Services",
-    "footer_service1": "Property Buying Assistance",
-    "footer_service2": "Property Selling",
-    "footer_service3": "Rental Services",
-    "footer_service4": "Property Management",
-    "footer_service5": "Real Estate Investment",
-    "footer_service6": "Legal & Documentation Support",
-    "footer_contactInfo": "Contact Info",
-    "footer_email": "contact@stackly.ai",
+    "footer_services_title": "Services",
+    "footer_service1": "Food Distribution",
+    "footer_service2": "Education Support",
+    "footer_service3": "Healthcare Camps",
+    "footer_service4": "Women Empowerment",
+    "footer_service5": "Child Welfare",
+    "footer_service6": "Disaster Relief",
+    "footer_contactinfo": "Contact Info",
+    "footer_email": "contact@stackly.in",
     "footer_phone": "+1 (555) 123-4567",
-    "footer_address": "123 AI Innovation Drive",
-    "footer_bottom": "© 2025 Stackly. All rights reserved.",
-     heroTitle: "Real Estate Market Trends",
-    heroHeading: "Real Estate Market Trends",
-    heroSub: "Shaping the future of property investments with innovation, demand shifts, and sustainable growth.",
-    heroPara: "The real estate sector is evolving rapidly, driven by technology, changing lifestyles, and global economic trends. By embracing digital platforms, eco-friendly practices, and smart urban planning, investors and developers can unlock new opportunities and ensure long-term value creation.",
-    introTitle: "Introduction",
-    introPara1: "The real estate market is evolving rapidly with changing buyer preferences, urbanization, and advancements in digital property platforms. Investors and developers are adapting to smart technologies and sustainable construction to meet modern demands.",
-    introPara2: "Trends such as co-living spaces, green buildings, and AI-driven property management are redefining how people buy, sell, and invest in real estate. These innovations are transforming the sector into a smarter, more transparent, and future-ready marketplace.",
-    trendsTitle: "Key Real Estate Market Trends",
-    trend1Title: "🏙️ Urbanization & Smart Cities",
-    trend1Text: "Rapid urban growth and the rise of smart cities are driving demand for modern, connected living spaces.",
-    trend2Title: "🌱 Sustainable Housing",
-    trend2Text: "Green buildings and eco-friendly designs are becoming essential as buyers prioritize sustainability.",
-    trend3Title: "💻 PropTech Innovations",
-    trend3Text: "AI, VR, and digital platforms are transforming property search, transactions, and management processes.",
-    trend4Title: "📈 Investment Opportunities",
-    trend4Text: "Growing demand for rental spaces, co-living, and commercial hubs is creating new avenues for investors.",
-    challengesTitle: "Challenges in Real Estate Market Trends",
-    challengePara1: "The real estate sector is evolving rapidly, but it also faces significant challenges. Market fluctuations, rising construction costs, and unpredictable interest rates create uncertainty for both buyers and investors.",
-    challengePara2: "Additionally, regulatory changes, demand for sustainable housing, and adapting to PropTech innovations can be complex for developers and agencies. Balancing affordability with quality and meeting shifting consumer expectations remain critical challenges in today’s real estate market.",
-    futureTitle: "The Future of Real Estate Market Trends",
-    futurePara1: "The future of real estate is being shaped by technology, urbanization, and changing buyer preferences. Smart homes, eco-friendly buildings, and digital property platforms are redefining how people buy, sell, and invest in real estate.",
-    futurePara2: "With the rise of PropTech, virtual property tours, and AI-driven market analysis, investors and buyers are gaining access to more accurate insights and faster decision-making. These innovations will transform real estate into a more transparent, efficient, and accessible industry.",
-    futurePara3: "As cities expand and demand for sustainable living grows, the future of real estate lies in balancing technology with human needs—offering affordable, smart, and environmentally responsible housing solutions. Developers and investors who embrace these trends will lead the way in shaping tomorrow’s real estate market.",
-    contactTitle: "Get In Touch With Our Real Estate Experts",
-    contactText: "Looking to buy, sell, or invest in property? Connect with our experts today for personalized guidance and smart real estate solutions.",
-    contactBtn: "Contact Us"
-       
+    "footer_location": "123 Hyderabad, India",
+    "footer_rights": "© 2025 Stackly. All rights reserved.",
+  
+    "heroTitle": "Healthcare Access for All",
+    "heroHeading": "Building a Healthier Future",
+    "heroSub": "Ensuring quality healthcare for vulnerable communities with compassion, innovation, and equity.",
+    "heroPara": "Healthcare is a basic human right, yet millions of people across the world struggle \n      to access essential medical services. Through community health programs, mobile \n      clinics, awareness drives, and partnerships with medical professionals, we are \n      bringing life-saving care to those who need it most. Together, we can create \n      healthier communities and give everyone a fair chance to live a better life.",
+    "introTitle": "Introduction",
+    "introPara1": "Access to healthcare is vital for building strong, thriving societies. Unfortunately, \n      many families face barriers such as poverty, lack of hospitals, or shortage of doctors. \n      These challenges prevent communities from receiving timely treatment and maintaining \n      good health.",
+    "introPara2": "Our mission focuses on removing these barriers by providing affordable healthcare \n      services, preventive care, and awareness about healthy living. By combining medical \n      support with education, we ensure that people not only get treated but also stay \n      healthier in the long run.",
+    "trendsTitle": "Key Focus Areas in Healthcare",
+    "trend1Title": "🏥 Community Clinics",
+    "trend1Text": "Setting up clinics in underserved areas to provide primary healthcare and medicines.",
+    "trend2Title": "👩‍⚕️ Preventive Care",
+    "trend2Text": "Raising awareness on nutrition, hygiene, and vaccinations to prevent illness before it starts.",
+    "trend3Title": "🚑 Mobile Health Units",
+    "trend3Text": "Reaching remote villages with mobile medical vans and emergency response support.",
+    "trend4Title": "💊 Affordable Treatment",
+    "trend4Text": "Providing cost-effective medicines, diagnostic services, and health check-ups for all.",
+    "challengesTitle": "Challenges in Healthcare Access",
+    "challengePara1": "Millions still lack access to proper healthcare due to poverty, distance from hospitals, \n        and shortage of trained medical professionals. For rural and marginalized communities, \n        even basic treatment can be out of reach.",
+    "challengePara2": "Rising healthcare costs, lack of awareness, and inequality in services add to the \n        struggle. Addressing these challenges requires collective effort—building affordable \n        healthcare infrastructure, increasing outreach, and ensuring no one is left behind.",
+    "futureTitle": "The Future of Healthcare Access",
+    "futurePara1": "The future of healthcare lies in inclusivity, innovation, and sustainability. \n      By adopting telemedicine, mobile health apps, and community-driven health programs, \n      we can reach more people at lower costs.",
+    "futurePara2": "Preventive healthcare, early diagnosis, and awareness will play a major role in reducing \n      life-threatening diseases. Collaboration between governments, NGOs, and local communities \n      will ensure stronger healthcare systems.",
+    "futurePara3": "Our vision is a world where healthcare is not a privilege but a right for everyone— \n      where every child is vaccinated, every mother receives proper care, and every family \n      can access treatment without financial hardship.",
+    "contactTitle": "Join Us in Saving Lives",
+    "contactText": "Your support can bring healthcare to those who need it most. Together, we can create a healthier and stronger tomorrow.",
+    "contactBtn": "Donate Now",
+  
   },
   ar: {
-   "home": "الرئيسية",
-    "home1": "الصفحة الرئيسية 1",
-    "home2": "الصفحة الرئيسية 2",
-    "about": "من نحن",
+     "home": "الرئيسية",
+    "home1": "الصفحة 1",
+    "home2": "الصفحة 2",
+    "about": "معلومات عنا",
     "services": "الخدمات",
     "allServices": "جميع الخدمات",
-    "service_1": "مساعدة في شراء العقارات",
-    "service_2": "بيع العقارات",
-    "service_3": "خدمات الإيجار",
-    "service_4": "إدارة العقارات",
-    "service_5": "الاستثمار العقاري",
-    "service_6": "الدعم القانوني والتوثيق",
+    "service_1": "الخدمة_1",
+    "service_2": "الخدمة_2",
+    "service_3": "الخدمة_3",
+    "service_4": "الخدمة_4",
+    "service_5": "الخدمة_5",
+    "service_6": "الخدمة_6",
     "blog": "المدونة",
     "allPosts": "جميع المقالات",
-    "blog_1": "الاستثمارات العقارية الذكية",
-    "blog_2": "إدارة العقارات الفعالة",
-    "blog_3": "اتجاهات سوق العقارات",
+    "blog_1": "مدونة_1",
+    "blog_2": "مدونة_2",
+    "blog_3": "مدونة_3",
     "contact": "اتصل بنا",
-    "logout": "تسجيل خروج",
+    "logout": "تسجيل الخروج",
 
-    "footer_about": "مزود رائد لحلول الذكاء الاصطناعي، يساعد الشركات على التحول من خلال التكنولوجيا الذكية وأنظمة الأتمتة المبتكرة.",
-    "footer_quickLinks": "روابط سريعة",
+    "footer_about": "منظمة خيرية مكرسة، تمكّن المجتمعات من خلال التعليم والرعاية الصحية ودعم الغذاء والمبادرات المستدامة لخلق تأثير دائم وأمل.",
+    "footer_quicklinks": "روابط سريعة",
     "footer_home": "الرئيسية",
     "footer_home2": "الصفحة الرئيسية 2",
-    "footer_aboutUs": "من نحن",
+    "footer_aboutus": "معلومات عنا",
     "footer_services": "الخدمات",
-    "footer_blog": "المدونة",
+    "footer_blog": "مدونة",
     "footer_contact": "اتصل بنا",
-    "footer_servicesTitle": "الخدمات",
-    "footer_service1": "مساعدة في شراء العقارات",
-    "footer_service2": "بيع العقارات",
-    "footer_service3": "خدمات الإيجار",
-    "footer_service4": "إدارة الممتلكات",
-    "footer_service5": "الاستثمار العقاري",
-    "footer_service6": "الدعم القانوني والتوثيق",
-    "footer_contactInfo": "معلومات الاتصال",
-    "footer_email": "contact@stackly.ai",
+    "footer_services_title": "الخدمات",
+    "footer_service1": "توزيع الغذاء",
+    "footer_service2": "دعم التعليم",
+    "footer_service3": "المخيمات الطبية",
+    "footer_service4": "تمكين المرأة",
+    "footer_service5": "رعاية الأطفال",
+    "footer_service6": "الإغاثة في الكوارث",
+    "footer_contactinfo": "معلومات الاتصال",
+    "footer_email": "contact@stackly.in",
     "footer_phone": "+1 (555) 123-4567",
-    "footer_address": "123 طريق ابتكار الذكاء الاصطناعي",
-    "footer_bottom": "© 2025 Stackly. جميع الحقوق محفوظة.",
+    "footer_location": "123 حيدر أباد، الهند",
+    "footer_rights": "© 2025 Stackly. جميع الحقوق محفوظة.",
+  
+    "heroTitle": "الوصول إلى الرعاية الصحية للجميع",
+    "heroHeading": "بناء مستقبل أكثر صحة",
+    "heroSub": "ضمان رعاية صحية عالية الجودة للمجتمعات الضعيفة بالرحمة والابتكار والعدالة.",
+    "heroPara": "الرعاية الصحية حق أساسي من حقوق الإنسان، ومع ذلك يكافح ملايين الأشخاص حول العالم \n      للوصول إلى الخدمات الطبية الأساسية. من خلال برامج الصحة المجتمعية، العيادات المتنقلة، \n      حملات التوعية، والشراكات مع المتخصصين الطبيين، نحن نقدم الرعاية المنقذة للحياة لأولئك الذين يحتاجونها أكثر. معًا، يمكننا خلق \n      مجتمعات أكثر صحة ومنح الجميع فرصة عادلة للعيش بحياة أفضل.",
+    "introTitle": "مقدمة",
+    "introPara1": "الوصول إلى الرعاية الصحية أمر حيوي لبناء مجتمعات قوية ومزدهرة. لسوء الحظ، \n      تواجه العديد من العائلات حواجز مثل الفقر، نقص المستشفيات، أو قلة الأطباء. \n      هذه التحديات تمنع المجتمعات من الحصول على العلاج في الوقت المناسب والحفاظ على \n      صحة جيدة.",
+    "introPara2": "تركز مهمتنا على إزالة هذه الحواجز من خلال توفير خدمات رعاية صحية ميسورة التكلفة، \n      الرعاية الوقائية، والتوعية حول أسلوب حياة صحي. من خلال الجمع بين الدعم الطبي والتعليم، \n      نضمن أن الناس لا يتلقون العلاج فقط بل يظلون أيضًا \n      أكثر صحة على المدى الطويل.",
+    "trendsTitle": "المجالات الرئيسية في الرعاية الصحية",
+    "trend1Title": "🏥 العيادات المجتمعية",
+    "trend1Text": "إنشاء عيادات في المناطق المحرومة لتقديم الرعاية الصحية الأولية والأدوية.",
+    "trend2Title": "👩‍⚕️ الرعاية الوقائية",
+    "trend2Text": "رفع مستوى الوعي بالتغذية، النظافة، والتطعيمات للوقاية من الأمراض قبل أن تبدأ.",
+    "trend3Title": "🚑 وحدات الصحة المتنقلة",
+    "trend3Text": "الوصول إلى القرى النائية بسيارات طبية متنقلة ودعم الاستجابة للطوارئ.",
+    "trend4Title": "💊 علاج ميسور التكلفة",
+    "trend4Text": "توفير الأدوية والخدمات التشخيصية والفحوصات الطبية بتكلفة مناسبة للجميع.",
+    "challengesTitle": "التحديات في الوصول إلى الرعاية الصحية",
+    "challengePara1": "ما زال الملايين يفتقرون إلى الوصول للرعاية الصحية المناسبة بسبب الفقر، بُعد المستشفيات، \n        ونقص المتخصصين الطبيين المدربين. بالنسبة للمجتمعات الريفية والمهمشة، \n        حتى العلاج الأساسي قد يكون بعيد المنال.",
+    "challengePara2": "ارتفاع تكاليف الرعاية الصحية، نقص الوعي، وعدم المساواة في الخدمات تزيد من \n        المعاناة. معالجة هذه التحديات تتطلب جهدًا جماعيًا—بناء بنية تحتية للرعاية الصحية ميسورة التكلفة، \n        زيادة نطاق الوصول، وضمان عدم ترك أي شخص خلف الركب.",
+    "futureTitle": "مستقبل الوصول إلى الرعاية الصحية",
+    "futurePara1": "يكمن مستقبل الرعاية الصحية في الشمولية، الابتكار، والاستدامة. \n      من خلال تبني الطب عن بُعد، تطبيقات الصحة المتنقلة، وبرامج الصحة المجتمعية، \n      يمكننا الوصول إلى المزيد من الناس بتكاليف أقل.",
+    "futurePara2": "الرعاية الصحية الوقائية، التشخيص المبكر، والتوعية ستلعب دورًا رئيسيًا في الحد من \n      الأمراض التي تهدد الحياة. التعاون بين الحكومات، المنظمات غير الحكومية، والمجتمعات المحلية \n      سيضمن أنظمة رعاية صحية أقوى.",
+    "futurePara3": "رؤيتنا هي عالم حيث لا تكون الرعاية الصحية امتيازًا بل حقًا للجميع— \n      حيث يتم تطعيم كل طفل، تتلقى كل أم الرعاية المناسبة، ويمكن لكل أسرة \n      الحصول على العلاج دون معاناة مالية.",
+    "contactTitle": "انضم إلينا في إنقاذ الأرواح",
+    "contactText": "يمكن لدعمك أن يجلب الرعاية الصحية لأولئك الذين هم في أمس الحاجة إليها. معًا، يمكننا خلق غدٍ أكثر صحة وقوة.",
+    "contactBtn": "تبرع الآن",
 
-     heroTitle: "اتجاهات سوق العقارات",
-    heroHeading: "اتجاهات سوق العقارات",
-    heroSub: "تشكيل مستقبل الاستثمارات العقارية من خلال الابتكار والتحولات في الطلب والنمو المستدام.",
-    heroPara: "يتطور قطاع العقارات بسرعة، مدفوعًا بالتكنولوجيا وتغير أنماط الحياة والاتجاهات الاقتصادية العالمية. من خلال تبني المنصات الرقمية والممارسات الصديقة للبيئة والتخطيط الحضري الذكي، يمكن للمستثمرين والمطورين فتح فرص جديدة وضمان خلق قيمة طويلة الأجل.",
-    introTitle: "مقدمة",
-    introPara1: "يتطور سوق العقارات بسرعة مع تغير تفضيلات المشترين والتحضر والتطورات في المنصات الرقمية. يتبنى المستثمرون والمطورون التقنيات الذكية والبناء المستدام لتلبية متطلبات العصر الحديث.",
-    introPara2: "تعمل الاتجاهات مثل مساحات المعيشة المشتركة والمباني الخضراء وإدارة العقارات المدعومة بالذكاء الاصطناعي على إعادة تعريف كيفية شراء وبيع واستثمار العقارات. هذه الابتكارات تحول القطاع إلى سوق أكثر ذكاءً وشفافية واستعدادًا للمستقبل.",
-    trendsTitle: "الاتجاهات الرئيسية في سوق العقارات",
-    trend1Title: "🏙️ التحضر والمدن الذكية",
-    trend1Text: "يدفع النمو الحضري السريع وظهور المدن الذكية الطلب على أماكن معيشة حديثة ومتصلة.",
-    trend2Title: "🌱 الإسكان المستدام",
-    trend2Text: "أصبحت المباني الخضراء والتصاميم الصديقة للبيئة ضرورية حيث يعطي المشترون الأولوية للاستدامة.",
-    trend3Title: "💻 الابتكارات العقارية التكنولوجية",
-    trend3Text: "تعمل الذكاء الاصطناعي والواقع الافتراضي والمنصات الرقمية على تحويل البحث عن العقارات والعمليات والمعاملات.",
-    trend4Title: "📈 فرص الاستثمار",
-    trend4Text: "يخلق الطلب المتزايد على الإيجارات ومساحات المعيشة المشتركة والمراكز التجارية فرصًا جديدة للمستثمرين.",
-    challengesTitle: "التحديات في سوق العقارات",
-    challengePara1: "يتطور قطاع العقارات بسرعة، ولكنه يواجه أيضًا تحديات كبيرة. تقلبات السوق، وارتفاع تكاليف البناء، وأسعار الفائدة غير المتوقعة تخلق حالة من عدم اليقين للمشترين والمستثمرين.",
-    challengePara2: "بالإضافة إلى ذلك، يمكن أن تكون التغييرات التنظيمية، والطلب على الإسكان المستدام، والتكيف مع الابتكارات التكنولوجية العقارية معقدة بالنسبة للمطورين والوكالات. يبقى تحقيق التوازن بين القدرة على تحمل التكاليف والجودة وتلبية توقعات المستهلكين المتغيرة تحديًا أساسيًا في سوق العقارات اليوم.",
-    futureTitle: "مستقبل سوق العقارات",
-    futurePara1: "يتم تشكيل مستقبل العقارات من خلال التكنولوجيا والتحضر وتغير تفضيلات المشترين. تعيد المنازل الذكية والمباني الصديقة للبيئة والمنصات الرقمية تعريف كيفية شراء وبيع واستثمار العقارات.",
-    futurePara2: "مع صعود التكنولوجيا العقارية، والجولات الافتراضية، والتحليلات السوقية المدعومة بالذكاء الاصطناعي، يحصل المستثمرون والمشترون على رؤى أكثر دقة وقرارات أسرع. ستعمل هذه الابتكارات على تحويل العقارات إلى صناعة أكثر شفافية وكفاءة وسهولة الوصول.",
-    futurePara3: "مع توسع المدن وزيادة الطلب على المعيشة المستدامة، يكمن مستقبل العقارات في تحقيق التوازن بين التكنولوجيا واحتياجات البشر — من خلال توفير مساكن ميسورة التكلفة وذكية وصديقة للبيئة. المطورون والمستثمرون الذين يتبنون هذه الاتجاهات سيقودون الطريق في تشكيل سوق العقارات في المستقبل.",
-    contactTitle: "تواصل مع خبراء العقارات لدينا",
-    contactText: "هل تبحث عن شراء أو بيع أو استثمار في عقار؟ تواصل مع خبرائنا اليوم للحصول على إرشادات مخصصة وحلول عقارية ذكية.",
-    contactBtn: "اتصل بنا",
 
      },
   he: {
- "home": "בית",
-    "home1": "דף הבית 1",
-    "home2": "דף הבית 2",
+    "home": "בית",
+    "home1": "דף 1",
+    "home2": "דף 2",
     "about": "אודות",
     "services": "שירותים",
     "allServices": "כל השירותים",
-    "service_1": "סיוע ברכישת נכסים",
-    "service_2": "מכירת נכסים",
-    "service_3": "שירותי השכרה",
-    "service_4": "ניהול נכסים",
-    "service_5": "השקעות נדל״ן",
-    "service_6": "תמיכה משפטית ותיעוד",
+    "service_1": "שירות_1",
+    "service_2": "שירות_2",
+    "service_3": "שירות_3",
+    "service_4": "שירות_4",
+    "service_5": "שירות_5",
+    "service_6": "שירות_6",
     "blog": "בלוג",
     "allPosts": "כל הפוסטים",
-    "blog_1": "השקעות נדל״ן חכמות",
-    "blog_2": "ניהול נכסים יעיל",
-    "blog_3": "מגמות שוק הנדל״ן",
+    "blog_1": "בלוג_1",
+    "blog_2": "בלוג_2",
+    "blog_3": "בלוג_3",
     "contact": "צור קשר",
     "logout": "התנתק",
 
-    "footer_about": "ספק מוביל של פתרונות בינה מלאכותית, מסייע לעסקים להשתנות באמצעות טכנולוגיה חכמה ומערכות אוטומציה חדשניות.",
-    "footer_quickLinks": "קישורים מהירים",
+    "footer_about": "ארגון צדקה מסור, המעצים קהילות באמצעות חינוך, בריאות, תמיכת מזון ויוזמות ברות קיימא ליצירת השפעה מתמשכת ותקווה.",
+    "footer_quicklinks": "קישורים מהירים",
     "footer_home": "בית",
     "footer_home2": "בית 2",
-    "footer_aboutUs": "אודותינו",
+    "footer_aboutus": "אודותינו",
     "footer_services": "שירותים",
     "footer_blog": "בלוג",
     "footer_contact": "צור קשר",
-    "footer_servicesTitle": "שירותים",
-    "footer_service1": "סיוע ברכישת נכסים",
-    "footer_service2": "מכירת נכסים",
-    "footer_service3": "שירותי השכרה",
-    "footer_service4": "ניהול נכסים",
-    "footer_service5": "השקעות נדל\"ן",
-    "footer_service6": "תמיכה משפטית ותיעוד",
-    "footer_contactInfo": "פרטי קשר",
-    "footer_email": "contact@stackly.ai",
+    "footer_services_title": "שירותים",
+    "footer_service1": "חלוקת מזון",
+    "footer_service2": "תמיכה בחינוך",
+    "footer_service3": "מחנות בריאות",
+    "footer_service4": "העצמת נשים",
+    "footer_service5": "רווחת ילדים",
+    "footer_service6": "סיוע באסונות",
+    "footer_contactinfo": "פרטי קשר",
+    "footer_email": "contact@stackly.in",
     "footer_phone": "+1 (555) 123-4567",
-    "footer_address": "123 רחוב חדשנות בינה מלאכותית",
-    "footer_bottom": "© 2025 Stackly. כל הזכויות שמורות.",
+    "footer_location": "123 היידראבאד, הודו",
+    "footer_rights": "© 2025 Stackly. כל הזכויות שמורות.",
 
-    heroTitle: "מגמות שוק הנדל\"ן",
-    heroHeading: "מגמות שוק הנדל\"ן",
-    heroSub: "עיצוב עתיד ההשקעות בנדל\"ן באמצעות חדשנות, שינויי ביקוש וצמיחה בת קיימא.",
-    heroPara: "שוק הנדל\"ן מתפתח במהירות, מונע על ידי טכנולוגיה, שינויי סגנון חיים ומגמות כלכליות גלובליות. על ידי אימוץ פלטפורמות דיגיטליות, פרקטיקות ירוקות ותכנון עירוני חכם, משקיעים ומפתחים יכולים לפתוח הזדמנויות חדשות ולהבטיח יצירת ערך לטווח ארוך.",
-    introTitle: "הקדמה",
-    introPara1: "שוק הנדל\"ן מתפתח במהירות עם שינויי העדפות הקונים, עיור והתקדמות בפלטפורמות דיגיטליות. משקיעים ומפתחים מתאימים את עצמם לטכנולוגיות חכמות ולבנייה בת קיימא כדי לעמוד בדרישות המודרניות.",
-    introPara2: "מגמות כמו מגורים משותפים, בניינים ירוקים וניהול נכסים מבוסס AI מגדירים מחדש כיצד אנשים קונים, מוכרים ומשקיעים בנדל\"ן. חידושים אלה הופכים את השוק לחכם יותר, שקוף ומוכן לעתיד.",
-    trendsTitle: "מגמות מרכזיות בשוק הנדל\"ן",
-    trend1Title: "🏙️ עיור וערים חכמות",
-    trend1Text: "הצמיחה המהירה בערים ועליית הערים החכמות מניעים את הביקוש למקומות מגורים מודרניים ומקושרים.",
-    trend2Title: "🌱 דיור בר קיימא",
-    trend2Text: "בניינים ירוקים ועיצובים ידידותיים לסביבה הופכים חיוניים כאשר קונים נותנים עדיפות לקיימות.",
-    trend3Title: "💻 חידושי PropTech",
-    trend3Text: "בינה מלאכותית, מציאות מדומה ופלטפורמות דיגיטליות משנים את חיפוש הנכסים, העסקאות ותהליכי הניהול.",
-    trend4Title: "📈 הזדמנויות השקעה",
-    trend4Text: "הביקוש הגובר לשטחי שכירות, מגורים משותפים ומרכזים מסחריים יוצר הזדמנויות חדשות למשקיעים.",
-    challengesTitle: "אתגרים במגמות שוק הנדל\"ן",
-    challengePara1: "שוק הנדל\"ן מתפתח במהירות, אך הוא גם מתמודד עם אתגרים משמעותיים. תנודות שוק, עלויות בנייה עולות וריביות בלתי צפויות יוצרות אי ודאות לקונים ולמשקיעים.",
-    challengePara2: "בנוסף, שינויים רגולטוריים, הביקוש לדיור בר קיימא והתאמה לחידושי PropTech יכולים להיות מורכבים עבור מפתחים וסוכנויות. איזון בין נגישות, איכות ומילוי ציפיות משתנות של צרכנים נותר אתגר מרכזי בשוק הנדל\"ן כיום.",
-    futureTitle: "עתיד מגמות שוק הנדל\"ן",
-    futurePara1: "עתיד הנדל\"ן מעוצב על ידי טכנולוגיה, עיור ושינויי העדפות הקונים. בתים חכמים, בניינים ידידותיים לסביבה ופלטפורמות דיגיטליות מגדירים מחדש את אופן הקנייה, המכירה וההשקעה בנדל\"ן.",
-    futurePara2: "עם עליית PropTech, סיורים וירטואליים וניתוח שוק מבוסס AI, משקיעים וקונים מקבלים גישה לתובנות מדויקות יותר ולקבלת החלטות מהירה יותר. חידושים אלה יהפכו את הנדל\"ן לתעשייה שקופה, יעילה ונגישה יותר.",
-    futurePara3: "כשהערים מתרחבות והביקוש למגורים בני קיימא גובר, עתיד הנדל\"ן טמון באיזון בין טכנולוגיה לצרכים אנושיים — הצעת דיור בר השגה, חכם ואקולוגי. מפתחים ומשקיעים שיאמצו מגמות אלה יובילו את הדרך בעיצוב שוק הנדל\"ן של המחר.",
-    contactTitle: "צור קשר עם מומחי הנדל\"ן שלנו",
-    contactText: "מעוניין לקנות, למכור או להשקיע בנדל\"ן? צור קשר עם המומחים שלנו עוד היום לקבלת ייעוץ מותאם אישית ופתרונות נדל\"ן חכמים.",
-    contactBtn: "צור קשר",
- 
-        
+    "heroTitle": "נגישות לבריאות לכולם",
+    "heroHeading": "בונים עתיד בריא יותר",
+    "heroSub": "הבטחת טיפול בריאותי איכותי לקהילות פגיעות בחמלה, חדשנות ושוויון.",
+    "heroPara": "בריאות היא זכות בסיסית של כל אדם, אך מיליוני אנשים ברחבי העולם נאבקים \n      לגשת לשירותים רפואיים חיוניים. באמצעות תוכניות בריאות קהילתיות, מרפאות ניידות, \n      קמפיינים להעלאת מודעות ושותפויות עם אנשי מקצוע רפואיים, אנו מביאים טיפול מציל חיים לאלה שזקוקים לו ביותר. יחד, נוכל ליצור \n      קהילות בריאות יותר ולתת לכל אחד הזדמנות הוגנת לחיות חיים טובים יותר.",
+    "introTitle": "הקדמה",
+    "introPara1": "הגישה לבריאות חיונית לבניית חברות חזקות ומשגשגות. לצערנו, \n      משפחות רבות מתמודדות עם מחסומים כגון עוני, מחסור בבתי חולים או מחסור ברופאים. \n      אתגרים אלה מונעים מהקהילות לקבל טיפול בזמן ולשמור על \n      בריאות טובה.",
+    "introPara2": "המשימה שלנו מתמקדת בהסרת מחסומים אלה על ידי מתן שירותי בריאות נגישים, \n      טיפול מונע והעלאת מודעות לאורח חיים בריא. על ידי שילוב תמיכה רפואית עם חינוך, \n      אנו מבטיחים שאנשים לא רק יקבלו טיפול אלא גם יישארו \n      בריאים יותר בטווח הארוך.",
+    "trendsTitle": "תחומי מיקוד מרכזיים בבריאות",
+    "trend1Title": "🏥 מרפאות קהילתיות",
+    "trend1Text": "הקמת מרפאות באזורים מוחלשים כדי לספק טיפול ראשוני ותרופות.",
+    "trend2Title": "👩‍⚕️ טיפול מונע",
+    "trend2Text": "הגברת המודעות לתזונה, היגיינה וחיסונים כדי למנוע מחלות לפני שהן מתחילות.",
+    "trend3Title": "🚑 יחידות בריאות ניידות",
+    "trend3Text": "הגעה לכפרים מרוחקים באמצעות ניידות רפואיות ותמיכה בחירום.",
+    "trend4Title": "💊 טיפול נגיש",
+    "trend4Text": "אספקת תרופות, שירותי אבחון ובדיקות רפואיות בעלות משתלמת לכולם.",
+    "challengesTitle": "אתגרים בנגישות לבריאות",
+    "challengePara1": "מיליונים עדיין חסרים גישה לטיפול רפואי הולם בשל עוני, מרחק מבתי חולים, \n        ומחסור באנשי מקצוע רפואיים מיומנים. עבור קהילות כפריות ומודרות, \n        אפילו טיפול בסיסי יכול להיות בלתי אפשרי.",
+    "challengePara2": "עלויות בריאות עולות, חוסר מודעות ואי שוויון בשירותים מוסיפים \n        לקושי. התמודדות עם אתגרים אלה דורשת מאמץ משותף—בניית תשתיות בריאות נגישות, \n        הגדלת היקף השירותים והבטחת שאף אחד לא יישאר מאחור.",
+    "futureTitle": "עתיד הנגישות לבריאות",
+    "futurePara1": "עתיד הבריאות טמון בשוויון, חדשנות וקיימות. \n      באמצעות אימוץ רפואה מרחוק, אפליקציות בריאות ניידות ותוכניות בריאות מונעות קהילה, \n      נוכל להגיע ליותר אנשים בעלויות נמוכות יותר.",
+    "futurePara2": "בריאות מונעת, אבחון מוקדם והעלאת מודעות יהיו בעלי תפקיד מרכזי בצמצום \n      מחלות מסכנות חיים. שיתוף פעולה בין ממשלות, עמותות וקהילות מקומיות \n      יבטיח מערכות בריאות חזקות יותר.",
+    "futurePara3": "החזון שלנו הוא עולם שבו בריאות אינה פריבילגיה אלא זכות לכולם— \n      שבו כל ילד מחוסן, כל אם מקבלת טיפול מתאים, וכל משפחה \n      יכולה לגשת לטיפול ללא קושי כלכלי.",
+    "contactTitle": "הצטרפו אלינו להצלת חיים",
+    "contactText": "התמיכה שלכם יכולה להביא בריאות לאלה שזקוקים לה ביותר. יחד, נוכל ליצור מחר בריא וחזק יותר.",
+    "contactBtn": "תרום עכשיו",
+  
   }
 };
 
@@ -494,358 +509,6 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 
-
-
-<script>
-  // Mobile menu setup
-  const hamburger = document.getElementById("hamburger");
-  const hamburgerMenu = document.getElementById("hamburgerMenu");
-
-  // Show/hide mobile menu on hamburger click
-  hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    hamburgerMenu.classList.toggle("active");
-  });
-
-  // Toggle dropdowns for mobile menu
-  document.querySelectorAll('.mobile-dropdown-parent > span').forEach(link => {
-    link.addEventListener('click', function() {
-      const parentLi = this.parentElement;
-      const dropdown = parentLi.querySelector('.mobile-dropdown');
-      dropdown.classList.toggle('active');
-    });
-  });
-
-  // Desktop dropdown toggle logic
-  document.querySelectorAll('.nav-item.dropdown > .nav-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      document.querySelectorAll('.dropdown-menu').forEach(menu => {
-        if (menu !== this.nextElementSibling) {
-          menu.classList.remove('active');
-        }
-      });
-      const dropdownMenu = this.nextElementSibling;
-      if (dropdownMenu) {
-        dropdownMenu.classList.toggle('active');
-      }
-    });
-  });
-
-  // Redirect on desktop dropdown menu item click
-  document.querySelectorAll('.dropdown-menu a').forEach(link => {
-    link.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (href && href !== "#") {
-        window.location.href = href;
-        document.querySelectorAll('.dropdown-menu').forEach(menu => menu.classList.remove('active'));
-      }
-    });
-  });
-
-  // Redirect on normal nav link click
-  document.querySelectorAll('.nav-menu > .nav-item:not(.dropdown) .nav-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (href && href !== "#") {
-        window.location.href = href;
-      }
-    });
-  });
-
-  // Auth link toggle for desktop and mobile
-  function setupAuthLinks() {
-    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
-    const authLinks = [document.getElementById("authLink"), document.getElementById("mobileAuthLink")];
-
-    authLinks.forEach(link => {
-      if (!link) return;
-      if (isLoggedIn) {
-        link.innerText = "Logout";
-        link.href = "#";
-        link.onclick = (e) => {
-          e.preventDefault();
-          localStorage.removeItem("isLoggedIn");
-          localStorage.removeItem("currentUser");
-          window.location.href = "index.html";
-        };
-      } else {
-        link.innerText = "Login";
-        link.href = "index.html";
-        link.onclick = null;
-      }
-    });
-  }
-  setupAuthLinks();
-
-  // Theme toggle
-  const toggleBtn = document.getElementById('toggleBtn');
-  let darkMode = localStorage.getItem('darkMode') === 'true';
-
-  function applyTheme() {
-    if (darkMode) {
-      document.body.classList.add('dark-mode');
-      toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
-    } else {
-      document.body.classList.remove('dark-mode');
-      toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
-    }
-  }
-
-  toggleBtn.addEventListener('click', () => {
-    darkMode = !darkMode;
-    localStorage.setItem('darkMode', darkMode);
-    applyTheme();
-  });
-  applyTheme();
-
-  // Avatar initials logic
-  const avatarCircle = document.getElementById('avatarCircle');
-  const avatarInitials = document.getElementById('avatarInitials');
-  const avatarDropdown = document.getElementById('avatarDropdown');
-  const logoutBtn = document.getElementById('logoutBtn');
-  const currentUserEmail = localStorage.getItem("currentUser");
-  const users = JSON.parse(localStorage.getItem("users")) || {};
-
-  if (currentUserEmail && users[currentUserEmail]) {
-    const firstName = users[currentUserEmail].firstName || "";
-    const lastName = users[currentUserEmail].lastName || "";
-    const initials = (firstName[0] || "").toUpperCase() + (lastName[0] || "").toUpperCase();
-    avatarInitials.textContent = initials;
-  } else {
-    avatarInitials.textContent = "?";
-  }
-
-  // Show/hide avatar dropdown on click
-  avatarCircle.addEventListener('click', function(e) {
-    e.stopPropagation();
-    avatarDropdown.style.display = avatarDropdown.style.display === "block" ? "none" : "block";
-  });
-
-  document.addEventListener('click', function(e) {
-    if (!avatarCircle.contains(e.target) && !avatarDropdown.contains(e.target)) {
-      avatarDropdown.style.display = "none";
-    }
-  });
-
-  // Logout action
-  logoutBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    localStorage.removeItem("isLoggedIn");
-    localStorage.removeItem("currentUser");
-    window.location.href = "index.html";
-  });
-</script>
-
-<style>
-  /* Base styles for hamburger icon */
-    .header {
-   
-        padding-left: 130px !important;
-        padding-right: 130px !important;
-    }
-
-  .hamburger {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 24px;
-    height: 18px;
-    cursor: pointer;
-    z-index: 1000;
-  }
-
-  .hamburger span {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #333;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .dark-mode .hamburger span {
-    background-color: #fff;
-  }
-
-  /* Hamburger menu animation */
-  .hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-
-  .hamburger.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
-
-  /* Hide navigation on mobile */
-  @media (max-width: 768px) {
-    .nav-menu {
-      display: none;
-    }
-    .hamburger {
-      display: flex;
-    }
-  }
-
-  /* Styles for the mobile hamburger menu */
-  .mobile-menu-wrapper {
-    position: relative;
-  }
-
-  .hamburger-menu {
-    display: none;
-    flex-direction: column;
-    background: #23272f;
-    color: #fff;
-    position: absolute;
-    top: 50px;
-    right: 0;
-    width: 220px;
-    border-radius: 8px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
-    padding: 20px 0;
-    z-index: 9999;
-    list-style: none;
-  }
-
-  .hamburger-menu.active {
-    display: flex;
-  }
-
-  .hamburger-menu li {
-    padding: 10px 24px;
-    border-bottom: 1px solid #333;
-  }
-
-  .hamburger-menu li:last-child {
-    border-bottom: none;
-  }
-
-  .hamburger-menu a,
-  .hamburger-menu span {
-    color: #00f7ff;
-    text-decoration: none;
-    font-size: 1.1rem;
-    display: block;
-    cursor: pointer;
-    font-weight: 500;
-  }
-
-  .hamburger-menu ul {
-    list-style: none;
-    padding-left: 20px;
-    margin-top: 5px;
-  }
-
-  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown {
-    display: none;
-  }
-
-  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown.active {
-    display: block;
-  }
-
-  .toggle-btn {
-    background: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 38px;
-    height: 38px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 16px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-
-  .toggle-btn:hover {
-    background: #f0f0f0;
-  }
-
-  .avatar-circle {
-    position: relative;
-    cursor: pointer;
-    z-index: 1001;
-    overflow: visible;
-  }
-
-  .avatar-circle {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-left: 16px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #eee;
-    position: relative;
-    cursor: pointer;
-  }
-
-  .avatar-circle img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .avatar-dropdown {
-    display: none;
-    position: absolute;
-    top: 65px;
-    right: 20px;
-    background: #fff;
-    min-width: 100px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
-    border-radius: 8px;
-    z-index: 1002;
-    padding: 4px 0;
-  }
-
-  .avatar-dropdown ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .avatar-dropdown li {
-    padding: 6px 12px;
-  }
-
-  .avatar-dropdown a {
-    color: #23272f;
-    text-decoration: none;
-    font-size: 0.95rem;
-    display: block;
-    border-radius: 4px;
-    transition: background 0.2s;
-  }
-
-  .avatar-dropdown a:hover {
-    background: #f0f0f0;
-  }
-
-  @media (max-width: 768px) {
-    .toggle-btn,
-    .avatar-circle {
-      margin-left: 8px;
-      width: 32px;
-      height: 32px;
-    }
-  }
-
-  @media (min-width: 769px) {
-    .hamburger-menu {
-      display: none !important;
-    }
-  }
-</style>
 <!-- 🔷 Protest home page  -->
 
   <script>
@@ -1146,17 +809,20 @@ section { width: 100%; padding: 50px 20px; box-sizing: border-box; }
 
     <!-- Footer -->
     <!-- Footer -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-content">
-      <!-- Logo & About -->
-      <div class="footer-section footer-section1">
-        <div class="logo">
+<footer class="site-footer">
+  <div class="footer-wrapper">
+    <div class="footer-grid">
+
+      <!-- Brand & About -->
+      <div class="footer-block footer-brand footer-block1">
+        <div class="footer-logo">
           <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 50px; width: 80px;">
         </div>
-        <p class="text-justify">
-          <span data-i18n="footer_about">Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.</span>
+
+        <p style="text-align: justify;" data-i18n="footer_about">
+          Dedicated charity organization, empowering communities through education, healthcare, food support, and sustainable initiatives to create lasting impact and hope.
         </p>
+
         <div class="social-links">
           <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
           <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
@@ -1166,12 +832,12 @@ section { width: 100%; padding: 50px 20px; box-sizing: border-box; }
       </div>
 
       <!-- Quick Links -->
-      <div class="footer-section footer-section2">
-        <h4 data-i18n="footer_quickLinks">Quick Links</h4>
+      <div class="footer-block footer-block2">
+        <h4 data-i18n="footer_quicklinks">Quick Links</h4>
         <ul>
           <li><a href="home.html"><span data-i18n="footer_home">Home</span></a></li>
           <li><a href="home2.html"><span data-i18n="footer_home2">Home 2</span></a></li>
-          <li><a href="about.html"><span data-i18n="footer_aboutUs">About Us</span></a></li>
+          <li><a href="about.html"><span data-i18n="footer_aboutus">About Us</span></a></li>
           <li><a href="services.html"><span data-i18n="footer_services">Services</span></a></li>
           <li><a href="blog.html"><span data-i18n="footer_blog">Blog</span></a></li>
           <li><a href="contact.html"><span data-i18n="footer_contact">Contact</span></a></li>
@@ -1179,136 +845,133 @@ section { width: 100%; padding: 50px 20px; box-sizing: border-box; }
       </div>
 
       <!-- Services -->
-      <div class="footer-section footer-section3">
-        <h4 data-i18n="footer_servicesTitle">Services</h4>
+      <div class="footer-block footer-block3">
+        <h4 data-i18n="footer_services_title">Services</h4>
         <ul>
-          <li><a href="service1.html"><span data-i18n="footer_service1">Property Buying Assistance</span></a></li>
-          <li><a href="service2.html"><span data-i18n="footer_service2">Property Selling</span></a></li>
-          <li><a href="service3.html"><span data-i18n="footer_service3">Rental Services</span></a></li>
-          <li><a href="service4.html"><span data-i18n="footer_service4">Property Management</span></a></li>
-          <li><a href="service5.html"><span data-i18n="footer_service5">Real Estate Investment</span></a></li>
-          <li><a href="service6.html"><span data-i18n="footer_service6">Legal & Documentation Support</span></a></li>
+          <li><a href="service1.html"><span data-i18n="footer_service1">Food Distribution</span></a></li>
+          <li><a href="service2.html"><span data-i18n="footer_service2">Education Support</span></a></li>
+          <li><a href="service3.html"><span data-i18n="footer_service3">Healthcare Camps</span></a></li>
+          <li><a href="service4.html"><span data-i18n="footer_service4">Women Empowerment</span></a></li>
+          <li><a href="service5.html"><span data-i18n="footer_service5">Child Welfare</span></a></li>
+          <li><a href="service6.html"><span data-i18n="footer_service6">Disaster Relief</span></a></li>
         </ul>
       </div>
 
       <!-- Contact Info -->
-      <div class="footer-section footer-section4">
-        <h4 data-i18n="footer_contactInfo">Contact Info</h4>
+      <div class="footer-block footer-block4">
+        <h4 data-i18n="footer_contactinfo">Contact Info</h4>
         <ul>
-          <li><i class="fas fa-envelope"></i> <span data-i18n="footer_email">contact@stackly.ai</span></li>
+          <li><i class="fas fa-envelope"></i> <span data-i18n="footer_email">contact@stackly.in</span></li>
           <li><i class="fas fa-phone"></i> <span data-i18n="footer_phone">+1 (555) 123-4567</span></li>
-          <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer_address">123 AI Innovation Drive</span></li>
+          <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer_location">123 Hyderabad, India</span></li>
         </ul>
       </div>
     </div>
 
-    <!-- Bottom Bar -->
-    <div class="footer-bottom">
-      <p><span data-i18n="footer_bottom">&copy; 2025 Stackly. All rights reserved.</span></p>
+    <!-- Bottom -->
+    <div class="footer-bottom-bar">
+      <p data-i18n="footer_rights">&copy; 2025 Stackly. All rights reserved.</p>
     </div>
   </div>
 </footer>
 
+
+<!-- Styles -->
 <style>
-.footer {
+.site-footer {
   background: #0a0a0a;
   color: #fff;
-  padding-left: 140px !important;
-  padding-right: 140px !important;
+  padding: 50px 20px 20px;
   font-family: Arial, sans-serif;
 }
 
-.footer-section1{
-  margin-right: 150px;
+.footer-wrapper {
+  max-width: 1200px; /* keeps equal left-right padding */
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.footer-section4{
-  margin-left: 50px;
+.footer-block2 {
+  padding-inline-start: 100px;  /* works for both ltr & rtl */
 }
 
-.footer .footer-content {
+.footer-block3 {
+  padding-inline-start: 80px;  /* works for both ltr & rtl */
+}
+
+.footer-block4 {
+  padding-inline-start: 60px;  /* works for both ltr & rtl */
+}
+
+
+.footer-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   margin-bottom: 30px;
 }
 
-.footer .footer-section h4 {
+
+.footer-block h4 {
   font-size: 1.2rem;
   margin-bottom: 15px;
   color: #f4f4f4;
 }
 
-.footer .footer-section ul {
+.footer-block ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
-.footer .footer-section ul li {
+.footer-block ul li {
   margin-bottom: 10px;
-  font-size: 0.95rem;
   color: #ddd;
 }
 
-.footer .footer-section ul li a {
+.footer-block ul li a {
   color: #ddd;
   text-decoration: none;
   transition: color 0.3s;
 }
 
-.footer .footer-section ul li a:hover {
+.footer-block ul li a:hover {
   color: #a68e4c;
 }
 
-.footer .social-links a {
-  margin-right: 12px;
-  font-size: 1.2rem;
-  color: #ddd;
-  transition: color 0.3s;
-}
-
-.footer .social-links a:hover {
-  color: #000000;
-}
-
-.footer .footer-bottom {
+.footer-bottom-bar {
   text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255,255,255,0.1);
   padding-top: 15px;
   font-size: 0.9rem;
   color: #bbb;
 }
 
+/* Responsive */
 @media (max-width: 900px) {
-  .footer .footer-content {
+  .footer-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
-  .footer-section1{
-  margin-right: 5px;
-}
 }
 
 @media (max-width: 600px) {
-  .footer .footer-content {
+  .footer-grid {
     grid-template-columns: 1fr;
     text-align: left;
   }
-  .footer .social-links {
-    margin-top: 15px;
+  .footer-block2{
+      padding-left: 0px;
   }
-  .footer-section1{
-  margin-right: 10px;
-}
-  .footer-section2{
-  margin-right: 10px;
-}
-.footer-section4{
-  margin-left: 1px;
-}
+  .footer-block3{
+      padding-left: 0px;
+  }
+    .footer-block4{
+      padding-left: 0px;
+    }
 }
 </style>
+
+
 
 </div>
 

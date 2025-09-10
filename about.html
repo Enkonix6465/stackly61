@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stackly - realestate</title>
+    <title>Stackly - Charity</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -17,6 +17,7 @@
 
 
   <!-- Sticky Header -->
+
   <header class="header">
   <div class="container">
     <div class="nav-wrapper">
@@ -38,21 +39,21 @@
             <a href="#" class="nav-link"><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
               <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
-              <li><a href="service1.html"><span data-i18n="service_1">Property Buying Assistance</span></a></li>
-              <li><a href="service2.html"><span data-i18n="service_2">Property Selling</span></a></li>
-              <li><a href="service3.html"><span data-i18n="service_3">Rental Services </span></a></li>
-              <li><a href="service4.html"><span data-i18n="service_4">Property Management</span></a></li>
-              <li><a href="service5.html"><span data-i18n="service_5">Real Estate Investment</span></a></li>
-              <li><a href="service6.html"><span data-i18n="service_6">Legal & Documentation Support</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Service_1</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Service_2</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Service_3</span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Service_4</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Service_5</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service_6">Service_6</span></a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
             <a href="#" class="nav-link"><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
               <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
-              <li><a href="blog1.html"><span data-i18n="blog_1">Smart Property Investments</span></a></li>
-              <li><a href="blog2.html"><span data-i18n="blog_2">Effective Property Management</span></a></li>
-              <li><a href="blog3.html"><span data-i18n="blog_3">Real Estate Market Trends</span></a></li>
+              <li><a href="blog1.html"><span data-i18n="blog_1">blog_1</span></a></li>
+              <li><a href="blog2.html"><span data-i18n="blog_2">blog_2</span></a></li>
+              <li><a href="blog3.html"><span data-i18n="blog_3">blog_3</span></a></li>
             </ul>
           </li>
           <li class="nav-item"><a href="contact.html" class="nav-link"><span data-i18n="contact">Contact</span></a></li>
@@ -64,6 +65,15 @@
           <span></span>
         </div>
       </nav>
+
+       <div class="lang-switcher">
+        <label for="langSelect"></label>
+        <select id="langSelect" onchange="changeLanguage(this.value)">
+          <option value="en">English</option>
+          <option value="ar">Arabic</option>
+          <option value="he">Hebrew</option>
+        </select>
+      </div>
 
       <div class="mobile-menu-wrapper">
         <ul class="hamburger-menu" id="hamburgerMenu">
@@ -79,21 +89,21 @@
             <span><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></span>
             <ul class="mobile-dropdown">
              <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
-              <li><a href="service1.html"><span data-i18n="service_1">Property Buying Assistance</span></a></li>
-              <li><a href="service2.html"><span data-i18n="service_2">Property Selling</span></a></li>
-              <li><a href="service3.html"><span data-i18n="service_3">Rental Services </span></a></li>
-              <li><a href="service4.html"><span data-i18n="service_4">Property Management</span></a></li>
-              <li><a href="service5.html"><span data-i18n="service_5">Real Estate Investment</span></a></li>
-              <li><a href="service6.html"><span data-i18n="service6">Legal & Documentation Support</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Service_1</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Service_2</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Service_3</span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Service_4</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Service_5</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service_6">Service_6</span></a></li>
             </ul>
           </li>
           <li class="mobile-dropdown-parent">
             <span><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></span>
             <ul class="mobile-dropdown">
                <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
-                <li><a href="blog1.html"><span data-i18n="blog_1">Smart Property Investments</span></a></li>
-                <li><a href="blog2.html"><span data-i18n="blog_2">Effective Property Management</span></a></li>
-                <li><a href="blog3.html"><span data-i18n="blog_3">Real Estate Market Trends</span></a></li>
+                <li><a href="blog1.html"><span data-i18n="blog_1">blog_1</span></a></li>
+                <li><a href="blog2.html"><span data-i18n="blog_2">blog_2</span></a></li>
+                <li><a href="blog3.html"><span data-i18n="blog_3">blog_3</span></a></li>
             </ul>
           </li>
           <li><a href="contact.html"><span data-i18n="contact">Contact</span></a></li>
@@ -101,95 +111,364 @@
         </ul>
       </div>
 
-      <div class="lang-switcher">
-        <label for="langSelect">Language:</label>
-        <select id="langSelect" onchange="changeLanguage(this.value)">
-          <option value="en">English</option>
-          <option value="ar">Arabic</option>
-          <option value="he">Hebrew</option>
-        </select>
-      </div>
+     
 
       <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
         <i class="fas fa-moon"></i>
       </button>
 
-  <div class="avatar-wrapper">
-  <div class="avatar-circle" title="Profile" id="avatarCircle">
-    <span id="avatarInitials">BA</span>
-  </div>
-  <div class="avatar-dropdown" id="avatarDropdown">
-    <ul>
-      <li>
-        <a href="index.html" id="logoutBtn">
-          <span data-i18n="logout">Logout</span>
-        </a>
-      </li>
-    </ul>
-  </div>
-</div>
-
+     <div class="avatar-wrapper">
+        <div class="avatar-circle" title="Profile" id="avatarCircle">
+          <span id="avatarInitials">BA</span>
+        </div>
+        <div class="avatar-dropdown" id="avatarDropdown">
+          <ul>
+            <li>
+              <a href="index.html" id="logoutBtn">
+                <span data-i18n="logout">Logout</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
     </div>
   </div>
 </header>
 
+
+
 <!-- Section : 1 -->
+
+
 <section class="ai-hero-section">
   <video autoplay muted loop playsinline class="ai-hero-bg-video">
-    <source src="https://videos.pexels.com/video-files/4307513/4307513-hd_1920_1080_30fps.mp4" type="video/mp4">
+    <source src="video/Site-44-v3.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
   <div class="ai-hero-overlay">
     <div class="ai-hero-content">
-      <h1 class="ai-hero-title ai-glow animate-ai-slide-in" data-i18n="about_sec1_title">Discover Your Perfect Home</h1>
-      <p class="ai-hero-paragraph animate-ai-fade-up" data-i18n="about_sec1_para">
-        Explore the best properties, tailored to your lifestyle and budget.
-      </p>
-      <a href="services.html" class="btn custom-btn" data-i18n="about_sec1_btn">Browse Listings</a>
+      <h1 class="ai-hero-title ai-glow animate-ai-slide-in" data-i18n="about_sec1_title">
+          Together, We Can Make a Difference
+        </h1>
+        <p class="ai-hero-paragraph animate-ai-fade-up" data-i18n="about_sec1_para">
+          Join us in creating hope, supporting communities, and transforming lives through compassion and action.
+        </p>
+        <a href="contact.html" class="btn custom-btn" data-i18n="about_sec1_btn">
+          Donate Now
+        </a>
     </div>
   </div>
 </section>
 
+<!-- testing -->
 
-<!-- Section : 2 -->
-<section class="mission-values-section">
-  <div class="mv-container">
-    <div class="mv-header fade-in">
-      <h2 class="heading-title" data-i18n="about_sec2_title">Our Mission & Core Values</h2>
-      <p class="mv-subtext" data-i18n="about_sec2_subtext">
-        We are dedicated to helping people find their dream homes and invest in properties 
-        with confidence. With trust, innovation, and customer-first values, we create lasting 
-        relationships and communities that thrive. 
+<section class="impact-section">
+  <div class="impact-container">
+    <!-- Center Globe Element -->
+    <div class="center-globe">
+      <div class="globe-icon">🌍</div>
+      <h2 data-i18n="impact_section.center.title">GLOBAL REACH</h2>
+      <p data-i18n="impact_section.center.subtitle">
+        Making an impact across continents
       </p>
     </div>
 
-    <div class="mv-grid">
-      <div class="mv-card slide-up delay-1">
-        <div class="mv-icon"><i class="fas fa-home"></i></div>
-        <h3 class="mv-card-title" data-i18n="about_sec2_card1_title">Building Trust</h3>
-        <p class="mv-card-text" data-i18n="about_sec2_card1_text">
-          We believe every home search begins with trust. From the first consultation to 
-          the final key handover, transparency is at the heart of everything we do. 
-        </p>
+    <!-- Stats Items -->
+    <div class="stats-items">
+      <!-- Top Items -->
+      <div class="top-row">
+        <div class="stat-item yellow">
+          <div class="stat-number" data-count="250">0</div>
+          <div class="stat-icon">🏠</div>
+          <h3 data-i18n="impact_section.stats.top.0.title">Communities Served</h3>
+          <p data-i18n="impact_section.stats.top.0.description">
+            Across 30+ countries worldwide
+          </p>
+        </div>
+        
+        <div class="stat-item teal">
+          <div class="stat-number" data-count="12000">0</div>
+          <div class="stat-icon">👥</div>
+          <h3 data-i18n="impact_section.stats.top.1.title">Lives Impacted</h3>
+          <p data-i18n="impact_section.stats.top.1.description">
+            Through our various initiatives
+          </p>
+        </div>
+      </div>
+      
+      <!-- Bottom Items -->
+      <div class="bottom-row">
+        <div class="stat-item coral">
+          <div class="stat-number" data-count="95">0</div>
+          <div class="stat-icon">📈</div>
+          <h3 data-i18n="impact_section.stats.bottom.0.title">Success Rate</h3>
+          <p data-i18n="impact_section.stats.bottom.0.description">
+            Of projects achieving their goals
+          </p>
+        </div>
+        
+        <div class="stat-item lavender">
+          <div class="stat-number" data-count="15">0</div>
+          <div class="stat-icon">🌟</div>
+          <h3 data-i18n="impact_section.stats.bottom.1.title">Years of Service</h3>
+          <p data-i18n="impact_section.stats.bottom.1.description">
+            Dedicated to making a difference
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Connecting Lines (SVG) -->
+    <svg class="connector-lines" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet">
+      <line class="line-1" x1="250" y1="250" x2="150" y2="150" />
+      <line class="line-2" x1="250" y1="250" x2="350" y2="150" />
+      <line class="line-3" x1="250" y1="250" x2="150" y2="350" />
+      <line class="line-4" x1="250" y1="250" x2="350" y2="350" />
+    </svg>
+  </div>
+</section>
+
+<style>
+.impact-section {
+  width: 100%;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e6f0f8 100%);
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.impact-container {
+  position: relative;
+  width: 800px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-globe {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #2c3e50, #1a2530);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  z-index: 10;
+  position: relative;
+}
+
+.center-globe .globe-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.center-globe h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.center-globe p {
+  font-size: 12px;
+  font-weight: 300;
+  margin-top: 8px;
+  opacity: 0.9;
+}
+
+.stats-items {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.stat-item {
+  position: absolute;
+  width: 180px;
+  padding: 20px;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 5;
+}
+
+.stat-number {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.stat-icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.stat-item h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.stat-item p {
+  margin: 5px 0 0;
+  font-size: 11px;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+/* Positioning */
+.top-row .stat-item:nth-child(1) {
+  top: 60px;
+  left: 120px;
+}
+
+.top-row .stat-item:nth-child(2) {
+  top: 60px;
+  right: 120px;
+}
+
+.bottom-row .stat-item:nth-child(1) {
+  bottom: 60px;
+  left: 120px;
+}
+
+.bottom-row .stat-item:nth-child(2) {
+  bottom: 60px;
+  right: 120px;
+}
+
+/* Colors */
+.yellow { background: linear-gradient(45deg, #FFB800, #FF8E00); }
+.teal { background: linear-gradient(45deg, #00C9FF, #0096B7); }
+.coral { background: linear-gradient(45deg, #FF6B6B, #EE5A24); }
+.lavender { background: linear-gradient(45deg, #9b59b6, #8e44ad); }
+
+/* Connector Lines */
+.connector-lines {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.connector-lines line {
+  stroke: #a0a0a0;
+  stroke-width: 2;
+  stroke-dasharray: 5;
+}
+
+/* Animation for numbers */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.stat-number {
+  animation: countUp 1s ease-out forwards;
+}
+
+/* RTL Support */
+html[dir="rtl"] .impact-section {
+  direction: rtl;
+}
+
+html[dir="rtl"] .stat-item {
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .impact-container {
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 700px) {
+  .impact-container {
+    transform: scale(0.65);
+  }
+}
+
+@media (max-width: 500px) {
+  .impact-container {
+    transform: scale(0.5);
+  }
+}
+</style>
+
+<script>
+// Number counting animation
+document.addEventListener('DOMContentLoaded', function() {
+  const statNumbers = document.querySelectorAll('.stat-number');
+  
+  statNumbers.forEach(stat => {
+    const target = parseInt(stat.getAttribute('data-count'));
+    const duration = 2000; // ms
+    const steps = 60;
+    const stepValue = target / steps;
+    let current = 0;
+    
+    const timer = setInterval(() => {
+      current += stepValue;
+      if (current >= target) {
+        stat.textContent = target;
+        clearInterval(timer);
+      } else {
+        stat.textContent = Math.round(current);
+      }
+    }, duration / steps);
+  });
+});
+</script>
+
+
+<!-- Section : 2 -->
+<section class="development-process">
+  <div class="development-process-container">
+    <div class="process-header fade-in-up">
+      <h2 data-i18n="charity_heading3">Comprehensive Community Support Programs</h2>
+      <p data-i18n="charity_para3">
+        We are dedicated to uplifting communities through impactful initiatives. 
+        From education to healthcare, food support to empowerment, we ensure that every effort 
+        brings hope, dignity, and long-term change.
+      </p>
+    </div>
+
+    <div class="process-row">
+      <div class="process-image slide-in-right">
+        <img src="https://i.pinimg.com/1200x/9b/a6/36/9ba63637851de636f024fa384faf8192.jpg" alt="Charity Support">
       </div>
 
-      <div class="mv-card slide-up delay-2">
-        <div class="mv-icon"><i class="fas fa-users"></i></div>
-        <h3 class="mv-card-title" data-i18n="about_sec2_card2_title">Customer-First Approach</h3>
-        <p class="mv-card-text" data-i18n="about_sec2_card2_text">
-          We listen to our clients’ needs and guide them through every step of buying, 
-          selling, or investing in real estate with personalized support. 
+      <div class="process-content fade-in-up delay-1">
+        <p class="process-intro" data-i18n="charity_intro2">
+          Our charity programs are designed to bring real impact to the lives of underprivileged individuals and families. 
+          By addressing critical needs and empowering people with resources, we strive to build stronger, more resilient communities. 
+          Every step we take is guided by compassion, transparency, and a commitment to change.
         </p>
-      </div>
 
-      <div class="mv-card slide-up delay-3">
-        <div class="mv-icon"><i class="fas fa-city"></i></div>
-        <h3 class="mv-card-title" data-i18n="about_sec2_card3_title">Shaping Communities</h3>
-        <p class="mv-card-text" data-i18n="about_sec2_card3_text">
-          Beyond property deals, we focus on creating vibrant neighborhoods and 
-          sustainable living spaces that enhance lifestyles and build strong communities. 
-        </p>
+        <div class="process-steps">
+          <div class="step"><span class="step-number">01</span><p data-i18n="charity_step1">Food Distribution & Nutrition Support</p></div>
+          <div class="step"><span class="step-number">02</span><p data-i18n="charity_step2">Education & Skill Development</p></div>
+          <div class="step"><span class="step-number">03</span><p data-i18n="charity_step3">Healthcare Assistance & Camps</p></div>
+          <div class="step"><span class="step-number">04</span><p data-i18n="charity_step4">Shelter & Clothing for the Needy</p></div>
+          <div class="step"><span class="step-number">05</span><p data-i18n="charity_step5">Women & Child Empowerment</p></div>
+          <div class="step"><span class="step-number">06</span><p data-i18n="charity_step6">Community Development & Awareness</p></div>
+        </div>
       </div>
     </div>
   </div>
@@ -198,6 +477,52 @@
 
 <!-- Section : 3 -->
 
+<section class="mission-values-section" style="background-color: black;">
+  <div class="mv-container">
+    <div class="mv-header fade-in">
+      <h2 class="heading-title" data-i18n="about_sec2_title" style="color: #ffffff;">Our Mission & Core Values</h2>
+      <p class="mv-subtext" data-i18n="about_sec2_subtext" style="color: #ffffff;">
+        We are committed to bringing hope and support to those in need. 
+        Guided by compassion, integrity, and collaboration, we work together to create 
+        stronger, healthier, and more empowered communities. 
+      </p>
+    </div>
+
+    <div class="mv-grid">
+      <div class="mv-card slide-up delay-1">
+        <div class="mv-icon"><i class="fas fa-hand-holding-heart"></i></div>
+        <h3 class="mv-card-title" data-i18n="about_sec2_card1_title">Compassion</h3>
+        <p class="mv-card-text" data-i18n="about_sec2_card1_text">
+          Every initiative begins with empathy and kindness. We are dedicated to helping 
+          individuals and families with care, dignity, and respect. 
+        </p>
+      </div>
+
+      <div class="mv-card slide-up delay-2">
+        <div class="mv-icon"><i class="fas fa-people-carry"></i></div>
+        <h3 class="mv-card-title" data-i18n="about_sec2_card2_title">Community First</h3>
+        <p class="mv-card-text" data-i18n="about_sec2_card2_text">
+          We place the needs of communities at the heart of everything we do, working 
+          together to provide opportunities, support, and empowerment. 
+        </p>
+      </div>
+
+      <div class="mv-card slide-up delay-3">
+        <div class="mv-icon"><i class="fas fa-globe"></i></div>
+        <h3 class="mv-card-title" data-i18n="about_sec2_card3_title">Sustainable Impact</h3>
+        <p class="mv-card-text" data-i18n="about_sec2_card3_text">
+          Our vision goes beyond temporary aid — we focus on creating lasting change 
+          through education, healthcare, and development programs. 
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
 
 
 
@@ -205,179 +530,126 @@
 <section class="about-advanced">
   <div class="about-container">
     <div class="about-image slide-left">
-      <img src="https://i.pinimg.com/736x/ca/e9/31/cae9314a2b7ea231af67c7885c344396.jpg" alt="Dream Homes">
+      <img src="https://i.pinimg.com/736x/26/31/9f/26319f3ed388d436aef88f00db92dd00.jpg" alt="Charity Support">
     </div>
     <div class="about-text fade-up">
-      <h1 class="heading-title1" data-i18n="about_sec4_title">Building Dreams, Creating Homes</h1>
+      <h1 class="heading-title1" data-i18n="about_sec4_title">Spreading Hope, Changing Lives</h1>
       <p data-i18n="about_sec4_para1">
-        Finding the perfect home is more than just a transaction — it’s about creating a space where memories are made and futures are built...
+        Our mission goes beyond providing aid — it’s about creating opportunities, restoring dignity, 
+        and building a brighter future for individuals and communities in need.  
       </p>
       <p data-i18n="about_sec4_para2">
-        From modern apartments in the heart of the city to serene villas in peaceful neighborhoods...
+        From food and healthcare programs to education and empowerment initiatives, 
+        we work together with volunteers and supporters to make a lasting difference.  
       </p>
       <div class="about-buttons">
-        <a href="services.html" class="btn-primary" data-i18n="about_sec4_btn1">Explore Properties</a>
-        <a href="contact.html" class="btn-outline" data-i18n="about_sec4_btn2">Get in Touch</a>
+        <a href="contact.html" class="btn-primary" data-i18n="about_sec4_btn1">Donate Now</a>
+        <a href="contact.html" class="btn-outline" data-i18n="about_sec4_btn2">Join as Volunteer</a>
       </div>
     </div>
   </div>
-</section> 
+</section>
+
 
 
 <!-- Section : 5 -->
 <section class="team-stats-section">
   <div class="team-stats-container">
     <div class="team-stats-header">
-      <h2 class="team-heading" data-i18n="about_sec5_title">Our Real Estate Milestones</h2>
+      <h2 class="team-heading" data-i18n="about_sec5_title">Our Impact in Numbers</h2>
       <p class="team-subtext" data-i18n="about_sec5_subtext">
-        Over the years, we’ve helped families find their dream homes and investors grow their portfolios...
+        Together with our volunteers and supporters, we’ve touched countless lives and 
+        continue to build a brighter, more compassionate world every day. 
       </p>
     </div>
     <div class="team-stats-grid">
       <div class="team-stat-item fade-up">
-        <div class="team-stat-number" data-target="500">0</div>
-        <div class="team-stat-label" data-i18n="about_sec5_label1">Happy Families Settled</div>
+        <div class="team-stat-number" data-target="5000">0</div>
+        <div class="team-stat-label" data-i18n="about_sec5_label1">Families Supported</div>
       </div>
       <div class="team-stat-item fade-up delay-1">
-        <div class="team-stat-number" data-target="1200">0</div>
-        <div class="team-stat-label" data-i18n="about_sec5_label2">Properties Sold</div>
+        <div class="team-stat-number" data-target="20000">0</div>
+        <div class="team-stat-label" data-i18n="about_sec5_label2">Meals Served</div>
       </div>
       <div class="team-stat-item fade-up delay-2">
-        <div class="team-stat-number" data-target="15">0</div>
-        <div class="team-stat-label" data-i18n="about_sec5_label3">Years of Excellence</div>
+        <div class="team-stat-number" data-target="10">0</div>
+        <div class="team-stat-label" data-i18n="about_sec5_label3">Years of Service</div>
       </div>
       <div class="team-stat-item fade-up delay-3">
-        <div class="team-stat-number" data-target="30">0</div>
-        <div class="team-stat-label" data-i18n="about_sec5_label4">Cities Covered</div>
+        <div class="team-stat-number" data-target="50">0</div>
+        <div class="team-stat-label" data-i18n="about_sec5_label4">Communities Reached</div>
       </div>
     </div>
   </div>
 </section>
+
 
 
 <!-- Section : 6 -->
 <section class="finance-leadership">
   <div class="finance-leadership-container">
     <div class="finance-leadership-heading">
-      <h2 data-i18n="about_sec6_title">Shaping the Future of Real Estate</h2>
+      <h2 data-i18n="about_sec6_title">Shaping the Future of Humanity with Compassion</h2>
     </div>
     <div class="finance-leadership-image zoom-in">
-      <img src="https://i.pinimg.com/1200x/d7/8c/f8/d78cf82fa87fffe1395f813aa7b3bdc2.jpg" alt="Modern Real Estate">
+      <img src="https://i.pinimg.com/1200x/65/1c/c8/651cc8657bdd26652e25d131f894f436.jpg" alt="Charity Work">
     </div>
     <div class="finance-leadership-text fade-in">
       <p data-i18n="about_sec6_para">
-        At DreamHomes Realty, we don’t just sell properties—we create lifestyles. Our mission is to help families find their dream homes and investors discover properties with lasting value.
+        At Hope Foundation, we don’t just provide aid—we create opportunities. 
+        Our mission is to empower individuals, support families, and strengthen communities 
+        through compassion, education, and sustainable development.
       </p>
       <div class="finance-testimonial slide-up delay-1">
         <blockquote data-i18n="about_sec6_quote1">
-          “Every client deserves more than just a house; they deserve a place to call home...”
+          “Every person deserves dignity, care, and the chance to build a brighter future. 
+          Our work is about restoring hope where it’s needed most.” 
         </blockquote>
         <div class="finance-person">
-          <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Sophia Martinez">
+          <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Ananya Rao">
           <div>
-            <strong data-i18n="about_sec6_person1">Sophia Martinez</strong><br>
-            <span data-i18n="about_sec6_role1">Head of Sales</span>
+            <strong data-i18n="about_sec6_person1">Ananya Rao</strong><br>
+            <span data-i18n="about_sec6_role1">Head of Community Programs</span>
           </div>
         </div>
       </div>
       <div class="finance-testimonial slide-up delay-2">
         <blockquote data-i18n="about_sec6_quote2">
-          “Our mission is to make property buying and selling seamless...”
+          “Our mission is not just charity—it’s about building sustainable change 
+          through education, healthcare, and empowerment.” 
         </blockquote>
         <div class="finance-person">
-          <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="David Johnson">
+          <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Arjun Mehta">
           <div>
-            <strong data-i18n="about_sec6_person2">David Johnson</strong><br>
-            <span data-i18n="about_sec6_role2">Founder & CEO</span>
+            <strong data-i18n="about_sec6_person2">Arjun Mehta</strong><br>
+            <span data-i18n="about_sec6_role2">Founder & Director</span>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 
 
 <!-- Section : 7 -->
 <section class="contact-banner section-padding">
   <div class="container">
     <div class="contact-banner-content">
-      <h2 data-i18n="about_sec7_title">Ready to Find Your Dream Home?</h2>
-      <p data-i18n="about_sec7_para">
-        Explore a wide range of properties tailored to your lifestyle and budget...
-      </p>
-      <a href="contact.html" class="btn btn-primary" data-i18n="about_sec7_btn">Get Started Today</a>
+      <h2 data-i18n="about_sec7_title">Ready to Make a Difference?</h2>
+        <p data-i18n="about_sec7_para">
+          Join us in spreading kindness and hope. Together, we can provide food, education, and support 
+          to those who need it most. Your contribution creates lasting change.  
+        </p>
+        <a href="contact.html" class="btn btn-primary" data-i18n="about_sec7_btn">Donate Now</a>
     </div>
   </div>
 </section>
 
 
 
-<footer class="footer">
-  <div class="container">
-    <div class="footer-content">
-      <!-- Logo & About -->
-      <div class="footer-section footer-section1">
-        <div class="logo">
-          <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 50px; width: 80px;">
-        </div>
-        <p class="text-justify">
-          <span data-i18n="footer_about">Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.</span>
-        </p>
-        <div class="social-links">
-          <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
-          <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
-          <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-
-      <!-- Quick Links -->
-      <div class="footer-section footer-section2">
-        <h4 data-i18n="footer_quickLinks">Quick Links</h4>
-        <ul>
-          <li><a href="home.html"><span data-i18n="footer_home">Home</span></a></li>
-          <li><a href="home2.html"><span data-i18n="footer_home2">Home 2</span></a></li>
-          <li><a href="about.html"><span data-i18n="footer_aboutUs">About Us</span></a></li>
-          <li><a href="services.html"><span data-i18n="footer_services">Services</span></a></li>
-          <li><a href="blog.html"><span data-i18n="footer_blog">Blog</span></a></li>
-          <li><a href="contact.html"><span data-i18n="footer_contact">Contact</span></a></li>
-        </ul>
-      </div>
-
-      <!-- Services -->
-      <div class="footer-section footer-section3">
-        <h4 data-i18n="footer_servicesTitle">Services</h4>
-        <ul>
-          <li><a href="service1.html"><span data-i18n="footer_service1">Property Buying Assistance</span></a></li>
-          <li><a href="service2.html"><span data-i18n="footer_service2">Property Selling</span></a></li>
-          <li><a href="service3.html"><span data-i18n="footer_service3">Rental Services</span></a></li>
-          <li><a href="service4.html"><span data-i18n="footer_service4">Property Management</span></a></li>
-          <li><a href="service5.html"><span data-i18n="footer_service5">Real Estate Investment</span></a></li>
-          <li><a href="service6.html"><span data-i18n="footer_service6">Legal & Documentation Support</span></a></li>
-        </ul>
-      </div>
-
-      <!-- Contact Info -->
-      <div class="footer-section footer-section4">
-        <h4 data-i18n="footer_contactInfo">Contact Info</h4>
-        <ul>
-          <li><i class="fas fa-envelope"></i> <span data-i18n="footer_email">contact@stackly.ai</span></li>
-          <li><i class="fas fa-phone"></i> <span data-i18n="footer_phone">+1 (555) 123-4567</span></li>
-          <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer_address">123 AI Innovation Drive</span></li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Bottom Bar -->
-    <div class="footer-bottom">
-      <p><span data-i18n="footer_bottom">&copy; 2025 Stackly. All rights reserved.</span></p>
-    </div>
-  </div>
-</footer>
-
 
 <script>
-  
 // Translation dictionary
 const translations = {
   en: {
@@ -387,252 +659,276 @@ const translations = {
     "about": "About",
     "services": "Services",
     "allServices": "All Services",
-    "service_1": "Property Buying Assistance",
-    "service_2": "Property Selling",
-    "service_3": "Rental Services",
-    "service_4": "Property Management",
-    "service_5": "Real Estate Investment",
-    "service_6": "Legal & Documentation Support",
+    "service_1": "Service_1",
+    "service_2": "Service_2",
+    "service_3": "Service_3",
+    "service_4": "Service_4",
+    "service_5": "Service_5",
+    "service_6": "Service_6",
     "blog": "Blog",
     "allPosts": "All Posts",
-    "blog_1": "Smart Property Investments",
-    "blog_2": "Effective Property Management",
-    "blog_3": "Real Estate Market Trends",
+    "blog_1": "Blog_1",
+    "blog_2": "Blog_2",
+    "blog_3": "Blog_3",
     "contact": "Contact",
     "logout": "Logout",
 
-    "footer_about": "Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.",
-    "footer_quickLinks": "Quick Links",
+     "footer_about": "Dedicated charity organization, empowering communities through education, healthcare, food support, and sustainable initiatives to create lasting impact and hope.",
+    "footer_quicklinks": "Quick Links",
     "footer_home": "Home",
     "footer_home2": "Home 2",
-    "footer_aboutUs": "About Us",
+    "footer_aboutus": "About Us",
     "footer_services": "Services",
     "footer_blog": "Blog",
     "footer_contact": "Contact",
-    "footer_servicesTitle": "Services",
-    "footer_service1": "Property Buying Assistance",
-    "footer_service2": "Property Selling",
-    "footer_service3": "Rental Services",
-    "footer_service4": "Property Management",
-    "footer_service5": "Real Estate Investment",
-    "footer_service6": "Legal & Documentation Support",
-    "footer_contactInfo": "Contact Info",
-    "footer_email": "contact@stackly.ai",
+    "footer_services_title": "Services",
+    "footer_service1": "Food Distribution",
+    "footer_service2": "Education Support",
+    "footer_service3": "Healthcare Camps",
+    "footer_service4": "Women Empowerment",
+    "footer_service5": "Child Welfare",
+    "footer_service6": "Disaster Relief",
+    "footer_contactinfo": "Contact Info",
+    "footer_email": "contact@stackly.in",
     "footer_phone": "+1 (555) 123-4567",
-    "footer_address": "123 AI Innovation Drive",
-    "footer_bottom": "© 2025 Stackly. All rights reserved.",
-    
-     "about_sec1_title": "Discover Your Perfect Home",
-    "about_sec1_para": "Explore the best properties, tailored to your lifestyle and budget.",
-    "about_sec1_btn": "Browse Listings",
+    "footer_location": "123 Hyderabad, India",
+    "footer_rights": "© 2025 Stackly. All rights reserved.",
+  
+    "about_sec1_title": "Together, We Can Make a Difference",
+    "about_sec1_para": "Join us in creating hope, supporting communities, and transforming lives through compassion and action.",
+    "about_sec1_btn": "Donate Now",
+
+    "charity_heading3": "Comprehensive Community Support Programs",
+    "charity_para3": "We are dedicated to uplifting communities through impactful initiatives. \nFrom education to healthcare, food support to empowerment, we ensure that every effort \nbrings hope, dignity, and long-term change.",
+    "charity_intro2": "Our charity programs are designed to bring real impact to the lives of underprivileged individuals and families. \nBy addressing critical needs and empowering people with resources, we strive to build stronger, more resilient communities. \nEvery step we take is guided by compassion, transparency, and a commitment to change.",
+    "charity_step1": "Food Distribution & Nutrition Support",
+    "charity_step2": "Education & Skill Development",
+    "charity_step3": "Healthcare Assistance & Camps",
+    "charity_step4": "Shelter & Clothing for the Needy",
+    "charity_step5": "Women & Child Empowerment",
+    "charity_step6": "Community Development & Awareness",
 
     "about_sec2_title": "Our Mission & Core Values",
-    "about_sec2_subtext": "We are dedicated to helping people find their dream homes and invest in properties with confidence. With trust, innovation, and customer-first values, we create lasting relationships and communities that thrive.",
-    "about_sec2_card1_title": "Building Trust",
-    "about_sec2_card1_text": "We believe every home search begins with trust. From the first consultation to the final key handover, transparency is at the heart of everything we do.",
-    "about_sec2_card2_title": "Customer-First Approach",
-    "about_sec2_card2_text": "We listen to our clients’ needs and guide them through every step of buying, selling, or investing in real estate with personalized support.",
-    "about_sec2_card3_title": "Shaping Communities",
-    "about_sec2_card3_text": "Beyond property deals, we focus on creating vibrant neighborhoods and sustainable living spaces that enhance lifestyles and build strong communities.",
+    "about_sec2_subtext": "We are committed to bringing hope and support to those in need. \nGuided by compassion, integrity, and collaboration, we work together to create \nstronger, healthier, and more empowered communities.",
+    "about_sec2_card1_title": "Compassion",
+    "about_sec2_card1_text": "Every initiative begins with empathy and kindness. We are dedicated to helping \nindividuals and families with care, dignity, and respect.",
+    "about_sec2_card2_title": "Community First",
+    "about_sec2_card2_text": "We place the needs of communities at the heart of everything we do, working \ntogether to provide opportunities, support, and empowerment.",
+    "about_sec2_card3_title": "Sustainable Impact",
+    "about_sec2_card3_text": "Our vision goes beyond temporary aid — we focus on creating lasting change \nthrough education, healthcare, and development programs.",
 
+    "about_sec4_title": "Spreading Hope, Changing Lives",
+    "about_sec4_para1": "Our mission goes beyond providing aid — it’s about creating opportunities, restoring dignity, \nand building a brighter future for individuals and communities in need.",
+    "about_sec4_para2": "From food and healthcare programs to education and empowerment initiatives, \nwe work together with volunteers and supporters to make a lasting difference.",
+    "about_sec4_btn1": "Donate Now",
+    "about_sec4_btn2": "Join as Volunteer",
+
+    "about_sec5_title": "Our Impact in Numbers",
+    "about_sec5_subtext": "Together with our volunteers and supporters, we’ve touched countless lives and \ncontinue to build a brighter, more compassionate world every day.",
+    "about_sec5_label1": "Families Supported",
+    "about_sec5_label2": "Meals Served",
+    "about_sec5_label3": "Years of Service",
+    "about_sec5_label4": "Communities Reached",
+
+    "about_sec6_title": "Shaping the Future of Humanity with Compassion",
+    "about_sec6_para": "At Hope Foundation, we don’t just provide aid—we create opportunities. \nOur mission is to empower individuals, support families, and strengthen communities \nthrough compassion, education, and sustainable development.",
+    "about_sec6_quote1": "“Every person deserves dignity, care, and the chance to build a brighter future. \nOur work is about restoring hope where it’s needed most.”",
+    "about_sec6_person1": "Ananya Rao",
+    "about_sec6_role1": "Head of Community Programs",
+    "about_sec6_quote2": "“Our mission is not just charity—it’s about building sustainable change \nthrough education, healthcare, and empowerment.”",
+    "about_sec6_person2": "Arjun Mehta",
+    "about_sec6_role2": "Founder & Director",
+
+    "about_sec7_title": "Ready to Make a Difference?",
+    "about_sec7_para": "Join us in spreading kindness and hope. Together, we can provide food, education, and support \nto those who need it most. Your contribution creates lasting change.",
+    "about_sec7_btn": "Donate Now"
  
-
-    "about_sec4_title": "Building Dreams, Creating Homes",
-    "about_sec4_para1": "Finding the perfect home is more than just a transaction — it’s about creating a space where memories are made and futures are built. At Your Realty, we are dedicated to guiding families and investors toward properties that match their lifestyle, goals, and aspirations.",
-    "about_sec4_para2": "From modern apartments in the heart of the city to serene villas in peaceful neighborhoods, we provide trusted real estate solutions tailored to your needs. Our mission is to make home buying and selling simple, transparent, and stress-free.",
-    "about_sec4_btn1": "Explore Properties",
-    "about_sec4_btn2": "Get in Touch",
-
-    "about_sec5_title": "Our Real Estate Milestones",
-    "about_sec5_subtext": "Over the years, we’ve helped families find their dream homes and investors grow their portfolios with trust and transparency.",
-    "about_sec5_label1": "Happy Families Settled",
-    "about_sec5_label2": "Properties Sold",
-    "about_sec5_label3": "Years of Excellence",
-    "about_sec5_label4": "Cities Covered",
-
-    "about_sec6_title": "Shaping the Future of Real Estate",
-    "about_sec6_para": "At DreamHomes Realty, we don’t just sell properties—we create lifestyles. Our mission is to help families find their dream homes and investors discover properties with lasting value.",
-    "about_sec6_quote1": "Every client deserves more than just a house; they deserve a place to call home. We ensure transparency and trust at every step of the journey.",
-    "about_sec6_person1": "Sophia Martinez",
-    "about_sec6_role1": "Head of Sales",
-    "about_sec6_quote2": "Our mission is to make property buying and selling seamless, empowering people to invest smartly and live happily.",
-    "about_sec6_person2": "David Johnson",
-    "about_sec6_role2": "Founder & CEO",
-
-    "about_sec7_title": "Ready to Find Your Dream Home?",
-    "about_sec7_para": "Explore a wide range of properties tailored to your lifestyle and budget. Let us guide you to the perfect place you can truly call home.",
-    "about_sec7_btn": "Get Started Today"
-       
   },
   ar: {
-    "home": "الرئيسية",
-    "home1": "الصفحة الرئيسية 1",
-    "home2": "الصفحة الرئيسية 2",
-    "about": "من نحن",
+     "home": "الرئيسية",
+    "home1": "الصفحة 1",
+    "home2": "الصفحة 2",
+    "about": "معلومات عنا",
     "services": "الخدمات",
     "allServices": "جميع الخدمات",
-    "service_1": "مساعدة في شراء العقارات",
-    "service_2": "بيع العقارات",
-    "service_3": "خدمات الإيجار",
-    "service_4": "إدارة العقارات",
-    "service_5": "الاستثمار العقاري",
-    "service_6": "الدعم القانوني والتوثيق",
+    "service_1": "الخدمة_1",
+    "service_2": "الخدمة_2",
+    "service_3": "الخدمة_3",
+    "service_4": "الخدمة_4",
+    "service_5": "الخدمة_5",
+    "service_6": "الخدمة_6",
     "blog": "المدونة",
     "allPosts": "جميع المقالات",
-    "blog_1": "الاستثمارات العقارية الذكية",
-    "blog_2": "إدارة العقارات الفعالة",
-    "blog_3": "اتجاهات سوق العقارات",
+    "blog_1": "مدونة_1",
+    "blog_2": "مدونة_2",
+    "blog_3": "مدونة_3",
     "contact": "اتصل بنا",
-    "logout": "تسجيل خروج",
+    "logout": "تسجيل الخروج",
 
-    "footer_about": "مزود رائد لحلول الذكاء الاصطناعي، يساعد الشركات على التحول من خلال التكنولوجيا الذكية وأنظمة الأتمتة المبتكرة.",
-    "footer_quickLinks": "روابط سريعة",
+    "footer_about": "منظمة خيرية مكرسة، تمكّن المجتمعات من خلال التعليم والرعاية الصحية ودعم الغذاء والمبادرات المستدامة لخلق تأثير دائم وأمل.",
+    "footer_quicklinks": "روابط سريعة",
     "footer_home": "الرئيسية",
     "footer_home2": "الصفحة الرئيسية 2",
-    "footer_aboutUs": "من نحن",
+    "footer_aboutus": "معلومات عنا",
     "footer_services": "الخدمات",
-    "footer_blog": "المدونة",
+    "footer_blog": "مدونة",
     "footer_contact": "اتصل بنا",
-    "footer_servicesTitle": "الخدمات",
-    "footer_service1": "مساعدة في شراء العقارات",
-    "footer_service2": "بيع العقارات",
-    "footer_service3": "خدمات الإيجار",
-    "footer_service4": "إدارة الممتلكات",
-    "footer_service5": "الاستثمار العقاري",
-    "footer_service6": "الدعم القانوني والتوثيق",
-    "footer_contactInfo": "معلومات الاتصال",
-    "footer_email": "contact@stackly.ai",
+    "footer_services_title": "الخدمات",
+    "footer_service1": "توزيع الغذاء",
+    "footer_service2": "دعم التعليم",
+    "footer_service3": "المخيمات الطبية",
+    "footer_service4": "تمكين المرأة",
+    "footer_service5": "رعاية الأطفال",
+    "footer_service6": "الإغاثة في الكوارث",
+    "footer_contactinfo": "معلومات الاتصال",
+    "footer_email": "contact@stackly.in",
     "footer_phone": "+1 (555) 123-4567",
-    "footer_address": "123 طريق ابتكار الذكاء الاصطناعي",
-    "footer_bottom": "© 2025 Stackly. جميع الحقوق محفوظة.",
+    "footer_location": "123 حيدر أباد، الهند",
+    "footer_rights": "© 2025 Stackly. جميع الحقوق محفوظة.",
+  
+    "about_sec1_title": "معًا، يمكننا إحداث فرق",
+    "about_sec1_para": "انضم إلينا في خلق الأمل، ودعم المجتمعات، وتحويل الحياة من خلال التعاطف والعمل.",
+    "about_sec1_btn": "تبرع الآن",
 
-
-    "about_sec1_title": "اكتشف منزلك المثالي",
-    "about_sec1_para": "استكشف أفضل العقارات المصممة لتناسب أسلوب حياتك وميزانيتك.",
-    "about_sec1_btn": "تصفح العقارات",
+    "charity_heading3": "برامج دعم المجتمع الشاملة",
+    "charity_para3": "نحن ملتزمون برفع المجتمعات من خلال مبادرات مؤثرة. \nمن التعليم إلى الرعاية الصحية، ومن دعم الغذاء إلى التمكين، نضمن أن كل جهد \nيجلب الأمل والكرامة والتغيير طويل الأمد.",
+    "charity_intro2": "تم تصميم برامجنا الخيرية لتحدث تأثيرًا حقيقيًا في حياة الأفراد والأسر المحرومين. \nمن خلال معالجة الاحتياجات الحرجة وتمكين الناس بالموارد، نسعى لبناء مجتمعات أقوى وأكثر مرونة. \nكل خطوة نتخذها تقودها الرحمة والشفافية والالتزام بالتغيير.",
+    "charity_step1": "توزيع الغذاء ودعم التغذية",
+    "charity_step2": "التعليم وتنمية المهارات",
+    "charity_step3": "المساعدة الطبية والمعسكرات",
+    "charity_step4": "المأوى والملابس للمحتاجين",
+    "charity_step5": "تمكين المرأة والطفل",
+    "charity_step6": "تنمية المجتمع والتوعية",
 
     "about_sec2_title": "مهمتنا وقيمنا الأساسية",
-    "about_sec2_subtext": "نحن ملتزمون بمساعدة الناس في العثور على منازل أحلامهم والاستثمار في العقارات بثقة. من خلال الثقة والابتكار ونهج يركز على العميل، نبني علاقات طويلة الأمد ومجتمعات مزدهرة.",
-    "about_sec2_card1_title": "بناء الثقة",
-    "about_sec2_card1_text": "نؤمن أن كل بحث عن منزل يبدأ بالثقة. من الاستشارة الأولى إلى تسليم المفاتيح، الشفافية في قلب كل ما نقوم به.",
-    "about_sec2_card2_title": "النهج الذي يركز على العميل",
-    "about_sec2_card2_text": "نستمع إلى احتياجات عملائنا ونوجههم خلال كل خطوة من شراء أو بيع أو استثمار العقارات بدعم شخصي.",
-    "about_sec2_card3_title": "بناء المجتمعات",
-    "about_sec2_card3_text": "ما وراء الصفقات العقارية، نركز على إنشاء أحياء نابضة بالحياة ومساحات معيشة مستدامة تعزز أنماط الحياة وتبني مجتمعات قوية.",
+    "about_sec2_subtext": "نحن ملتزمون بجلب الأمل والدعم للمحتاجين. \nبالتوجيه من التعاطف والنزاهة والتعاون، نعمل معًا لبناء \nمجتمعات أقوى وأكثر صحة وتمكينًا.",
+    "about_sec2_card1_title": "التعاطف",
+    "about_sec2_card1_text": "كل مبادرة تبدأ بالتعاطف واللطف. نحن ملتزمون بمساعدة \nالأفراد والعائلات بالرعاية والكرامة والاحترام.",
+    "about_sec2_card2_title": "المجتمع أولاً",
+    "about_sec2_card2_text": "نضع احتياجات المجتمعات في قلب كل ما نقوم به، ونعمل \nمعًا لتوفير الفرص والدعم والتمكين.",
+    "about_sec2_card3_title": "أثر مستدام",
+    "about_sec2_card3_text": "تذهب رؤيتنا إلى ما هو أبعد من المساعدة المؤقتة — نحن نركز على خلق تغيير دائم \nمن خلال برامج التعليم والرعاية الصحية والتنمية.",
 
+    "about_sec4_title": "نشر الأمل، وتغيير الحياة",
+    "about_sec4_para1": "مهمتنا تتجاوز تقديم المساعدة — إنها تدور حول خلق الفرص، واستعادة الكرامة، \nوبناء مستقبل أكثر إشراقًا للأفراد والمجتمعات المحتاجة.",
+    "about_sec4_para2": "من برامج الغذاء والرعاية الصحية إلى التعليم ومبادرات التمكين، \nنعمل معًا مع المتطوعين والداعمين لإحداث فرق دائم.",
+    "about_sec4_btn1": "تبرع الآن",
+    "about_sec4_btn2": "انضم كمتطوع",
 
+    "about_sec5_title": "أثرنا بالأرقام",
+    "about_sec5_subtext": "مع متطوعينا وداعمينا، لمسنا حياة لا حصر لها \nونواصل بناء عالم أكثر إشراقًا وتعاطفًا كل يوم.",
+    "about_sec5_label1": "الأسر المدعومة",
+    "about_sec5_label2": "الوجبات المقدمة",
+    "about_sec5_label3": "سنوات الخدمة",
+    "about_sec5_label4": "المجتمعات التي تم الوصول إليها",
 
-    "about_sec4_title": "نبني الأحلام ونخلق المنازل",
-    "about_sec4_para1": "إيجاد المنزل المثالي أكثر من مجرد صفقة — إنه يتعلق بإنشاء مساحة تُصنع فيها الذكريات وتُبنى فيها المستقبلات...",
-    "about_sec4_para2": "من الشقق الحديثة في قلب المدينة إلى الفيلات الهادئة في الأحياء السكنية، نقدم حلول عقارية موثوقة تناسب احتياجاتك...",
-    "about_sec4_btn1": "استكشف العقارات",
-    "about_sec4_btn2": "تواصل معنا",
+    "about_sec6_title": "تشكيل مستقبل الإنسانية بالرحمة",
+    "about_sec6_para": "في مؤسسة الأمل، نحن لا نقدم المساعدة فقط — بل نخلق الفرص. \nمهمتنا هي تمكين الأفراد، ودعم الأسر، وتقوية المجتمعات \nمن خلال الرحمة والتعليم والتنمية المستدامة.",
+    "about_sec6_quote1": "“كل شخص يستحق الكرامة والرعاية وفرصة لبناء مستقبل أكثر إشراقًا. \nعملنا يدور حول استعادة الأمل حيثما كانت الحاجة أكبر.”",
+    "about_sec6_person1": "أنانيا راو",
+    "about_sec6_role1": "رئيسة برامج المجتمع",
+    "about_sec6_quote2": "“مهمتنا ليست مجرد صدقة — إنها تتعلق ببناء تغيير مستدام \nمن خلال التعليم والرعاية الصحية والتمكين.”",
+    "about_sec6_person2": "أرجون ميهتا",
+    "about_sec6_role2": "المؤسس والمدير",
 
-    "about_sec5_title": "محطاتنا العقارية",
-    "about_sec5_subtext": "على مر السنين، ساعدنا العائلات في العثور على منازل أحلامهم والمستثمرين في تنمية محافظهم بثقة وشفافية.",
-    "about_sec5_label1": "عائلات سعيدة استقرت",
-    "about_sec5_label2": "عقارات تم بيعها",
-    "about_sec5_label3": "سنوات من التميز",
-    "about_sec5_label4": "مدن مشمولة",
+    "about_sec7_title": "هل أنت مستعد لإحداث فرق؟",
+    "about_sec7_para": "انضم إلينا في نشر اللطف والأمل. معًا، يمكننا توفير الغذاء والتعليم والدعم \nلأولئك الذين هم في أمس الحاجة إليه. مساهمتك تخلق تغييرًا دائمًا.",
+    "about_sec7_btn": "تبرع الآن",
 
-    "about_sec6_title": "نشكّل مستقبل العقارات",
-    "about_sec6_para": "في DreamHomes Realty، نحن لا نبيع العقارات فقط — نحن نصنع أنماط حياة...",
-    "about_sec6_quote1": "كل عميل يستحق أكثر من مجرد منزل؛ يستحق مكانًا يسميه بيتًا...",
-    "about_sec6_person1": "صوفيا مارتينيز",
-    "about_sec6_role1": "رئيسة المبيعات",
-    "about_sec6_quote2": "مهمتنا هي جعل شراء وبيع العقارات سلسًا، وتمكين الناس من الاستثمار بذكاء والعيش بسعادة.",
-    "about_sec6_person2": "ديفيد جونسون",
-    "about_sec6_role2": "المؤسس والرئيس التنفيذي",
-
-    "about_sec7_title": "هل أنت مستعد للعثور على منزل أحلامك؟",
-    "about_sec7_para": "استكشف مجموعة واسعة من العقارات المصممة لتناسب أسلوب حياتك وميزانيتك...",
-    "about_sec7_btn": "ابدأ اليوم"
 
      },
   he: {
-     "home": "בית",
-    "home1": "דף הבית 1",
-    "home2": "דף הבית 2",
+    "home": "בית",
+    "home1": "דף 1",
+    "home2": "דף 2",
     "about": "אודות",
     "services": "שירותים",
     "allServices": "כל השירותים",
-    "service_1": "סיוע ברכישת נכסים",
-    "service_2": "מכירת נכסים",
-    "service_3": "שירותי השכרה",
-    "service_4": "ניהול נכסים",
-    "service_5": "השקעות נדל״ן",
-    "service_6": "תמיכה משפטית ותיעוד",
+    "service_1": "שירות_1",
+    "service_2": "שירות_2",
+    "service_3": "שירות_3",
+    "service_4": "שירות_4",
+    "service_5": "שירות_5",
+    "service_6": "שירות_6",
     "blog": "בלוג",
     "allPosts": "כל הפוסטים",
-    "blog_1": "השקעות נדל״ן חכמות",
-    "blog_2": "ניהול נכסים יעיל",
-    "blog_3": "מגמות שוק הנדל״ן",
+    "blog_1": "בלוג_1",
+    "blog_2": "בלוג_2",
+    "blog_3": "בלוג_3",
     "contact": "צור קשר",
     "logout": "התנתק",
 
-    "footer_about": "ספק מוביל של פתרונות בינה מלאכותית, מסייע לעסקים להשתנות באמצעות טכנולוגיה חכמה ומערכות אוטומציה חדשניות.",
-    "footer_quickLinks": "קישורים מהירים",
+    "footer_about": "ארגון צדקה מסור, המעצים קהילות באמצעות חינוך, בריאות, תמיכת מזון ויוזמות ברות קיימא ליצירת השפעה מתמשכת ותקווה.",
+    "footer_quicklinks": "קישורים מהירים",
     "footer_home": "בית",
     "footer_home2": "בית 2",
-    "footer_aboutUs": "אודותינו",
+    "footer_aboutus": "אודותינו",
     "footer_services": "שירותים",
     "footer_blog": "בלוג",
     "footer_contact": "צור קשר",
-    "footer_servicesTitle": "שירותים",
-    "footer_service1": "סיוע ברכישת נכסים",
-    "footer_service2": "מכירת נכסים",
-    "footer_service3": "שירותי השכרה",
-    "footer_service4": "ניהול נכסים",
-    "footer_service5": "השקעות נדל\"ן",
-    "footer_service6": "תמיכה משפטית ותיעוד",
-    "footer_contactInfo": "פרטי קשר",
-    "footer_email": "contact@stackly.ai",
+    "footer_services_title": "שירותים",
+    "footer_service1": "חלוקת מזון",
+    "footer_service2": "תמיכה בחינוך",
+    "footer_service3": "מחנות בריאות",
+    "footer_service4": "העצמת נשים",
+    "footer_service5": "רווחת ילדים",
+    "footer_service6": "סיוע באסונות",
+    "footer_contactinfo": "פרטי קשר",
+    "footer_email": "contact@stackly.in",
     "footer_phone": "+1 (555) 123-4567",
-    "footer_address": "123 רחוב חדשנות בינה מלאכותית",
-    "footer_bottom": "© 2025 Stackly. כל הזכויות שמורות.",
-    
-    "about_sec1_title": "גלה את הבית המושלם שלך",
-    "about_sec1_para": "חקור את הנכסים הטובים ביותר המותאמים לאורח החיים ולתקציב שלך.",
-    "about_sec1_btn": "עיין בנכסים",
+    "footer_location": "123 היידראבאד, הודו",
+    "footer_rights": "© 2025 Stackly. כל הזכויות שמורות.",
 
-    "about_sec2_title": "המשימה והערכים שלנו",
-    "about_sec2_subtext": "אנו מחויבים לעזור לאנשים למצוא את בית חלומותיהם ולהשקיע בנדל״ן בביטחון...",
-    "about_sec2_card1_title": "בניית אמון",
-    "about_sec2_card1_text": "אנו מאמינים שכל חיפוש אחר בית מתחיל באמון...",
-    "about_sec2_card2_title": "גישה ממוקדת לקוח",
-    "about_sec2_card2_text": "אנו מקשיבים לצרכי הלקוחות שלנו ומלווים אותם בכל שלב של רכישה, מכירה או השקעה...",
-    "about_sec2_card3_title": "עיצוב קהילות",
-    "about_sec2_card3_text": "מעבר לעסקאות נדל״ן, אנו מתמקדים ביצירת שכונות תוססות ומרחבי מגורים בני קיימא...",
+     "about_sec1_title": "ביחד, נוכל לעשות שינוי",
+    "about_sec1_para": "הצטרפו אלינו ליצירת תקווה, תמיכה בקהילות ושינוי חיים באמצעות חמלה ופעולה.",
+    "about_sec1_btn": "תרום עכשיו",
 
-   
+    "charity_heading3": "תוכניות תמיכה מקיפות בקהילה",
+    "charity_para3": "אנו מחויבים לרומם קהילות באמצעות יוזמות בעלות השפעה. \nמהשכלה לבריאות, מתמיכה במזון להעצמה, אנו מבטיחים שכל מאמץ \nיביא תקווה, כבוד ושינוי לטווח ארוך.",
+    "charity_intro2": "תוכניות הצדקה שלנו נועדו להביא השפעה אמיתית לחייהם של יחידים ומשפחות מוחלשות. \nעל ידי התמודדות עם צרכים קריטיים והעצמת אנשים באמצעות משאבים, אנו שואפים לבנות קהילות חזקות ועמידות יותר. \nכל צעד שלנו מונחה על ידי חמלה, שקיפות ומחויבות לשינוי.",
+    "charity_step1": "חלוקת מזון ותמיכה תזונתית",
+    "charity_step2": "חינוך ופיתוח מיומנויות",
+    "charity_step3": "סיוע רפואי ומחנות בריאות",
+    "charity_step4": "מקלט וביגוד לנזקקים",
+    "charity_step5": "העצמת נשים וילדים",
+    "charity_step6": "פיתוח קהילה ומודעות",
 
-    "about_sec4_title": "בונים חלומות, יוצרים בתים",
-    "about_sec4_para1": "מציאת הבית המושלם היא יותר מעסקה — מדובר ביצירת מקום שבו נבנים זיכרונות ועתיד...",
-    "about_sec4_para2": "מדירות מודרניות בלב העיר ועד וילות שקטות בשכונות שלוות, אנו מספקים פתרונות נדל״ן אמינים...",
-    "about_sec4_btn1": "גלה נכסים",
-    "about_sec4_btn2": "צור קשר",
+    "about_sec2_title": "המשימה והערכים המרכזיים שלנו",
+    "about_sec2_subtext": "אנו מחויבים להביא תקווה ותמיכה לנזקקים. \nבהנחיית חמלה, יושרה ושיתוף פעולה, אנו עובדים יחד ליצירת \nקהילות חזקות, בריאות ומועצמות יותר.",
+    "about_sec2_card1_title": "חמלה",
+    "about_sec2_card1_text": "כל יוזמה מתחילה באמפתיה ובחסד. אנו מחויבים לעזור \nליחידים ולמשפחות בטיפול, כבוד והערכה.",
+    "about_sec2_card2_title": "קהילה קודמת לכל",
+    "about_sec2_card2_text": "אנו מציבים את צרכי הקהילות בלב כל מה שאנו עושים, עובדים \nביחד לספק הזדמנויות, תמיכה והעצמה.",
+    "about_sec2_card3_title": "השפעה בת קיימא",
+    "about_sec2_card3_text": "חזוננו חורג מסיוע זמני — אנו מתמקדים ביצירת שינוי מתמשך \nבאמצעות תוכניות חינוך, בריאות ופיתוח.",
 
-    "about_sec5_title": "האבני דרך שלנו בנדל״ן",
-    "about_sec5_subtext": "במהלך השנים עזרנו למשפחות למצוא את בית חלומותיהן ולמשקיעים להגדיל את התיק שלהן...",
-    "about_sec5_label1": "משפחות מרוצות שהתיישבו",
-    "about_sec5_label2": "נכסים שנמכרו",
-    "about_sec5_label3": "שנות מצוינות",
-    "about_sec5_label4": "ערים מכוסות",
+    "about_sec4_title": "מפיצים תקווה, משנים חיים",
+    "about_sec4_para1": "המשימה שלנו חורגת מעבר למתן סיוע — היא על יצירת הזדמנויות, השבת כבוד, \nובניית עתיד מזהיר יותר ליחידים וקהילות הזקוקים לכך.",
+    "about_sec4_para2": "מתוכניות מזון ובריאות לחינוך ויוזמות העצמה, \nאנו עובדים יחד עם מתנדבים ותומכים כדי ליצור שינוי מתמשך.",
+    "about_sec4_btn1": "תרום עכשיו",
+    "about_sec4_btn2": "הצטרף כמתנדב",
 
-    "about_sec6_title": "מעצבים את עתיד הנדל״ן",
-    "about_sec6_para": "ב-DreamHomes Realty אנחנו לא רק מוכרים נכסים — אנחנו יוצרים אורח חיים...",
-    "about_sec6_quote1": "כל לקוח ראוי ליותר מבית; הוא ראוי למקום לקרוא לו בית...",
-    "about_sec6_person1": "סופיה מרטינס",
-    "about_sec6_role1": "ראש צוות מכירות",
-    "about_sec6_quote2": "המשימה שלנו היא להפוך את קניית ומכירת הנכסים לפשוטה וחלקה...",
-    "about_sec6_person2": "דוד ג'ונסון",
-    "about_sec6_role2": "מייסד ומנכ״ל",
+    "about_sec5_title": "ההשפעה שלנו במספרים",
+    "about_sec5_subtext": "ביחד עם מתנדבינו ותומכינו, נגענו בחיים אינספור \nואנו ממשיכים לבנות עולם בהיר יותר ומלא חמלה מדי יום.",
+    "about_sec5_label1": "משפחות שנתמכו",
+    "about_sec5_label2": "ארוחות שהוגשו",
+    "about_sec5_label3": "שנות שירות",
+    "about_sec5_label4": "קהילות שהושגו",
 
-    "about_sec7_title": "מוכן למצוא את בית חלומותיך?",
-    "about_sec7_para": "חקור מגוון רחב של נכסים המותאמים לאורח החיים ולתקציב שלך...",
-    "about_sec7_btn": "התחל היום",
+    "about_sec6_title": "מעצבים את עתיד האנושות עם חמלה",
+    "about_sec6_para": "בקרן התקווה, איננו רק מספקים סיוע — אנו יוצרים הזדמנויות. \nהמשימה שלנו היא להעצים יחידים, לתמוך במשפחות ולחזק קהילות \nבאמצעות חמלה, חינוך ופיתוח בר קיימא.",
+    "about_sec6_quote1": "“כל אדם ראוי לכבוד, טיפול והזדמנות לבנות עתיד מזהיר יותר. \nהעבודה שלנו היא על השבת התקווה היכן שהיא נדרשת ביותר.”",
+    "about_sec6_person1": "אנאניה ראו",
+    "about_sec6_role1": "ראש תוכניות קהילה",
+    "about_sec6_quote2": "“המשימה שלנו היא לא רק צדקה — היא על בניית שינוי בר קיימא \nבאמצעות חינוך, בריאות והעצמה.”",
+    "about_sec6_person2": "ארג'ון מהטה",
+    "about_sec6_role2": "מייסד ומנהל",
 
-        
+    "about_sec7_title": "מוכנים לעשות שינוי?",
+    "about_sec7_para": "הצטרפו אלינו בהפצת טוב לב ותקווה. ביחד, נוכל לספק מזון, חינוך ותמיכה \nלאלה הזקוקים לכך ביותר. התרומה שלך יוצרת שינוי מתמשך.",
+    "about_sec7_btn": "תרום עכשיו",
+
+  
   }
 };
 
@@ -663,361 +959,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-<script>
-  // Mobile menu setup
-  const hamburger = document.getElementById("hamburger");
-  const hamburgerMenu = document.getElementById("hamburgerMenu");
-
-  // Show/hide mobile menu on hamburger click
-  hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    hamburgerMenu.classList.toggle("active");
-  });
-
-  // Toggle dropdowns for mobile menu
-  document.querySelectorAll('.mobile-dropdown-parent > span').forEach(link => {
-    link.addEventListener('click', function() {
-      const parentLi = this.parentElement;
-      const dropdown = parentLi.querySelector('.mobile-dropdown');
-      dropdown.classList.toggle('active');
-    });
-  });
-
-  // Desktop dropdown toggle logic
-  document.querySelectorAll('.nav-item.dropdown > .nav-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      document.querySelectorAll('.dropdown-menu').forEach(menu => {
-        if (menu !== this.nextElementSibling) {
-          menu.classList.remove('active');
-        }
-      });
-      const dropdownMenu = this.nextElementSibling;
-      if (dropdownMenu) {
-        dropdownMenu.classList.toggle('active');
-      }
-    });
-  });
-
-  // Redirect on desktop dropdown menu item click
-  document.querySelectorAll('.dropdown-menu a').forEach(link => {
-    link.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (href && href !== "#") {
-        window.location.href = href;
-        document.querySelectorAll('.dropdown-menu').forEach(menu => menu.classList.remove('active'));
-      }
-    });
-  });
-
-  // Redirect on normal nav link click
-  document.querySelectorAll('.nav-menu > .nav-item:not(.dropdown) .nav-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (href && href !== "#") {
-        window.location.href = href;
-      }
-    });
-  });
-
-  // Auth link toggle for desktop and mobile
-  function setupAuthLinks() {
-    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
-    const authLinks = [document.getElementById("authLink"), document.getElementById("mobileAuthLink")];
-
-    authLinks.forEach(link => {
-      if (!link) return;
-      if (isLoggedIn) {
-        link.innerText = "Logout";
-        link.href = "#";
-        link.onclick = (e) => {
-          e.preventDefault();
-          localStorage.removeItem("isLoggedIn");
-          localStorage.removeItem("currentUser");
-          window.location.href = "index.html";
-        };
-      } else {
-        link.innerText = "Login";
-        link.href = "index.html";
-        link.onclick = null;
-      }
-    });
-  }
-  setupAuthLinks();
-
-  // Theme toggle
-  const toggleBtn = document.getElementById('toggleBtn');
-  let darkMode = localStorage.getItem('darkMode') === 'true';
-
-  function applyTheme() {
-    if (darkMode) {
-      document.body.classList.add('dark-mode');
-      toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
-    } else {
-      document.body.classList.remove('dark-mode');
-      toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
-    }
-  }
-
-  toggleBtn.addEventListener('click', () => {
-    darkMode = !darkMode;
-    localStorage.setItem('darkMode', darkMode);
-    applyTheme();
-  });
-  applyTheme();
-
-  // Avatar initials logic
-  const avatarCircle = document.getElementById('avatarCircle');
-  const avatarInitials = document.getElementById('avatarInitials');
-  const avatarDropdown = document.getElementById('avatarDropdown');
-  const logoutBtn = document.getElementById('logoutBtn');
-  const currentUserEmail = localStorage.getItem("currentUser");
-  const users = JSON.parse(localStorage.getItem("users")) || {};
-
-  if (currentUserEmail && users[currentUserEmail]) {
-    const firstName = users[currentUserEmail].firstName || "";
-    const lastName = users[currentUserEmail].lastName || "";
-    const initials = (firstName[0] || "").toUpperCase() + (lastName[0] || "").toUpperCase();
-    avatarInitials.textContent = initials;
-  } else {
-    avatarInitials.textContent = "?";
-  }
-
-  // Show/hide avatar dropdown on click
-  avatarCircle.addEventListener('click', function(e) {
-    e.stopPropagation();
-    avatarDropdown.style.display = avatarDropdown.style.display === "block" ? "none" : "block";
-  });
-
-  document.addEventListener('click', function(e) {
-    if (!avatarCircle.contains(e.target) && !avatarDropdown.contains(e.target)) {
-      avatarDropdown.style.display = "none";
-    }
-  });
-
-  // Logout action
-  logoutBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    localStorage.removeItem("isLoggedIn");
-    localStorage.removeItem("currentUser");
-    window.location.href = "index.html";
-  });
-</script>
-
-<style>
-  /* Base styles for hamburger icon */
-  .hamburger {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 24px;
-    height: 18px;
-    cursor: pointer;
-    z-index: 1000;
-  }
-
-  .hamburger span {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #333;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .dark-mode .hamburger span {
-    background-color: #fff;
-  }
-
-  /* Hamburger menu animation */
-  .hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-
-  .hamburger.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
-
-  /* Hide navigation on mobile */
-  @media (max-width: 768px) {
-    .nav-menu {
-      display: none;
-    }
-    .hamburger {
-      display: flex;
-    }
-  }
-
-  /* Styles for the mobile hamburger menu */
-  .mobile-menu-wrapper {
-    position: relative;
-  }
-
-  .hamburger-menu {
-    display: none;
-    flex-direction: column;
-    background: #23272f;
-    color: #fff;
-    position: absolute;
-    top: 50px;
-    right: 0;
-    width: 220px;
-    border-radius: 8px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
-    padding: 20px 0;
-    z-index: 9999;
-    list-style: none;
-  }
-
-  .hamburger-menu.active {
-    display: flex;
-  }
-
-  .hamburger-menu li {
-    padding: 10px 24px;
-    border-bottom: 1px solid #333;
-  }
-
-  .hamburger-menu li:last-child {
-    border-bottom: none;
-  }
-
-  .hamburger-menu a,
-  .hamburger-menu span {
-    color: #00f7ff;
-    text-decoration: none;
-    font-size: 1.1rem;
-    display: block;
-    cursor: pointer;
-    font-weight: 500;
-  }
-
-  .hamburger-menu ul {
-    list-style: none;
-    padding-left: 20px;
-    margin-top: 5px;
-  }
-
-  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown {
-    display: none;
-  }
-
-  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown.active {
-    display: block;
-  }
-
-  .toggle-btn {
-    background: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 38px;
-    height: 38px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 16px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-
-  .toggle-btn:hover {
-    background: #f0f0f0;
-  }
-
-  
-/* Avatar circle */
-/* wrapper so dropdown follows avatar */
-.avatar-wrapper {
-  position: relative;
-  display: inline-block;
-}
-
-/* avatar circle */
-.avatar-circle {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  margin-left: 16px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #00f5ff;
-  color: #000;
-  font-weight: bold;
-  cursor: pointer;
-  z-index: 1001;
-}
-
-/* dropdown */
-.avatar-dropdown {
-  display: none;
-  position: absolute;
-  top: 110%;   /* directly below avatar */
-  min-width: 120px;
-  background: #fff;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
-  border-radius: 8px;
-  z-index: 1002;
-  padding: 4px 0;
-}
-
-/* align for LTR */
-html[dir="ltr"] .avatar-dropdown {
-  right: 0;
-  left: auto;
-}
-
-/* align for RTL */
-html[dir="rtl"] .avatar-dropdown {
-  left: 0;
-  right: auto;
-}
-
-.avatar-dropdown ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.avatar-dropdown li {
-  padding: 6px 12px;
-}
-
-.avatar-dropdown a {
-  color: #23272f;
-  text-decoration: none;
-  font-size: 0.95rem;
-  display: block;
-  border-radius: 4px;
-  transition: background 0.2s;
-}
-
-.avatar-dropdown a:hover {
-  background: #f0f0f0;
-}
-
-
-
-  @media (max-width: 768px) {
-    .toggle-btn,
-    .avatar-circle {
-      margin-left: 8px;
-      width: 32px;
-      height: 32px;
-    }
-  }
-
-  @media (min-width: 769px) {
-    .hamburger-menu {
-      display: none !important;
-    }
-  }
-</style>
 <!-- 🔷 Protest home page  -->
 
   <script>
@@ -1162,6 +1103,184 @@ html[dir="rtl"] .avatar-dropdown {
 
 
 <!-- Section : 2 -->
+
+<style>
+/* Section Base */
+.development-process {
+  width: 100%;
+  background: #ffffff; /* updated background */
+  padding: 30px 20px 50px;
+  box-sizing: border-box;
+}
+
+.development-process-container {
+  max-width: 1450px;
+  margin: 0 auto;
+}
+
+/* Top Heading */
+.process-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.process-header h2 {
+  font-size: 2.2rem;
+  color: #000;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+.process-header p {
+  font-size: 1rem;
+  color: #333;
+  max-width: 750px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Content Row */
+.process-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Image */
+.process-image {
+  flex: 1 1 600px;
+  text-align: center;
+}
+.process-image img {
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* Right Content */
+.process-content {
+  flex: 1 1 600px;
+}
+.process-intro {
+  font-size: 1.05rem;
+  color: #333;
+  margin-bottom: 25px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Steps */
+.process-steps .step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.step-number {
+  background: #0b1945; /* updated golden accent */
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.step p {
+  margin: 0;
+  font-size: 1rem;
+  color: #000;
+  line-height: 1.5;
+}
+
+/* Animations */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1s forwards;
+}
+.fade-in-up.delay-1 { animation-delay: 0.4s; }
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(60px);
+  animation: slideRight 1s forwards;
+}
+@keyframes slideRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .process-row {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .process-image,
+  .process-content {
+    flex: 1 1 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .process-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+
+  .process-content {
+    text-align: left;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .development-process {
+    padding: 20px 15px 40px;
+  }
+  .process-header h2 {
+    font-size: 1.6rem;
+  }
+  .process-header p {
+    font-size: 0.95rem;
+  }
+  .process-intro {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  .process-steps .step {
+    gap: 10px;
+  }
+  .step-number {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+  .step p {
+    font-size: 0.95rem;
+  }
+}
+</style>
+
+
+
+
+<!-- Section : 3 -->
 
 <!-- Styles -->
 <style>
@@ -1913,104 +2032,164 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <!-- Section 6: End -->     
 
-  
+<footer class="site-footer">
+  <div class="footer-wrapper">
+    <div class="footer-grid">
+
+      <!-- Brand & About -->
+      <div class="footer-block footer-brand footer-block1">
+        <div class="footer-logo">
+          <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 50px; width: 80px;">
+        </div>
+
+        <p style="text-align: justify;" data-i18n="footer_about">
+          Dedicated charity organization, empowering communities through education, healthcare, food support, and sustainable initiatives to create lasting impact and hope.
+        </p>
+
+        <div class="social-links">
+          <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-block footer-block2">
+        <h4 data-i18n="footer_quicklinks">Quick Links</h4>
+        <ul>
+          <li><a href="home.html"><span data-i18n="footer_home">Home</span></a></li>
+          <li><a href="home2.html"><span data-i18n="footer_home2">Home 2</span></a></li>
+          <li><a href="about.html"><span data-i18n="footer_aboutus">About Us</span></a></li>
+          <li><a href="services.html"><span data-i18n="footer_services">Services</span></a></li>
+          <li><a href="blog.html"><span data-i18n="footer_blog">Blog</span></a></li>
+          <li><a href="contact.html"><span data-i18n="footer_contact">Contact</span></a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-block footer-block3">
+        <h4 data-i18n="footer_services_title">Services</h4>
+        <ul>
+          <li><a href="service1.html"><span data-i18n="footer_service1">Food Distribution</span></a></li>
+          <li><a href="service2.html"><span data-i18n="footer_service2">Education Support</span></a></li>
+          <li><a href="service3.html"><span data-i18n="footer_service3">Healthcare Camps</span></a></li>
+          <li><a href="service4.html"><span data-i18n="footer_service4">Women Empowerment</span></a></li>
+          <li><a href="service5.html"><span data-i18n="footer_service5">Child Welfare</span></a></li>
+          <li><a href="service6.html"><span data-i18n="footer_service6">Disaster Relief</span></a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-block footer-block4">
+        <h4 data-i18n="footer_contactinfo">Contact Info</h4>
+        <ul>
+          <li><i class="fas fa-envelope"></i> <span data-i18n="footer_email">contact@stackly.in</span></li>
+          <li><i class="fas fa-phone"></i> <span data-i18n="footer_phone">+1 (555) 123-4567</span></li>
+          <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer_location">123 Hyderabad, India</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom -->
+    <div class="footer-bottom-bar">
+      <p data-i18n="footer_rights">&copy; 2025 Stackly. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+<!-- Styles -->
 <style>
-.footer {
+.site-footer {
   background: #0a0a0a;
   color: #fff;
   padding: 50px 20px 20px;
   font-family: Arial, sans-serif;
 }
 
-.footer-section1{
-  margin-right: 150px;
+.footer-wrapper {
+  max-width: 1200px; /* keeps equal left-right padding */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.footer-block2 {
+  padding-inline-start: 100px; /* works for both ltr & rtl */
 }
 
-.footer-section4{
-  margin-left: 50px;
+.footer-block3 {
+  padding-inline-start: 80px; /* works for both ltr & rtl */
 }
 
-.footer .footer-content {
+.footer-block4 {
+  padding-inline-start: 60px; /* works for both ltr & rtl */
+}
+
+.footer-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   margin-bottom: 30px;
 }
 
-.footer .footer-section h4 {
+
+.footer-block h4 {
   font-size: 1.2rem;
   margin-bottom: 15px;
   color: #f4f4f4;
 }
 
-.footer .footer-section ul {
+.footer-block ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
-.footer .footer-section ul li {
+.footer-block ul li {
   margin-bottom: 10px;
-  font-size: 0.95rem;
   color: #ddd;
 }
 
-.footer .footer-section ul li a {
+.footer-block ul li a {
   color: #ddd;
   text-decoration: none;
   transition: color 0.3s;
 }
 
-.footer .footer-section ul li a:hover {
+.footer-block ul li a:hover {
   color: #a68e4c;
 }
 
-.footer .social-links a {
-  margin-right: 12px;
-  font-size: 1.2rem;
-  color: #ddd;
-  transition: color 0.3s;
-}
 
-.footer .social-links a:hover {
-  color: #000000;
-}
-
-.footer .footer-bottom {
+.footer-bottom-bar {
   text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255,255,255,0.1);
   padding-top: 15px;
   font-size: 0.9rem;
   color: #bbb;
 }
 
+/* Responsive */
 @media (max-width: 900px) {
-  .footer .footer-content {
+  .footer-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
-  .footer-section1{
-  margin-right: 5px;
-}
 }
 
 @media (max-width: 600px) {
-  .footer .footer-content {
+  .footer-grid {
     grid-template-columns: 1fr;
     text-align: left;
   }
-  .footer .social-links {
-    margin-top: 15px;
+  .footer-block2{
+      padding-left: 0px;
   }
-  .footer-section1{
-  margin-right: 10px;
-}
-  .footer-section2{
-  margin-right: 10px;
-}
-.footer-section4{
-  margin-left: 1px;
-}
+  .footer-block3{
+      padding-left: 0px;
+  }
+    .footer-block4{
+      padding-left: 0px;
+    }
 }
 </style>
 

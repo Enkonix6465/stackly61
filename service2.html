@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stackly- Realestate</title>
+    <title>Stackly- Charity</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -15,7 +15,7 @@
 
 <div id="content" style="display:none;"></div>
     <!-- Sticky Header -->
-    <header class="header">
+   <header class="header">
   <div class="container">
     <div class="nav-wrapper">
       <div class="logo">
@@ -36,21 +36,21 @@
             <a href="#" class="nav-link"><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
               <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
-              <li><a href="service1.html"><span data-i18n="service_1">Property Buying Assistance</span></a></li>
-              <li><a href="service2.html"><span data-i18n="service_2">Property Selling</span></a></li>
-              <li><a href="service3.html"><span data-i18n="service_3">Rental Services </span></a></li>
-              <li><a href="service4.html"><span data-i18n="service_4">Property Management</span></a></li>
-              <li><a href="service5.html"><span data-i18n="service_5">Real Estate Investment</span></a></li>
-              <li><a href="service6.html"><span data-i18n="service_6">Legal & Documentation Support</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Service_1</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Service_2</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Service_3</span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Service_4</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Service_5</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service_6">Service_6</span></a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
             <a href="#" class="nav-link"><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
               <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
-              <li><a href="blog1.html"><span data-i18n="blog_1">Smart Property Investments</span></a></li>
-              <li><a href="blog2.html"><span data-i18n="blog_2">Effective Property Management</span></a></li>
-              <li><a href="blog3.html"><span data-i18n="blog_3">Real Estate Market Trends</span></a></li>
+              <li><a href="blog1.html"><span data-i18n="blog_1">blog_1</span></a></li>
+              <li><a href="blog2.html"><span data-i18n="blog_2">blog_2</span></a></li>
+              <li><a href="blog3.html"><span data-i18n="blog_3">blog_3</span></a></li>
             </ul>
           </li>
           <li class="nav-item"><a href="contact.html" class="nav-link"><span data-i18n="contact">Contact</span></a></li>
@@ -62,6 +62,15 @@
           <span></span>
         </div>
       </nav>
+
+       <div class="lang-switcher">
+        <label for="langSelect"></label>
+        <select id="langSelect" onchange="changeLanguage(this.value)">
+          <option value="en">English</option>
+          <option value="ar">Arabic</option>
+          <option value="he">Hebrew</option>
+        </select>
+      </div>
 
       <div class="mobile-menu-wrapper">
         <ul class="hamburger-menu" id="hamburgerMenu">
@@ -77,21 +86,21 @@
             <span><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></span>
             <ul class="mobile-dropdown">
              <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
-              <li><a href="service1.html"><span data-i18n="service_1">Property Buying Assistance</span></a></li>
-              <li><a href="service2.html"><span data-i18n="service_2">Property Selling</span></a></li>
-              <li><a href="service3.html"><span data-i18n="service_3">Rental Services </span></a></li>
-              <li><a href="service4.html"><span data-i18n="service_4">Property Management</span></a></li>
-              <li><a href="service5.html"><span data-i18n="service_5">Real Estate Investment</span></a></li>
-              <li><a href="service6.html"><span data-i18n="service6">Legal & Documentation Support</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Service_1</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Service_2</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Service_3</span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Service_4</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Service_5</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service_6">Service_6</span></a></li>
             </ul>
           </li>
           <li class="mobile-dropdown-parent">
             <span><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></span>
             <ul class="mobile-dropdown">
                <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
-                <li><a href="blog1.html"><span data-i18n="blog_1">Smart Property Investments</span></a></li>
-                <li><a href="blog2.html"><span data-i18n="blog_2">Effective Property Management</span></a></li>
-                <li><a href="blog3.html"><span data-i18n="blog_3">Real Estate Market Trends</span></a></li>
+                <li><a href="blog1.html"><span data-i18n="blog_1">blog_1</span></a></li>
+                <li><a href="blog2.html"><span data-i18n="blog_2">blog_2</span></a></li>
+                <li><a href="blog3.html"><span data-i18n="blog_3">blog_3</span></a></li>
             </ul>
           </li>
           <li><a href="contact.html"><span data-i18n="contact">Contact</span></a></li>
@@ -99,72 +108,76 @@
         </ul>
       </div>
 
-      <div class="lang-switcher">
-        <label for="langSelect">Language:</label>
-        <select id="langSelect" onchange="changeLanguage(this.value)">
-          <option value="en">English</option>
-          <option value="ar">Arabic</option>
-          <option value="he">Hebrew</option>
-        </select>
-      </div>
+     
 
       <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
         <i class="fas fa-moon"></i>
       </button>
 
-      <div class="avatar-circle" title="Profile" id="avatarCircle">
-        <span id="avatarInitials"></span>
+     <div class="avatar-wrapper">
+        <div class="avatar-circle" title="Profile" id="avatarCircle">
+          <span id="avatarInitials">BA</span>
+        </div>
+        <div class="avatar-dropdown" id="avatarDropdown">
+          <ul>
+            <li>
+              <a href="index.html" id="logoutBtn">
+                <span data-i18n="logout">Logout</span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="avatar-dropdown" id="avatarDropdown">
-        <ul>
-          <li><a href="index.html" id="logoutBtn"><span data-i18n="logout">Logout</span></a></li>
-        </ul>
-      </div>
+      
     </div>
   </div>
 </header>
 
 
+
+
 <!-- Section: 1 -->
 <section class="ai-hero-section">
   <video autoplay muted loop playsinline class="ai-hero-bg-video">
-    <source src="https://videos.pexels.com/video-files/15857227/15857227-uhd_2560_1440_30fps.mp4" type="video/mp4">
+    <source src="video/site44-S2.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
   <div class="ai-hero-overlay">
     <div class="ai-hero-content">
-      <h1 class="ai-hero-title ai-glow animate-ai-slide-in" data-i18n="service2_title">Property Selling</h1>
+      <h1 class="ai-hero-title ai-glow animate-ai-slide-in" data-i18n="service2_title">Education Support</h1>
     </div>
   </div>
 </section>
 
 <!-- Section : 2-->
 <section class="ai-section">
-  <h1 class="ai-heading" data-i18n="service2_heading">Property Selling Made Easy</h1>
+  <h1 class="ai-heading" data-i18n="service2_heading">Empowering Children Through Education</h1>
   <div class="ai-content">
     <div class="ai-text">
       <p data-i18n="service2_intro">
-        Sell your property confidently and quickly with our expert real estate services. We guide you through pricing, marketing, and negotiations to ensure you get the best value for your property.
+        Education is the foundation for a brighter future. Our Education Support programs 
+        provide underprivileged children with the resources, guidance, and encouragement they need 
+        to learn, grow, and succeed in life.
       </p>
 
       <!-- Feature Points -->
       <ul class="hero-features fade-in-up delay-2">
-        <li><span>✔</span> <span data-i18n="service2_point1">Expert property valuation and pricing guidance</span></li>
-        <li><span>✔</span> <span data-i18n="service2_point2">Comprehensive marketing for maximum exposure</span></li>
-        <li><span>✔</span> <span data-i18n="service2_point3">Assistance with legal documentation</span></li>
-        <li><span>✔</span> <span data-i18n="service2_point4">Negotiation support to maximize your sale value</span></li>
-        <li><span>✔</span> <span data-i18n="service2_point5">Personalized selling strategy tailored to your property</span></li>
+        <li><span>✔</span> <span data-i18n="service2_point1">Free school supplies and learning materials</span></li>
+        <li><span>✔</span> <span data-i18n="service2_point2">Scholarship programs for deserving students</span></li>
+        <li><span>✔</span> <span data-i18n="service2_point3">After-school tutoring and mentorship</span></li>
+        <li><span>✔</span> <span data-i18n="service2_point4">Digital literacy and computer education</span></li>
+        <li><span>✔</span> <span data-i18n="service2_point5">Support for girl child education</span></li>
       </ul>
 
       <div class="ai-buttons">
-        <a href="services.html" class="btn btn-primary" data-i18n="service2_explore">Explore Services</a>
-        <a href="contact.html" class="btn btn-primary" data-i18n="service2_getStarted">Get Started</a>
+        <a href="services.html" class="btn btn-primary" data-i18n="service2_explore">Explore Programs</a>
+        <a href="contact.html" class="btn btn-primary" data-i18n="service2_getStarted">Support a Child</a>
       </div>
     </div>
 
     <div class="ai-image">
-      <img src="https://i.pinimg.com/1200x/a1/b4/8a/a1b48a3874a2d9e2f472fe4381c47dcb.jpg" alt="Property Selling">
+      <img src="https://i.pinimg.com/1200x/d3/23/53/d3235344c3b348a6b5ec7c7d3eda222d.jpg" alt="Education Support">
     </div>
   </div>
 </section>
@@ -173,34 +186,39 @@
 <section class="advanced-features">
   <div class="advanced-features-container">
     <div class="features-header fade-in-up">
-      <h2 data-i18n="service2_featuresTitle">Our Property Selling Services</h2>
+      <h2 data-i18n="service2_featuresTitle">Our Education Initiatives</h2>
       <p data-i18n="service2_featuresDesc">
-        We provide professional property selling services to help homeowners and investors sell their properties quickly and at the best price. From valuation to marketing and closing, we handle the entire selling process.
+        We are committed to breaking the cycle of poverty by providing quality education support. 
+        Through scholarships, mentorship, and access to modern learning tools, 
+        we help children achieve their academic and personal goals.
       </p>
     </div>
 
     <div class="features-cards">
       <div class="feature-box fade-in-up delay-1">
-        <div class="feature-icon"><i class="fas fa-home"></i></div>
-        <h3 data-i18n="service2_card1_title">Property Valuation</h3>
+        <div class="feature-icon"><i class="fas fa-book"></i></div>
+        <h3 data-i18n="service2_card1_title">School Supplies</h3>
         <p data-i18n="service2_card1_desc">
-          Get an accurate valuation of your property based on market trends and comparable sales. We help you price your property competitively to attract buyers quickly.
+          Providing books, uniforms, and stationery to ensure every child 
+          is equipped to attend school with confidence.
         </p>
       </div>
 
       <div class="feature-box fade-in-up delay-2">
-        <div class="feature-icon"><i class="fas fa-bullhorn"></i></div>
-        <h3 data-i18n="service2_card2_title">Marketing & Promotion</h3>
+        <div class="feature-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+        <h3 data-i18n="service2_card2_title">Tutoring & Mentorship</h3>
         <p data-i18n="service2_card2_desc">
-          Promote your property through multiple channels including online listings, social media, and local advertising to reach the right buyers and maximize exposure.
+          After-school classes, mentoring, and guidance programs to help 
+          children excel academically and build life skills.
         </p>
       </div>
 
       <div class="feature-box fade-in-up delay-3">
-        <div class="feature-icon"><i class="fas fa-handshake"></i></div>
-        <h3 data-i18n="service2_card3_title">Negotiation & Closing</h3>
+        <div class="feature-icon"><i class="fas fa-laptop"></i></div>
+        <h3 data-i18n="service2_card3_title">Digital Learning</h3>
         <p data-i18n="service2_card3_desc">
-          We assist in negotiating offers to get you the best price and handle all documentation to ensure a smooth and hassle-free closing process.
+          Access to e-learning, computer training, and digital literacy programs 
+          to prepare students for a technology-driven future.
         </p>
       </div>
     </div>
@@ -211,29 +229,34 @@
 <section class="development-process">
   <div class="development-process-container">
     <div class="process-header fade-in-up">
-      <h2 data-i18n="service2_processTitle">Comprehensive Property Selling Process</h2>
+      <h2 data-i18n="service2_processTitle">Our Education Support Process</h2>
       <p data-i18n="service2_processDesc">
-        We provide professional and seamless property selling services to help you sell your property quickly and at the best price. From valuation to closing, we handle every step with expertise and care.
+        We follow a structured approach to support children’s education, 
+        ensuring long-term impact and equal opportunities for all. 
+        From identifying children in need to providing continuous mentorship, 
+        we walk with them every step of the way.
       </p>
     </div>
 
     <div class="process-row">
       <div class="process-image slide-in-right">
-        <img src="https://i.pinimg.com/1200x/97/99/69/9799697dce990ad9a30d4c576688f422.jpg" alt="Property Selling">
+        <img src="https://i.pinimg.com/1200x/47/99/72/4799724d0697dda4550fec6d209a27e5.jpg" alt="Education Process">
       </div>
 
       <div class="process-content fade-in-up delay-1">
         <p class="process-intro" data-i18n="service2_processIntro">
-          Our property selling solutions are designed to give homeowners peace of mind. From accurate property valuation to marketing, negotiations, and closing, we make sure your property sells efficiently and at maximum value. Whether you're selling a home or an investment property, our expert guidance ensures a smooth and profitable experience.
+          Our education initiatives are designed to empower children 
+          by not only meeting their academic needs but also supporting 
+          their emotional, social, and digital development.
         </p>
 
         <div class="process-steps">
-          <div class="step"><span class="step-number">01</span><p data-i18n="service2_step1">Property Valuation & Pricing</p></div>
-          <div class="step"><span class="step-number">02</span><p data-i18n="service2_step2">Preparing Property for Sale</p></div>
-          <div class="step"><span class="step-number">03</span><p data-i18n="service2_step3">Marketing & Listing</p></div>
-          <div class="step"><span class="step-number">04</span><p data-i18n="service2_step4">Managing Buyer Inquiries</p></div>
-          <div class="step"><span class="step-number">05</span><p data-i18n="service2_step5">Negotiation & Offer Management</p></div>
-          <div class="step"><span class="step-number">06</span><p data-i18n="service2_step6">Closing & Handover</p></div>
+          <div class="step"><span class="step-number">01</span><p data-i18n="service2_step1">Identifying Students in Need</p></div>
+          <div class="step"><span class="step-number">02</span><p data-i18n="service2_step2">Providing School Supplies</p></div>
+          <div class="step"><span class="step-number">03</span><p data-i18n="service2_step3">Scholarship & Financial Aid</p></div>
+          <div class="step"><span class="step-number">04</span><p data-i18n="service2_step4">Tutoring & Mentorship</p></div>
+          <div class="step"><span class="step-number">05</span><p data-i18n="service2_step5">Digital Education Programs</p></div>
+          <div class="step"><span class="step-number">06</span><p data-i18n="service2_step6">Ongoing Guidance & Monitoring</p></div>
         </div>
       </div>
     </div>
@@ -244,26 +267,30 @@
 <section class="service-showcase">
   <div class="service-container">
     <div class="service-header animate-fade-up">
-      <h2 data-i18n="service2_showcaseTitle">Property Selling Services</h2>
-      <p data-i18n="service2_showcaseDesc">We provide professional property selling solutions to help homeowners and investors sell their properties quickly, efficiently, and at the best price.</p>
+      <h2 data-i18n="service2_showcaseTitle">Education Support Programs</h2>
+      <p data-i18n="service2_showcaseDesc">
+        Our programs cover every aspect of a child’s education journey. 
+        We focus on ensuring access, continuity, and quality, 
+        so every child has the chance to learn and thrive.
+      </p>
     </div>
 
     <div class="service-grid">
       <div class="service-card animate-slide-up delay-1">
-        <h3 data-i18n="service2_showcase1_title">Property Valuation</h3>
-        <p data-i18n="service2_showcase1_desc">Get an accurate valuation of your property based on market trends to price it competitively and attract buyers faster.</p>
+        <h3 data-i18n="service2_showcase1_title">School Kits</h3>
+        <p data-i18n="service2_showcase1_desc">Distribution of books, uniforms, and stationery to help children start school prepared.</p>
       </div>
       <div class="service-card animate-slide-up delay-2">
-        <h3 data-i18n="service2_showcase2_title">Marketing & Promotion</h3>
-        <p data-i18n="service2_showcase2_desc">Promote your property through online listings, social media, and local channels to maximize visibility and reach the right buyers.</p>
+        <h3 data-i18n="service2_showcase2_title">Scholarships</h3>
+        <p data-i18n="service2_showcase2_desc">Financial aid and scholarships for deserving students to continue their education.</p>
       </div>
       <div class="service-card animate-slide-up delay-3">
-        <h3 data-i18n="service2_showcase3_title">Negotiation & Offer Management</h3>
-        <p data-i18n="service2_showcase3_desc">We assist in managing offers, negotiating the best price, and guiding you through the entire sales process.</p>
+        <h3 data-i18n="service2_showcase3_title">After-School Programs</h3>
+        <p data-i18n="service2_showcase3_desc">Extra coaching, mentoring, and guidance to help children improve academically.</p>
       </div>
       <div class="service-card animate-slide-up delay-4">
-        <h3 data-i18n="service2_showcase4_title">Closing & Handover</h3>
-        <p data-i18n="service2_showcase4_desc">Handle all documentation and legal procedures to ensure a smooth and hassle-free closing, giving you peace of mind.</p>
+        <h3 data-i18n="service2_showcase4_title">Digital Literacy</h3>
+        <p data-i18n="service2_showcase4_desc">Providing access to computers, internet, and e-learning for future-ready education.</p>
       </div>
     </div>
   </div>
@@ -273,21 +300,29 @@
 <section class="bookkeeping-services">
   <div class="services-container">
     <div class="services-image animate-slide-in">
-      <img src="https://i.pinimg.com/1200x/51/ed/64/51ed645f37046d8ebe578396f5e958d1.jpg" alt="Property Selling Services">
+      <img src="https://i.pinimg.com/736x/f4/53/14/f453146f191d62df7942ff323aa9b5da.jpg" alt="Education Support">
     </div>
     <div class="services-content">
-      <h2 class="animate-fade-up" data-i18n="service2_bookTitle">Professional Property Selling Services</h2>
+      <h2 class="animate-fade-up" data-i18n="service2_bookTitle">Trusted Education Assistance</h2>
       <p class="animate-fade-up delay-1" style="text-align: justify;" data-i18n="service2_bookDesc">
-        Our property selling services are designed to help homeowners and investors sell their properties quickly and efficiently. From valuation to marketing and closing, we handle every step to ensure you get the best value for your property.
+        Our education support ensures children receive not only academic help but also 
+        emotional encouragement and future opportunities. We bridge gaps by 
+        providing resources, guidance, and mentorship every step of the way.
       </p>
 
       <div class="service-card animate-fade-up delay-2">
-        <h3 data-i18n="service2_bookCard1_title">Accurate Property Valuation</h3>
-        <p data-i18n="service2_bookCard1_desc">We provide precise property valuations based on market trends to price your property competitively and attract buyers faster.</p>
+        <h3 data-i18n="service2_bookCard1_title">Scholarships & School Aid</h3>
+        <p data-i18n="service2_bookCard1_desc">
+          We provide financial assistance, scholarships, and school fee support 
+          for students from low-income families.
+        </p>
       </div>
       <div class="service-card animate-fade-up delay-3">
-        <h3 data-i18n="service2_bookCard2_title">Marketing & Smooth Closing</h3>
-        <p data-i18n="service2_bookCard2_desc">Promote your property effectively and manage the entire closing process seamlessly, ensuring a stress-free experience.</p>
+        <h3 data-i18n="service2_bookCard2_title">Mentorship & Career Guidance</h3>
+        <p data-i18n="service2_bookCard2_desc">
+          Experienced mentors guide children in academics and career choices, 
+          inspiring them to aim higher in life.
+        </p>
       </div>
     </div>
   </div>
@@ -297,282 +332,288 @@
 <section class="contact-banner section-padding">
   <div class="container">
     <div class="contact-banner-content">
-      <h2 data-i18n="service2_ctaTitle">Ready to Sell Your Property?</h2>
-      <p data-i18n="service2_ctaDesc">Let's discuss your property and create a personalized selling plan to get the best value quickly.</p>
-      <a href="contact.html" class="btn btn-primary" data-i18n="service2_ctaBtn">Get Started</a>
+      <h2 data-i18n="service2_ctaTitle">Ready to Support a Child’s Education?</h2>
+      <p data-i18n="service2_ctaDesc">
+        Join us in making education accessible to every child. 
+        Your support can change a child’s life forever.
+      </p>
+      <a href="contact.html" class="btn btn-primary" data-i18n="service2_ctaBtn">Get Involved</a>
     </div>
   </div>
 </section>
+
 
 <script>
 // Translation dictionary
 const translations = {
   en: {
-   "home": "Home",
+    "home": "Home",
     "home1": "Home 1",
     "home2": "Home 2",
     "about": "About",
     "services": "Services",
     "allServices": "All Services",
-    "service_1": "Property Buying Assistance",
-    "service_2": "Property Selling",
-    "service_3": "Rental Services",
-    "service_4": "Property Management",
-    "service_5": "Real Estate Investment",
-    "service_6": "Legal & Documentation Support",
+    "service_1": "Service_1",
+    "service_2": "Service_2",
+    "service_3": "Service_3",
+    "service_4": "Service_4",
+    "service_5": "Service_5",
+    "service_6": "Service_6",
     "blog": "Blog",
     "allPosts": "All Posts",
-    "blog_1": "Smart Property Investments",
-    "blog_2": "Effective Property Management",
-    "blog_3": "Real Estate Market Trends",
+    "blog_1": "Blog_1",
+    "blog_2": "Blog_2",
+    "blog_3": "Blog_3",
     "contact": "Contact",
     "logout": "Logout",
 
-    "footer_about": "Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.",
-    "footer_quickLinks": "Quick Links",
+     "footer_about": "Dedicated charity organization, empowering communities through education, healthcare, food support, and sustainable initiatives to create lasting impact and hope.",
+    "footer_quicklinks": "Quick Links",
     "footer_home": "Home",
     "footer_home2": "Home 2",
-    "footer_aboutUs": "About Us",
+    "footer_aboutus": "About Us",
     "footer_services": "Services",
     "footer_blog": "Blog",
     "footer_contact": "Contact",
-    "footer_servicesTitle": "Services",
-    "footer_service1": "Property Buying Assistance",
-    "footer_service2": "Property Selling",
-    "footer_service3": "Rental Services",
-    "footer_service4": "Property Management",
-    "footer_service5": "Real Estate Investment",
-    "footer_service6": "Legal & Documentation Support",
-    "footer_contactInfo": "Contact Info",
-    "footer_email": "contact@stackly.ai",
+    "footer_services_title": "Services",
+    "footer_service1": "Food Distribution",
+    "footer_service2": "Education Support",
+    "footer_service3": "Healthcare Camps",
+    "footer_service4": "Women Empowerment",
+    "footer_service5": "Child Welfare",
+    "footer_service6": "Disaster Relief",
+    "footer_contactinfo": "Contact Info",
+    "footer_email": "contact@stackly.in",
     "footer_phone": "+1 (555) 123-4567",
-    "footer_address": "123 AI Innovation Drive",
-    "footer_bottom": "© 2025 Stackly. All rights reserved.",
-    "service2_title": "Property Selling",
-    "service2_heading": "Property Selling Made Easy",
-    "service2_intro": "Sell your property confidently and quickly with our expert real estate services. We guide you through pricing, marketing, and negotiations to ensure you get the best value for your property.",
-    "service2_point1": "Expert property valuation and pricing guidance",
-    "service2_point2": "Comprehensive marketing for maximum exposure",
-    "service2_point3": "Assistance with legal documentation",
-    "service2_point4": "Negotiation support to maximize your sale value",
-    "service2_point5": "Personalized selling strategy tailored to your property",
-    "service2_explore": "Explore Services",
-    "service2_getStarted": "Get Started",
-    "service2_featuresTitle": "Our Property Selling Services",
-    "service2_featuresDesc": "We provide professional property selling services to help homeowners and investors sell their properties quickly and at the best price. From valuation to marketing and closing, we handle the entire selling process.",
-    "service2_card1_title": "Property Valuation",
-    "service2_card1_desc": "Get an accurate valuation of your property based on market trends and comparable sales. We help you price your property competitively to attract buyers quickly.",
-    "service2_card2_title": "Marketing & Promotion",
-    "service2_card2_desc": "Promote your property through multiple channels including online listings, social media, and local advertising to reach the right buyers and maximize exposure.",
-    "service2_card3_title": "Negotiation & Closing",
-    "service2_card3_desc": "We assist in negotiating offers to get you the best price and handle all documentation to ensure a smooth and hassle-free closing process.",
-    "service2_processTitle": "Comprehensive Property Selling Process",
-    "service2_processDesc": "We provide professional and seamless property selling services to help you sell your property quickly and at the best price. From valuation to closing, we handle every step with expertise and care.",
-    "service2_processIntro": "Our property selling solutions are designed to give homeowners peace of mind. From accurate property valuation to marketing, negotiations, and closing, we make sure your property sells efficiently and at maximum value. Whether you're selling a home or an investment property, our expert guidance ensures a smooth and profitable experience.",
-    "service2_step1": "Property Valuation & Pricing",
-    "service2_step2": "Preparing Property for Sale",
-    "service2_step3": "Marketing & Listing",
-    "service2_step4": "Managing Buyer Inquiries",
-    "service2_step5": "Negotiation & Offer Management",
-    "service2_step6": "Closing & Handover",
-    "service2_showcaseTitle": "Property Selling Services",
-    "service2_showcaseDesc": "We provide professional property selling solutions to help homeowners and investors sell their properties quickly, efficiently, and at the best price.",
-    "service2_showcase1_title": "Property Valuation",
-    "service2_showcase1_desc": "Get an accurate valuation of your property based on market trends to price it competitively and attract buyers faster.",
-    "service2_showcase2_title": "Marketing & Promotion",
-    "service2_showcase2_desc": "Promote your property through online listings, social media, and local channels to maximize visibility and reach the right buyers.",
-    "service2_showcase3_title": "Negotiation & Offer Management",
-    "service2_showcase3_desc": "We assist in managing offers, negotiating the best price, and guiding you through the entire sales process.",
-    "service2_showcase4_title": "Closing & Handover",
-    "service2_showcase4_desc": "Handle all documentation and legal procedures to ensure a smooth and hassle-free closing, giving you peace of mind.",
-    "service2_bookTitle": "Professional Property Selling Services",
-    "service2_bookDesc": "Our property selling services are designed to help homeowners and investors sell their properties quickly and efficiently. From valuation to marketing and closing, we handle every step to ensure you get the best value for your property.",
-    "service2_bookCard1_title": "Accurate Property Valuation",
-    "service2_bookCard1_desc": "We provide precise property valuations based on market trends to price your property competitively and attract buyers faster.",
-    "service2_bookCard2_title": "Marketing & Smooth Closing",
-    "service2_bookCard2_desc": "Promote your property effectively and manage the entire closing process seamlessly, ensuring a stress-free experience.",
-    "service2_ctaTitle": "Ready to Sell Your Property?",
-    "service2_ctaDesc": "Let's discuss your property and create a personalized selling plan to get the best value quickly.",
-    "service2_ctaBtn": "Get Started" 
-    
+    "footer_location": "123 Hyderabad, India",
+    "footer_rights": "© 2025 Stackly. All rights reserved.",
+  
+    "service2_title": "Education Support",
+    "service2_heading": "Empowering Children Through Education",
+    "service2_intro": "Education is the foundation for a brighter future. Our Education Support programs provide underprivileged children with the resources, guidance, and encouragement they need to learn, grow, and succeed in life.",
+    "service2_point1": "Free school supplies and learning materials",
+    "service2_point2": "Scholarship programs for deserving students",
+    "service2_point3": "After-school tutoring and mentorship",
+    "service2_point4": "Digital literacy and computer education",
+    "service2_point5": "Support for girl child education",
+    "service2_explore": "Explore Programs",
+    "service2_getStarted": "Support a Child",
+    "service2_featuresTitle": "Our Education Initiatives",
+    "service2_featuresDesc": "We are committed to breaking the cycle of poverty by providing quality education support. Through scholarships, mentorship, and access to modern learning tools, we help children achieve their academic and personal goals.",
+    "service2_card1_title": "School Supplies",
+    "service2_card1_desc": "Providing books, uniforms, and stationery to ensure every child is equipped to attend school with confidence.",
+    "service2_card2_title": "Tutoring & Mentorship",
+    "service2_card2_desc": "After-school classes, mentoring, and guidance programs to help children excel academically and build life skills.",
+    "service2_card3_title": "Digital Learning",
+    "service2_card3_desc": "Access to e-learning, computer training, and digital literacy programs to prepare students for a technology-driven future.",
+    "service2_processTitle": "Our Education Support Process",
+    "service2_processDesc": "We follow a structured approach to support children’s education, ensuring long-term impact and equal opportunities for all. From identifying children in need to providing continuous mentorship, we walk with them every step of the way.",
+    "service2_processIntro": "Our education initiatives are designed to empower children by not only meeting their academic needs but also supporting their emotional, social, and digital development.",
+    "service2_step1": "Identifying Students in Need",
+    "service2_step2": "Providing School Supplies",
+    "service2_step3": "Scholarship & Financial Aid",
+    "service2_step4": "Tutoring & Mentorship",
+    "service2_step5": "Digital Education Programs",
+    "service2_step6": "Ongoing Guidance & Monitoring",
+    "service2_showcaseTitle": "Education Support Programs",
+    "service2_showcaseDesc": "Our programs cover every aspect of a child’s education journey. We focus on ensuring access, continuity, and quality, so every child has the chance to learn and thrive.",
+    "service2_showcase1_title": "School Kits",
+    "service2_showcase1_desc": "Distribution of books, uniforms, and stationery to help children start school prepared.",
+    "service2_showcase2_title": "Scholarships",
+    "service2_showcase2_desc": "Financial aid and scholarships for deserving students to continue their education.",
+    "service2_showcase3_title": "After-School Programs",
+    "service2_showcase3_desc": "Extra coaching, mentoring, and guidance to help children improve academically.",
+    "service2_showcase4_title": "Digital Literacy",
+    "service2_showcase4_desc": "Providing access to computers, internet, and e-learning for future-ready education.",
+    "service2_bookTitle": "Trusted Education Assistance",
+    "service2_bookDesc": "Our education support ensures children receive not only academic help but also emotional encouragement and future opportunities. We bridge gaps by providing resources, guidance, and mentorship every step of the way.",
+    "service2_bookCard1_title": "Scholarships & School Aid",
+    "service2_bookCard1_desc": "We provide financial assistance, scholarships, and school fee support for students from low-income families.",
+    "service2_bookCard2_title": "Mentorship & Career Guidance",
+    "service2_bookCard2_desc": "Experienced mentors guide children in academics and career choices, inspiring them to aim higher in life.",
+    "service2_ctaTitle": "Ready to Support a Child’s Education?",
+    "service2_ctaDesc": "Join us in making education accessible to every child. Your support can change a child’s life forever.",
+    "service2_ctaBtn": "Get Involved",
   },
   ar: {
-   "home": "الرئيسية",
-    "home1": "الصفحة الرئيسية 1",
-    "home2": "الصفحة الرئيسية 2",
-    "about": "من نحن",
+     "home": "الرئيسية",
+    "home1": "الصفحة 1",
+    "home2": "الصفحة 2",
+    "about": "معلومات عنا",
     "services": "الخدمات",
     "allServices": "جميع الخدمات",
-    "service_1": "مساعدة في شراء العقارات",
-    "service_2": "بيع العقارات",
-    "service_3": "خدمات الإيجار",
-    "service_4": "إدارة العقارات",
-    "service_5": "الاستثمار العقاري",
-    "service_6": "الدعم القانوني والتوثيق",
+    "service_1": "الخدمة_1",
+    "service_2": "الخدمة_2",
+    "service_3": "الخدمة_3",
+    "service_4": "الخدمة_4",
+    "service_5": "الخدمة_5",
+    "service_6": "الخدمة_6",
     "blog": "المدونة",
     "allPosts": "جميع المقالات",
-    "blog_1": "الاستثمارات العقارية الذكية",
-    "blog_2": "إدارة العقارات الفعالة",
-    "blog_3": "اتجاهات سوق العقارات",
+    "blog_1": "مدونة_1",
+    "blog_2": "مدونة_2",
+    "blog_3": "مدونة_3",
     "contact": "اتصل بنا",
-    "logout": "تسجيل خروج",
+    "logout": "تسجيل الخروج",
 
-    "footer_about": "مزود رائد لحلول الذكاء الاصطناعي، يساعد الشركات على التحول من خلال التكنولوجيا الذكية وأنظمة الأتمتة المبتكرة.",
-    "footer_quickLinks": "روابط سريعة",
+    "footer_about": "منظمة خيرية مكرسة، تمكّن المجتمعات من خلال التعليم والرعاية الصحية ودعم الغذاء والمبادرات المستدامة لخلق تأثير دائم وأمل.",
+    "footer_quicklinks": "روابط سريعة",
     "footer_home": "الرئيسية",
     "footer_home2": "الصفحة الرئيسية 2",
-    "footer_aboutUs": "من نحن",
+    "footer_aboutus": "معلومات عنا",
     "footer_services": "الخدمات",
-    "footer_blog": "المدونة",
+    "footer_blog": "مدونة",
     "footer_contact": "اتصل بنا",
-    "footer_servicesTitle": "الخدمات",
-    "footer_service1": "مساعدة في شراء العقارات",
-    "footer_service2": "بيع العقارات",
-    "footer_service3": "خدمات الإيجار",
-    "footer_service4": "إدارة الممتلكات",
-    "footer_service5": "الاستثمار العقاري",
-    "footer_service6": "الدعم القانوني والتوثيق",
-    "footer_contactInfo": "معلومات الاتصال",
-    "footer_email": "contact@stackly.ai",
+    "footer_services_title": "الخدمات",
+    "footer_service1": "توزيع الغذاء",
+    "footer_service2": "دعم التعليم",
+    "footer_service3": "المخيمات الطبية",
+    "footer_service4": "تمكين المرأة",
+    "footer_service5": "رعاية الأطفال",
+    "footer_service6": "الإغاثة في الكوارث",
+    "footer_contactinfo": "معلومات الاتصال",
+    "footer_email": "contact@stackly.in",
     "footer_phone": "+1 (555) 123-4567",
-    "footer_address": "123 طريق ابتكار الذكاء الاصطناعي",
-    "footer_bottom": "© 2025 Stackly. جميع الحقوق محفوظة.",
-      
-    "service2_title": "بيع العقارات",
-    "service2_heading": "بيع العقارات أصبح سهلاً",
-    "service2_intro": "قم ببيع عقارك بثقة وسرعة مع خدماتنا العقارية المتخصصة. نرشدك خلال التسعير والتسويق والمفاوضات لضمان حصولك على أفضل قيمة لعقارك.",
-    "service2_point1": "تقييم دقيق للعقار وإرشادات التسعير",
-    "service2_point2": "تسويق شامل لزيادة الظهور",
-    "service2_point3": "المساعدة في التوثيق القانوني",
-    "service2_point4": "دعم التفاوض لتعظيم قيمة البيع",
-    "service2_point5": "استراتيجية بيع مخصصة تناسب عقارك",
-    "service2_explore": "استكشاف الخدمات",
-    "service2_getStarted": "ابدأ الآن",
-    "service2_featuresTitle": "خدمات بيع العقارات",
-    "service2_featuresDesc": "نحن نقدم خدمات احترافية لبيع العقارات لمساعدة أصحاب المنازل والمستثمرين على بيع عقاراتهم بسرعة وبأفضل سعر. من التقييم إلى التسويق والإغلاق، ندير العملية بأكملها.",
-    "service2_card1_title": "تقييم العقار",
-    "service2_card1_desc": "احصل على تقييم دقيق لعقارك بناءً على اتجاهات السوق والمبيعات المشابهة. نساعدك على تسعير عقارك بشكل تنافسي لجذب المشترين بسرعة.",
-    "service2_card2_title": "التسويق والترويج",
-    "service2_card2_desc": "قم بتسويق عقارك عبر قنوات متعددة بما في ذلك الإعلانات الإلكترونية ووسائل التواصل الاجتماعي والإعلانات المحلية للوصول إلى المشترين المناسبين وزيادة الظهور.",
-    "service2_card3_title": "التفاوض والإغلاق",
-    "service2_card3_desc": "نساعدك في التفاوض على العروض للحصول على أفضل سعر ونتولى جميع المستندات لضمان عملية إغلاق سلسة وخالية من المتاعب.",
-    "service2_processTitle": "عملية شاملة لبيع العقارات",
-    "service2_processDesc": "نقدم خدمات احترافية وسلسة لبيع العقارات لمساعدتك على بيع عقارك بسرعة وبأفضل سعر. من التقييم إلى الإغلاق، ندير كل خطوة بخبرة وعناية.",
-    "service2_processIntro": "تم تصميم حلول بيع العقارات الخاصة بنا لمنح أصحاب المنازل راحة البال. من التقييم الدقيق إلى التسويق والمفاوضات والإغلاق، نضمن بيع عقارك بكفاءة وبأعلى قيمة. سواء كنت تبيع منزلاً أو عقاراً استثمارياً، فإن خبرتنا تضمن تجربة سلسة ومربحة.",
-    "service2_step1": "تقييم العقار والتسعير",
-    "service2_step2": "تحضير العقار للبيع",
-    "service2_step3": "التسويق والإدراج",
-    "service2_step4": "إدارة استفسارات المشترين",
-    "service2_step5": "التفاوض وإدارة العروض",
-    "service2_step6": "الإغلاق والتسليم",
-    "service2_showcaseTitle": "خدمات بيع العقارات",
-    "service2_showcaseDesc": "نحن نقدم حلول بيع عقارات احترافية لمساعدة أصحاب المنازل والمستثمرين على بيع عقاراتهم بسرعة وكفاءة وبأفضل سعر.",
-    "service2_showcase1_title": "تقييم العقار",
-    "service2_showcase1_desc": "احصل على تقييم دقيق لعقارك بناءً على اتجاهات السوق لتسعيره بشكل تنافسي وجذب المشترين بسرعة.",
-    "service2_showcase2_title": "التسويق والترويج",
-    "service2_showcase2_desc": "قم بالترويج لعقارك من خلال القوائم عبر الإنترنت ووسائل التواصل الاجتماعي والقنوات المحلية لزيادة الظهور والوصول إلى المشترين المناسبين.",
-    "service2_showcase3_title": "التفاوض وإدارة العروض",
-    "service2_showcase3_desc": "نساعدك في إدارة العروض والتفاوض للحصول على أفضل سعر وإرشادك طوال عملية البيع.",
-    "service2_showcase4_title": "الإغلاق والتسليم",
-    "service2_showcase4_desc": "نتولى جميع المستندات والإجراءات القانونية لضمان إغلاق سلس وخالٍ من المتاعب، مما يمنحك راحة البال.",
-    "service2_bookTitle": "خدمات احترافية لبيع العقارات",
-    "service2_bookDesc": "تم تصميم خدمات بيع العقارات لدينا لمساعدة أصحاب المنازل والمستثمرين على بيع عقاراتهم بسرعة وكفاءة. من التقييم إلى التسويق والإغلاق، ندير كل خطوة لضمان حصولك على أفضل قيمة.",
-    "service2_bookCard1_title": "تقييم دقيق للعقار",
-    "service2_bookCard1_desc": "نقدم تقييمات دقيقة للعقارات بناءً على اتجاهات السوق لتسعير عقارك بشكل تنافسي وجذب المشترين بسرعة.",
-    "service2_bookCard2_title": "التسويق والإغلاق السلس",
-    "service2_bookCard2_desc": "قم بالترويج لعقارك بفعالية وإدارة عملية الإغلاق بالكامل بسلاسة، مما يضمن تجربة خالية من التوتر.",
-    "service2_ctaTitle": "هل أنت مستعد لبيع عقارك؟",
-    "service2_ctaDesc": "لنناقش عقارك وننشئ خطة بيع شخصية للحصول على أفضل قيمة بسرعة.",
-    "service2_ctaBtn": "ابدأ الآن",
+    "footer_location": "123 حيدر أباد، الهند",
+    "footer_rights": "© 2025 Stackly. جميع الحقوق محفوظة.",
+  
+    "service2_title": "دعم التعليم",
+    "service2_heading": "تمكين الأطفال من خلال التعليم",
+    "service2_intro": "التعليم هو الأساس لمستقبل أكثر إشراقًا. برامج دعم التعليم لدينا توفر للأطفال المحرومين الموارد والإرشاد والتشجيع الذي يحتاجونه للتعلم والنمو والنجاح في الحياة.",
+    "service2_point1": "اللوازم المدرسية المجانية ومواد التعلم",
+    "service2_point2": "برامج المنح الدراسية للطلاب المستحقين",
+    "service2_point3": "الدروس الخصوصية والإرشاد بعد المدرسة",
+    "service2_point4": "محو الأمية الرقمية وتعليم الكمبيوتر",
+    "service2_point5": "دعم تعليم الفتيات",
+    "service2_explore": "استكشاف البرامج",
+    "service2_getStarted": "ادعم طفلاً",
+    "service2_featuresTitle": "مبادراتنا التعليمية",
+    "service2_featuresDesc": "نحن ملتزمون بكسر حلقة الفقر من خلال توفير دعم تعليمي عالي الجودة. من خلال المنح الدراسية والإرشاد والوصول إلى أدوات التعلم الحديثة، نساعد الأطفال على تحقيق أهدافهم الأكاديمية والشخصية.",
+    "service2_card1_title": "اللوازم المدرسية",
+    "service2_card1_desc": "توفير الكتب والزي المدرسي والقرطاسية لضمان تجهيز كل طفل للذهاب إلى المدرسة بثقة.",
+    "service2_card2_title": "الدروس الخصوصية والإرشاد",
+    "service2_card2_desc": "دروس بعد المدرسة، وبرامج إرشاد وتوجيه لمساعدة الأطفال على التفوق أكاديميًا وبناء مهارات حياتية.",
+    "service2_card3_title": "التعلم الرقمي",
+    "service2_card3_desc": "الوصول إلى التعلم الإلكتروني، وتدريب الكمبيوتر، وبرامج محو الأمية الرقمية لإعداد الطلاب لمستقبل قائم على التكنولوجيا.",
+    "service2_processTitle": "عملية دعم التعليم لدينا",
+    "service2_processDesc": "نتبع نهجًا منظمًا لدعم تعليم الأطفال، مما يضمن تأثيرًا طويل الأمد وفرصًا متكافئة للجميع. من تحديد الأطفال المحتاجين إلى تقديم الإرشاد المستمر، نحن معهم في كل خطوة.",
+    "service2_processIntro": "مبادراتنا التعليمية مصممة لتمكين الأطفال من خلال تلبية احتياجاتهم الأكاديمية ودعم نموهم العاطفي والاجتماعي والرقمي.",
+    "service2_step1": "تحديد الطلاب المحتاجين",
+    "service2_step2": "توفير اللوازم المدرسية",
+    "service2_step3": "المنح الدراسية والمساعدات المالية",
+    "service2_step4": "الدروس الخصوصية والإرشاد",
+    "service2_step5": "برامج التعليم الرقمي",
+    "service2_step6": "التوجيه والمتابعة المستمرة",
+    "service2_showcaseTitle": "برامج دعم التعليم",
+    "service2_showcaseDesc": "تغطي برامجنا كل جانب من رحلة تعليم الطفل. نحن نركز على ضمان الوصول والاستمرارية والجودة، حتى تتاح لكل طفل فرصة التعلم والازدهار.",
+    "service2_showcase1_title": "أدوات مدرسية",
+    "service2_showcase1_desc": "توزيع الكتب والزي المدرسي والقرطاسية لمساعدة الأطفال على بدء المدرسة بشكل جيد.",
+    "service2_showcase2_title": "المنح الدراسية",
+    "service2_showcase2_desc": "المساعدات المالية والمنح الدراسية للطلاب المستحقين لمواصلة تعليمهم.",
+    "service2_showcase3_title": "برامج بعد المدرسة",
+    "service2_showcase3_desc": "تدريس إضافي، وإرشاد، وتوجيه لمساعدة الأطفال على التحسن أكاديميًا.",
+    "service2_showcase4_title": "محو الأمية الرقمية",
+    "service2_showcase4_desc": "توفير الوصول إلى أجهزة الكمبيوتر والإنترنت والتعلم الإلكتروني للتعليم المستقبلي.",
+    "service2_bookTitle": "مساعدة تعليمية موثوقة",
+    "service2_bookDesc": "دعمنا التعليمي يضمن حصول الأطفال على المساعدة الأكاديمية والتشجيع العاطفي والفرص المستقبلية. نحن نسد الفجوات من خلال توفير الموارد والإرشاد والتوجيه في كل خطوة.",
+    "service2_bookCard1_title": "المنح الدراسية والمساعدات المدرسية",
+    "service2_bookCard1_desc": "نقدم المساعدات المالية والمنح الدراسية ودعم الرسوم الدراسية للطلاب من الأسر ذات الدخل المحدود.",
+    "service2_bookCard2_title": "الإرشاد والتوجيه المهني",
+    "service2_bookCard2_desc": "يقوم مرشدون ذوو خبرة بتوجيه الأطفال أكاديميًا ومهنيًا، وإلهامهم لتحقيق أهداف أعلى في الحياة.",
+    "service2_ctaTitle": "هل أنت مستعد لدعم تعليم طفل؟",
+    "service2_ctaDesc": "انضم إلينا في جعل التعليم متاحًا لكل طفل. دعمك يمكن أن يغير حياة طفل إلى الأبد.",
+    "service2_ctaBtn": "شارك",
+
      },
   he: {
     "home": "בית",
-    "home1": "דף הבית 1",
-    "home2": "דף הבית 2",
+    "home1": "דף 1",
+    "home2": "דף 2",
     "about": "אודות",
     "services": "שירותים",
     "allServices": "כל השירותים",
-    "service_1": "סיוע ברכישת נכסים",
-    "service_2": "מכירת נכסים",
-    "service_3": "שירותי השכרה",
-    "service_4": "ניהול נכסים",
-    "service_5": "השקעות נדל״ן",
-    "service_6": "תמיכה משפטית ותיעוד",
+    "service_1": "שירות_1",
+    "service_2": "שירות_2",
+    "service_3": "שירות_3",
+    "service_4": "שירות_4",
+    "service_5": "שירות_5",
+    "service_6": "שירות_6",
     "blog": "בלוג",
     "allPosts": "כל הפוסטים",
-    "blog_1": "השקעות נדל״ן חכמות",
-    "blog_2": "ניהול נכסים יעיל",
-    "blog_3": "מגמות שוק הנדל״ן",
+    "blog_1": "בלוג_1",
+    "blog_2": "בלוג_2",
+    "blog_3": "בלוג_3",
     "contact": "צור קשר",
     "logout": "התנתק",
 
-    "footer_about": "ספק מוביל של פתרונות בינה מלאכותית, מסייע לעסקים להשתנות באמצעות טכנולוגיה חכמה ומערכות אוטומציה חדשניות.",
-    "footer_quickLinks": "קישורים מהירים",
+    "footer_about": "ארגון צדקה מסור, המעצים קהילות באמצעות חינוך, בריאות, תמיכת מזון ויוזמות ברות קיימא ליצירת השפעה מתמשכת ותקווה.",
+    "footer_quicklinks": "קישורים מהירים",
     "footer_home": "בית",
     "footer_home2": "בית 2",
-    "footer_aboutUs": "אודותינו",
+    "footer_aboutus": "אודותינו",
     "footer_services": "שירותים",
     "footer_blog": "בלוג",
     "footer_contact": "צור קשר",
-    "footer_servicesTitle": "שירותים",
-    "footer_service1": "סיוע ברכישת נכסים",
-    "footer_service2": "מכירת נכסים",
-    "footer_service3": "שירותי השכרה",
-    "footer_service4": "ניהול נכסים",
-    "footer_service5": "השקעות נדל\"ן",
-    "footer_service6": "תמיכה משפטית ותיעוד",
-    "footer_contactInfo": "פרטי קשר",
-    "footer_email": "contact@stackly.ai",
+    "footer_services_title": "שירותים",
+    "footer_service1": "חלוקת מזון",
+    "footer_service2": "תמיכה בחינוך",
+    "footer_service3": "מחנות בריאות",
+    "footer_service4": "העצמת נשים",
+    "footer_service5": "רווחת ילדים",
+    "footer_service6": "סיוע באסונות",
+    "footer_contactinfo": "פרטי קשר",
+    "footer_email": "contact@stackly.in",
     "footer_phone": "+1 (555) 123-4567",
-    "footer_address": "123 רחוב חדשנות בינה מלאכותית",
-    "footer_bottom": "© 2025 Stackly. כל הזכויות שמורות.",
- 
-    "service2_title": "מכירת נכסים",
-    "service2_heading": "מכירת נכסים בקלות",
-    "service2_intro": "מכור את הנכס שלך בביטחון ובמהירות בעזרת שירותי הנדל״ן המומחים שלנו. אנו מדריכים אותך בתמחור, שיווק ומשא ומתן כדי להבטיח שתקבל את הערך הטוב ביותר לנכס שלך.",
-    "service2_point1": "הערכת נכס מקצועית והנחיות תמחור",
-    "service2_point2": "שיווק מקיף לחשיפה מקסימלית",
-    "service2_point3": "סיוע בתיעוד משפטי",
-    "service2_point4": "תמיכה במשא ומתן למקסום ערך המכירה",
-    "service2_point5": "אסטרטגיית מכירה מותאמת אישית לנכס שלך",
-    "service2_explore": "גלה שירותים",
-    "service2_getStarted": "התחל",
-    "service2_featuresTitle": "שירותי מכירת נכסים",
-    "service2_featuresDesc": "אנו מספקים שירותי מכירת נכסים מקצועיים כדי לעזור לבעלי בתים ומשקיעים למכור את נכסיהם במהירות ובמחיר הטוב ביותר. מהערכה ועד שיווק וסגירה, אנו מנהלים את כל התהליך.",
-    "service2_card1_title": "הערכת נכס",
-    "service2_card1_desc": "קבל הערכה מדויקת של הנכס שלך על בסיס מגמות שוק ומכירות דומות. אנו עוזרים לך לתמחר את הנכס בצורה תחרותית כדי למשוך קונים במהירות.",
-    "service2_card2_title": "שיווק וקידום",
-    "service2_card2_desc": "קדם את הנכס שלך בערוצים מרובים כולל פרסומים מקוונים, מדיה חברתית ופרסום מקומי כדי להגיע לקונים הנכונים ולמקסם חשיפה.",
-    "service2_card3_title": "משא ומתן וסגירה",
-    "service2_card3_desc": "אנו מסייעים במשא ומתן על הצעות כדי לקבל עבורך את המחיר הטוב ביותר ומטפלים בכל המסמכים כדי להבטיח תהליך סגירה חלק וללא טרחה.",
-    "service2_processTitle": "תהליך מקיף למכירת נכסים",
-    "service2_processDesc": "אנו מספקים שירותי מכירת נכסים מקצועיים וחלקים כדי לעזור לך למכור את הנכס שלך במהירות ובמחיר הטוב ביותר. מהערכה ועד סגירה, אנו מנהלים כל שלב במומחיות ובזהירות.",
-    "service2_processIntro": "פתרונות מכירת הנכסים שלנו נועדו להעניק לבעלי בתים שקט נפשי. מהערכה מדויקת ועד שיווק, משא ומתן וסגירה, אנו מבטיחים שהנכס שלך יימכר ביעילות ובערך מרבי. בין אם אתה מוכר בית או נכס השקעה, ההכוונה המקצועית שלנו מבטיחה חוויה חלקה ורווחית.",
-    "service2_step1": "הערכת נכס ותמחור",
-    "service2_step2": "הכנת נכס למכירה",
-    "service2_step3": "שיווק ורישום",
-    "service2_step4": "ניהול פניות קונים",
-    "service2_step5": "משא ומתן וניהול הצעות",
-    "service2_step6": "סגירה ומסירה",
-    "service2_showcaseTitle": "שירותי מכירת נכסים",
-    "service2_showcaseDesc": "אנו מספקים פתרונות מכירת נכסים מקצועיים כדי לעזור לבעלי בתים ומשקיעים למכור את נכסיהם במהירות, ביעילות ובמחיר הטוב ביותר.",
-    "service2_showcase1_title": "הערכת נכס",
-    "service2_showcase1_desc": "קבל הערכה מדויקת של הנכס שלך על בסיס מגמות שוק כדי לתמחר אותו באופן תחרותי ולמשוך קונים מהר יותר.",
-    "service2_showcase2_title": "שיווק וקידום",
-    "service2_showcase2_desc": "קדם את הנכס שלך באמצעות פרסומים מקוונים, מדיה חברתית וערוצים מקומיים כדי למקסם חשיפה ולהגיע לקונים הנכונים.",
-    "service2_showcase3_title": "משא ומתן וניהול הצעות",
-    "service2_showcase3_desc": "אנו מסייעים בניהול הצעות, משא ומתן לקבלת המחיר הטוב ביותר והדרכה לאורך כל תהליך המכירה.",
-    "service2_showcase4_title": "סגירה ומסירה",
-    "service2_showcase4_desc": "מטפלים בכל המסמכים וההליכים המשפטיים כדי להבטיח סגירה חלקה וללא טרחה, מה שמעניק לך שקט נפשי.",
-    "service2_bookTitle": "שירותי מכירת נכסים מקצועיים",
-    "service2_bookDesc": "שירותי מכירת הנכסים שלנו נועדו לעזור לבעלי בתים ומשקיעים למכור את נכסיהם במהירות וביעילות. מהערכה ועד שיווק וסגירה, אנו מנהלים כל שלב כדי להבטיח שתקבל את הערך הטוב ביותר.",
-    "service2_bookCard1_title": "הערכת נכס מדויקת",
-    "service2_bookCard1_desc": "אנו מספקים הערכות מדויקות לנכסים על בסיס מגמות שוק כדי לתמחר את הנכס שלך בצורה תחרותית ולמשוך קונים במהירות.",
-    "service2_bookCard2_title": "שיווק וסגירה חלקה",
-    "service2_bookCard2_desc": "קדם את הנכס שלך ביעילות ונהל את כל תהליך הסגירה בצורה חלקה, מה שמבטיח חוויה נטולת דאגות.",
-    "service2_ctaTitle": "מוכן למכור את הנכס שלך?",
-    "service2_ctaDesc": "בוא נדון בנכס שלך וניצור תוכנית מכירה מותאמת אישית כדי לקבל את הערך הטוב ביותר במהירות.",
-    "service2_ctaBtn": "התחל", 
+    "footer_location": "123 היידראבאד, הודו",
+    "footer_rights": "© 2025 Stackly. כל הזכויות שמורות.",
+
+      "service2_title": "תמיכה בחינוך",
+    "service2_heading": "מעצימים ילדים דרך חינוך",
+    "service2_intro": "החינוך הוא הבסיס לעתיד מזהיר יותר. תוכניות התמיכה שלנו בחינוך מעניקות לילדים נזקקים משאבים, הדרכה ועידוד שהם זקוקים להם כדי ללמוד, לצמוח ולהצליח בחיים.",
+    "service2_point1": "ציוד לימודי וחומרי לימוד בחינם",
+    "service2_point2": "תוכניות מלגות לסטודנטים ראויים",
+    "service2_point3": "שיעורי תגבור וחונכות אחרי בית הספר",
+    "service2_point4": "אוריינות דיגיטלית וחינוך מחשבים",
+    "service2_point5": "תמיכה בחינוך הילדה",
+    "service2_explore": "גלה תוכניות",
+    "service2_getStarted": "תמוך בילד",
+    "service2_featuresTitle": "היוזמות החינוכיות שלנו",
+    "service2_featuresDesc": "אנחנו מחויבים לשבור את מעגל העוני על ידי מתן תמיכה חינוכית איכותית. באמצעות מלגות, חונכות וגישה לכלי למידה מודרניים, אנו עוזרים לילדים להשיג את יעדיהם האקדמיים והאישיים.",
+    "service2_card1_title": "ציוד לבית הספר",
+    "service2_card1_desc": "אספקת ספרים, מדים וציוד כתיבה כדי להבטיח שכל ילד יוכל להגיע לבית הספר בביטחון.",
+    "service2_card2_title": "חונכות והדרכה",
+    "service2_card2_desc": "שיעורים אחרי בית הספר, תוכניות חונכות והדרכה כדי לעזור לילדים להצטיין אקדמית ולבנות מיומנויות חיים.",
+    "service2_card3_title": "למידה דיגיטלית",
+    "service2_card3_desc": "גישה ללמידה מקוונת, הדרכת מחשבים ותוכניות אוריינות דיגיטלית כדי להכין תלמידים לעתיד טכנולוגי.",
+    "service2_processTitle": "תהליך התמיכה החינוכית שלנו",
+    "service2_processDesc": "אנו נוקטים גישה מובנית כדי לתמוך בחינוך הילדים, ומבטיחים השפעה ארוכת טווח והזדמנויות שוות לכולם. מזיהוי ילדים נזקקים ועד מתן חונכות מתמשכת, אנו צועדים איתם בכל שלב בדרך.",
+    "service2_processIntro": "היוזמות החינוכיות שלנו נועדו להעצים ילדים באמצעות מענה לצרכיהם הלימודיים ותמיכה בהתפתחותם הרגשית, החברתית והדיגיטלית.",
+    "service2_step1": "זיהוי תלמידים נזקקים",
+    "service2_step2": "אספקת ציוד לבית הספר",
+    "service2_step3": "מלגות וסיוע כלכלי",
+    "service2_step4": "חונכות והדרכה",
+    "service2_step5": "תוכניות חינוך דיגיטליות",
+    "service2_step6": "הדרכה ומעקב מתמשכים",
+    "service2_showcaseTitle": "תוכניות תמיכה בחינוך",
+    "service2_showcaseDesc": "התוכניות שלנו מכסות כל היבט במסע החינוכי של הילד. אנו מתמקדים בהבטחת נגישות, רציפות ואיכות, כך שלכל ילד תהיה הזדמנות ללמוד ולשגשג.",
+    "service2_showcase1_title": "ערכת לימודים",
+    "service2_showcase1_desc": "חלוקת ספרים, מדים וציוד כתיבה כדי לעזור לילדים להתחיל את הלימודים מוכנים.",
+    "service2_showcase2_title": "מלגות",
+    "service2_showcase2_desc": "סיוע כספי ומלגות לסטודנטים ראויים כדי להמשיך את לימודיהם.",
+    "service2_showcase3_title": "תוכניות אחרי בית הספר",
+    "service2_showcase3_desc": "שיעורי תגבור נוספים, חונכות והדרכה כדי לעזור לילדים להשתפר בלימודים.",
+    "service2_showcase4_title": "אוריינות דיגיטלית",
+    "service2_showcase4_desc": "מתן גישה למחשבים, אינטרנט ולמידה מקוונת לחינוך מוכן לעתיד.",
+    "service2_bookTitle": "סיוע חינוכי מהימן",
+    "service2_bookDesc": "התמיכה שלנו בחינוך מבטיחה שהילדים יקבלו לא רק עזרה לימודית אלא גם עידוד רגשי והזדמנויות לעתיד. אנו מגשרים על פערים באמצעות מתן משאבים, הדרכה וחונכות בכל שלב בדרך.",
+    "service2_bookCard1_title": "מלגות וסיוע לבית הספר",
+    "service2_bookCard1_desc": "אנו מעניקים סיוע כספי, מלגות ותמיכה בשכר הלימוד לתלמידים ממשפחות בעלות הכנסה נמוכה.",
+    "service2_bookCard2_title": "חונכות והכוונה לקריירה",
+    "service2_bookCard2_desc": "חונכים מנוסים מדריכים ילדים בלימודים ובבחירת קריירה, ומעוררים בהם השראה לשאוף גבוה יותר בחיים.",
+    "service2_ctaTitle": "מוכנים לתמוך בחינוך של ילד?",
+    "service2_ctaDesc": "הצטרפו אלינו בהנגשת החינוך לכל ילד. התמיכה שלכם יכולה לשנות את חייו של ילד לנצח.",
+    "service2_ctaBtn": "הצטרפו",
+  
   }
 };
 
@@ -602,354 +643,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
-
 <!-- Header -->
 
-<script>
-  // Mobile menu setup
-  const hamburger = document.getElementById("hamburger");
-  const hamburgerMenu = document.getElementById("hamburgerMenu");
 
-  // Show/hide mobile menu on hamburger click
-  hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    hamburgerMenu.classList.toggle("active");
-  });
-
-  // Toggle dropdowns for mobile menu
-  document.querySelectorAll('.mobile-dropdown-parent > span').forEach(link => {
-    link.addEventListener('click', function() {
-      const parentLi = this.parentElement;
-      const dropdown = parentLi.querySelector('.mobile-dropdown');
-      dropdown.classList.toggle('active');
-    });
-  });
-
-  // Desktop dropdown toggle logic
-  document.querySelectorAll('.nav-item.dropdown > .nav-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      document.querySelectorAll('.dropdown-menu').forEach(menu => {
-        if (menu !== this.nextElementSibling) {
-          menu.classList.remove('active');
-        }
-      });
-      const dropdownMenu = this.nextElementSibling;
-      if (dropdownMenu) {
-        dropdownMenu.classList.toggle('active');
-      }
-    });
-  });
-
-  // Redirect on desktop dropdown menu item click
-  document.querySelectorAll('.dropdown-menu a').forEach(link => {
-    link.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (href && href !== "#") {
-        window.location.href = href;
-        document.querySelectorAll('.dropdown-menu').forEach(menu => menu.classList.remove('active'));
-      }
-    });
-  });
-
-  // Redirect on normal nav link click
-  document.querySelectorAll('.nav-menu > .nav-item:not(.dropdown) .nav-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (href && href !== "#") {
-        window.location.href = href;
-      }
-    });
-  });
-
-  // Auth link toggle for desktop and mobile
-  function setupAuthLinks() {
-    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
-    const authLinks = [document.getElementById("authLink"), document.getElementById("mobileAuthLink")];
-
-    authLinks.forEach(link => {
-      if (!link) return;
-      if (isLoggedIn) {
-        link.innerText = "Logout";
-        link.href = "#";
-        link.onclick = (e) => {
-          e.preventDefault();
-          localStorage.removeItem("isLoggedIn");
-          localStorage.removeItem("currentUser");
-          window.location.href = "index.html";
-        };
-      } else {
-        link.innerText = "Login";
-        link.href = "index.html";
-        link.onclick = null;
-      }
-    });
-  }
-  setupAuthLinks();
-
-  // Theme toggle
-  const toggleBtn = document.getElementById('toggleBtn');
-  let darkMode = localStorage.getItem('darkMode') === 'true';
-
-  function applyTheme() {
-    if (darkMode) {
-      document.body.classList.add('dark-mode');
-      toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
-    } else {
-      document.body.classList.remove('dark-mode');
-      toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
-    }
-  }
-
-  toggleBtn.addEventListener('click', () => {
-    darkMode = !darkMode;
-    localStorage.setItem('darkMode', darkMode);
-    applyTheme();
-  });
-  applyTheme();
-
-  // Avatar initials logic
-  const avatarCircle = document.getElementById('avatarCircle');
-  const avatarInitials = document.getElementById('avatarInitials');
-  const avatarDropdown = document.getElementById('avatarDropdown');
-  const logoutBtn = document.getElementById('logoutBtn');
-  const currentUserEmail = localStorage.getItem("currentUser");
-  const users = JSON.parse(localStorage.getItem("users")) || {};
-
-  if (currentUserEmail && users[currentUserEmail]) {
-    const firstName = users[currentUserEmail].firstName || "";
-    const lastName = users[currentUserEmail].lastName || "";
-    const initials = (firstName[0] || "").toUpperCase() + (lastName[0] || "").toUpperCase();
-    avatarInitials.textContent = initials;
-  } else {
-    avatarInitials.textContent = "?";
-  }
-
-  // Show/hide avatar dropdown on click
-  avatarCircle.addEventListener('click', function(e) {
-    e.stopPropagation();
-    avatarDropdown.style.display = avatarDropdown.style.display === "block" ? "none" : "block";
-  });
-
-  document.addEventListener('click', function(e) {
-    if (!avatarCircle.contains(e.target) && !avatarDropdown.contains(e.target)) {
-      avatarDropdown.style.display = "none";
-    }
-  });
-
-  // Logout action
-  logoutBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    localStorage.removeItem("isLoggedIn");
-    localStorage.removeItem("currentUser");
-    window.location.href = "index.html";
-  });
-</script>
-
-<style>
-  /* Base styles for hamburger icon */
-  .hamburger {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 24px;
-    height: 18px;
-    cursor: pointer;
-    z-index: 1000;
-  }
-
-  .hamburger span {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #333;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .dark-mode .hamburger span {
-    background-color: #fff;
-  }
-
-  /* Hamburger menu animation */
-  .hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-
-  .hamburger.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
-
-  /* Hide navigation on mobile */
-  @media (max-width: 768px) {
-    .nav-menu {
-      display: none;
-    }
-    .hamburger {
-      display: flex;
-    }
-  }
-
-  /* Styles for the mobile hamburger menu */
-  .mobile-menu-wrapper {
-    position: relative;
-  }
-
-  .hamburger-menu {
-    display: none;
-    flex-direction: column;
-    background: #23272f;
-    color: #fff;
-    position: absolute;
-    top: 50px;
-    right: 0;
-    width: 220px;
-    border-radius: 8px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
-    padding: 20px 0;
-    z-index: 9999;
-    list-style: none;
-  }
-
-  .hamburger-menu.active {
-    display: flex;
-  }
-
-  .hamburger-menu li {
-    padding: 10px 24px;
-    border-bottom: 1px solid #333;
-  }
-
-  .hamburger-menu li:last-child {
-    border-bottom: none;
-  }
-
-  .hamburger-menu a,
-  .hamburger-menu span {
-    color: #00f7ff;
-    text-decoration: none;
-    font-size: 1.1rem;
-    display: block;
-    cursor: pointer;
-    font-weight: 500;
-  }
-
-  .hamburger-menu ul {
-    list-style: none;
-    padding-left: 20px;
-    margin-top: 5px;
-  }
-
-  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown {
-    display: none;
-  }
-
-  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown.active {
-    display: block;
-  }
-
-  .toggle-btn {
-    background: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 38px;
-    height: 38px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 16px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-
-  .toggle-btn:hover {
-    background: #f0f0f0;
-  }
-
-  .avatar-circle {
-    position: relative;
-    cursor: pointer;
-    z-index: 1001;
-    overflow: visible;
-  }
-
-  .avatar-circle {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-left: 16px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #eee;
-    position: relative;
-    cursor: pointer;
-  }
-
-  .avatar-circle img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .avatar-dropdown {
-    display: none;
-    position: absolute;
-    top: 65px;
-    right: 140px;
-    background: #fff;
-    min-width: 100px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
-    border-radius: 8px;
-    z-index: 1002;
-    padding: 4px 0;
-  }
-
-  .avatar-dropdown ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .avatar-dropdown li {
-    padding: 6px 12px;
-  }
-
-  .avatar-dropdown a {
-    color: #23272f;
-    text-decoration: none;
-    font-size: 0.95rem;
-    display: block;
-    border-radius: 4px;
-    transition: background 0.2s;
-  }
-
-  .avatar-dropdown a:hover {
-    background: #f0f0f0;
-  }
-
-  @media (max-width: 768px) {
-    .toggle-btn,
-    .avatar-circle {
-      margin-left: 8px;
-      width: 32px;
-      height: 32px;
-    }
-  }
-
-  @media (min-width: 769px) {
-    .hamburger-menu {
-      display: none !important;
-    }
-  }
-</style>
 
 <!-- 🔷 Protest home page  -->
 
@@ -1954,18 +1650,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
  <!-- Footer -->
-     <!-- Footer -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-content">
-      <!-- Logo & About -->
-      <div class="footer-section footer-section1">
-        <div class="logo">
+     <footer class="site-footer">
+  <div class="footer-wrapper">
+    <div class="footer-grid">
+
+      <!-- Brand & About -->
+      <div class="footer-block footer-brand footer-block1">
+        <div class="footer-logo">
           <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 50px; width: 80px;">
         </div>
-        <p class="text-justify">
-          <span data-i18n="footer_about">Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.</span>
+
+        <p style="text-align: justify;" data-i18n="footer_about">
+          Dedicated charity organization, empowering communities through education, healthcare, food support, and sustainable initiatives to create lasting impact and hope.
         </p>
+
         <div class="social-links">
           <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
           <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
@@ -1975,12 +1673,12 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
 
       <!-- Quick Links -->
-      <div class="footer-section footer-section2">
-        <h4 data-i18n="footer_quickLinks">Quick Links</h4>
+      <div class="footer-block footer-block2">
+        <h4 data-i18n="footer_quicklinks">Quick Links</h4>
         <ul>
           <li><a href="home.html"><span data-i18n="footer_home">Home</span></a></li>
           <li><a href="home2.html"><span data-i18n="footer_home2">Home 2</span></a></li>
-          <li><a href="about.html"><span data-i18n="footer_aboutUs">About Us</span></a></li>
+          <li><a href="about.html"><span data-i18n="footer_aboutus">About Us</span></a></li>
           <li><a href="services.html"><span data-i18n="footer_services">Services</span></a></li>
           <li><a href="blog.html"><span data-i18n="footer_blog">Blog</span></a></li>
           <li><a href="contact.html"><span data-i18n="footer_contact">Contact</span></a></li>
@@ -1988,136 +1686,134 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
 
       <!-- Services -->
-      <div class="footer-section footer-section3">
-        <h4 data-i18n="footer_servicesTitle">Services</h4>
+      <div class="footer-block footer-block3">
+        <h4 data-i18n="footer_services_title">Services</h4>
         <ul>
-          <li><a href="service1.html"><span data-i18n="footer_service1">Property Buying Assistance</span></a></li>
-          <li><a href="service2.html"><span data-i18n="footer_service2">Property Selling</span></a></li>
-          <li><a href="service3.html"><span data-i18n="footer_service3">Rental Services</span></a></li>
-          <li><a href="service4.html"><span data-i18n="footer_service4">Property Management</span></a></li>
-          <li><a href="service5.html"><span data-i18n="footer_service5">Real Estate Investment</span></a></li>
-          <li><a href="service6.html"><span data-i18n="footer_service6">Legal & Documentation Support</span></a></li>
+          <li><a href="service1.html"><span data-i18n="footer_service1">Food Distribution</span></a></li>
+          <li><a href="service2.html"><span data-i18n="footer_service2">Education Support</span></a></li>
+          <li><a href="service3.html"><span data-i18n="footer_service3">Healthcare Camps</span></a></li>
+          <li><a href="service4.html"><span data-i18n="footer_service4">Women Empowerment</span></a></li>
+          <li><a href="service5.html"><span data-i18n="footer_service5">Child Welfare</span></a></li>
+          <li><a href="service6.html"><span data-i18n="footer_service6">Disaster Relief</span></a></li>
         </ul>
       </div>
 
       <!-- Contact Info -->
-      <div class="footer-section footer-section4">
-        <h4 data-i18n="footer_contactInfo">Contact Info</h4>
+      <div class="footer-block footer-block4">
+        <h4 data-i18n="footer_contactinfo">Contact Info</h4>
         <ul>
-          <li><i class="fas fa-envelope"></i> <span data-i18n="footer_email">contact@stackly.ai</span></li>
+          <li><i class="fas fa-envelope"></i> <span data-i18n="footer_email">contact@stackly.in</span></li>
           <li><i class="fas fa-phone"></i> <span data-i18n="footer_phone">+1 (555) 123-4567</span></li>
-          <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer_address">123 AI Innovation Drive</span></li>
+          <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer_location">123 Hyderabad, India</span></li>
         </ul>
       </div>
     </div>
 
-    <!-- Bottom Bar -->
-    <div class="footer-bottom">
-      <p><span data-i18n="footer_bottom">&copy; 2025 Stackly. All rights reserved.</span></p>
+    <!-- Bottom -->
+    <div class="footer-bottom-bar">
+      <p data-i18n="footer_rights">&copy; 2025 Stackly. All rights reserved.</p>
     </div>
   </div>
-</footer> 
+</footer>
 
 
+<!-- Styles -->
 <style>
-.footer {
+.site-footer {
   background: #0a0a0a;
   color: #fff;
   padding: 50px 20px 20px;
   font-family: Arial, sans-serif;
 }
 
-.footer-section1{
-  margin-right: 150px;
+.footer-wrapper {
+  max-width: 1200px; /* keeps equal left-right padding */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.footer-block2 {
+  padding-inline-start: 100px; /* works for both ltr & rtl */
 }
 
-.footer-section4{
-  margin-left: 50px;
+.footer-block3 {
+  padding-inline-start: 80px; /* works for both ltr & rtl */
 }
 
-.footer .footer-content {
+.footer-block4 {
+  padding-inline-start: 60px; /* works for both ltr & rtl */
+}
+
+.footer-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   margin-bottom: 30px;
 }
 
-.footer .footer-section h4 {
+
+.footer-block h4 {
   font-size: 1.2rem;
   margin-bottom: 15px;
   color: #f4f4f4;
 }
 
-.footer .footer-section ul {
+.footer-block ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
-.footer .footer-section ul li {
+.footer-block ul li {
   margin-bottom: 10px;
-  font-size: 0.95rem;
   color: #ddd;
 }
 
-.footer .footer-section ul li a {
+.footer-block ul li a {
   color: #ddd;
   text-decoration: none;
   transition: color 0.3s;
 }
 
-.footer .footer-section ul li a:hover {
+.footer-block ul li a:hover {
   color: #a68e4c;
 }
 
-.footer .social-links a {
-  margin-right: 12px;
-  font-size: 1.2rem;
-  color: #ddd;
-  transition: color 0.3s;
-}
 
-.footer .social-links a:hover {
-  color: #000000;
-}
 
-.footer .footer-bottom {
+
+
+.footer-bottom-bar {
   text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255,255,255,0.1);
   padding-top: 15px;
   font-size: 0.9rem;
   color: #bbb;
 }
 
+/* Responsive */
 @media (max-width: 900px) {
-  .footer .footer-content {
+  .footer-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
-  .footer-section1{
-  margin-right: 5px;
-}
 }
 
 @media (max-width: 600px) {
-  .footer .footer-content {
+  .footer-grid {
     grid-template-columns: 1fr;
     text-align: left;
   }
-  .footer .social-links {
-    margin-top: 15px;
+  .footer-block2{
+      padding-left: 0px;
   }
-  .footer-section1{
-  margin-right: 10px;
-}
-  .footer-section2{
-  margin-right: 10px;
-}
-.footer-section4{
-  margin-left: 1px;
-}
+  .footer-block3{
+      padding-left: 0px;
+  }
+    .footer-block4{
+      padding-left: 0px;
+    }
 }
 </style>
+
 
 </div>
     <script src="assets/js/script.js"></script>

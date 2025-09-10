@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stackly - AI Tools & Solutions</title>
+    <title>Stackly - Charity</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -16,8 +16,8 @@
 <div id="content" style="display:none;"></div>
 
 
-    <!-- Sticky Header -->
-   <header class="header">
+  <!-- Sticky Header -->
+  <header class="header">
   <div class="container">
     <div class="nav-wrapper">
       <div class="logo">
@@ -38,21 +38,21 @@
             <a href="#" class="nav-link"><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
               <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
-              <li><a href="service1.html"><span data-i18n="service_1">Property Buying Assistance</span></a></li>
-              <li><a href="service2.html"><span data-i18n="service_2">Property Selling</span></a></li>
-              <li><a href="service3.html"><span data-i18n="service_3">Rental Services </span></a></li>
-              <li><a href="service4.html"><span data-i18n="service_4">Property Management</span></a></li>
-              <li><a href="service5.html"><span data-i18n="service_5">Real Estate Investment</span></a></li>
-              <li><a href="service6.html"><span data-i18n="service_6">Legal & Documentation Support</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Service_1</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Service_2</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Service_3</span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Service_4</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Service_5</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service_6">Service_6</span></a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
             <a href="#" class="nav-link"><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
               <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
-              <li><a href="blog1.html"><span data-i18n="blog_1">Smart Property Investments</span></a></li>
-              <li><a href="blog2.html"><span data-i18n="blog_2">Effective Property Management</span></a></li>
-              <li><a href="blog3.html"><span data-i18n="blog_3">Real Estate Market Trends</span></a></li>
+              <li><a href="blog1.html"><span data-i18n="blog_1">blog_1</span></a></li>
+              <li><a href="blog2.html"><span data-i18n="blog_2">blog_2</span></a></li>
+              <li><a href="blog3.html"><span data-i18n="blog_3">blog_3</span></a></li>
             </ul>
           </li>
           <li class="nav-item"><a href="contact.html" class="nav-link"><span data-i18n="contact">Contact</span></a></li>
@@ -64,6 +64,15 @@
           <span></span>
         </div>
       </nav>
+
+       <div class="lang-switcher">
+        <label for="langSelect"></label>
+        <select id="langSelect" onchange="changeLanguage(this.value)">
+          <option value="en">English</option>
+          <option value="ar">Arabic</option>
+          <option value="he">Hebrew</option>
+        </select>
+      </div>
 
       <div class="mobile-menu-wrapper">
         <ul class="hamburger-menu" id="hamburgerMenu">
@@ -79,21 +88,21 @@
             <span><span data-i18n="services">Services</span> <i class="fas fa-chevron-down"></i></span>
             <ul class="mobile-dropdown">
              <li><a href="services.html"><span data-i18n="allServices">All Services</span></a></li>
-              <li><a href="service1.html"><span data-i18n="service_1">Property Buying Assistance</span></a></li>
-              <li><a href="service2.html"><span data-i18n="service_2">Property Selling</span></a></li>
-              <li><a href="service3.html"><span data-i18n="service_3">Rental Services </span></a></li>
-              <li><a href="service4.html"><span data-i18n="service_4">Property Management</span></a></li>
-              <li><a href="service5.html"><span data-i18n="service_5">Real Estate Investment</span></a></li>
-              <li><a href="service6.html"><span data-i18n="service6">Legal & Documentation Support</span></a></li>
+              <li><a href="service1.html"><span data-i18n="service_1">Service_1</span></a></li>
+              <li><a href="service2.html"><span data-i18n="service_2">Service_2</span></a></li>
+              <li><a href="service3.html"><span data-i18n="service_3">Service_3</span></a></li>
+              <li><a href="service4.html"><span data-i18n="service_4">Service_4</span></a></li>
+              <li><a href="service5.html"><span data-i18n="service_5">Service_5</span></a></li>
+              <li><a href="service6.html"><span data-i18n="service_6">Service_6</span></a></li>
             </ul>
           </li>
           <li class="mobile-dropdown-parent">
             <span><span data-i18n="blog">Blog</span> <i class="fas fa-chevron-down"></i></span>
             <ul class="mobile-dropdown">
                <li><a href="blog.html"><span data-i18n="allPosts">All Posts</span></a></li>
-                <li><a href="blog1.html"><span data-i18n="blog_1">Smart Property Investments</span></a></li>
-                <li><a href="blog2.html"><span data-i18n="blog_2">Effective Property Management</span></a></li>
-                <li><a href="blog3.html"><span data-i18n="blog_3">Real Estate Market Trends</span></a></li>
+                <li><a href="blog1.html"><span data-i18n="blog_1">blog_1</span></a></li>
+                <li><a href="blog2.html"><span data-i18n="blog_2">blog_2</span></a></li>
+                <li><a href="blog3.html"><span data-i18n="blog_3">blog_3</span></a></li>
             </ul>
           </li>
           <li><a href="contact.html"><span data-i18n="contact">Contact</span></a></li>
@@ -101,27 +110,27 @@
         </ul>
       </div>
 
-      <div class="lang-switcher">
-        <label for="langSelect">Language:</label>
-        <select id="langSelect" onchange="changeLanguage(this.value)">
-          <option value="en">English</option>
-          <option value="ar">Arabic</option>
-          <option value="he">Hebrew</option>
-        </select>
-      </div>
+     
 
       <button id="toggleBtn" class="toggle-btn" title="Toggle Theme">
         <i class="fas fa-moon"></i>
       </button>
 
-      <div class="avatar-circle" title="Profile" id="avatarCircle">
-        <span id="avatarInitials"></span>
+     <div class="avatar-wrapper">
+        <div class="avatar-circle" title="Profile" id="avatarCircle">
+          <span id="avatarInitials">BA</span>
+        </div>
+        <div class="avatar-dropdown" id="avatarDropdown">
+          <ul>
+            <li>
+              <a href="index.html" id="logoutBtn">
+                <span data-i18n="logout">Logout</span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="avatar-dropdown" id="avatarDropdown">
-        <ul>
-          <li><a href="index.html" id="logoutBtn"><span data-i18n="logout">Logout</span></a></li>
-        </ul>
-      </div>
+      
     </div>
   </div>
 </header>
@@ -130,13 +139,13 @@
 <!-- Section : 1 -->
 <section class="ai-hero-section">
   <video autoplay muted loop playsinline class="ai-hero-bg-video">
-    <source src="https://videos.pexels.com/video-files/3773487/3773487-hd_1920_1080_30fps.mp4 " type="video/mp4">
+    <source src="video/site44-B1.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
   <div class="ai-hero-overlay">
     <div class="ai-hero-content">
-      <h1 class="ai-hero-title ai-glow animate-ai-slide-in" data-i18n="hero_title">Smart Property Investments</h1>
+      <h1 class="ai-hero-title ai-glow animate-ai-slide-in" data-i18n="hero_title">Feeding Families in Need</h1>
     </div>
   </div>
 </section>
@@ -144,18 +153,21 @@
 <!-- Section : 2 -->
 <section class="blog-intro">
   <div class="container">
-    <h2 class="section-heading" data-i18n="intro_heading">Smart Property Investments</h2>
+    <h2 class="section-heading" data-i18n="intro_heading">Fighting Hunger with Compassion</h2>
     <p class="section-subtext" style="text-align: justify;" data-i18n="intro_para">
-      Smart property investment is the key to building long-term wealth and financial security. It goes beyond 
-      buying real estate — it’s about choosing the right property, understanding market trends, and leveraging 
-      strategic financing to maximize returns. From residential homes to commercial spaces, smart investments 
-      ensure sustainable growth, rental income, and future appreciation. With expert insights, data-driven 
-      analysis, and careful planning, you can reduce risks and make informed decisions that turn real estate 
-      into a powerful asset for the future.
+      Hunger remains one of the biggest challenges for vulnerable families worldwide. 
+      Feeding Families in Need is not just about providing meals—it’s about restoring dignity, 
+      giving hope, and creating opportunities for a healthier future. Through food drives, 
+      nutritional programs, and community kitchens, we ensure that no child goes to bed hungry 
+      and every family has access to daily essentials.
+      <br><br>
+      With your support, we’re building sustainable solutions that address hunger at its root— 
+      from food distribution to empowering communities through education and livelihood opportunities. 
+      Together, we can fight hunger and nourish lives with compassion and care.  
     </p>
     <div style="text-align:center; margin-top:20px;">
-      <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1200&auto=format&fit=crop" 
-           alt="Smart Property Investments" 
+      <img src="https://i.pinimg.com/1200x/db/c2/5e/dbc25ef66f38483d86d1f93f4019e5bb.jpg" 
+           alt="Feeding Families in Need" 
            style="max-width: 100%; border-radius: 10px;">
     </div>
   </div>
@@ -164,19 +176,17 @@
 <!-- Section : 3 -->
 <section class="blog-content">
   <div class="container narrow">
-    <h2 class="section-heading" data-i18n="content_heading">Smart Property Investments</h2>
+    <h2 class="section-heading" data-i18n="content_heading">Why Feeding Families Matters</h2>
     <p data-i18n="content_para1">
-      Smart property investment goes beyond purchasing real estate — it’s about making informed decisions 
-      that maximize returns and minimize risks. By analyzing market trends, selecting the right locations, 
-      and leveraging financing strategies, investors can unlock opportunities for both steady rental income 
-      and long-term capital appreciation. 
+      Millions of families struggle with food insecurity every day. By providing meals and nutrition support, 
+      we are not only addressing immediate hunger but also improving children’s ability to learn, families’ 
+      ability to work, and communities’ ability to thrive. 
     </p>
 
     <p data-i18n="content_para2">
-      For businesses, smart property investments provide stability, growth, and asset diversification. 
-      For individuals, they create pathways to wealth building, financial security, and legacy planning. 
-      With expert guidance, data-driven insights, and strategic planning, real estate becomes more than 
-      an asset — it transforms into a powerful tool for achieving long-term financial success. 
+      Our programs focus on providing balanced meals, building food banks, and partnering with local organizations 
+      to create long-term change. Feeding families in need is more than charity—it’s about creating a stronger, 
+      healthier, and more resilient society where everyone has a chance to succeed. 
     </p>
   </div>
 </section>
@@ -184,23 +194,23 @@
 <!-- Section : 4 -->
 <section class="tax-planning-highlights">
   <div class="container">
-    <h2 class="section-heading" data-i18n="highlights_heading">Key Highlights of Smart Property Investments</h2>
+    <h2 class="section-heading" data-i18n="highlights_heading">Key Highlights of Our Food Program</h2>
     <div class="trends-grid">
       <div class="trend-card">
-        <h3 data-i18n="highlight1_title">Maximize ROI</h3>
-        <p data-i18n="highlight1_desc">Invest in properties with strong rental yields and long-term appreciation to grow your wealth effectively.</p>
+        <h3 data-i18n="highlight1_title">Nutritious Meals</h3>
+        <p data-i18n="highlight1_desc">Providing balanced meals to children and families to ensure health and well-being.</p>
       </div>
       <div class="trend-card">
-        <h3 data-i18n="highlight2_title">Location Advantage</h3>
-        <p data-i18n="highlight2_desc">Select prime locations that ensure steady demand, higher occupancy, and consistent returns.</p>
+        <h3 data-i18n="highlight2_title">Community Kitchens</h3>
+        <p data-i18n="highlight2_desc">Setting up local kitchens that serve free meals to vulnerable communities daily.</p>
       </div>
       <div class="trend-card">
-        <h3 data-i18n="highlight3_title">Risk Management</h3>
-        <p data-i18n="highlight3_desc">Diversify your portfolio with residential, commercial, and emerging real estate sectors to reduce investment risks.</p>
+        <h3 data-i18n="highlight3_title">Food Distribution</h3>
+        <p data-i18n="highlight3_desc">Running food drives and distributing essential groceries to low-income families.</p>
       </div>
       <div class="trend-card">
-        <h3 data-i18n="highlight4_title">Long-Term Wealth</h3>
-        <p data-i18n="highlight4_desc">Build financial security through smart property strategies that provide both income and asset growth.</p>
+        <h3 data-i18n="highlight4_title">Sustainable Impact</h3>
+        <p data-i18n="highlight4_desc">Empowering communities with skills and resources to break the cycle of hunger.</p>
       </div>
     </div>
   </div>
@@ -209,13 +219,12 @@
 <!-- Section: 5 -->
 <section class="blog-image-highlight">
   <div class="container">
-    <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=1450" alt="Smart Property Investments" />
-    <p class="caption" data-i18n="image_caption1">Smart Property Investments for Long-Term Wealth</p>
+    <img src="https://i.pinimg.com/1200x/55/9d/b5/559db5233119fdeed5aaceb4633a7ac3.jpg" alt="Feeding Families" />
+    <p class="caption" data-i18n="image_caption1">Sharing Food, Spreading Hope</p>
     <p class="caption" data-i18n="image_caption2">
-      Smart property investment goes beyond buying real estate—it’s about choosing the right locations, analyzing market trends, 
-      and balancing rental income with long-term appreciation. By making informed decisions and diversifying your portfolio, 
-      investors can reduce risks, maximize returns, and build sustainable wealth. Strategic property investment ensures 
-      financial growth, security, and opportunities for future generations.
+      Every meal we serve represents more than food—it represents kindness, dignity, and the power of community. 
+      Through partnerships and volunteer efforts, we reach those who need it most. Together, we can ensure that 
+      families not only survive but also find strength and hope for a better tomorrow.
     </p>
   </div>
 </section>
@@ -224,20 +233,16 @@
 <section class="tax-future">
   <div class="container">
     <div class="future-content">
-      <h2 data-i18n="future_heading">The Road Ahead for Smart Property Investments</h2>
+      <h2 data-i18n="future_heading">The Road Ahead in Ending Hunger</h2>
       <p style="text-align: justify;" data-i18n="future_para1">
-        As real estate markets continue to evolve, investors must take a proactive approach to property 
-        investments. Smart property investing goes beyond simply buying and holding—it involves choosing 
-        the right locations, understanding market demand, and aligning investments with long-term goals. 
-        With shifting economic conditions and growing urban development, the opportunities for 
-        strategic property investments are greater than ever.
+        Hunger is a challenge we can overcome—if we work together. Our mission is to expand food distribution networks, 
+        build stronger partnerships, and invest in community-driven initiatives that reduce food insecurity. 
+        With every donation and every volunteer effort, we move closer to a world where no family goes hungry.
       </p>
       <p style="text-align: justify;" data-i18n="future_para2">
-        Individuals and companies who adopt smart investment strategies will not only build wealth but also 
-        secure financial stability for the future. From leveraging rental yields and appreciation to exploring 
-        commercial and residential opportunities, property investments provide a roadmap for sustainable growth. 
-        The road ahead for smart property investments is about more than just assets—it’s about creating 
-        financial security, reducing risks, and ensuring long-term prosperity.
+        The future of feeding families lies in sustainable solutions—supporting farmers, reducing food waste, 
+        and empowering communities with resources. By joining hands, we can create a hunger-free tomorrow where 
+        every child grows up nourished and every family has the food they need to thrive.
       </p>
     </div>
   </div>
@@ -247,9 +252,9 @@
 <section class="contact-banner section-padding">
     <div class="container">
         <div class="contact-banner-content">
-          <h2 data-i18n="contact_heading">Start Your Smart Property Investment Journey</h2>
-          <p data-i18n="contact_para">Looking to grow your wealth with strategic real estate investments? Connect with our experts for tailored property investment guidance and opportunities.</p>
-          <a href="contact.html" class="btn btn-primary" data-i18n="contact_btn">Get Started</a>
+          <h2 data-i18n="contact_heading">Be Part of the Change</h2>
+          <p data-i18n="contact_para">Join us in our mission to fight hunger and feed families in need. Together, we can make sure no one is left behind.</p>
+          <a href="contact.html" class="btn btn-primary" data-i18n="contact_btn">Donate Now</a>
         </div>        
     </div>
 </section>
@@ -259,205 +264,208 @@
 // Translation dictionary
 const translations = {
   en: {
-   "home": "Home",
+    "home": "Home",
     "home1": "Home 1",
     "home2": "Home 2",
     "about": "About",
     "services": "Services",
     "allServices": "All Services",
-    "service_1": "Property Buying Assistance",
-    "service_2": "Property Selling",
-    "service_3": "Rental Services",
-    "service_4": "Property Management",
-    "service_5": "Real Estate Investment",
-    "service_6": "Legal & Documentation Support",
+    "service_1": "Service_1",
+    "service_2": "Service_2",
+    "service_3": "Service_3",
+    "service_4": "Service_4",
+    "service_5": "Service_5",
+    "service_6": "Service_6",
     "blog": "Blog",
     "allPosts": "All Posts",
-    "blog_1": "Smart Property Investments",
-    "blog_2": "Effective Property Management",
-    "blog_3": "Real Estate Market Trends",
+    "blog_1": "Blog_1",
+    "blog_2": "Blog_2",
+    "blog_3": "Blog_3",
     "contact": "Contact",
     "logout": "Logout",
 
-    "footer_about": "Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.",
-    "footer_quickLinks": "Quick Links",
+     "footer_about": "Dedicated charity organization, empowering communities through education, healthcare, food support, and sustainable initiatives to create lasting impact and hope.",
+    "footer_quicklinks": "Quick Links",
     "footer_home": "Home",
     "footer_home2": "Home 2",
-    "footer_aboutUs": "About Us",
+    "footer_aboutus": "About Us",
     "footer_services": "Services",
     "footer_blog": "Blog",
     "footer_contact": "Contact",
-    "footer_servicesTitle": "Services",
-    "footer_service1": "Property Buying Assistance",
-    "footer_service2": "Property Selling",
-    "footer_service3": "Rental Services",
-    "footer_service4": "Property Management",
-    "footer_service5": "Real Estate Investment",
-    "footer_service6": "Legal & Documentation Support",
-    "footer_contactInfo": "Contact Info",
-    "footer_email": "contact@stackly.ai",
+    "footer_services_title": "Services",
+    "footer_service1": "Food Distribution",
+    "footer_service2": "Education Support",
+    "footer_service3": "Healthcare Camps",
+    "footer_service4": "Women Empowerment",
+    "footer_service5": "Child Welfare",
+    "footer_service6": "Disaster Relief",
+    "footer_contactinfo": "Contact Info",
+    "footer_email": "contact@stackly.in",
     "footer_phone": "+1 (555) 123-4567",
-    "footer_address": "123 AI Innovation Drive",
-    "footer_bottom": "© 2025 Stackly. All rights reserved.",
+    "footer_location": "123 Hyderabad, India",
+    "footer_rights": "© 2025 Stackly. All rights reserved.",
+     
+     "hero_title": "Feeding Families in Need",
+    "intro_heading": "Fighting Hunger with Compassion",
+    "intro_para": "Hunger remains one of the biggest challenges for vulnerable families worldwide. \n      Feeding Families in Need is not just about providing meals—it’s about restoring dignity, \n      giving hope, and creating opportunities for a healthier future. Through food drives, \n      nutritional programs, and community kitchens, we ensure that no child goes to bed hungry \n      and every family has access to daily essentials.\n      <br><br>\n      With your support, we’re building sustainable solutions that address hunger at its root— \n      from food distribution to empowering communities through education and livelihood opportunities. \n      Together, we can fight hunger and nourish lives with compassion and care.",
+    "content_heading": "Why Feeding Families Matters",
+    "content_para1": "Millions of families struggle with food insecurity every day. By providing meals and nutrition support, \n      we are not only addressing immediate hunger but also improving children’s ability to learn, families’ \n      ability to work, and communities’ ability to thrive.",
+    "content_para2": "Our programs focus on providing balanced meals, building food banks, and partnering with local organizations \n      to create long-term change. Feeding families in need is more than charity—it’s about creating a stronger, \n      healthier, and more resilient society where everyone has a chance to succeed.",
+    "highlights_heading": "Key Highlights of Our Food Program",
+    "highlight1_title": "Nutritious Meals",
+    "highlight1_desc": "Providing balanced meals to children and families to ensure health and well-being.",
+    "highlight2_title": "Community Kitchens",
+    "highlight2_desc": "Setting up local kitchens that serve free meals to vulnerable communities daily.",
+    "highlight3_title": "Food Distribution",
+    "highlight3_desc": "Running food drives and distributing essential groceries to low-income families.",
+    "highlight4_title": "Sustainable Impact",
+    "highlight4_desc": "Empowering communities with skills and resources to break the cycle of hunger.",
+    "image_caption1": "Sharing Food, Spreading Hope",
+    "image_caption2": "Every meal we serve represents more than food—it represents kindness, dignity, and the power of community. \n      Through partnerships and volunteer efforts, we reach those who need it most. Together, we can ensure that \n      families not only survive but also find strength and hope for a better tomorrow.",
+    "future_heading": "The Road Ahead in Ending Hunger",
+    "future_para1": "Hunger is a challenge we can overcome—if we work together. Our mission is to expand food distribution networks, \n        build stronger partnerships, and invest in community-driven initiatives that reduce food insecurity. \n        With every donation and every volunteer effort, we move closer to a world where no family goes hungry.",
+    "future_para2": "The future of feeding families lies in sustainable solutions—supporting farmers, reducing food waste, \n        and empowering communities with resources. By joining hands, we can create a hunger-free tomorrow where \n        every child grows up nourished and every family has the food they need to thrive.",
+    "contact_heading": "Be Part of the Change",
+    "contact_para": "Join us in our mission to fight hunger and feed families in need. Together, we can make sure no one is left behind.",
+    "contact_btn": "Donate Now",
 
-    "hero_title": "Smart Property Investments",
-    "intro_heading": "Smart Property Investments",
-    "intro_para": "Smart property investment is the key to building long-term wealth and financial security. It goes beyond buying real estate — it’s about choosing the right property, understanding market trends, and leveraging strategic financing to maximize returns. From residential homes to commercial spaces, smart investments ensure sustainable growth, rental income, and future appreciation. With expert insights, data-driven analysis, and careful planning, you can reduce risks and make informed decisions that turn real estate into a powerful asset for the future.",
-    "content_heading": "Smart Property Investments",
-    "content_para1": "Smart property investment goes beyond purchasing real estate — it’s about making informed decisions that maximize returns and minimize risks. By analyzing market trends, selecting the right locations, and leveraging financing strategies, investors can unlock opportunities for both steady rental income and long-term capital appreciation.",
-    "content_para2": "For businesses, smart property investments provide stability, growth, and asset diversification. For individuals, they create pathways to wealth building, financial security, and legacy planning. With expert guidance, data-driven insights, and strategic planning, real estate becomes more than an asset — it transforms into a powerful tool for achieving long-term financial success.",
-    "highlights_heading": "Key Highlights of Smart Property Investments",
-    "highlight1_title": "Maximize ROI",
-    "highlight1_desc": "Invest in properties with strong rental yields and long-term appreciation to grow your wealth effectively.",
-    "highlight2_title": "Location Advantage",
-    "highlight2_desc": "Select prime locations that ensure steady demand, higher occupancy, and consistent returns.",
-    "highlight3_title": "Risk Management",
-    "highlight3_desc": "Diversify your portfolio with residential, commercial, and emerging real estate sectors to reduce investment risks.",
-    "highlight4_title": "Long-Term Wealth",
-    "highlight4_desc": "Build financial security through smart property strategies that provide both income and asset growth.",
-    "image_caption1": "Smart Property Investments for Long-Term Wealth",
-    "image_caption2": "Smart property investment goes beyond buying real estate—it’s about choosing the right locations, analyzing market trends, and balancing rental income with long-term appreciation. By making informed decisions and diversifying your portfolio, investors can reduce risks, maximize returns, and build sustainable wealth. Strategic property investment ensures financial growth, security, and opportunities for future generations.",
-    "future_heading": "The Road Ahead for Smart Property Investments",
-    "future_para1": "As real estate markets continue to evolve, investors must take a proactive approach to property investments. Smart property investing goes beyond simply buying and holding—it involves choosing the right locations, understanding market demand, and aligning investments with long-term goals. With shifting economic conditions and growing urban development, the opportunities for strategic property investments are greater than ever.",
-    "future_para2": "Individuals and companies who adopt smart investment strategies will not only build wealth but also secure financial stability for the future. From leveraging rental yields and appreciation to exploring commercial and residential opportunities, property investments provide a roadmap for sustainable growth. The road ahead for smart property investments is about more than just assets—it’s about creating financial security, reducing risks, and ensuring long-term prosperity.",
-    "contact_heading": "Start Your Smart Property Investment Journey",
-    "contact_para": "Looking to grow your wealth with strategic real estate investments? Connect with our experts for tailored property investment guidance and opportunities.",
-    "contact_btn": "Get Started",
        
   },
   ar: {
-   "home": "الرئيسية",
-    "home1": "الصفحة الرئيسية 1",
-    "home2": "الصفحة الرئيسية 2",
-    "about": "من نحن",
+     "home": "الرئيسية",
+    "home1": "الصفحة 1",
+    "home2": "الصفحة 2",
+    "about": "معلومات عنا",
     "services": "الخدمات",
     "allServices": "جميع الخدمات",
-    "service_1": "مساعدة في شراء العقارات",
-    "service_2": "بيع العقارات",
-    "service_3": "خدمات الإيجار",
-    "service_4": "إدارة العقارات",
-    "service_5": "الاستثمار العقاري",
-    "service_6": "الدعم القانوني والتوثيق",
+    "service_1": "الخدمة_1",
+    "service_2": "الخدمة_2",
+    "service_3": "الخدمة_3",
+    "service_4": "الخدمة_4",
+    "service_5": "الخدمة_5",
+    "service_6": "الخدمة_6",
     "blog": "المدونة",
     "allPosts": "جميع المقالات",
-    "blog_1": "الاستثمارات العقارية الذكية",
-    "blog_2": "إدارة العقارات الفعالة",
-    "blog_3": "اتجاهات سوق العقارات",
+    "blog_1": "مدونة_1",
+    "blog_2": "مدونة_2",
+    "blog_3": "مدونة_3",
     "contact": "اتصل بنا",
-    "logout": "تسجيل خروج",
+    "logout": "تسجيل الخروج",
 
-    "footer_about": "مزود رائد لحلول الذكاء الاصطناعي، يساعد الشركات على التحول من خلال التكنولوجيا الذكية وأنظمة الأتمتة المبتكرة.",
-    "footer_quickLinks": "روابط سريعة",
+    "footer_about": "منظمة خيرية مكرسة، تمكّن المجتمعات من خلال التعليم والرعاية الصحية ودعم الغذاء والمبادرات المستدامة لخلق تأثير دائم وأمل.",
+    "footer_quicklinks": "روابط سريعة",
     "footer_home": "الرئيسية",
     "footer_home2": "الصفحة الرئيسية 2",
-    "footer_aboutUs": "من نحن",
+    "footer_aboutus": "معلومات عنا",
     "footer_services": "الخدمات",
-    "footer_blog": "المدونة",
+    "footer_blog": "مدونة",
     "footer_contact": "اتصل بنا",
-    "footer_servicesTitle": "الخدمات",
-    "footer_service1": "مساعدة في شراء العقارات",
-    "footer_service2": "بيع العقارات",
-    "footer_service3": "خدمات الإيجار",
-    "footer_service4": "إدارة الممتلكات",
-    "footer_service5": "الاستثمار العقاري",
-    "footer_service6": "الدعم القانوني والتوثيق",
-    "footer_contactInfo": "معلومات الاتصال",
-    "footer_email": "contact@stackly.ai",
+    "footer_services_title": "الخدمات",
+    "footer_service1": "توزيع الغذاء",
+    "footer_service2": "دعم التعليم",
+    "footer_service3": "المخيمات الطبية",
+    "footer_service4": "تمكين المرأة",
+    "footer_service5": "رعاية الأطفال",
+    "footer_service6": "الإغاثة في الكوارث",
+    "footer_contactinfo": "معلومات الاتصال",
+    "footer_email": "contact@stackly.in",
     "footer_phone": "+1 (555) 123-4567",
-    "footer_address": "123 طريق ابتكار الذكاء الاصطناعي",
-    "footer_bottom": "© 2025 Stackly. جميع الحقوق محفوظة.",
+    "footer_location": "123 حيدر أباد، الهند",
+    "footer_rights": "© 2025 Stackly. جميع الحقوق محفوظة.",
+  
+    "hero_title": "إطعام العائلات المحتاجة",
+    "intro_heading": "محاربة الجوع بالتعاطف",
+    "intro_para": "يظل الجوع أحد أكبر التحديات للعائلات الضعيفة في جميع أنحاء العالم. \n      إطعام العائلات المحتاجة ليس مجرد توفير وجبات—إنه استعادة الكرامة، \n      إعطاء الأمل، وخلق فرص لمستقبل أكثر صحة. من خلال حملات الطعام، \n      البرامج الغذائية، والمطابخ المجتمعية، نضمن ألا ينام أي طفل جائعًا \n      وأن كل عائلة لديها إمكانية الوصول إلى الضروريات اليومية.\n      <br><br>\n      بدعمكم، نبني حلولًا مستدامة تعالج الجوع من جذوره— \n      من توزيع الطعام إلى تمكين المجتمعات من خلال التعليم وفرص كسب العيش. \n      معًا، يمكننا محاربة الجوع وتغذية الحياة بالتعاطف والرعاية.",
+    "content_heading": "لماذا يعتبر إطعام العائلات أمرًا مهمًا",
+    "content_para1": "تعاني ملايين العائلات من انعدام الأمن الغذائي كل يوم. من خلال توفير وجبات ودعم غذائي، \n      نحن لا نعالج الجوع الفوري فحسب، بل نحسن أيضًا قدرة الأطفال على التعلم، وقدرة العائلات على العمل، \n      وقدرة المجتمعات على الازدهار.",
+    "content_para2": "تركز برامجنا على توفير وجبات متوازنة، بناء بنوك طعام، والتعاون مع منظمات محلية \n      لإحداث تغيير طويل الأمد. إطعام العائلات المحتاجة أكثر من مجرد عمل خيري—إنه بناء مجتمع أقوى، \n      أكثر صحة، وأكثر مرونة حيث يحصل الجميع على فرصة للنجاح.",
+    "highlights_heading": "أبرز ملامح برنامجنا الغذائي",
+    "highlight1_title": "وجبات مغذية",
+    "highlight1_desc": "توفير وجبات متوازنة للأطفال والعائلات لضمان الصحة والرفاهية.",
+    "highlight2_title": "مطابخ مجتمعية",
+    "highlight2_desc": "إنشاء مطابخ محلية تقدم وجبات مجانية يوميًا للمجتمعات الضعيفة.",
+    "highlight3_title": "توزيع الطعام",
+    "highlight3_desc": "تنظيم حملات طعام وتوزيع مواد غذائية أساسية للعائلات ذات الدخل المنخفض.",
+    "highlight4_title": "أثر مستدام",
+    "highlight4_desc": "تمكين المجتمعات بالمهارات والموارد لكسر دائرة الجوع.",
+    "image_caption1": "مشاركة الطعام، نشر الأمل",
+    "image_caption2": "كل وجبة نقدمها تمثل أكثر من مجرد طعام—إنها تمثل اللطف، الكرامة، وقوة المجتمع. \n      من خلال الشراكات وجهود المتطوعين، نصل إلى أولئك الذين يحتاجونها أكثر. معًا، يمكننا ضمان أن \n      العائلات لا تبقى على قيد الحياة فحسب، بل تجد أيضًا القوة والأمل من أجل غد أفضل.",
+    "future_heading": "الطريق إلى الأمام في إنهاء الجوع",
+    "future_para1": "الجوع تحدٍ يمكننا التغلب عليه—إذا عملنا معًا. مهمتنا هي توسيع شبكات توزيع الطعام، \n        بناء شراكات أقوى، والاستثمار في مبادرات يقودها المجتمع تقلل من انعدام الأمن الغذائي. \n        مع كل تبرع وكل جهد تطوعي، نقترب أكثر من عالم لا تعاني فيه أي عائلة من الجوع.",
+    "future_para2": "مستقبل إطعام العائلات يكمن في الحلول المستدامة—دعم المزارعين، تقليل هدر الطعام، \n        وتمكين المجتمعات بالموارد. من خلال الانضمام معًا، يمكننا خلق غد خالٍ من الجوع حيث \n        ينمو كل طفل مشبعًا وتملك كل عائلة الطعام الذي تحتاجه للازدهار.",
+    "contact_heading": "كن جزءًا من التغيير",
+    "contact_para": "انضم إلينا في مهمتنا لمحاربة الجوع وإطعام العائلات المحتاجة. معًا، يمكننا التأكد من أن لا أحد يُترك خلف الركب.",
+    "contact_btn": "تبرع الآن",
 
-    "hero_title": "الاستثمارات العقارية الذكية",
-    "intro_heading": "الاستثمارات العقارية الذكية",
-    "intro_para": "الاستثمار العقاري الذكي هو المفتاح لبناء ثروة طويلة الأجل وأمان مالي. إنه يتجاوز مجرد شراء العقارات — فهو يتعلق باختيار العقار المناسب، وفهم اتجاهات السوق، والاستفادة من التمويل الاستراتيجي لتعظيم العوائد. من المنازل السكنية إلى المساحات التجارية، تضمن الاستثمارات الذكية النمو المستدام، ودخل الإيجار، وزيادة القيمة المستقبلية. من خلال الرؤى الخبيرة، والتحليل القائم على البيانات، والتخطيط الدقيق، يمكنك تقليل المخاطر واتخاذ قرارات مستنيرة تحول العقار إلى أصل قوي للمستقبل.",
-    "content_heading": "الاستثمارات العقارية الذكية",
-    "content_para1": "يتجاوز الاستثمار العقاري الذكي مجرد شراء العقارات — فهو يتعلق باتخاذ قرارات مستنيرة تزيد من العوائد وتقلل من المخاطر. من خلال تحليل اتجاهات السوق، واختيار المواقع المناسبة، والاستفادة من استراتيجيات التمويل، يمكن للمستثمرين فتح فرص لكل من الدخل الإيجاري المستقر وتقدير رأس المال على المدى الطويل.",
-    "content_para2": "بالنسبة للشركات، توفر الاستثمارات العقارية الذكية الاستقرار والنمو وتنويع الأصول. وبالنسبة للأفراد، فإنها تخلق مسارات لبناء الثروة، والأمان المالي، وتخطيط الإرث. من خلال التوجيه الخبير، والرؤى المستندة إلى البيانات، والتخطيط الاستراتيجي، يصبح العقار أكثر من مجرد أصل — بل يتحول إلى أداة قوية لتحقيق النجاح المالي طويل الأمد.",
-    "highlights_heading": "أهم مميزات الاستثمارات العقارية الذكية",
-    "highlight1_title": "تعظيم العائد على الاستثمار",
-    "highlight1_desc": "استثمر في عقارات ذات عوائد إيجارية قوية وتقدير طويل الأمد لتنمية ثروتك بشكل فعال.",
-    "highlight2_title": "ميزة الموقع",
-    "highlight2_desc": "اختر مواقع متميزة تضمن طلبًا مستقرًا، وإشغالًا أعلى، وعوائد منتظمة.",
-    "highlight3_title": "إدارة المخاطر",
-    "highlight3_desc": "نوّع محفظتك من خلال القطاعات السكنية والتجارية والناشئة لتقليل مخاطر الاستثمار.",
-    "highlight4_title": "ثروة طويلة الأمد",
-    "highlight4_desc": "ابنِ أمانًا ماليًا من خلال استراتيجيات عقارية ذكية توفر الدخل ونمو الأصول معًا.",
-    "image_caption1": "الاستثمارات العقارية الذكية للثروة طويلة الأمد",
-    "image_caption2": "يتجاوز الاستثمار العقاري الذكي مجرد شراء العقارات — فهو يتعلق باختيار المواقع المناسبة، وتحليل اتجاهات السوق، وتحقيق التوازن بين دخل الإيجار وتقدير القيمة على المدى الطويل. من خلال اتخاذ قرارات مستنيرة وتنويع محفظتك، يمكن للمستثمرين تقليل المخاطر، وتعظيم العوائد، وبناء ثروة مستدامة. يضمن الاستثمار العقاري الاستراتيجي النمو المالي، والأمان، وفرصًا للأجيال القادمة.",
-    "future_heading": "الطريق إلى الأمام في الاستثمارات العقارية الذكية",
-    "future_para1": "مع استمرار تطور أسواق العقارات، يجب على المستثمرين اتباع نهج استباقي في الاستثمارات العقارية. يتجاوز الاستثمار العقاري الذكي مجرد الشراء والاحتفاظ — فهو يتضمن اختيار المواقع المناسبة، وفهم الطلب في السوق، ومواءمة الاستثمارات مع الأهداف طويلة الأجل. مع الظروف الاقتصادية المتغيرة والتنمية الحضرية المتزايدة، فإن الفرص للاستثمارات العقارية الاستراتيجية أكبر من أي وقت مضى.",
-    "future_para2": "الأفراد والشركات الذين يتبنون استراتيجيات استثمار ذكية لن يبنوا الثروة فحسب، بل سيضمنون أيضًا الاستقرار المالي للمستقبل. من خلال الاستفادة من عوائد الإيجار وتقدير القيمة إلى استكشاف الفرص السكنية والتجارية، توفر الاستثمارات العقارية خارطة طريق للنمو المستدام. الطريق إلى الأمام للاستثمارات العقارية الذكية يتعلق بأكثر من مجرد الأصول — إنه يتعلق بإنشاء الأمان المالي، وتقليل المخاطر، وضمان الازدهار طويل الأمد.",
-    "contact_heading": "ابدأ رحلتك في الاستثمار العقاري الذكي",
-    "contact_para": "هل تتطلع إلى تنمية ثروتك من خلال الاستثمارات العقارية الاستراتيجية؟ تواصل مع خبرائنا للحصول على إرشادات وفرص استثمارية عقارية مخصصة.",
-    "contact_btn": "ابدأ الآن",
 
      },
   he: {
- "home": "בית",
-    "home1": "דף הבית 1",
-    "home2": "דף הבית 2",
+    "home": "בית",
+    "home1": "דף 1",
+    "home2": "דף 2",
     "about": "אודות",
     "services": "שירותים",
     "allServices": "כל השירותים",
-    "service_1": "סיוע ברכישת נכסים",
-    "service_2": "מכירת נכסים",
-    "service_3": "שירותי השכרה",
-    "service_4": "ניהול נכסים",
-    "service_5": "השקעות נדל״ן",
-    "service_6": "תמיכה משפטית ותיעוד",
+    "service_1": "שירות_1",
+    "service_2": "שירות_2",
+    "service_3": "שירות_3",
+    "service_4": "שירות_4",
+    "service_5": "שירות_5",
+    "service_6": "שירות_6",
     "blog": "בלוג",
     "allPosts": "כל הפוסטים",
-    "blog_1": "השקעות נדל״ן חכמות",
-    "blog_2": "ניהול נכסים יעיל",
-    "blog_3": "מגמות שוק הנדל״ן",
+    "blog_1": "בלוג_1",
+    "blog_2": "בלוג_2",
+    "blog_3": "בלוג_3",
     "contact": "צור קשר",
     "logout": "התנתק",
 
-    "footer_about": "ספק מוביל של פתרונות בינה מלאכותית, מסייע לעסקים להשתנות באמצעות טכנולוגיה חכמה ומערכות אוטומציה חדשניות.",
-    "footer_quickLinks": "קישורים מהירים",
+    "footer_about": "ארגון צדקה מסור, המעצים קהילות באמצעות חינוך, בריאות, תמיכת מזון ויוזמות ברות קיימא ליצירת השפעה מתמשכת ותקווה.",
+    "footer_quicklinks": "קישורים מהירים",
     "footer_home": "בית",
     "footer_home2": "בית 2",
-    "footer_aboutUs": "אודותינו",
+    "footer_aboutus": "אודותינו",
     "footer_services": "שירותים",
     "footer_blog": "בלוג",
     "footer_contact": "צור קשר",
-    "footer_servicesTitle": "שירותים",
-    "footer_service1": "סיוע ברכישת נכסים",
-    "footer_service2": "מכירת נכסים",
-    "footer_service3": "שירותי השכרה",
-    "footer_service4": "ניהול נכסים",
-    "footer_service5": "השקעות נדל\"ן",
-    "footer_service6": "תמיכה משפטית ותיעוד",
-    "footer_contactInfo": "פרטי קשר",
-    "footer_email": "contact@stackly.ai",
+    "footer_services_title": "שירותים",
+    "footer_service1": "חלוקת מזון",
+    "footer_service2": "תמיכה בחינוך",
+    "footer_service3": "מחנות בריאות",
+    "footer_service4": "העצמת נשים",
+    "footer_service5": "רווחת ילדים",
+    "footer_service6": "סיוע באסונות",
+    "footer_contactinfo": "פרטי קשר",
+    "footer_email": "contact@stackly.in",
     "footer_phone": "+1 (555) 123-4567",
-    "footer_address": "123 רחוב חדשנות בינה מלאכותית",
-    "footer_bottom": "© 2025 Stackly. כל הזכויות שמורות.",
- 
-     "hero_title": "השקעות נדל״ן חכמות",
-    "intro_heading": "השקעות נדל״ן חכמות",
-    "intro_para": "השקעת נדל״ן חכמה היא המפתח לבניית עושר ארוך טווח וביטחון פיננסי. היא מעבר לרכישת נדל״ן — מדובר בבחירת הנכס הנכון, הבנת מגמות השוק, וניצול מימון אסטרטגי כדי למקסם תשואות. מדירות מגורים ועד שטחים מסחריים, השקעות חכמות מבטיחות צמיחה מתמשכת, הכנסות משכירות, ועליית ערך עתידית. באמצעות תובנות מומחים, ניתוח מבוסס נתונים, ותכנון קפדני, ניתן לצמצם סיכונים ולקבל החלטות מושכלות שהופכות את הנדל״ן לנכס עוצמתי לעתיד.",
-    "content_heading": "השקעות נדל״ן חכמות",
-    "content_para1": "השקעת נדל״ן חכמה היא הרבה יותר מרכישת נדל״ן — היא עוסקת בקבלת החלטות מושכלות שמגדילות את התשואות ומפחיתות סיכונים. באמצעות ניתוח מגמות שוק, בחירת מיקומים נכונים, וניצול אסטרטגיות מימון, יכולים המשקיעים לפתוח אפשרויות להכנסה משכירות יציבה ולעליית ערך הון בטווח הארוך.",
-    "content_para2": "לעסקים, השקעות נדל״ן חכמות מספקות יציבות, צמיחה וגיוון נכסים. ליחידים, הן יוצרות נתיבים לבניית עושר, ביטחון פיננסי ותכנון מורשת. עם הדרכה מומחית, תובנות מבוססות נתונים, ותכנון אסטרטגי, הנדל״ן הופך ליותר מנכס — הוא הופך לכלי עוצמתי להשגת הצלחה פיננסית ארוכת טווח.",
-    "highlights_heading": "עיקרי הדברים בהשקעות נדל״ן חכמות",
-    "highlight1_title": "מקסום תשואה",
-    "highlight1_desc": "השקיעו בנכסים עם תשואות שכירות גבוהות ועליית ערך לטווח ארוך כדי להגדיל את עושרכם ביעילות.",
-    "highlight2_title": "יתרון מיקום",
-    "highlight2_desc": "בחרו מיקומים מרכזיים שמבטיחים ביקוש יציב, תפוסה גבוהה ותשואות עקביות.",
-    "highlight3_title": "ניהול סיכונים",
-    "highlight3_desc": "גוון את תיק ההשקעות שלכם באמצעות נכסים למגורים, מסחריים ותחומים מתפתחים כדי לצמצם סיכונים.",
-    "highlight4_title": "עושר לטווח ארוך",
-    "highlight4_desc": "בנו ביטחון פיננסי באמצעות אסטרטגיות נדל״ן חכמות שמספקות גם הכנסה וגם צמיחת נכסים.",
-    "image_caption1": "השקעות נדל״ן חכמות לעושר ארוך טווח",
-    "image_caption2": "השקעת נדל״ן חכמה היא הרבה יותר מרכישת נדל״ן — היא עוסקת בבחירת המיקומים הנכונים, ניתוח מגמות שוק, ואיזון בין הכנסות שכירות לעליית ערך לטווח הארוך. באמצעות קבלת החלטות מושכלות וגיוון התיק, המשקיעים יכולים להפחית סיכונים, למקסם תשואות, ולבנות עושר בר קיימא. השקעות נדל״ן אסטרטגיות מבטיחות צמיחה פיננסית, ביטחון, והזדמנויות לדורות הבאים.",
-    "future_heading": "הדרך קדימה בהשקעות נדל״ן חכמות",
-    "future_para1": "ככל ששוקי הנדל״ן ממשיכים להתפתח, על המשקיעים לנקוט גישה יזומה להשקעות נדל״ן. השקעת נדל״ן חכמה היא מעבר לקנייה והחזקה — היא כוללת בחירת מיקומים נכונים, הבנת הביקוש בשוק, והתאמת ההשקעות למטרות ארוכות טווח. עם תנאים כלכליים משתנים והתפתחות עירונית גוברת, ההזדמנויות להשקעות נדל״ן אסטרטגיות גדולות מאי פעם.",
-    "future_para2": "יחידים וחברות שמאמצים אסטרטגיות השקעה חכמות לא רק יבנו עושר אלא גם יבטיחו יציבות פיננסית לעתיד. מהפקת תשואות שכירות ועליית ערך ועד חקירת הזדמנויות למגורים ומסחר, השקעות נדל״ן מספקות מפת דרכים לצמיחה בת קיימא. הדרך קדימה בהשקעות נדל״ן חכמות היא יותר מנכסים בלבד — היא יצירת ביטחון פיננסי, הפחתת סיכונים, והבטחת שגשוג לטווח ארוך.",
-    "contact_heading": "התחל את מסע ההשקעות החכמות שלך בנדל״ן",
-    "contact_para": "מחפש להגדיל את עושרך באמצעות השקעות נדל״ן אסטרטגיות? התחבר עם המומחים שלנו לקבלת ייעוץ מותאם אישית והזדמנויות השקעה.",
-    "contact_btn": "התחל עכשיו",
-   
+    "footer_location": "123 היידראבאד, הודו",
+    "footer_rights": "© 2025 Stackly. כל הזכויות שמורות.",
+
+    "hero_title": "האכלת משפחות נזקקות",
+    "intro_heading": "נלחמים ברעב עם חמלה",
+    "intro_para": "רעב נותר אחד האתגרים הגדולים ביותר עבור משפחות פגיעות ברחבי העולם. \n      האכלת משפחות נזקקות אינה רק אספקת ארוחות—זה על החזרת כבוד, \n      מתן תקווה, ויצירת הזדמנויות לעתיד בריא יותר. באמצעות מבצעי מזון, \n      תוכניות תזונה ומטבחים קהילתיים, אנו מבטיחים שאף ילד לא ילך לישון רעב \n      וכל משפחה תקבל גישה לצרכים יומיומיים.\n      <br><br>\n      בעזרת התמיכה שלך, אנו בונים פתרונות ברי קיימא שמטפלים ברעב מהשורש— \n      מהפצת מזון ועד העצמת קהילות באמצעות חינוך והזדמנויות פרנסה. \n      יחד, נוכל להילחם ברעב ולהזין חיים בחמלה ובדאגה.",
+    "content_heading": "מדוע האכלת משפחות חשובה",
+    "content_para1": "מיליוני משפחות מתמודדות עם חוסר ביטחון תזונתי מדי יום. על ידי מתן ארוחות ותמיכה תזונתית, \n      אנו לא רק מטפלים ברעב מיידי אלא גם משפרים את יכולת הילדים ללמוד, את יכולת המשפחות לעבוד, \n      ואת יכולת הקהילות לשגשג.",
+    "content_para2": "התוכניות שלנו מתמקדות במתן ארוחות מאוזנות, בהקמת בנקי מזון, ובשיתופי פעולה עם ארגונים מקומיים \n      כדי ליצור שינוי לטווח ארוך. האכלת משפחות נזקקות היא יותר מצדקה—זה על יצירת חברה חזקה, \n      בריאה ועמידה יותר שבה לכולם יש הזדמנות להצליח.",
+    "highlights_heading": "עיקרי התוכנית התזונתית שלנו",
+    "highlight1_title": "ארוחות מזינות",
+    "highlight1_desc": "אספקת ארוחות מאוזנות לילדים ולמשפחות כדי להבטיח בריאות ורווחה.",
+    "highlight2_title": "מטבחים קהילתיים",
+    "highlight2_desc": "הקמת מטבחים מקומיים המגישים ארוחות חינם מדי יום לקהילות פגיעות.",
+    "highlight3_title": "הפצת מזון",
+    "highlight3_desc": "ניהול מבצעי מזון וחלוקת מצרכים חיוניים למשפחות בעלות הכנסה נמוכה.",
+    "highlight4_title": "השפעה בת קיימא",
+    "highlight4_desc": "העצמת קהילות עם מיומנויות ומשאבים לשבירת מעגל הרעב.",
+    "image_caption1": "משתפים מזון, מפיצים תקווה",
+    "image_caption2": "כל ארוחה שאנו מגישים מייצגת יותר מאוכל—היא מייצגת טוב לב, כבוד וכוח הקהילה. \n      באמצעות שותפויות ומאמצי מתנדבים, אנו מגיעים לאלה הזקוקים ביותר. יחד, נוכל להבטיח ש \n      משפחות לא רק ישרדו אלא גם ימצאו כוח ותקווה למחר טוב יותר.",
+    "future_heading": "הדרך קדימה לסיום הרעב",
+    "future_para1": "רעב הוא אתגר שנוכל להתגבר עליו—אם נעבוד יחד. המשימה שלנו היא להרחיב רשתות הפצת מזון, \n        לבנות שותפויות חזקות יותר ולהשקיע ביוזמות מונעות קהילה שמפחיתות חוסר ביטחון תזונתי. \n        עם כל תרומה וכל מאמץ התנדבותי, אנו מתקרבים לעולם שבו אף משפחה לא תרעב.",
+    "future_para2": "עתיד האכלת המשפחות טמון בפתרונות ברי קיימא—תמיכה בחקלאים, הפחתת בזבוז מזון, \n        והעצמת קהילות עם משאבים. על ידי הצטרפות יחד, נוכל ליצור מחר ללא רעב שבו \n        כל ילד גדל מוזן וכל משפחה מקבלת את המזון שהיא זקוקה לו כדי לשגשג.",
+    "contact_heading": "היו חלק מהשינוי",
+    "contact_para": "הצטרפו אלינו במשימתנו להילחם ברעב ולהאכיל משפחות נזקקות. יחד, נוכל לוודא שאף אחד לא נשאר מאחור.",
+    "contact_btn": "תרום עכשיו"
+
+  
   }
 };
 
@@ -486,358 +494,6 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 
-
-<script>
-  // Mobile menu setup
-  const hamburger = document.getElementById("hamburger");
-  const hamburgerMenu = document.getElementById("hamburgerMenu");
-
-  // Show/hide mobile menu on hamburger click
-  hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    hamburgerMenu.classList.toggle("active");
-  });
-
-  // Toggle dropdowns for mobile menu
-  document.querySelectorAll('.mobile-dropdown-parent > span').forEach(link => {
-    link.addEventListener('click', function() {
-      const parentLi = this.parentElement;
-      const dropdown = parentLi.querySelector('.mobile-dropdown');
-      dropdown.classList.toggle('active');
-    });
-  });
-
-  // Desktop dropdown toggle logic
-  document.querySelectorAll('.nav-item.dropdown > .nav-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      document.querySelectorAll('.dropdown-menu').forEach(menu => {
-        if (menu !== this.nextElementSibling) {
-          menu.classList.remove('active');
-        }
-      });
-      const dropdownMenu = this.nextElementSibling;
-      if (dropdownMenu) {
-        dropdownMenu.classList.toggle('active');
-      }
-    });
-  });
-
-  // Redirect on desktop dropdown menu item click
-  document.querySelectorAll('.dropdown-menu a').forEach(link => {
-    link.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (href && href !== "#") {
-        window.location.href = href;
-        document.querySelectorAll('.dropdown-menu').forEach(menu => menu.classList.remove('active'));
-      }
-    });
-  });
-
-  // Redirect on normal nav link click
-  document.querySelectorAll('.nav-menu > .nav-item:not(.dropdown) .nav-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (href && href !== "#") {
-        window.location.href = href;
-      }
-    });
-  });
-
-  // Auth link toggle for desktop and mobile
-  function setupAuthLinks() {
-    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
-    const authLinks = [document.getElementById("authLink"), document.getElementById("mobileAuthLink")];
-
-    authLinks.forEach(link => {
-      if (!link) return;
-      if (isLoggedIn) {
-        link.innerText = "Logout";
-        link.href = "#";
-        link.onclick = (e) => {
-          e.preventDefault();
-          localStorage.removeItem("isLoggedIn");
-          localStorage.removeItem("currentUser");
-          window.location.href = "index.html";
-        };
-      } else {
-        link.innerText = "Login";
-        link.href = "index.html";
-        link.onclick = null;
-      }
-    });
-  }
-  setupAuthLinks();
-
-  // Theme toggle
-  const toggleBtn = document.getElementById('toggleBtn');
-  let darkMode = localStorage.getItem('darkMode') === 'true';
-
-  function applyTheme() {
-    if (darkMode) {
-      document.body.classList.add('dark-mode');
-      toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
-    } else {
-      document.body.classList.remove('dark-mode');
-      toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
-    }
-  }
-
-  toggleBtn.addEventListener('click', () => {
-    darkMode = !darkMode;
-    localStorage.setItem('darkMode', darkMode);
-    applyTheme();
-  });
-  applyTheme();
-
-  // Avatar initials logic
-  const avatarCircle = document.getElementById('avatarCircle');
-  const avatarInitials = document.getElementById('avatarInitials');
-  const avatarDropdown = document.getElementById('avatarDropdown');
-  const logoutBtn = document.getElementById('logoutBtn');
-  const currentUserEmail = localStorage.getItem("currentUser");
-  const users = JSON.parse(localStorage.getItem("users")) || {};
-
-  if (currentUserEmail && users[currentUserEmail]) {
-    const firstName = users[currentUserEmail].firstName || "";
-    const lastName = users[currentUserEmail].lastName || "";
-    const initials = (firstName[0] || "").toUpperCase() + (lastName[0] || "").toUpperCase();
-    avatarInitials.textContent = initials;
-  } else {
-    avatarInitials.textContent = "?";
-  }
-
-  // Show/hide avatar dropdown on click
-  avatarCircle.addEventListener('click', function(e) {
-    e.stopPropagation();
-    avatarDropdown.style.display = avatarDropdown.style.display === "block" ? "none" : "block";
-  });
-
-  document.addEventListener('click', function(e) {
-    if (!avatarCircle.contains(e.target) && !avatarDropdown.contains(e.target)) {
-      avatarDropdown.style.display = "none";
-    }
-  });
-
-  // Logout action
-  logoutBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    localStorage.removeItem("isLoggedIn");
-    localStorage.removeItem("currentUser");
-    window.location.href = "index.html";
-  });
-</script>
-
-<style>
-  /* Base styles for hamburger icon */
-    .header {
-   
-        padding-left: 130px !important;
-        padding-right: 130px !important;
-    }
-
-  .hamburger {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 24px;
-    height: 18px;
-    cursor: pointer;
-    z-index: 1000;
-  }
-
-  .hamburger span {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #333;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .dark-mode .hamburger span {
-    background-color: #fff;
-  }
-
-  /* Hamburger menu animation */
-  .hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-
-  .hamburger.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
-
-  /* Hide navigation on mobile */
-  @media (max-width: 768px) {
-    .nav-menu {
-      display: none;
-    }
-    .hamburger {
-      display: flex;
-    }
-  }
-
-  /* Styles for the mobile hamburger menu */
-  .mobile-menu-wrapper {
-    position: relative;
-  }
-
-  .hamburger-menu {
-    display: none;
-    flex-direction: column;
-    background: #23272f;
-    color: #fff;
-    position: absolute;
-    top: 50px;
-    right: 0;
-    width: 220px;
-    border-radius: 8px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
-    padding: 20px 0;
-    z-index: 9999;
-    list-style: none;
-  }
-
-  .hamburger-menu.active {
-    display: flex;
-  }
-
-  .hamburger-menu li {
-    padding: 10px 24px;
-    border-bottom: 1px solid #333;
-  }
-
-  .hamburger-menu li:last-child {
-    border-bottom: none;
-  }
-
-  .hamburger-menu a,
-  .hamburger-menu span {
-    color: #00f7ff;
-    text-decoration: none;
-    font-size: 1.1rem;
-    display: block;
-    cursor: pointer;
-    font-weight: 500;
-  }
-
-  .hamburger-menu ul {
-    list-style: none;
-    padding-left: 20px;
-    margin-top: 5px;
-  }
-
-  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown {
-    display: none;
-  }
-
-  .hamburger-menu li.mobile-dropdown-parent .mobile-dropdown.active {
-    display: block;
-  }
-
-  .toggle-btn {
-    background: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 38px;
-    height: 38px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 16px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-
-  .toggle-btn:hover {
-    background: #f0f0f0;
-  }
-
-  .avatar-circle {
-    position: relative;
-    cursor: pointer;
-    z-index: 1001;
-    overflow: visible;
-  }
-
-  .avatar-circle {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-left: 16px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #eee;
-    position: relative;
-    cursor: pointer;
-  }
-
-  .avatar-circle img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .avatar-dropdown {
-    display: none;
-    position: absolute;
-    top: 65px;
-    right: 20px;
-    background: #fff;
-    min-width: 100px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
-    border-radius: 8px;
-    z-index: 1002;
-    padding: 4px 0;
-  }
-
-  .avatar-dropdown ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .avatar-dropdown li {
-    padding: 6px 12px;
-  }
-
-  .avatar-dropdown a {
-    color: #23272f;
-    text-decoration: none;
-    font-size: 0.95rem;
-    display: block;
-    border-radius: 4px;
-    transition: background 0.2s;
-  }
-
-  .avatar-dropdown a:hover {
-    background: #f0f0f0;
-  }
-
-  @media (max-width: 768px) {
-    .toggle-btn,
-    .avatar-circle {
-      margin-left: 8px;
-      width: 32px;
-      height: 32px;
-    }
-  }
-
-  @media (min-width: 769px) {
-    .hamburger-menu {
-      display: none !important;
-    }
-  }
-</style>
-
 <!-- 🔷 Protest home page  -->
 
   <script>
@@ -856,9 +512,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   </script>
 
-
-
-    
 
 
 <!-- Section : 1 -->
@@ -1216,17 +869,20 @@ section { width: 100%; padding: 50px 20px; }
 
  <!-- Footer -->
 <!-- Footer -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-content">
-      <!-- Logo & About -->
-      <div class="footer-section footer-section1">
-        <div class="logo">
+<footer class="site-footer">
+  <div class="footer-wrapper">
+    <div class="footer-grid">
+
+      <!-- Brand & About -->
+      <div class="footer-block footer-brand footer-block1">
+        <div class="footer-logo">
           <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 50px; width: 80px;">
         </div>
-        <p class="text-justify">
-          <span data-i18n="footer_about">Leading AI solutions provider, helping businesses transform through intelligent technology and innovative automation systems.</span>
+
+        <p style="text-align: justify;" data-i18n="footer_about">
+          Dedicated charity organization, empowering communities through education, healthcare, food support, and sustainable initiatives to create lasting impact and hope.
         </p>
+
         <div class="social-links">
           <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
           <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
@@ -1236,12 +892,12 @@ section { width: 100%; padding: 50px 20px; }
       </div>
 
       <!-- Quick Links -->
-      <div class="footer-section footer-section2">
-        <h4 data-i18n="footer_quickLinks">Quick Links</h4>
+      <div class="footer-block footer-block2">
+        <h4 data-i18n="footer_quicklinks">Quick Links</h4>
         <ul>
           <li><a href="home.html"><span data-i18n="footer_home">Home</span></a></li>
           <li><a href="home2.html"><span data-i18n="footer_home2">Home 2</span></a></li>
-          <li><a href="about.html"><span data-i18n="footer_aboutUs">About Us</span></a></li>
+          <li><a href="about.html"><span data-i18n="footer_aboutus">About Us</span></a></li>
           <li><a href="services.html"><span data-i18n="footer_services">Services</span></a></li>
           <li><a href="blog.html"><span data-i18n="footer_blog">Blog</span></a></li>
           <li><a href="contact.html"><span data-i18n="footer_contact">Contact</span></a></li>
@@ -1249,136 +905,132 @@ section { width: 100%; padding: 50px 20px; }
       </div>
 
       <!-- Services -->
-      <div class="footer-section footer-section3">
-        <h4 data-i18n="footer_servicesTitle">Services</h4>
+      <div class="footer-block footer-block3">
+        <h4 data-i18n="footer_services_title">Services</h4>
         <ul>
-          <li><a href="service1.html"><span data-i18n="footer_service1">Property Buying Assistance</span></a></li>
-          <li><a href="service2.html"><span data-i18n="footer_service2">Property Selling</span></a></li>
-          <li><a href="service3.html"><span data-i18n="footer_service3">Rental Services</span></a></li>
-          <li><a href="service4.html"><span data-i18n="footer_service4">Property Management</span></a></li>
-          <li><a href="service5.html"><span data-i18n="footer_service5">Real Estate Investment</span></a></li>
-          <li><a href="service6.html"><span data-i18n="footer_service6">Legal & Documentation Support</span></a></li>
+          <li><a href="service1.html"><span data-i18n="footer_service1">Food Distribution</span></a></li>
+          <li><a href="service2.html"><span data-i18n="footer_service2">Education Support</span></a></li>
+          <li><a href="service3.html"><span data-i18n="footer_service3">Healthcare Camps</span></a></li>
+          <li><a href="service4.html"><span data-i18n="footer_service4">Women Empowerment</span></a></li>
+          <li><a href="service5.html"><span data-i18n="footer_service5">Child Welfare</span></a></li>
+          <li><a href="service6.html"><span data-i18n="footer_service6">Disaster Relief</span></a></li>
         </ul>
       </div>
 
       <!-- Contact Info -->
-      <div class="footer-section footer-section4">
-        <h4 data-i18n="footer_contactInfo">Contact Info</h4>
+      <div class="footer-block footer-block4">
+        <h4 data-i18n="footer_contactinfo">Contact Info</h4>
         <ul>
-          <li><i class="fas fa-envelope"></i> <span data-i18n="footer_email">contact@stackly.ai</span></li>
+          <li><i class="fas fa-envelope"></i> <span data-i18n="footer_email">contact@stackly.in</span></li>
           <li><i class="fas fa-phone"></i> <span data-i18n="footer_phone">+1 (555) 123-4567</span></li>
-          <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer_address">123 AI Innovation Drive</span></li>
+          <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer_location">123 Hyderabad, India</span></li>
         </ul>
       </div>
     </div>
 
-    <!-- Bottom Bar -->
-    <div class="footer-bottom">
-      <p><span data-i18n="footer_bottom">&copy; 2025 Stackly. All rights reserved.</span></p>
+    <!-- Bottom -->
+    <div class="footer-bottom-bar">
+      <p data-i18n="footer_rights">&copy; 2025 Stackly. All rights reserved.</p>
     </div>
   </div>
 </footer>
 
+
+<!-- Styles -->
 <style>
-.footer {
+.site-footer {
   background: #0a0a0a;
   color: #fff;
-   padding-left: 150px !important;
-  padding-right: 140px !important;
+  padding: 50px 20px 20px;
   font-family: Arial, sans-serif;
 }
 
-.footer-section1{
-  margin-right: 150px;
+.footer-wrapper {
+  max-width: 1200px; /* keeps equal left-right padding */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.footer-block2 {
+  padding-inline-start: 100px; /* works for both ltr & rtl */
 }
 
-.footer-section4{
-  margin-left: 50px;
+.footer-block3 {
+  padding-inline-start: 80px; /* works for both ltr & rtl */
 }
 
-.footer .footer-content {
+.footer-block4 {
+  padding-inline-start: 60px; /* works for both ltr & rtl */
+}
+
+.footer-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   margin-bottom: 30px;
 }
 
-.footer .footer-section h4 {
+
+.footer-block h4 {
   font-size: 1.2rem;
   margin-bottom: 15px;
   color: #f4f4f4;
 }
 
-.footer .footer-section ul {
+.footer-block ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
-.footer .footer-section ul li {
+.footer-block ul li {
   margin-bottom: 10px;
-  font-size: 0.95rem;
   color: #ddd;
 }
 
-.footer .footer-section ul li a {
+.footer-block ul li a {
   color: #ddd;
   text-decoration: none;
   transition: color 0.3s;
 }
 
-.footer .footer-section ul li a:hover {
+.footer-block ul li a:hover {
   color: #a68e4c;
 }
 
-.footer .social-links a {
-  margin-right: 12px;
-  font-size: 1.2rem;
-  color: #ddd;
-  transition: color 0.3s;
-}
-
-.footer .social-links a:hover {
-  color: #000000;
-}
-
-.footer .footer-bottom {
+.footer-bottom-bar {
   text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255,255,255,0.1);
   padding-top: 15px;
   font-size: 0.9rem;
   color: #bbb;
 }
 
+/* Responsive */
 @media (max-width: 900px) {
-  .footer .footer-content {
+  .footer-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
-  .footer-section1{
-  margin-right: 5px;
-}
 }
 
 @media (max-width: 600px) {
-  .footer .footer-content {
+  .footer-grid {
     grid-template-columns: 1fr;
     text-align: left;
   }
-  .footer .social-links {
-    margin-top: 15px;
+  .footer-block2{
+      padding-left: 0px;
   }
-  .footer-section1{
-  margin-right: 10px;
-}
-  .footer-section2{
-  margin-right: 10px;
-}
-.footer-section4{
-  margin-left: 1px;
-}
+
+  .footer-block3{
+      padding-left: 0px;
+  }
+
+    .footer-block4{
+      padding-left: 0px;
+    }
 }
 </style>
+
 
 
 </div>
