@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stackly AI Tools - Login</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <!-- Optimized font loading with font-display: swap -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --primary-color: #2563eb;
@@ -37,7 +40,7 @@
     }
 
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
       min-height: 100vh;
       display: flex;
@@ -978,6 +981,97 @@
     @keyframes spin {
       to { transform: rotate(360deg); }
     }
+
+    /* CSS-based icons to replace Font Awesome */
+    .icon-robot::before {
+      content: "🤖";
+      font-size: 1em;
+    }
+    
+    .icon-brain::before {
+      content: "🧠";
+      font-size: 1em;
+    }
+    
+    .icon-cogs::before {
+      content: "⚙️";
+      font-size: 1em;
+    }
+    
+    .icon-shield::before {
+      content: "🛡️";
+      font-size: 1em;
+    }
+    
+    .icon-chart::before {
+      content: "📈";
+      font-size: 1em;
+    }
+    
+    .icon-envelope::before {
+      content: "✉️";
+      font-size: 1em;
+    }
+    
+    .icon-lock::before {
+      content: "🔒";
+      font-size: 1em;
+    }
+    
+    .icon-user::before {
+      content: "👤";
+      font-size: 1em;
+    }
+    
+    .icon-key::before {
+      content: "🔑";
+      font-size: 1em;
+    }
+    
+    .icon-paper-plane::before {
+      content: "✈️";
+      font-size: 1em;
+    }
+    
+    .icon-check::before {
+      content: "✓";
+      font-size: 1em;
+    }
+    
+    .icon-exclamation::before {
+      content: "⚠️";
+      font-size: 1em;
+    }
+    
+    .icon-times::before {
+      content: "✕";
+      font-size: 1em;
+    }
+    
+    .icon-home::before {
+      content: "🏠";
+      font-size: 1em;
+    }
+    
+    .icon-sign-in::before {
+      content: "→";
+      font-size: 1em;
+    }
+    
+    .icon-user-plus::before {
+      content: "👥";
+      font-size: 1em;
+    }
+    
+    .icon-exclamation-circle::before {
+      content: "⚠️";
+      font-size: 1em;
+    }
+    
+    .icon-check-circle::before {
+      content: "✅";
+      font-size: 1em;
+    }
   </style>
 </head>
 <body>
@@ -985,15 +1079,15 @@
     <!-- Left side - Branding -->
     <div class="branding-section">
       <div class="logo">
-        <i class="fas fa-robot"></i>
+        <i class="icon-robot"></i>
       </div>
       <h1 class="brand-title">Stackly AI Tools</h1>
       <p class="brand-subtitle">Empowering Innovation with Advanced AI Solutions</p>
       <ul class="brand-features">
-        <li><i class="fas fa-brain"></i> Advanced AI Models</li>
-        <li><i class="fas fa-cogs"></i> Automated Workflows</li>
-        <li><i class="fas fa-shield-alt"></i> Secure & Reliable Platform</li>
-        <li><i class="fas fa-chart-line"></i> Performance Analytics & Insights</li>
+        <li><i class="icon-brain"></i> Advanced AI Models</li>
+        <li><i class="icon-cogs"></i> Automated Workflows</li>
+        <li><i class="icon-shield"></i> Secure & Reliable Platform</li>
+        <li><i class="icon-chart"></i> Performance Analytics & Insights</li>
       </ul>
     </div>
 
@@ -1012,19 +1106,19 @@
           <div class="form-group">
             <label for="loginEmail">Email Address</label>
             <div class="input-wrapper">
-              <i class="fas fa-envelope"></i>
+              <i class="icon-envelope"></i>
               <input type="email" id="loginEmail" placeholder="Enter your email" required>
             </div>
           </div>
           <div class="form-group">
             <label for="loginPass">Password</label>
             <div class="input-wrapper">
-              <i class="fas fa-lock"></i>
+              <i class="icon-lock"></i>
               <input type="password" id="loginPass" placeholder="Enter your password" required>
             </div>
           </div>
           <button type="submit" class="btn btn-primary">
-            <i class="fas fa-sign-in-alt"></i> Sign In
+            <i class="icon-sign-in"></i> Sign In
           </button>
         </form>
         <div class="form-links">
@@ -1039,7 +1133,7 @@
       <div class="form-container" id="signupPage">
         <div class="form-header">
           <div class="form-icon">
-            <i class="fas fa-robot"></i>
+            <i class="icon-robot"></i>
           </div>
           <h2 class="form-title">Create Account</h2>
           <p class="form-subtitle">Join our AI tools community</p>
@@ -1048,33 +1142,33 @@
           <div class="form-group">
             <label for="signupFirstName">First Name</label>
             <div class="input-wrapper">
-              <i class="fas fa-user"></i>
+              <i class="icon-user"></i>
               <input type="text" id="signupFirstName" placeholder="Enter your first name" required>
             </div>
           </div>
           <div class="form-group">
             <label for="signupLastName">Last Name</label>
             <div class="input-wrapper">
-              <i class="fas fa-user"></i>
+              <i class="icon-user"></i>
               <input type="text" id="signupLastName" placeholder="Enter your last name" required>
             </div>
           </div>
           <div class="form-group">
             <label for="signupEmail">Email Address</label>
             <div class="input-wrapper">
-              <i class="fas fa-envelope"></i>
+              <i class="icon-envelope"></i>
               <input type="email" id="signupEmail" placeholder="Enter your email" required>
             </div>
           </div>
           <div class="form-group">
             <label for="signupPass">Password</label>
             <div class="input-wrapper">
-              <i class="fas fa-lock"></i>
+              <i class="icon-lock"></i>
               <input type="password" id="signupPass" placeholder="Create a password" required>
             </div>
           </div>
           <button type="submit" class="btn btn-primary">
-            <i class="fas fa-user-plus"></i> Create Account
+            <i class="icon-user-plus"></i> Create Account
           </button>
         </form>
         <div class="form-links">
@@ -1087,7 +1181,7 @@
       <div class="form-container" id="forgotPage">
         <div class="form-header">
           <div class="form-icon">
-            <i class="fas fa-key"></i>
+            <i class="icon-key"></i>
           </div>
           <h2 class="form-title">Reset Password</h2>
           <p class="form-subtitle">Enter your email to receive reset instructions</p>
@@ -1096,12 +1190,12 @@
           <div class="form-group">
             <label for="forgotEmail">Email Address</label>
             <div class="input-wrapper">
-              <i class="fas fa-envelope"></i>
+              <i class="icon-envelope"></i>
               <input type="email" id="forgotEmail" placeholder="Enter your registered email" required>
             </div>
           </div>
           <button type="submit" class="btn btn-primary">
-            <i class="fas fa-paper-plane"></i> Send Reset Link
+            <i class="icon-paper-plane"></i> Send Reset Link
           </button>
         </form>
         <div class="form-links">
@@ -1114,7 +1208,7 @@
       <div class="form-container" id="resetPage">
         <div class="form-header">
           <div class="form-icon">
-            <i class="fas fa-lock"></i>
+            <i class="icon-lock"></i>
           </div>
           <h2 class="form-title">New Password</h2>
           <p class="form-subtitle">Create a new secure password</p>
@@ -1123,19 +1217,19 @@
           <div class="form-group">
             <label for="newPass">New Password</label>
             <div class="input-wrapper">
-              <i class="fas fa-lock"></i>
+              <i class="icon-lock"></i>
               <input type="password" id="newPass" placeholder="Enter new password" required>
             </div>
           </div>
           <div class="form-group">
             <label for="confirmPass">Confirm Password</label>
             <div class="input-wrapper">
-              <i class="fas fa-lock"></i>
+              <i class="icon-lock"></i>
               <input type="password" id="confirmPass" placeholder="Confirm new password" required>
             </div>
           </div>
           <button type="submit" class="btn btn-primary">
-            <i class="fas fa-check"></i> Update Password
+            <i class="icon-check"></i> Update Password
           </button>
         </form>
         <div class="form-links">
@@ -1148,17 +1242,17 @@
       <div class="form-container" id="errorPage">
         <div class="form-header">
           <div class="form-icon">
-            <i class="fas fa-exclamation-triangle"></i>
+            <i class="icon-exclamation"></i>
           </div>
           <h2 class="form-title">Oops!</h2>
           <p class="form-subtitle">Something went wrong</p>
         </div>
         <div class="error">
-          <i class="fas fa-times-circle"></i>
+          <i class="icon-times"></i>
           Page not found or action failed.
         </div>
         <button onclick="showPage('loginPage')" class="btn btn-primary">
-          <i class="fas fa-home"></i> Back to Home
+          <i class="icon-home"></i> Back to Home
         </button>
       </div>
     </div>
@@ -1206,7 +1300,7 @@
         localStorage.setItem("currentUser", email);
         window.location.href = "home.html";
       } else {
-        errorElement.innerHTML = '<i class="fas fa-exclamation-circle"></i> Invalid email or password. Please try again.';
+        errorElement.innerHTML = '<i class="icon-exclamation-circle"></i> Invalid email or password. Please try again.';
         errorElement.classList.add("show");
       }
     });
@@ -1226,7 +1320,7 @@
       errorElement.classList.remove("show");
 
       if(users[email]){
-        errorElement.innerHTML = '<i class="fas fa-exclamation-circle"></i> User already exists. Please sign in instead.';
+        errorElement.innerHTML = '<i class="icon-exclamation-circle"></i> User already exists. Please sign in instead.';
         errorElement.classList.add("show");
         setTimeout(() => showPage("loginPage"), 2000);
       } else {
@@ -1236,7 +1330,7 @@
           lastName: lastName
         };
         localStorage.setItem("users", JSON.stringify(users));
-        errorElement.innerHTML = '<i class="fas fa-check-circle"></i> Account created successfully! Welcome to our AI tools community. Redirecting to sign in...';
+        errorElement.innerHTML = '<i class="icon-check-circle"></i> Account created successfully! Welcome to our AI tools community. Redirecting to sign in...';
         errorElement.className = "success show";
         setTimeout(() => showPage("loginPage"), 2000);
       }
@@ -1255,11 +1349,11 @@
 
       if(users[email]){
         localStorage.setItem("resetUser", email);
-        errorElement.innerHTML = '<i class="fas fa-check-circle"></i> Email found! Redirecting to password reset...';
+        errorElement.innerHTML = '<i class="icon-check-circle"></i> Email found! Redirecting to password reset...';
         errorElement.className = "success show";
         setTimeout(() => showPage("resetPage"), 1500);
       } else {
-        errorElement.innerHTML = '<i class="fas fa-exclamation-circle"></i> Email not found. Please check your email address.';
+        errorElement.innerHTML = '<i class="icon-exclamation-circle"></i> Email not found. Please check your email address.';
         errorElement.classList.add("show");
       }
     });
@@ -1282,15 +1376,15 @@
           users[email].password = newPass;
           localStorage.setItem("users", JSON.stringify(users));
           localStorage.removeItem("resetUser");
-          errorElement.innerHTML = '<i class="fas fa-check-circle"></i> Password reset successful! Redirecting to sign in...';
+          errorElement.innerHTML = '<i class="icon-check-circle"></i> Password reset successful! Redirecting to sign in...';
           errorElement.className = "success show";
           setTimeout(() => showPage("loginPage"), 2000);
         } else {
-          errorElement.innerHTML = '<i class="fas fa-exclamation-circle"></i> User not found. Please try again.';
+          errorElement.innerHTML = '<i class="icon-exclamation-circle"></i> User not found. Please try again.';
           errorElement.classList.add("show");
         }
       } else {
-        errorElement.innerHTML = '<i class="fas fa-exclamation-circle"></i> Passwords do not match. Please try again.';
+        errorElement.innerHTML = '<i class="icon-exclamation-circle"></i> Passwords do not match. Please try again.';
         errorElement.classList.add("show");
       }
     });
