@@ -297,9 +297,6 @@
       background: white;
       border-bottom: 1px solid #e2e8f0;
       box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      position: sticky;
-      top: 0;
-      z-index: 100;
     }
 
     .header-content {
@@ -332,6 +329,11 @@
       align-items: center;
       justify-content: center;
       box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    }
+
+    .logo-icon::before {
+      content: "🤖";
+      filter: brightness(0) invert(1);
     }
 
     .logo-text h1 {
@@ -555,7 +557,15 @@
     }
 
     .tool-icon {
-      font-size: 2.5rem;
+      width: 60px;
+      height: 60px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: white;
+      background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
       margin-bottom: 15px;
     }
 
@@ -926,7 +936,9 @@
       }
 
       .tool-icon {
-        font-size: 2rem;
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
         margin-bottom: 10px;
       }
 
@@ -1066,7 +1078,9 @@
       }
 
       .tool-icon {
-        font-size: 1.8rem;
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
         margin-bottom: 8px;
       }
 
@@ -1289,7 +1303,7 @@
       <div class="header-content">
         <div class="header-left">
           <div class="logo-section">
-            <div class="logo-icon">🤖</div>
+            <div class="logo-icon"></div>
             <div class="logo-text">
               <h1 data-i18n="stackly_admin">Stackly Admin</h1>
               <p data-i18n="ai_tools_management">AI Tools Management</p>
@@ -1404,7 +1418,7 @@
             </div>
             <div class="tools-grid">
               <div class="tool-item">
-                <div class="tool-icon">🤖</div>
+                <div class="tool-icon">AI</div>
                 <div class="tool-info">
                   <h4 data-i18n="content_generator">Content Generator</h4>
                   <p data-i18n="content_generator_desc">AI-powered content creation</p>
@@ -1415,7 +1429,7 @@
                 </div>
               </div>
               <div class="tool-item">
-                <div class="tool-icon">📊</div>
+                <div class="tool-icon">DA</div>
                 <div class="tool-info">
                   <h4 data-i18n="data_analyzer">Data Analyzer</h4>
                   <p data-i18n="data_analyzer_desc">Intelligent data insights</p>
@@ -1426,7 +1440,7 @@
                 </div>
               </div>
               <div class="tool-item">
-                <div class="tool-icon">🎨</div>
+                <div class="tool-icon">IC</div>
                 <div class="tool-info">
                   <h4 data-i18n="image_creator">Image Creator</h4>
                   <p data-i18n="image_creator_desc">AI image generation</p>
@@ -1437,7 +1451,7 @@
                 </div>
               </div>
               <div class="tool-item">
-                <div class="tool-icon">💬</div>
+                <div class="tool-icon">CA</div>
                 <div class="tool-info">
                   <h4 data-i18n="chat_assistant">Chat Assistant</h4>
                   <p data-i18n="chat_assistant_desc">Conversational AI</p>

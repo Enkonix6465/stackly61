@@ -240,7 +240,7 @@
     .form-group label {
       display: block;
       margin-bottom: 8px;
-      color: var(--text-primary);
+      color: #000000;
       font-weight: 600;
       font-size: 14px;
     }
@@ -254,8 +254,9 @@
       left: 16px;
       top: 50%;
       transform: translateY(-50%);
-      color: var(--text-secondary);
+      color: #191c22;
       font-size: 16px;
+      filter: brightness(0) !important;
     }
 
     input {
@@ -805,91 +806,109 @@
     .icon-robot::before {
       content: "🤖";
       font-size: 1em;
+      filter: brightness(0) invert(1);
     }
     
     .icon-brain::before {
       content: "🧠";
       font-size: 1em;
+      filter: brightness(0) invert(1);
     }
     
     .icon-cogs::before {
       content: "⚙️";
       font-size: 1em;
+      filter: brightness(0) invert(1);
     }
     
     .icon-shield::before {
       content: "🛡️";
       font-size: 1em;
+      filter: brightness(0) invert(1);
     }
     
     .icon-chart::before {
       content: "📈";
       font-size: 1em;
+      filter: brightness(0) invert(1);
     }
     
     .icon-envelope::before {
       content: "✉️";
       font-size: 1em;
+      filter: brightness(0) invert(1);
     }
     
     .icon-lock::before {
       content: "🔒";
       font-size: 1em;
+      filter: brightness(0) invert(1);
     }
     
     .icon-user::before {
       content: "👤";
       font-size: 1em;
+      filter: brightness(0) invert(1);
     }
     
     .icon-key::before {
       content: "🔑";
       font-size: 1em;
+      filter: brightness(0) invert(1);
     }
     
     .icon-paper-plane::before {
       content: "✈️";
       font-size: 1em;
+      filter: brightness(0) invert(1);
     }
     
     .icon-check::before {
       content: "✓";
       font-size: 1em;
+      filter: brightness(0) invert(1);
     }
     
     .icon-exclamation::before {
       content: "⚠️";
       font-size: 1em;
+      filter: brightness(0) invert(1);
     }
     
     .icon-times::before {
       content: "✕";
       font-size: 1em;
+      filter: brightness(0) invert(1);
     }
     
     .icon-home::before {
       content: "🏠";
       font-size: 1em;
+      filter: brightness(0) invert(1);
     }
     
     .icon-sign-in::before {
       content: "→";
       font-size: 1em;
+      filter: brightness(0) invert(1);
     }
     
     .icon-user-plus::before {
       content: "👥";
       font-size: 1em;
+      filter: brightness(0) invert(1);
     }
     
     .icon-exclamation-circle::before {
       content: "⚠️";
       font-size: 1em;
+      filter: brightness(0) invert(1);
     }
     
     .icon-check-circle::before {
       content: "✅";
       font-size: 1em;
+      filter: brightness(0) invert(1);
     }
   </style>
 </head>
@@ -926,7 +945,7 @@
             <label for="loginEmail">Email Address</label>
             <div class="input-wrapper">
               <i class="icon-envelope"></i>
-              <input type="email" id="loginEmail" placeholder="Enter your email" required>
+              <input type="email" id="loginEmail" name="user_email" placeholder="Enter your email" required autocomplete="new-password" readonly onfocus="this.removeAttribute('readonly')">
             </div>
           </div>
           <div class="form-group">

@@ -377,7 +377,7 @@
         <div class="metric-visual">
           <div class="circular-progress">
             <svg class="progress-ring" width="120" height="120">
-              <circle class="progress-ring-circle" stroke="#00ffff" stroke-width="8" fill="transparent" r="52" cx="60" cy="60"/>
+              <circle class="progress-ring-circle" stroke="#3b82f6" stroke-width="8" fill="transparent" r="52" cx="60" cy="60"/>
             </svg>
             <div class="progress-text">
               <span class="progress-number" data-value="95">0</span>
@@ -398,7 +398,7 @@
         <div class="metric-visual">
           <div class="circular-progress">
             <svg class="progress-ring" width="120" height="120">
-              <circle class="progress-ring-circle" stroke="#8a2be2" stroke-width="8" fill="transparent" r="52" cx="60" cy="60"/>
+              <circle class="progress-ring-circle" stroke="#1d4ed8" stroke-width="8" fill="transparent" r="52" cx="60" cy="60"/>
             </svg>
             <div class="progress-text">
               <span class="progress-number" data-value="90">0</span>
@@ -419,7 +419,7 @@
         <div class="metric-visual">
           <div class="circular-progress">
             <svg class="progress-ring" width="120" height="120">
-              <circle class="progress-ring-circle" stroke="#00ff7f" stroke-width="8" fill="transparent" r="52" cx="60" cy="60"/>
+              <circle class="progress-ring-circle" stroke="#2563eb" stroke-width="8" fill="transparent" r="52" cx="60" cy="60"/>
             </svg>
             <div class="progress-text">
               <span class="progress-number" data-value="80">0</span>
@@ -1573,7 +1573,7 @@ function testTranslations() {
     position: absolute;
     font-size: 2rem;
     animation: float 4s ease-in-out infinite;
-    filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.5));
+    filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.5)) brightness(0) invert(1);
 }
 
 .floating-icon:nth-child(1) {
@@ -1976,7 +1976,7 @@ function testTranslations() {
 .metrics-dashboard-section {
   width: 100%;
   padding: 80px 20px;
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 25%, #3b82f6 50%, #2563eb 75%, #1d4ed8 100%);
   position: relative;
   overflow: hidden;
 }
@@ -2019,30 +2019,31 @@ function testTranslations() {
 .metrics-icon {
   width: 60px;
   height: 60px;
-  background: linear-gradient(45deg, #00ffff, #8a2be2);
+  background: linear-gradient(45deg, #3b82f6, #1d4ed8);
   border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.8rem;
-  color: #000;
-  box-shadow: 0 8px 25px rgba(0, 255, 255, 0.3);
+  color: #fff;
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
 }
 
 .metrics-header h2 {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #fff;
+  color: #ffffff;
   margin: 0;
-  text-shadow: 0 2px 10px rgba(0, 255, 255, 0.3);
+  text-shadow: 0 2px 10px rgba(255, 255, 255, 0.3);
 }
 
 .metrics-header p {
   font-size: 1.2rem;
-  color: #cbd5e1;
+  color: #e0f2fe;
   line-height: 1.7;
   max-width: 800px;
   margin: 0 auto;
+  font-weight: 600;
 }
 
 /* Dashboard Grid */
@@ -2138,21 +2139,21 @@ function testTranslations() {
 .counter-icon {
   width: 80px;
   height: 80px;
-  background: linear-gradient(45deg, #00ffff, #8a2be2);
+  background: linear-gradient(45deg, #3b82f6, #1d4ed8);
   border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 2rem;
-  color: #000;
+  color: #fff;
   margin: 0 auto 15px;
-  box-shadow: 0 8px 25px rgba(0, 255, 255, 0.3);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
 }
 
 .counter-number {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #fff;
+  color: #ffffff;
   display: block;
   line-height: 1;
   margin-bottom: 5px;
@@ -2160,7 +2161,7 @@ function testTranslations() {
 
 .counter-label {
   font-size: 1rem;
-  color: #cbd5e1;
+  color: #e0f2fe;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -2170,7 +2171,7 @@ function testTranslations() {
 .metric-info h4 {
   font-size: 1.1rem;
   font-weight: 700;
-  color: #fff;
+  color: #ffffff;
   margin: 0 0 15px 0;
   line-height: 1.3;
 }
@@ -2180,7 +2181,7 @@ function testTranslations() {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  color: #00ff7f;
+  color: #10b981;
   font-size: 0.9rem;
   font-weight: 600;
 }
@@ -2217,29 +2218,30 @@ function testTranslations() {
 .summary-icon {
   width: 50px;
   height: 50px;
-  background: linear-gradient(45deg, #00ffff, #8a2be2);
+  background: linear-gradient(45deg, #3b82f6, #1d4ed8);
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.3rem;
-  color: #000;
+  color: #fff;
   flex-shrink: 0;
-  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
 }
 
 .summary-content h3 {
   font-size: 1.1rem;
   font-weight: 700;
-  color: #fff;
+  color: #ffffff;
   margin: 0 0 5px 0;
 }
 
 .summary-content p {
   font-size: 0.9rem;
-  color: #cbd5e1;
+  color: #e0f2fe;
   margin: 0;
   line-height: 1.4;
+  font-weight: 500;
 }
 
 /* Responsive */
@@ -2376,7 +2378,7 @@ document.addEventListener("DOMContentLoaded", () => {
 .testimonials-showcase-section {
   width: 100%;
   padding: 100px 20px;
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 25%, #bae6fd 50%, #7dd3fc 75%, #38bdf8 100%);
   position: relative;
   overflow: hidden;
 }
@@ -2389,9 +2391,9 @@ document.addEventListener("DOMContentLoaded", () => {
   right: 0;
   bottom: 0;
   background: 
-    radial-gradient(circle at 20% 30%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.03) 0%, transparent 50%);
+    radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(29, 78, 216, 0.02) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -2412,10 +2414,10 @@ document.addEventListener("DOMContentLoaded", () => {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  background: linear-gradient(45deg, #ffd700, #ffed4e, #ffd700);
+  background: linear-gradient(45deg, #3b82f6, #1d4ed8, #3b82f6);
   background-size: 200% 200%;
-  animation: gold-shimmer 3s ease-in-out infinite;
-  color: #000;
+  animation: blue-shimmer 3s ease-in-out infinite;
+  color: #fff;
   font-weight: 800;
   padding: 15px 35px;
   border-radius: 50px;
@@ -2423,10 +2425,10 @@ document.addEventListener("DOMContentLoaded", () => {
   margin-bottom: 30px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  box-shadow: 0 10px 40px rgba(255, 215, 0, 0.4);
+  box-shadow: 0 10px 40px rgba(59, 130, 246, 0.4);
 }
 
-@keyframes gold-shimmer {
+@keyframes blue-shimmer {
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
 }
@@ -2437,10 +2439,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 .testimonials-description {
   font-size: 1.3rem;
-  color: #e0e0e0;
+  color: #1e40af;
   line-height: 1.8;
   max-width: 900px;
   margin: 0 auto;
+  font-weight: 600;
 }
 
 /* Testimonials Grid */
@@ -2717,7 +2720,7 @@ document.addEventListener("DOMContentLoaded", () => {
   width: 100%;
   min-height: 100vh;
   position: relative;
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #1a1a2e 100%);
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 25%, #3b82f6 50%, #2563eb 75%, #1d4ed8 100%);
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -3681,8 +3684,8 @@ body.dark-mode .ai-showcase-btn {
 
 /* Metrics Dashboard Section - Light Mode */
 .metrics-dashboard-section {
-  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 25%, #fbbf24 50%, #f59e0b 75%, #d97706 100%) !important;
-  color: #451a03 !important;
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 25%, #3b82f6 50%, #2563eb 75%, #1d4ed8 100%) !important;
+  color: #ffffff !important;
   position: relative;
   overflow: hidden;
 }
@@ -3702,24 +3705,24 @@ body.dark-mode .ai-showcase-btn {
 }
 
 .metrics-dashboard-section h2 {
-  color: #451a03 !important;
-  text-shadow: 0 2px 4px rgba(69, 26, 3, 0.2) !important;
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.2) !important;
   position: relative;
   z-index: 1;
 }
 
 .metrics-dashboard-section p {
-  color: #451a03 !important;
+  color: #e0f2fe !important;
   font-weight: 500 !important;
-  text-shadow: 0 1px 2px rgba(69, 26, 3, 0.2) !important;
+  text-shadow: 0 1px 2px rgba(224, 242, 254, 0.2) !important;
   position: relative;
   z-index: 1;
 }
 
 .dashboard-badge {
-  background: linear-gradient(45deg, #f59e0b, #d97706) !important;
+  background: linear-gradient(45deg, #3b82f6, #1d4ed8) !important;
   color: #fff !important;
-  box-shadow: 0 8px 32px rgba(245, 158, 11, 0.4) !important;
+  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.4) !important;
   position: relative;
   z-index: 1;
 }
@@ -3907,70 +3910,70 @@ body.dark-mode .counter-label {
 
 /* Testimonials Showcase Section - Light Mode */
 .testimonials-showcase-section {
-  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 50%, #fde68a 100%) !important;
-  color: #451a03 !important;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 25%, #bae6fd 50%, #7dd3fc 75%, #38bdf8 100%) !important;
+  color: #1e40af !important;
 }
 
 .testimonials-showcase-section h2 {
-  color: #451a03 !important;
+  color: #1e40af !important;
 }
 
 .testimonials-showcase-section p {
-  color: #92400e !important;
+  color: #1e40af !important;
 }
 
 .testimonials-badge {
-  background: linear-gradient(45deg, #f59e0b, #d97706) !important;
+  background: linear-gradient(45deg, #3b82f6, #1d4ed8) !important;
   color: #fff !important;
 }
 
 .testimonial-card {
   background: rgba(255, 255, 255, 0.95) !important;
-  border: 2px solid rgba(245, 158, 11, 0.3) !important;
+  border: 2px solid rgba(59, 130, 246, 0.3) !important;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
 }
 
 .testimonial-card:hover {
   background: rgba(255, 255, 255, 1) !important;
-  border-color: rgba(245, 158, 11, 0.5) !important;
-  box-shadow: 0 10px 25px rgba(245, 158, 11, 0.2) !important;
+  border-color: rgba(59, 130, 246, 0.5) !important;
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.2) !important;
 }
 
 .testimonial-avatar .avatar-circle {
-  background: linear-gradient(45deg, #f59e0b, #d97706) !important;
+  background: linear-gradient(45deg, #3b82f6, #1d4ed8) !important;
   color: #fff !important;
 }
 
 .testimonial-quote {
-  color: #451a03 !important;
+  color: #1e40af !important;
 }
 
 .testimonial-author h4 {
-  color: #451a03 !important;
+  color: #1e40af !important;
 }
 
 .testimonial-author p {
-  color: #92400e !important;
+  color: #1e40af !important;
 }
 
 .stat-item {
   background: rgba(255, 255, 255, 0.9) !important;
-  border: 2px solid rgba(245, 158, 11, 0.3) !important;
+  border: 2px solid rgba(59, 130, 246, 0.3) !important;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
 }
 
 .stat-item:hover {
   background: rgba(255, 255, 255, 1) !important;
-  border-color: rgba(245, 158, 11, 0.5) !important;
-  box-shadow: 0 8px 20px rgba(245, 158, 11, 0.15) !important;
+  border-color: rgba(59, 130, 246, 0.5) !important;
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.15) !important;
 }
 
 .stat-number {
-  color: #f59e0b !important;
+  color: #1e40af !important;
 }
 
 .stat-label {
-  color: #92400e !important;
+  color: #1e40af !important;
 }
 
 /* Testimonials Showcase Section - Dark Mode */
@@ -4035,22 +4038,22 @@ body.dark-mode .stat-label {
 
 /* CTA Revolution Section - Light Mode */
 .cta-revolution-section {
-  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 25%, #bae6fd 50%, #7dd3fc 75%, #38bdf8 100%) !important;
-  color: #0c4a6e !important;
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 25%, #3b82f6 50%, #2563eb 75%, #1d4ed8 100%) !important;
+  color: #ffffff !important;
 }
 
 .cta-badge {
-  background: linear-gradient(45deg, #0ea5e9, #0284c7) !important;
+  background: linear-gradient(45deg, #3b82f6, #1d4ed8) !important;
   color: #fff !important;
 }
 
 .cta-title {
-  color: #0c4a6e !important;
-  text-shadow: 0 2px 4px rgba(12, 74, 110, 0.3) !important;
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.3) !important;
 }
 
 .cta-description {
-  color: #075985 !important;
+  color: #e0f2fe !important;
 }
 
 .cta-primary-btn {
