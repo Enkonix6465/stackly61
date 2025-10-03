@@ -49,6 +49,15 @@
       margin: 0;
     }
 
+    /* Hide content initially to prevent flash */
+    body:not(.content-loaded) {
+      visibility: hidden;
+    }
+
+    body.content-loaded {
+      visibility: visible;
+    }
+
     /* Animated background elements */
     body::before {
       content: '';
@@ -1109,6 +1118,8 @@
         window.location.href = "home.html";
       } else {
         showPage("loginPage");
+        // Show content only after auth check passes
+        document.body.classList.add("content-loaded");
       }
     }
 
